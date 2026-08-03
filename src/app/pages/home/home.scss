@@ -1,0 +1,802 @@
+/*=========================================================
+HERO SECTION
+=========================================================*/
+
+.hero-section{
+
+    position:relative;
+
+    background:url("/assets/home/home-header.jpg") center center no-repeat;
+
+    background-size:cover;
+
+    height:420px;
+
+    overflow:hidden;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+/* overlay */
+
+.hero-overlay{
+
+    width:100%;
+
+    height:100%;
+
+    background:linear-gradient(
+        rgba(255,255,255,.08),
+        rgba(255,255,255,.08)
+    );
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+/* content */
+
+.hero-content{
+
+    text-align:center;
+
+}
+
+/* title */
+
+.hero-content h1{
+
+    font-size:72px;
+
+    line-height:1;
+
+    font-weight:700;
+
+    color:#17346f;
+
+    margin-bottom:18px;
+
+}
+
+/* subtitle */
+
+.hero-content p{
+
+    margin-top:18px;
+
+    font-size:23px;
+
+    line-height:1.45;
+
+    color:#17346f;
+
+}
+@media (max-width:991px){
+
+.hero-section{
+    min-height:500px;
+    background-position:center center;
+    background-size: 100% 100%;
+    margin-top: 80px;
+}
+
+.hero-overlay{
+    padding:80px 15px;
+    margin-top: 80px;
+}
+
+.hero-content{
+    max-width:100%;
+}
+
+.hero-content h1{
+    font-size:42px;
+    line-height:1.15;
+    margin-bottom:18px;
+}
+
+.hero-content p{
+    font-size:18px;
+    line-height:1.6;
+    padding:0 10px;
+}
+
+.divider span{
+    width:55px;
+}
+
+}
+
+
+
+@media (max-width:1195px){
+
+.hero-section{
+    min-height:500px;
+    background-position:center center;
+    background-size: 100% 100%;
+    margin-top: 80px;
+}
+
+.hero-overlay{
+    padding:80px 15px;
+    margin-top: 80px;
+}
+
+.hero-content{
+    max-width:100%;
+}
+
+.hero-content h1{
+    font-size:42px;
+    line-height:1.15;
+    margin-bottom:18px;
+}
+
+.hero-content p{
+    font-size:18px;
+    line-height:1.6;
+    padding:0 10px;
+}
+
+.divider span{
+    width:55px;
+}
+
+}
+
+@media(max-width:1200px){
+
+.hero h1{
+
+font-size:60px;
+
+}
+
+ 
+
+}
+
+
+
+@media(max-width:767px){
+
+.logo h3{
+
+font-size:22px;
+
+}
+
+.logo-circle{
+
+width:52px;
+height:52px;
+
+font-size:22px;
+
+}
+
+ 
+
+.hero{
+
+padding:70px 20px;
+
+}
+
+.hero h1{
+
+font-size:36px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+.hero-divider{
+
+width:120px;
+
+}
+
+}
+
+
+@media (max-width:480px){
+
+.hero-section{
+
+    height:260px;
+
+    background-image:url("/assets/home/home-header-mobile.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+    
+    margin-top: 80px;
+
+}
+
+.hero-content h1{
+
+    font-size:40px;
+
+}
+
+.hero-content p{
+
+    font-size:20px;
+
+}
+
+}
+
+
+
+
+@media (max-width:650px){
+
+.hero-section{
+
+    height:260px;
+
+    background-image:url("/assets/home/home-header-mobile.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+    margin-top: 80px;
+
+}
+
+.hero-content h1{
+
+    font-size:40px;
+
+}
+
+.hero-content p{
+
+    font-size:20px;
+
+}
+
+}
+
+// 
+
+
+
+.feature-card{
+    transition:.35s;
+    border-radius:24px;
+}
+
+.feature-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 50px rgba(0,0,0,.15)!important;
+}
+
+.feature-icon{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    flex-shrink: 0;
+}
+
+.feature-card h3{
+    font-size:22px;
+    color:#16377c;
+}
+
+.feature-card p{
+    font-size:18px;
+    line-height:1.7;
+}
+
+.feature-card a{
+    color:#0d6efd;
+}
+
+
+/*=========================================
+        CALENDAR MODAL
+=========================================*/
+
+.jesuscalendar-modal{
+
+    border:none;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+}
+
+.jesuscalendar-header{
+
+    background:#0b4fa9;
+
+    color:#fff;
+
+    padding:25px 35px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.jesuscalendar-header h3{
+
+    margin:0;
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+.jesuscalendar-header .btn-close{
+
+    filter:invert(1);
+
+}
+
+/*=========================================
+EVENT CARD
+=========================================*/
+
+.jesuscalendar-event-card{
+
+    display:flex;
+
+    gap:20px;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.jesuscalendar-event-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.jesuscalendar-date{
+
+    width:80px;
+
+    min-width:80px;
+
+    height:90px;
+
+    background:#1d4ea7;
+
+    color:#fff;
+
+    border-radius:18px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.jesuscalendar-date span{
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+.jesuscalendar-date strong{
+
+    font-size:34px;
+
+}
+
+.jesuscalendar-event-card h4{
+
+    font-size:24px;
+
+    color:#0b3b8d;
+
+    margin-bottom:10px;
+
+}
+
+.jesuscalendar-event-card p{
+
+    margin-bottom:8px;
+
+    color:#666;
+
+}
+
+.jesuscalendar-event-card i{
+
+    color:#0b4fa9;
+
+    margin-right:8px;
+
+}
+
+/*=========================================
+FOOTER
+=========================================*/
+
+.jesuscalendar-footer{
+
+    padding:20px;
+
+    text-align:center;
+
+}
+
+.jesuscalendar-close-btn{
+
+    background:#0b4fa9;
+
+    color:#fff;
+
+    padding:10px 35px;
+
+    border-radius:40px;
+
+}
+
+.jesuscalendar-close-btn:hover{
+
+    background:#08397a;
+
+    color:#fff;
+
+}
+
+/*=========================================
+LINK
+=========================================*/
+
+.jesuscalendar-view-btn{
+
+    color:#1d67ff;
+
+}
+
+.jesuscalendar-view-btn:hover{
+
+    color:#0b4fa9;
+
+}
+
+/*=========================================
+RESPONSIVE
+=========================================*/
+
+@media(max-width:768px){
+
+.jesuscalendar-header{
+
+padding:18px;
+
+}
+
+.jesuscalendar-header h3{
+
+font-size:22px;
+
+}
+
+.jesuscalendar-event-card{
+
+flex-direction:column;
+
+text-align:center;
+
+align-items:center;
+
+}
+
+.jesuscalendar-date{
+
+margin-bottom:10px;
+
+}
+
+.jesuscalendar-event-card h4{
+
+font-size:20px;
+
+}
+
+}
+/*=====================================
+COMPACT FOOTER
+=====================================*/
+
+.mini-footer{
+
+    background:#0d2d68;
+
+    color:#fff;
+
+    padding:12px 0 10px;
+
+}
+
+/* Temple */
+
+.footer-temple{
+
+    width:90px;
+
+    height:auto;
+
+}
+
+/* Quote */
+
+.footer-quote{
+
+    margin:0;
+
+    color:#ffffff;
+
+    font-size:14px;
+
+    font-style:italic;
+
+    font-weight:600;
+
+    line-height:1.4;
+
+}
+
+/* Article */
+
+.mini-footer h5{
+
+    color:#d7a437;
+
+    margin-top:4px;
+
+    margin-bottom:0;
+
+    font-size:18px;
+
+    font-weight:700;
+
+}
+
+/* Divider */
+
+.mini-footer hr{
+
+    margin:10px 0;
+
+    border-color:#c99832;
+
+    opacity:.45;
+
+}
+
+/* Scripture Links */
+
+.scripture-links{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:0;
+
+}
+
+/* Each Link */
+
+.scripture-links a{
+
+    color:#d7a437;
+
+    text-decoration:none;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    padding:0 18px;
+
+    position:relative;
+
+    white-space:nowrap;
+
+    transition:.3s;
+
+}
+
+/* Vertical Separator */
+
+.scripture-links a:not(:last-child)::after{
+
+    content:"|";
+
+    position:absolute;
+
+    right:0;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#c99832;
+
+    font-weight:400;
+
+}
+
+/* Hover */
+
+.scripture-links a:hover{
+
+    color:#ffffff;
+
+}
+
+
+@media (max-width:768px){
+
+    .mini-footer{
+
+        text-align:center;
+
+        padding:15px 0;
+
+    }
+
+    .footer-temple{
+
+        width:70px;
+
+        margin-bottom:10px;
+
+    }
+
+    .footer-quote{
+
+        font-size:11px;
+
+    }
+
+    .mini-footer h5{
+
+        font-size:16px;
+
+    }
+
+    .scripture-links{
+
+        row-gap:8px;
+
+    }
+
+    .scripture-links a{
+
+        font-size:11px;
+
+        padding:0 10px;
+
+    }
+
+}
+
+
+
+
+/* Bottom Cards */
+
+.event-date{
+
+width:70px;
+
+min-width:70px;
+
+height:70px;
+
+border-radius:15px;
+
+background:#16377c;
+
+color:#fff;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:center;
+
+font-weight:700;
+
+}
+
+.event-date span{
+
+font-size:12px;
+
+letter-spacing:1px;
+
+}
+
+.event-date strong{
+
+font-size:24px;
+
+line-height:1;
+
+}
+
+.card{
+
+transition:.35s;
+
+}
+
+.card:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 15px 35px rgba(0,0,0,.12)!important;
+
+}
+
+@media(max-width:991px){
+
+.event-date{
+
+width:60px;
+height:60px;
+
+}
+
+}
+
+
+
