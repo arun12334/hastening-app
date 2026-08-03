@@ -1,0 +1,923 @@
+/*=========================================================
+IMAGE ANIMATION
+=========================================================*/
+
+.feature-image{
+
+    transition:.45s;
+
+}
+
+.feature-card:hover .feature-image{
+
+    transform:scale(1.08);
+
+}
+
+/*=========================================================
+SMOOTH
+=========================================================*/
+
+.feature-card,
+.feature-content,
+.feature-image,
+.feature-arrow,
+.feature-content h3{
+
+    transition:.35s ease;
+
+}
+
+/*=========================================================
+ANIMATION
+=========================================================*/
+
+.hero-icon,
+.loving-content h1,
+.loving-content p,
+.hero-buttons{
+
+    animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/*=========================================================
+LOVING HERO SECTION
+=========================================================*/
+
+.loving-hero-section{
+
+    position:relative;
+
+    height:430px;
+
+    overflow:hidden;
+
+    display:flex;
+
+    align-items:center;
+
+    background:#f8f9fc;
+
+}
+
+/*=========================================================
+BACKGROUND IMAGE
+=========================================================*/
+
+.loving-banner-image{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    object-position:center;
+
+}
+
+/*=========================================================
+LIGHT OVERLAY
+=========================================================*/
+
+.loving-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        90deg,
+        rgba(255,255,255,.92) 0%,
+        rgba(255,255,255,.72) 34%,
+        rgba(255,255,255,.18) 70%,
+        rgba(255,255,255,0) 100%
+    );
+
+}
+
+/*=========================================================
+CONTENT
+=========================================================*/
+
+.loving-content{
+
+    position:relative;
+
+    z-index:5;
+
+    max-width:540px;
+
+}
+
+/*=========================================================
+ICON
+=========================================================*/
+
+.hero-icon{
+
+    width:88px;
+
+    height:88px;
+
+    border-radius:50%;
+
+    background:#fff5de;
+
+    color:#d79a00;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:42px;
+
+    margin-bottom:22px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+/*=========================================================
+TITLE
+=========================================================*/
+
+.loving-content h1{
+
+    font-family:"Libre Baskerville",serif;
+
+    font-size:56px;
+
+    font-weight:700;
+
+    line-height:1.15;
+
+    color:#173c82;
+
+    margin-bottom:18px;
+
+}
+
+/*=========================================================
+DESCRIPTION
+=========================================================*/
+
+.loving-content p{
+
+    font-size:23px;
+
+    line-height:1.75;
+
+    color:#3d4b68;
+
+    margin:0;
+
+}
+
+/*=========================================================
+CONTAINER
+=========================================================*/
+
+.loving-hero-section .container{
+
+    position:relative;
+
+    z-index:10;
+
+}
+
+/*=========================================================
+FEATURE SECTION
+=========================================================*/
+
+.loving-feature-section{
+
+    padding:28px 0 80px;
+
+    background:#f8f9fc;
+
+}
+
+/*=========================================================
+LINK
+=========================================================*/
+
+.feature-link{
+
+    display:block;
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+/*=========================================================
+CARD
+=========================================================*/
+
+.feature-card{
+
+    height:190px;
+
+    background:#fff;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    border:1px solid #ececec;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.05);
+
+    transition:.35s;
+
+}
+
+.feature-card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+}
+
+/*=========================================================
+LEFT COLUMN
+=========================================================*/
+
+.feature-content{
+
+    height:190px;
+
+    padding:5px 30px 20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+/*=========================================================
+TEXT
+=========================================================*/
+
+.feature-text{
+
+    margin-top:14px;
+
+}
+
+.feature-text h3{
+
+    font-family:"Libre Baskerville",serif;
+
+    color:#173c82;
+
+    font-size:18px;
+
+    line-height:1.35;
+
+    margin-bottom:10px;
+
+    font-weight:700;
+
+}
+
+.feature-text p{
+
+    font-size:15px;
+
+    color:#666;
+
+    line-height:1.55;
+
+    margin:0;
+
+}
+
+/*=========================================================
+FOOTER
+=========================================================*/
+
+.feature-footer{
+
+    margin-top:auto;
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    align-items:center;
+
+}
+
+/*=========================================================
+IMAGE
+=========================================================*/
+
+.feature-image{
+
+    width:100%;
+
+    height:190px;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.45s;
+
+}
+
+.feature-card:hover .feature-image{
+
+    transform:scale(1.06);
+
+}
+
+/*=========================================================
+ICON
+=========================================================*/
+
+.feature-icon{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:34px;
+
+}
+
+/*=========================================================
+ICON COLORS
+=========================================================*/
+
+.blue{
+
+    background:#edf6ff;
+
+    color:#0b7ad8;
+
+}
+
+.purple{
+
+    background:#f3e9ff;
+
+    color:#8452c8;
+
+}
+
+.green{
+
+    background:#eef9ef;
+
+    color:#4b9e59;
+
+}
+
+.orange{
+
+    background:#fff1e8;
+
+    color:#ff7d4b;
+
+}
+
+/*=========================================================
+ARROW
+=========================================================*/
+
+.feature-arrow{
+
+    width:34px;
+
+    height:34px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#8b8b8b;
+
+    background:#fafafa;
+
+    transition:.35s;
+
+}
+
+.feature-card:hover .feature-arrow{
+
+    background:#173c82;
+
+    color:#fff;
+
+    transform:translateX(5px);
+
+}
+
+/*=========================================================
+IMAGE COLUMN
+=========================================================*/
+
+.feature-card .col-5{
+
+    overflow:hidden;
+
+}
+
+/*=========================================================
+LARGE DESKTOP
+=========================================================*/
+
+@media (max-width:1400px){
+
+    .loving-content h1{
+
+        font-size:40px;
+
+    }
+
+}
+
+/*=========================================================
+LAPTOP
+=========================================================*/
+
+@media (max-width:1200px){
+
+    .loving-hero-section{
+
+        height:390px;
+
+    }
+
+    .loving-content h1{
+
+        font-size:48px;
+
+    }
+
+    .loving-content p{
+
+        font-size:20px;
+
+    }
+
+    .feature-card{
+
+        height:185px;
+
+    }
+
+    .feature-content{
+
+        height:185px;
+
+        padding:20px;
+
+    }
+
+    .feature-image{
+
+        height:185px;
+
+    }
+
+}
+
+/*=========================================================
+TABLET
+=========================================================*/
+
+@media (max-width:991px){
+
+    .loving-hero-section{
+
+        height:360px;
+
+    }
+
+    .loving-overlay{
+
+        background:rgba(255,255,255,.80);
+
+    }
+
+    .loving-content{
+
+        text-align:center;
+
+        margin:auto;
+
+    }
+
+    .hero-icon{
+
+        margin:0 auto 22px;
+
+    }
+
+    .loving-content h1{
+
+        font-size:40px;
+
+    }
+
+    .loving-content p{
+
+        font-size:18px;
+
+    }
+
+    .feature-card{
+
+        height:210px;
+
+    }
+
+    .feature-content{
+
+        height:210px;
+
+        padding:22px;
+
+    }
+
+    .feature-image{
+
+        height:210px;
+
+    }
+
+}
+
+/*=========================================================
+MOBILE
+=========================================================*/
+
+@media (max-width:767px){
+
+    .loving-hero-section{
+
+        height:auto;
+
+        padding:90px 0 60px;
+
+    }
+
+    .loving-banner-image{
+
+        object-position:center;
+
+    }
+
+    .loving-content{
+
+        text-align:center;
+
+    }
+
+    .hero-icon{
+
+        width:72px;
+
+        height:72px;
+
+        font-size:34px;
+
+        margin:0 auto 18px;
+
+    }
+
+    .loving-content h1{
+
+        font-size:31px;
+
+        line-height:1.3;
+
+    }
+
+    .loving-content p{
+
+        font-size:16px;
+
+        line-height:1.7;
+
+    }
+
+    .loving-feature-section{
+
+        padding:40px 0 60px;
+
+    }
+
+    .feature-card{
+
+        height:auto;
+
+    }
+
+    .feature-card .row{
+
+        flex-direction:column-reverse;
+
+    }
+
+    .feature-card .col-5,
+
+    .feature-card .col-7{
+
+        width:100%;
+
+    }
+
+    .feature-image{
+
+        height:220px;
+
+        width:100%;
+
+    }
+
+    .feature-content{
+
+        height:auto;
+
+        padding:25px;
+
+    }
+
+    .feature-text h3{
+
+        font-size:22px;
+
+    }
+
+    .feature-text p{
+
+        font-size:15px;
+
+    }
+
+    .feature-footer{
+
+        margin-top:20px;
+
+    }
+
+}
+
+/*=========================================================
+SMALL MOBILE
+=========================================================*/
+
+@media (max-width:576px){
+
+    .loving-hero-section{
+
+        padding:80px 0 50px;
+
+    }
+
+    .loving-content h1{
+
+        font-size:28px;
+
+    }
+
+    .loving-content p{
+
+        font-size:15px;
+
+    }
+
+    .feature-content{
+
+        padding:20px;
+
+    }
+
+    .feature-icon{
+
+        width:60px;
+
+        height:60px;
+
+        font-size:28px;
+
+    }
+
+    .feature-text h3{
+
+        font-size:20px;
+
+    }
+
+    .feature-text p{
+
+        font-size:14px;
+
+        line-height:1.6;
+
+    }
+
+    .feature-image{
+
+        height:400px;
+
+    }
+
+}
+
+/*=========================================================
+360px MOBILE
+=========================================================*/
+
+@media (max-width:360px){
+
+    .loving-hero-section{
+
+        padding:75px 0 45px;
+
+        min-height:320px;
+
+    }
+
+    .loving-content{
+
+        text-align:center;
+
+    }
+
+    .hero-icon{
+
+        width:58px;
+
+        height:58px;
+
+        font-size:26px;
+
+        margin:0 auto 15px;
+
+    }
+
+    .loving-content h1{
+
+        font-size:24px;
+
+        line-height:1.35;
+
+        margin-bottom:12px;
+
+    }
+
+    .loving-content p{
+
+        font-size:14px;
+
+        line-height:1.6;
+
+    }
+
+    /*=========================
+    Cards
+    =========================*/
+
+    .loving-feature-section{
+
+        padding:30px 0 50px;
+
+    }
+
+    .feature-card{
+
+        border-radius:16px;
+
+    }
+
+    .feature-card .row{
+
+        flex-direction:column-reverse;
+
+    }
+
+    .feature-card .col-5,
+
+    .feature-card .col-7{
+
+        width:100%;
+
+        max-width:100%;
+
+        flex:0 0 100%;
+
+    }
+
+    .feature-image{
+
+        width:100%;
+
+        height:180px;
+
+        object-fit:cover;
+
+    }
+
+    .feature-content{
+
+        padding:18px;
+
+        height:auto;
+
+    }
+
+    .feature-icon{
+
+        width:55px;
+
+        height:55px;
+
+        font-size:24px;
+
+        margin-bottom:15px;
+
+    }
+
+    .feature-text h3{
+
+        font-size:18px;
+
+        line-height:1.4;
+
+        margin-bottom:10px;
+
+    }
+
+    .feature-text p{
+
+        font-size:13px;
+
+        line-height:1.6;
+
+    }
+
+    .feature-footer{
+
+        margin-top:18px;
+
+    }
+
+    .feature-arrow{
+
+        width:34px;
+
+        height:34px;
+
+        font-size:16px;
+
+    }
+
+}
