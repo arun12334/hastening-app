@@ -20,21 +20,36 @@
       <div class="col-lg-9">
         <div class="nav-menu">
 
-        <a href="welcome.html" class="nav-item-custom  active-nav">
+<a
+    routerLink="/"
+    routerLinkActive="active-nav"
+    [routerLinkActiveOptions]="{ exact: true }"
+    class="nav-item-custom">
+
     <i class="bi bi-house-fill"></i>
     Home<br>
     <span class="invisible">.</span>
+
 </a>
 
-          <a  href="welcome.html" class="nav-item-custom">
-            <i class="bi bi-heart"></i>
-            Loving<br>Our Neighbor
-          </a>
+       <a
+    routerLink="/loving-our-neighbor"
+    routerLinkActive="active-nav"
+    class="nav-item-custom">
 
-          <a href="welcome.html"  class="nav-item-custom">
+    <i class="bi bi-heart"></i>
+    Loving<br>
+    Our Neighbor
+
+</a>
+
+          <a routerLink="/sharing-our-faith"
+    routerLinkActive="active-nav"  class="nav-item-custom">
             <i class="bi bi-book"></i>
             Sharing Our<br>Faith in Christ
           </a>
+
+          
 
           <a class="nav-item-custom">
             <i class="bi bi-people-fill"></i>
@@ -122,7 +137,7 @@
 
 <div class="offcanvas-body bg-light">
 
-    <a  href="welcome.html" class="mobile-menu-item active">
+    <a  href="welcome.html" class="mobile-menu-item ">
         <div class="menu-icon">
             <i class="bi bi-house-fill"></i>
         </div>
