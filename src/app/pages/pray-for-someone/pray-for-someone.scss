@@ -1,0 +1,1793 @@
+/*============================================================*/
+/* PART 2 */
+/* PAGE */
+/*============================================================*/
+
+.prayer-page{
+
+    background:#f4f6fb;
+
+    min-height:100vh;
+
+    padding-bottom:1px;
+
+}
+
+/*============================================================*/
+/* HEADER */
+/*============================================================*/
+
+.page-header{
+
+    background:#fff;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px 20px;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+
+}
+
+.header-left,
+.header-right{
+
+    width:240px;
+
+}
+
+.header-center{
+
+    flex:1;
+
+    text-align:center;
+
+}
+
+.header-center h2{
+
+    margin:0;
+
+    font-size:32px;
+
+    font-weight:700;
+
+    color:#143d7a;
+
+}
+
+/*============================================================*/
+/* BACK BUTTON */
+/*============================================================*/
+
+.back-btn{
+
+    width:48px;
+
+    height:48px;
+
+    border:none;
+
+    background:white;
+
+    border-radius:50%;
+
+    transition:.3s;
+
+}
+
+.back-btn:hover{
+
+    background:#edf2ff;
+
+}
+
+.back-btn i{
+
+    font-size:24px;
+
+    color:#143d7a;
+
+}
+
+/*============================================================*/
+/* ADD BUTTON */
+/*============================================================*/
+
+.add-btn{
+
+    float:right;
+
+    border:none;
+
+    background:white;
+
+    color:#143d7a;
+
+    font-weight:600;
+
+    padding:10px 18px;
+
+    border-radius:40px;
+
+    transition:.3s;
+
+}
+
+.add-btn:hover{
+
+    background:#143d7a;
+
+    color:white;
+
+}
+
+.add-btn i{
+
+    margin-right:8px;
+
+}
+
+/*============================================================*/
+/* HERO */
+/*============================================================*/
+
+.hero-banner{
+
+    position:relative;
+
+    overflow:hidden;
+
+
+}
+
+.hero-image{
+
+    width:100%;
+
+    height:300px;
+
+    object-fit:cover;
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(255,255,255,.25);
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.hero-content{
+
+    display:flex;
+
+    align-items:center;
+
+    padding:50px;
+
+}
+
+.icon-circle{
+
+    width:110px;
+
+    height:110px;
+
+    border-radius:50%;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+}
+
+.icon-circle i{
+
+    font-size:60px;
+
+    color:#1b4ea3;
+
+}
+
+.hero-text{
+
+    margin-left:30px;
+
+}
+
+.hero-text h3{
+
+    font-size:30px;
+
+    color:#153b79;
+
+    font-weight:700;
+
+}
+
+.hero-text p{
+
+    font-size:21px;
+
+    width:650px;
+
+    color:#304a72;
+
+}
+
+.hero-text h5{
+
+    color:#1b4ea3;
+
+    font-style:italic;
+
+    margin-top:15px;
+
+}
+
+/*============================================================*/
+/* REQUEST BUTTON */
+/*============================================================*/
+
+.request-wrapper{
+
+    margin-top:20px;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.request-btn{
+
+    width:600px;
+
+    background:#143d7a;
+
+    border:none;
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:20px;
+
+    padding:5px;
+
+    border-radius:16px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.20);
+
+    transition:.3s;
+
+}
+
+.request-btn:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.request-btn i{
+
+    font-size:50px;
+
+}
+
+.request-btn h4{
+
+    margin:0;
+
+    font-size:30px;
+
+}
+
+.request-btn small{
+
+    font-size:16px;
+
+    opacity:.9;
+
+}
+
+/*============================================================*/
+/* INFO */
+/*============================================================*/
+
+.info-box{
+
+    max-width:1100px;
+
+    margin:15px auto;
+
+    background:#eef4ff;
+
+    color:#1b4ea3;
+
+    border-radius:12px;
+
+    padding:16px;
+
+    text-align:center;
+
+    font-weight:600;
+
+}
+
+.info-box i{
+
+    margin-right:10px;
+
+}
+
+/*============================================================*/
+/* MOBILE */
+/*============================================================*/
+
+@media(max-width:768px){
+
+.page-header{
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+.header-left,
+.header-right{
+
+width:100%;
+
+text-align:center;
+
+}
+
+.header-center h2{
+
+font-size:24px;
+
+}
+
+.hero-image{
+
+height:220px;
+
+}
+
+.hero-content{
+
+padding:20px;
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.hero-text{
+
+margin-left:0;
+
+margin-top:20px;
+
+}
+
+.hero-text h3{
+
+font-size:26px;
+
+}
+
+.hero-text p{
+
+width:auto;
+
+font-size:16px;
+
+}
+
+.icon-circle{
+
+width:75px;
+
+height:75px;
+
+}
+
+.icon-circle i{
+
+font-size:36px;
+
+}
+
+.request-btn{
+
+width:92%;
+
+padding:18px;
+
+}
+
+.request-btn h4{
+
+font-size:22px;
+
+}
+
+.request-btn small{
+
+font-size:13px;
+
+}
+
+}
+
+/*============================================================*/
+/* PART 3 */
+/* TABS */
+/*============================================================*/
+
+.prayer-tabs-card{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+/*============================================================*/
+/* HEADER */
+/*============================================================*/
+
+.tabs-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    border-bottom:1px solid #e5e5e5;
+
+    padding:0 15px;
+
+    background:#fff;
+
+}
+
+/*============================================================*/
+/* LEFT */
+/*============================================================*/
+
+.tabs-left{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+/*============================================================*/
+/* TAB BUTTON */
+/*============================================================*/
+
+.tab-btn{
+
+    border:none;
+
+    background:none;
+
+    padding:18px 30px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    color:#7a7a7a;
+
+    position:relative;
+
+    transition:.3s;
+
+}
+
+.tab-btn:hover{
+
+    color:#143d7a;
+
+}
+
+.tab-btn.active{
+
+    color:#143d7a;
+
+}
+
+.tab-btn.active::after{
+
+    content:'';
+
+    position:absolute;
+
+    left:0;
+
+    right:0;
+
+    bottom:0;
+
+    height:4px;
+
+    background:#143d7a;
+
+    border-radius:20px;
+
+}
+
+/*============================================================*/
+/* RIGHT */
+/*============================================================*/
+
+.tabs-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:#777;
+
+    font-size:15px;
+
+}
+
+.tabs-right i{
+
+    color:#143d7a;
+
+    font-size:20px;
+
+}
+
+.tabs-right strong{
+
+    color:#143d7a;
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+/*============================================================*/
+/* CONTENT */
+/*============================================================*/
+
+.tab-content-area{
+
+    background:#fff;
+
+}
+
+
+/*============================================================*/
+/* MOBILE */
+/*============================================================*/
+
+@media(max-width:768px){
+
+.tabs-header{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+padding:10px;
+
+}
+
+.tabs-left{
+
+width:100%;
+
+overflow-x:auto;
+
+}
+
+.tab-btn{
+
+padding:15px 18px;
+
+font-size:15px;
+
+white-space:nowrap;
+
+}
+
+.tabs-right{
+
+width:100%;
+
+justify-content:center;
+
+padding:12px 0;
+
+}
+
+.tabs-right strong{
+
+font-size:24px;
+
+}
+
+}
+
+/*============================================================*/
+/* PART 4 */
+/* PRAYER LIST */
+/*============================================================*/
+
+.prayer-list{
+
+    padding:10px;
+
+}
+
+/*============================================================*/
+
+.prayer-card{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:22px;
+
+    background:#fff;
+
+    border-bottom:1px solid #ececec;
+
+    transition:.25s;
+
+}
+
+.prayer-card:hover{
+
+    background:#fafcff;
+
+}
+
+/*============================================================*/
+
+.card-left{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    flex:1;
+
+}
+
+/*============================================================*/
+
+.avatar{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#30508a;
+
+    margin-right:20px;
+
+    flex-shrink:0;
+
+}
+
+/*============================================================*/
+
+.card-details{
+
+    flex:1;
+
+}
+
+.card-details h4{
+
+    margin:0;
+
+    font-size:26px;
+
+    font-weight:700;
+
+    color:#143d7a;
+
+}
+
+.card-details p{
+
+    margin:8px 0;
+
+    color:#555;
+
+    line-height:1.6;
+
+    font-size:16px;
+
+}
+
+.meta{
+
+    display:flex;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+    font-size:14px;
+
+    color:#777;
+
+}
+
+.meta strong{
+
+    color:#143d7a;
+
+}
+
+/*============================================================*/
+
+.card-center{
+
+    width:170px;
+
+    text-align:center;
+
+}
+
+.card-center h5{
+
+    margin:0;
+
+    font-size:34px;
+
+    color:#143d7a;
+
+    font-weight:700;
+
+}
+
+.card-center span{
+
+    display:block;
+
+    color:#666;
+
+    font-size:15px;
+
+}
+
+.card-center small{
+
+    color:#999;
+
+}
+
+/*============================================================*/
+
+.completed{
+
+    color:#198754;
+
+    font-weight:700;
+
+    font-size:18px;
+
+}
+
+/*============================================================*/
+
+.card-right{
+
+    width:200px;
+
+    display:flex;
+
+    justify-content:flex-end;
+
+}
+
+/*============================================================*/
+
+.pray-btn{
+
+    width:170px;
+
+    height:56px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#143d7a;
+
+    color:#fff;
+
+    font-weight:600;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+.pray-btn:hover{
+
+    background:#0b2e64;
+
+}
+
+.pray-btn i{
+
+    margin-right:8px;
+
+}
+
+.pray-btn:disabled{
+
+    background:#198754;
+
+    cursor:default;
+
+}
+
+/*============================================================*/
+
+.completed-btn{
+
+    width:170px;
+
+    height:56px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#198754;
+
+    color:white;
+
+    font-weight:600;
+
+}
+
+.completed-btn i{
+
+    margin-right:8px;
+
+}
+
+/*============================================================*/
+/* MOBILE */
+/*============================================================*/
+
+@media(max-width:992px){
+
+.prayer-card{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:20px;
+
+}
+
+.card-left{
+
+width:100%;
+
+}
+
+.card-center{
+
+width:100%;
+
+text-align:left;
+
+padding-left:90px;
+
+}
+
+.card-right{
+
+width:100%;
+
+justify-content:flex-start;
+
+padding-left:90px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.avatar{
+
+width:55px;
+
+height:55px;
+
+font-size:18px;
+
+margin-right:12px;
+
+}
+
+.card-details h4{
+
+font-size:20px;
+
+}
+
+.card-details p{
+
+font-size:14px;
+
+}
+
+.card-center{
+
+padding-left:68px;
+
+}
+
+.card-right{
+
+padding-left:68px;
+
+}
+
+.pray-btn{
+
+width:100%;
+
+max-width:220px;
+
+}
+
+}
+
+
+/*============================================================*/
+/* PART 5 */
+/* PREMIUM UI POLISH */
+/*============================================================*/
+
+/*------------------------------
+Page Container
+-------------------------------*/
+
+.container{
+    max-width:1280px;
+}
+
+/*------------------------------
+Smooth Scroll
+-------------------------------*/
+
+html{
+    scroll-behavior:smooth;
+}
+
+/*------------------------------
+Card
+-------------------------------*/
+
+.prayer-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+    margin-bottom:18px;
+
+    border:1px solid #edf1f7;
+
+    background:#ffffff;
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,.04);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+
+}
+
+.prayer-card:last-child{
+
+    margin-bottom:0;
+
+}
+
+/*------------------------------*/
+
+.prayer-card:hover{
+
+    transform:translateY(-4px);
+
+    border-color:#dce8ff;
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.10);
+
+}
+
+/*============================================================*/
+/* Left Blue Border */
+/*============================================================*/
+
+.prayer-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:5px;
+
+    height:100%;
+
+    background:#1f4f96;
+
+    transform:scaleY(0);
+
+    transition:.25s;
+
+}
+
+.prayer-card:hover::before{
+
+    transform:scaleY(1);
+
+}
+
+/*============================================================*/
+/* Avatar */
+/*============================================================*/
+
+.avatar{
+
+    border:3px solid #fff;
+
+    box-shadow:
+
+        0 6px 20px rgba(0,0,0,.10);
+
+    transition:.25s;
+
+}
+
+.prayer-card:hover .avatar{
+
+    transform:scale(1.05);
+
+}
+
+/*============================================================*/
+/* Title */
+/*============================================================*/
+
+.card-details h4{
+
+    transition:.25s;
+
+}
+
+.prayer-card:hover .card-details h4{
+
+    color:#0f56b3;
+
+}
+
+/*============================================================*/
+/* Description */
+/*============================================================*/
+
+.card-details p{
+
+    max-width:760px;
+
+}
+
+/*============================================================*/
+/* Meta */
+/*============================================================*/
+
+.meta{
+
+    margin-top:14px;
+
+}
+
+.meta span{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+/*============================================================*/
+/* Prayer Count */
+/*============================================================*/
+
+.card-center h5{
+
+    transition:.3s;
+
+}
+
+.prayer-card:hover .card-center h5{
+
+    transform:scale(1.08);
+
+}
+
+/*============================================================*/
+/* Button */
+/*============================================================*/
+
+.pray-btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+    letter-spacing:.3px;
+
+    font-weight:700;
+
+}
+
+/* Ripple */
+
+.pray-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:50%;
+
+    left:-30px;
+
+    width:25px;
+
+    height:140%;
+
+    background:rgba(255,255,255,.3);
+
+    transform:
+        translateY(-50%)
+        rotate(20deg);
+
+    transition:.6s;
+
+}
+
+.pray-btn:hover::before{
+
+    left:220px;
+
+}
+
+.pray-btn:hover{
+
+    box-shadow:
+
+        0 12px 30px rgba(20,61,122,.35);
+
+}
+
+/*============================================================*/
+/* Completed */
+/*============================================================*/
+
+.completed-btn{
+
+    box-shadow:
+
+        0 8px 20px rgba(25,135,84,.25);
+
+}
+
+/*============================================================*/
+/* Hero */
+/*============================================================*/
+
+.hero-banner{
+
+    box-shadow:
+
+        0 18px 40px rgba(0,0,0,.12);
+
+}
+
+.hero-overlay{
+
+    backdrop-filter:blur(1px);
+
+}
+
+/*============================================================*/
+/* Request Button */
+/*============================================================*/
+
+.request-btn{
+
+    transition:
+
+        transform .25s,
+
+        box-shadow .25s;
+
+}
+
+.request-btn:hover{
+
+    transform:
+
+        translateY(-5px)
+
+        scale(1.01);
+
+}
+
+/*============================================================*/
+/* Info Box */
+/*============================================================*/
+
+.info-box{
+
+    border-left:5px solid #1f4f96;
+
+}
+
+/*============================================================*/
+/* Tabs */
+/*============================================================*/
+
+.tab-btn{
+
+    transition:
+
+        color .2s,
+
+        background .2s;
+
+}
+
+.tab-btn:hover{
+
+    background:#f6f9ff;
+
+}
+
+/*============================================================*/
+/* Fade Animation */
+/*============================================================*/
+
+.prayer-card{
+
+    animation:fadeCard .5s ease;
+
+}
+
+@keyframes fadeCard{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*============================================================*/
+/* Mobile */
+/*============================================================*/
+
+@media(max-width:992px){
+
+.prayer-card{
+
+padding:18px;
+
+}
+
+.hero-text h3{
+
+font-size:30px;
+
+}
+
+.hero-text p{
+
+font-size:17px;
+
+}
+
+}
+
+/*============================================================*/
+@media(max-width:350px){
+
+    .hero-banner {
+        margin-top: 80px;
+    }
+
+}
+
+
+@media(max-width:768px){
+
+    .hero-banner {
+        margin-top: 80px;
+    }
+
+.hero-content{
+
+padding:25px 18px;
+
+}
+
+.request-btn{
+
+padding:18px;
+
+}
+
+.prayer-card{
+
+border-radius:14px;
+
+}
+
+.card-details{
+
+margin-top:4px;
+
+}
+
+.card-center{
+
+margin-top:6px;
+
+padding-left:0;
+
+text-align:left;
+
+}
+
+.card-right{
+
+padding-left:0;
+
+}
+
+.pray-btn{
+
+width:100%;
+
+}
+
+}
+
+/*============================================================*/
+
+@media(max-width:576px){
+
+.page-header{
+
+padding:14px;
+
+}
+
+.header-center h2{
+
+font-size:22px;
+
+}
+
+.hero-image{
+
+height:210px;
+
+}
+
+.hero-text h3{
+
+font-size:22px;
+
+}
+
+.hero-text p{
+
+font-size:14px;
+
+}
+
+.icon-circle{
+
+width:65px;
+
+height:65px;
+
+}
+
+.icon-circle i{
+
+font-size:30px;
+
+}
+
+.request-btn{
+
+border-radius:12px;
+
+}
+
+.request-btn h4{
+
+font-size:18px;
+
+}
+
+.info-box{
+
+font-size:14px;
+
+padding:14px;
+
+}
+
+.prayer-card{
+
+padding:15px;
+
+}
+
+.card-details h4{
+
+font-size:18px;
+
+}
+
+.card-details p{
+
+font-size:13px;
+
+line-height:1.5;
+
+}
+
+.meta{
+
+font-size:12px;
+
+gap:6px;
+
+}
+
+.card-center h5{
+
+font-size:28px;
+
+}
+
+.pray-btn{
+
+height:48px;
+
+font-size:14px;
+
+}
+
+}
+
+/*=========================================================
+SEARCH
+=========================================================*/
+
+.search-toolbar{
+
+display:flex;
+
+justify-content:space-between;
+
+margin:25px 20px;
+
+gap:15px;
+
+}
+
+.search-box{
+
+flex:1;
+
+display:flex;
+
+align-items:center;
+
+background:white;
+
+border-radius:12px;
+
+padding:0 15px;
+
+box-shadow:0 3px 12px rgba(0,0,0,.08);
+
+}
+
+.search-box i{
+
+color:#0d4ea6;
+
+margin-right:10px;
+
+}
+
+.search-box input{
+
+width:100%;
+
+height:50px;
+
+border:none;
+
+outline:none;
+
+}
+
+/*=========================================================*/
+
+.refresh-btn{
+
+width:50px;
+
+height:50px;
+
+border:none;
+
+background:#0d4ea6;
+
+color:white;
+
+border-radius:12px;
+
+}
+
+/*=========================================================*/
+
+.filter-list{
+
+display:flex;
+
+gap:10px;
+
+overflow:auto;
+
+padding:0 20px 20px;
+
+}
+
+.filter-btn{
+
+border:none;
+
+padding:10px 20px;
+
+border-radius:30px;
+
+background:#f3f4f6;
+
+font-weight:600;
+
+white-space:nowrap;
+
+}
+
+.filter-btn.active{
+
+background:#0d4ea6;
+
+color:white;
+
+}
+
+/*=========================================================*/
+
+.results{
+
+padding:0 20px 15px;
+
+font-weight:600;
+
+color:#777;
+
+}
+
+/*=========================================================*/
+
+.empty-state{
+
+padding:80px 20px;
+
+text-align:center;
+
+}
+
+.empty-state i{
+
+font-size:70px;
+
+color:#0d4ea6;
+
+}
+
+.empty-state h3{
+
+margin-top:20px;
+
+}
+
+/*=========================================================*/
+
+.loading-card{
+
+height:150px;
+
+border-radius:16px;
+
+margin:20px;
+
+background:linear-gradient(
+90deg,
+#eeeeee,
+#f8f8f8,
+#eeeeee);
+
+background-size:300%;
+
+animation:loading 1.2s infinite;
+
+}
+
+@keyframes loading{
+
+0%{
+
+background-position:0;
+
+}
+
+100%{
+
+background-position:300%;
+
+}
+
+}
+
+/*=========================================================*/
+
+.toast-box{
+
+position:fixed;
+
+bottom:30px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+background:#198754;
+
+color:white;
+
+padding:16px 25px;
+
+border-radius:12px;
+
+font-weight:600;
+
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+z-index:9999;
+
+animation:toastUp .3s;
+
+}
+
+@keyframes toastUp{
+
+from{
+
+opacity:0;
+
+transform:translate(-50%,30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translate(-50%,0);
+
+}
+
+}

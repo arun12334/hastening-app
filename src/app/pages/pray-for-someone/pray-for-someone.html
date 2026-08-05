@@ -1,0 +1,516 @@
+<!-- ========================================================= -->
+<!-- PART 2 -->
+<!-- PAGE HEADER -->
+<!-- ========================================================= -->
+
+<app-header></app-header>
+
+<div class="prayer-page">
+
+    <!-- ============================================= -->
+    <!-- HEADER -->
+    <!-- ============================================= -->
+ 
+
+    <!-- ============================================= -->
+    <!-- HERO -->
+    <!-- ============================================= -->
+
+    <div class="hero-banner">
+
+        <img
+            src="assets/loving/prayer-banner.jpg"
+            class="hero-image"
+            alt="Prayer Banner">
+
+        <div class="hero-overlay">
+
+            <div class="hero-content">
+
+                <div class="hero-icon">
+
+                    <div class="icon-circle">
+
+                        <i class="bi bi-person-raised-hand"></i>
+
+                    </div>
+
+                </div>
+
+                <div class="hero-text">
+
+                    <h3>
+
+                        Lift and receive prayers in faith.
+
+                    </h3>
+
+                    <p>
+
+                        The effective fervent prayer of a righteous person
+                        has great power and produces wonderful results.
+
+                    </p>
+
+                    <h5>
+
+                        James 5:16
+
+                    </h5>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ============================================= -->
+    <!-- REQUEST BUTTON -->
+    <!-- ============================================= -->
+
+    <div class="request-wrapper">
+
+        <button class="request-btn">
+
+            <i class="bi bi-heart-pulse-fill"></i>
+
+            <div>
+
+                <h4>
+
+                    Request Prayers
+
+                </h4>
+
+                <small>
+
+                    For yourself, your family, or a loved one
+
+                </small>
+
+            </div>
+
+        </button>
+
+    </div>
+
+    <!-- ============================================= -->
+    <!-- INFO ALERT -->
+    <!-- ============================================= -->
+
+    <div class="info-box">
+
+        <i class="bi bi-info-circle"></i>
+
+        You may have a maximum of three (3) prayer requests
+        outstanding at any point in time.
+
+    </div>
+
+    
+
+</div>
+
+<!-- ========================================================= -->
+<!-- PART 3 -->
+<!-- PRAYER TABS -->
+<!-- ========================================================= -->
+
+<div class="container">
+
+    <div class="prayer-tabs-card">
+
+        <!-- ============================== -->
+        <!-- TAB HEADER -->
+        <!-- ============================== -->
+
+        <div class="tabs-header">
+
+            <div class="tabs-left">
+
+                <button
+                    class="tab-btn"
+                    [class.active]="activeTab === 1"
+                    (click)="changeTab(1)">
+
+                    Prayer Requests
+
+                </button>
+
+                <button
+                    class="tab-btn"
+                    [class.active]="activeTab === 2"
+                    (click)="changeTab(2)">
+
+                    My Prayers Offered
+
+                </button>
+
+            </div>
+
+            <div class="tabs-right">
+
+                <i class="bi bi-heart"></i>
+
+                <span>Total Prayers Offered</span>
+
+                <strong >
+
+                    {{ totalPrayersOffered | number }}
+
+                </strong>
+
+            </div>
+
+        </div>
+
+        <!-- ============================== -->
+        <!-- TAB CONTENT -->
+        <!-- ============================== -->
+
+        <div class="tab-content-area">
+<!-- ========================================================= -->
+<!-- PART 4 -->
+<!-- PRAYER REQUEST LIST -->
+<!-- ========================================================= -->
+
+
+
+
+
+@if(activeTab==1){
+
+    <!--==========================================-->
+    <!-- SEARCH BAR -->
+    <!--==========================================-->
+
+    <div class="search-toolbar">
+
+        <div class="search-box">
+
+            <i class="bi bi-search"></i>
+
+            <input
+                type="text"
+                placeholder="Search prayer requests..."
+                [(ngModel)]="searchText">
+
+        </div>
+
+        <button
+            class="refresh-btn"
+            (click)="refreshPrayerList()">
+
+            <i class="bi bi-arrow-clockwise"></i>
+
+        </button>
+
+    </div>
+
+    <!--==========================================-->
+    <!-- FILTER -->
+    <!--==========================================-->
+
+    <div class="filter-list">
+
+        @for(item of filterList; track item){
+
+            <button
+                class="filter-btn"
+                [class.active]="selectedFilter==item"
+                (click)="changeFilter(item)">
+
+                {{item}}
+
+            </button>
+
+        }
+
+    </div>
+
+    <!--==========================================-->
+    <!-- LOADING -->
+    <!--==========================================-->
+
+    @if(isLoading){
+
+        <div class="loading-box">
+
+            <div class="loading-card"></div>
+
+            <div class="loading-card"></div>
+
+            <div class="loading-card"></div>
+
+        </div>
+
+    } @else {
+
+        <!--==========================================-->
+        <!-- RESULTS -->
+        <!--==========================================-->
+
+        <div class="results">
+
+            {{filteredPrayerRequests.length}}
+
+            Prayer Requests
+
+        </div>
+
+        <!--==========================================-->
+        <!-- PRAYER LIST -->
+        <!--==========================================-->
+
+        <div class="prayer-list">
+
+            @for(request of filteredPrayerRequests; track request.id){
+
+                <div class="prayer-card">
+
+                    <!-- LEFT -->
+
+                    <div class="card-left">
+
+                        <div
+                            class="avatar"
+                            [style.background]="request.avatarColor">
+
+                            {{request.initials}}
+
+                        </div>
+
+                        <div class="card-details">
+
+                            <h4>
+
+                                {{request.title}}
+
+                            </h4>
+
+                            <p>
+
+                                {{request.description}}
+
+                            </p>
+
+                            <div class="meta">
+
+                                <span  >
+
+                                    Requested by
+                                    <strong class="ms-1">{{request.requestedBy}}</strong>
+
+                                </span>
+
+                                <span>•</span>
+
+                                <span>
+
+                                    {{request.relation}}
+
+                                </span>
+
+                                <span>•</span>
+
+                                <span>
+
+                                    {{request.date}}
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- CENTER -->
+
+                    <div class="card-center">
+
+                        <h5>
+
+                            {{request.prayerCount}}
+
+                        </h5>
+
+                        <span>
+
+                            Prayers Offered
+
+                        </span>
+
+                        <small>
+
+                            Expires {{request.expires}}
+
+                        </small>
+
+                    </div>
+
+                    <!-- RIGHT -->
+
+                    <div class="card-right">
+
+                        <button
+                            class="pray-btn"
+                            [disabled]="request.prayed"
+                            (click)="pray(request)">
+
+                            <i
+                                class="bi"
+                                [class.bi-heart]="!request.prayed"
+                                [class.bi-heart-fill]="request.prayed">
+
+                            </i>
+
+                            {{request.prayed ? 'Prayed' : "I've Prayed"}}
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            }
+
+        </div>
+
+        <!--==========================================-->
+        <!-- EMPTY STATE -->
+        <!--==========================================-->
+
+        @if(filteredPrayerRequests.length==0){
+
+            <div class="empty-state">
+
+                <i class="bi bi-heart"></i>
+
+                <h3>
+
+                    No Prayer Requests Found
+
+                </h3>
+
+                <p>
+
+                    Try another keyword.
+
+                </p>
+
+            </div>
+
+        }
+
+    }
+
+}
+ 
+<!-- ========================================================= -->
+<!-- MY PRAYERS -->
+<!-- ========================================================= -->
+
+@if(activeTab==2){
+
+<div class="prayer-list">
+
+    @for(request of myPrayerOffered; track request.id){
+
+    <div class="prayer-card">
+
+        <div class="card-left">
+
+            <div class="avatar"
+
+                [style.background]="request.avatarColor">
+
+                {{request.initials}}
+
+            </div>
+
+            <div class="card-details">
+
+                <h4>
+
+                    {{request.title}}
+
+                </h4>
+
+                <p>
+
+                    {{request.description}}
+
+                </p>
+
+                <div class="meta">
+
+                    <span>
+
+                        {{request.requestedBy}}
+
+                    </span>
+
+                    <span>•</span>
+
+                    <span>
+
+                        {{request.date}}
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="card-center">
+
+            <span class="completed">
+
+                Completed
+
+            </span>
+
+        </div>
+
+        <div class="card-right">
+
+            <button
+
+                class="completed-btn">
+
+                <i class="bi bi-check-circle-fill"></i>
+
+                Prayed
+
+            </button>
+
+        </div>
+
+    </div>
+
+    }
+
+</div>
+
+}
+
+           
+
+        </div>
+
+    </div>
+
+
+    <div *ngIf="showToast" class="toast-box">
+  <i class="bi bi-check-circle-fill"></i>
+  Thank you for praying ❤️
+</div>
+
+</div>
+
+

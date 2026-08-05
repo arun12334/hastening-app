@@ -1,0 +1,160 @@
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Header } from '../../components/header/header';
+
+@Component({
+  selector: 'app-does-unity-baptism',
+  standalone: true,
+  imports: [CommonModule, Header],
+  templateUrl: './does-unity-baptism.html',
+  styleUrl: './does-unity-baptism.scss',
+})
+export class DoesUnityBaptism {
+
+  //====================================================
+  // HERO BANNER
+  //====================================================
+
+  hero = {
+
+    image: 'assets/images/unity-banner.jpg',
+
+    title: 'Does Unity Require Baptism?',
+
+    subtitle:
+      'Seeking unity in Christ through faith, love, and divine order.',
+
+    verse:
+      '"Endeavouring to keep the unity of the Spirit in the bond of peace."',
+
+    reference: 'Ephesians 4:3'
+
+  };
+
+
+
+  //====================================================
+  // MAIN CONTENT
+  //====================================================
+
+  mainContent = {
+
+    title: 'Does Unity Require Baptism?',
+
+    paragraphs: [
+
+      'Ephesians 4 speaks of unity where we are bearing one another in love, with one Lord, one faith and one baptism.',
+
+      'In Acts 19 Paul met believers who had received John’s baptism and later baptized them in the name of Jesus Christ.',
+
+      'When the Holy Spirit was poured out after baptism they received spiritual gifts and grew together in faith.',
+
+      'Building Zion begins with unity of purpose, love, service and obedience to Jesus Christ.',
+
+      'True unity comes through following Christ, growing in faith, and serving one another.'
+
+    ],
+
+    image: 'assets/images/unity-group.jpg'
+
+  };
+
+
+
+  //====================================================
+  // FEATURE CARDS
+  //====================================================
+
+  featureCards = [
+
+    {
+
+      icon: 'bi-people-fill',
+
+      title: 'Shared Journey Toward Zion',
+
+      description:
+        'Unity is built through faith, repentance, love, patience and service.',
+
+      image: 'assets/images/zion-road.jpg',
+
+      button: 'Learn More',
+
+      color: 'warning'
+
+    },
+
+    {
+
+      icon: 'bi-book-half',
+
+      title: 'Grow in Faith & Understanding',
+
+      description:
+        'Study the scriptures, pray and seek personal revelation.',
+
+      image: 'assets/images/scripture-study.jpg',
+
+      button: 'Explore Resources',
+
+      color: 'primary'
+
+    },
+
+    {
+
+      icon: 'bi-people',
+
+      title: 'Connect in Fellowship',
+
+      description:
+        'Join others who are seeking Christ and build Zion together.',
+
+      image: 'assets/images/community.jpg',
+
+      button: 'Find a Group',
+
+      color: 'success'
+
+    }
+
+  ];
+
+
+
+  //====================================================
+  // FOOTER VERSE
+  //====================================================
+
+  footerVerse = {
+
+    verse:
+      '"Behold, how good and how pleasant it is for brethren to dwell together in unity!"',
+
+    reference: 'Psalm 133:1'
+
+  };
+
+
+
+  //====================================================
+  // FOOTER REFERENCES
+  //====================================================
+
+  scriptures = [
+
+    'John 3:3–5',
+
+    'Ephesians 4:3–5',
+
+    '2 Nephi 31:10–13',
+
+    'Acts 19:3–5',
+
+    'Moroni 10:3–5',
+
+    'Ecclesiastes 3:1–7'
+
+  ];
+
+}

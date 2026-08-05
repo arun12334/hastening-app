@@ -1,0 +1,511 @@
+<app-header></app-header>
+
+ <section class="unity-banner">
+
+    <!-- Banner Image -->
+    <img
+        src="https://img.magnific.com/free-vector/stylish-glowing-digital-red-lines-banner_1017-23964.jpg?semt=ais_test_b&w=740&q=80"
+        class="banner-img"
+        alt="Banner">
+
+    <!-- Overlay -->
+    <div class="banner-overlay"></div>
+
+    <!-- Content -->
+    <div class="banner-content">
+
+        <div class="d-flex align-items-center">
+
+            <div class="icon-box">
+                <i class="bi bi-people-fill"></i>
+            </div>
+
+            <div class="ms-3">
+
+                <h1>Invitation to Unity</h1>
+
+                <h5>Gathering hearts together in Christ.</h5>
+
+                <h6>One Body. One Spirit. One Zion.</h6>
+
+                <p>"That they all may be one..." — John 17:21</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<div class="container-fluid py-3" > 
+<!-- ============================================= -->
+<!-- NEXT PART -->
+<!-- ============================================= -->
+
+<div class="row g-4">
+
+<!-- ========================================= -->
+<!-- BOOK OF MORMON BELIEVERS -->
+<!-- ========================================= -->
+
+<div class="col-lg-6">
+
+    <div class="card border-0 shadow-sm rounded-4 h-100 overflow-hidden">
+
+        <!-- Header -->
+
+        <div class="card-header bg-white border-0 pt-4">
+
+            <div class="d-flex align-items-center">
+
+                <div class="book-icon">
+
+                    <i class="bi {{ believersCard.icon }}"></i>
+
+                </div>
+
+                <div class="ms-3">
+
+                    <h3 class="fw-bold text-primary mb-1">
+
+                        {{ believersCard.title }}
+
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <!-- Body -->
+
+        <div class="card-body">
+
+            <p class="text-muted">
+
+                {{ believersCard.description }}
+
+            </p>
+
+            <!-- Churches -->
+
+            <div class="list-group list-group-flush mt-3">
+
+                <div
+                    class="list-group-item border-0 px-0 py-2"
+                    *ngFor="let church of believersCard.churches">
+
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+
+                    {{ church }}
+
+                </div>
+
+            </div>
+
+            <!-- Footer Text -->
+
+            <div class="alert alert-warning mt-4 rounded-3">
+
+                <i class="bi bi-lightbulb-fill me-2"></i>
+
+                {{ believersCard.footer }}
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <!-- Bottom Image -->
+
+        <img
+
+            [src]="believersCard.image"
+
+            class="img-fluid believers-image"
+
+            alt="Book of Mormon Believers">
+
+    </div>
+
+</div>
+
+<!-- ========================================= -->
+<!-- TWO PEOPLES • ONE COVENANT -->
+<!-- ========================================= -->
+
+<div class="col-lg-6">
+
+    <div class="card border-0 shadow-sm rounded-4 h-100 overflow-hidden">
+
+        <!-- Header -->
+
+        <div class="card-header bg-white border-0 pt-4">
+
+            <div class="d-flex align-items-center">
+
+                <div class="covenant-icon">
+
+                    <i class="bi {{ covenant.icon }}"></i>
+
+                </div>
+
+                <div class="ms-3">
+
+                    <h3 class="fw-bold text-primary mb-1">
+
+                        {{ covenant.title }}
+
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <!-- Body -->
+
+        <div class="card-body">
+
+            <!-- Two Column -->
+
+            <div class="row text-center mb-4">
+
+                <div class="col-6">
+
+                    <div class="person-card">
+
+                        <h5 class="fw-bold text-primary">
+
+                            {{ covenant.leftTitle }}
+
+                        </h5>
+
+                        <small class="text-muted">
+
+                            {{ covenant.leftSubtitle }}
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <div class="col-6">
+
+                    <div class="person-card">
+
+                        <h5 class="fw-bold text-primary">
+
+                            {{ covenant.rightTitle }}
+
+                        </h5>
+
+                        <small class="text-muted">
+
+                            {{ covenant.rightSubtitle }}
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+
+            <!-- Covenant Points -->
+
+            <div class="timeline">
+
+                <div
+                    class="timeline-item"
+                    *ngFor="let point of covenant.points">
+
+                    <div class="timeline-dot"></div>
+
+                    <div>
+
+                        {{ point }}
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+
+            <!-- Scripture -->
+
+            <div class="scripture-box mt-4">
+
+                <i class="bi bi-bookmark-star-fill me-2"></i>
+
+                {{ covenant.scripture }}
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <!-- Bottom Image -->
+
+        <img
+
+            [src]="covenant.image"
+
+            class="img-fluid covenant-image"
+
+            alt="">
+
+    </div>
+
+</div>
+
+<!-- ========================================= -->
+<!-- A FULFILLMENT IN OUR DAY -->
+<!-- ========================================= -->
+
+<div class="col-lg-6">
+
+    <div class="card border-0 shadow-sm rounded-4 h-100 overflow-hidden">
+
+        <!-- Header -->
+
+        <div class="card-header bg-white border-0 pt-4">
+
+            <div class="d-flex align-items-center">
+
+                <div class="fulfillment-icon">
+
+                    <i class="bi {{ fulfillment.icon }}"></i>
+
+                </div>
+
+                <div class="ms-3">
+
+                    <h3 class="fw-bold text-primary mb-0">
+
+                        {{ fulfillment.title }}
+
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <!-- Body -->
+
+        <div class="card-body">
+
+            <div class="row text-center g-3">
+
+                <!-- Left -->
+
+                <div class="col-6">
+
+                    <div class="church-box">
+
+                        <img
+                            [src]="fulfillment.image1"
+                            class="church-img"
+                            alt="">
+
+                        <h6 class="fw-bold mt-3">
+
+                            {{ fulfillment.leftTitle }}
+
+                        </h6>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+                <!-- Right -->
+
+                <div class="col-6">
+
+                    <div class="church-box">
+
+                        <img
+                            [src]="fulfillment.image2"
+                            class="church-img"
+                            alt="">
+
+                        <h6 class="fw-bold mt-3">
+
+                            {{ fulfillment.rightTitle }}
+
+                        </h6>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+
+            <!-- Center Message -->
+
+            <div class="fulfillment-message mt-4">
+
+                <i class="bi bi-stars me-2"></i>
+
+                {{ fulfillment.message }}
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ========================================= -->
+<!-- WE HAVE A COMMON VISION -->
+<!-- ========================================= -->
+
+<div class="col-lg-6">
+
+    <div class="card border-0 shadow-sm rounded-4 h-100 overflow-hidden">
+
+        <!-- Header -->
+
+        <div class="card-header bg-white border-0 pt-4">
+
+            <div class="d-flex align-items-center">
+
+                <div class="vision-icon">
+
+                    <i class="bi {{ vision.icon }}"></i>
+
+                </div>
+
+                <div class="ms-3">
+
+                    <h3 class="fw-bold text-primary mb-0">
+
+                        {{ vision.title }}
+
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <!-- Body -->
+
+        <div class="card-body">
+
+            <!-- Quote -->
+
+            <div class="vision-quote">
+
+                <i class="bi bi-quote fs-3 text-warning"></i>
+
+                <p class="mb-0 mt-2 fst-italic">
+
+                    {{ vision.quote }}
+
+                </p>
+
+            </div>
+
+
+
+
+
+            <!-- Vision Points -->
+
+            <div class="row mt-4 g-2">
+
+                <div
+                    class="col-md-6"
+                    *ngFor="let item of vision.items">
+
+                    <div class="vision-item">
+
+                        <i class="bi bi-check-circle-fill text-success me-2"></i>
+
+                        {{ item }}
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+
+            <!-- Gallery -->
+
+            <div class="row mt-4 g-2">
+
+                <div
+                    class="col-4"
+                    *ngFor="let image of vision.gallery">
+
+                    <img
+
+                        [src]="image"
+
+                        class="img-fluid rounded-3 gallery-image"
+
+                        alt="">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+</div>

@@ -1,0 +1,436 @@
+.hero-card{
+    border-radius:24px;
+}
+
+.hero-img{
+    height:420px;
+    object-fit:cover;
+}
+
+.nav-link{
+    font-size:14px;
+}
+
+.nav-link i{
+    color:#46359d;
+}
+
+@media(max-width:991px){
+
+.hero-img{
+
+height:280px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.hero-img{
+
+height:220px;
+
+}
+
+h1{
+
+font-size:2rem;
+
+}
+
+}
+
+.card {
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card h3 {
+    font-size: 1.35rem;
+}
+
+.card p {
+    line-height: 1.6;
+}
+
+.btn-primary {
+    background: #5d46b5;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: #49359f;
+}
+
+@media (max-width: 768px) {
+
+    .card h3 {
+        font-size: 1.15rem;
+    }
+
+    .display-6 {
+        font-size: 1.7rem;
+    }
+
+}
+
+/* ===========================
+   Cards
+=========================== */
+
+.card {
+    border-radius: 20px;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    transition: .25s;
+}
+
+/* ===========================
+   Badge
+=========================== */
+
+.badge {
+    font-weight: 500;
+    font-size: .8rem;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width:992px) {
+
+    .card-body {
+
+        padding:1.25rem;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .card h3{
+
+        font-size:1.2rem;
+
+    }
+
+}
+
+@media (max-width:576px){
+
+    .card h3{
+
+        font-size:1.1rem;
+
+    }
+
+    .badge{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+}
+
+/* ==========================================================
+   PAGE
+========================================================== */
+
+body {
+    background: #f6f8fb;
+}
+
+.container-fluid {
+    max-width: 1450px;
+}
+
+/* ==========================================================
+   COLORS
+========================================================== */
+
+.text-primary {
+    color: #5c4eb5 !important;
+}
+
+.btn-primary {
+    background: #5c4eb5;
+    border-color: #5c4eb5;
+}
+
+.btn-primary:hover {
+    background: #4b3da5;
+    border-color: #4b3da5;
+}
+
+/* ==========================================================
+   CARDS
+========================================================== */
+
+.card {
+    border-radius: 22px;
+    transition: .25s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 .7rem 1.5rem rgba(0,0,0,.12) !important;
+}
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.hero-card {
+    overflow: hidden;
+}
+
+.hero-img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+}
+
+/* ==========================================================
+   ICON CIRCLE
+========================================================== */
+
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==========================================================
+   MENU
+========================================================== */
+
+.nav-link {
+    color: #444;
+    transition: .25s;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    color: #5c4eb5;
+}
+
+.nav-link i {
+    color: #5c4eb5;
+}
+
+/* ==========================================================
+   BADGE
+========================================================== */
+
+.badge {
+    font-size: .8rem;
+    font-weight: 500;
+    padding: .6rem .9rem;
+}
+
+/* ==========================================================
+   BUTTON
+========================================================== */
+
+.btn {
+    border-radius: 50px;
+}
+
+/* ==========================================================
+   IMAGE
+========================================================== */
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.display-6 {
+    font-size: 24px !important;
+}
+
+/* ==========================================================
+   1400+
+========================================================== */
+
+@media (min-width:1400px) {
+
+    .container-fluid {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .hero-img {
+        height: 460px;
+    }
+
+}
+
+/* ==========================================================
+   1200
+========================================================== */
+
+@media (max-width:1200px) {
+
+    .hero-img {
+        height: 400px;
+    }
+
+}
+
+/* ==========================================================
+   992
+========================================================== */
+
+@media (max-width:992px) {
+
+    .hero-img {
+        height: 320px;
+    }
+
+    .card-body {
+        padding: 1.3rem;
+    }
+
+    h1.display-5 {
+        font-size: 2.4rem;
+    }
+
+}
+
+/* ==========================================================
+   768
+========================================================== */
+
+@media (max-width:768px) {
+
+    .hero-img {
+        height: 260px;
+    }
+
+    h1.display-5 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .display-6 {
+        font-size: 1.6rem;
+    }
+
+}
+
+/* ==========================================================
+   576
+========================================================== */
+
+@media (max-width:576px) {
+
+    .container-fluid {
+        padding: 12px;
+    }
+
+    .hero-img {
+        height: 220px;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+
+    .badge {
+        width: 100%;
+        text-align: center;
+    }
+
+    .icon-circle {
+        width: 60px;
+        height: 60px;
+    }
+
+}
+
+/* ==========================================================
+   425
+========================================================== */
+
+@media (max-width:425px) {
+
+    h1.display-5 {
+        font-size: 1.7rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    .hero-img {
+        height: 200px;
+    }
+
+    .btn {
+        font-size: .9rem;
+    }
+
+}
+
+/* ==========================================================
+   375
+========================================================== */
+
+@media (max-width:375px) {
+
+    .hero-img {
+        height: 180px;
+    }
+
+    p,
+    li {
+        font-size: .9rem;
+    }
+
+}
+
+/* ==========================================================
+   320
+========================================================== */
+
+@media (max-width:320px) {
+
+    h1.display-5 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .hero-img {
+        height: 170px;
+    }
+
+    .btn {
+        font-size: .8rem;
+    }
+
+}

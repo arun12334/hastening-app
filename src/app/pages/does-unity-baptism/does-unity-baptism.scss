@@ -1,0 +1,978 @@
+/* ==========================================
+   HERO
+========================================== */
+
+.hero-banner{
+
+    min-height:420px;
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    position:relative;
+
+}
+
+.hero-overlay{
+
+    background:linear-gradient(
+        rgba(10,25,60,.45),
+        rgba(10,25,60,.45)
+    );
+
+    width:100%;
+
+    height:100%;
+
+}
+
+.hero-content{
+
+    padding:50px;
+
+}
+
+/* ==========================================
+   CONTENT
+========================================== */
+
+.content-image{
+
+    height:360px;
+
+    object-fit:cover;
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:992px){
+
+.hero-banner{
+
+min-height:360px;
+
+}
+
+.hero-content{
+
+padding:35px;
+
+text-align:center;
+
+}
+
+.content-image{
+
+height:300px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.hero-banner{
+
+min-height:300px;
+
+}
+
+.hero-content{
+
+padding:25px;
+
+}
+
+.display-3{
+
+font-size:2.3rem;
+
+}
+
+.content-image{
+
+height:250px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.hero-banner{
+
+min-height:260px;
+
+}
+
+.hero-content{
+
+padding:20px;
+
+}
+
+.display-3{
+
+font-size:1.8rem;
+
+}
+
+.content-image{
+
+height:220px;
+
+}
+
+}
+
+/* ===================================
+   FEATURE CARD
+=================================== */
+
+.feature-card{
+
+    transition:.3s;
+
+}
+
+.feature-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.feature-image{
+
+    height:210px;
+
+    object-fit:cover;
+
+}
+
+.image-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+        rgba(0,0,0,.15),
+
+        rgba(0,0,0,.35)
+
+    );
+
+}
+
+.icon-box{
+
+    position:absolute;
+
+    top:15px;
+
+    left:15px;
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#fff;
+
+    font-size:28px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.25);
+
+}
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media(max-width:992px){
+
+.feature-image{
+
+height:220px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.feature-image{
+
+height:190px;
+
+}
+
+.icon-box{
+
+width:55px;
+
+height:55px;
+
+font-size:24px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.feature-image{
+
+height:170px;
+
+}
+
+.card-body{
+
+padding:18px;
+
+}
+
+.card h4{
+
+font-size:1.2rem;
+
+}
+
+.btn{
+
+width:100%;
+
+}
+
+}
+
+
+/*========================================
+ICONS
+========================================*/
+
+.feature-icon{
+
+width:65px;
+
+height:65px;
+
+border-radius:18px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:28px;
+
+color:#fff;
+
+}
+
+.icon-gold{
+
+background:#d59a20;
+
+}
+
+.icon-blue{
+
+background:#21448f;
+
+}
+
+.icon-purple{
+
+background:#6b46c1;
+
+}
+
+/*========================================*/
+
+.feature-img{
+
+height:180px;
+
+width:100%;
+
+object-fit:cover;
+
+}
+
+/*========================================*/
+
+.gold-line{
+
+width:120px;
+
+height:3px;
+
+background:#d59a20;
+
+}
+
+/*========================================*/
+
+.bible-img{
+
+max-height:180px;
+
+}
+
+/*========================================*/
+
+.footer-scripture{
+
+background:linear-gradient(
+
+90deg,
+
+#0d2d69,
+
+#133d84
+
+);
+
+color:#fff;
+
+}
+
+.footer-scripture small{
+
+color:#f7d56b;
+
+}
+
+/*========================================*/
+
+@media(max-width:992px){
+
+.feature-img{
+
+height:220px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.bible-img{
+
+max-height:140px;
+
+}
+
+.feature-img{
+
+height:190px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.feature-img{
+
+height:170px;
+
+}
+
+.footer-scripture{
+
+text-align:center;
+
+}
+
+}
+
+
+/* ==========================================================
+   PAGE
+========================================================== */
+
+:host{
+    display:block;
+    background:#f5f7fb;
+}
+
+.container-fluid{
+    max-width:1450px;
+}
+
+/* ==========================================================
+   GLOBAL CARD
+========================================================== */
+
+.card{
+    border-radius:24px;
+    transition:.25s ease;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 1rem 2rem rgba(0,0,0,.08)!important;
+}
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.hero-banner{
+
+    position:relative;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+}
+
+.hero-overlay{
+
+    background:linear-gradient(
+        90deg,
+        rgba(10,25,55,.78),
+        rgba(10,25,55,.45),
+        rgba(10,25,55,.15)
+    );
+
+}
+
+.hero-content{
+
+    padding:60px;
+
+}
+
+.hero-content h1{
+
+    line-height:1.1;
+
+}
+
+.hero-content h4{
+
+    font-weight:400;
+
+}
+
+.hero-content p{
+
+    font-size:1.05rem;
+
+}
+
+/* ==========================================================
+   MAIN CONTENT
+========================================================== */
+
+.content-image{
+
+    width:100%;
+
+    border-radius:20px;
+
+    object-fit:cover;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+}
+
+.card-body p{
+
+    line-height:1.8;
+
+    color:#555;
+
+}
+
+/* ==========================================================
+   FEATURE CARD
+========================================================== */
+
+.feature-card{
+
+    overflow:hidden;
+
+}
+
+.feature-img{
+
+    border-radius:16px;
+
+    transition:.35s;
+
+}
+
+.feature-card:hover .feature-img{
+
+    transform:scale(1.04);
+
+}
+
+.feature-icon{
+
+    box-shadow:0 8px 18px rgba(0,0,0,.15);
+
+}
+
+/* ==========================================================
+   BUTTON
+========================================================== */
+
+.btn-warning{
+
+    background:#d4a017;
+
+    border:none;
+
+    color:#fff;
+
+    font-weight:600;
+
+}
+
+.btn-warning:hover{
+
+    background:#be8f0f;
+
+    color:#fff;
+
+}
+
+/* ==========================================================
+   SCRIPTURE CARD
+========================================================== */
+
+.gold-line{
+
+    width:110px;
+
+    height:4px;
+
+    background:#d4a017;
+
+    border-radius:50px;
+
+}
+
+.bible-img{
+
+    width:100%;
+
+    max-width:220px;
+
+    margin:auto;
+
+}
+
+.mobile-card {
+    margin-top: 5px;
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.footer-scripture{
+
+    background:linear-gradient(
+        135deg,
+        #0b2d6d,
+        #15438f
+    );
+
+
+}
+
+.footer-scripture hr{
+
+    opacity:.25;
+
+}
+
+.footer-scripture small{
+
+    display:block;
+
+    padding:6px 0;
+
+}
+
+/* ==========================================================
+   LINKS
+========================================================== */
+
+a{
+
+    text-decoration:none;
+
+}
+
+/* ==========================================================
+   IMAGE
+========================================================== */
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+/* ==========================================================
+   1400+
+========================================================== */
+
+@media(min-width:1400px){
+
+.hero-content{
+
+padding:80px;
+
+}
+
+.hero-banner{
+
+min-height:520px;
+
+}
+
+.content-image{
+
+height:430px;
+
+}
+
+}
+
+/* ==========================================================
+   1200
+========================================================== */
+
+@media(max-width:1200px){
+
+.hero-banner{
+
+min-height:470px;
+
+}
+
+.content-image{
+
+height:390px;
+
+}
+
+}
+
+/* ==========================================================
+   992
+========================================================== */
+
+@media(max-width:992px){
+
+.hero-content{
+
+padding:40px;
+
+text-align:center;
+
+}
+
+.hero-banner{
+
+min-height:400px;
+
+}
+
+.content-image{
+
+height:340px;
+
+margin-top:15px;
+
+}
+
+.feature-img{
+
+height:220px;
+
+}
+
+}
+
+/* ==========================================================
+   768
+========================================================== */
+
+@media(max-width:768px){
+
+.hero-banner{
+
+min-height:340px;
+
+}
+
+.hero-content{
+
+padding:30px 24px;
+
+}
+
+.hero-content h1{
+
+font-size:2.3rem;
+
+}
+
+.hero-content h4{
+
+font-size:1.2rem;
+
+}
+
+.content-image{
+
+height:280px;
+
+}
+
+.feature-img{
+
+height:200px;
+
+}
+
+.bible-img{
+
+max-width:170px;
+
+}
+
+}
+
+/* ==========================================================
+   576
+========================================================== */
+
+@media(max-width:576px){
+    .mobile-card {
+    margin-top: 90px;
+}
+
+.container-fluid{
+
+padding-left:12px;
+
+padding-right:12px;
+
+}
+
+.hero-banner{
+
+min-height:280px;
+
+}
+
+.hero-content{
+
+padding:22px;
+
+}
+
+.hero-content h1{
+
+font-size:1.9rem;
+
+}
+
+.hero-content h4{
+
+font-size:1rem;
+
+}
+
+.hero-content p{
+
+font-size:.95rem;
+
+}
+
+.content-image{
+
+height:230px;
+
+}
+
+.feature-img{
+
+height:180px;
+
+}
+
+.btn{
+
+width:100%;
+
+}
+
+.card{
+
+border-radius:20px;
+
+}
+
+}
+
+/* ==========================================================
+   425
+========================================================== */
+
+@media(max-width:425px){
+
+    .mobile-card {
+    margin-top: 90px;
+}
+
+.hero-content h1{
+
+font-size:1.7rem;
+
+}
+
+.hero-content{
+
+padding:20px;
+
+}
+
+.content-image{
+
+height:210px;
+
+}
+
+}
+
+/* ==========================================================
+   375
+========================================================== */
+
+@media(max-width:375px){
+
+    .mobile-card {
+    margin-top: 90px;
+}
+
+.hero-content h1{
+
+font-size:1.55rem;
+
+}
+
+.hero-content h4{
+
+font-size:.95rem;
+
+}
+
+.content-image{
+
+height:190px;
+
+}
+
+.feature-img{
+
+height:165px;
+
+}
+
+.card-body{
+
+padding:18px;
+
+}
+
+}
+
+/* ==========================================================
+   320
+========================================================== */
+
+@media(max-width:320px){
+
+.hero-content{
+
+padding:16px;
+
+}
+
+.mobile-card {
+    margin-top: 90px;
+}
+
+.hero-content h1{
+
+font-size:1.35rem;
+
+}
+
+.hero-content h4{
+
+font-size:.9rem;
+
+}
+
+.hero-content p{
+
+font-size:.85rem;
+
+}
+
+.content-image{
+
+height:170px;
+
+}
+
+.feature-img{
+
+height:150px;
+
+}
+
+.btn{
+
+font-size:.85rem;
+
+}
+
+}

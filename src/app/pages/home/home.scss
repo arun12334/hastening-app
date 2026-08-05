@@ -117,6 +117,26 @@ HERO SECTION
 }
 
 
+.divider{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#d79b28;
+    font-size:22px;
+    margin:20px 0;
+}
+
+.divider span{
+    width:90px;
+    height:2px;
+    background:#d79b28;
+    margin:0 15px;
+}
+
+.bg-info-subtle {
+    background-color: #186070 !important;
+}
+
 
 @media (max-width:1195px){
 
@@ -546,73 +566,47 @@ font-size:20px;
 /*=====================================
 COMPACT FOOTER
 =====================================*/
-
 .mini-footer{
-
-    background:#0d2d68;
-
-    color:#fff;
-
-    padding:12px 0 10px;
-
+    background:#0d3470;
+    padding:18px 0 10px;
 }
 
-/* Temple */
+.footer-top{
+    position:relative;
+    min-height:90px;
+}
 
 .footer-temple{
-
-    width:90px;
-
+    position:absolute;
+    left:15px;
+    top:8px;
+    width:220px;
     height:auto;
-
 }
 
-/* Quote */
+.footer-center{
+    text-align:center;
+    width:100%;
+}
 
 .footer-quote{
-
-    margin:0;
-
-    color:#ffffff;
-
-    font-size:14px;
-
+    color:#fff;
     font-style:italic;
-
-    font-weight:600;
-
-    line-height:1.4;
-
+    font-size:20px;
+    margin-bottom:8px;
 }
 
-/* Article */
-
-.mini-footer h5{
-
-    color:#d7a437;
-
-    margin-top:4px;
-
-    margin-bottom:0;
-
-    font-size:18px;
-
+.footer-center h5{
+    color:#fff;
+    font-size:22px;
     font-weight:700;
-
 }
 
-/* Divider */
-
-.mini-footer hr{
-
-    margin:10px 0;
-
-    border-color:#c99832;
-
-    opacity:.45;
-
+hr{
+    border-color:#7a6b48;
+    opacity:0.6;
+    margin-top:18px;
 }
-
 /* Scripture Links */
 
 .scripture-links{
