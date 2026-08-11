@@ -17,7 +17,7 @@ export class DoesUnityBaptism {
 
   hero = {
 
-    image: 'assets/images/unity-banner.jpg',
+    image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=2200&q=80',
 
     title: 'Does Unity Require Baptism?',
 
@@ -55,7 +55,7 @@ export class DoesUnityBaptism {
 
     ],
 
-    image: 'assets/images/unity-group.jpg'
+    image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=2200&q=80'
 
   };
 
@@ -76,7 +76,7 @@ export class DoesUnityBaptism {
       description:
         'Unity is built through faith, repentance, love, patience and service.',
 
-      image: 'assets/images/zion-road.jpg',
+      image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=2200&q=80',
 
       button: 'Learn More',
 
@@ -93,7 +93,7 @@ export class DoesUnityBaptism {
       description:
         'Study the scriptures, pray and seek personal revelation.',
 
-      image: 'assets/images/scripture-study.jpg',
+      image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=2200&q=80',
 
       button: 'Explore Resources',
 
@@ -110,7 +110,7 @@ export class DoesUnityBaptism {
       description:
         'Join others who are seeking Christ and build Zion together.',
 
-      image: 'assets/images/community.jpg',
+      image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=2200&q=80',
 
       button: 'Find a Group',
 

@@ -1,0 +1,584 @@
+/*==========================================================
+SCRIPTURE FOOTER
+==========================================================*/
+
+.Neighborhood-Bb-Scripture-Footer{
+
+    background:linear-gradient(
+        90deg,
+        #0D2F63 0%,
+        #123D78 100%
+    );
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    padding:18px 28px;
+
+    overflow:hidden;
+
+}
+
+/*==========================================================
+TITLE SECTION
+==========================================================*/
+
+.Neighborhood-Bb-Scripture-Footer-Title-Box{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding-right:24px;
+
+    white-space:nowrap;
+
+}
+
+/*==========================================================
+ICON
+==========================================================*/
+
+.Neighborhood-Bb-Scripture-Footer-Icon{
+
+    width:44px;
+
+    height:44px;
+
+    border-radius:12px;
+
+    background:rgba(255,255,255,.08);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.Neighborhood-Bb-Scripture-Footer-Icon i{
+
+    font-size:28px;
+
+    color:#D99A1B;
+
+}
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.Neighborhood-Bb-Scripture-Footer-Title{
+
+    color:#ffffff;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    white-space:nowrap;
+
+}
+
+/*==========================================================
+SCROLL AREA
+==========================================================*/
+
+.Neighborhood-Bb-Scripture-Footer-Scroll{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    overflow-x:auto;
+
+    overflow-y:hidden;
+
+    white-space:nowrap;
+
+    scrollbar-width:none;
+
+    -ms-overflow-style:none;
+
+}
+
+.Neighborhood-Bb-Scripture-Footer-Scroll::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+/*==========================================================
+SCRIPTURE LINK
+==========================================================*/
+
+.Neighborhood-Bb-Scripture-Footer-Link{
+
+    border:none;
+
+    background:transparent;
+
+    padding:0;
+
+    color:rgba(255,255,255,.88);
+
+    font-size:15px;
+
+    font-weight:500;
+
+    cursor:pointer;
+
+    white-space:nowrap;
+
+    transition:.30s;
+
+}
+
+/*==========================================================
+ACTIVE LINK
+==========================================================*/
+
+.Neighborhood-Bb-Scripture-Footer-Link.Active{
+
+    color:#FFD166;
+
+    font-weight:700;
+
+}
+
+/*==========================================================
+DIVIDER
+==========================================================*/
+
+.Neighborhood-Bb-Scripture-Footer-Divider{
+
+    color:rgba(255,255,255,.35);
+
+    font-size:18px;
+
+    user-select:none;
+
+    flex-shrink:0;
+
+}
+
+/*==========================================================
+FOOTER CONTAINER
+==========================================================*/
+
+.Neighborhood-Bb-Scripture-Footer{
+
+    transition:all .35s ease;
+
+}
+
+.Neighborhood-Bb-Scripture-Footer:hover{
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.08),
+        0 -6px 18px rgba(0,0,0,.18);
+
+}
+
+/*==========================================================
+TITLE SECTION
+==========================================================*/
+
+.Neighborhood-Bb-Scripture-Footer-Title-Box{
+
+    transition:all .30s ease;
+
+}
+
+.Neighborhood-Bb-Scripture-Footer-Title-Box:hover{
+
+    transform:translateX(4px);
+
+}
+
+/*==========================================================
+ICON
+==========================================================*/
+
+.Neighborhood-Bb-Scripture-Footer-Icon{
+
+    transition:all .35s ease;
+
+}
+
+.Neighborhood-Bb-Scripture-Footer-Title-Box:hover
+.Neighborhood-Bb-Scripture-Footer-Icon{
+
+    background:rgba(255,209,102,.18);
+
+    transform:rotate(-8deg) scale(1.08);
+
+}
+
+.Neighborhood-Bb-Scripture-Footer-Icon i{
+
+    transition:.35s;
+
+}
+
+.Neighborhood-Bb-Scripture-Footer-Title-Box:hover
+.Neighborhood-Bb-Scripture-Footer-Icon i{
+
+    color:#FFD166;
+
+}
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.Neighborhood-Bb-Scripture-Footer-Title{
+
+    transition:.30s;
+
+}
+
+.Neighborhood-Bb-Scripture-Footer-Title-Box:hover
+.Neighborhood-Bb-Scripture-Footer-Title{
+
+    color:#FFD166;
+
+}
+
+/*==========================================================
+SCRIPTURE LINK
+==========================================================*/
+
+.Neighborhood-Bb-Scripture-Footer-Link{
+
+    position:relative;
+
+    transition:all .30s ease;
+
+}
+
+.Neighborhood-Bb-Scripture-Footer-Link:hover{
+
+    color:#FFD166;
+
+    transform:translateY(-2px);
+
+}
+
+/*==========================================================
+UNDERLINE EFFECT
+==========================================================*/
+
+.Neighborhood-Bb-Scripture-Footer-Link::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:2px;
+
+    background:#FFD166;
+
+    transition:.30s;
+
+}
+
+.Neighborhood-Bb-Scripture-Footer-Link:hover::after{
+
+    width:100%;
+
+}
+
+.Neighborhood-Bb-Scripture-Footer-Link.Active::after{
+
+    width:100%;
+
+}
+
+/*==========================================================
+DIVIDER
+==========================================================*/
+
+.Neighborhood-Bb-Scripture-Footer-Divider{
+
+    transition:.30s;
+
+}
+
+.Neighborhood-Bb-Scripture-Footer-Link:hover
++ .Neighborhood-Bb-Scripture-Footer-Divider{
+
+    color:rgba(255,255,255,.70);
+
+}
+
+/*==========================================================
+ACTIVE LINK
+==========================================================*/
+
+.Neighborhood-Bb-Scripture-Footer-Link.Active{
+
+    color:#FFD166;
+
+    text-shadow:0 0 10px rgba(255,209,102,.35);
+
+}
+
+/*==========================================================
+SMOOTH TRANSITIONS
+==========================================================*/
+
+.Neighborhood-Bb-Scripture-Footer,
+.Neighborhood-Bb-Scripture-Footer-Title-Box,
+.Neighborhood-Bb-Scripture-Footer-Icon,
+.Neighborhood-Bb-Scripture-Footer-Icon i,
+.Neighborhood-Bb-Scripture-Footer-Title,
+.Neighborhood-Bb-Scripture-Footer-Link,
+.Neighborhood-Bb-Scripture-Footer-Divider{
+
+    transition:all .30s ease;
+
+}
+/*==========================================================
+LAPTOP
+==========================================================*/
+
+@media (max-width:1199.98px){
+
+    .Neighborhood-Bb-Scripture-Footer{
+
+        padding:16px 22px;
+
+    }
+
+    .Neighborhood-Bb-Scripture-Footer-Title{
+
+        font-size:18px;
+
+    }
+
+    .Neighborhood-Bb-Scripture-Footer-Link{
+
+        font-size:14px;
+
+    }
+
+}
+
+/*==========================================================
+TABLET
+==========================================================*/
+
+@media (max-width:991.98px){
+
+    .Neighborhood-Bb-Scripture-Footer{
+
+        padding:16px 18px;
+
+    }
+
+    .Neighborhood-Bb-Scripture-Footer .row{
+
+        flex-direction:column;
+
+        align-items:flex-start !important;
+
+    }
+
+    .Neighborhood-Bb-Scripture-Footer-Title-Box{
+
+        margin-bottom:16px;
+
+        padding-right:0;
+
+    }
+
+    .Neighborhood-Bb-Scripture-Footer-Scroll{
+
+        width:100%;
+
+        padding-bottom:4px;
+
+    }
+
+    .Neighborhood-Bb-Scripture-Footer-Link{
+
+        font-size:14px;
+
+    }
+
+}
+
+/*==========================================================
+MOBILE
+==========================================================*/
+
+@media (max-width:767.98px){
+
+    .Neighborhood-Bb-Scripture-Footer{
+
+        padding:16px 14px;
+
+    }
+
+    .Neighborhood-Bb-Scripture-Footer-Title-Box{
+
+        gap:10px;
+
+        margin-bottom:14px;
+
+    }
+
+    .Neighborhood-Bb-Scripture-Footer-Icon{
+
+        width:40px;
+
+        height:40px;
+
+        border-radius:10px;
+
+    }
+
+    .Neighborhood-Bb-Scripture-Footer-Icon i{
+
+        font-size:22px;
+
+    }
+
+    .Neighborhood-Bb-Scripture-Footer-Title{
+
+        font-size:17px;
+
+    }
+
+    .Neighborhood-Bb-Scripture-Footer-Scroll{
+
+        gap:12px;
+
+        overflow-x:auto;
+
+        overflow-y:hidden;
+
+        white-space:nowrap;
+
+        -webkit-overflow-scrolling:touch;
+
+        padding-bottom:8px;
+
+    }
+
+    .Neighborhood-Bb-Scripture-Footer-Link{
+
+        font-size:13px;
+
+        flex-shrink:0;
+
+    }
+
+    .Neighborhood-Bb-Scripture-Footer-Divider{
+
+        font-size:14px;
+
+        flex-shrink:0;
+
+    }
+
+}
+
+/*==========================================================
+SMALL MOBILE
+==========================================================*/
+
+@media (max-width:575.98px){
+
+    .Neighborhood-Bb-Scripture-Footer{
+
+        padding:14px 12px;
+
+    }
+
+    .Neighborhood-Bb-Scripture-Footer-Icon{
+
+        width:36px;
+
+        height:36px;
+
+    }
+
+    .Neighborhood-Bb-Scripture-Footer-Icon i{
+
+        font-size:20px;
+
+    }
+
+    .Neighborhood-Bb-Scripture-Footer-Title{
+
+        font-size:16px;
+
+    }
+
+    .Neighborhood-Bb-Scripture-Footer-Link{
+
+        font-size:12px;
+
+    }
+
+    .Neighborhood-Bb-Scripture-Footer-Divider{
+
+        font-size:12px;
+
+    }
+
+}
+
+/*==========================================================
+EXTRA SMALL DEVICES
+==========================================================*/
+
+@media (max-width:380px){
+
+    .Neighborhood-Bb-Scripture-Footer{
+
+        padding:12px 10px;
+
+    }
+
+    .Neighborhood-Bb-Scripture-Footer-Title{
+
+        font-size:15px;
+
+    }
+
+    .Neighborhood-Bb-Scripture-Footer-Icon{
+
+        width:34px;
+
+        height:34px;
+
+    }
+
+    .Neighborhood-Bb-Scripture-Footer-Icon i{
+
+        font-size:18px;
+
+    }
+
+    .Neighborhood-Bb-Scripture-Footer-Link{
+
+        font-size:11px;
+
+    }
+
+}

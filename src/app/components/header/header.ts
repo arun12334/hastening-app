@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -11,4 +11,25 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   templateUrl: './header.html',
   styleUrl: './header.scss'
 })
-export class Header {}
+export class Header {
+
+  constructor(public router: Router) {}
+
+  isLovingOurNeighborActive(): boolean {
+
+    const url = this.router.url;
+
+    return [
+
+      '/loving-our-neighbor',
+
+      '/sharing-a-story-of-love',
+
+      '/pray-for-someone',
+      '/join-a-justserve-activity'
+
+    ].some(route => url.startsWith(route));
+
+  }
+
+}

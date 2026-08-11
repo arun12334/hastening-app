@@ -508,4 +508,71 @@
 </div>
 
 </div>
+
+
+
+
+
+
+
+
+
+
 </div>
+
+
+<!--=========================================
+SCRIPTURE FOOTER
+==========================================-->
+
+<footer class="unity-footer mt-3">
+
+    <div class="container-fluid">
+
+        <!-- Verse -->
+
+        <div class="footer-verse text-center">
+
+            <em>
+
+                "Behold, how good and how pleasant it is for brethren to dwell together in unity!"
+
+            </em>
+
+            <strong>
+
+                – Psalm 133:1
+
+            </strong>
+
+        </div>
+
+        <!-- Bottom -->
+
+        <div class="footer-bottom">
+
+            <div class="footer-logo">
+
+                <img
+                    src="assets/images/footer-city.png"
+                    alt="City">
+
+            </div>
+
+            <div class="footer-links">
+
+                <span *ngFor="let verse of scripturess; let last = last">
+
+                    {{verse}}
+
+                    <span *ngIf="!last" class="divider">|</span>
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>

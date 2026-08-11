@@ -32,10 +32,10 @@
 
 </a>
 
-       <a
+ <a
     routerLink="/loving-our-neighbor"
-    routerLinkActive="active-nav"
-    class="nav-item-custom">
+    class="nav-item-custom"
+    [class.active-nav]="isLovingOurNeighborActive()">
 
     <i class="bi bi-heart"></i>
     Loving<br>
@@ -68,7 +68,7 @@
             Worshiping Christ<br>through Music
           </a>
 
-          <a href="welcome.html"  class="nav-item-custom">
+          <a routerLink="/neighborhood-bb-events" routerLinkActive="active-nav" class="nav-item-custom">
             <i class="bi bi-calendar-event"></i>
             Neighborhood<br>B&amp;B Events
           </a>

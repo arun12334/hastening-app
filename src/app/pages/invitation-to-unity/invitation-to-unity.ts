@@ -11,6 +11,33 @@ import { Header } from '../../components/header/header';
 })
 export class InvitationToUnity {
 
+
+  scripturess = [
+
+'2 Corinthians 13:11',
+
+'1 Peter 3:8',
+
+'2 Nephi 1:21',
+
+'Philippians 1:27',
+
+'D&C 4:5–6',
+
+'Mosiah 18:21',
+
+'Acts 4:32',
+
+'Moses 7:18',
+
+'3 Nephi 18:10',
+
+'John 17:20–23',
+
+'D&C 100:16'
+
+];
+
   //======================================================
   // HERO
   //======================================================

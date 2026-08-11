@@ -1,0 +1,819 @@
+<app-header></app-header>
+
+<section class="Sharing-A-Story-Of-Love-Banner">
+
+    <div
+
+        class="Sharing-A-Story-Of-Love-Banner-Image"
+
+        [style.background-image]="'url(' + bannerImage + ')'">
+
+        <!--========================================-->
+
+        <div class="Sharing-A-Story-Of-Love-Banner-Overlay">
+
+            <div class="container">
+
+                <div class="row justify-content-center">
+
+                    <div class="col-xl-8 col-lg-9 col-md-10">
+
+                        <div class="Sharing-A-Story-Of-Love-Banner-Content">
+
+                            <div class="Sharing-A-Story-Of-Love-Banner-Logo">
+
+                                <i [class]="bannerData.icon"></i>
+
+                            </div>
+
+                            <h1 class="Sharing-A-Story-Of-Love-Banner-Title">
+
+                                {{bannerData.title}}
+
+                            </h1>
+
+                            <h4 class="Sharing-A-Story-Of-Love-Banner-SubTitle">
+
+                                {{bannerData.subTitle}}
+
+                            </h4>
+
+                            <p class="Sharing-A-Story-Of-Love-Banner-Verse">
+
+                                {{bannerData.verse}}
+
+                            </p>
+
+                            <span class="Sharing-A-Story-Of-Love-Banner-Scripture">
+
+                                {{bannerData.scripture}}
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================================
+STORY DASHBOARD
+===========================================================-->
+
+<div class="Sharing-Story-Dashboard">
+
+    <div class="container-fluid">
+
+        <!--==================================================
+        TOP INFO CARDS
+        ===================================================-->
+
+        <div class="row g-3 mb-4">
+
+            @for(stat of storyDashboardStats; track stat.id){
+
+            <div class="col-xl-3 col-lg-6 col-md-6">
+
+                <div class="Sharing-Story-Top-Info-Card">
+
+                    <div class="row g-0 align-items-center">
+
+                        <div class="col-auto">
+
+                            <div
+                                class="Sharing-Story-Top-Info-Icon"
+                                [style.color]="stat.color">
+
+                                <i [class]="stat.icon"></i>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col">
+
+                            <div class="Sharing-Story-Top-Info-Content">
+
+                                <h6>
+
+                                    {{stat.title}}
+
+                                </h6>
+
+                                <p>
+
+                                    {{stat.description}}
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            }
+
+        </div>
+
+        <!--==================================================
+        TWO COLUMN LAYOUT
+        ===================================================-->
+
+        <div class="row g-4">
+
+            <!--==================================================
+            LEFT PANEL
+            ===================================================-->
+
+            <div class="col-xl-5 col-lg-5">
+
+                <div class="Sharing-Story-Left-Panel">
+
+                    <!--==============================
+                    HEADER
+                    ==============================-->
+
+                    <div
+                        class="Sharing-Story-Panel-Header">
+
+                        <div>
+
+                            <h3>
+
+                                My Stories ({{storyCounts.myStories}} of 5)
+
+                            </h3>
+
+                            <p>
+
+                                You can have up to five stories.
+
+                            </p>
+
+                        </div>
+
+                        <div>
+
+                            <button
+
+                                class="Sharing-Story-Primary-Button"
+
+                                (click)="addNewStory()">
+
+                                <i class="bi bi-plus-lg"></i>
+
+                                Add a New Story
+
+                            </button>
+
+                            <button
+
+                                class="Sharing-Story-Secondary-Button"
+
+                                (click)="manageStories()">
+
+                                Manage Stories
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <!--==============================
+                    STORY LIST
+                    ==============================-->
+
+                    @for(story of myStories; track story.id){
+
+                    <div
+
+                        class="Sharing-Story-List-Card"
+
+                        (click)="selectStory(story)">
+
+                        <div class="row align-items-center">
+
+                            <div class="col-auto">
+
+                                <img
+
+                                    [src]="story.image"
+
+                                    class="Sharing-Story-Image"
+
+                                    alt="Story">
+
+                            </div>
+
+                            <div class="col">
+
+                                <h5>
+
+                                    {{story.title}}
+
+                                </h5>
+
+                                <p>
+
+                                    {{story.description}}
+
+                                </p>
+
+                                <small>
+
+                                    {{story.date}}
+
+                                </small>
+
+                            </div>
+
+                            <div class="col-auto text-end">
+
+                                <span
+
+                                 class="Sharing-Story-Badge Sharing-Story-Mobile-Hide-Badge"
+
+                                    [class.bg-success]="story.badge=='success'"
+
+                                    [class.bg-warning]="story.badge=='warning'">
+
+                                    {{story.status}}
+
+                                </span>
+
+                                <div
+                                    class="Sharing-Story-Action-Icons">
+
+                                    <i
+
+                                        class="bi bi-files"
+
+                                        (click)="copyStory(story);
+                                        $event.stopPropagation()">
+
+                                    </i>
+
+                                    <i
+
+                                        class="bi bi-pencil"
+
+                                        (click)="editStory(story);
+                                        $event.stopPropagation()">
+
+                                    </i>
+
+                                    <i
+
+                                        class="bi bi-trash"
+
+                                        (click)="deleteStory(story);
+                                        $event.stopPropagation()">
+
+                                    </i>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    }
+
+                    <button
+
+                        class="Sharing-Story-View-All"
+
+                        (click)="viewAllStories()">
+
+                        View All My Stories
+
+                        <i class="bi bi-chevron-right"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!--==================================================
+            RIGHT PANEL
+            ===================================================-->
+
+            <div class="col-xl-7 col-lg-7">
+
+                <div class="Sharing-Story-Right-Panel">
+
+                    <!--==============================
+                    SEARCH
+                    ==============================-->
+
+                    <div
+                        class="Sharing-Story-Search-Header">
+
+                        <h3>
+
+                            Search Stories
+
+                        </h3>
+
+                        <small>
+
+                            Results
+
+                            {{storyCounts.totalStories}}
+
+                            stories
+
+                        </small>
+
+                    </div>
+
+                    <div class="row g-2 mb-4">
+
+                        <div class="col-lg-4">
+
+                            <input
+
+                                class="form-control"
+
+                                placeholder="Username"
+
+                                [(ngModel)]="storySearch.username">
+
+                        </div>
+
+                        <div class="col-lg-3">
+
+                            <input
+
+                                type="date"
+
+                                class="form-control"
+
+                                [(ngModel)]="storySearch.startDate">
+
+                        </div>
+
+                        <div class="col-lg-3">
+
+                            <input
+
+                                type="date"
+
+                                class="form-control"
+
+                                [(ngModel)]="storySearch.endDate">
+
+                        </div>
+
+                        <div class="col-lg-2">
+
+                            <button
+
+                                class="Sharing-Story-Search-Button"
+
+                                (click)="searchStories()">
+
+                                Search
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <!--==============================
+                    FEATURED STORY
+                    ==============================-->
+
+                    <div
+                        class="Sharing-Story-Featured-Card">
+
+                        <img
+
+                            [src]="featuredStory.image"
+
+                            class="Sharing-Story-Featured-Image"
+
+                            alt="Story">
+
+                        <div
+                            class="Sharing-Story-Featured-Content">
+
+                            <div
+                                class="Sharing-Story-Featured-Header">
+
+                                <h4>
+
+                                    {{featuredStory.title}}
+
+                                </h4>
+
+                                <span
+                                    class="badge bg-success">
+
+                                    {{featuredStory.status}}
+
+                                </span>
+
+                            </div>
+
+                            <small>
+
+                                {{featuredStory.author}}
+
+                                •
+
+                                {{featuredStory.date}}
+
+                                •
+
+                                {{featuredStory.time}}
+
+                            </small>
+
+                            <p>
+
+                                {{featuredStory.description}}
+
+                            </p>
+
+                            <div
+                                class="Sharing-Story-Featured-Actions">
+
+                                <button
+
+                                    class="Sharing-Story-Secondary-Button">
+
+                                    <i class="bi bi-files"></i>
+
+                                    Copy Story
+
+                                </button>
+
+                                <button
+
+                                    class="Sharing-Story-Secondary-Button">
+
+                                    <i class="bi bi-pencil"></i>
+
+                                    Edit
+
+                                </button>
+
+                                <button
+
+                                    class="Sharing-Story-Danger-Button">
+
+                                    <i class="bi bi-trash"></i>
+
+                                    Delete
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!--==============================
+                    INFO CARD
+                    ==============================-->
+
+                    <div
+                        class="Sharing-Story-Info-Card">
+
+                        <i class="bi bi-shield-check"></i>
+
+                        Stories are reviewed for appropriate
+                        content before sharing.
+
+                    </div>
+
+                    <!--==============================
+                    BOTTOM IMAGE
+                    ==============================-->
+
+                    <img
+
+                        [src]="storyBottomImage"
+
+                        class="Sharing-Story-Bottom-Image"
+
+                        alt="Community">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!--==========================================================
+QUICK ACTION SECTION
+===========================================================-->
+
+<section class="Sharing-Story-Quick-Action-Section">
+
+    <div class="container-fluid">
+
+        <div class="row g-4">
+
+            <!--==================================================
+            ACTION CARDS
+            ==================================================-->
+
+            @for(card of quickActionCards; track card.id){
+
+            <div class="col-xl-3 col-lg-4 col-md-6">
+
+                <div class="Sharing-Story-Quick-Action-Card">
+
+                    <div class="row align-items-center">
+
+                        <!--======================================
+                        ICON
+                        =======================================-->
+
+                        <div class="col-auto">
+
+                            <div
+
+                                class="Sharing-Story-Quick-Action-Icon"
+
+                                [style.background]="card.iconBackground"
+
+                                [style.color]="card.iconColor">
+
+                                <i [class]="card.icon"></i>
+
+                            </div>
+
+                        </div>
+
+                        <!--======================================
+                        CONTENT
+                        =======================================-->
+
+                        <div class="col">
+
+                            <div class="Sharing-Story-Quick-Action-Content">
+
+                                <h5>
+
+                                    {{card.title}}
+
+                                </h5>
+
+                                <p>
+
+                                    {{card.description}}
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!--======================================
+                    BUTTON
+                    =======================================-->
+
+                    <button
+
+                        class="Sharing-Story-Quick-Action-Button"
+
+                        (click)="quickAction(card.action)">
+
+                        <i [class]="card.buttonIcon"></i>
+
+                        {{card.buttonText}}
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            }
+
+            <!--==================================================
+            SCRIPTURE CARD
+            ==================================================-->
+
+            <div class="col-xl-3 col-lg-12 col-md-12">
+
+                <div class="Sharing-Story-Scripture-Card">
+
+                    <div class="row align-items-center">
+
+                        <!--======================================
+                        ICON
+                        =======================================-->
+
+                        <div class="col-auto">
+
+                            <div
+
+                                class="Sharing-Story-Scripture-Icon"
+
+                                [style.color]="quickActionScripture.iconColor">
+
+                                <i [class]="quickActionScripture.icon"></i>
+
+                            </div>
+
+                        </div>
+
+                        <!--======================================
+                        CONTENT
+                        =======================================-->
+
+                        <div class="col">
+
+                            <div class="Sharing-Story-Scripture-Content">
+
+                                <h5>
+
+                                    {{quickActionScripture.verse}}
+
+                                </h5>
+
+                                <p>
+
+                                    {{quickActionScripture.description}}
+
+                                </p>
+
+                                <span>
+
+                                    — {{quickActionScripture.title}}
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================================
+SHARING STORY FOOTER
+===========================================================-->
+
+<footer class="Sharing-Story-Footer">
+
+    <div class="container-fluid">
+
+        <div class="row align-items-center">
+
+            <!--==================================================
+            LEFT CITY ICON
+            ==================================================-->
+
+            <div class="col-xl-3 col-lg-3">
+
+                <div class="Sharing-Story-Footer-City">
+
+                    <i [class]="footerSection.cityIcon"></i>
+
+                </div>
+
+            </div>
+
+            <!--==================================================
+            CENTER SCRIPTURES
+            ==================================================-->
+
+            <div class="col-xl-5 col-lg-5">
+
+                <div class="Sharing-Story-Footer-Scripture-Area">
+
+                    <!--==============================
+                    TITLE
+                    ==============================-->
+
+                    <h3 class="Sharing-Story-Footer-Title">
+
+                        {{footerSection.title}}
+
+                    </h3>
+
+                    <!--==============================
+                    SCRIPTURES
+                    ==============================-->
+
+                    <div class="row">
+
+                        @for(scripture of footerScriptures; track scripture.id){
+
+                        <div class="col-6 col-md-3">
+
+                            <button
+
+                                type="button"
+
+                                class="Sharing-Story-Footer-Scripture"
+
+                                (click)="selectFooterScripture(scripture)">
+
+                                {{scripture.reference}}
+
+                            </button>
+
+                        </div>
+
+                        }
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!--==================================================
+            DIVIDER
+            ==================================================-->
+
+            <div class="col-xl-auto d-none d-xl-flex">
+
+                <div class="Sharing-Story-Footer-Divider"></div>
+
+            </div>
+
+            <!--==================================================
+            RIGHT ICON MENU
+            ==================================================-->
+
+            <div class="col-xl col-lg">
+
+                <div class="Sharing-Story-Footer-Menu">
+
+                    @for(item of footerActions; track item.id){
+
+                    <button
+
+                        type="button"
+
+                        class="Sharing-Story-Footer-Menu-Item"
+
+                        (click)="footerAction(item)">
+
+                        <div class="Sharing-Story-Footer-Menu-Icon">
+
+                            <i [class]="item.icon"></i>
+
+                        </div>
+
+                        <div class="Sharing-Story-Footer-Menu-Text">
+
+                            {{item.title}}
+
+                        </div>
+
+                    </button>
+
+                    }
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>

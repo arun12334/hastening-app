@@ -1,0 +1,999 @@
+<app-header></app-header>
+<!--==========================================================
+NEIGHBORHOOD B&B BANNER
+===========================================================-->
+
+<section class="Neighborhood-Bb-Events-Banner">
+
+    <div
+        class="Neighborhood-Bb-Events-Banner-Image"
+        [style.background-image]="'url(' + bannerImage + ')'">
+
+        <!--==========================================================
+        OVERLAY
+        ===========================================================-->
+
+        <div class="Neighborhood-Bb-Events-Banner-Overlay">
+
+            <div class="container">
+
+                <div class="row justify-content-center">
+
+                    <div class="col-xl-8 col-lg-9 col-md-10">
+
+                        <div class="Neighborhood-Bb-Events-Banner-Content">
+
+                            <!--==========================================================
+                            LOGO
+                            ===========================================================-->
+
+                            <div class="Neighborhood-Bb-Events-Banner-Logo">
+
+                                <i [class]="bannerData.icon"></i>
+
+                            </div>
+
+                            <!--==========================================================
+                            TITLE
+                            ===========================================================-->
+
+                            <h1 class="Neighborhood-Bb-Events-Banner-Title">
+
+                                {{bannerData.title}}
+
+                            </h1>
+
+                            <!--==========================================================
+                            SUB TITLE
+                            ===========================================================-->
+
+                            <h3 class="Neighborhood-Bb-Events-Banner-SubTitle">
+
+                                {{bannerData.subtitle}}
+
+                            </h3>
+
+                            <!--==========================================================
+                            DESCRIPTION
+                            ===========================================================-->
+
+                            <p class="Neighborhood-Bb-Events-Banner-Description">
+
+                                {{bannerData.description}}
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+ 
+<!--==========================================================
+NEIGHBORHOOD TAB MENU
+===========================================================-->
+
+<section class="Neighborhood-Bb-Events-Top-Tabs">
+
+    <div class="container">
+
+        <div class="Neighborhood-Bb-Events-Top-Tabs-Card">
+
+            <div class="row g-0 flex-nowrap">
+
+                @for(tab of bannerTabs;track tab.id){
+
+                <div class="col">
+
+                    <div
+                        class="Neighborhood-Bb-Events-Top-Tab-Item"
+                        [class.Active]="activeTab==tab.id"
+                        (click)="changeTab(tab.id)">
+
+                        <i [class]="tab.icon"></i>
+
+                        <span>
+
+                            {{tab.title}}
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+                }
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>  
+
+<div class="container mt-4">
+
+@if(activeTab==0){
+
+<!--==========================================================
+UPCOMING B&B EVENTS
+===========================================================-->
+
+<div class="Neighborhood-Bb-Upcoming-Events-Card">
+
+    <!--======================================================
+    HEADER
+    =======================================================-->
+
+    <div class="Neighborhood-Bb-Upcoming-Events-Header">
+
+        <div>
+
+            <h3 class="Neighborhood-Bb-Upcoming-Events-Title">
+
+                {{bbUpcomingEventHeading.title}}
+
+            </h3>
+
+            <p class="Neighborhood-Bb-Upcoming-Events-SubTitle">
+
+                {{bbUpcomingEventHeading.subtitle}}
+
+            </p>
+
+        </div>
+
+        <button
+            class="Neighborhood-Bb-Upcoming-Events-View-All"
+            (click)="viewAllEvents()">
+
+            {{bbUpcomingEventHeading.button}}
+
+        </button>
+
+    </div>
+
+    <!--======================================================
+    EVENT LIST
+    =======================================================-->
+
+    <div class="Neighborhood-Bb-Upcoming-Events-Body">
+
+        @for(event of bbUpcomingEvents; track event.id){
+
+        <div
+            class="Neighborhood-Bb-Upcoming-Event-Item"
+            (click)="openEvent(event)">
+
+            <div class="row align-items-center">
+
+                <!--==========================================
+                IMAGE
+                ===========================================-->
+
+                <div class="col-lg-4 col-md-4 col-4">
+
+                    <div class="Neighborhood-Bb-Upcoming-Event-Image">
+
+                        <img
+                            [src]="event.image"
+                            [alt]="event.title">
+
+                    </div>
+
+                </div>
+
+                <!--==========================================
+                DETAILS
+                ===========================================-->
+
+                <div class="col-lg-6 col-md-5 col-5">
+
+                    <div class="Neighborhood-Bb-Upcoming-Event-Content">
+
+                        <h5>
+
+                            {{event.title}}
+
+                        </h5>
+
+                        <h6>
+
+                            {{event.date}}
+
+                            at
+
+                            {{event.time}}
+
+                        </h6>
+
+                        <p>
+
+                            {{event.location}}
+
+                            •
+
+                            {{event.area}}
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!--==========================================
+                RSVP
+                ===========================================-->
+
+                <div class="col-lg-2 col-md-3 col-3">
+
+                    <div class="Neighborhood-Bb-Upcoming-Event-Action">
+
+                        <button
+                            class="Neighborhood-Bb-Upcoming-Event-RSVP"
+                            (click)="eventRsvp(event);$event.stopPropagation()">
+
+                            {{event.buttonText}}
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        }
+
+    </div>
+
+</div>
+
+}
+
+@if(activeTab==1){
+
+<!--==========================================================
+B&B GATHERINGS NEAR YOU
+===========================================================-->
+
+<div class="Neighborhood-Bb-Gathering-Card">
+
+    <!--======================================================
+    HEADER
+    =======================================================-->
+
+    <div class="Neighborhood-Bb-Gathering-Header">
+
+        <h3 class="Neighborhood-Bb-Gathering-Title">
+
+            {{bbGatheringSection.title}}
+
+        </h3>
+
+        <p class="Neighborhood-Bb-Gathering-SubTitle">
+
+            {{bbGatheringSection.subTitle}}
+
+        </p>
+
+    </div>
+
+    <!--======================================================
+    MAP
+    =======================================================-->
+
+    <div class="Neighborhood-Bb-Gathering-Map">
+
+        <img
+            [src]="bbMapImage"
+            alt="Map">
+
+        <!--==================================================
+        MARKERS
+        ===================================================-->
+
+        @for(marker of bbMapMarkers; track marker.id){
+
+        <div
+            class="Neighborhood-Bb-Gathering-Marker"
+            [class.Active]="marker.active"
+            [style.top]="marker.top"
+            [style.left]="marker.left"
+            (click)="selectGathering(marker)">
+
+            <i class="bi bi-geo-alt-fill"></i>
+
+        </div>
+
+        }
+
+        <!--==================================================
+        LOCATION BUTTON
+        ===================================================-->
+
+        <button
+            class="Neighborhood-Bb-Gathering-Location-Button"
+            (click)="useMyLocation()">
+
+            <i class="bi bi-crosshair"></i>
+
+            {{bbGatheringSection.useLocationButton}}
+
+        </button>
+
+    </div>
+
+    <!--======================================================
+    HOST CARD
+    =======================================================-->
+
+    <div class="Neighborhood-Bb-Gathering-Host-Card">
+
+        <div class="row g-0 align-items-center">
+
+            <!--==============================================
+            CONTENT
+            ==============================================-->
+
+            <div class="col-lg-6 col-md-6 col-12">
+
+                <div class="Neighborhood-Bb-Gathering-Host-Content">
+
+                    <h4>
+
+                        {{bbHostCard.title}}
+
+                    </h4>
+
+                    <p>
+
+                        {{bbHostCard.subTitle}}
+
+                    </p>
+
+                    <button
+                        class="Neighborhood-Bb-Gathering-Host-Button"
+                        (click)="signUpHost()">
+
+                        {{bbHostCard.button}}
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!--==============================================
+            IMAGE
+            ==============================================-->
+
+            <div class="col-lg-6 col-md-6 d-none d-md-block">
+
+                <div class="Neighborhood-Bb-Gathering-Host-Image">
+
+                    <img
+                        [src]="bbHostCard.image"
+                        [alt]="bbHostCard.title">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+}
+
+@if(activeTab==2){
+
+<!--==========================================================
+HOST TOOLS & RESOURCES
+===========================================================-->
+
+<div class="Neighborhood-Bb-Host-Tools-Card">
+
+    <!--======================================================
+    HEADER
+    =======================================================-->
+
+    <div class="Neighborhood-Bb-Host-Tools-Header">
+
+        <h3 class="Neighborhood-Bb-Host-Tools-Title">
+
+            {{hostToolsSection.title}}
+
+        </h3>
+
+        <p class="Neighborhood-Bb-Host-Tools-SubTitle">
+
+            {{hostToolsSection.subTitle}}
+
+        </p>
+
+    </div>
+
+    <!--======================================================
+    TOOL LIST
+    =======================================================-->
+
+    <div class="Neighborhood-Bb-Host-Tools-Body">
+
+        @for(tool of hostTools; track tool.id){
+
+        <div
+
+            class="Neighborhood-Bb-Host-Tool-Item"
+
+            [class.Active]="selectedHostTool==tool.id"
+
+            (click)="selectHostTool(tool)">
+
+            <div class="row align-items-center">
+
+                <!--==========================================
+                ICON
+                ===========================================-->
+
+                <div class="col-auto">
+
+                    <div
+                        class="Neighborhood-Bb-Host-Tool-Icon"
+
+                        [style.color]="tool.color">
+
+                        <i [class]="tool.icon"></i>
+
+                    </div>
+
+                </div>
+
+                <!--==========================================
+                CONTENT
+                ===========================================-->
+
+                <div class="col">
+
+                    <div class="Neighborhood-Bb-Host-Tool-Content">
+
+                        <h5>
+
+                            {{tool.title}}
+
+                        </h5>
+
+                        <p>
+
+                            {{tool.description}}
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!--==========================================
+                ARROW
+                ===========================================-->
+
+                <div class="col-auto">
+
+                    <button
+
+                        class="Neighborhood-Bb-Host-Tool-Arrow"
+
+                        (click)="openHostResource(tool);$event.stopPropagation()">
+
+                        <i class="bi bi-chevron-right"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        }
+
+    </div>
+
+</div>
+
+}
+
+@if(activeTab==3){
+
+<!--==========================================================
+DISCUSSION GUIDES
+===========================================================-->
+
+<div class="Neighborhood-Bb-Discussion-Guides-Card">
+
+    <!--======================================================
+    FHE GROUP CARD
+    =======================================================-->
+
+    <div class="Neighborhood-Bb-Fhe-Group-Card">
+
+        <div class="row align-items-center">
+
+            <!--==============================================
+            LEFT
+            ==============================================-->
+
+            <div class="col-lg-7">
+
+                <div class="Neighborhood-Bb-Fhe-Group-Content">
+
+                    <h3>
+
+                        {{fheGroupCard.title}}
+
+                    </h3>
+
+                    <p class="Neighborhood-Bb-Fhe-Group-SubTitle">
+
+                        {{fheGroupCard.subTitle}}
+
+                    </p>
+
+                    <div class="row">
+
+                        <!--==================================
+                        IMAGE
+                        ===================================-->
+
+                        <div class="col-lg-6 col-md-6">
+
+                            <div class="Neighborhood-Bb-Fhe-Group-Image">
+
+                                <img
+                                    [src]="fheGroupCard.image"
+                                    [alt]="fheGroupCard.title">
+
+                            </div>
+
+                        </div>
+
+                        <!--==================================
+                        FEATURES
+                        ===================================-->
+
+                        <div class="col-lg-6 col-md-6">
+
+                            <div class="Neighborhood-Bb-Fhe-Feature-List">
+
+                                @for(feature of fheGroupFeatures; track feature.id){
+
+                                <div
+                                    class="Neighborhood-Bb-Fhe-Feature-Item"
+                                    (click)="selectFeature(feature)">
+
+                                    <div class="Neighborhood-Bb-Fhe-Feature-Icon">
+
+                                        <i [class]="feature.icon"></i>
+
+                                    </div>
+
+                                    <div class="Neighborhood-Bb-Fhe-Feature-Text">
+
+                                        {{feature.title}}
+
+                                    </div>
+
+                                </div>
+
+                                }
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!--==================================
+                    BUTTON
+                    ===================================-->
+
+                    <button
+                        class="Neighborhood-Bb-Fhe-Group-Button"
+                        (click)="findOrCreateGroup()">
+
+                        <i class="bi bi-people-fill"></i>
+
+                        {{fheGroupCard.button}}
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--======================================================
+    CONVERSATION STARTERS
+    =======================================================-->
+
+    <div class="Neighborhood-Bb-Conversation-Card">
+
+        <div class="row align-items-center">
+
+            <!--==============================================
+            LEFT
+            ==============================================-->
+
+            <div class="col-lg-6">
+
+                <div class="Neighborhood-Bb-Conversation-Content">
+
+                    <h4>
+
+                        {{conversationCard.title}}
+
+                    </h4>
+
+                    <p>
+
+                        {{conversationCard.subTitle}}
+
+                    </p>
+
+                    <div class="Neighborhood-Bb-Conversation-Question-List">
+
+                        @for(question of conversationQuestions; track question.id){
+
+                        <div
+                            class="Neighborhood-Bb-Conversation-Question"
+                            (click)="selectQuestion(question)">
+
+                            <i class="bi bi-chat-left-text"></i>
+
+                            <span>
+
+                                {{question.question}}
+
+                            </span>
+
+                        </div>
+
+                        }
+
+                    </div>
+
+                    <button
+                        class="Neighborhood-Bb-Conversation-Button"
+                        (click)="viewAllPrompts()">
+
+                        {{conversationCard.button}}
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!--==============================================
+            RIGHT IMAGE
+            ==============================================-->
+
+            <div class="col-lg-6">
+
+                <div class="Neighborhood-Bb-Conversation-Image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=900"
+                        alt="Conversation">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--======================================================
+    SHARE YOUR STORY
+    =======================================================-->
+
+    <div class="Neighborhood-Bb-Story-Card">
+
+        <div class="row align-items-center">
+
+            <!--==============================================
+            LEFT
+            ==============================================-->
+
+            <div class="col-lg-6">
+
+                <div class="Neighborhood-Bb-Story-Content">
+
+                    <h4>
+
+                        {{shareStoryCard.title}}
+
+                    </h4>
+
+                    <h6>
+
+                        {{shareStoryCard.subTitle}}
+
+                    </h6>
+
+                    <p>
+
+                        {{shareStoryCard.description}}
+
+                    </p>
+
+                    <button
+                        class="Neighborhood-Bb-Story-Button"
+                        (click)="shareStory()">
+
+                        {{shareStoryCard.button}}
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!--==============================================
+            RIGHT IMAGE
+            ==============================================-->
+
+            <div class="col-lg-6">
+
+                <div class="Neighborhood-Bb-Story-Image">
+
+                    <img
+                        [src]="shareStoryCard.image"
+                        [alt]="shareStoryCard.title">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+}
+
+@if(activeTab==4){
+
+<!--==========================================================
+B&B STARTER KIT
+===========================================================-->
+
+<div class="Neighborhood-Bb-Starter-Kit-Card">
+
+    <!--======================================================
+    HEADER
+    =======================================================-->
+
+    <div class="Neighborhood-Bb-Starter-Kit-Header">
+
+        <h3 class="Neighborhood-Bb-Starter-Kit-Title">
+
+            {{starterKitCard.title}}
+
+        </h3>
+
+        <p class="Neighborhood-Bb-Starter-Kit-SubTitle">
+
+            {{starterKitCard.subTitle}}
+
+        </p>
+
+    </div>
+
+    <!--======================================================
+    CARD LIST
+    =======================================================-->
+
+    <div class="Neighborhood-Bb-Starter-Kit-Body">
+
+        @for(item of starterKitItems; track item.id){
+
+        <div
+
+            class="Neighborhood-Bb-Starter-Kit-Item"
+
+            [class.Active]="selectedStarterCard==item.id"
+
+            (click)="selectStarterCard(item)">
+
+            <div class="row align-items-center">
+
+                <!--==========================================
+                ICON
+                ===========================================-->
+
+                <div class="col-auto">
+
+                    <div
+
+                        class="Neighborhood-Bb-Starter-Kit-Item-Icon"
+
+                        [style.color]="item.color">
+
+                        <i [class]="item.icon"></i>
+
+                    </div>
+
+                </div>
+
+                <!--==========================================
+                CONTENT
+                ===========================================-->
+
+                <div class="col">
+
+                    <div class="Neighborhood-Bb-Starter-Kit-Item-Content">
+
+                        <h5>
+
+                            {{item.title}}
+
+                        </h5>
+
+                        <p>
+
+                            {{item.description}}
+
+                        </p>
+
+                        @if(item.type=='download'){
+
+                        <button
+
+                            class="Neighborhood-Bb-Starter-Kit-Download-Button"
+
+                            (click)="downloadStarterKit();$event.stopPropagation()">
+
+                            {{item.button}}
+
+                        </button>
+
+                        }
+
+                    </div>
+
+                </div>
+
+                <!--==========================================
+                RIGHT ARROW
+                ===========================================-->
+
+                <div class="col-auto">
+
+                    <button
+
+                        class="Neighborhood-Bb-Starter-Kit-Arrow"
+
+                        (click)="openStarterFeature(item);$event.stopPropagation()">
+
+                        <i class="bi bi-chevron-right"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        }
+
+    </div>
+
+</div>
+
+}
+
+</div>
+
+
+<!--==========================================================
+SCRIPTURES FOOTER
+===========================================================-->
+
+<footer class="Neighborhood-Bb-Scripture-Footer">
+
+    <div class="container-fluid">
+
+        <div class="row align-items-center g-0">
+
+            <!--==================================================
+            LEFT TITLE
+            ===================================================-->
+
+            <div class="col-auto">
+
+                <div class="Neighborhood-Bb-Scripture-Footer-Title-Box">
+
+                    <div class="Neighborhood-Bb-Scripture-Footer-Icon">
+
+                        <i [class]="scriptureFooter.icon"></i>
+
+                    </div>
+
+                    <div class="Neighborhood-Bb-Scripture-Footer-Title">
+
+                        {{scriptureFooter.title}}
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!--==================================================
+            SCRIPTURE LIST
+            ===================================================-->
+
+            <div class="col">
+
+                <div class="Neighborhood-Bb-Scripture-Footer-Scroll">
+
+                    @for(scripture of scriptureReferences; track scripture.id){
+
+                    <button
+
+                        type="button"
+
+                        class="Neighborhood-Bb-Scripture-Footer-Link"
+
+                        [class.Active]="selectedScripture==scripture.id"
+
+                        (click)="selectScripture(scripture);
+                                 openScripture(scripture)">
+
+                        {{scripture.reference}}
+
+                    </button>
+
+                    @if(!$last){
+
+                    <span
+                        class="Neighborhood-Bb-Scripture-Footer-Divider">
+
+                        |
+
+                    </span>
+
+                    }
+
+                    }
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>

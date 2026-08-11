@@ -1,0 +1,293 @@
+/*==========================================================
+FOOTER
+==========================================================*/
+
+.Sharing-Story-Footer{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:linear-gradient(90deg,#0D2F6F,#123A7D);
+
+    border-radius:14px 14px 0px 0px;
+
+    padding:14px 22px;
+
+    color:#fff;
+
+}
+
+/*==========================================================
+CITY
+==========================================================*/
+
+.Sharing-Story-Footer-City{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.Sharing-Story-Footer-City i{
+
+    font-size:78px;
+
+    color:#C98B19;
+
+    opacity:.95;
+
+}
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.Sharing-Story-Footer-Title{
+
+    margin:0 0 10px;
+
+    color:#D9A126;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    text-align:center;
+
+}
+
+/*==========================================================
+SCRIPTURE AREA
+==========================================================*/
+
+.Sharing-Story-Footer-Scripture-Area{
+
+    text-align:center;
+
+}
+
+.Sharing-Story-Footer-Scripture{
+
+    width:100%;
+
+    padding:3px 2px;
+
+    background:none;
+
+    border:none;
+
+    color:#fff;
+
+    font-size:12px;
+
+    font-weight:500;
+
+    text-align:left;
+
+}
+/*==========================================================
+DIVIDER
+==========================================================*/
+
+.Sharing-Story-Footer-Divider{
+
+    width:2px;
+
+    height:88px;
+
+    background:#C98B19;
+
+    margin:auto;
+
+}
+
+/*==========================================================
+MENU
+==========================================================*/
+
+.Sharing-Story-Footer-Menu{
+
+    display:flex;
+
+    justify-content:space-evenly;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.Sharing-Story-Footer-Menu-Item{
+
+    border:none;
+
+    background:none;
+
+    color:#fff;
+
+    min-width:60px;
+
+    padding:2px;
+
+    text-align:center;
+
+}
+
+.Sharing-Story-Footer-Menu-Icon{
+
+    width:38px;
+
+    height:38px;
+
+    margin:0 auto 5px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(255,255,255,.18);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.Sharing-Story-Footer-Menu-Icon i{
+
+    font-size:18px;
+
+    color:#D9A126;
+
+}
+
+.Sharing-Story-Footer-Menu-Text{
+
+    font-size:11px;
+
+    font-weight:600;
+
+}
+
+/*==========================================================
+TABLET
+==========================================================*/
+
+@media(max-width:991px){
+
+    .Sharing-Story-Footer{
+
+        padding:12px 16px;
+
+    }
+
+    .Sharing-Story-Footer-City{
+
+        display:none;
+
+    }
+
+    .Sharing-Story-Footer-Divider{
+
+        display:none;
+
+    }
+
+    .Sharing-Story-Footer-Title{
+
+        font-size:18px;
+
+    }
+
+}
+
+/*==========================================================
+MOBILE
+==========================================================*/
+
+@media(max-width:767px){
+
+    .Sharing-Story-Footer{
+
+        padding:12px;
+
+    }
+
+    .Sharing-Story-Footer-Title{
+
+        font-size:16px;
+
+        margin-bottom:8px;
+
+    }
+
+    .Sharing-Story-Footer-Scripture{
+
+        text-align:center;
+
+        font-size:10px;
+
+    }
+
+    .Sharing-Story-Footer-Menu{
+
+        overflow-x:auto;
+
+        flex-wrap:nowrap;
+
+        justify-content:flex-start;
+
+        gap:14px;
+
+        padding-top:10px;
+
+        scrollbar-width:none;
+
+    }
+
+    .Sharing-Story-Footer-Menu::-webkit-scrollbar{
+
+        display:none;
+
+    }
+
+    .Sharing-Story-Footer-Menu-Item{
+
+        flex:0 0 auto;
+
+    }
+
+}
+
+/*==========================================================
+SMALL MOBILE
+==========================================================*/
+
+@media(max-width:575px){
+
+    .Sharing-Story-Footer-Menu-Icon{
+
+        width:34px;
+
+        height:34px;
+
+    }
+
+    .Sharing-Story-Footer-Menu-Icon i{
+
+        font-size:16px;
+
+    }
+
+    .Sharing-Story-Footer-Menu-Text{
+
+        font-size:10px;
+
+    }
+
+}
+
