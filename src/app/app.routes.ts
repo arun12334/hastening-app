@@ -10,6 +10,8 @@ import { DoesUnityBaptism } from './pages/does-unity-baptism/does-unity-baptism'
 import { NeighborhoodBbEvents } from './pages/neighborhood-bb-events/neighborhood-bb-events';
 import { SharingAStoryOfLove } from './pages/sharing-a-story-of-love/sharing-a-story-of-love';
 import { JoinAJustserveActivity } from './pages/join-a-justserve-activity/join-a-justserve-activity';
+import { JoiningEmmasReliefSociety } from './pages/joining-emmas-relief-society/joining-emmas-relief-society';
+
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -22,6 +24,7 @@ export const routes: Routes = [
     { path: 'neighborhood-bb-events', component: NeighborhoodBbEvents },
     { path: 'sharing-a-story-of-love', component: SharingAStoryOfLove },
     { path: 'join-a-justserve-activity', component: JoinAJustserveActivity },
+    { path: 'joining-emmas-relief-society', component: JoiningEmmasReliefSociety },
  
   {
     path: 'pray-for-someone',

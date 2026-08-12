@@ -73,3 +73,758 @@
     </div>
 
 </section>
+
+
+<!--==========================================================
+JUST SERVE TOP TAB
+===========================================================-->
+
+<section class="Join-A-Justserve-Activity-Top-Tab-Section">
+
+    <div class="container-fluid">
+
+        <div class="Join-A-Justserve-Activity-Top-Tab-Wrapper">
+
+            <div class="Join-A-Justserve-Activity-Top-Tab-Scroll">
+
+                @for(tab of justServeTabs; track tab.id){
+
+                <button
+
+                    type="button"
+
+                    class="Join-A-Justserve-Activity-Top-Tab-Item"
+
+                   [class.Join-A-Justserve-Activity-Top-Tab-Active]="activeTab==tab.id"
+
+                    (click)="selectJustServeTab(tab)">
+
+                    <!--======================================
+                    ICON
+                    =======================================-->
+
+                    <div class="Join-A-Justserve-Activity-Top-Tab-Icon">
+
+                        <i [class]="tab.icon"></i>
+
+                    </div>
+
+                    <!--======================================
+                    TEXT
+                    =======================================-->
+
+                    <div class="Join-A-Justserve-Activity-Top-Tab-Text">
+
+                        {{tab.title}}
+
+                    </div>
+
+                    <!--======================================
+                    COUNT
+                    =======================================-->
+
+                    <div class="Join-A-Justserve-Activity-Top-Tab-Count">
+
+                        {{tab.count}}
+
+                    </div>
+
+                </button>
+
+                }
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================================
+DUMMY CONTENT AREA
+===========================================================-->
+
+ 
+
+@if(activeTab==1){
+
+<!--==========================================================
+JUST SERVE PROJECTS
+===========================================================-->
+
+<section class="Join-A-Justserve-Activity-Projects-Section">
+
+    <div class="container-fluid">
+
+        <div class="row g-4">
+
+            @for(project of justServeProjects; track project.id){
+
+            <!--==================================================
+            CARD
+            ==================================================-->
+
+            <div class="col-xl-3 col-lg-6 col-md-6">
+
+                <div class="Join-A-Justserve-Activity-Project-Card">
+
+                    <!--==========================================
+                    HEADER
+                    ===========================================-->
+
+                    <div class="Join-A-Justserve-Activity-Project-Header">
+
+                        <!--==========================
+                        BADGE
+                        ==========================-->
+
+                        <div
+
+                            class="Join-A-Justserve-Activity-Project-Badge"
+
+                            [style.background]="project.badgeColor">
+
+                            {{project.badge}}
+
+                        </div>
+
+                        <!--==========================
+                        TITLE
+                        ==========================-->
+
+                        <div class="Join-A-Justserve-Activity-Project-Header-Content">
+
+                            <h4 class="Join-A-Justserve-Activity-Project-Title">
+
+                                {{project.title}}
+
+                            </h4>
+ 
+
+                        </div>
+
+                    </div>
+
+                    <!--==========================================
+                    HERO IMAGE
+                    ===========================================-->
+
+                    <div class="Join-A-Justserve-Activity-Project-Hero">
+
+                        <img
+
+                            [src]="project.heroImage"
+
+                            class="img-fluid"
+
+                            alt="Project Image">
+
+                    </div>
+
+                    <!--==========================================
+                    GALLERY
+                    ===========================================-->
+
+                    <div class="Join-A-Justserve-Activity-Project-Gallery">
+
+                        @for(image of project.gallery; track $index){
+
+                        <div class="Join-A-Justserve-Activity-Project-Gallery-Item">
+
+                            <img
+
+                                [src]="image"
+
+                                class="img-fluid"
+
+                                alt="Gallery Image">
+
+                        </div>
+
+                        }
+
+                    </div>
+
+                    <!--==========================================
+                    FOOTER
+                    ===========================================-->
+
+                    <div class="Join-A-Justserve-Activity-Project-Footer">
+
+                        <!--==========================
+                        LEFT
+                        ==========================-->
+
+                        <button
+
+                            type="button"
+
+                            class="Join-A-Justserve-Activity-Project-Action"
+
+                            (click)="projectBottomAction(project)"
+
+                            [style.color]="project.color">
+
+                            <i [class]="project.bottomIcon"></i>
+
+                            <span>
+
+                                {{project.bottomText}}
+
+                            </span>
+
+                        </button>
+
+                        <!--==========================
+                        RIGHT
+                        ==========================-->
+
+                        <button
+
+                            type="button"
+
+                            class="Join-A-Justserve-Activity-Project-View"
+
+                            (click)="viewOpportunity(project)">
+
+                            {{project.buttonText}}
+
+                            <i class="bi bi-chevron-right"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            }
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================================
+SERVICE ACTION CARDS
+===========================================================-->
+
+<section class="Join-A-Justserve-Activity-Service-Cards-Section">
+
+    <div class="container-fluid">
+
+        <div class="row g-4">
+
+            @for(card of serviceActionCards; track card.id){
+
+            <div class="col-xl-3 col-lg-6 col-md-6">
+
+                <!--==========================================
+                CARD
+                ===========================================-->
+
+                <div class="Join-A-Justserve-Activity-Service-Card">
+
+                    <!--======================================
+                    ACTION CARD
+                    =======================================-->
+
+                    @if(card.type=='action'){
+
+                    <div class="Join-A-Justserve-Activity-Service-Card-Body">
+
+                        <!-- ICON -->
+
+                        <div class="Join-A-Justserve-Activity-Service-Card-Icon">
+
+                            <i
+
+                                [class]="card.icon"
+
+                                [style.color]="card.iconColor">
+
+                            </i>
+
+                        </div>
+
+                        <!-- CONTENT -->
+
+                        <div class="Join-A-Justserve-Activity-Service-Card-Content">
+
+                            <h4 class="Join-A-Justserve-Activity-Service-Card-Title">
+
+                                {{card.title}}
+
+                            </h4>
+
+                            <p class="Join-A-Justserve-Activity-Service-Card-Description">
+
+                                {{card.description}}
+
+                            </p>
+
+                            <button
+
+                                type="button"
+
+                                class="Join-A-Justserve-Activity-Service-Primary-Btn"
+
+                                (click)="serviceCardAction(card)">
+
+                                {{card.buttonText}}
+
+                                <i class="bi bi-chevron-right"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    }
+
+                    <!--======================================
+                    VERSE CARD
+                    =======================================-->
+
+                    @if(card.type=='verse'){
+
+                    <div class="Join-A-Justserve-Activity-Service-Verse-Card">
+
+                        <div class="Join-A-Justserve-Activity-Service-Verse-Icon">
+
+                            <i
+
+                                [class]="card.icon"
+
+                                [style.color]="card.iconColor">
+
+                            </i>
+
+                        </div>
+
+                        <blockquote class="Join-A-Justserve-Activity-Service-Verse">
+
+                            {{card.verse}}
+
+                        </blockquote>
+
+                        <div class="Join-A-Justserve-Activity-Service-Scripture">
+
+                            {{card.scripture}}
+
+                        </div>
+
+                    </div>
+
+                    }
+
+                    <!--======================================
+                    INVITE CARD
+                    =======================================-->
+
+                    @if(card.type=='invite'){
+
+                    <div class="Join-A-Justserve-Activity-Service-Invite-Wrapper">
+
+                        <!-- LEFT -->
+
+                        <div class="Join-A-Justserve-Activity-Service-Invite-Content">
+
+                            <div class="Join-A-Justserve-Activity-Service-Card-Icon">
+
+                                <i
+
+                                    [class]="card.icon"
+
+                                    [style.color]="card.iconColor">
+
+                                </i>
+
+                            </div>
+
+                            <h6 class="Join-A-Justserve-Activity-Service-Card-Title">
+
+                                {{card.title}}
+
+                            </h6>
+
+                          
+
+                            <button
+
+                                type="button"
+
+                                class="Join-A-Justserve-Activity-Service-Primary-Btn"
+
+                                (click)="inviteSomeone()">
+
+                                {{card.buttonText}}
+
+                            </button>
+
+                        </div>
+
+                        <!-- RIGHT -->
+
+                        <div class="Join-A-Justserve-Activity-Service-Invite-Image">
+
+                            <img
+
+                                [src]="card.image"
+
+                                class="img-fluid"
+
+                                alt="Invite Others">
+
+                        </div>
+
+                    </div>
+
+                    }
+
+                </div>
+
+            </div>
+
+            }
+
+        </div>
+
+    </div>
+
+</section>
+
+}
+
+<!--==========================================================
+TAB 2
+===========================================================-->
+
+@if(activeTab==2){
+
+<section class="Join-A-Justserve-Activity-Tab-Content-Section">
+
+    <div class="container-fluid">
+
+        <div class="Join-A-Justserve-Activity-Tab-Content-Card">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-8">
+
+                    <h2 class="Join-A-Justserve-Activity-Tab-Content-Title">
+
+                        Sisters in Zion
+
+                    </h2>
+
+                    <p class="Join-A-Justserve-Activity-Tab-Content-Description">
+
+                        Women's service groups and fellowship.
+
+                    </p>
+
+                </div>
+
+                <div class="col-lg-4 text-lg-end text-center">
+
+                    <div class="Join-A-Justserve-Activity-Tab-Content-Badge">
+
+                        18 Activities
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+}
+
+<!--==========================================================
+TAB 3
+===========================================================-->
+
+@if(activeTab==3){
+
+<section class="Join-A-Justserve-Activity-Tab-Content-Section">
+
+    <div class="container-fluid">
+
+        <div class="Join-A-Justserve-Activity-Tab-Content-Card">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-8">
+
+                    <h2 class="Join-A-Justserve-Activity-Tab-Content-Title">
+
+                        Just Serve Map
+
+                    </h2>
+
+                    <p class="Join-A-Justserve-Activity-Tab-Content-Description">
+
+                        Find nearby volunteer opportunities.
+
+                    </p>
+
+                </div>
+
+                <div class="col-lg-4 text-lg-end text-center">
+
+                    <div class="Join-A-Justserve-Activity-Tab-Content-Badge">
+
+                        36 Activities
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+}
+
+<!--==========================================================
+TAB 4
+===========================================================-->
+
+@if(activeTab==4){
+
+<section class="Join-A-Justserve-Activity-Tab-Content-Section">
+
+    <div class="container-fluid">
+
+        <div class="Join-A-Justserve-Activity-Tab-Content-Card">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-8">
+
+                    <h2 class="Join-A-Justserve-Activity-Tab-Content-Title">
+
+                        Stories of Love
+
+                    </h2>
+
+                    <p class="Join-A-Justserve-Activity-Tab-Content-Description">
+
+                        Read inspiring acts of kindness and service.
+
+                    </p>
+
+                </div>
+
+                <div class="col-lg-4 text-lg-end text-center">
+
+                    <div class="Join-A-Justserve-Activity-Tab-Content-Badge">
+
+                        52 Activities
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+}
+
+<!--==========================================================
+TAB 5
+===========================================================-->
+
+@if(activeTab==5){
+
+<section class="Join-A-Justserve-Activity-Tab-Content-Section">
+
+    <div class="container-fluid">
+
+        <div class="Join-A-Justserve-Activity-Tab-Content-Card">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-8">
+
+                    <h2 class="Join-A-Justserve-Activity-Tab-Content-Title">
+
+                        My Service
+
+                    </h2>
+
+                    <p class="Join-A-Justserve-Activity-Tab-Content-Description">
+
+                        Your personal volunteer activities.
+
+                    </p>
+
+                </div>
+
+                <div class="col-lg-4 text-lg-end text-center">
+
+                    <div class="Join-A-Justserve-Activity-Tab-Content-Badge">
+
+                        9 Activities
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+}
+
+
+<!--==========================================================
+SHARING STORY FOOTER
+===========================================================-->
+
+<footer class="Sharing-Story-Footer">
+
+    <div class="container-fluid">
+
+        <div class="row align-items-center">
+
+            <!--==================================================
+            LEFT CITY ICON
+            ==================================================-->
+
+            <div class="col-xl-3 col-lg-3">
+
+                <div class="Sharing-Story-Footer-City">
+
+                    <i [class]="footerSection.cityIcon"></i>
+
+                </div>
+
+            </div>
+
+            <!--==================================================
+            CENTER SCRIPTURES
+            ==================================================-->
+
+            <div class="col-xl-5 col-lg-5">
+
+                <div class="Sharing-Story-Footer-Scripture-Area">
+
+                    <!--==============================
+                    TITLE
+                    ==============================-->
+
+                    <h3 class="Sharing-Story-Footer-Title">
+
+                        {{footerSection.title}}
+
+                    </h3>
+
+                    <!--==============================
+                    SCRIPTURES
+                    ==============================-->
+
+                    <div class="row">
+
+                        @for(scripture of footerScriptures; track scripture.id){
+
+                        <div class="col-6 col-md-3">
+
+                            <button
+
+                                type="button"
+
+                                class="Sharing-Story-Footer-Scripture"
+
+                                (click)="selectFooterScripture(scripture)">
+
+                                {{scripture.reference}}
+
+                            </button>
+
+                        </div>
+
+                        }
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!--==================================================
+            DIVIDER
+            ==================================================-->
+
+            <div class="col-xl-auto d-none d-xl-flex">
+
+                <div class="Sharing-Story-Footer-Divider"></div>
+
+            </div>
+
+            <!--==================================================
+            RIGHT ICON MENU
+            ==================================================-->
+
+            <div class="col-xl col-lg">
+
+                <div class="Sharing-Story-Footer-Menu">
+
+                    @for(item of footerActions; track item.id){
+
+                    <button
+
+                        type="button"
+
+                        class="Sharing-Story-Footer-Menu-Item"
+
+                        (click)="footerAction(item)">
+
+                        <div class="Sharing-Story-Footer-Menu-Icon">
+
+                            <i [class]="item.icon"></i>
+
+                        </div>
+
+                        <div class="Sharing-Story-Footer-Menu-Text">
+
+                            {{item.title}}
+
+                        </div>
+
+                    </button>
+
+                    }
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>

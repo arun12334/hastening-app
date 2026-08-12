@@ -1,169 +1,239 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Header } from '../../components/header/header';
 import { Router } from '@angular/router';
- 
 
 @Component({
-selector:'app-sisters-in-zion',
-standalone:true,
-imports:[
-CommonModule
-],
-templateUrl:'./sisters-in-zion.html',
-styleUrl:'./sisters-in-zion.scss'
+  selector: 'app-sisters-in-zion',
+  imports: [Header],
+  templateUrl: './sisters-in-zion.html',
+  styleUrl: './sisters-in-zion.scss',
 })
+export class SistersInZion {
 
-export class SistersInZion{
-constructor(private router: Router) {}
+  /*==========================================================
+  BANNER BACKGROUND IMAGE
+  ==========================================================*/
 
-  // ==========================================
-  // Header Menu
-  // ==========================================
+  sistersInZionBannerImage =
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShJMXKIUWxtGwoISkBvV2FI9_18uXLrXzhf9oQ-Lc6kiA4oKI27_pUR31r&s=10';
 
-  menus = [
+  /*==========================================================
+  BANNER CONTENT
+  ==========================================================*/
 
-    {
-      title: 'Home',
-      icon: 'bi-house-fill',
-      route: '/home'
-    },
+  sistersInZionBanner = {
 
-    {
-      title: 'Loving Our Neighbor',
-      icon: 'bi-heart-fill',
-      route: '/loving-our-neighbor'
-    },
+    icon:'bi bi-people-fill',
 
-    {
-      title: 'Learn & Grow',
-      icon: 'bi-book-fill',
-      route: '/learn-grow'
-    },
+    title:'Sisters in Zion',
 
-    {
-      title: 'Community',
-      icon: 'bi-people-fill',
-      route: '/community'
-    },
+    subTitle:
+    'Lift and support each other as we serve the Lord together.',
 
-    {
-      title: 'More',
-      icon: 'bi-shield-check',
-      route: '/more'
-    }
+    verse:
+    '"And all women who are believers in God are sisters in Zion."',
 
-  ];
+    scripture:
+    'Mosiah 18:9',
 
-
-
-  // ==========================================
-  // Right Cards
-  // ==========================================
-
-  cards = [
-
-    {
-      title: 'Indicate a Need Request',
-
-      desc:
-        'Let the sisters know how they can support and uplift you right now.',
-
-      icon: 'bi-hand-heart-fill',
-
-      route: '/need-request',
-
-      badge: ''
-    },
-
-    {
-      title: 'Offer Help for a Need Request',
-
-      desc:
-        'Find needs that match your heart and offer help to bless a sister.',
-
-      icon: 'bi-handshake',
-
-      route: '/offer-help',
-
-      badge: ''
-    },
-
-    {
-      title: 'Post a Service Opportunity',
-
-      desc:
-        'Invite sisters to serve and request RSVPs.',
-
-      icon: 'bi-calendar-heart',
-
-      route: '/service-opportunity',
-
-      badge: 'Minimum RSVPs Required'
-    },
-
-    {
-      title: 'Join a Book of Mormon Study Group',
-
-      desc:
-        'Grow together in faith and understanding.',
-
-      icon: 'bi-book',
-
-      route: '/study-group',
-
-      badge: 'Maximum 20 Sisters'
-    }
-
-  ];
-
-
-
-  // ==========================================
-  // Join Card
-  // ==========================================
-
-  joinInfo = {
-
-    phone: '(+01) 248-445-2179',
-
-    button: 'TEXT MY REQUEST TO JOIN'
+    buttonText:'Join the Sisterhood'
 
   };
 
+  /*==========================================================
+  BUTTON CLICK
+  ==========================================================*/
 
+  joinSisterhood(){
 
-  // ==========================================
-  // Navigation
-  // ==========================================
-
-  go(route: string) {
-
-    this.router.navigate([route]);
+    console.log('Join Sisters in Zion');
 
   }
 
 
 
-  // ==========================================
-  // Back Button
-  // ==========================================
+  /*==========================================================
+RELIEF SOCIETY MAIN CARD
+==========================================================*/
 
-  back() {
+reliefSocietyMainCardX91 = {
 
-    history.back();
+  title: "Join Emma's Relief Society",
+
+  subTitle:
+  "Connect with sisters and build faith, friendship and support.",
+
+  icon: "bi bi-house-heart-fill",
+
+  templeImage:
+  "https://images.unsplash.com/photo-1512632578888-169bbbc64f33?auto=format&fit=crop&w=700&q=80",
+
+  heading:
+  "Joining Emma's Relief Society",
+
+  requestType:
+  "Text Requests Only",
+
+  phone:
+  "(+01) 248-445-2179",
+
+  steps: [
+
+    "Your Name",
+
+    "Phone Number",
+
+    "Address or City",
+
+    "Receive information about the nearest Relief Society meeting location.",
+
+    "Responses provided worldwide."
+
+  ],
+
+  buttonText:
+  "TEXT MY REQUEST TO JOIN"
+
+};
+
+/*==========================================================
+RIGHT SIDE ACTION CARDS
+==========================================================*/
+
+reliefSocietyCardsX91 = [
+
+  {
+
+    id:1,
+
+    icon:"bi bi-heart-fill",
+
+    iconColor:"#6A44B8",
+
+    title:"Indicate a Need Request",
+
+    description:
+    "Let the sisters know how they can support and uplift you right now.",
+
+    badge:"",
+
+    arrow:"bi bi-chevron-right"
+
+  },
+
+  {
+
+    id:2,
+
+    icon:"bi bi-envelope-paper-heart-fill",
+
+    iconColor:"#6A44B8",
+
+    title:"Offer Help for a Need Request",
+
+    description:
+    "Find needs that match your heart and offer help to bless a sister.",
+
+    badge:"",
+
+    arrow:"bi bi-chevron-right"
+
+  },
+
+  {
+
+    id:3,
+
+    icon:"bi bi-calendar-heart-fill",
+
+    iconColor:"#6A44B8",
+
+    title:"Post a Service Opportunity",
+
+    description:
+    "Invite a service opportunity and request RSVPs.",
+
+    badge:"Minimum RSVPs required"
+
+  },
+
+  {
+
+    id:4,
+
+    icon:"bi bi-book-fill",
+
+    iconColor:"#6A44B8",
+
+    title:"Join a Book of Mormon Study Group",
+
+    description:
+    "Grow together in faith and understanding.",
+
+    badge:"Maximum 20 sisters per group"
 
   }
 
+];
+
+constructor(private router: Router) {}
 
 
-  // ==========================================
-  // Join Button
-  // ==========================================
+/*==========================================================
+CLICK METHODS
+==========================================================*/
 
-  joinNow() {
+joinReliefSocietyX91(){
 
-    alert('Join Relief Society');
+  console.log("Join Relief Society");
+    this.router.navigate(['/joining-emmas-relief-society']);
 
-  }
+}
+
+reliefSocietyCardClickX91(card:any){
+
+  console.log(card);
+
+}
+
+textRequestJoinX91() {
+
+  console.log("Text Request");
+
+  this.router.navigate(['/joining-emmas-relief-society']);
+
+}
+
+
+
+/*==========================================================
+BOTTOM SCRIPTURE BANNER X82
+==========================================================*/
+
+sistersInZionBottomVerseX82 = {
+
+  id:82,
+
+  icon:'bi bi-heart',
+
+  iconColor:'#7A4BB7',
+
+  verse:
+  'We are stronger together. As we lift, love, and serve one another, we become more like our Savior.',
+
+  scripture:
+  'Mosiah 18:21'
+
+};
+
+/*==========================================================
+CLICK
+==========================================================*/
+
+bottomVerseClickX82(){
+
+  console.log(this.sistersInZionBottomVerseX82);
+
+}
 
 }

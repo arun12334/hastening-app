@@ -1,0 +1,263 @@
+<app-header></app-header>
+
+<!--==========================================================
+JOINING EMMA'S RELIEF SOCIETY BANNER R91
+===========================================================-->
+
+<section class="Joining-Emmas-Relief-Society-Banner-Section-R91">
+
+    <div class="Joining-Emmas-Relief-Society-Banner-Wrapper-R91">
+
+        <!--==================================================
+        BACKGROUND IMAGE
+        ==================================================-->
+
+        <img
+
+            [src]="joiningEmmasReliefSocietyBannerImageR91"
+
+            class="Joining-Emmas-Relief-Society-Banner-Image-R91"
+
+            alt="Joining Emma Relief Society">
+
+        <!--==================================================
+        OVERLAY
+        ==================================================-->
+
+        <div class="Joining-Emmas-Relief-Society-Banner-Overlay-R91">
+
+            <div class="container-fluid h-100">
+
+                <div class="row h-100 align-items-center">
+
+                    <!--======================================
+                    LEFT CONTENT
+                    ======================================-->
+
+                    <div class="col-lg-6">
+
+                        <div class="Joining-Emmas-Relief-Society-Banner-Content-R91">
+
+                            <!--==============================
+                            ICON
+                            ==============================-->
+
+                            <div class="Joining-Emmas-Relief-Society-Banner-Icon-R91">
+
+                                <i
+
+                                    [class]="joiningEmmasReliefSocietyBannerR91.icon"
+
+                                    [style.color]="joiningEmmasReliefSocietyBannerR91.iconColor">
+
+                                </i>
+
+                            </div>
+
+                            <!--==============================
+                            TITLE
+                            ==============================-->
+
+                            <h1 class="Joining-Emmas-Relief-Society-Banner-Title-R91">
+
+                                {{joiningEmmasReliefSocietyBannerR91.title}}
+
+                            </h1>
+
+                            <!--==============================
+                            SUB TITLE
+                            ==============================-->
+
+                            <h5 class="Joining-Emmas-Relief-Society-Banner-Subtitle-R91">
+
+                                {{joiningEmmasReliefSocietyBannerR91.subTitle}}
+
+                            </h5>
+
+                            <!--==============================
+                            DIVIDER
+                            ==============================-->
+
+                            <div class="Joining-Emmas-Relief-Society-Banner-Line-R91"></div>
+
+                            <!--==============================
+                            DESCRIPTION
+                            ==============================-->
+
+                            <p class="Joining-Emmas-Relief-Society-Banner-Description-R91">
+
+                                {{joiningEmmasReliefSocietyBannerR91.description}}
+
+                            </p>
+
+                            <!--==============================
+                            FEATURES
+                            ==============================-->
+
+                            <div class="Joining-Emmas-Relief-Society-Banner-Features-R91">
+
+                                @for(feature of joiningEmmasReliefSocietyFeaturesR91; track feature.id){
+
+                                <button
+
+                                    type="button"
+
+                                    class="Joining-Emmas-Relief-Society-Banner-Feature-R91"
+
+                                    (click)="joiningEmmasReliefSocietyFeatureClickR91(feature)">
+
+                                    <i [class]="feature.icon"></i>
+
+                                    {{feature.title}}
+
+                                </button>
+
+                                }
+
+                            </div>
+
+                            <!--==============================
+                            BUTTON
+                            ==============================-->
+
+                            <button
+
+                                type="button"
+
+                                class="Joining-Emmas-Relief-Society-Banner-Button-R91"
+
+                                (click)="joiningEmmasReliefSocietyLearnMoreR91()">
+
+                                {{joiningEmmasReliefSocietyBannerR91.buttonText}}
+
+                                <i [class]="joiningEmmasReliefSocietyBannerR91.buttonIcon"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <!--======================================
+                    RIGHT SIDE
+                    ======================================-->
+
+                    <div class="col-lg-6">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!--==========================================================
+SISTERS IN ZION BENEFITS SECTION X64
+===========================================================-->
+
+<section class="Sisters-In-Zion-Benefits-Section-X64">
+
+    <div class="container-fluid">
+
+        <div class="row g-4">
+
+            @for(card of sistersInZionBenefitCardsX64; track card.id){
+
+            <!--==========================================
+            CARD
+            ===========================================-->
+
+            <div class="col-xl-3 col-lg-6 col-md-6">
+
+                <div
+
+                    class="Sisters-In-Zion-Benefit-Card-X64"
+
+                    (click)="selectBenefitCardX64(card)">
+
+                    <!--==================================
+                    ICON
+                    ==================================-->
+
+                    <div class="Sisters-In-Zion-Benefit-Icon-Wrapper-X64">
+
+                        <div class="Sisters-In-Zion-Benefit-Icon-X64">
+
+                            <i
+
+                                [class]="card.icon"
+
+                                [style.color]="card.iconColor">
+
+                            </i>
+
+                        </div>
+
+                    </div>
+
+                    <!--==================================
+                    TITLE
+                    ==================================-->
+
+                    <h3 class="Sisters-In-Zion-Benefit-Title-X64">
+
+                        {{card.title}}
+
+                    </h3>
+
+                    <!--==================================
+                    DIVIDER
+                    ==================================-->
+
+                    <div class="Sisters-In-Zion-Benefit-Line-X64"></div>
+
+                    <div class="Sisters-In-Zion-Benefit-Circle-X64"></div>
+
+                    <!--==================================
+                    DESCRIPTION
+                    ==================================-->
+
+                    <p class="Sisters-In-Zion-Benefit-Description-X64">
+
+                        {{card.description}}
+
+                    </p>
+
+                    <!--==================================
+                    BUTTON
+                    ==================================-->
+
+                    <button
+
+                        type="button"
+
+                        class="Sisters-In-Zion-Benefit-Button-X64"
+
+                        (click)="benefitButtonClickX64(card);$event.stopPropagation()">
+
+                        {{card.buttonText}}
+
+                        <i class="bi bi-arrow-right"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            }
+
+        </div>
+
+    </div>
+
+</section>

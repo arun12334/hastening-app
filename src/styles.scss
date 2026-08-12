@@ -8887,3 +8887,4545 @@ margin-top: 79px;
     }
 
 }
+
+
+// join-a-justserve-activity
+
+/*==========================================================
+TOP TAB SECTION
+==========================================================*/
+
+.Join-A-Justserve-Activity-Top-Tab-Section{
+
+    position:relative;
+
+    margin-top:-28px;
+
+    z-index:20;
+
+}
+
+/*==========================================================
+TAB WRAPPER
+==========================================================*/
+
+.Join-A-Justserve-Activity-Top-Tab-Wrapper{
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    padding:6px;
+
+    box-shadow:
+
+        0 8px 24px rgba(0,0,0,.08);
+
+    border:1px solid #ECECEC;
+
+}
+
+/*==========================================================
+TAB SCROLL
+==========================================================*/
+
+.Join-A-Justserve-Activity-Top-Tab-Scroll{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:6px;
+
+}
+
+/*==========================================================
+TAB ITEM
+==========================================================*/
+
+.Join-A-Justserve-Activity-Top-Tab-Item{
+
+    flex:1;
+
+    border:none;
+
+    background:transparent;
+
+    border-radius:14px;
+
+    padding:14px 18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    transition:.30s;
+
+    cursor:pointer;
+
+}
+
+/*==========================================================
+ACTIVE TAB
+==========================================================*/
+
+.Join-A-Justserve-Activity-Top-Tab-Active{
+
+    background:#F6F8FC;
+
+}
+
+/*==========================================================
+ICON
+==========================================================*/
+
+.Join-A-Justserve-Activity-Top-Tab-Icon{
+
+    width:36px;
+
+    height:36px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#6C737F;
+
+    background:#F3F5F8;
+
+}
+
+.Join-A-Justserve-Activity-Top-Tab-Icon i{
+
+    font-size:18px;
+
+}
+
+/*==========================================================
+TEXT
+==========================================================*/
+
+.Join-A-Justserve-Activity-Top-Tab-Text{
+
+    color:#444;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    white-space:nowrap;
+
+}
+
+/*==========================================================
+COUNT
+==========================================================*/
+
+.Join-A-Justserve-Activity-Top-Tab-Count{
+
+    min-width:24px;
+
+    height:24px;
+
+    border-radius:50px;
+
+    background:#EEF3FF;
+
+    color:#214A92;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:0 8px;
+
+}
+
+/*==========================================================
+CONTENT SECTION
+==========================================================*/
+
+.Join-A-Justserve-Activity-Tab-Content-Section{
+
+    margin-top:24px;
+
+}
+
+/*==========================================================
+CONTENT CARD
+==========================================================*/
+
+.Join-A-Justserve-Activity-Tab-Content-Card{
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    padding:28px;
+
+    border:1px solid #ECECEC;
+
+    box-shadow:
+
+        0 6px 20px rgba(0,0,0,.05);
+
+}
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.Join-A-Justserve-Activity-Tab-Content-Title{
+
+    margin:0;
+
+    color:#1D3F7C;
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+/*==========================================================
+DESCRIPTION
+==========================================================*/
+
+.Join-A-Justserve-Activity-Tab-Content-Description{
+
+    margin-top:12px;
+
+    margin-bottom:0;
+
+    color:#666;
+
+    font-size:15px;
+
+    line-height:1.7;
+
+}
+
+/*==========================================================
+BADGE
+==========================================================*/
+
+.Join-A-Justserve-Activity-Tab-Content-Badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#214A92;
+
+    color:#ffffff;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    border-radius:40px;
+
+    padding:12px 24px;
+
+}
+/*==========================================================
+TAB ITEM
+==========================================================*/
+
+.Join-A-Justserve-Activity-Top-Tab-Item{
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:all .30s ease;
+
+}
+
+/*==========================================================
+TAB HOVER
+==========================================================*/
+
+.Join-A-Justserve-Activity-Top-Tab-Item:hover{
+
+    background:#F8FAFD;
+
+    transform:translateY(-3px);
+
+    box-shadow:
+
+        0 10px 20px rgba(33,74,146,.12);
+
+}
+
+/*==========================================================
+ACTIVE TAB
+==========================================================*/
+
+.Join-A-Justserve-Activity-Top-Tab-Active{
+
+    background:#EDF4FF;
+
+    box-shadow:
+
+        inset 0 0 0 1px rgba(33,74,146,.10);
+
+}
+
+/*==========================================================
+TOP ACTIVE LINE
+==========================================================*/
+
+.Join-A-Justserve-Activity-Top-Tab-Item::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:0;
+
+    height:3px;
+
+    border-radius:20px;
+
+    background:#D49B1E;
+
+    transition:.30s;
+
+}
+
+.Join-A-Justserve-Activity-Top-Tab-Item:hover::before,
+
+.Join-A-Justserve-Activity-Top-Tab-Active::before{
+
+    width:70%;
+
+}
+
+/*==========================================================
+ICON
+==========================================================*/
+
+.Join-A-Justserve-Activity-Top-Tab-Icon{
+
+    transition:all .30s ease;
+
+}
+
+.Join-A-Justserve-Activity-Top-Tab-Item:hover
+.Join-A-Justserve-Activity-Top-Tab-Icon{
+
+    background:#214A92;
+
+    color:#ffffff;
+
+    transform:rotate(-8deg) scale(1.08);
+
+}
+
+/*==========================================================
+ICON
+==========================================================*/
+
+.Join-A-Justserve-Activity-Top-Tab-Icon i{
+
+    transition:.30s;
+
+}
+
+.Join-A-Justserve-Activity-Top-Tab-Item:hover
+.Join-A-Justserve-Activity-Top-Tab-Icon i{
+
+    transform:scale(1.15);
+
+}
+
+/*==========================================================
+TEXT
+==========================================================*/
+
+.Join-A-Justserve-Activity-Top-Tab-Text{
+
+    transition:.30s;
+
+}
+
+.Join-A-Justserve-Activity-Top-Tab-Item:hover
+.Join-A-Justserve-Activity-Top-Tab-Text{
+
+    color:#214A92;
+
+}
+
+.Join-A-Justserve-Activity-Top-Tab-Active
+.Join-A-Justserve-Activity-Top-Tab-Text{
+
+    color:#214A92;
+
+    font-weight:700;
+
+}
+
+/*==========================================================
+COUNT
+==========================================================*/
+
+.Join-A-Justserve-Activity-Top-Tab-Count{
+
+    transition:.30s;
+
+}
+
+.Join-A-Justserve-Activity-Top-Tab-Item:hover
+.Join-A-Justserve-Activity-Top-Tab-Count{
+
+    background:#214A92;
+
+    color:#ffffff;
+
+    transform:scale(1.08);
+
+}
+
+.Join-A-Justserve-Activity-Top-Tab-Active
+.Join-A-Justserve-Activity-Top-Tab-Count{
+
+    background:#214A92;
+
+    color:#ffffff;
+
+}
+
+/*==========================================================
+CONTENT CARD
+==========================================================*/
+
+.Join-A-Justserve-Activity-Tab-Content-Card{
+
+    transition:all .35s ease;
+
+}
+
+.Join-A-Justserve-Activity-Tab-Content-Card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+
+        0 18px 35px rgba(0,0,0,.08);
+
+}
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.Join-A-Justserve-Activity-Tab-Content-Title{
+
+    transition:.30s;
+
+}
+
+.Join-A-Justserve-Activity-Tab-Content-Card:hover
+.Join-A-Justserve-Activity-Tab-Content-Title{
+
+    color:#2A63B5;
+
+}
+
+/*==========================================================
+BADGE
+==========================================================*/
+
+.Join-A-Justserve-Activity-Tab-Content-Badge{
+
+    transition:.30s;
+
+}
+
+.Join-A-Justserve-Activity-Tab-Content-Badge:hover{
+
+    transform:translateY(-2px);
+
+    background:#2A63B5;
+
+    box-shadow:
+
+        0 12px 24px rgba(42,99,181,.30);
+
+}
+
+/*==========================================================
+SMOOTH TRANSITIONS
+==========================================================*/
+
+.Join-A-Justserve-Activity-Top-Tab-Item,
+
+.Join-A-Justserve-Activity-Top-Tab-Icon,
+
+.Join-A-Justserve-Activity-Top-Tab-Icon i,
+
+.Join-A-Justserve-Activity-Top-Tab-Text,
+
+.Join-A-Justserve-Activity-Top-Tab-Count,
+
+.Join-A-Justserve-Activity-Tab-Content-Card,
+
+.Join-A-Justserve-Activity-Tab-Content-Title,
+
+.Join-A-Justserve-Activity-Tab-Content-Badge{
+
+    transition:all .30s ease;
+
+}
+
+/*==========================================================
+LAPTOP
+==========================================================*/
+
+@media(max-width:1199px){
+
+    .Join-A-Justserve-Activity-Top-Tab-Item{
+
+        padding:12px 14px;
+
+    }
+
+    .Join-A-Justserve-Activity-Top-Tab-Text{
+
+        font-size:13px;
+
+    }
+
+    .Join-A-Justserve-Activity-Tab-Content-Card{
+
+        padding:24px;
+
+    }
+
+}
+
+/*==========================================================
+TABLET
+==========================================================*/
+
+@media(max-width:991px){
+
+    .Join-A-Justserve-Activity-Top-Tab-Section{
+
+        margin-top:-20px;
+
+    }
+
+    .Join-A-Justserve-Activity-Top-Tab-Wrapper{
+
+        padding:5px;
+
+        border-radius:16px;
+
+    }
+
+    .Join-A-Justserve-Activity-Top-Tab-Scroll{
+
+        overflow-x:auto;
+
+        overflow-y:hidden;
+
+        flex-wrap:nowrap;
+
+        justify-content:flex-start;
+
+        scrollbar-width:none;
+
+        -ms-overflow-style:none;
+
+        -webkit-overflow-scrolling:touch;
+
+        gap:8px;
+
+    }
+
+    .Join-A-Justserve-Activity-Top-Tab-Scroll::-webkit-scrollbar{
+
+        display:none;
+
+    }
+
+    .Join-A-Justserve-Activity-Top-Tab-Item{
+
+        flex:0 0 auto;
+
+        min-width:200px;
+
+    }
+
+    .Join-A-Justserve-Activity-Tab-Content-Card{
+
+        padding:22px;
+
+    }
+
+    .Join-A-Justserve-Activity-Tab-Content-Title{
+
+        font-size:24px;
+
+    }
+
+    .Join-A-Justserve-Activity-Tab-Content-Badge{
+
+        margin-top:18px;
+
+    }
+
+}
+
+/*==========================================================
+MOBILE
+==========================================================*/
+
+@media(max-width:767px){
+
+    .Join-A-Justserve-Activity-Top-Tab-Section{
+
+        margin-top:-18px;
+
+    }
+
+    .Join-A-Justserve-Activity-Top-Tab-Wrapper{
+
+        border-radius:14px;
+
+        padding:4px;
+
+    }
+
+    .Join-A-Justserve-Activity-Top-Tab-Scroll{
+
+        overflow-x:auto;
+
+        overflow-y:hidden;
+
+        flex-wrap:nowrap;
+
+        justify-content:flex-start;
+
+        gap:10px;
+
+        scrollbar-width:none;
+
+        -webkit-overflow-scrolling:touch;
+
+    }
+
+    .Join-A-Justserve-Activity-Top-Tab-Scroll::-webkit-scrollbar{
+
+        display:none;
+
+    }
+
+    .Join-A-Justserve-Activity-Top-Tab-Item{
+
+        flex:0 0 auto;
+
+        min-width:190px;
+
+        padding:12px;
+
+        justify-content:flex-start;
+
+    }
+
+    .Join-A-Justserve-Activity-Top-Tab-Icon{
+
+        width:34px;
+
+        height:34px;
+
+    }
+
+    .Join-A-Justserve-Activity-Top-Tab-Icon i{
+
+        font-size:16px;
+
+    }
+
+    .Join-A-Justserve-Activity-Top-Tab-Text{
+
+        font-size:13px;
+
+    }
+
+    .Join-A-Justserve-Activity-Top-Tab-Count{
+
+        margin-left:auto;
+
+    }
+
+    .Join-A-Justserve-Activity-Tab-Content-Section{
+
+        margin-top:18px;
+
+    }
+
+    .Join-A-Justserve-Activity-Tab-Content-Card{
+
+        padding:18px;
+
+        text-align:center;
+
+    }
+
+    .Join-A-Justserve-Activity-Tab-Content-Title{
+
+        font-size:22px;
+
+    }
+
+    .Join-A-Justserve-Activity-Tab-Content-Description{
+
+        font-size:14px;
+
+    }
+
+    .Join-A-Justserve-Activity-Tab-Content-Badge{
+
+        margin-top:18px;
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+}
+
+/*==========================================================
+SMALL MOBILE
+==========================================================*/
+
+@media(max-width:575px){
+
+    .Join-A-Justserve-Activity-Top-Tab-Item{
+
+        min-width:170px;
+
+        padding:10px;
+
+        gap:8px;
+
+    }
+
+    .Join-A-Justserve-Activity-Top-Tab-Icon{
+
+        width:30px;
+
+        height:30px;
+
+    }
+
+    .Join-A-Justserve-Activity-Top-Tab-Icon i{
+
+        font-size:15px;
+
+    }
+
+    .Join-A-Justserve-Activity-Top-Tab-Text{
+
+        font-size:12px;
+
+    }
+
+    .Join-A-Justserve-Activity-Top-Tab-Count{
+
+        min-width:22px;
+
+        height:22px;
+
+        font-size:10px;
+
+    }
+
+    .Join-A-Justserve-Activity-Tab-Content-Card{
+
+        padding:16px;
+
+    }
+
+    .Join-A-Justserve-Activity-Tab-Content-Title{
+
+        font-size:20px;
+
+    }
+
+    .Join-A-Justserve-Activity-Tab-Content-Description{
+
+        font-size:13px;
+
+    }
+
+    .Join-A-Justserve-Activity-Tab-Content-Badge{
+
+        font-size:14px;
+
+        padding:10px 18px;
+
+    }
+
+}
+
+/*==========================================================
+EXTRA SMALL MOBILE
+==========================================================*/
+
+@media(max-width:380px){
+
+    .Join-A-Justserve-Activity-Top-Tab-Item{
+
+        min-width:155px;
+
+    }
+
+    .Join-A-Justserve-Activity-Top-Tab-Text{
+
+        font-size:11px;
+
+    }
+
+    .Join-A-Justserve-Activity-Top-Tab-Icon{
+
+        width:28px;
+
+        height:28px;
+
+    }
+
+    .Join-A-Justserve-Activity-Top-Tab-Icon i{
+
+        font-size:14px;
+
+    }
+
+    .Join-A-Justserve-Activity-Tab-Content-Title{
+
+        font-size:18px;
+
+    }
+
+    .Join-A-Justserve-Activity-Tab-Content-Description{
+
+        font-size:12px;
+
+    }
+
+    .Join-A-Justserve-Activity-Tab-Content-Badge{
+
+        font-size:13px;
+
+        padding:8px 16px;
+
+    }
+
+}
+
+/*==========================================================
+JUST SERVE PROJECTS SECTION
+==========================================================*/
+
+.Join-A-Justserve-Activity-Projects-Section{
+
+    margin-top:30px;
+
+    margin-bottom:40px;
+
+}
+
+/*==========================================================
+PROJECT CARD
+==========================================================*/
+
+.Join-A-Justserve-Activity-Project-Card{
+
+    height:100%;
+
+    background:#ffffff;
+
+    border:1px solid #E8E8E8;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 24px rgba(0,0,0,.06);
+
+    transition:.35s;
+
+}
+
+/*==========================================================
+HEADER
+==========================================================*/
+
+.Join-A-Justserve-Activity-Project-Header{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:14px;
+
+    padding:18px;
+
+}
+
+/*==========================================================
+BADGE
+==========================================================*/
+
+.Join-A-Justserve-Activity-Project-Badge{
+
+    flex-shrink:0;
+
+    width:38px;
+
+    height:38px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#ffffff;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    text-transform:lowercase;
+
+}
+
+/*==========================================================
+HEADER CONTENT
+==========================================================*/
+
+.Join-A-Justserve-Activity-Project-Header-Content{
+
+    flex:1;
+
+}
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.Join-A-Justserve-Activity-Project-Title{
+
+    margin:0;
+
+    color:#1F376A;
+
+    font-size:26px;
+
+    font-weight:700;
+
+    line-height:1.25;
+
+}
+
+/*==========================================================
+DESCRIPTION
+==========================================================*/
+
+.Join-A-Justserve-Activity-Project-Description{
+
+    margin-top:10px;
+
+    margin-bottom:0;
+
+    color:#555;
+
+    font-size:15px;
+
+    line-height:1.7;
+
+}
+
+/*==========================================================
+HERO IMAGE
+==========================================================*/
+
+.Join-A-Justserve-Activity-Project-Hero{
+
+    padding:0 14px;
+
+}
+
+.Join-A-Justserve-Activity-Project-Hero img{
+
+    width:100%;
+
+    height:235px;
+
+    object-fit:cover;
+
+    border-radius:14px;
+
+    display:block;
+
+}
+
+/*==========================================================
+GALLERY
+==========================================================*/
+
+.Join-A-Justserve-Activity-Project-Gallery{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:8px;
+
+    padding:10px 14px 14px;
+
+}
+
+.Join-A-Justserve-Activity-Project-Gallery-Item{
+
+    overflow:hidden;
+
+    border-radius:10px;
+
+}
+
+.Join-A-Justserve-Activity-Project-Gallery img{
+
+    width:100%;
+
+    height:92px;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+/*==========================================================
+FOOTER
+==========================================================*/
+
+.Join-A-Justserve-Activity-Project-Footer{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    border-top:1px solid #EFEFEF;
+
+    padding:14px 18px;
+
+}
+
+/*==========================================================
+LEFT ACTION
+==========================================================*/
+
+.Join-A-Justserve-Activity-Project-Action{
+
+    border:none;
+
+    background:none;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}
+
+.Join-A-Justserve-Activity-Project-Action i{
+
+    font-size:18px;
+
+}
+
+/*==========================================================
+VIEW BUTTON
+==========================================================*/
+
+.Join-A-Justserve-Activity-Project-View{
+
+    border:none;
+
+    background:none;
+
+    color:#1F376A;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+}
+
+.Join-A-Justserve-Activity-Project-View i{
+
+    font-size:14px;
+
+}
+
+/*==========================================================
+PROJECT CARD
+==========================================================*/
+
+.Join-A-Justserve-Activity-Project-Card{
+
+    position:relative;
+
+    transition:all .35s ease;
+
+}
+
+.Join-A-Justserve-Activity-Project-Card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+
+        0 18px 45px rgba(0,0,0,.14);
+
+}
+
+/*==========================================================
+TOP SHINE EFFECT
+==========================================================*/
+
+.Join-A-Justserve-Activity-Project-Card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:60%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.45),
+
+        transparent
+
+    );
+
+    transition:.8s;
+
+    z-index:5;
+
+}
+
+.Join-A-Justserve-Activity-Project-Card:hover::before{
+
+    left:150%;
+
+}
+
+/*==========================================================
+BADGE
+==========================================================*/
+
+.Join-A-Justserve-Activity-Project-Badge{
+
+    transition:.35s;
+
+}
+
+.Join-A-Justserve-Activity-Project-Card:hover
+
+.Join-A-Justserve-Activity-Project-Badge{
+
+    transform:rotate(-12deg) scale(1.12);
+
+    box-shadow:
+
+        0 10px 20px rgba(0,0,0,.18);
+
+}
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.Join-A-Justserve-Activity-Project-Title{
+
+    transition:.30s;
+
+}
+
+.Join-A-Justserve-Activity-Project-Card:hover
+
+.Join-A-Justserve-Activity-Project-Title{
+
+    color:#0F5BB7;
+
+}
+
+/*==========================================================
+DESCRIPTION
+==========================================================*/
+
+.Join-A-Justserve-Activity-Project-Description{
+
+    transition:.30s;
+
+}
+
+.Join-A-Justserve-Activity-Project-Card:hover
+
+.Join-A-Justserve-Activity-Project-Description{
+
+    color:#333;
+
+}
+
+/*==========================================================
+HERO IMAGE
+==========================================================*/
+
+.Join-A-Justserve-Activity-Project-Hero{
+
+    overflow:hidden;
+
+    border-radius:14px;
+
+}
+
+.Join-A-Justserve-Activity-Project-Hero img{
+
+    transition:transform .45s ease;
+
+}
+
+.Join-A-Justserve-Activity-Project-Card:hover
+
+.Join-A-Justserve-Activity-Project-Hero img{
+
+    transform:scale(1.08);
+
+}
+
+/*==========================================================
+GALLERY
+==========================================================*/
+
+.Join-A-Justserve-Activity-Project-Gallery-Item{
+
+    overflow:hidden;
+
+    border-radius:10px;
+
+}
+
+.Join-A-Justserve-Activity-Project-Gallery img{
+
+    transition:all .35s ease;
+
+}
+
+.Join-A-Justserve-Activity-Project-Gallery-Item:hover img{
+
+    transform:scale(1.12);
+
+}
+
+/*==========================================================
+FOOTER
+==========================================================*/
+
+.Join-A-Justserve-Activity-Project-Footer{
+
+    transition:.30s;
+
+}
+
+.Join-A-Justserve-Activity-Project-Card:hover
+
+.Join-A-Justserve-Activity-Project-Footer{
+
+    background:#FAFBFD;
+
+}
+
+/*==========================================================
+LEFT ACTION
+==========================================================*/
+
+.Join-A-Justserve-Activity-Project-Action{
+
+    transition:.30s;
+
+}
+
+.Join-A-Justserve-Activity-Project-Action:hover{
+
+    transform:translateX(5px);
+
+}
+
+.Join-A-Justserve-Activity-Project-Action i{
+
+    transition:.30s;
+
+}
+
+.Join-A-Justserve-Activity-Project-Action:hover i{
+
+    transform:scale(1.25);
+
+}
+
+/*==========================================================
+VIEW BUTTON
+==========================================================*/
+
+.Join-A-Justserve-Activity-Project-View{
+
+    transition:.30s;
+
+}
+
+.Join-A-Justserve-Activity-Project-View:hover{
+
+    color:#0F5BB7;
+
+    transform:translateX(5px);
+
+}
+
+.Join-A-Justserve-Activity-Project-View i{
+
+    transition:.30s;
+
+}
+
+.Join-A-Justserve-Activity-Project-View:hover i{
+
+    transform:translateX(5px);
+
+}
+
+/*==========================================================
+SMOOTH TRANSITIONS
+==========================================================*/
+
+.Join-A-Justserve-Activity-Project-Card,
+
+.Join-A-Justserve-Activity-Project-Badge,
+
+.Join-A-Justserve-Activity-Project-Title,
+
+.Join-A-Justserve-Activity-Project-Description,
+
+.Join-A-Justserve-Activity-Project-Hero img,
+
+.Join-A-Justserve-Activity-Project-Gallery img,
+
+.Join-A-Justserve-Activity-Project-Action,
+
+.Join-A-Justserve-Activity-Project-View{
+
+    transition:all .35s ease;
+
+}
+
+/*==========================================================
+LAPTOP
+==========================================================*/
+
+@media(max-width:1199px){
+
+    .Join-A-Justserve-Activity-Project-Header{
+
+        padding:16px;
+
+    }
+
+    .Join-A-Justserve-Activity-Project-Title{
+
+        font-size:22px;
+
+    }
+
+    .Join-A-Justserve-Activity-Project-Description{
+
+        font-size:14px;
+
+    }
+
+    .Join-A-Justserve-Activity-Project-Hero img{
+
+        height:210px;
+
+    }
+
+    .Join-A-Justserve-Activity-Project-Gallery img{
+
+        height:82px;
+
+    }
+
+}
+
+/*==========================================================
+TABLET
+==========================================================*/
+
+@media(max-width:991px){
+
+    .Join-A-Justserve-Activity-Projects-Section{
+
+        margin-top:25px;
+
+    }
+
+    .Join-A-Justserve-Activity-Project-Header{
+
+        padding:15px;
+
+    }
+
+    .Join-A-Justserve-Activity-Project-Badge{
+
+        width:34px;
+
+        height:34px;
+
+        font-size:18px;
+
+    }
+
+    .Join-A-Justserve-Activity-Project-Title{
+
+        font-size:20px;
+
+    }
+
+    .Join-A-Justserve-Activity-Project-Description{
+
+        font-size:14px;
+
+    }
+
+    .Join-A-Justserve-Activity-Project-Hero img{
+
+        height:200px;
+
+    }
+
+    .Join-A-Justserve-Activity-Project-Gallery img{
+
+        height:75px;
+
+    }
+
+    .Join-A-Justserve-Activity-Project-Footer{
+
+        padding:14px 16px;
+
+    }
+
+}
+
+/*==========================================================
+MOBILE
+==========================================================*/
+
+@media(max-width:767px){
+
+    .Join-A-Justserve-Activity-Projects-Section{
+
+        margin-top:20px;
+
+    }
+
+    .Join-A-Justserve-Activity-Project-Card{
+
+        border-radius:16px;
+
+    }
+
+    .Join-A-Justserve-Activity-Project-Header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:12px;
+
+        padding:16px;
+
+    }
+
+    .Join-A-Justserve-Activity-Project-Badge{
+
+        width:36px;
+
+        height:36px;
+
+        font-size:18px;
+
+    }
+
+    .Join-A-Justserve-Activity-Project-Title{
+
+        font-size:20px;
+
+        line-height:1.4;
+
+    }
+
+    .Join-A-Justserve-Activity-Project-Description{
+
+        font-size:14px;
+
+        line-height:1.6;
+
+    }
+
+    .Join-A-Justserve-Activity-Project-Hero{
+
+        padding:0 12px;
+
+    }
+
+    .Join-A-Justserve-Activity-Project-Hero img{
+
+        height:190px;
+
+        border-radius:12px;
+
+    }
+
+    .Join-A-Justserve-Activity-Project-Gallery{
+
+        gap:6px;
+
+        padding:10px 12px 12px;
+
+    }
+
+    .Join-A-Justserve-Activity-Project-Gallery img{
+
+        height:72px;
+
+        border-radius:8px;
+
+    }
+
+    .Join-A-Justserve-Activity-Project-Footer{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        gap:14px;
+
+        padding:16px;
+
+    }
+
+    .Join-A-Justserve-Activity-Project-Action{
+
+        justify-content:center;
+
+        width:100%;
+
+    }
+
+    .Join-A-Justserve-Activity-Project-View{
+
+        width:100%;
+
+        justify-content:center;
+
+        padding:12px;
+
+        background:#214A92;
+
+        color:#ffffff;
+
+        border-radius:10px;
+
+    }
+
+    .Join-A-Justserve-Activity-Project-View:hover{
+
+        color:#ffffff;
+
+    }
+
+}
+
+/*==========================================================
+SMALL MOBILE
+==========================================================*/
+
+@media(max-width:575px){
+
+    .Join-A-Justserve-Activity-Project-Header{
+
+        padding:14px;
+
+    }
+
+    .Join-A-Justserve-Activity-Project-Title{
+
+        font-size:18px;
+
+    }
+
+    .Join-A-Justserve-Activity-Project-Description{
+
+        font-size:13px;
+
+    }
+
+    .Join-A-Justserve-Activity-Project-Hero{
+
+        padding:0 10px;
+
+    }
+
+    .Join-A-Justserve-Activity-Project-Hero img{
+
+        height:170px;
+
+    }
+
+    .Join-A-Justserve-Activity-Project-Gallery{
+
+        padding:8px 10px 10px;
+
+    }
+
+    .Join-A-Justserve-Activity-Project-Gallery img{
+
+        height:60px;
+
+    }
+
+    .Join-A-Justserve-Activity-Project-Action{
+
+        font-size:13px;
+
+    }
+
+    .Join-A-Justserve-Activity-Project-View{
+
+        font-size:13px;
+
+        padding:10px;
+
+    }
+
+}
+
+/*==========================================================
+EXTRA SMALL MOBILE
+==========================================================*/
+
+@media(max-width:380px){
+
+    .Join-A-Justserve-Activity-Project-Badge{
+
+        width:32px;
+
+        height:32px;
+
+        font-size:16px;
+
+    }
+
+    .Join-A-Justserve-Activity-Project-Title{
+
+        font-size:16px;
+
+    }
+
+    .Join-A-Justserve-Activity-Project-Description{
+
+        font-size:12px;
+
+    }
+
+    .Join-A-Justserve-Activity-Project-Hero img{
+
+        height:150px;
+
+    }
+
+    .Join-A-Justserve-Activity-Project-Gallery img{
+
+        height:52px;
+
+    }
+
+    .Join-A-Justserve-Activity-Project-Action{
+
+        font-size:12px;
+
+    }
+
+    .Join-A-Justserve-Activity-Project-View{
+
+        font-size:12px;
+
+    }
+
+}
+
+/*==========================================================
+FOOTER
+==========================================================*/
+
+.Sharing-Story-Footer{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:linear-gradient(90deg,#0D2F6F,#123A7D);
+
+    border-radius:14px 14px 0px 0px;
+
+    padding:14px 22px;
+
+    color:#fff;
+
+}
+
+/*==========================================================
+CITY
+==========================================================*/
+
+.Sharing-Story-Footer-City{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.Sharing-Story-Footer-City i{
+
+    font-size:78px;
+
+    color:#C98B19;
+
+    opacity:.95;
+
+}
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.Sharing-Story-Footer-Title{
+
+    margin:0 0 10px;
+
+    color:#D9A126;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    text-align:center;
+
+}
+
+/*==========================================================
+SCRIPTURE AREA
+==========================================================*/
+
+.Sharing-Story-Footer-Scripture-Area{
+
+    text-align:center;
+
+}
+
+.Sharing-Story-Footer-Scripture{
+
+    width:100%;
+
+    padding:3px 2px;
+
+    background:none;
+
+    border:none;
+
+    color:#fff;
+
+    font-size:12px;
+
+    font-weight:500;
+
+    text-align:left;
+
+}
+/*==========================================================
+DIVIDER
+==========================================================*/
+
+.Sharing-Story-Footer-Divider{
+
+    width:2px;
+
+    height:88px;
+
+    background:#C98B19;
+
+    margin:auto;
+
+}
+
+/*==========================================================
+MENU
+==========================================================*/
+
+.Sharing-Story-Footer-Menu{
+
+    display:flex;
+
+    justify-content:space-evenly;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.Sharing-Story-Footer-Menu-Item{
+
+    border:none;
+
+    background:none;
+
+    color:#fff;
+
+    min-width:60px;
+
+    padding:2px;
+
+    text-align:center;
+
+}
+
+.Sharing-Story-Footer-Menu-Icon{
+
+    width:38px;
+
+    height:38px;
+
+    margin:0 auto 5px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(255,255,255,.18);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.Sharing-Story-Footer-Menu-Icon i{
+
+    font-size:18px;
+
+    color:#D9A126;
+
+}
+
+.Sharing-Story-Footer-Menu-Text{
+
+    font-size:11px;
+
+    font-weight:600;
+
+}
+
+/*==========================================================
+TABLET
+==========================================================*/
+
+@media(max-width:991px){
+
+    .Sharing-Story-Footer{
+
+        padding:12px 16px;
+
+    }
+
+    .Sharing-Story-Footer-City{
+
+        display:none;
+
+    }
+
+    .Sharing-Story-Footer-Divider{
+
+        display:none;
+
+    }
+
+    .Sharing-Story-Footer-Title{
+
+        font-size:18px;
+
+    }
+
+}
+
+/*==========================================================
+MOBILE
+==========================================================*/
+
+@media(max-width:767px){
+
+    .Sharing-Story-Footer{
+
+        padding:12px;
+
+    }
+
+    .Sharing-Story-Footer-Title{
+
+        font-size:16px;
+
+        margin-bottom:8px;
+
+    }
+
+    .Sharing-Story-Footer-Scripture{
+
+        text-align:center;
+
+        font-size:10px;
+
+    }
+
+    .Sharing-Story-Footer-Menu{
+
+        overflow-x:auto;
+
+        flex-wrap:nowrap;
+
+        justify-content:flex-start;
+
+        gap:14px;
+
+        padding-top:10px;
+
+        scrollbar-width:none;
+
+    }
+
+    .Sharing-Story-Footer-Menu::-webkit-scrollbar{
+
+        display:none;
+
+    }
+
+    .Sharing-Story-Footer-Menu-Item{
+
+        flex:0 0 auto;
+
+    }
+
+}
+
+/*==========================================================
+SMALL MOBILE
+==========================================================*/
+
+@media(max-width:575px){
+
+    .Sharing-Story-Footer-Menu-Icon{
+
+        width:34px;
+
+        height:34px;
+
+    }
+
+    .Sharing-Story-Footer-Menu-Icon i{
+
+        font-size:16px;
+
+    }
+
+    .Sharing-Story-Footer-Menu-Text{
+
+        font-size:10px;
+
+    }
+
+}
+
+
+/*==========================================================
+SERVICE CARD SECTION
+==========================================================*/
+
+.Join-A-Justserve-Activity-Service-Cards-Section{
+
+    margin:28px 0 35px;
+
+}
+
+/*==========================================================
+CARD
+==========================================================*/
+
+.Join-A-Justserve-Activity-Service-Card{
+
+    background:#ffffff;
+
+    border:1px solid #E9EDF4;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    height:135px;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.05);
+
+    transition:.30s;
+
+}
+
+/*==========================================================
+ACTION CARD
+==========================================================*/
+
+.Join-A-Justserve-Activity-Service-Card-Body{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    padding:18px;
+
+    height:100%;
+
+}
+
+/*==========================================================
+ICON
+==========================================================*/
+
+.Join-A-Justserve-Activity-Service-Card-Icon{
+
+    width:52px;
+
+    min-width:52px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+}
+
+.Join-A-Justserve-Activity-Service-Card-Icon i{
+
+    font-size:38px;
+
+}
+
+/*==========================================================
+CONTENT
+==========================================================*/
+
+.Join-A-Justserve-Activity-Service-Card-Content{
+
+    flex:1;
+
+}
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.Join-A-Justserve-Activity-Service-Card-Title{
+
+    margin:0;
+
+    color:#1C448B;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    line-height:1.25;
+
+}
+
+/*==========================================================
+DESCRIPTION
+==========================================================*/
+
+.Join-A-Justserve-Activity-Service-Card-Description{
+
+    margin:8px 0 12px;
+
+    color:#666;
+
+    font-size:12px;
+
+    line-height:1.55;
+
+}
+
+/*==========================================================
+BUTTON
+==========================================================*/
+
+.Join-A-Justserve-Activity-Service-Primary-Btn{
+
+    border:none;
+
+    outline:none;
+
+    background:#173F86;
+
+    color:#fff;
+
+    border-radius:22px;
+
+    height:34px;
+
+    padding:0 18px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    cursor:pointer;
+
+}
+
+.Join-A-Justserve-Activity-Service-Primary-Btn i{
+
+    font-size:11px;
+
+}
+
+/*==========================================================
+VERSE CARD
+==========================================================*/
+
+.Join-A-Justserve-Activity-Service-Verse-Card{
+
+    height:135px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:18px;
+
+    text-align:center;
+
+}
+
+/*==========================================================
+VERSE ICON
+==========================================================*/
+
+.Join-A-Justserve-Activity-Service-Verse-Icon{
+
+    margin-bottom:8px;
+
+}
+
+.Join-A-Justserve-Activity-Service-Verse-Icon i{
+
+    font-size:32px;
+
+}
+
+/*==========================================================
+VERSE
+==========================================================*/
+
+.Join-A-Justserve-Activity-Service-Verse{
+
+    margin:0;
+
+    color:#555;
+
+    font-size:14px;
+
+    font-style:italic;
+
+    line-height:1.6;
+
+}
+
+/*==========================================================
+SCRIPTURE
+==========================================================*/
+
+.Join-A-Justserve-Activity-Service-Scripture{
+
+    margin-top:8px;
+
+    color:#21448A;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+/*==========================================================
+INVITE CARD
+==========================================================*/
+
+.Join-A-Justserve-Activity-Service-Invite-Wrapper{
+
+    display:flex;
+
+    height:135px;
+
+}
+
+/*==========================================================
+LEFT
+==========================================================*/
+
+.Join-A-Justserve-Activity-Service-Invite-Content{
+
+    flex:1;
+
+    padding:18px;
+
+}
+
+.Join-A-Justserve-Activity-Service-Invite-Content
+.Join-A-Justserve-Activity-Service-Card-Icon{
+
+    width:auto;
+
+    min-width:auto;
+
+    margin-bottom:6px;
+
+}
+
+.Join-A-Justserve-Activity-Service-Invite-Content
+.Join-A-Justserve-Activity-Service-Card-Icon i{
+
+    font-size:34px;
+
+}
+
+.Join-A-Justserve-Activity-Service-Invite-Content
+.Join-A-Justserve-Activity-Service-Card-Title{
+
+    font-size:18px;
+
+}
+
+.Join-A-Justserve-Activity-Service-Invite-Content
+.Join-A-Justserve-Activity-Service-Card-Description{
+
+    margin:8px 0 12px;
+
+    font-size:12px;
+
+}
+
+/*==========================================================
+IMAGE
+==========================================================*/
+
+.Join-A-Justserve-Activity-Service-Invite-Image{
+
+    width:145px;
+
+    overflow:hidden;
+
+}
+
+.Join-A-Justserve-Activity-Service-Invite-Image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+/*==========================================================
+CARD HOVER
+==========================================================*/
+
+.Join-A-Justserve-Activity-Service-Card{
+
+    position:relative;
+
+    transition:all .35s ease;
+
+}
+
+.Join-A-Justserve-Activity-Service-Card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+        0 14px 28px rgba(0,0,0,.10);
+
+    border-color:#D7E3F7;
+
+}
+
+/*==========================================================
+TOP SHINE
+==========================================================*/
+
+.Join-A-Justserve-Activity-Service-Card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-130%;
+
+    width:55%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.55),
+
+        transparent
+
+    );
+
+    transition:.8s;
+
+    pointer-events:none;
+
+}
+
+.Join-A-Justserve-Activity-Service-Card:hover::before{
+
+    left:150%;
+
+}
+
+/*==========================================================
+ICON
+==========================================================*/
+
+.Join-A-Justserve-Activity-Service-Card-Icon{
+
+    transition:.35s;
+
+}
+
+.Join-A-Justserve-Activity-Service-Card:hover
+.Join-A-Justserve-Activity-Service-Card-Icon{
+
+    transform:scale(1.10);
+
+}
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.Join-A-Justserve-Activity-Service-Card-Title{
+
+    transition:.30s;
+
+}
+
+.Join-A-Justserve-Activity-Service-Card:hover
+.Join-A-Justserve-Activity-Service-Card-Title{
+
+    color:#0F58B5;
+
+}
+
+/*==========================================================
+BUTTON
+==========================================================*/
+
+.Join-A-Justserve-Activity-Service-Primary-Btn{
+
+    transition:.30s;
+
+}
+
+.Join-A-Justserve-Activity-Service-Primary-Btn:hover{
+
+    background:#245AB4;
+
+    box-shadow:
+
+        0 8px 18px rgba(36,90,180,.28);
+
+}
+
+.Join-A-Justserve-Activity-Service-Primary-Btn i{
+
+    transition:.30s;
+
+}
+
+.Join-A-Justserve-Activity-Service-Primary-Btn:hover i{
+
+    transform:translateX(4px);
+
+}
+
+/*==========================================================
+VERSE
+==========================================================*/
+
+.Join-A-Justserve-Activity-Service-Verse{
+
+    transition:.30s;
+
+}
+
+.Join-A-Justserve-Activity-Service-Card:hover
+.Join-A-Justserve-Activity-Service-Verse{
+
+    color:#333;
+
+}
+
+/*==========================================================
+INVITE IMAGE
+==========================================================*/
+
+.Join-A-Justserve-Activity-Service-Invite-Image{
+
+    overflow:hidden;
+
+}
+
+.Join-A-Justserve-Activity-Service-Invite-Image img{
+
+    transition:.45s;
+
+}
+
+.Join-A-Justserve-Activity-Service-Card:hover
+.Join-A-Justserve-Activity-Service-Invite-Image img{
+
+    transform:scale(1.08);
+
+}
+
+/*==========================================================
+LAPTOP
+==========================================================*/
+
+@media(max-width:1199px){
+
+    .Join-A-Justserve-Activity-Service-Card{
+
+        height:140px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Card-Body{
+
+        padding:16px;
+
+        gap:14px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Card-Title{
+
+        font-size:17px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Card-Description{
+
+        font-size:12px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Card-Icon{
+
+        width:46px;
+
+        min-width:46px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Card-Icon i{
+
+        font-size:34px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Primary-Btn{
+
+        height:32px;
+
+        font-size:11px;
+
+        padding:0 16px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Verse{
+
+        font-size:13px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Scripture{
+
+        font-size:12px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Invite-Image{
+
+        width:125px;
+
+    }
+
+}
+/*==========================================================
+TABLET
+==========================================================*/
+
+@media(max-width:991px){
+
+    .Join-A-Justserve-Activity-Service-Cards-Section{
+
+        margin:24px 0 30px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Card{
+
+        height:150px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Card-Body{
+
+        padding:16px;
+
+        gap:14px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Card-Icon{
+
+        width:44px;
+
+        min-width:44px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Card-Icon i{
+
+        font-size:32px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Card-Title{
+
+        font-size:17px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Card-Description{
+
+        font-size:12px;
+
+        line-height:1.55;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Primary-Btn{
+
+        height:32px;
+
+        padding:0 15px;
+
+        font-size:11px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Verse-Card{
+
+        height:150px;
+
+        padding:16px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Verse{
+
+        font-size:13px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Scripture{
+
+        font-size:12px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Invite-Wrapper{
+
+        height:150px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Invite-Image{
+
+        width:120px;
+
+    }
+
+}
+
+/*==========================================================
+MOBILE
+==========================================================*/
+
+@media(max-width:767px){
+
+    .Join-A-Justserve-Activity-Service-Card{
+
+        height:auto;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Card-Body{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        text-align:center;
+
+        padding:20px 18px;
+
+        gap:14px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Card-Icon{
+
+        width:100%;
+
+        min-width:100%;
+
+        justify-content:center;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Card-Icon i{
+
+        font-size:36px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Card-Title{
+
+        font-size:20px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Card-Description{
+
+        font-size:13px;
+
+        margin:10px 0 16px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Primary-Btn{
+
+        width:100%;
+
+        height:40px;
+
+        justify-content:center;
+
+        border-radius:25px;
+
+    }
+
+    /*======================================
+    VERSE
+    ======================================*/
+
+    .Join-A-Justserve-Activity-Service-Verse-Card{
+
+        height:auto;
+
+        padding:26px 18px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Verse-Icon i{
+
+        font-size:34px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Verse{
+
+        font-size:15px;
+
+        line-height:1.7;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Scripture{
+
+        margin-top:10px;
+
+        font-size:14px;
+
+    }
+
+    /*======================================
+    INVITE
+    ======================================*/
+
+    .Join-A-Justserve-Activity-Service-Invite-Wrapper{
+
+        flex-direction:column;
+
+        height:auto;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Invite-Content{
+
+        padding:20px;
+
+        text-align:center;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Invite-Content
+    .Join-A-Justserve-Activity-Service-Card-Icon{
+
+        width:100%;
+
+        justify-content:center;
+
+        margin-bottom:12px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Invite-Image{
+
+        width:100%;
+
+        height:200px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Invite-Image img{
+
+        width:100%;
+
+        height:100%;
+
+        object-fit:cover;
+
+    }
+
+}
+
+/*==========================================================
+SMALL MOBILE
+==========================================================*/
+
+@media(max-width:575px){
+
+    .Join-A-Justserve-Activity-Service-Cards-Section{
+
+        margin:20px 0;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Card{
+
+        border-radius:14px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Card-Body{
+
+        padding:16px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Card-Icon i{
+
+        font-size:30px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Card-Title{
+
+        font-size:17px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Card-Description{
+
+        font-size:12px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Primary-Btn{
+
+        height:36px;
+
+        font-size:11px;
+
+        padding:0 14px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Verse{
+
+        font-size:13px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Scripture{
+
+        font-size:12px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Invite-Image{
+
+        height:170px;
+
+    }
+
+}
+
+/*==========================================================
+EXTRA SMALL MOBILE
+==========================================================*/
+
+@media(max-width:380px){
+
+    .Join-A-Justserve-Activity-Service-Card-Title{
+
+        font-size:16px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Card-Description{
+
+        font-size:11px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Card-Icon i{
+
+        font-size:28px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Primary-Btn{
+
+        height:34px;
+
+        font-size:10px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Verse{
+
+        font-size:12px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Scripture{
+
+        font-size:11px;
+
+    }
+
+    .Join-A-Justserve-Activity-Service-Invite-Image{
+
+        height:150px;
+
+    }
+
+}
+
+
+// sisters in zion banner
+
+/*==========================================================
+SISTERS IN ZION BANNER
+==========================================================*/
+
+.Sisters-In-Zion-Banner-Section{
+
+    margin:25px 0;
+
+}
+
+/*==========================================================
+BANNER
+==========================================================*/
+
+.Sisters-In-Zion-Banner{
+
+    position:relative;
+
+    width:100%;
+
+    overflow:hidden;
+
+    border-radius:22px;
+
+    box-shadow:0 8px 24px rgba(0,0,0,.12);
+
+}
+
+/*==========================================================
+IMAGE
+==========================================================*/
+
+.Sisters-In-Zion-Banner-Image{
+
+    width:100%;
+
+    height:auto;
+
+    display:block;
+
+}
+/*==========================================================
+OVERLAY
+==========================================================*/
+.Sisters-In-Zion-Banner-Overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-end;
+
+    padding-right:6%;
+
+}
+/*==========================================================
+CONTENT
+==========================================================*/
+
+.Sisters-In-Zion-Banner-Content{
+
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:20px 35px;
+
+}
+
+/*==========================================================
+ICON
+==========================================================*/
+
+.Sisters-In-Zion-Banner-Icon{
+
+    margin-bottom:10px;
+
+}
+
+.Sisters-In-Zion-Banner-Icon i{
+
+    font-size:42px;
+
+    color:#5B2EA6;
+
+}
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.Sisters-In-Zion-Banner-Title{
+
+    margin:0;
+
+    color:#2D2A74;
+
+    font-size:48px;
+
+    font-weight:700;
+
+    line-height:1.15;
+
+    font-family:Georgia,serif;
+
+}
+
+/*==========================================================
+SUB TITLE
+==========================================================*/
+
+.Sisters-In-Zion-Banner-SubTitle{
+
+    margin-top:8px;
+
+    color:#4B4B4B;
+
+    font-size:22px;
+
+    font-weight:500;
+
+    line-height:1.45;
+
+}
+
+/*==========================================================
+VERSE
+==========================================================*/
+
+.Sisters-In-Zion-Banner-Verse{
+
+    margin:18px 0 8px;
+
+    color:#75563A;
+
+    font-size:17px;
+
+    font-style:italic;
+
+    line-height:1.7;
+
+}
+
+/*==========================================================
+SCRIPTURE
+==========================================================*/
+
+.Sisters-In-Zion-Banner-Scripture{
+
+    color:#5B2EA6;
+
+    font-size:18px;
+
+    font-weight:700;
+
+}
+
+/*==========================================================
+BUTTON
+==========================================================*/
+
+.Sisters-In-Zion-Banner-Button{
+
+    margin-top:22px;
+
+    border:none;
+
+    background:#5B2EA6;
+
+    color:#fff;
+
+    padding:12px 28px;
+
+    border-radius:40px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    cursor:pointer;
+
+    transition:.30s;
+
+}
+
+.Sisters-In-Zion-Banner-Button i{
+
+    font-size:14px;
+
+}
+/*==========================================================
+BANNER HOVER
+==========================================================*/
+
+.Sisters-In-Zion-Banner{
+
+    transition:all .45s ease;
+
+}
+
+.Sisters-In-Zion-Banner:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+
+        0 18px 40px rgba(0,0,0,.18);
+
+}
+
+/*==========================================================
+SHINE EFFECT
+==========================================================*/
+
+.Sisters-In-Zion-Banner::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:45%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.40),
+
+        transparent
+
+    );
+
+    transition:1s;
+
+    z-index:2;
+
+    pointer-events:none;
+
+}
+
+.Sisters-In-Zion-Banner:hover::before{
+
+    left:140%;
+
+}
+
+/*==========================================================
+CONTENT
+==========================================================*/
+
+.Sisters-In-Zion-Banner-Content{
+
+    position:relative;
+
+    z-index:3;
+
+}
+
+/*==========================================================
+ICON
+==========================================================*/
+
+.Sisters-In-Zion-Banner-Icon{
+
+    transition:.35s;
+
+}
+
+.Sisters-In-Zion-Banner:hover
+
+.Sisters-In-Zion-Banner-Icon{
+
+    transform:translateY(-4px) scale(1.12);
+
+}
+
+.Sisters-In-Zion-Banner-Icon i{
+
+    transition:.35s;
+
+}
+
+.Sisters-In-Zion-Banner:hover
+
+.Sisters-In-Zion-Banner-Icon i{
+
+    color:#7441D4;
+
+}
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.Sisters-In-Zion-Banner-Title{
+
+    transition:.35s;
+
+}
+
+.Sisters-In-Zion-Banner:hover
+
+.Sisters-In-Zion-Banner-Title{
+
+    letter-spacing:.5px;
+
+    color:#4C239A;
+
+}
+
+/*==========================================================
+SUB TITLE
+==========================================================*/
+
+.Sisters-In-Zion-Banner-SubTitle{
+
+    transition:.35s;
+
+}
+
+.Sisters-In-Zion-Banner:hover
+
+.Sisters-In-Zion-Banner-SubTitle{
+
+    color:#303030;
+
+}
+
+/*==========================================================
+VERSE
+==========================================================*/
+
+.Sisters-In-Zion-Banner-Verse{
+
+    transition:.35s;
+
+}
+
+.Sisters-In-Zion-Banner:hover
+
+.Sisters-In-Zion-Banner-Verse{
+
+    color:#5A4630;
+
+}
+
+/*==========================================================
+SCRIPTURE
+==========================================================*/
+
+.Sisters-In-Zion-Banner-Scripture{
+
+    transition:.35s;
+
+}
+
+.Sisters-In-Zion-Banner:hover
+
+.Sisters-In-Zion-Banner-Scripture{
+
+    color:#6A31CC;
+
+}
+
+/*==========================================================
+BUTTON
+==========================================================*/
+
+.Sisters-In-Zion-Banner-Button{
+
+    transition:all .35s ease;
+
+}
+
+.Sisters-In-Zion-Banner-Button:hover{
+
+    background:#6D38D0;
+
+    transform:translateY(-2px);
+
+    box-shadow:
+
+        0 12px 24px rgba(109,56,208,.30);
+
+}
+
+.Sisters-In-Zion-Banner-Button i{
+
+    transition:.30s;
+
+}
+
+.Sisters-In-Zion-Banner-Button:hover i{
+
+    transform:translateX(5px);
+
+}
+
+/*==========================================================
+BACKGROUND ZOOM
+==========================================================*/
+
+.Sisters-In-Zion-Banner{
+
+       background-size:cover;
+
+    background-position:center;
+
+}
+
+ 
+/*==========================================================
+SMOOTH TRANSITIONS
+==========================================================*/
+
+.Sisters-In-Zion-Banner,
+
+.Sisters-In-Zion-Banner-Icon,
+
+.Sisters-In-Zion-Banner-Icon i,
+
+.Sisters-In-Zion-Banner-Title,
+
+.Sisters-In-Zion-Banner-SubTitle,
+
+.Sisters-In-Zion-Banner-Verse,
+
+.Sisters-In-Zion-Banner-Scripture,
+
+.Sisters-In-Zion-Banner-Button{
+
+    transition:all .35s ease;
+
+}
+/*==========================================================
+LAPTOP
+==========================================================*/
+
+@media(max-width:1199px){
+
+    .Sisters-In-Zion-Banner{
+
+        height:255px;
+
+    }
+
+    .Sisters-In-Zion-Banner-Content{
+
+        padding:20px 28px;
+
+    }
+
+    .Sisters-In-Zion-Banner-Title{
+
+        font-size:40px;
+
+    }
+
+    .Sisters-In-Zion-Banner-SubTitle{
+
+        font-size:20px;
+
+    }
+
+    .Sisters-In-Zion-Banner-Verse{
+
+        font-size:15px;
+
+    }
+
+    .Sisters-In-Zion-Banner-Scripture{
+
+        font-size:16px;
+
+    }
+
+}
+
+/*==========================================================
+TABLET
+==========================================================*/
+
+@media(max-width:991px){
+
+    .Sisters-In-Zion-Banner{
+
+        height:520px;
+
+        background-position:center center;
+
+    }
+
+    .Sisters-In-Zion-Banner-Overlay{
+
+        background:linear-gradient(
+
+            rgba(255,248,236,.30),
+
+            rgba(255,248,236,.92)
+
+        );
+
+    }
+
+    .Sisters-In-Zion-Banner-Content{
+
+        height:100%;
+
+        justify-content:flex-end;
+
+        padding:30px;
+
+        text-align:center;
+
+    }
+
+    .Sisters-In-Zion-Banner-Icon i{
+
+        font-size:38px;
+
+    }
+
+    .Sisters-In-Zion-Banner-Title{
+
+        font-size:34px;
+
+    }
+
+    .Sisters-In-Zion-Banner-SubTitle{
+
+        font-size:19px;
+
+    }
+
+    .Sisters-In-Zion-Banner-Verse{
+
+        font-size:15px;
+
+        max-width:620px;
+
+        margin:16px auto 8px;
+
+    }
+
+    .Sisters-In-Zion-Banner-Scripture{
+
+        font-size:15px;
+
+    }
+
+    .Sisters-In-Zion-Banner-Button{
+
+        margin-top:20px;
+
+    }
+
+}
+
+/*==========================================================
+MOBILE
+==========================================================*/
+
+@media(max-width:767px){
+
+    .Sisters-In-Zion-Banner{
+
+        border-radius:18px;
+
+        display:flex;
+
+        flex-direction:column;
+
+        background:#fff;
+
+    }
+
+    .Sisters-In-Zion-Banner-Image{
+
+        width:100%;
+
+        height:auto;
+
+        display:block;
+        margin-top: 70px;
+
+    }
+
+    .Sisters-In-Zion-Banner-Overlay{
+
+        position:relative;
+
+        inset:auto;
+
+        background:#fff;
+
+        padding:20px 18px;
+
+    }
+
+    .Sisters-In-Zion-Banner-Content{
+
+        padding:0;
+
+        text-align:center;
+
+    }
+
+    .Sisters-In-Zion-Banner-Title{
+
+        font-size:28px;
+
+    }
+
+    .Sisters-In-Zion-Banner-SubTitle{
+
+        font-size:17px;
+
+    }
+
+    .Sisters-In-Zion-Banner-Verse{
+
+        font-size:14px;
+
+    }
+
+}
+/*==========================================================
+SMALL MOBILE
+==========================================================*/
+
+@media(max-width:575px){
+
+    .Sisters-In-Zion-Banner{
+
+        height:430px;
+
+        border-radius:16px;
+
+    }
+
+    .Sisters-In-Zion-Banner-Content{
+
+        padding:20px 16px;
+
+    }
+
+    .Sisters-In-Zion-Banner-Icon i{
+
+        font-size:30px;
+
+    }
+
+    .Sisters-In-Zion-Banner-Title{
+
+        font-size:25px;
+
+    }
+
+    .Sisters-In-Zion-Banner-SubTitle{
+
+        font-size:15px;
+
+    }
+
+    .Sisters-In-Zion-Banner-Verse{
+
+        font-size:13px;
+
+    }
+
+    .Sisters-In-Zion-Banner-Scripture{
+
+        font-size:13px;
+
+    }
+
+    .Sisters-In-Zion-Banner-Button{
+
+        height:42px;
+
+        font-size:13px;
+
+        border-radius:30px;
+
+    }
+
+}
+
+/*==========================================================
+EXTRA SMALL MOBILE
+==========================================================*/
+
+@media(max-width:380px){
+
+    .Sisters-In-Zion-Banner{
+
+        height:390px;
+
+    }
+
+    .Sisters-In-Zion-Banner-Title{
+
+        font-size:22px;
+
+    }
+
+    .Sisters-In-Zion-Banner-SubTitle{
+
+        font-size:14px;
+
+    }
+
+    .Sisters-In-Zion-Banner-Verse{
+
+        font-size:12px;
+
+    }
+
+    .Sisters-In-Zion-Banner-Scripture{
+
+        font-size:12px;
+
+    }
+
+    .Sisters-In-Zion-Banner-Button{
+
+        height:40px;
+
+        font-size:12px;
+
+    }
+
+}
+
+// sisters in zion banner end
+
+//  joining a justserve activity page
+
+/*==========================================================
+SECTION R91
+==========================================================*/
+
+.Joining-Emmas-Relief-Society-Banner-Section-R91{
+
+    padding:18px 0;
+
+}
+
+/*==========================================================
+WRAPPER
+==========================================================*/
+ 
+
+.Joining-Emmas-Relief-Society-Banner-Wrapper-R91{
+
+    position:relative;
+
+    min-height:560px;
+
+    overflow:visible;
+
+    border-radius:20px;
+
+    background:#fff;
+
+    box-shadow:0 8px 24px rgba(0,0,0,.08);
+
+}
+
+/*==========================================================
+IMAGE
+==========================================================*/
+
+.Joining-Emmas-Relief-Society-Banner-Image-R91{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    object-position:right center;
+
+}
+
+/*==========================================================
+OVERLAY
+==========================================================*/
+
+.Joining-Emmas-Relief-Society-Banner-Overlay-R91{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        90deg,
+        rgba(255,255,255,.97) 0%,
+        rgba(255,255,255,.93) 33%,
+        rgba(255,255,255,.72) 50%,
+        rgba(255,255,255,.20) 68%,
+        transparent 82%
+    );
+
+}
+
+/*==========================================================
+CONTENT
+==========================================================*/
+
+.Joining-Emmas-Relief-Society-Banner-Content-R91{
+
+    position:relative;
+
+    z-index:10;
+
+    min-height:560px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    padding:55px 0 55px 65px;
+
+    max-width:560px;
+
+}
+/*==========================================================
+ICON
+==========================================================*/
+
+.Joining-Emmas-Relief-Society-Banner-Icon-R91{
+
+    width:56px;
+
+    height:56px;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    border:2px solid #E9BC53;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-bottom:14px;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+
+}
+
+.Joining-Emmas-Relief-Society-Banner-Icon-R91 i{
+
+    font-size:24px;
+
+}
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.Joining-Emmas-Relief-Society-Banner-Title-R91{
+
+    margin:0;
+
+    font-size:34px;
+
+    line-height:1.18;
+
+    font-weight:700;
+
+    color:#4C2E91;
+
+    font-family:Georgia,serif;
+
+}
+
+/*==========================================================
+SUB TITLE
+==========================================================*/
+
+.Joining-Emmas-Relief-Society-Banner-Subtitle-R91{
+
+    margin-top:10px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    color:#8D6945;
+
+}
+
+/*==========================================================
+LINE
+==========================================================*/
+
+.Joining-Emmas-Relief-Society-Banner-Line-R91{
+
+    width:110px;
+
+    height:3px;
+
+    background:#E5B540;
+
+    border-radius:30px;
+
+    margin:15px 0;
+
+}
+
+/*==========================================================
+DESCRIPTION
+==========================================================*/
+
+.Joining-Emmas-Relief-Society-Banner-Description-R91{
+
+    margin-top:18px;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    max-width:520px;
+
+}
+/*==========================================================
+FEATURES
+==========================================================*/
+
+.Joining-Emmas-Relief-Society-Banner-Features-R91{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    margin-top:28px;
+
+    margin-bottom:28px;
+
+}
+
+.Joining-Emmas-Relief-Society-Banner-Feature-R91{
+
+    padding:10px 18px;
+
+    border-radius:25px;
+
+    font-size:15px;
+
+}
+.Joining-Emmas-Relief-Society-Banner-Feature-R91{
+
+    border:none;
+
+    background:#F8F2FF;
+
+    color:#6842AF;
+
+    border-radius:20px;
+
+    padding:7px 14px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+}
+
+/*==========================================================
+BUTTON
+==========================================================*/
+
+.Joining-Emmas-Relief-Society-Banner-Button-R91{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-top:0;
+
+    height:54px;
+
+    padding:0 34px;
+
+    border-radius:30px;
+
+    background:#5D41AD;
+
+    color:#fff;
+
+    font-size:15px;
+
+    font-weight:700;
+
+}
+/*==========================================================
+WRAPPER
+==========================================================*/
+
+.Joining-Emmas-Relief-Society-Banner-Wrapper-R91{
+
+    transition:all .35s ease;
+
+}
+
+.Joining-Emmas-Relief-Society-Banner-Wrapper-R91:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+
+    0 18px 40px rgba(0,0,0,.16);
+
+}
+
+/*==========================================================
+IMAGE
+==========================================================*/
+
+.Joining-Emmas-Relief-Society-Banner-Image-R91{
+
+    transition:transform .7s ease;
+
+}
+
+ 
+
+/*==========================================================
+SHINE EFFECT
+==========================================================*/
+
+.Joining-Emmas-Relief-Society-Banner-Wrapper-R91::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-140%;
+
+    width:45%;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.45),
+
+        transparent
+
+    );
+
+    transition:1s;
+
+    pointer-events:none;
+
+}
+
+ 
+
+/*==========================================================
+ICON
+==========================================================*/
+
+.Joining-Emmas-Relief-Society-Banner-Icon-R91{
+
+    transition:all .35s ease;
+
+}
+
+.Joining-Emmas-Relief-Society-Banner-Wrapper-R91:hover
+.Joining-Emmas-Relief-Society-Banner-Icon-R91{
+
+    background:#6243B2;
+
+    border-color:#6243B2;
+
+    transform:rotate(-8deg) scale(1.08);
+
+}
+
+.Joining-Emmas-Relief-Society-Banner-Wrapper-R91:hover
+.Joining-Emmas-Relief-Society-Banner-Icon-R91 i{
+
+    color:#fff !important;
+
+}
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.Joining-Emmas-Relief-Society-Banner-Title-R91{
+
+    transition:.35s;
+
+}
+
+.Joining-Emmas-Relief-Society-Banner-Wrapper-R91:hover
+.Joining-Emmas-Relief-Society-Banner-Title-R91{
+
+    color:#563AA9;
+
+}
+
+/*==========================================================
+LINE
+==========================================================*/
+
+.Joining-Emmas-Relief-Society-Banner-Line-R91{
+
+    transition:.35s;
+
+}
+
+.Joining-Emmas-Relief-Society-Banner-Wrapper-R91:hover
+.Joining-Emmas-Relief-Society-Banner-Line-R91{
+
+    width:145px;
+
+    background:#D4A531;
+
+}
+
+/*==========================================================
+FEATURE CHIP
+==========================================================*/
+
+.Joining-Emmas-Relief-Society-Banner-Feature-R91{
+
+    transition:all .30s ease;
+
+}
+
+.Joining-Emmas-Relief-Society-Banner-Feature-R91:hover{
+
+    background:#6243B2;
+
+    color:#fff;
+
+    transform:translateY(-2px);
+
+}
+
+.Joining-Emmas-Relief-Society-Banner-Feature-R91:hover i{
+
+    color:#fff;
+
+}
+
+/*==========================================================
+BUTTON
+==========================================================*/
+
+.Joining-Emmas-Relief-Society-Banner-Button-R91{
+
+    transition:all .30s ease;
+
+}
+
+.Joining-Emmas-Relief-Society-Banner-Button-R91:hover{
+
+    background:#4B2C93;
+
+    transform:translateY(-2px);
+
+    box-shadow:
+
+    0 10px 22px rgba(75,44,147,.30);
+
+}
+
+.Joining-Emmas-Relief-Society-Banner-Button-R91 i{
+
+    transition:.30s;
+
+}
+
+.Joining-Emmas-Relief-Society-Banner-Button-R91:hover i{
+
+    transform:translateX(5px);
+
+}
+
+/*==========================================================
+SMOOTH
+==========================================================*/
+
+.Joining-Emmas-Relief-Society-Banner-Wrapper-R91,
+.Joining-Emmas-Relief-Society-Banner-Image-R91,
+.Joining-Emmas-Relief-Society-Banner-Icon-R91,
+.Joining-Emmas-Relief-Society-Banner-Title-R91,
+.Joining-Emmas-Relief-Society-Banner-Line-R91,
+.Joining-Emmas-Relief-Society-Banner-Feature-R91,
+.Joining-Emmas-Relief-Society-Banner-Button-R91{
+
+    transition:all .35s ease;
+
+}
+
+/*==========================================================
+LAPTOP (1200px)
+==========================================================*/
+
+@media(max-width:1199px){
+
+    .Joining-Emmas-Relief-Society-Banner-Wrapper-R91{
+
+        height:300px;
+
+    }
+
+    .Joining-Emmas-Relief-Society-Banner-Content-R91{
+
+        height:300px;
+
+        padding-left:35px;
+
+        max-width:430px;
+
+    }
+
+    .Joining-Emmas-Relief-Society-Banner-Title-R91{
+
+        font-size:30px;
+
+    }
+
+    .Joining-Emmas-Relief-Society-Banner-Subtitle-R91{
+
+        font-size:16px;
+
+    }
+
+    .Joining-Emmas-Relief-Society-Banner-Description-R91{
+
+        font-size:13px;
+
+    }
+
+}
+
+/*==========================================================
+TABLET
+==========================================================*/
+
+@media(max-width:991px){
+
+    .Joining-Emmas-Relief-Society-Banner-Wrapper-R91{
+
+        height:270px;
+
+    }
+
+    .Joining-Emmas-Relief-Society-Banner-Content-R91{
+
+        height:270px;
+
+        padding:25px;
+
+        max-width:360px;
+
+    }
+
+    .Joining-Emmas-Relief-Society-Banner-Overlay-R91{
+
+        background:linear-gradient(
+
+            90deg,
+
+            rgba(255,255,255,.95) 0%,
+
+            rgba(255,255,255,.88) 45%,
+
+            rgba(255,255,255,.25) 75%,
+
+            transparent
+
+        );
+
+    }
+
+    .Joining-Emmas-Relief-Society-Banner-Title-R91{
+
+        font-size:26px;
+
+    }
+
+    .Joining-Emmas-Relief-Society-Banner-Subtitle-R91{
+
+        font-size:15px;
+
+    }
+
+    .Joining-Emmas-Relief-Society-Banner-Description-R91{
+
+        font-size:12px;
+
+        line-height:1.6;
+
+    }
+
+    .Joining-Emmas-Relief-Society-Banner-Features-R91{
+
+        gap:6px;
+
+    }
+
+}
+
+/*==========================================================
+MOBILE
+==========================================================*/
+
+@media(max-width:767px){
+
+    .Joining-Emmas-Relief-Society-Banner-Wrapper-R91{
+
+        height:auto;
+
+    }
+
+    .Joining-Emmas-Relief-Society-Banner-Image-R91{
+
+        position:relative;
+
+        width:100%;
+
+        height:auto;
+
+        object-fit:contain;
+
+        object-position:center;
+
+    }
+
+    .Joining-Emmas-Relief-Society-Banner-Overlay-R91{
+
+        position:relative;
+
+        background:#fff;
+
+    }
+
+    .Joining-Emmas-Relief-Society-Banner-Content-R91{
+
+        height:auto;
+
+        max-width:100%;
+
+        padding:24px 18px;
+
+        align-items:center;
+
+        text-align:center;
+
+    }
+
+    .Joining-Emmas-Relief-Society-Banner-Icon-R91{
+
+        width:50px;
+
+        height:50px;
+
+        margin-bottom:12px;
+
+    }
+
+    .Joining-Emmas-Relief-Society-Banner-Icon-R91 i{
+
+        font-size:22px;
+
+    }
+
+    .Joining-Emmas-Relief-Society-Banner-Title-R91{
+
+        font-size:24px;
+
+    }
+
+    .Joining-Emmas-Relief-Society-Banner-Subtitle-R91{
+
+        font-size:14px;
+
+    }
+
+    .Joining-Emmas-Relief-Society-Banner-Line-R91{
+
+        margin:12px auto;
+
+    }
+
+    .Joining-Emmas-Relief-Society-Banner-Description-R91{
+
+        font-size:13px;
+
+        line-height:1.7;
+
+    }
+
+    .Joining-Emmas-Relief-Society-Banner-Features-R91{
+
+        justify-content:center;
+
+        gap:8px;
+
+    }
+
+    .Joining-Emmas-Relief-Society-Banner-Feature-R91{
+
+        padding:7px 12px;
+
+        font-size:12px;
+
+    }
+
+    .Joining-Emmas-Relief-Society-Banner-Button-R91{
+
+        margin-top:18px;
+
+        width:100%;
+
+        justify-content:center;
+
+        height:42px;
+
+        font-size:13px;
+
+    }
+
+}
+
+/*==========================================================
+SMALL MOBILE
+==========================================================*/
+
+@media(max-width:575px){
+
+    .Joining-Emmas-Relief-Society-Banner-Content-R91{
+
+        padding:20px 14px;
+
+    }
+
+    .Joining-Emmas-Relief-Society-Banner-Section-R91{
+
+    padding:0px 0;
+    margin-top: 76px;
+
+}
+
+
+    .Joining-Emmas-Relief-Society-Banner-Title-R91{
+
+        font-size:20px;
+
+        line-height:1.3;
+
+    }
+
+    .Joining-Emmas-Relief-Society-Banner-Subtitle-R91{
+
+        font-size:13px;
+
+    }
+
+    .Joining-Emmas-Relief-Society-Banner-Description-R91{
+
+        font-size:12px;
+
+    }
+
+    .Joining-Emmas-Relief-Society-Banner-Button-R91{
+
+        height:40px;
+
+        font-size:12px;
+
+    }
+
+}
+
+/*==========================================================
+EXTRA SMALL
+==========================================================*/
+
+@media(max-width:380px){
+
+    .Joining-Emmas-Relief-Society-Banner-Title-R91{
+
+        font-size:18px;
+
+    }
+
+    .Joining-Emmas-Relief-Society-Banner-Description-R91{
+
+        font-size:11px;
+
+    }
+
+    .Joining-Emmas-Relief-Society-Banner-Feature-R91{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+}

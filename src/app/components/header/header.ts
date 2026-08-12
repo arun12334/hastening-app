@@ -26,7 +26,10 @@ export class Header {
       '/sharing-a-story-of-love',
 
       '/pray-for-someone',
-      '/join-a-justserve-activity'
+      '/join-a-justserve-activity',
+      '/sisters-in-zion',
+      '/joining-emmas-relief-society',
+
 
     ].some(route => url.startsWith(route));
 

@@ -1,172 +1,89 @@
-<div class="container-fluid py-2 bg-light min-vh-100">
+ 
 
-    <!-- ========================= -->
-    <!-- HEADER -->
-    <!-- ========================= -->
+<app-header></app-header>
 
-    <div class="bg-white rounded-4 shadow-sm px-3 py-2 mb-3">
+<!--==========================================================
+SISTERS IN ZION BANNER
+===========================================================-->
 
-        <div class="d-flex align-items-center justify-content-between flex-wrap">
+<section class="Sisters-In-Zion-Banner-Section">
 
-            <!-- Left -->
+    <div class="Sisters-In-Zion-Banner">
 
-            <div class="d-flex align-items-center">
+        <img
+            [src]="sistersInZionBannerImage"
+            class="Sisters-In-Zion-Banner-Image"
+            alt="Sisters in Zion">
 
-                <button class="btn btn-link text-decoration-none p-0 me-3">
+        <div class="Sisters-In-Zion-Banner-Overlay">
 
-                    <i class="bi bi-chevron-left fs-3 text-primary"></i>
+            <div class="container-fluid h-100">
 
-                </button>
+                <div class="row h-100 align-items-center">
 
-                <h2 class="fw-bold text-primary m-0">
-                    Sisters in Zion
-                </h2>
+                    <!--======================================
+                    LEFT SIDE
+                    =======================================-->
 
-            </div>
-
-            <!-- Right -->
-
-            <div class="d-none d-lg-flex">
-
-                <ul class="nav">
-
-                    <li class="nav-item text-center px-2">
-
-                        <a class="nav-link text-dark">
-
-                            <i class="bi bi-house-fill fs-4 d-block"></i>
-
-                            <small>Home</small>
-
-                        </a>
-
-                    </li>
-
-                    <li class="nav-item text-center px-2">
-
-                        <a class="nav-link text-dark">
-
-                            <i class="bi bi-heart-fill fs-4 d-block"></i>
-
-                            <small>Loving<br>Our Neighbor</small>
-
-                        </a>
-
-                    </li>
-
-                    <li class="nav-item text-center px-2">
-
-                        <a class="nav-link text-dark">
-
-                            <i class="bi bi-book-fill fs-4 d-block"></i>
-
-                            <small>Learn & Grow</small>
-
-                        </a>
-
-                    </li>
-
-                    <li class="nav-item text-center px-2">
-
-                        <a class="nav-link text-dark">
-
-                            <i class="bi bi-people-fill fs-4 d-block"></i>
-
-                            <small>Community</small>
-
-                        </a>
-
-                    </li>
-
-                    <li class="nav-item text-center px-2">
-
-                        <a class="nav-link text-dark">
-
-                            <i class="bi bi-shield-check fs-4 d-block"></i>
-
-                            <small>More</small>
-
-                        </a>
-
-                    </li>
-
-                </ul>
-
-            </div>
-
-            <!-- Mobile -->
-
-            <button
-                class="btn btn-outline-primary d-lg-none"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#menu">
-
-                <i class="bi bi-list fs-3"></i>
-
-            </button>
-
-        </div>
-
-    </div>
-
-
-
-
-
-    <!-- ========================= -->
-    <!-- HERO -->
-    <!-- ========================= -->
-
-    <div class="card border-0 rounded-4 overflow-hidden shadow-sm hero-card">
-
-        <div class="row g-0 align-items-center">
-
-            <!-- Left Image -->
-
-            <div class="col-lg-6">
-
-                <img
-                    src="assets/images/sisters-banner.jpg"
-                    class="img-fluid w-100 hero-img"
-                    alt="">
-
-            </div>
-
-            <!-- Right Content -->
-
-            <div class="col-lg-6">
-
-                <div class="p-4 p-xl-5 text-center text-lg-start">
-
-                    <div class="mb-3">
-
-                        <i class="bi bi-people-fill display-4 text-primary"></i>
+                    <div class="col-lg-6">
 
                     </div>
 
-                    <h1 class="display-5 fw-bold text-primary">
+                    <!--======================================
+                    RIGHT SIDE CONTENT
+                    =======================================-->
 
-                        Sisters in Zion
+                    <div class="col-lg-6">
 
-                    </h1>
+                        <div class="Sisters-In-Zion-Banner-Content">
 
-                    <h4 class="fw-normal mt-3">
+                            <!--==============================
+                            ICON
+                            ==============================-->
 
-                        Lift and support each other as we
-                        serve the Lord together.
+                            <div class="Sisters-In-Zion-Banner-Icon">
 
-                    </h4>
+                                <i [class]="sistersInZionBanner.icon"></i>
 
-                    <p class="mt-4 text-secondary">
+                            </div>
 
-                        <strong>Mosiah 18:9</strong>
+                            <!--==============================
+                            TITLE
+                            ==============================-->
 
-                        —
+                            <h1 class="Sisters-In-Zion-Banner-Title">
 
-                        "And all women who are believers
-                        in God are sisters in Zion."
+                                {{sistersInZionBanner.title}}
 
-                    </p>
+                            </h1>
+
+                            <!--==============================
+                            SUB TITLE
+                            ==============================-->
+
+                            <h4 class="Sisters-In-Zion-Banner-SubTitle">
+
+                                {{sistersInZionBanner.subTitle}}
+
+                            </h4>
+
+                            <!--==============================
+                            VERSE
+                            ==============================-->
+
+                            <p class="Sisters-In-Zion-Banner-Verse">
+
+                                {{sistersInZionBanner.verse}}
+
+                            </p>
+
+                       
+
+                      
+
+                        </div>
+
+                    </div>
 
                 </div>
 
@@ -176,527 +93,302 @@
 
     </div>
 
+</section>
 
+<!--==========================================================
+RELIEF SOCIETY SECTION X91
+===========================================================-->
 
+<section class="Sisters-In-Zion-Relief-Society-Section-X91">
 
-
-    <!-- ========================= -->
-    <!-- NEXT PART -->
-    <!-- ========================= -->
-
-    <div class="row mt-4">
-
-       <!-- ====================================================== -->
-<!-- SECTION : ACTION CARDS -->
-<!-- ====================================================== -->
-
-<div class="row g-4 mt-1">
-
-    <!-- ====================================== -->
-    <!-- LEFT BIG CARD -->
-    <!-- ====================================== -->
-
-    <div class="col-lg-4">
-
-        <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
-
-            <div class="card-body p-4">
-
-                <!-- Heading -->
-
-                <div class="d-flex align-items-center">
-
-                    <div
-                        class="rounded-circle bg-white border shadow-sm
-                               d-flex justify-content-center align-items-center"
-                        style="width:70px;height:70px;">
-
-                        <i class="bi bi-house-heart-fill fs-1 text-primary"></i>
-
-                    </div>
-
-                    <div class="ms-3">
-
-                        <h3 class="fw-bold text-primary mb-1">
-
-                            Join Emma's
-                            Relief Society
-
-                        </h3>
-
-                        <p class="text-muted mb-0">
-
-                            Connect with sisters and
-                            build faith, friendship
-                            and support.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <hr>
-
-                <!-- Details -->
-
-                <h4 class="fw-bold text-primary">
-
-                    Joining Emma's
-                    Relief Society
-
-                </h4>
-
-                <div class="small text-secondary mb-2">
-
-                    <i class="bi bi-chat-dots-fill me-2"></i>
-
-                    Text Requests Only
-
-                </div>
-
-                <h1 class="display-6 fw-bold text-primary">
-
-                    (+01) 248-445-2179
-
-                </h1>
-
-                <p class="text-muted">
-
-                    Simply text:
-
-                </p>
-
-                <ul class="small">
-
-                    <li>Your Name</li>
-
-                    <li>Phone Number</li>
-
-                    <li>Address / City</li>
-
-                </ul>
-
-                <p class="small text-muted">
-
-                    Receive information about
-                    the nearest Relief Society
-                    location.
-
-                </p>
-
-            </div>
-
-            <!-- Footer -->
-
-            <div class="card-footer bg-white border-0 p-3">
-
-                <button
-                    class="btn btn-primary w-100 rounded-pill fw-semibold">
-
-                    <i class="bi bi-chat-dots-fill me-2"></i>
-
-                    TEXT MY REQUEST TO JOIN
-
-                </button>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-
-
-
-    <!-- ====================================== -->
-    <!-- RIGHT SIDE -->
-    <!-- ====================================== -->
-
-    <div class="col-lg-8">
+    <div class="container-fluid">
 
         <div class="row g-4">
 
-            <!-- Need Request -->
+            <!--==================================================
+            LEFT MAIN CARD
+            ===================================================-->
 
-            <div class="col-md-6">
+            <div class="col-xl-4 col-lg-5">
 
-                <div class="card h-100 border-0 shadow-sm rounded-4">
+                <div class="Sisters-In-Zion-Relief-Main-Card-X91">
 
-                    <div class="card-body p-4">
+                    <!--==========================================
+                    TOP
+                    ===========================================-->
 
-                        <div class="d-flex">
+                    <div class="Sisters-In-Zion-Relief-Main-Top-X91" routerLink="/joining-emmas-relief-society">
 
-                            <div
-                                class="rounded-circle bg-light border
-                                       d-flex align-items-center justify-content-center"
-                                style="width:70px;height:70px;">
+                        <!-- ICON -->
 
-                                <i class="bi bi-heart-fill fs-1 text-primary"></i>
+                        <div class="Sisters-In-Zion-Relief-Main-Icon-X91">
 
-                            </div>
+                            <i [class]="reliefSocietyMainCardX91.icon"></i>
 
-                            <div class="ms-3 flex-grow-1">
+                        </div>
 
-                                <div
-                                    class="d-flex justify-content-between align-items-start">
+                        <!-- TITLE -->
 
-                                    <h3 class="fw-bold text-primary">
+                        <div class="Sisters-In-Zion-Relief-Main-Title-Area-X91">
 
-                                        Indicate a
-                                        Need Request
+                            <h3>
 
-                                    </h3>
+                                {{reliefSocietyMainCardX91.title}}
+
+                            </h3>
+
+                            <p>
+
+                                {{reliefSocietyMainCardX91.subTitle}}
+
+                            </p>
+
+                        </div>
+
+                        <!-- ARROW -->
+
+                        <button
+
+                            type="button"
+
+                            class="Sisters-In-Zion-Relief-Main-Arrow-X91"
+
+                            (click)="joinReliefSocietyX91()">
+
+                            <i class="bi bi-chevron-right"></i>
+
+                        </button>
+
+                    </div>
+
+                    <!--==========================================
+                    TEMPLE
+                    ===========================================-->
+
+                    <div class="Sisters-In-Zion-Relief-Temple-X91">
+
+                        <img
+
+                            [src]="reliefSocietyMainCardX91.templeImage"
+
+                            class="img-fluid"
+
+                            alt="Temple">
+
+                    </div>
+
+                    <!--==========================================
+                    BODY
+                    ===========================================-->
+
+                    <div class="Sisters-In-Zion-Relief-Main-Body-X91">
+
+                        <h4>
+
+                            {{reliefSocietyMainCardX91.heading}}
+
+                        </h4>
+
+                        <span class="Sisters-In-Zion-Relief-Request-Type-X91">
+
+                            <i class="bi bi-chat-dots-fill"></i>
+
+                            {{reliefSocietyMainCardX91.requestType}}
+
+                        </span>
+
+                        <div class="Sisters-In-Zion-Relief-Phone-X91">
+
+                            {{reliefSocietyMainCardX91.phone}}
+
+                        </div>
+
+                        <ul>
+
+                            @for(step of reliefSocietyMainCardX91.steps; track $index){
+
+                            <li>
+
+                                <i class="bi bi-check-circle-fill"></i>
+
+                                {{step}}
+
+                            </li>
+
+                            }
+
+                        </ul>
+
+                    </div>
+
+                    <!--==========================================
+                    BUTTON
+                    ===========================================-->
+
+                    <div class="Sisters-In-Zion-Relief-Main-Footer-X91">
+
+                        <button
+
+                            type="button"
+
+                            class="Sisters-In-Zion-Relief-Join-Btn-X91"
+
+                            (click)="textRequestJoinX91()">
+
+                            <i class="bi bi-chat-fill"></i>
+
+                            {{reliefSocietyMainCardX91.buttonText}}
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!--==================================================
+            RIGHT SIDE
+            ===================================================-->
+
+            <div class="col-xl-8 col-lg-7">
+
+                <div class="row g-4">
+
+                    @for(card of reliefSocietyCardsX91; track card.id){
+
+                    <div class="col-md-6">
+
+                        <div
+
+                            class="Sisters-In-Zion-Relief-Action-Card-X91"
+
+                            (click)="reliefSocietyCardClickX91(card)">
+
+                            <!--==================================
+                            TOP
+                            ===================================-->
+
+                            <div class="Sisters-In-Zion-Relief-Action-Header-X91">
+
+                                <div class="Sisters-In-Zion-Relief-Action-Icon-X91">
 
                                     <i
-                                        class="bi bi-chevron-right
-                                               fs-3 text-primary"></i>
+
+                                        [class]="card.icon"
+
+                                        [style.color]="card.iconColor">
+
+                                    </i>
 
                                 </div>
 
-                                <p class="text-muted mt-2">
+                                <div class="Sisters-In-Zion-Relief-Action-Content-X91">
 
-                                    Let the sisters know
-                                    how they can support
-                                    and uplift you.
+                                    <h4>
 
-                                </p>
+                                        {{card.title}}
 
-                            </div>
+                                    </h4>
 
-                        </div>
+                                    <p>
 
-                    </div>
+                                        {{card.description}}
 
-                </div>
+                                    </p>
 
-            </div>
+                                </div>
 
-
-
-
-
-            <!-- Offer Help -->
-
-            <div class="col-md-6">
-
-                <div class="card h-100 border-0 shadow-sm rounded-4">
-
-                    <div class="card-body p-4">
-
-                        <div class="d-flex">
-
-                            <div
-                                class="rounded-circle bg-light border
-                                       d-flex justify-content-center align-items-center"
-                                style="width:70px;height:70px;">
-
-                                <i class="bi bi-heart fs-1 text-primary"></i>
-
-                            </div>
-
-                            <div class="ms-3 flex-grow-1">
-
-                                <div
-                                    class="d-flex justify-content-between">
-
-                                    <h3 class="fw-bold text-primary">
-
-                                        Offer Help for
-                                        a Need Request
-
-                                    </h3>
+                                <div class="Sisters-In-Zion-Relief-Arrow-X91">
 
                                     <i
-                                        class="bi bi-chevron-right
-                                               fs-3 text-primary"></i>
+
+                                        [class]="card.arrow || 'bi bi-chevron-right'">
+
+                                    </i>
 
                                 </div>
 
-                                <p class="text-muted mt-2">
+                            </div>
 
-                                    Find needs that match
-                                    your heart and offer
-                                    help to bless a sister.
+                            <!--==================================
+                            BADGE
+                            ===================================-->
 
-                                </p>
+                            @if(card.badge){
+
+                            <div class="Sisters-In-Zion-Relief-Badge-X91">
+
+                                {{card.badge}}
 
                             </div>
+
+                            }
 
                         </div>
 
                     </div>
 
-                </div>
-
-            </div>
-
-
-              <!-- ================================= -->
-            <!-- Study Group -->
-            <!-- ================================= -->
-
-            <div class="col-md-6">
-
-                <div class="card h-100 border-0 shadow-sm rounded-4">
-
-                    <div class="card-body p-4">
-
-                        <div class="d-flex">
-
-                            <div
-                                class="rounded-circle border bg-light
-                                       d-flex justify-content-center align-items-center flex-shrink-0"
-                                style="width:70px;height:70px;">
-
-                                <i class="bi bi-book fs-1 text-primary"></i>
-
-                            </div>
-
-                            <div class="ms-3 flex-grow-1">
-
-                                <div class="d-flex justify-content-between">
-
-                                    <h3 class="fw-bold text-primary mb-2">
-
-                                        Join a Book of
-                                        Mormon Study Group
-
-                                    </h3>
-
-                                    <i class="bi bi-chevron-right fs-3 text-primary"></i>
-
-                                </div>
-
-                                <p class="text-muted mb-3">
-
-                                    Grow together in faith,
-                                    scripture study and
-                                    spiritual understanding.
-
-                                </p>
-
-                                <span class="badge rounded-pill bg-light text-secondary px-3 py-2">
-
-                                    Maximum 20 Sisters
-
-                                </span>
-
-                            </div>
-
-                        </div>
-
-                    </div>
+                    }
 
                 </div>
 
             </div>
-
-
-            <!--  -->
-
-              <!-- ================================= -->
-            <!-- Service Opportunity -->
-            <!-- ================================= -->
-
-            <div class="col-md-6">
-
-                <div class="card h-100 border-0 shadow-sm rounded-4">
-
-                    <div class="card-body p-4">
-
-                        <div class="d-flex">
-
-                            <div
-                                class="rounded-circle border bg-light
-                                       d-flex justify-content-center align-items-center flex-shrink-0"
-                                style="width:70px;height:70px;">
-
-                                <i class="bi bi-calendar-heart fs-1 text-primary"></i>
-
-                            </div>
-
-                            <div class="ms-3 flex-grow-1">
-
-                                <div class="d-flex justify-content-between">
-
-                                    <h3 class="fw-bold text-primary mb-2">
-
-                                        Post a Service
-                                        Opportunity
-
-                                    </h3>
-
-                                    <i class="bi bi-chevron-right fs-3 text-primary"></i>
-
-                                </div>
-
-                                <p class="text-muted mb-3">
-
-                                    Invite sisters to serve
-                                    together and receive
-                                    RSVPs for your event.
-
-                                </p>
-
-                                <span class="badge rounded-pill bg-light text-secondary px-3 py-2">
-
-                                    Minimum RSVPs Required
-
-                                </span>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-
 
         </div>
 
     </div>
 
-</div>
-
-    </div>
-
-</div>
+</section>
 
 
+<!--==========================================================
+BOTTOM VERSE X82
+===========================================================-->
 
+<section class="Sisters-In-Zion-Bottom-Verse-Section-X82">
 
-
-
-
-<!-- ========================= -->
-<!-- MOBILE MENU -->
-<!-- ========================= -->
-
-<div
-    class="offcanvas offcanvas-end"
-    tabindex="-1"
-    id="menu">
-
-    <div class="offcanvas-header">
-
-        <h5>Menu</h5>
-
-        <button
-            class="btn-close"
-            data-bs-dismiss="offcanvas">
-        </button>
-
-    </div>
-
-    <div class="offcanvas-body">
-
-        <div class="list-group">
-
-            <a class="list-group-item list-group-item-action">
-
-                <i class="bi bi-house me-2"></i>
-
-                Home
-
-            </a>
-
-            <a class="list-group-item list-group-item-action">
-
-                <i class="bi bi-heart me-2"></i>
-
-                Loving Our Neighbor
-
-            </a>
-
-            <a class="list-group-item list-group-item-action">
-
-                <i class="bi bi-book me-2"></i>
-
-                Learn & Grow
-
-            </a>
-
-            <a class="list-group-item list-group-item-action">
-
-                <i class="bi bi-people me-2"></i>
-
-                Community
-
-            </a>
-
-            <a class="list-group-item list-group-item-action">
-
-                <i class="bi bi-shield-check me-2"></i>
-
-                More
-
-            </a>
-
-        </div>
-
-    </div>
-
-</div>
-
-
- 
-
-
-
-
-<!-- ================================================= -->
-<!-- SCRIPTURE -->
-<!-- ================================================= -->
-
-<div class="card border-0 shadow-sm rounded-4 mt-4">
-
-    <div class="card-body py-4">
+    <div class="container-fluid">
 
         <div
-            class="d-flex
-                   flex-column
-                   flex-md-row
-                   align-items-center
-                   text-center
-                   text-md-start">
 
-            <div
-                class="rounded-circle
-                       border
-                       bg-light
-                       d-flex
-                       justify-content-center
-                       align-items-center
-                       mb-3 mb-md-0"
-                style="width:60px;height:60px;">
+            class="Sisters-In-Zion-Bottom-Verse-Card-X82"
 
-                <i class="bi bi-heart fs-3 text-primary"></i>
+            (click)="bottomVerseClickX82()">
+
+            <!--======================================
+            ICON
+            =======================================-->
+
+            <div class="Sisters-In-Zion-Bottom-Verse-Icon-X82">
+
+                <i
+
+                    [class]="sistersInZionBottomVerseX82.icon"
+
+                    [style.color]="sistersInZionBottomVerseX82.iconColor">
+
+                </i>
 
             </div>
 
-            <div class="ms-md-4">
+            <!--======================================
+            CONTENT
+            =======================================-->
 
-                <p class="fst-italic mb-1">
+            <div class="Sisters-In-Zion-Bottom-Verse-Content-X82">
 
-                    We are stronger together. As we lift,
-                    love and serve one another, we become
-                    more like our Savior.
+                <h4>
 
-                </p>
+                    {{sistersInZionBottomVerseX82.verse}}
 
-                <strong class="text-primary">
+                </h4>
 
-                    Mosiah 18:21
+                <span>
 
-                </strong>
+                    {{sistersInZionBottomVerseX82.scripture}}
+
+                </span>
 
             </div>
 
@@ -704,4 +396,4 @@
 
     </div>
 
-</div>
+</section>
