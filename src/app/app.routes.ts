@@ -11,7 +11,7 @@ import { NeighborhoodBbEvents } from './pages/neighborhood-bb-events/neighborhoo
 import { SharingAStoryOfLove } from './pages/sharing-a-story-of-love/sharing-a-story-of-love';
 import { JoinAJustserveActivity } from './pages/join-a-justserve-activity/join-a-justserve-activity';
 import { JoiningEmmasReliefSociety } from './pages/joining-emmas-relief-society/joining-emmas-relief-society';
-
+import { AuthenticationAndSecurityManagementSystem } from './pages/authentication-and-security-management-system/authentication-and-security-management-system';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -25,6 +25,7 @@ export const routes: Routes = [
     { path: 'sharing-a-story-of-love', component: SharingAStoryOfLove },
     { path: 'join-a-justserve-activity', component: JoinAJustserveActivity },
     { path: 'joining-emmas-relief-society', component: JoiningEmmasReliefSociety },
+    { path: 'authentication-and-security-management-system', component: AuthenticationAndSecurityManagementSystem },
  
   {
     path: 'pray-for-someone',

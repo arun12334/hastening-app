@@ -1,0 +1,351 @@
+<app-header></app-header>
+
+<!--==========================================================
+AUTHENTICATION SECURITY BANNER SECTION X91
+===========================================================-->
+
+<section class="Authentication-And-Security-Management-System-Banner-Section-X91">
+
+    <div class=" ">
+
+        <div class="Authentication-And-Security-Management-System-Banner-Wrapper-X91">
+
+            <!--==========================================
+            BACKGROUND IMAGE
+            ===========================================-->
+
+            <img
+
+                [src]="authenticationSecurityBannerImageX91"
+
+                class="Authentication-And-Security-Management-System-Banner-Image-X91"
+
+                alt="Authentication and Security">
+
+            <!--==========================================
+            OVERLAY
+            ===========================================-->
+
+            <div class="Authentication-And-Security-Management-System-Banner-Overlay-X91">
+
+                <div class="row h-100 align-items-center g-0">
+
+                    <!--==================================
+                    LEFT CONTENT
+                    ==================================-->
+
+                    <div class="col-lg-7 col-md-7">
+
+                        <div class="Authentication-And-Security-Management-System-Banner-Content-X91">
+
+                            <!-- ICON -->
+
+                            <div class="Authentication-And-Security-Management-System-Banner-Icon-X91">
+
+                                <i [class]="authenticationSecurityBannerX91.icon"></i>
+
+                            </div>
+
+                            <!-- TITLE -->
+
+                            <h1 class="Authentication-And-Security-Management-System-Banner-Title-X91">
+
+                                {{authenticationSecurityBannerX91.title}}
+
+                            </h1>
+
+                            <!-- SUB TITLE -->
+
+                            <h4 class="Authentication-And-Security-Management-System-Banner-Subtitle-X91">
+
+                                {{authenticationSecurityBannerX91.subTitle}}
+
+                            </h4>
+
+                            <!-- LINE -->
+
+                            <div class="Authentication-And-Security-Management-System-Banner-Line-X91"></div>
+
+                            <!-- DESCRIPTION -->
+
+                            <p class="Authentication-And-Security-Management-System-Banner-Description-X91">
+
+                                {{authenticationSecurityBannerX91.description}}
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!--==================================
+                    RIGHT BADGE
+                    ==================================-->
+
+                    <div class="col-lg-5 col-md-5">
+
+                        <div class="Authentication-And-Security-Management-System-Banner-Badge-Wrapper-X91">
+
+                            <div class="Authentication-And-Security-Management-System-Banner-Badge-X91">
+
+                                <div class="Authentication-And-Security-Management-System-Badge-Icon-X91">
+
+                                    <i [class]="authenticationSecurityBannerX91.badgeIcon"></i>
+
+                                </div>
+
+                                <div class="Authentication-And-Security-Management-System-Badge-Content-X91">
+
+                                    <h5>
+
+                                        {{authenticationSecurityBannerX91.badgeTitle}}
+
+                                    </h5>
+
+                                    <p>
+
+                                        {{authenticationSecurityBannerX91.badgeSubTitle}}
+
+                                    </p>
+
+                                    <span>
+
+                                        <i class="bi bi-check-circle-fill"></i>
+
+                                        {{authenticationSecurityBannerX91.badgeStatus}}
+
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================================
+SECURITY FEATURE CARDS SECTION X91
+===========================================================-->
+
+<section class="Authentication-And-Security-Management-System-Cards-Section-X91">
+
+    <div class="container-fluid">
+
+        <div class="row g-0">
+
+            @for(card of authenticationSecurityCardsX91; track card.id){
+
+            <div class="col-xl-3 col-lg-3 col-md-6">
+
+                <div
+
+                    class="Authentication-And-Security-Management-System-Card-X91"
+
+                    [style.background]="card.background"
+
+                    (click)="authenticationSecurityCardClickX91(card)">
+
+                    <!--==============================
+                    ICON
+                    ==============================-->
+
+                    <div class="Authentication-And-Security-Management-System-Card-Icon-X91">
+
+                        <i
+
+                            [class]="card.icon"
+
+                            [style.color]="card.iconColor">
+
+                        </i>
+
+                    </div>
+
+                    <!--==============================
+                    CONTENT
+                    ==============================-->
+
+                    <div class="Authentication-And-Security-Management-System-Card-Content-X91">
+
+                        <h3 class="Authentication-And-Security-Management-System-Card-Title-X91">
+
+                            {{card.title}}
+
+                        </h3>
+
+                        <p class="Authentication-And-Security-Management-System-Card-Description-X91">
+
+                            {{card.description}}
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            }
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================================
+AUTHENTICATION SECURITY FEATURE SECTION X92
+===========================================================-->
+
+<section class="Authentication-Security-Feature-Section-X92">
+
+    <div class="container-fluid">
+
+        <div class="row g-4">
+
+            @for(card of authenticationSecurityFeatureCardsX92; track card.id){
+
+            <!--==========================================
+            CARD
+            ===========================================-->
+
+            <div class="col-xl-3 col-lg-6 col-md-6">
+
+                <div
+
+                    class="Authentication-Security-Feature-Card-X92"
+
+                    (click)="authenticationSecurityFeatureCardClickX92(card)">
+
+                    <!--==================================
+                    TOP AREA
+                    ==================================-->
+
+                    <div class="Authentication-Security-Feature-Header-X92">
+
+                        <!-- ICON -->
+
+                        <div class="Authentication-Security-Feature-Icon-X92">
+
+                            <i
+
+                                [class]="card.icon"
+
+                                [style.color]="card.iconColor">
+
+                            </i>
+
+                        </div>
+
+                        <!-- TITLE -->
+
+                        <div class="Authentication-Security-Feature-Heading-X92">
+
+                            <h3 class="Authentication-Security-Feature-Title-X92">
+
+                                {{card.title}}
+
+                            </h3>
+
+                            <p class="Authentication-Security-Feature-Description-X92">
+
+                                {{card.description}}
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!--==================================
+                    CHECK LIST
+                    ==================================-->
+
+                    <div class="Authentication-Security-Feature-Checklist-X92">
+
+                        @for(item of card.items; track item.title){
+
+                        <div class="Authentication-Security-Feature-Checklist-Item-X92">
+
+                            <!-- CHECK ICON -->
+
+                            <div class="Authentication-Security-Feature-Checklist-Icon-X92">
+
+                                <i
+
+                                    [class]="item.icon"
+
+                                    [style.color]="card.iconColor">
+
+                                </i>
+
+                            </div>
+
+                            <!-- CONTENT -->
+
+                            <div class="Authentication-Security-Feature-Checklist-Content-X92">
+
+                                <h5>
+
+                                    {{item.title}}
+
+                                </h5>
+
+                                <p>
+
+                                    {{item.description}}
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        }
+
+                    </div>
+
+                    <!--==================================
+                    BUTTON
+                    ==================================-->
+
+                    <div class="Authentication-Security-Feature-Button-Wrapper-X92">
+
+                        <button
+
+                            type="button"
+
+                            class="Authentication-Security-Feature-Button-X92"
+
+                            [style.background]="card.buttonColor"
+
+                            (click)="authenticationSecurityFeatureButtonClickX92(card);$event.stopPropagation()">
+
+                            {{card.buttonText}}
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            }
+
+        </div>
+
+    </div>
+
+</section>
