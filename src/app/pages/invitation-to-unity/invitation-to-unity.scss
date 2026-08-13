@@ -1,892 +1,234 @@
-.unity-banner {
+/*==========================================================
+SECTION
+==========================================================*/
 
-    position: relative;
+.Unity-Scripture-Footer-Section-X98{
 
-    overflow: hidden;
-
-    border-radius: 18px;
-
-    height: 210px;
-
-    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+    padding:25px 0;
 
 }
 
-.banner-img{
+/*==========================================================
+CONTAINER
+==========================================================*/
 
-    width:100%;
+.Unity-Scripture-Footer-Container-X98{
 
-    height:100%;
-
-    object-fit:cover;
-
-    display:block;
-
-}
-
-.banner-overlay{
-
-    position:absolute;
-
-    inset:0;
-
-    background:linear-gradient(
-        90deg,
-        rgba(255,255,255,.92) 0%,
-        rgba(255,255,255,.75) 45%,
-        rgba(255,255,255,.15) 100%
-    );
-
-}
-
-.banner-content{
-
-    position:absolute;
-
-    inset:0;
-
-    display:flex;
-
-    align-items:center;
-
-    padding:0 50px;
-
-    z-index:2;
-
-}
-
-.icon-box{
-
-    width:70px;
-
-    height:70px;
-
-    border-radius:50%;
-
-    background:#c58a11;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    color:#fff;
-
-    font-size:34px;
-
-    flex-shrink:0;
-
-}
-
-.banner-content h1{
-
-    margin:0;
-
-    font-size:48px;
-
-    font-weight:700;
-
-    color:#1d3978;
-
-}
-
-.banner-content h5{
-
-    margin:5px 0;
-
-    color:#3d4f78;
-
-    font-weight:600;
-
-}
-
-.banner-content h6{
-
-    margin:0;
-
-    color:#3056a1;
-
-    font-size:20px;
-
-    font-weight:600;
-
-}
-
-.banner-content p{
-
-    margin-top:8px;
-
-    font-style:italic;
-
-    color:#7b4b07;
-
-    font-weight:500;
-
-}
-
-@media(max-width:768px){
-
-    .unity-banner{
-
-        height:180px;
-
-    }
-
-    .banner-content{
-
-        padding:20px;
-
-    }
-
-    .icon-box{
-
-        width:55px;
-
-        height:55px;
-
-        font-size:26px;
-
-    }
-
-    .banner-content h1{
-
-        font-size:28px;
-
-    }
-
-    .banner-content h5{
-
-        font-size:15px;
-
-    }
-
-    .banner-content h6{
-
-        font-size:14px;
-
-    }
-
-    .banner-content p{
-
-        font-size:12px;
-
-    }
-
-}
-
-/*==========================================
-BOOK OF MORMON CARD
-==========================================*/
-
-.book-icon{
-
-    width:70px;
-
-    height:70px;
-
-    border-radius:20px;
-
-    background:#21448f;
-
-    color:#fff;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    font-size:32px;
-
-}
-
-.believers-image{
-
-    height:250px;
-
-    width:100%;
-
-    object-fit:cover;
-
-}
-
-.list-group-item{
-
-    font-size:15px;
-
-    background:transparent;
-
-}
-
-.alert-warning{
-
-    border:none;
-
-    background:#fff7dc;
-
-    color:#7b5b00;
-
-}
-
-/*==========================================
-Responsive
-==========================================*/
-
-@media(max-width:992px){
-
-.believers-image{
-
-height:220px;
-
-}
-
-}
-
-@media(max-width:768px){
-
-.believers-image{
-
-height:200px;
-
-}
-
-.book-icon{
-
-width:60px;
-
-height:60px;
-
-font-size:28px;
-
-}
-
-}
-
-@media(max-width:576px){
-
-.believers-image{
-
-height:180px;
-
-}
-
-.card-body{
-
-padding:18px;
-
-}
-
-.book-icon{
-
-width:55px;
-
-height:55px;
-
-font-size:24px;
-
-}
-
-}
-
-/*=========================================
-COVENANT CARD
-=========================================*/
-
-.covenant-icon{
-
-    width:70px;
-
-    height:70px;
-
-    border-radius:20px;
-
-    background:#d59a20;
-
-    color:#fff;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    font-size:30px;
-
-}
-
-.person-card{
-
-    background:#f8f9fb;
-
-    border-radius:16px;
-
-    padding:18px 10px;
-
-}
-
-.timeline{
-
-    position:relative;
-
-}
-
-.timeline-item{
-
-    display:flex;
-
-    align-items:flex-start;
-
-    gap:12px;
-
-    margin-bottom:16px;
-
-}
-
-.timeline-dot{
-
-    width:14px;
-
-    height:14px;
-
-    border-radius:50%;
-
-    background:#21448f;
-
-    margin-top:6px;
-
-    flex-shrink:0;
-
-}
-
-.scripture-box{
-
-    background:#eef4ff;
+    background:#082A63;
 
     border-radius:14px;
-
-    padding:14px;
-
-    color:#21448f;
-
-    font-weight:600;
-
-}
-
-.covenant-image{
-
-    width:100%;
-
-    height:240px;
-
-    object-fit:cover;
-
-}
-
-/*=========================================
-Responsive
-=========================================*/
-
-@media(max-width:992px){
-
-.covenant-image{
-
-height:220px;
-
-}
-
-}
-
-@media(max-width:768px){
-
-.person-card{
-
-padding:15px 8px;
-
-}
-
-.covenant-icon{
-
-width:60px;
-
-height:60px;
-
-font-size:26px;
-
-}
-
-.covenant-image{
-
-height:200px;
-
-}
-
-}
-
-@media(max-width:576px){
-
-.person-card h5{
-
-font-size:1rem;
-
-}
-
-.scripture-box{
-
-font-size:.9rem;
-
-}
-
-.covenant-image{
-
-height:180px;
-
-}
-
-}
-
-/*=========================================
-FULFILLMENT CARD
-=========================================*/
-
-.fulfillment-icon{
-
-    width:70px;
-    height:70px;
-
-    border-radius:20px;
-
-    background:#198754;
-
-    color:#fff;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    font-size:30px;
-
-}
-
-.church-box{
-
-    background:#f8f9fa;
-
-    border-radius:18px;
-
-    padding:16px;
-
-    height:100%;
-
-}
-
-.church-img{
-
-    width:100%;
-
-    height:170px;
-
-    object-fit:cover;
-
-    border-radius:14px;
-
-}
-
-.fulfillment-message{
-
-    background:#eef8ef;
-
-    border-left:5px solid #198754;
-
-    border-radius:12px;
-
-    padding:18px;
-
-    font-weight:600;
-
-    color:#198754;
-
-}
-
-/*=========================================
-Responsive
-=========================================*/
-
-@media(max-width:992px){
-
-.church-img{
-
-height:180px;
-
-}
-
-}
-
-@media(max-width:768px){
-
-.fulfillment-icon{
-
-width:60px;
-
-height:60px;
-
-font-size:26px;
-
-}
-
-.church-img{
-
-height:150px;
-
-}
-
-}
-
-@media(max-width:576px){
-
-.church-box{
-
-padding:12px;
-
-}
-
-.church-img{
-
-height:130px;
-
-}
-
-.fulfillment-message{
-
-font-size:.9rem;
-
-padding:14px;
-
-}
-
-}
-
-/*=========================================
-VISION CARD
-=========================================*/
-
-.vision-icon{
-
-    width:70px;
-
-    height:70px;
-
-    border-radius:20px;
-
-    background:#ffc107;
-
-    color:#fff;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    font-size:30px;
-
-}
-
-.vision-quote{
-
-    background:#fff9e8;
-
-    border-left:5px solid #ffc107;
-
-    border-radius:14px;
-
-    padding:18px;
-
-}
-
-.vision-item{
-
-    background:#f8f9fa;
-
-    border-radius:12px;
-
-    padding:12px 14px;
-
-    font-weight:500;
-
-    display:flex;
-
-    align-items:center;
-
-}
-
-.gallery-image{
-
-    width:100%;
-
-    height:120px;
-
-    object-fit:cover;
-
-    border-radius:12px;
-
-    transition:.3s;
-
-}
-
-.gallery-image:hover{
-
-    transform:scale(1.04);
-
-}
-
-/*=========================================
-Responsive
-=========================================*/
-
-@media(max-width:992px){
-
-.gallery-image{
-
-height:140px;
-
-}
-
-}
-
-@media(max-width:768px){
-
-.vision-icon{
-
-width:60px;
-
-height:60px;
-
-font-size:26px;
-
-}
-
-.gallery-image{
-
-height:120px;
-
-}
-
-}
-
-@media(max-width:576px){
-
-.vision-item{
-
-font-size:.9rem;
-
-padding:10px;
-
-}
-
-.gallery-image{
-
-height:90px;
-
-}
-
-.vision-quote{
-
-padding:14px;
-
-}
-
-}
-
-/*=========================================
-FOOTER
-=========================================*/
-
-.unity-footer{
-
-    background:#0f2d63;
-
-
-    color:#fff;
 
     overflow:hidden;
 
 }
 
-/*==============================*/
+/*==========================================================
+TOP
+==========================================================*/
 
-.footer-verse{
+.Unity-Scripture-Footer-Top-X98{
 
-    padding:12px 20px;
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:14px 20px;
 
     border-bottom:1px solid rgba(255,255,255,.12);
 
-    font-size:18px;
+}
 
-    color:#f3f3f3;
+/*==========================================================
+LOGO
+==========================================================*/
+
+.Unity-Scripture-Footer-Logo-X98 img{
+
+    height:30px;
 
 }
 
-.footer-verse em{
+/*==========================================================
+VERSE
+==========================================================*/
+
+.Unity-Scripture-Footer-Verse-X98{
+
+    color:#FFF7D8;
+
+    font-size:18px;
+
+    font-weight:600;
 
     font-style:italic;
 
 }
 
-.footer-verse strong{
+/*==========================================================
+REFERENCE
+==========================================================*/
 
-    color:#d8a323;
+.Unity-Scripture-Footer-Reference-X98{
+
+    color:#E5B74A;
+
+    font-size:18px;
+
+    font-weight:700;
 
 }
 
-/*==============================*/
+/*==========================================================
+BOTTOM
+==========================================================*/
 
-.footer-bottom{
+.Unity-Scripture-Footer-Bottom-X98{
 
     display:flex;
 
-    align-items:center;
-
-    gap:20px;
-
-    padding:10px 20px;
-
-}
-
-/*==============================*/
-
-.footer-logo{
-
-    flex-shrink:0;
-
-}
-
-.footer-logo img{
-
-    height:28px;
-
-}
-
-/*==============================*/
-
-.footer-links{
-
-    display:flex;
+    justify-content:center;
 
     flex-wrap:wrap;
 
-    align-items:center;
+    gap:14px;
 
-    color:#d8a323;
+    padding:12px 20px;
+
+}
+
+/*==========================================================
+LINK
+==========================================================*/
+
+.Unity-Scripture-Footer-Link-X98{
+
+    color:#E6B64D;
 
     font-size:15px;
 
-    font-weight:500;
+    font-weight:600;
+
+    position:relative;
 
 }
 
-.footer-links span{
+.Unity-Scripture-Footer-Link-X98:not(:last-child)::after{
 
-    white-space:nowrap;
+    content:"|";
 
-}
+    color:#C3922A;
 
-.divider{
-
-    margin:0 12px;
-
-    color:#9d7b1c;
+    margin-left:14px;
 
 }
 
-/*==============================
-1400
-==============================*/
 
-@media(min-width:1400px){
+.Unity-Scripture-Footer-Link-X98{
 
-.footer-verse{
+    cursor:pointer;
 
-font-size:20px;
+    transition:.3s;
 
 }
 
-}
+.Unity-Scripture-Footer-Link-X98:hover{
 
-/*==============================
-992
-==============================*/
-
-@media(max-width:992px){
-
-.footer-bottom{
-
-flex-direction:column;
-
-gap:10px;
-
-text-align:center;
+    color:#FFFFFF;
 
 }
 
-}
+.Unity-Scripture-Footer-Logo-X98 img{
 
-/*==============================
-768
-==============================*/
-
-@media(max-width:768px){
-
-.footer-verse{
-
-font-size:15px;
-
-padding:10px;
+    transition:.4s;
 
 }
 
-.footer-links{
+.Unity-Scripture-Footer-Logo-X98:hover img{
 
-justify-content:center;
-
-font-size:14px;
+    transform:scale(1.08);
 
 }
 
-.divider{
+@media(max-width:991px){
 
-margin:0 8px;
+    .Unity-Scripture-Footer-Top-X98{
 
-}
+        flex-direction:column;
 
-}
+        text-align:center;
 
-/*==============================
-576
-==============================*/
+        gap:10px;
 
-@media(max-width:576px){
+    }
 
-.footer-logo img{
+    .Unity-Scripture-Footer-Verse-X98{
 
-height:22px;
+        font-size:16px;
 
-}
-
-.footer-links{
-
-font-size:13px;
-
-line-height:2;
+    }
 
 }
 
-.footer-verse{
+@media(max-width:767px){
 
-font-size:13px;
+    .Unity-Scripture-Footer-Bottom-X98{
+
+        gap:10px;
+
+    }
+
+    .Unity-Scripture-Footer-Link-X98{
+
+        font-size:13px;
+
+    }
+
+    .Unity-Scripture-Footer-Reference-X98{
+
+        font-size:15px;
+
+    }
+
+    .Unity-Scripture-Footer-Verse-X98{
+
+        font-size:14px;
+
+        line-height:1.7;
+
+    }
 
 }
+
+@media(max-width:480px){
+
+    .Unity-Scripture-Footer-Container-X98{
+
+        border-radius:10px;
+
+    }
+
+    .Unity-Scripture-Footer-Top-X98{
+
+        padding:14px;
+
+    }
+
+    .Unity-Scripture-Footer-Bottom-X98{
+
+        padding:12px;
+
+        justify-content:flex-start;
+
+    }
+
+    .Unity-Scripture-Footer-Link-X98{
+
+        font-size:12px;
+
+    }
 
 }

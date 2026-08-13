@@ -1,342 +1,676 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { Header } from '../../components/header/header';
 
 @Component({
   selector: 'app-invitation-to-unity',
   standalone: true,
-  imports: [CommonModule, Header],
+  imports: [Header],
   templateUrl: './invitation-to-unity.html',
-  styleUrl: './invitation-to-unity.scss'
+  styleUrl: './invitation-to-unity.scss',
 })
 export class InvitationToUnity {
 
+/*==========================================================
+INVITATION TO UNITY BANNER IMAGE X94
+==========================================================*/
 
-  scripturess = [
+invitationToUnityBannerImageX94 =
+'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShJMXKIUWxtGwoISkBvV2FI9_18uXLrXzhf9oQ-Lc6kiA4oKI27_pUR31r&s=10';
 
-'2 Corinthians 13:11',
+/*==========================================================
+INVITATION TO UNITY BANNER DATA X94
+==========================================================*/
 
-'1 Peter 3:8',
+invitationToUnityBannerX94 = {
 
-'2 Nephi 1:21',
+  icon:'bi bi-people-fill',
 
-'Philippians 1:27',
+  title:'Invitation to Unity',
 
-'D&C 4:5–6',
+  subTitle:'Gathering hearts together in Christ.',
 
-'Mosiah 18:21',
+  description:'One Body. One Spirit. One Zion.',
 
-'Acts 4:32',
+  verse:'"That they all may be one..."',
 
-'Moses 7:18',
+  scripture:'John 17:21',
 
-'3 Nephi 18:10',
+  primaryButton:'Join Our Community',
 
-'John 17:20–23',
+  primaryButtonIcon:'bi bi-arrow-right-circle-fill'
 
-'D&C 100:16'
+};
+
+/*==========================================================
+SMALL INFO TAGS X94
+==========================================================*/
+
+invitationUnityTagsX94 = [
+
+  {
+
+    id:1,
+
+    title:'Faith',
+
+    icon:'bi bi-heart-fill'
+
+  },
+
+  {
+
+    id:2,
+
+    title:'Unity',
+
+    icon:'bi bi-people-fill'
+
+  },
+
+  {
+
+    id:3,
+
+    title:'Love',
+
+    icon:'bi bi-stars'
+
+  },
+
+  {
+
+    id:4,
+
+    title:'Service',
+
+    icon:'bi bi-hand-thumbs-up-fill'
+
+  }
 
 ];
 
-  //======================================================
-  // HERO
-  //======================================================
+/*==========================================================
+BUTTON CLICK X94
+==========================================================*/
 
-  hero = {
+joinInvitationCommunityX94(){
 
-    background: 'assets/images/unity-banner.jpg',
+  console.log('Join Community');
 
-    icon: 'bi-people-fill',
+}
 
-    title: 'Invitation to Unity',
+/*==========================================================
+TAG CLICK X94
+==========================================================*/
 
-    subtitle: 'Gathering hearts together in Christ.',
+selectInvitationUnityTagX94(tag:any){
 
-    description: 'One Body. One Spirit. One Zion.',
+  console.log(tag);
 
-    verse: '"That they all may be one..."',
+}
 
-    reference: 'John 17:21'
 
-  };
 
 
 
-  //======================================================
-  // LEFT CARD
-  //======================================================
 
-  believersCard = {
 
-    title: 'Book of Mormon Believers',
 
-    icon: 'bi-book',
 
-    description:
-      'We lovingly identify and invite all who believe in the Book of Mormon.',
+/*==========================================================
+BOOK OF MORMON UNITY CARDS X96
+==========================================================*/
 
-    churches: [
+bookOfMormonUnityCardsX96 = [
 
-      'The Stone Church',
+/*==========================================================
+CARD 1
+==========================================================*/
 
-      'The Church of Jesus Christ of Latter-day Saints',
+{
 
-      'Remnant Church',
+    id:1,
 
-      'Church of Christ (Temple Lot)',
+    type:'believers',
 
-      'Restoration Branches'
+    icon:'bi bi-book-fill',
 
-    ],
+    iconColor:'#C5962C',
 
-    footer:
-      'To come together as one people in a shared priesthood covenant.',
+    title:'Book of Mormon Believers',
 
-    image: 'assets/images/believers.jpg'
+    description:'We lovingly identify and invite all who believe in the Book of Mormon—including members of:',
 
-  };
+    verse:'To come together as one people in a shared priesthood covenant.',
 
+    scripture:'Mosiah 18:21',
 
+    image:'https://picsum.photos/600/420?random=901',
 
-  //======================================================
-  // COVENANT CARD
-  //======================================================
+    imageAlt:'Book of Mormon Believers',
 
-  covenant = {
+    buttonText:'Learn More',
 
-    title: 'Two Peoples, One Covenant',
+    buttonColor:'#123E7A',
 
-    icon: 'bi-book-half',
+    members:[
 
-    leftTitle: 'King Limhi',
+        {
 
-    leftSubtitle: 'Land of Nephi',
+            id:1,
 
-    rightTitle: 'Mosiah',
+            icon:'bi bi-dot',
 
-    rightSubtitle: 'Land of Zarahemla',
+            text:'The Stone Church'
 
-    points: [
+        },
 
-      'Both groups entered into covenant.',
+        {
 
-      'Both received baptism.',
+            id:2,
 
-      'Both became one people.',
+            icon:'bi bi-dot',
 
-      'The Lord blessed them together.'
+            text:'The Church of Jesus Christ of Latter-day Saints'
 
-    ],
+        },
 
-    image: 'assets/images/covenant.jpg',
+        {
 
-    scripture: 'Mosiah 21-25'
+            id:3,
 
-  };
+            icon:'bi bi-dot',
 
+            text:'Remnant Church'
 
+        },
 
-  //======================================================
-  // FULFILLMENT CARD
-  //======================================================
+        {
 
-  fulfillment = {
+            id:4,
 
-    title: 'A Fulfillment in Our Day',
+            icon:'bi bi-dot',
 
-    icon: 'bi-building',
+            text:'Church of Christ (Temple Lot)'
 
-    leftTitle: 'Community of Christ',
+        },
 
-    rightTitle: 'Church of Jesus Christ',
+        {
 
-    message:
-      'Both are walking toward Christ and seeking unity in Him.',
+            id:5,
 
-    image1: 'assets/images/baptism.jpg',
+            icon:'bi bi-dot',
 
-    image2: 'assets/images/temple.jpg'
+            text:'Restoration Branches throughout the world'
 
-  };
-
-
-
-  //======================================================
-  // COMMON VISION
-  //======================================================
-
-  vision = {
-
-    title: 'We Have a Common Vision',
-
-    icon: 'bi-star-fill',
-
-    quote:
-      '"Be one; and if ye are not one, ye are not mine."',
-
-    items: [
-
-      'Seek Jesus Christ',
-
-      'Build Zion',
-
-      'Love our Neighbor',
-
-      'Serve Together',
-
-      'Restore Unity',
-
-      'Prepare for Christ'
-
-    ],
-
-    gallery: [
-
-      'assets/images/gallery1.jpg',
-
-      'assets/images/gallery2.jpg',
-
-      'assets/images/gallery3.jpg'
+        }
 
     ]
 
-  };
+},
 
+/*==========================================================
+CARD 2
+==========================================================*/
 
+{
 
-  //======================================================
-  // LOWER GRID
-  //======================================================
+    id:2,
 
-  lowerCards = [
+    type:'covenant',
 
-    {
+    icon:'bi bi-book-half',
 
-      title:'Two Churches',
+    iconColor:'#C5962C',
 
-      icon:'bi-bank',
+    title:'Two Peoples, One Covenant – The Pattern in Mosiah',
 
-      text:'Both groups prepared for something greater.',
+    description:'The Book of Mormon provides a clear example of God working through two groups of believers.',
 
-      image:'assets/images/road.jpg'
+    image:'https://picsum.photos/600/420?random=902',
 
-    },
+    imageAlt:'Mosiah',
 
-    {
+    buttonText:'Read Mosiah',
 
-      title:'Call to Covenant Unity',
+    buttonColor:'#2C6B34',
 
-      icon:'bi-people',
+    leftBox:{
 
-      text:'United in Priesthood, Purpose and Christ.',
+        title:'King Limhi',
 
-      image:'assets/images/group.jpg'
+        subtitle:'and his people',
 
-    },
+        location:'in the Land of Nephi',
 
-    {
-
-      title:'Prophetic Promises',
-
-      icon:'bi-megaphone',
-
-      text:'The Gospel will be preached to every nation.',
-
-      image:'assets/images/prophet.jpg'
+        icon:'bi bi-people-fill'
 
     },
 
+    rightBox:{
+
+        title:'Mosiah',
+
+        subtitle:'and Alma',
+
+        location:'in the Land of Zarahemla',
+
+        icon:'bi bi-people-fill'
+
+    },
+
+    covenantPoints:[
+
+        {
+
+            id:1,
+
+            icon:'bi bi-check-circle-fill',
+
+            text:'Both groups entered into covenant with God.'
+
+        },
+
+        {
+
+            id:2,
+
+            icon:'bi bi-check-circle-fill',
+
+            text:'Both sought to follow Him faithfully.'
+
+        },
+
+        {
+
+            id:3,
+
+            icon:'bi bi-check-circle-fill',
+
+            text:'One group waited upon the Lord for baptism.'
+
+        },
+
+        {
+
+            id:4,
+
+            icon:'bi bi-check-circle-fill',
+
+            text:'In time God united them together.'
+
+        },
+
+        {
+
+            id:5,
+
+            icon:'bi bi-check-circle-fill',
+
+            text:'They became one people before the Lord.'
+
+        }
+
+    ],
+
+    scripture:'Mosiah 21–25'
+
+},
+
+/*==========================================================
+CARD 3
+==========================================================*/
+
+{
+
+    id:3,
+
+    type:'fulfillment',
+
+    icon:'bi bi-building',
+
+    iconColor:'#C5962C',
+
+    title:'A Fulfillment in Our Day',
+
+    description:'That same pattern exists today.',
+
+    buttonText:'Discover More',
+
+    buttonColor:'#C5962C',
+
+    topBox:{
+
+        icon:'bi bi-globe2',
+
+        title:'On one hand:',
+
+        text:'Stone Church, Community of Christ, Temple Lot traditions and Restoration Branches'
+
+    },
+
+    middleBox:{
+
+        icon:'bi bi-bank',
+
+        title:'On the other hand:',
+
+        text:'The Church of Jesus Christ of Latter-day Saints'
+
+    },
+
+    testimony:{
+
+        icon:'bi bi-shield-check',
+
+        title:'We testify:',
+
+        description:'The Church of Jesus Christ of Latter-day Saints holds the authority to invite all into the baptismal covenant. The Lord is preparing His people to become one.'
+
+    },
+
+    imageOne:'https://picsum.photos/400/280?random=903',
+
+    imageTwo:'https://picsum.photos/400/280?random=904'
+
+}
+
+];
+
+/*==========================================================
+CARD CLICK
+==========================================================*/
+
+bookOfMormonUnityCardClickX96(card:any){
+
+    console.log(card);
+
+}
+
+/*==========================================================
+BUTTON CLICK
+==========================================================*/
+
+bookOfMormonUnityButtonClickX96(card:any){
+
+    console.log(card.title);
+
+}
+
+
+
+
+
+
+
+/*==========================================================
+BOOK OF MORMON PATH CARDS DATA X97
+==========================================================*/
+
+bookOfMormonPathCardsX97 = [
+
+/*==========================================================
+CARD 1
+==========================================================*/
+
+{
+
+    id:1,
+
+    type:'churches',
+
+    icon:'bi bi-buildings-fill',
+
+    iconColor:'#1C5AA6',
+
+    title:'Two Churches – Both on the Path',
+
+    scripture:'Mosiah 21:31–35; 22:13–14; 25:14–18',
+
+    description:'Both groups in Mosiah were accepted of God. Both were preparing for something greater. So it is today.',
+
+    quote:'Unity is not the end—it is a historic beginning.',
+
+    image:'https://picsum.photos/600/400?random=9701',
+
+    buttonText:'Read More',
+
+    buttonColor:'#1C5AA6'
+
+},
+
+/*==========================================================
+CARD 2
+==========================================================*/
+
+{
+
+    id:2,
+
+    type:'unity',
+
+    icon:'bi bi-hand-index-thumb-fill',
+
+    iconColor:'#B88716',
+
+    title:'A Call to Covenant Unity',
+
+    subtitle:'Let us come together.',
+
+    image:'https://picsum.photos/600/400?random=9702',
+
+    buttonText:'Join Together',
+
+    buttonColor:'#B88716',
+
+    checklist:[
+
+        {
+
+            id:1,
+
+            icon:'bi bi-check-circle-fill',
+
+            text:'United in priesthood covenant'
+
+        },
+
+        {
+
+            id:2,
+
+            icon:'bi bi-check-circle-fill',
+
+            text:'United in purpose'
+
+        },
+
+        {
+
+            id:3,
+
+            icon:'bi bi-check-circle-fill',
+
+            text:'United in Christ'
+
+        }
+
+    ]
+
+},
+
+/*==========================================================
+CARD 3
+==========================================================*/
+
+{
+
+    id:3,
+
+    type:'prophecy',
+
+    icon:'bi bi-megaphone-fill',
+
+    iconColor:'#B88716',
+
+    title:'Prophetic Promises',
+
+    image:'https://picsum.photos/600/500?random=9703',
+
+    buttonText:'Study Prophecy',
+
+    buttonColor:'#1F4E96',
+
+    promises:[
+
+        {
+
+            id:1,
+
+            icon:'bi bi-dot',
+
+            text:'Surely the Lord God will do nothing, but He revealeth His secret unto His servants the prophets.'
+
+        },
+
+        {
+
+            id:2,
+
+            icon:'bi bi-dot',
+
+            text:'He will suddenly come to His temple.'
+
+        },
+
+        {
+
+            id:3,
+
+            icon:'bi bi-dot',
+
+            text:'Two witnesses will testify in Jerusalem.'
+
+        },
+
+        {
+
+            id:4,
+
+            icon:'bi bi-dot',
+
+            text:'The gospel will be preached to every nation, kindred, tongue, and people.'
+
+        }
+
+    ]
+
+}
+
+];
+
+/*==========================================================
+CARD CLICK
+==========================================================*/
+
+bookOfMormonPathCardClickX97(card:any){
+
+    console.log(card);
+
+}
+
+/*==========================================================
+BUTTON CLICK
+==========================================================*/
+
+bookOfMormonPathButtonClickX97(card:any){
+
+    console.log(card.title);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/*==========================================================
+UNITY FOOTER X98
+==========================================================*/
+
+unityFooterX98 = {
+
+  logo:'assets/images/footer/footer-logo.png',
+
+  verse:
+  'Behold, how good and how pleasant it is for brethren to dwell together in unity.',
+
+  reference:'Psalm 133:1',
+
+  scriptures:[
+
     {
+      id:1,
+      title:'2 Corinthians 13:11'
+    },
 
-      title:'The Work Before Us',
+    {
+      id:2,
+      title:'1 Peter 3:8'
+    },
 
-      icon:'bi-list-check',
+    {
+      id:3,
+      title:'2 Nephi 1:21'
+    },
 
-      text:'Prepare the Center Stake of Zion.',
+    {
+      id:4,
+      title:'Philippians 1:27'
+    },
 
-      image:'assets/images/zion.jpg'
+    {
+      id:5,
+      title:'D&C 45:6'
+    },
 
+    {
+      id:6,
+      title:'Mosiah 18:21'
+    },
+
+    {
+      id:7,
+      title:'Acts 4:32'
+    },
+
+    {
+      id:8,
+      title:'Moses 7:18'
+    },
+
+    {
+      id:9,
+      title:'3 Nephi 18:10'
+    },
+
+    {
+      id:10,
+      title:'John 17:20-23'
+    },
+
+    {
+      id:11,
+      title:'D&C 100:16'
     }
 
-  ];
+  ]
 
-
-
-  //======================================================
-  // MISSION CARD
-  //======================================================
-
-  mission = {
-
-    title:'A New Mission Together',
-
-    text:'Together we begin a new mission.',
-
-    image:'assets/images/mission.jpg'
-
-  };
-
-
-
-  //======================================================
-  // CLOSING
-  //======================================================
-
-  closing = {
-
-    title:'Closing Declaration',
-
-    subtitle:'Glory, Glory, Hallelujah',
-
-    image:'assets/images/closing.jpg'
-
-  };
-
-
-
-  //======================================================
-  // FOOTER VERSE
-  //======================================================
-
-  footer = {
-
-    verse:
-      '"Behold, how good and how pleasant it is for brethren to dwell together in unity."',
-
-    reference:'Psalm 133:1'
-
-  };
-
-
-
-  //======================================================
-  // SCRIPTURES
-  //======================================================
-
-  scriptures = [
-
-    '2 Corinthians 13:11',
-
-    '1 Peter 3:8',
-
-    '2 Nephi 1:21',
-
-    'Philippians 1:27',
-
-    'D&C 45:6',
-
-    'Mosiah 18:21',
-
-    'Acts 4:32',
-
-    'Moses 7:18',
-
-    '3 Nephi 18:10',
-
-    'John 17:20-23',
-
-    'D&C 100:16'
-
-  ];
+};
 
 }

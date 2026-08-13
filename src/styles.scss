@@ -15091,3 +15091,3311 @@ EXTRA SMALL
 
 }
 
+/*==========================================================
+INVITATION TO UNITY SECTION X94
+==========================================================*/
+
+.Invitation-To-Unity-Banner-Section-X94{
+
+    // padding:20px 0;
+
+    background:#F7F8FA;
+
+}
+
+/*==========================================================
+BANNER WRAPPER
+==========================================================*/
+
+.Invitation-To-Unity-Banner-Wrapper-X94{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:400px;
+
+    overflow:hidden;
+
+
+}
+
+/*==========================================================
+BACKGROUND IMAGE
+==========================================================*/
+
+.Invitation-To-Unity-Banner-Background-Image-X94{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    object-position:center;
+
+}
+
+/*==========================================================
+OVERLAY
+==========================================================*/
+
+.Invitation-To-Unity-Banner-Overlay-X94{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:25px 20px;
+
+}
+
+/*==========================================================
+CONTENT
+==========================================================*/
+
+.Invitation-To-Unity-Banner-Content-Wrapper-X94{
+
+    width:100%;
+
+    max-width:760px;
+
+    text-align:center;
+
+}
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.Invitation-To-Unity-Banner-Title-X94{
+
+    font-size:48px;
+
+    line-height:1.05;
+
+    margin-bottom:8px;
+
+}
+
+/*==========================================================
+SUB TITLE
+==========================================================*/
+
+.Invitation-To-Unity-Banner-Subtitle-X94{
+
+    margin-bottom:6px;
+
+}
+
+/*==========================================================
+DESCRIPTION
+==========================================================*/
+
+.Invitation-To-Unity-Banner-Description-X94{
+
+    margin-bottom:6px;
+
+}
+
+/*==========================================================
+VERSE
+==========================================================*/
+
+.Invitation-To-Unity-Banner-Verse-X94{
+
+    margin-bottom:4px;
+
+}
+
+/*==========================================================
+SCRIPTURE
+==========================================================*/
+
+.Invitation-To-Unity-Banner-Scripture-X94{
+
+    margin-bottom:14px;
+
+}
+
+/*==========================================================
+TAGS
+==========================================================*/
+
+.Invitation-To-Unity-Banner-Tags-Wrapper-X94{
+
+    margin-bottom:16px;
+
+}
+
+/*==========================================================
+BUTTON
+==========================================================*/
+
+.Invitation-To-Unity-Banner-Primary-Button-X94{
+
+    margin-top:0;
+
+}
+
+ 
+ 
+/*==========================================================
+ICON
+==========================================================*/
+
+.Invitation-To-Unity-Banner-Icon-Wrapper-X94{
+
+    margin-bottom:4px;
+
+}
+
+.Invitation-To-Unity-Banner-Icon-Wrapper-X94 i{
+
+    font-size:40px;
+
+    color:#C58A05;
+
+}
+
+ 
+/*==========================================================
+SUBTITLE
+==========================================================*/
+ 
+/*==========================================================
+DESCRIPTION
+==========================================================*/
+
+.Invitation-To-Unity-Banner-Description-X94{
+
+    margin:2px 0 4px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    color:#234985;
+
+}
+
+/*==========================================================
+VERSE
+==========================================================*/
+
+.Invitation-To-Unity-Banner-Verse-X94{
+
+    margin:0;
+
+    font-size:15px;
+
+    font-style:italic;
+
+    color:#355A93;
+
+}
+
+/*==========================================================
+SCRIPTURE
+==========================================================*/
+
+.Invitation-To-Unity-Banner-Scripture-X94{
+
+    margin-top:3px;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    color:#B77B00;
+
+}
+
+/*==========================================================
+TAGS
+==========================================================*/
+
+.Invitation-To-Unity-Banner-Tags-Wrapper-X94{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+    flex-wrap:wrap;
+
+    margin-top:10px;
+
+}
+
+.Invitation-To-Unity-Banner-Tag-Button-X94{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    padding:6px 14px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#F7F1E4;
+
+    color:#7A5D18;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+}
+
+.Invitation-To-Unity-Banner-Tag-Button-X94 i{
+
+    font-size:13px;
+
+}
+
+/*==========================================================
+BUTTON
+==========================================================*/
+
+.Invitation-To-Unity-Banner-Primary-Button-X94{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    margin-top:12px;
+
+    padding:10px 22px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#173B77;
+
+    color:#fff;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+}
+
+.Invitation-To-Unity-Banner-Primary-Button-X94 i{
+
+    font-size:15px;
+
+}
+
+/*==========================================================
+BANNER WRAPPER HOVER X94
+==========================================================*/
+
+.Invitation-To-Unity-Banner-Wrapper-X94{
+
+    transition:all .45s ease;
+
+    cursor:default;
+
+}
+
+.Invitation-To-Unity-Banner-Wrapper-X94:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.18);
+
+}
+
+/*==========================================================
+SHINE EFFECT
+==========================================================*/
+
+.Invitation-To-Unity-Banner-Wrapper-X94::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-140%;
+
+    width:35%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.45),
+
+        transparent
+
+    );
+
+    z-index:5;
+
+    pointer-events:none;
+
+    transition:1s;
+
+}
+
+.Invitation-To-Unity-Banner-Wrapper-X94:hover::before{
+
+    left:140%;
+
+}
+
+/*==========================================================
+BACKGROUND IMAGE
+==========================================================*/
+
+.Invitation-To-Unity-Banner-Background-Image-X94{
+
+    transition:transform 8s ease;
+
+}
+
+.Invitation-To-Unity-Banner-Wrapper-X94:hover
+.Invitation-To-Unity-Banner-Background-Image-X94{
+
+    transform:scale(1.04);
+
+}
+
+/*==========================================================
+OVERLAY
+==========================================================*/
+
+.Invitation-To-Unity-Banner-Overlay-X94{
+
+    transition:.35s;
+
+}
+
+.Invitation-To-Unity-Banner-Wrapper-X94:hover
+.Invitation-To-Unity-Banner-Overlay-X94{
+
+    background:linear-gradient(
+
+        90deg,
+
+        rgba(255,255,255,.10) 0%,
+
+        rgba(255,255,255,.20) 18%,
+
+        rgba(255,255,255,.60) 35%,
+
+        rgba(255,255,255,.90) 50%,
+
+        rgba(255,255,255,.90) 65%,
+
+        rgba(255,255,255,.35) 82%,
+
+        rgba(255,255,255,.08) 100%
+
+    );
+
+}
+
+/*==========================================================
+ICON
+==========================================================*/
+
+.Invitation-To-Unity-Banner-Icon-Wrapper-X94{
+
+    transition:all .35s ease;
+
+}
+
+.Invitation-To-Unity-Banner-Wrapper-X94:hover
+.Invitation-To-Unity-Banner-Icon-Wrapper-X94{
+
+    transform:translateY(-4px) scale(1.08);
+
+}
+
+.Invitation-To-Unity-Banner-Icon-Wrapper-X94 i{
+
+    transition:.35s;
+
+}
+
+.Invitation-To-Unity-Banner-Wrapper-X94:hover
+.Invitation-To-Unity-Banner-Icon-Wrapper-X94 i{
+
+    color:#E0A10B;
+
+    transform:rotate(-6deg);
+
+}
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.Invitation-To-Unity-Banner-Title-X94{
+
+    transition:.35s;
+
+}
+
+.Invitation-To-Unity-Banner-Wrapper-X94:hover
+.Invitation-To-Unity-Banner-Title-X94{
+
+    color:#0E4A92;
+
+}
+
+/*==========================================================
+SUBTITLE
+==========================================================*/
+
+.Invitation-To-Unity-Banner-Subtitle-X94{
+
+    transition:.35s;
+
+}
+
+.Invitation-To-Unity-Banner-Wrapper-X94:hover
+.Invitation-To-Unity-Banner-Subtitle-X94{
+
+    color:#315FA6;
+
+}
+
+/*==========================================================
+DESCRIPTION
+==========================================================*/
+
+.Invitation-To-Unity-Banner-Description-X94{
+
+    transition:.35s;
+
+}
+
+.Invitation-To-Unity-Banner-Wrapper-X94:hover
+.Invitation-To-Unity-Banner-Description-X94{
+
+    letter-spacing:.4px;
+
+}
+
+/*==========================================================
+VERSE
+==========================================================*/
+
+.Invitation-To-Unity-Banner-Verse-X94{
+
+    transition:.35s;
+
+}
+
+.Invitation-To-Unity-Banner-Wrapper-X94:hover
+.Invitation-To-Unity-Banner-Verse-X94{
+
+    color:#2D5EA7;
+
+}
+
+/*==========================================================
+SCRIPTURE
+==========================================================*/
+
+.Invitation-To-Unity-Banner-Scripture-X94{
+
+    transition:.35s;
+
+}
+
+.Invitation-To-Unity-Banner-Wrapper-X94:hover
+.Invitation-To-Unity-Banner-Scripture-X94{
+
+    color:#D08D08;
+
+}
+
+/*==========================================================
+TAG BUTTON
+==========================================================*/
+
+.Invitation-To-Unity-Banner-Tag-Button-X94{
+
+    transition:all .30s ease;
+
+}
+
+.Invitation-To-Unity-Banner-Tag-Button-X94:hover{
+
+    transform:translateY(-3px);
+
+    background:#173B77;
+
+    color:#FFFFFF;
+
+    box-shadow:0 10px 24px rgba(23,59,119,.30);
+
+}
+
+.Invitation-To-Unity-Banner-Tag-Button-X94:hover i{
+
+    color:#FFD86A;
+
+}
+
+/*==========================================================
+PRIMARY BUTTON
+==========================================================*/
+
+.Invitation-To-Unity-Banner-Primary-Button-X94{
+
+    transition:all .30s ease;
+
+}
+
+.Invitation-To-Unity-Banner-Primary-Button-X94:hover{
+
+    transform:translateY(-3px);
+
+    background:#0E4A92;
+
+    box-shadow:0 12px 30px rgba(23,59,119,.35);
+
+}
+
+.Invitation-To-Unity-Banner-Primary-Button-X94:hover i{
+
+    transform:translateX(5px);
+
+}
+
+.Invitation-To-Unity-Banner-Primary-Button-X94 i{
+
+    transition:.30s;
+
+}
+
+/*==========================================================
+SMOOTH TRANSITIONS
+==========================================================*/
+
+.Invitation-To-Unity-Banner-Background-Image-X94,
+.Invitation-To-Unity-Banner-Overlay-X94,
+.Invitation-To-Unity-Banner-Icon-Wrapper-X94,
+.Invitation-To-Unity-Banner-Icon-Wrapper-X94 i,
+.Invitation-To-Unity-Banner-Title-X94,
+.Invitation-To-Unity-Banner-Subtitle-X94,
+.Invitation-To-Unity-Banner-Description-X94,
+.Invitation-To-Unity-Banner-Verse-X94,
+.Invitation-To-Unity-Banner-Scripture-X94,
+.Invitation-To-Unity-Banner-Tag-Button-X94,
+.Invitation-To-Unity-Banner-Primary-Button-X94,
+.Invitation-To-Unity-Banner-Primary-Button-X94 i{
+
+    transition:all .35s ease;
+
+}
+/*==========================================================
+LARGE LAPTOP X94
+==========================================================*/
+
+@media(max-width:1400px){
+
+    .Invitation-To-Unity-Banner-Wrapper-X94{
+
+        height:190px;
+
+    }
+
+    .Invitation-To-Unity-Banner-Content-Wrapper-X94{
+
+        max-width:700px;
+
+    }
+
+    .Invitation-To-Unity-Banner-Title-X94{
+
+        font-size:48px;
+
+    }
+
+}
+
+/*==========================================================
+LAPTOP X94
+==========================================================*/
+
+@media(max-width:1199px){
+
+    .Invitation-To-Unity-Banner-Wrapper-X94{
+
+        height:210px;
+
+    }
+
+    .Invitation-To-Unity-Banner-Content-Wrapper-X94{
+
+        max-width:620px;
+
+        padding:12px 25px;
+
+    }
+
+    .Invitation-To-Unity-Banner-Title-X94{
+
+        font-size:42px;
+
+    }
+
+    .Invitation-To-Unity-Banner-Subtitle-X94{
+
+        font-size:18px;
+
+    }
+
+    .Invitation-To-Unity-Banner-Description-X94{
+
+        font-size:16px;
+
+    }
+
+}
+
+/*==========================================================
+TABLET X94
+==========================================================*/
+
+@media(max-width:991px){
+
+    .Invitation-To-Unity-Banner-Wrapper-X94{
+
+        height:260px;
+
+    }
+
+    .Invitation-To-Unity-Banner-Background-Image-X94{
+
+        object-position:center;
+
+    }
+
+    .Invitation-To-Unity-Banner-Overlay-X94{
+
+        background:linear-gradient(
+
+            rgba(255,255,255,.80),
+
+            rgba(255,255,255,.88)
+
+        );
+
+    }
+
+    .Invitation-To-Unity-Banner-Content-Wrapper-X94{
+
+        max-width:100%;
+
+        padding:25px;
+
+    }
+
+    .Invitation-To-Unity-Banner-Icon-Wrapper-X94 i{
+
+        font-size:34px;
+
+    }
+
+    .Invitation-To-Unity-Banner-Title-X94{
+
+        font-size:34px;
+
+    }
+
+    .Invitation-To-Unity-Banner-Subtitle-X94{
+
+        font-size:17px;
+
+    }
+
+    .Invitation-To-Unity-Banner-Description-X94{
+
+        font-size:15px;
+
+    }
+
+    .Invitation-To-Unity-Banner-Verse-X94{
+
+        font-size:14px;
+
+    }
+
+    .Invitation-To-Unity-Banner-Scripture-X94{
+
+        font-size:14px;
+
+    }
+
+}
+
+/*==========================================================
+MOBILE X94
+==========================================================*/
+
+@media(max-width:767px){
+
+    .Invitation-To-Unity-Banner-Section-X94{
+
+        padding:18px 0;
+
+    }
+
+    .Invitation-To-Unity-Banner-Wrapper-X94{
+
+        height:auto;
+
+        border-radius:16px;
+
+    }
+
+    .Invitation-To-Unity-Banner-Background-Image-X94{
+
+        position:relative;
+
+        width:100%;
+
+        height:auto;
+
+        object-fit:contain;
+
+        object-position:center;
+
+        display:block;
+
+        margin-top: 60px;
+
+    }
+
+    .Invitation-To-Unity-Banner-Overlay-X94{
+
+        position:relative;
+
+        background:#ffffff;
+
+    }
+
+    .Invitation-To-Unity-Banner-Content-Wrapper-X94{
+
+        padding:22px 18px;
+
+        max-width:100%;
+
+    }
+
+    .Invitation-To-Unity-Banner-Icon-Wrapper-X94{
+
+        margin-bottom:10px;
+
+    }
+
+    .Invitation-To-Unity-Banner-Icon-Wrapper-X94 i{
+
+        font-size:30px;
+
+    }
+
+    .Invitation-To-Unity-Banner-Title-X94{
+
+        font-size:28px;
+
+        line-height:1.2;
+
+    }
+
+    .Invitation-To-Unity-Banner-Subtitle-X94{
+
+        font-size:16px;
+
+        line-height:1.4;
+
+    }
+
+    .Invitation-To-Unity-Banner-Description-X94{
+
+        font-size:14px;
+
+        line-height:1.6;
+
+    }
+
+    .Invitation-To-Unity-Banner-Verse-X94{
+
+        font-size:13px;
+
+    }
+
+    .Invitation-To-Unity-Banner-Scripture-X94{
+
+        font-size:13px;
+
+    }
+
+    .Invitation-To-Unity-Banner-Tags-Wrapper-X94{
+
+        justify-content:center;
+
+        gap:8px;
+
+        margin-top:14px;
+
+    }
+
+    .Invitation-To-Unity-Banner-Tag-Button-X94{
+
+        padding:7px 12px;
+
+        font-size:11px;
+
+    }
+
+    .Invitation-To-Unity-Banner-Primary-Button-X94{
+
+        width:100%;
+
+        justify-content:center;
+
+        margin-top:18px;
+
+        padding:12px 18px;
+
+        font-size:14px;
+
+    }
+
+}
+
+/*==========================================================
+SMALL MOBILE X94
+==========================================================*/
+
+@media(max-width:575px){
+
+    .Invitation-To-Unity-Banner-Content-Wrapper-X94{
+
+        padding:18px 15px;
+
+    }
+
+    .Invitation-To-Unity-Banner-Icon-Wrapper-X94 i{
+
+        font-size:26px;
+
+    }
+
+    .Invitation-To-Unity-Banner-Title-X94{
+
+        font-size:22px;
+
+    }
+
+    .Invitation-To-Unity-Banner-Subtitle-X94{
+
+        font-size:14px;
+
+    }
+
+    .Invitation-To-Unity-Banner-Description-X94{
+
+        font-size:13px;
+
+    }
+
+    .Invitation-To-Unity-Banner-Verse-X94{
+
+        font-size:12px;
+
+    }
+
+    .Invitation-To-Unity-Banner-Scripture-X94{
+
+        font-size:12px;
+
+    }
+
+    .Invitation-To-Unity-Banner-Tag-Button-X94{
+
+        font-size:10px;
+
+        padding:6px 10px;
+
+    }
+
+    .Invitation-To-Unity-Banner-Primary-Button-X94{
+
+        height:42px;
+
+        font-size:13px;
+
+    }
+
+}
+
+/*==========================================================
+EXTRA SMALL DEVICES X94
+==========================================================*/
+
+@media(max-width:380px){
+
+    .Invitation-To-Unity-Banner-Content-Wrapper-X94{
+
+        padding:16px 12px;
+
+    }
+
+    .Invitation-To-Unity-Banner-Title-X94{
+
+        font-size:20px;
+
+    }
+
+    .Invitation-To-Unity-Banner-Subtitle-X94{
+
+        font-size:13px;
+
+    }
+
+    .Invitation-To-Unity-Banner-Description-X94{
+
+        font-size:12px;
+
+    }
+
+    .Invitation-To-Unity-Banner-Verse-X94{
+
+        font-size:11px;
+
+    }
+
+    .Invitation-To-Unity-Banner-Scripture-X94{
+
+        font-size:11px;
+
+    }
+
+    .Invitation-To-Unity-Banner-Primary-Button-X94{
+
+        height:40px;
+
+        font-size:12px;
+
+    }
+
+}
+
+/*==========================================================
+BOOK OF MORMON UNITY SECTION X96
+==========================================================*/
+
+.Book-Of-Mormon-Unity-Section-X96{
+
+    // padding:60px 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    background:#F6F7FB;
+
+}
+
+/*==========================================================
+CARD
+==========================================================*/
+
+.Book-Of-Mormon-Unity-Card-X96{
+
+    display:flex;
+
+    flex-direction:column;
+
+    height:100%;
+
+    min-height:900px;
+
+    background:#FFFFFF;
+
+    border:1px solid #E7E7E7;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.06);
+
+}
+
+/*==========================================================
+HEADER
+==========================================================*/
+
+.Book-Of-Mormon-Unity-Header-X96{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:16px;
+
+    padding:22px;
+
+    background:#FCFBF8;
+
+    border-bottom:1px solid #ECECEC;
+
+}
+
+/*==========================================================
+ICON
+==========================================================*/
+
+.Book-Of-Mormon-Unity-Icon-X96{
+
+    width:62px;
+
+    height:62px;
+
+    flex-shrink:0;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#FFF7E5;
+
+    border:2px solid #E7C36D;
+
+}
+
+.Book-Of-Mormon-Unity-Icon-X96 i{
+
+    font-size:30px;
+
+}
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.Book-Of-Mormon-Unity-Header-Content-X96{
+
+    flex:1;
+
+}
+
+.Book-Of-Mormon-Unity-Title-X96{
+
+    margin:0;
+
+    color:#163C79;
+
+    font-size:30px;
+
+    font-weight:700;
+
+    line-height:1.25;
+
+}
+
+.Book-Of-Mormon-Unity-Description-X96{
+
+    margin-top:8px;
+
+    color:#555;
+
+    font-size:14px;
+
+    line-height:1.7;
+
+}
+
+/*==========================================================
+BODY
+==========================================================*/
+
+.Book-Of-Mormon-Unity-Body-X96{
+
+    flex:1;
+
+    padding:22px;
+
+}
+
+/*==========================================================
+LIST
+==========================================================*/
+
+.Book-Of-Mormon-Unity-List-Item-X96{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:10px;
+
+    margin-bottom:12px;
+
+    font-size:14px;
+
+    line-height:1.6;
+
+    color:#444;
+
+}
+
+.Book-Of-Mormon-Unity-List-Item-X96 i{
+
+    font-size:18px;
+
+    color:#2B6CB0;
+
+    margin-top:2px;
+
+}
+
+/*==========================================================
+VERSE
+==========================================================*/
+
+.Book-Of-Mormon-Unity-Verse-X96{
+
+    margin:20px 0 10px;
+
+    padding:14px;
+
+    border-left:4px solid #D6A43A;
+
+    background:#FFF9EA;
+
+    color:#224587;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    line-height:1.6;
+
+}
+
+/*==========================================================
+SCRIPTURE
+==========================================================*/
+
+.Book-Of-Mormon-Unity-Scripture-X96{
+
+    margin-bottom:18px;
+
+    color:#8B6416;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    text-align:center;
+
+}
+
+/*==========================================================
+IMAGE
+==========================================================*/
+
+.Book-Of-Mormon-Unity-Image-X96{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+    border-radius:14px;
+
+}
+
+/*==========================================================
+TWO INFO BOXES
+==========================================================*/
+
+.Book-Of-Mormon-Unity-Two-Box-Wrapper-X96{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:14px;
+
+    margin-bottom:20px;
+
+}
+
+.Book-Of-Mormon-Unity-Info-Box-X96{
+
+    padding:18px;
+
+    border-radius:14px;
+
+    text-align:center;
+
+    background:#F5F8FF;
+
+    border:1px solid #DDE8F9;
+
+}
+
+.Book-Of-Mormon-Unity-Info-Box-X96 h5{
+
+    margin:0;
+
+    color:#21478D;
+
+    font-size:20px;
+
+    font-weight:700;
+
+}
+
+.Book-Of-Mormon-Unity-Info-Box-X96 p{
+
+    margin:8px 0;
+
+    font-size:13px;
+
+    color:#666;
+
+}
+
+.Book-Of-Mormon-Unity-Info-Box-X96 strong{
+
+    display:block;
+
+    color:#2D6A35;
+
+    font-size:16px;
+
+    margin-bottom:10px;
+
+}
+
+.Book-Of-Mormon-Unity-Info-Box-X96 i{
+
+    font-size:28px;
+
+    color:#2D6A35;
+
+}
+
+/*==========================================================
+HIGHLIGHT BOX
+==========================================================*/
+
+.Book-Of-Mormon-Unity-Highlight-Box-X96{
+
+    display:flex;
+
+    gap:14px;
+
+    align-items:flex-start;
+
+    padding:16px;
+
+    margin-bottom:16px;
+
+    border-radius:14px;
+
+    background:#F5F8FF;
+
+    border:1px solid #DDE7F7;
+
+}
+
+.Book-Of-Mormon-Unity-Highlight-Box-X96 i{
+
+    font-size:32px;
+
+    color:#1C58A2;
+
+}
+
+.Book-Of-Mormon-Unity-Highlight-Box-X96 h5{
+
+    margin:0;
+
+    color:#214587;
+
+    font-size:18px;
+
+    font-weight:700;
+
+}
+
+.Book-Of-Mormon-Unity-Highlight-Box-X96 p{
+
+    margin-top:6px;
+
+    margin-bottom:0;
+
+    color:#555;
+
+    line-height:1.6;
+
+    font-size:13px;
+
+}
+
+/*==========================================================
+TESTIMONY
+==========================================================*/
+
+.Book-Of-Mormon-Unity-Testimony-X96{
+
+    margin:18px 0;
+
+    padding:20px;
+
+    border-radius:14px;
+
+    background:#FFF8E9;
+
+    border:1px solid #E9C46D;
+
+    text-align:left;
+
+}
+
+.Book-Of-Mormon-Unity-Testimony-X96 i{
+
+    font-size:30px;
+
+    color:#1C58A2;
+
+}
+
+.Book-Of-Mormon-Unity-Testimony-X96 h5{
+
+    margin:10px 0 6px;
+
+    color:#214587;
+
+    font-size:19px;
+
+}
+
+.Book-Of-Mormon-Unity-Testimony-X96 p{
+
+    margin:0;
+
+    color:#555;
+
+    line-height:1.7;
+
+    font-size:14px;
+
+}
+
+/*==========================================================
+IMAGE GRID
+==========================================================*/
+
+.Book-Of-Mormon-Unity-Image-Grid-X96{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:14px;
+
+}
+
+.Book-Of-Mormon-Unity-Image-Grid-X96 img{
+
+    width:100%;
+
+    height:150px;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+}
+
+/*==========================================================
+FOOTER
+==========================================================*/
+
+.Book-Of-Mormon-Unity-Footer-X96{
+
+    padding:20px;
+
+    border-top:1px solid #ECECEC;
+
+}
+
+/*==========================================================
+BUTTON
+==========================================================*/
+
+.Book-Of-Mormon-Unity-Button-X96{
+
+    width:100%;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:10px;
+
+    color:#FFF;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+}
+
+/*==========================================================
+CARD HOVER X96
+==========================================================*/
+
+.Book-Of-Mormon-Unity-Card-X96{
+
+    position:relative;
+
+    transition:all .35s ease;
+
+}
+
+.Book-Of-Mormon-Unity-Card-X96:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#D9B66C;
+
+    box-shadow:
+        0 25px 50px rgba(0,0,0,.18);
+
+}
+
+/*==========================================================
+SHINE EFFECT
+==========================================================*/
+
+.Book-Of-Mormon-Unity-Card-X96::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-150%;
+
+    width:45%;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.45),
+        transparent
+    );
+
+    transition:1s;
+
+    pointer-events:none;
+
+}
+
+.Book-Of-Mormon-Unity-Card-X96:hover::before{
+
+    left:150%;
+
+}
+
+/*==========================================================
+HEADER
+==========================================================*/
+
+.Book-Of-Mormon-Unity-Header-X96{
+
+    transition:.35s;
+
+}
+
+.Book-Of-Mormon-Unity-Card-X96:hover
+.Book-Of-Mormon-Unity-Header-X96{
+
+    background:#FFFDF7;
+
+}
+
+/*==========================================================
+ICON
+==========================================================*/
+
+.Book-Of-Mormon-Unity-Icon-X96{
+
+    transition:.35s;
+
+}
+
+.Book-Of-Mormon-Unity-Card-X96:hover
+.Book-Of-Mormon-Unity-Icon-X96{
+
+    transform:rotate(-10deg) scale(1.08);
+
+    box-shadow:0 12px 24px rgba(0,0,0,.15);
+
+}
+
+.Book-Of-Mormon-Unity-Icon-X96 i{
+
+    transition:.35s;
+
+}
+
+.Book-Of-Mormon-Unity-Card-X96:hover
+.Book-Of-Mormon-Unity-Icon-X96 i{
+
+    transform:scale(1.18);
+
+}
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.Book-Of-Mormon-Unity-Title-X96{
+
+    transition:.35s;
+
+}
+
+.Book-Of-Mormon-Unity-Card-X96:hover
+.Book-Of-Mormon-Unity-Title-X96{
+
+    color:#0C57AF;
+
+}
+
+/*==========================================================
+DESCRIPTION
+==========================================================*/
+
+.Book-Of-Mormon-Unity-Description-X96{
+
+    transition:.35s;
+
+}
+
+.Book-Of-Mormon-Unity-Card-X96:hover
+.Book-Of-Mormon-Unity-Description-X96{
+
+    color:#444;
+
+}
+
+/*==========================================================
+LIST ITEMS
+==========================================================*/
+
+.Book-Of-Mormon-Unity-List-Item-X96{
+
+    transition:.30s;
+
+}
+
+.Book-Of-Mormon-Unity-List-Item-X96:hover{
+
+    transform:translateX(8px);
+
+    color:#163C79;
+
+}
+
+.Book-Of-Mormon-Unity-List-Item-X96:hover i{
+
+    color:#1A63C8;
+
+}
+
+/*==========================================================
+INFO BOX
+==========================================================*/
+
+.Book-Of-Mormon-Unity-Info-Box-X96{
+
+    transition:.35s;
+
+}
+
+.Book-Of-Mormon-Unity-Info-Box-X96:hover{
+
+    transform:translateY(-5px);
+
+    background:#EEF5FF;
+
+    border-color:#BFD4F5;
+
+}
+
+/*==========================================================
+HIGHLIGHT BOX
+==========================================================*/
+
+.Book-Of-Mormon-Unity-Highlight-Box-X96{
+
+    transition:.35s;
+
+}
+
+.Book-Of-Mormon-Unity-Highlight-Box-X96:hover{
+
+    transform:translateX(6px);
+
+    background:#F4F8FF;
+
+    border-color:#C6D8F8;
+
+}
+
+/*==========================================================
+TESTIMONY
+==========================================================*/
+
+.Book-Of-Mormon-Unity-Testimony-X96{
+
+    transition:.35s;
+
+}
+
+.Book-Of-Mormon-Unity-Testimony-X96:hover{
+
+    background:#FFF4D8;
+
+    border-color:#D6A640;
+
+}
+
+/*==========================================================
+VERSE
+==========================================================*/
+
+.Book-Of-Mormon-Unity-Verse-X96{
+
+    transition:.35s;
+
+}
+
+.Book-Of-Mormon-Unity-Verse-X96:hover{
+
+    border-left-color:#A7770A;
+
+    background:#FFF4DA;
+
+}
+
+/*==========================================================
+IMAGES
+==========================================================*/
+
+.Book-Of-Mormon-Unity-Image-X96,
+
+.Book-Of-Mormon-Unity-Image-Grid-X96 img{
+
+    transition:transform .6s ease;
+
+}
+
+.Book-Of-Mormon-Unity-Image-X96:hover,
+
+.Book-Of-Mormon-Unity-Image-Grid-X96 img:hover{
+
+    transform:scale(1.06);
+
+}
+
+/*==========================================================
+BUTTON
+==========================================================*/
+
+.Book-Of-Mormon-Unity-Button-X96{
+
+    transition:all .30s ease;
+
+}
+
+.Book-Of-Mormon-Unity-Button-X96:hover{
+
+    transform:translateY(-3px);
+
+    filter:brightness(1.08);
+
+    box-shadow:0 15px 28px rgba(0,0,0,.25);
+
+}
+
+.Book-Of-Mormon-Unity-Button-X96:active{
+
+    transform:scale(.98);
+
+}
+
+/*==========================================================
+SMOOTH TRANSITIONS
+==========================================================*/
+
+.Book-Of-Mormon-Unity-Card-X96,
+.Book-Of-Mormon-Unity-Header-X96,
+.Book-Of-Mormon-Unity-Icon-X96,
+.Book-Of-Mormon-Unity-Icon-X96 i,
+.Book-Of-Mormon-Unity-Title-X96,
+.Book-Of-Mormon-Unity-Description-X96,
+.Book-Of-Mormon-Unity-List-Item-X96,
+.Book-Of-Mormon-Unity-Info-Box-X96,
+.Book-Of-Mormon-Unity-Highlight-Box-X96,
+.Book-Of-Mormon-Unity-Testimony-X96,
+.Book-Of-Mormon-Unity-Verse-X96,
+.Book-Of-Mormon-Unity-Image-X96,
+.Book-Of-Mormon-Unity-Image-Grid-X96 img,
+.Book-Of-Mormon-Unity-Button-X96{
+
+    transition:all .35s ease;
+
+}
+
+/*==========================================================
+LARGE LAPTOP
+==========================================================*/
+
+@media(max-width:1399px){
+
+    .Book-Of-Mormon-Unity-Card-X96{
+
+        min-height:860px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Title-X96{
+
+        font-size:27px;
+
+    }
+
+}
+
+/*==========================================================
+LAPTOP
+==========================================================*/
+
+@media(max-width:1199px){
+
+    .Book-Of-Mormon-Unity-Section-X96{
+
+        padding:50px 0;
+
+    }
+
+    .Book-Of-Mormon-Unity-Card-X96{
+
+        min-height:820px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Header-X96{
+
+        padding:20px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Body-X96{
+
+        padding:20px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Title-X96{
+
+        font-size:24px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Image-X96{
+
+        height:190px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Image-Grid-X96 img{
+
+        height:140px;
+
+    }
+
+}
+
+/*==========================================================
+TABLET
+==========================================================*/
+
+@media(max-width:991px){
+
+    .Book-Of-Mormon-Unity-Section-X96{
+
+        padding:40px 0;
+
+    }
+
+    .Book-Of-Mormon-Unity-Card-X96{
+
+        min-height:auto;
+
+    }
+
+    .Book-Of-Mormon-Unity-Header-X96{
+
+        padding:20px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Icon-X96{
+
+        width:56px;
+
+        height:56px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Icon-X96 i{
+
+        font-size:24px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Title-X96{
+
+        font-size:22px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Description-X96{
+
+        font-size:13px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Two-Box-Wrapper-X96{
+
+        grid-template-columns:1fr;
+
+        gap:12px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Image-Grid-X96{
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
+}
+
+/*==========================================================
+MOBILE
+==========================================================*/
+
+@media(max-width:767px){
+
+    .Book-Of-Mormon-Unity-Section-X96{
+
+        padding:30px 0;
+
+    }
+
+    .Book-Of-Mormon-Unity-Card-X96{
+
+        border-radius:16px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Header-X96{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        text-align:center;
+
+        gap:14px;
+
+        padding:18px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Icon-X96{
+
+        width:54px;
+
+        height:54px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Icon-X96 i{
+
+        font-size:22px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Title-X96{
+
+        font-size:21px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Description-X96{
+
+        font-size:14px;
+
+        line-height:1.6;
+
+    }
+
+    .Book-Of-Mormon-Unity-Body-X96{
+
+        padding:18px;
+
+    }
+
+    .Book-Of-Mormon-Unity-List-Item-X96{
+
+        font-size:13px;
+
+        gap:8px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Verse-X96{
+
+        font-size:14px;
+
+        padding:12px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Scripture-X96{
+
+        font-size:13px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Two-Box-Wrapper-X96{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .Book-Of-Mormon-Unity-Info-Box-X96{
+
+        padding:14px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Info-Box-X96 h5{
+
+        font-size:17px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Info-Box-X96 strong{
+
+        font-size:14px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Highlight-Box-X96{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        padding:14px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Highlight-Box-X96 i{
+
+        font-size:28px;
+
+        margin-left: 150px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Testimony-X96{
+
+        padding:16px;
+
+        text-align:center;
+
+    }
+
+    .Book-Of-Mormon-Unity-Image-X96{
+
+        height:220px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Image-Grid-X96{
+
+        grid-template-columns:1fr;
+
+        gap:12px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Image-Grid-X96 img{
+
+        height:190px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Footer-X96{
+
+        padding:18px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Button-X96{
+
+        width:100%;
+
+        height:46px;
+
+        font-size:14px;
+
+    }
+
+}
+
+/*==========================================================
+SMALL MOBILE
+==========================================================*/
+
+@media(max-width:575px){
+
+    .Book-Of-Mormon-Unity-Header-X96{
+
+        padding:16px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Body-X96{
+
+        padding:16px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Title-X96{
+
+        font-size:19px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Description-X96{
+
+        font-size:13px;
+
+    }
+
+    .Book-Of-Mormon-Unity-List-Item-X96{
+
+        font-size:12px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Verse-X96{
+
+        font-size:13px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Scripture-X96{
+
+        font-size:12px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Image-X96{
+
+        height:180px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Image-Grid-X96 img{
+
+        height:150px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Button-X96{
+
+        height:42px;
+
+        font-size:13px;
+
+    }
+
+}
+
+/*==========================================================
+EXTRA SMALL MOBILE
+==========================================================*/
+
+@media(max-width:380px){
+
+    .Book-Of-Mormon-Unity-Header-X96{
+
+        padding:14px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Title-X96{
+
+        font-size:17px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Description-X96{
+
+        font-size:12px;
+
+    }
+
+    .Book-Of-Mormon-Unity-List-Item-X96{
+
+        font-size:11px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Info-Box-X96 h5{
+
+        font-size:15px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Highlight-Box-X96 h5{
+
+        font-size:16px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Testimony-X96 h5{
+
+        font-size:16px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Testimony-X96 p{
+
+        font-size:12px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Image-X96{
+
+        height:150px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Image-Grid-X96 img{
+
+        height:130px;
+
+    }
+
+    .Book-Of-Mormon-Unity-Button-X96{
+
+        height:40px;
+
+        font-size:12px;
+
+    }
+
+}
+
+
+/*==========================================================
+BOOK OF MORMON PATH SECTION X97
+==========================================================*/
+
+.Book-Of-Mormon-Path-Section-X97{
+
+    // padding:60px 0;
+margin-bottom: 20px ;
+    background:#F7F8FC;
+
+}
+
+/*==========================================================
+CARD
+==========================================================*/
+
+.Book-Of-Mormon-Path-Card-X97{
+
+    display:flex;
+
+    flex-direction:column;
+
+    height:100%;
+
+    min-height:760px;
+
+    background:#FFFFFF;
+
+    border:1px solid #E7E7E7;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 6px 20px rgba(0,0,0,.06);
+
+}
+
+/*==========================================================
+HEADER
+==========================================================*/
+
+.Book-Of-Mormon-Path-Header-X97{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:16px;
+
+    padding:22px;
+
+    border-bottom:1px solid #ECECEC;
+
+    background:#FCFBF8;
+
+}
+
+/*==========================================================
+ICON
+==========================================================*/
+
+.Book-Of-Mormon-Path-Icon-X97{
+
+    width:62px;
+
+    height:62px;
+
+    flex-shrink:0;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#FFF8E8;
+
+    border:2px solid #E7C36A;
+
+}
+
+.Book-Of-Mormon-Path-Icon-X97 i{
+
+    font-size:30px;
+
+}
+
+/*==========================================================
+HEADER CONTENT
+==========================================================*/
+
+.Book-Of-Mormon-Path-Header-Content-X97{
+
+    flex:1;
+
+}
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.Book-Of-Mormon-Path-Title-X97{
+
+    margin:0;
+
+    color:#163F84;
+
+    font-size:29px;
+
+    font-weight:700;
+
+    line-height:1.25;
+
+}
+
+/*==========================================================
+SCRIPTURE
+==========================================================*/
+
+.Book-Of-Mormon-Path-Scripture-X97{
+
+    margin-top:8px;
+
+    color:#2E66B2;
+
+    font-size:14px;
+
+    font-weight:700;
+
+}
+
+/*==========================================================
+DESCRIPTION
+==========================================================*/
+
+.Book-Of-Mormon-Path-Description-X97{
+
+    margin-top:12px;
+
+    margin-bottom:0;
+
+    color:#555;
+
+    font-size:14px;
+
+    line-height:1.7;
+
+}
+
+/*==========================================================
+SUBTITLE
+==========================================================*/
+
+.Book-Of-Mormon-Path-Subtitle-X97{
+
+    margin-top:10px;
+
+    color:#B17B12;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+/*==========================================================
+BODY
+==========================================================*/
+
+.Book-Of-Mormon-Path-Body-X97{
+
+    flex:1;
+
+    padding:22px;
+
+}
+
+/*==========================================================
+CARD 1 IMAGE + QUOTE
+==========================================================*/
+
+.Book-Of-Mormon-Path-Image-And-Quote-X97{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:16px;
+
+    align-items:stretch;
+
+}
+
+/*==========================================================
+QUOTE
+==========================================================*/
+
+.Book-Of-Mormon-Path-Quote-X97{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:18px;
+
+    border-radius:14px;
+
+    background:#EEF4FD;
+
+    color:#21478A;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    line-height:1.5;
+
+}
+
+/*==========================================================
+CHECKLIST
+==========================================================*/
+
+.Book-Of-Mormon-Path-Checklist-Item-X97,
+
+.Book-Of-Mormon-Path-Promise-Item-X97{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:10px;
+
+    margin-bottom:15px;
+
+    color:#444;
+
+    font-size:15px;
+
+    line-height:1.6;
+
+}
+
+.Book-Of-Mormon-Path-Checklist-Item-X97 i,
+
+.Book-Of-Mormon-Path-Promise-Item-X97 i{
+
+    font-size:18px;
+
+    margin-top:2px;
+
+}
+
+/*==========================================================
+IMAGE
+==========================================================*/
+
+.Book-Of-Mormon-Path-Image-X97{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+    border-radius:14px;
+
+    margin-top:18px;
+
+}
+
+/*==========================================================
+FOOTER
+==========================================================*/
+
+.Book-Of-Mormon-Path-Footer-X97{
+
+    padding:20px;
+
+    border-top:1px solid #ECECEC;
+
+}
+
+/*==========================================================
+BUTTON
+==========================================================*/
+
+.Book-Of-Mormon-Path-Button-X97{
+
+    width:100%;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:10px;
+
+    color:#FFF;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+/*==========================================================
+COMMON
+==========================================================*/
+
+.Book-Of-Mormon-Path-Card-X97 *,
+.Book-Of-Mormon-Path-Button-X97{
+
+    box-sizing:border-box;
+
+}
+
+
+/*==========================================================
+CARD HOVER X97
+==========================================================*/
+
+.Book-Of-Mormon-Path-Card-X97{
+
+    position:relative;
+
+    transition:all .35s ease;
+
+}
+
+.Book-Of-Mormon-Path-Card-X97:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#D7B66A;
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.18);
+
+}
+
+/*==========================================================
+SHINE EFFECT
+==========================================================*/
+
+.Book-Of-Mormon-Path-Card-X97::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-140%;
+
+    width:40%;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.45),
+        transparent
+    );
+
+    transition:1s;
+
+    pointer-events:none;
+
+}
+
+.Book-Of-Mormon-Path-Card-X97:hover::before{
+
+    left:140%;
+
+}
+
+/*==========================================================
+HEADER
+==========================================================*/
+
+.Book-Of-Mormon-Path-Header-X97{
+
+    transition:.35s;
+
+}
+
+.Book-Of-Mormon-Path-Card-X97:hover
+.Book-Of-Mormon-Path-Header-X97{
+
+    background:#FFFDF7;
+
+}
+
+/*==========================================================
+ICON
+==========================================================*/
+
+.Book-Of-Mormon-Path-Icon-X97{
+
+    transition:.35s;
+
+}
+
+.Book-Of-Mormon-Path-Card-X97:hover
+.Book-Of-Mormon-Path-Icon-X97{
+
+    transform:rotate(-10deg) scale(1.08);
+
+    box-shadow:0 12px 25px rgba(0,0,0,.18);
+
+}
+
+.Book-Of-Mormon-Path-Icon-X97 i{
+
+    transition:.35s;
+
+}
+
+.Book-Of-Mormon-Path-Card-X97:hover
+.Book-Of-Mormon-Path-Icon-X97 i{
+
+    transform:scale(1.2);
+
+}
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.Book-Of-Mormon-Path-Title-X97{
+
+    transition:.35s;
+
+}
+
+.Book-Of-Mormon-Path-Card-X97:hover
+.Book-Of-Mormon-Path-Title-X97{
+
+    color:#0D58B0;
+
+}
+
+/*==========================================================
+SCRIPTURE
+==========================================================*/
+
+.Book-Of-Mormon-Path-Scripture-X97{
+
+    transition:.35s;
+
+}
+
+.Book-Of-Mormon-Path-Card-X97:hover
+.Book-Of-Mormon-Path-Scripture-X97{
+
+    color:#14498C;
+
+}
+
+/*==========================================================
+DESCRIPTION
+==========================================================*/
+
+.Book-Of-Mormon-Path-Description-X97{
+
+    transition:.35s;
+
+}
+
+.Book-Of-Mormon-Path-Card-X97:hover
+.Book-Of-Mormon-Path-Description-X97{
+
+    color:#333;
+
+}
+
+/*==========================================================
+QUOTE
+==========================================================*/
+
+.Book-Of-Mormon-Path-Quote-X97{
+
+    transition:.35s;
+
+}
+
+.Book-Of-Mormon-Path-Quote-X97:hover{
+
+    background:#E7F0FD;
+
+    transform:translateY(-4px);
+
+}
+
+/*==========================================================
+CHECKLIST
+==========================================================*/
+
+.Book-Of-Mormon-Path-Checklist-Item-X97{
+
+    transition:.30s;
+
+}
+
+.Book-Of-Mormon-Path-Checklist-Item-X97:hover{
+
+    transform:translateX(8px);
+
+    color:#1D4F94;
+
+}
+
+.Book-Of-Mormon-Path-Checklist-Item-X97:hover i{
+
+    transform:scale(1.2);
+
+}
+
+/*==========================================================
+PROMISE
+==========================================================*/
+
+.Book-Of-Mormon-Path-Promise-Item-X97{
+
+    transition:.30s;
+
+}
+
+.Book-Of-Mormon-Path-Promise-Item-X97:hover{
+
+    transform:translateX(8px);
+
+    color:#1D4F94;
+
+}
+
+.Book-Of-Mormon-Path-Promise-Item-X97:hover i{
+
+    transform:scale(1.2);
+
+}
+
+/*==========================================================
+IMAGE
+==========================================================*/
+
+.Book-Of-Mormon-Path-Image-X97{
+
+    transition:transform .6s ease;
+
+}
+
+.Book-Of-Mormon-Path-Image-X97:hover{
+
+    transform:scale(1.05);
+
+}
+
+/*==========================================================
+BUTTON
+==========================================================*/
+
+.Book-Of-Mormon-Path-Button-X97{
+
+    transition:all .35s ease;
+
+}
+
+.Book-Of-Mormon-Path-Button-X97:hover{
+
+    transform:translateY(-3px);
+
+    filter:brightness(1.08);
+
+    box-shadow:
+        0 12px 28px rgba(0,0,0,.25);
+
+}
+
+.Book-Of-Mormon-Path-Button-X97:active{
+
+    transform:scale(.98);
+
+}
+
+/*==========================================================
+SMOOTH TRANSITIONS
+==========================================================*/
+
+.Book-Of-Mormon-Path-Card-X97,
+.Book-Of-Mormon-Path-Header-X97,
+.Book-Of-Mormon-Path-Icon-X97,
+.Book-Of-Mormon-Path-Icon-X97 i,
+.Book-Of-Mormon-Path-Title-X97,
+.Book-Of-Mormon-Path-Scripture-X97,
+.Book-Of-Mormon-Path-Description-X97,
+.Book-Of-Mormon-Path-Quote-X97,
+.Book-Of-Mormon-Path-Checklist-Item-X97,
+.Book-Of-Mormon-Path-Promise-Item-X97,
+.Book-Of-Mormon-Path-Image-X97,
+.Book-Of-Mormon-Path-Button-X97{
+
+    transition:all .35s ease;
+
+}
+
+/*==========================================================
+LARGE LAPTOP
+==========================================================*/
+
+@media(max-width:1400px){
+
+    .Book-Of-Mormon-Path-Card-X97{
+
+        min-height:720px;
+
+    }
+
+    .Book-Of-Mormon-Path-Title-X97{
+
+        font-size:27px;
+
+    }
+
+}
+
+/*==========================================================
+LAPTOP
+==========================================================*/
+
+@media(max-width:1199px){
+
+    .Book-Of-Mormon-Path-Section-X97{
+
+        padding:50px 0;
+
+    }
+
+    .Book-Of-Mormon-Path-Card-X97{
+
+        min-height:700px;
+
+    }
+
+    .Book-Of-Mormon-Path-Header-X97{
+
+        padding:20px;
+
+    }
+
+    .Book-Of-Mormon-Path-Body-X97{
+
+        padding:20px;
+
+    }
+
+    .Book-Of-Mormon-Path-Title-X97{
+
+        font-size:24px;
+
+    }
+
+    .Book-Of-Mormon-Path-Image-X97{
+
+        height:200px;
+
+    }
+
+}
+
+/*==========================================================
+TABLET
+==========================================================*/
+
+@media(max-width:991px){
+
+    .Book-Of-Mormon-Path-Section-X97{
+
+        padding:40px 0;
+
+    }
+
+    .Book-Of-Mormon-Path-Card-X97{
+
+        min-height:auto;
+
+    }
+
+    .Book-Of-Mormon-Path-Header-X97{
+
+        padding:18px;
+
+    }
+
+    .Book-Of-Mormon-Path-Icon-X97{
+
+        width:56px;
+
+        height:56px;
+
+    }
+
+    .Book-Of-Mormon-Path-Icon-X97 i{
+
+        font-size:24px;
+
+    }
+
+    .Book-Of-Mormon-Path-Title-X97{
+
+        font-size:22px;
+
+    }
+
+    .Book-Of-Mormon-Path-Description-X97{
+
+        font-size:13px;
+
+    }
+
+    .Book-Of-Mormon-Path-Image-And-Quote-X97{
+
+        grid-template-columns:1fr;
+
+        gap:16px;
+
+    }
+
+    .Book-Of-Mormon-Path-Quote-X97{
+
+        font-size:18px;
+
+    }
+
+}
+
+/*==========================================================
+MOBILE
+==========================================================*/
+
+@media(max-width:767px){
+
+    .Book-Of-Mormon-Path-Section-X97{
+
+        padding:30px 0;
+
+    }
+
+    .Book-Of-Mormon-Path-Card-X97{
+
+        border-radius:16px;
+
+    }
+
+    .Book-Of-Mormon-Path-Header-X97{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        text-align:center;
+
+        gap:14px;
+
+        padding:18px;
+
+    }
+
+    .Book-Of-Mormon-Path-Icon-X97{
+
+        width:54px;
+
+        height:54px;
+
+    }
+
+    .Book-Of-Mormon-Path-Icon-X97 i{
+
+        font-size:22px;
+
+    }
+
+    .Book-Of-Mormon-Path-Title-X97{
+
+        font-size:20px;
+
+    }
+
+    .Book-Of-Mormon-Path-Scripture-X97{
+
+        font-size:13px;
+
+    }
+
+    .Book-Of-Mormon-Path-Description-X97{
+
+        font-size:13px;
+
+        line-height:1.6;
+
+    }
+
+    .Book-Of-Mormon-Path-Subtitle-X97{
+
+        font-size:14px;
+
+    }
+
+    .Book-Of-Mormon-Path-Body-X97{
+
+        padding:18px;
+
+    }
+
+    .Book-Of-Mormon-Path-Image-And-Quote-X97{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .Book-Of-Mormon-Path-Quote-X97{
+
+        font-size:16px;
+
+        padding:16px;
+
+    }
+
+    .Book-Of-Mormon-Path-Checklist-Item-X97,
+
+    .Book-Of-Mormon-Path-Promise-Item-X97{
+
+        font-size:13px;
+
+        gap:8px;
+
+        margin-bottom:12px;
+
+    }
+
+    .Book-Of-Mormon-Path-Checklist-Item-X97 i,
+
+    .Book-Of-Mormon-Path-Promise-Item-X97 i{
+
+        font-size:16px;
+
+    }
+
+    .Book-Of-Mormon-Path-Image-X97{
+
+        height:210px;
+
+        margin-top:16px;
+
+    }
+
+    .Book-Of-Mormon-Path-Footer-X97{
+
+        padding:18px;
+
+    }
+
+    .Book-Of-Mormon-Path-Button-X97{
+
+        width:100%;
+
+        height:46px;
+
+        font-size:14px;
+
+    }
+
+}
+
+/*==========================================================
+SMALL MOBILE
+==========================================================*/
+
+@media(max-width:575px){
+
+    .Book-Of-Mormon-Path-Section-X97{
+
+        padding:24px 0;
+
+    }
+
+    .Book-Of-Mormon-Path-Header-X97{
+
+        padding:16px;
+
+    }
+
+    .Book-Of-Mormon-Path-Body-X97{
+
+        padding:16px;
+
+    }
+
+    .Book-Of-Mormon-Path-Title-X97{
+
+        font-size:18px;
+
+    }
+
+    .Book-Of-Mormon-Path-Scripture-X97{
+
+        font-size:12px;
+
+    }
+
+    .Book-Of-Mormon-Path-Description-X97{
+
+        font-size:12px;
+
+    }
+
+    .Book-Of-Mormon-Path-Subtitle-X97{
+
+        font-size:13px;
+
+    }
+
+    .Book-Of-Mormon-Path-Quote-X97{
+
+        font-size:15px;
+
+        padding:14px;
+
+    }
+
+    .Book-Of-Mormon-Path-Checklist-Item-X97,
+
+    .Book-Of-Mormon-Path-Promise-Item-X97{
+
+        font-size:12px;
+
+    }
+
+    .Book-Of-Mormon-Path-Image-X97{
+
+        height:180px;
+
+    }
+
+    .Book-Of-Mormon-Path-Button-X97{
+
+        height:42px;
+
+        font-size:13px;
+
+    }
+
+}
+
+/*==========================================================
+EXTRA SMALL MOBILE
+==========================================================*/
+
+@media(max-width:380px){
+
+    .Book-Of-Mormon-Path-Header-X97{
+
+        padding:14px;
+
+    }
+
+    .Book-Of-Mormon-Path-Title-X97{
+
+        font-size:17px;
+
+    }
+
+    .Book-Of-Mormon-Path-Scripture-X97{
+
+        font-size:11px;
+
+    }
+
+    .Book-Of-Mormon-Path-Description-X97{
+
+        font-size:11px;
+
+    }
+
+    .Book-Of-Mormon-Path-Subtitle-X97{
+
+        font-size:12px;
+
+    }
+
+    .Book-Of-Mormon-Path-Quote-X97{
+
+        font-size:14px;
+
+        padding:12px;
+
+    }
+
+    .Book-Of-Mormon-Path-Checklist-Item-X97,
+
+    .Book-Of-Mormon-Path-Promise-Item-X97{
+
+        font-size:11px;
+
+    }
+
+    .Book-Of-Mormon-Path-Image-X97{
+
+        height:150px;
+
+    }
+
+    .Book-Of-Mormon-Path-Button-X97{
+
+        height:40px;
+
+        font-size:12px;
+
+    }
+
+}
