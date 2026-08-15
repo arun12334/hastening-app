@@ -299,7 +299,7 @@ bbHostCard = {
 
   subTitle:'Be the spark in your neighborhood.',
 
-  image:'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=900',
+  image:'assets/neighborhood/gatheringsnear.png',
 
   button:'Sign Up to Host'
 
@@ -462,8 +462,7 @@ fheGroupCard = {
 
   subTitle: 'Study together. Strengthen families. Build faith.',
 
-  image:
-    'https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=900',
+  image:'assets/neighborhood/join-book.png',
 
   button: 'Find or Create a Group'
 
@@ -562,7 +561,7 @@ shareStoryCard = {
   description:'Share your experience to inspire others.',
 
   image:
-    'https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=900',
+    'assets/neighborhood/share-your-story.png',
 
   button:'Share Your Story'
 
@@ -634,7 +633,7 @@ starterKitItems = [
 
     id:1,
 
-    icon:'bi bi-person-praying',
+   icon: 'bi bi-bookmark-heart',
 
     title:'Pray Together',
 

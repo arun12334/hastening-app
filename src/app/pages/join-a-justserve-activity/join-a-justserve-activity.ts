@@ -14,7 +14,7 @@ export class JoinAJustserveActivity {
   ==========================================================*/
 
   bannerImage =
-  'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=2200&q=80';
+  'assets/loving/join-a-justserve-activity-banner.png';
 
   /*==========================================================
   BANNER CONTENT
@@ -129,15 +129,15 @@ justServeProjects = [
     'Bake bread and share it with neighbors, families, and those in need.',
 
     heroImage:
-    'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&q=80',
+    'assets/loving/join-a-justserve-activity-baking-bread.jpg',
 
     gallery:[
 
-      'https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&w=500&q=80',
+      'assets/loving/join-a-justserve-activity-baking-bread-1.jpg',
 
-      'https://images.unsplash.com/photo-1523294587484-bae6cc870010?auto=format&fit=crop&w=500&q=80',
+      'assets/loving/join-a-justserve-activity-baking-bread-2.jpg', 
 
-      'https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=500&q=80'
+      'assets/loving/join-a-justserve-activity-baking-bread-3.jpg'
 
     ],
 
@@ -165,15 +165,15 @@ justServeProjects = [
     'Plant, grow, and share fresh vegetables with families and communities.',
 
     heroImage:
-    'https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=900&q=80',
+    'assets/loving/garden-main.jpg',
 
     gallery:[
 
-      'https://images.unsplash.com/photo-1461354464878-ad92f492a5a0?auto=format&fit=crop&w=500&q=80',
+      'assets/loving/garden-1.jpg',
 
-      'https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=500&q=80',
+      'assets/loving/garden-2.jpg',
 
-      'https://images.unsplash.com/photo-1471193945509-9ad0617afabf?auto=format&fit=crop&w=500&q=80'
+      'assets/loving/garden-3.jpg'
 
     ],
 
@@ -201,15 +201,15 @@ justServeProjects = [
     'Build coops, care for chickens, and share fresh eggs with families.',
 
     heroImage:
-    'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?auto=format&fit=crop&w=900&q=80',
+    'assets/loving/chicken-main.jpg',
 
     gallery:[
 
-      'https://images.unsplash.com/photo-1589927986089-35812388d1f4?auto=format&fit=crop&w=500&q=80',
+      'assets/loving/chicken-1.png',
 
-      'https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=500&q=80',
+      'assets/loving/chicken-2.jpg',
 
-      'https://images.unsplash.com/photo-1506976785307-8732e854ad03?auto=format&fit=crop&w=500&q=80'
+      'assets/loving/chicken-3.jpg'
 
     ],
 
@@ -237,11 +237,11 @@ justServeProjects = [
     'Learn, support, and grow together in faith and financial strength.',
 
     heroImage:
-    'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80',
+    'assets/loving/finance-main.jpg',
 
     gallery:[
 
-      'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=500&q=80',
+      'assets/loving/finance-1.jpg',  
 
       'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=500&q=80',
 

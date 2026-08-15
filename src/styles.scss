@@ -4499,7 +4499,7 @@ CONVERSATION IMAGE
 
 .Neighborhood-Bb-Conversation-Image{
 
-    height:210px;
+    height:300px;
 
     border-radius:14px;
 
@@ -4583,7 +4583,7 @@ STORY IMAGE
 
 .Neighborhood-Bb-Story-Image{
 
-    height:210px;
+    height:300px;
 
     border-radius:14px;
 
@@ -6075,7 +6075,7 @@ BANNER
 
     width:100%;
 
-    height:260px;
+    height:420px;
 
     background-size:cover;
 
@@ -6801,7 +6801,7 @@ FEATURED STORY CARD
 
     width:100%;
 
-    height:260px;
+    height:300px;
 
     object-fit:cover;
 
@@ -8605,7 +8605,7 @@ IMAGE
 
     width:100%;
 
-    height:250px;
+    height:350px;
 
     background-size:cover;
 
@@ -11872,7 +11872,8 @@ SISTERS IN ZION BANNER
 
 .Sisters-In-Zion-Banner-Section{
 
-    margin:25px 0;
+    // margin:25px 0;
+    margin-left: 5px;
 
 }
 
@@ -11922,7 +11923,7 @@ OVERLAY
 
     justify-content:flex-end;
 
-    padding-right:6%;
+    // padding-right:6%;
 
 }
 /*==========================================================
@@ -11944,6 +11945,8 @@ CONTENT
     text-align:center;
 
     padding:20px 35px;
+
+    margin-bottom: 150px;
 
 }
 
@@ -11993,7 +11996,7 @@ SUB TITLE
 
     margin-top:8px;
 
-    color:#4B4B4B;
+    color:#2D2A74;
 
     font-size:22px;
 
@@ -12011,7 +12014,7 @@ VERSE
 
     margin:18px 0 8px;
 
-    color:#75563A;
+    color:#2D2A74;
 
     font-size:17px;
 
@@ -13136,7 +13139,7 @@ SMALL MOBILE
 
     .Sisters-In-Zion-Banner-Content{
 
-        padding:20px 16px;
+        // padding:20px 16px;
 
     }
 

@@ -15,7 +15,7 @@ BANNER IMAGE R91
 ==========================================================*/
 
 joiningEmmasReliefSocietyBannerImageR91 =
-'https://t3.ftcdn.net/jpg/05/37/49/98/360_F_537499883_RRwdoqbgsRTwQXKuR7WgdTX3wXFYu83c.jpg';
+'assets/loving/joining-emmas-relief-society-banner.png';
 
 /*==========================================================
 BANNER CONTENT R91

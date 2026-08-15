@@ -15,7 +15,7 @@ export class SistersInZion {
   ==========================================================*/
 
   sistersInZionBannerImage =
-  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShJMXKIUWxtGwoISkBvV2FI9_18uXLrXzhf9oQ-Lc6kiA4oKI27_pUR31r&s=10';
+  'assets/loving/sisters-in-zion-banner.png';
 
   /*==========================================================
   BANNER CONTENT

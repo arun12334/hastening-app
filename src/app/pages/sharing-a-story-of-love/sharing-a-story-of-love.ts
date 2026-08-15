@@ -15,7 +15,7 @@ export class SharingAStoryOfLove {
   ==========================================================*/
 
   bannerImage =
-  'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80';
+  'assets/loving/sharing-a-story-of-love-banner.png';
 
   /*==========================================================
   BANNER CONTENT
@@ -113,7 +113,7 @@ myStories = [
 
     id:1,
 
-    image:'https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=600&q=80',
+    image:'assets/loving/sharing-a-story-of-love-search-stories.png',
 
     title:'A Simple Meal, A Grateful Heart',
 
@@ -221,7 +221,7 @@ FEATURED STORY
 
 featuredStory = {
 
-  image:'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80',
+  image:'assets/loving/sharing-a-story-of-love-search-stories.png',
 
   title:'A Simple Meal, A Grateful Heart',
 
