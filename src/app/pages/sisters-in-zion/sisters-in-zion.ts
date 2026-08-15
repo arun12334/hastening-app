@@ -66,7 +66,7 @@ reliefSocietyMainCardX91 = {
   icon: "bi bi-house-heart-fill",
 
   templeImage:
-  "https://images.unsplash.com/photo-1512632578888-169bbbc64f33?auto=format&fit=crop&w=700&q=80",
+  "assets/loving/relief-society.png",
 
   heading:
   "Joining Emma's Relief Society",

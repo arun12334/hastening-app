@@ -144,7 +144,7 @@ CARD 1
 
     scripture:'Mosiah 18:21',
 
-    image:'https://picsum.photos/600/420?random=901',
+    image:'assets/invitation/believers.png',
 
     imageAlt:'Book of Mormon Believers',
 
@@ -226,7 +226,7 @@ CARD 2
 
     description:'The Book of Mormon provides a clear example of God working through two groups of believers.',
 
-    image:'https://picsum.photos/600/420?random=902',
+       image:'assets/invitation/covenant.png',
 
     imageAlt:'Mosiah',
 
@@ -368,9 +368,13 @@ CARD 3
 
     },
 
-    imageOne:'https://picsum.photos/400/280?random=903',
+    imageOne:'assets/invitation/fulfillment-1.png',
 
-    imageTwo:'https://picsum.photos/400/280?random=904'
+    imageTwo:'assets/invitation/fulfillment-2.png',
+    imageThree:'assets/invitation/fulfillment-3.png',
+    imageFour:'assets/invitation/fulfillment-4.png',
+
+
 
 }
 
@@ -430,7 +434,7 @@ CARD 1
 
     quote:'Unity is not the end—it is a historic beginning.',
 
-    image:'https://picsum.photos/600/400?random=9701',
+    image:'assets/invitation/churches-1.png',
 
     buttonText:'Read More',
 
@@ -456,7 +460,7 @@ CARD 2
 
     subtitle:'Let us come together.',
 
-    image:'https://picsum.photos/600/400?random=9702',
+    image:'assets/invitation/unity-1.png',
 
     buttonText:'Join Together',
 
@@ -514,7 +518,7 @@ CARD 3
 
     title:'Prophetic Promises',
 
-    image:'https://picsum.photos/600/500?random=9703',
+    image:'assets/invitation/prophecy-1.png',
 
     buttonText:'Study Prophecy',
 
