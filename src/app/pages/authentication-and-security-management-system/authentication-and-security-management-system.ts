@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { Header } from '../../components/header/header';
-
+import { Footer } from '../../components/footer/footer';  
 @Component({
   selector: 'app-authentication-and-security-management-system',
-  imports: [Header],
+  imports: [Header, Footer],
   templateUrl: './authentication-and-security-management-system.html',
   styleUrl: './authentication-and-security-management-system.scss',
 })
@@ -17,7 +17,7 @@ BANNER IMAGE X91
 ==========================================================*/
 
 authenticationSecurityBannerImageX91 =
-'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShJMXKIUWxtGwoISkBvV2FI9_18uXLrXzhf9oQ-Lc6kiA4oKI27_pUR31r&s=10';
+'assets/authentication/authentication-and-security-banner.png';
 
 /*==========================================================
 BANNER CONTENT X91

@@ -14,7 +14,7 @@ export class NeighborhoodBbEvents {
   //==========================================================
 
  bannerImage =
-'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1920&q=80';
+'assets/neighborhood/banner.jpg';
  
 
 

@@ -1,1 +1,1714 @@
- 
+/*==========================================================
+REGISTRATION SECTION
+X977563-Y966776
+PART 3A-1
+==========================================================*/
+
+.Registration-Form-Section-X977563-Y966776{
+
+    width:100%;
+
+    padding:60px 0;
+
+    background:#F7F8FC;
+
+}
+
+/*==========================================================
+LEFT CARD
+==========================================================*/
+
+.Registration-Left-Card-X977563-Y966776{
+
+    width:100%;
+
+    background:#FFFFFF;
+
+    border-radius:22px;
+
+    padding:35px;
+
+    border:1px solid #E8ECF4;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+
+    margin-bottom:30px;
+
+}
+
+/*==========================================================
+CARD HEADER
+==========================================================*/
+
+.Registration-Card-Header-X977563-Y966776{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-bottom:30px;
+
+}
+
+/*==========================================================
+HEADER ICON
+==========================================================*/
+
+.Registration-Header-Icon-X977563-Y966776{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    background:#17346F;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-shrink:0;
+
+}
+
+.Registration-Header-Icon-X977563-Y966776 i{
+
+    font-size:32px;
+
+    color:#FFFFFF;
+
+}
+
+/*==========================================================
+HEADER TITLE
+==========================================================*/
+
+.Registration-Card-Header-X977563-Y966776 h3{
+
+    margin:0;
+
+    color:#17346F;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    font-family:"Libre Baskerville",serif;
+
+}
+
+.Registration-Card-Header-X977563-Y966776 span{
+
+    display:block;
+
+    width:85px;
+
+    height:4px;
+
+    background:#D8A122;
+
+    border-radius:30px;
+
+    margin-top:10px;
+
+}
+
+/*==========================================================
+LABEL
+==========================================================*/
+
+.Registration-Left-Card-X977563-Y966776 label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    color:#17346F;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+/*==========================================================
+INPUT
+==========================================================*/
+
+.Registration-Left-Card-X977563-Y966776 .form-control{
+
+    width:100%;
+
+    height:55px;
+
+    border-radius:12px;
+
+    border:1px solid #D8DEE8;
+
+    background:#FFFFFF;
+
+    padding:0 18px;
+
+    font-size:15px;
+
+    color:#333333;
+
+    box-shadow:none;
+
+    transition:.30s;
+
+}
+
+.Registration-Left-Card-X977563-Y966776 .form-control::placeholder{
+
+    color:#999999;
+
+}
+
+/*==========================================================
+SELECT
+==========================================================*/
+
+.Registration-Left-Card-X977563-Y966776 .form-select{
+
+    width:100%;
+
+    height:55px;
+
+    border-radius:12px;
+
+    border:1px solid #D8DEE8;
+
+    background:#FFFFFF;
+
+    padding:0 18px;
+
+    font-size:15px;
+
+    color:#333333;
+
+    box-shadow:none;
+
+    transition:.30s;
+
+}
+
+/*==========================================================
+INPUT FOCUS
+==========================================================*/
+
+.Registration-Left-Card-X977563-Y966776 .form-control:focus,
+
+.Registration-Left-Card-X977563-Y966776 .form-select:focus{
+
+    border-color:#17346F;
+
+    box-shadow:0 0 0 .18rem rgba(23,52,111,.12);
+
+}
+
+/*==========================================================
+ROW SPACING
+==========================================================*/
+
+.Registration-Left-Card-X977563-Y966776 .row{
+
+    --bs-gutter-x:22px;
+
+}
+
+.Registration-Left-Card-X977563-Y966776 .mb-4{
+
+    margin-bottom:24px !important;
+
+}
+
+/*==========================================================
+EMAIL FIELD
+==========================================================*/
+
+.Registration-Left-Card-X977563-Y966776 input[type="email"]{
+
+    text-transform:lowercase;
+
+}
+
+/*==========================================================
+NUMBER FIELD
+==========================================================*/
+
+.Registration-Left-Card-X977563-Y966776 input[type="number"]{
+
+    appearance:textfield;
+
+}
+
+.Registration-Left-Card-X977563-Y966776 input::-webkit-outer-spin-button,
+
+.Registration-Left-Card-X977563-Y966776 input::-webkit-inner-spin-button{
+
+    -webkit-appearance:none;
+
+    margin:0;
+
+}
+
+/*==========================================================
+TERMS CARD
+X977563-Y966776
+==========================================================*/
+
+.Registration-Terms-Card-X977563-Y966776{
+
+    width:100%;
+
+    background:#FFFFFF;
+
+    border-radius:22px;
+
+    padding:35px;
+
+    margin-bottom:30px;
+
+    border:1px solid #E8ECF4;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+
+}
+
+/*==========================================================
+TERM ITEM
+==========================================================*/
+
+.Registration-Term-Item-X977563-Y966776{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:14px;
+
+    padding:16px 0;
+
+    border-bottom:1px solid #EEF2F7;
+
+}
+
+.Registration-Term-Item-X977563-Y966776:last-child{
+
+    border-bottom:none;
+
+}
+
+/*==========================================================
+CHECKBOX
+==========================================================*/
+
+.Registration-Term-Item-X977563-Y966776 input[type="checkbox"]{
+
+    width:22px;
+
+    height:22px;
+
+    cursor:pointer;
+
+    accent-color:#17346F;
+
+    margin-top:3px;
+
+    flex-shrink:0;
+
+}
+
+/*==========================================================
+LABEL
+==========================================================*/
+
+.Registration-Term-Item-X977563-Y966776 label{
+
+    margin:0;
+
+    color:#444;
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    cursor:pointer;
+
+    font-weight:500;
+
+}
+
+/*==========================================================
+THANK YOU CARD
+==========================================================*/
+
+.Registration-ThankYou-Card-X977563-Y966776{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    background:#17346F;
+
+    color:#FFFFFF;
+
+    border-radius:22px;
+
+    padding:28px;
+
+    box-shadow:0 12px 35px rgba(23,52,111,.20);
+
+}
+
+/*==========================================================
+THANK YOU ICON
+==========================================================*/
+
+.Registration-ThankYou-Icon-X977563-Y966776{
+
+    width:72px;
+
+    height:72px;
+
+    border-radius:50%;
+
+    background:#D89D21;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-shrink:0;
+
+}
+
+.Registration-ThankYou-Icon-X977563-Y966776 i{
+
+    color:#FFFFFF;
+
+    font-size:32px;
+
+}
+
+/*==========================================================
+THANK YOU CONTENT
+==========================================================*/
+
+.Registration-ThankYou-Card-X977563-Y966776 h5{
+
+    margin:0 0 10px;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    font-family:"Libre Baskerville",serif;
+
+}
+
+.Registration-ThankYou-Card-X977563-Y966776 p{
+
+    margin:0;
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    color:#F3F5F8;
+
+}
+
+/*==========================================================
+COMMON CARD STYLES
+==========================================================*/
+
+.Registration-Left-Card-X977563-Y966776,
+
+.Registration-Terms-Card-X977563-Y966776,
+
+.Registration-ThankYou-Card-X977563-Y966776{
+
+    transition:.35s;
+
+}
+
+/*==========================================================
+COMMON TYPOGRAPHY
+==========================================================*/
+
+.Registration-Left-Card-X977563-Y966776 h3,
+
+.Registration-Terms-Card-X977563-Y966776 h3{
+
+    letter-spacing:.3px;
+
+}
+
+.Registration-Left-Card-X977563-Y966776 *,
+
+.Registration-Terms-Card-X977563-Y966776 *,
+
+.Registration-ThankYou-Card-X977563-Y966776 *{
+
+    box-sizing:border-box;
+
+}
+
+/*==========================================================
+RIGHT CARD
+X977563-Y966776
+PART 3B-1
+==========================================================*/
+
+.Registration-Right-Card-X977563-Y966776{
+
+    width:100%;
+
+    background:#FFFFFF;
+
+    border-radius:22px;
+
+    padding:35px;
+
+    border:1px solid #E8ECF4;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+
+    margin-bottom:30px;
+
+}
+
+/*==========================================================
+CARD DESCRIPTION
+==========================================================*/
+
+.Registration-Card-Text-X977563-Y966776{
+
+    margin:0 0 25px;
+
+    color:#666666;
+
+    font-size:15px;
+
+    line-height:1.8;
+
+}
+
+/*==========================================================
+OPTION CARD
+==========================================================*/
+
+.Registration-Option-Card-X977563-Y966776{
+
+    padding:22px;
+
+    margin-bottom:20px;
+
+    border-radius:18px;
+
+    border:1px solid #E7EBF3;
+
+    background:#FFFFFF;
+
+    transition:.35s;
+
+}
+
+/*==========================================================
+OPTION CHECKBOX
+==========================================================*/
+
+.Registration-Option-Card-X977563-Y966776 input[type="checkbox"]{
+
+    width:22px;
+
+    height:22px;
+
+    cursor:pointer;
+
+    accent-color:#17346F;
+
+}
+
+/*==========================================================
+OPTION ICON
+==========================================================*/
+
+.Registration-Option-Icon-X977563-Y966776{
+
+    width:62px;
+
+    height:62px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#FFFFFF;
+
+    flex-shrink:0;
+
+}
+
+.Registration-Option-Icon-X977563-Y966776 i{
+
+    font-size:28px;
+
+}
+
+/*==========================================================
+OPTION TITLE
+==========================================================*/
+
+.Registration-Option-Card-X977563-Y966776 h5{
+
+    margin:0 0 10px;
+
+    color:#17346F;
+
+    font-size:19px;
+
+    font-weight:700;
+
+    font-family:"Libre Baskerville",serif;
+
+}
+
+/*==========================================================
+OPTION DESCRIPTION
+==========================================================*/
+
+.Registration-Option-Card-X977563-Y966776 p{
+
+    margin:0;
+
+    color:#666666;
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+/*==========================================================
+DELIVERY
+==========================================================*/
+
+.Registration-Delivery-X977563-Y966776{
+
+    margin-top:18px;
+
+    padding:15px;
+
+    background:#F7F9FD;
+
+    border-radius:14px;
+
+}
+
+.Registration-Delivery-X977563-Y966776 label{
+
+    display:block;
+
+    margin-bottom:12px;
+
+    color:#17346F;
+
+    font-size:15px;
+
+    cursor:pointer;
+
+}
+
+.Registration-Delivery-X977563-Y966776 label:last-child{
+
+    margin-bottom:0;
+
+}
+
+.Registration-Delivery-X977563-Y966776 input[type="radio"]{
+
+    margin-right:8px;
+
+    accent-color:#17346F;
+
+}
+
+/*==========================================================
+CHILDREN SECTION
+==========================================================*/
+
+.Registration-Children-Section-X977563-Y966776{
+
+    margin-top:35px;
+
+    padding-top:30px;
+
+    border-top:1px solid #ECEFF5;
+
+}
+
+/*==========================================================
+CHILDREN TITLE
+==========================================================*/
+
+.Registration-Children-Section-X977563-Y966776 h5{
+
+    margin-bottom:20px;
+
+    color:#17346F;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    font-family:"Libre Baskerville",serif;
+
+}
+
+/*==========================================================
+ADD BUTTON
+==========================================================*/
+
+.Registration-Children-Section-X977563-Y966776 .btn-primary{
+
+    background:#17346F;
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:10px 18px;
+
+    font-weight:600;
+
+}
+
+.Registration-Children-Section-X977563-Y966776 .btn-primary i{
+
+    margin-right:8px;
+
+}
+
+/*==========================================================
+CHILD INPUTS
+==========================================================*/
+
+.Registration-Children-Section-X977563-Y966776 .form-control{
+
+    height:54px;
+
+    border-radius:12px;
+
+    border:1px solid #D8DEE8;
+
+    padding:0 16px;
+
+    box-shadow:none;
+
+}
+
+.Registration-Children-Section-X977563-Y966776 .form-control:focus{
+
+    border-color:#17346F;
+
+    box-shadow:0 0 0 .18rem rgba(23,52,111,.12);
+
+}
+
+/*==========================================================
+DELETE BUTTON
+==========================================================*/
+
+.Registration-Children-Section-X977563-Y966776 .btn-danger{
+
+    width:42px;
+
+    height:42px;
+
+    padding:0;
+
+    border-radius:10px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/*==========================================================
+ROW SPACING
+==========================================================*/
+
+.Registration-Children-Section-X977563-Y966776 .row{
+
+    --bs-gutter-x:16px;
+
+}
+
+/*==========================================================
+REGISTER BUTTON
+X977563-Y966776
+==========================================================*/
+
+.Registration-Submit-Button-X977563-Y966776{
+
+    width:100%;
+
+    height:60px;
+
+    margin-top:35px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:#17346F;
+
+    color:#FFFFFF;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    font-family:"Libre Baskerville",serif;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:0 12px 30px rgba(23,52,111,.20);
+
+}
+
+.Registration-Submit-Button-X977563-Y966776 i{
+
+    font-size:22px;
+
+}
+
+.Registration-Submit-Button-X977563-Y966776:hover{
+
+    background:#D89D21;
+
+}
+
+/*==========================================================
+FEATURED SCRIPTURE CARD
+==========================================================*/
+
+.Registration-Scripture-Card-X977563-Y966776{
+
+    width:100%;
+
+    background:#FFFFFF;
+
+    border-radius:22px;
+
+    padding:35px;
+
+    border:1px solid #E8ECF4;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+
+}
+
+/*==========================================================
+SCRIPTURE TITLE
+==========================================================*/
+
+.Registration-Scripture-Card-X977563-Y966776 h3{
+
+    margin-bottom:25px;
+
+    color:#17346F;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    text-align:center;
+
+    font-family:"Libre Baskerville",serif;
+
+}
+
+/*==========================================================
+SCRIPTURE IMAGE
+==========================================================*/
+
+.Registration-Scripture-Card-X977563-Y966776 img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    border:1px solid #ECECEC;
+
+}
+
+/*==========================================================
+BLOCKQUOTE
+==========================================================*/
+
+.Registration-Scripture-Card-X977563-Y966776 blockquote{
+
+    margin:0;
+
+    padding:18px;
+
+    background:#F7F9FC;
+
+    border-left:5px solid #D89D21;
+
+    border-radius:14px;
+
+    color:#17346F;
+
+    font-size:18px;
+
+    font-style:italic;
+
+    line-height:1.8;
+
+}
+
+/*==========================================================
+REFERENCE
+==========================================================*/
+
+.Registration-Scripture-Card-X977563-Y966776 h5{
+
+    margin-top:18px;
+
+    color:#D89D21;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    font-family:"Libre Baskerville",serif;
+
+}
+
+/*==========================================================
+COMMON RIGHT CARD
+==========================================================*/
+
+.Registration-Right-Card-X977563-Y966776,
+
+.Registration-Scripture-Card-X977563-Y966776{
+
+    transition:.35s;
+
+}
+
+/*==========================================================
+COMMON IMAGES
+==========================================================*/
+
+.Registration-Scripture-Card-X977563-Y966776 img{
+
+    display:block;
+
+}
+
+/*==========================================================
+COMMON BUTTON
+==========================================================*/
+
+.Registration-Submit-Button-X977563-Y966776,
+
+.Registration-Children-Section-X977563-Y966776 .btn-primary,
+
+.Registration-Children-Section-X977563-Y966776 .btn-danger{
+
+    transition:.35s;
+
+}
+
+/*==========================================================
+TYPOGRAPHY
+==========================================================*/
+
+.Registration-Right-Card-X977563-Y966776 h3,
+
+.Registration-Scripture-Card-X977563-Y966776 h3,
+
+.Registration-Scripture-Card-X977563-Y966776 h5{
+
+    letter-spacing:.3px;
+
+}
+
+/*==========================================================
+COMMON BOX MODEL
+==========================================================*/
+
+.Registration-Right-Card-X977563-Y966776 *,
+
+.Registration-Scripture-Card-X977563-Y966776 *{
+
+    box-sizing:border-box;
+
+}
+
+/*==========================================================
+LEFT CARD HOVER
+X977563-Y966776
+==========================================================*/
+
+.Registration-Left-Card-X977563-Y966776{
+
+    transition:all .35s ease;
+
+}
+
+.Registration-Left-Card-X977563-Y966776:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 22px 55px rgba(0,0,0,.15);
+
+}
+
+/*==========================================================
+RIGHT CARD HOVER
+==========================================================*/
+
+.Registration-Right-Card-X977563-Y966776{
+
+    transition:all .35s ease;
+
+}
+
+.Registration-Right-Card-X977563-Y966776:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 22px 55px rgba(0,0,0,.15);
+
+}
+
+/*==========================================================
+TERMS CARD
+==========================================================*/
+
+.Registration-Terms-Card-X977563-Y966776{
+
+    transition:all .35s ease;
+
+}
+
+.Registration-Terms-Card-X977563-Y966776:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 18px 45px rgba(0,0,0,.12);
+
+}
+
+/*==========================================================
+THANK YOU CARD
+==========================================================*/
+
+.Registration-ThankYou-Card-X977563-Y966776{
+
+    transition:all .35s ease;
+
+}
+
+.Registration-ThankYou-Card-X977563-Y966776:hover{
+
+    transform:translateY(-6px);
+
+    background:#0F2C5F;
+
+}
+
+/*==========================================================
+SCRIPTURE CARD
+==========================================================*/
+
+.Registration-Scripture-Card-X977563-Y966776{
+
+    transition:all .35s ease;
+
+}
+
+.Registration-Scripture-Card-X977563-Y966776:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 22px 55px rgba(0,0,0,.15);
+
+}
+
+/*==========================================================
+OPTION CARD
+==========================================================*/
+
+.Registration-Option-Card-X977563-Y966776{
+
+    cursor:pointer;
+
+    transition:all .35s ease;
+
+}
+
+.Registration-Option-Card-X977563-Y966776:hover{
+
+    border-color:#17346F;
+
+    background:#F7FAFF;
+
+    transform:translateX(8px);
+
+}
+
+.Registration-Option-Card-X977563-Y966776:hover h5{
+
+    color:#17346F;
+
+}
+
+.Registration-Option-Card-X977563-Y966776:hover .Registration-Option-Icon-X977563-Y966776{
+
+    transform:rotate(-8deg) scale(1.08);
+
+}
+
+/*==========================================================
+OPTION ICON
+==========================================================*/
+
+.Registration-Option-Icon-X977563-Y966776{
+
+    transition:all .35s ease;
+
+}
+
+/*==========================================================
+INPUT
+==========================================================*/
+
+.Registration-Left-Card-X977563-Y966776 .form-control,
+
+.Registration-Left-Card-X977563-Y966776 .form-select,
+
+.Registration-Children-Section-X977563-Y966776 .form-control{
+
+    transition:all .30s ease;
+
+}
+
+.Registration-Left-Card-X977563-Y966776 .form-control:hover,
+
+.Registration-Left-Card-X977563-Y966776 .form-select:hover,
+
+.Registration-Children-Section-X977563-Y966776 .form-control:hover{
+
+    border-color:#17346F;
+
+}
+
+/*==========================================================
+CHECKBOX
+==========================================================*/
+
+.Registration-Term-Item-X977563-Y966776{
+
+    transition:.30s;
+
+}
+
+.Registration-Term-Item-X977563-Y966776:hover{
+
+    padding-left:8px;
+
+}
+
+/*==========================================================
+REGISTER BUTTON
+==========================================================*/
+
+.Registration-Submit-Button-X977563-Y966776{
+
+    transition:all .35s ease;
+
+}
+
+.Registration-Submit-Button-X977563-Y966776:hover{
+
+    background:#D89D21;
+
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 45px rgba(216,157,33,.35);
+
+}
+
+.Registration-Submit-Button-X977563-Y966776:hover i{
+
+    transform:translateX(4px);
+
+}
+
+.Registration-Submit-Button-X977563-Y966776 i{
+
+    transition:.35s;
+
+}
+
+/*==========================================================
+ADD BUTTON
+==========================================================*/
+
+.Registration-Children-Section-X977563-Y966776 .btn-primary{
+
+    transition:.30s;
+
+}
+
+.Registration-Children-Section-X977563-Y966776 .btn-primary:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/*==========================================================
+DELETE BUTTON
+==========================================================*/
+
+.Registration-Children-Section-X977563-Y966776 .btn-danger{
+
+    transition:.30s;
+
+}
+
+.Registration-Children-Section-X977563-Y966776 .btn-danger:hover{
+
+    transform:scale(1.08);
+
+}
+
+/*==========================================================
+SCRIPTURE IMAGE
+==========================================================*/
+
+.Registration-Scripture-Card-X977563-Y966776 img{
+
+    transition:all .5s ease;
+
+}
+
+.Registration-Scripture-Card-X977563-Y966776:hover img{
+
+    transform:scale(1.05);
+
+}
+
+/*==========================================================
+HEADER ICON
+==========================================================*/
+
+.Registration-Header-Icon-X977563-Y966776{
+
+    transition:.35s;
+
+}
+
+.Registration-Left-Card-X977563-Y966776:hover
+
+.Registration-Header-Icon-X977563-Y966776,
+
+.Registration-Right-Card-X977563-Y966776:hover
+
+.Registration-Header-Icon-X977563-Y966776,
+
+.Registration-Terms-Card-X977563-Y966776:hover
+
+.Registration-Header-Icon-X977563-Y966776{
+
+    transform:rotate(-8deg) scale(1.08);
+
+}
+
+/*==========================================================
+THANK YOU ICON
+==========================================================*/
+
+.Registration-ThankYou-Icon-X977563-Y966776{
+
+    transition:.35s;
+
+}
+
+.Registration-ThankYou-Card-X977563-Y966776:hover
+
+.Registration-ThankYou-Icon-X977563-Y966776{
+
+    transform:rotate(10deg) scale(1.1);
+
+}
+
+/*==========================================================
+LARGE LAPTOP
+X977563-Y966776
+==========================================================*/
+
+@media(max-width:1400px){
+
+    .Registration-Left-Card-X977563-Y966776,
+    .Registration-Right-Card-X977563-Y966776,
+    .Registration-Terms-Card-X977563-Y966776,
+    .Registration-Scripture-Card-X977563-Y966776{
+
+        padding:30px;
+
+    }
+
+}
+
+/*==========================================================
+LAPTOP
+==========================================================*/
+
+@media(max-width:1199px){
+
+    .Registration-Form-Section-X977563-Y966776{
+
+        padding:50px 0;
+
+    }
+
+    .Registration-Card-Header-X977563-Y966776 h3{
+
+        font-size:24px;
+
+    }
+
+    .Registration-Option-Card-X977563-Y966776{
+
+        padding:18px;
+
+    }
+
+    .Registration-Option-Icon-X977563-Y966776{
+
+        width:55px;
+
+        height:55px;
+
+    }
+
+    .Registration-Option-Icon-X977563-Y966776 i{
+
+        font-size:24px;
+
+    }
+
+}
+
+/*==========================================================
+TABLET
+==========================================================*/
+
+@media(max-width:991px){
+
+    .Registration-Form-Section-X977563-Y966776{
+
+        padding:40px 0;
+
+    }
+
+    .Registration-Left-Card-X977563-Y966776,
+    .Registration-Right-Card-X977563-Y966776,
+    .Registration-Terms-Card-X977563-Y966776,
+    .Registration-Scripture-Card-X977563-Y966776{
+
+        padding:25px;
+
+    }
+
+    .Registration-Card-Header-X977563-Y966776{
+
+        gap:15px;
+
+    }
+
+    .Registration-Header-Icon-X977563-Y966776{
+
+        width:60px;
+
+        height:60px;
+
+    }
+
+    .Registration-Header-Icon-X977563-Y966776 i{
+
+        font-size:28px;
+
+    }
+
+    .Registration-Card-Header-X977563-Y966776 h3{
+
+        font-size:22px;
+
+    }
+
+    .Registration-Submit-Button-X977563-Y966776{
+
+        height:55px;
+
+        font-size:17px;
+
+    }
+
+    .Registration-Scripture-Card-X977563-Y966776 img{
+
+        height:200px;
+
+        margin-bottom:20px;
+
+    }
+
+}
+
+/*==========================================================
+MOBILE
+==========================================================*/
+
+@media(max-width:767px){
+
+    .Registration-Form-Section-X977563-Y966776{
+
+        padding:30px 0;
+
+    }
+
+    .Registration-Left-Card-X977563-Y966776,
+    .Registration-Right-Card-X977563-Y966776,
+    .Registration-Terms-Card-X977563-Y966776,
+    .Registration-Scripture-Card-X977563-Y966776{
+
+        padding:20px;
+
+        border-radius:18px;
+
+    }
+
+    .Registration-Card-Header-X977563-Y966776{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        gap:14px;
+
+    }
+
+    .Registration-Header-Icon-X977563-Y966776{
+
+        margin:auto;
+
+    }
+
+    .Registration-Card-Header-X977563-Y966776 span{
+
+        margin:10px auto 0;
+
+    }
+
+    .Registration-Card-Header-X977563-Y966776 h3{
+
+        font-size:20px;
+
+    }
+
+    .Registration-Left-Card-X977563-Y966776 label{
+
+        font-size:14px;
+
+    }
+
+    .Registration-Left-Card-X977563-Y966776 .form-control,
+    .Registration-Left-Card-X977563-Y966776 .form-select,
+    .Registration-Children-Section-X977563-Y966776 .form-control{
+
+        height:50px;
+
+        font-size:14px;
+
+    }
+
+    .Registration-Option-Card-X977563-Y966776{
+
+        padding:16px;
+
+    }
+
+    .Registration-Option-Card-X977563-Y966776 h5{
+
+        font-size:17px;
+
+    }
+
+    .Registration-Option-Card-X977563-Y966776 p{
+
+        font-size:13px;
+
+    }
+
+    .Registration-Option-Icon-X977563-Y966776{
+
+        width:50px;
+
+        height:50px;
+
+    }
+
+    .Registration-Option-Icon-X977563-Y966776 i{
+
+        font-size:22px;
+
+    }
+
+    .Registration-Term-Item-X977563-Y966776{
+
+        gap:10px;
+
+    }
+
+    .Registration-Term-Item-X977563-Y966776 label{
+
+        font-size:14px;
+
+    }
+
+    .Registration-ThankYou-Card-X977563-Y966776{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .Registration-ThankYou-Card-X977563-Y966776 h5{
+
+        font-size:20px;
+
+    }
+
+    .Registration-ThankYou-Card-X977563-Y966776 p{
+
+        font-size:14px;
+
+    }
+
+    .Registration-Scripture-Card-X977563-Y966776 h3{
+
+        font-size:22px;
+
+    }
+
+    .Registration-Scripture-Card-X977563-Y966776 blockquote{
+
+        font-size:15px;
+
+        padding:15px;
+
+    }
+
+    .Registration-Scripture-Card-X977563-Y966776 h5{
+
+        text-align:center;
+
+        font-size:17px;
+
+    }
+
+    .Registration-Submit-Button-X977563-Y966776{
+
+        width:100%;
+
+        height:52px;
+
+        font-size:15px;
+
+    }
+
+}
+
+/*==========================================================
+SMALL MOBILE
+==========================================================*/
+
+@media(max-width:575px){
+
+    .Registration-Form-Section-X977563-Y966776{
+
+        padding:24px 0;
+
+    }
+
+    .Registration-Left-Card-X977563-Y966776,
+    .Registration-Right-Card-X977563-Y966776,
+    .Registration-Terms-Card-X977563-Y966776,
+    .Registration-Scripture-Card-X977563-Y966776{
+
+        padding:16px;
+
+        border-radius:16px;
+
+    }
+
+    .Registration-Header-Icon-X977563-Y966776{
+
+        width:52px;
+
+        height:52px;
+
+    }
+
+    .Registration-Header-Icon-X977563-Y966776 i{
+
+        font-size:24px;
+
+    }
+
+    .Registration-Card-Header-X977563-Y966776 h3{
+
+        font-size:18px;
+
+    }
+
+    .Registration-Option-Card-X977563-Y966776{
+
+        padding:14px;
+
+    }
+
+    .Registration-Option-Card-X977563-Y966776 h5{
+
+        font-size:15px;
+
+    }
+
+    .Registration-Option-Card-X977563-Y966776 p{
+
+        font-size:12px;
+
+    }
+
+    .Registration-Option-Icon-X977563-Y966776{
+
+        width:45px;
+
+        height:45px;
+
+    }
+
+    .Registration-Option-Icon-X977563-Y966776 i{
+
+        font-size:20px;
+
+    }
+
+    .Registration-Children-Section-X977563-Y966776 .btn-danger{
+
+        width:100%;
+
+        margin-top:10px;
+
+        height:42px;
+
+    }
+
+    .Registration-Submit-Button-X977563-Y966776{
+
+        font-size:14px;
+
+        height:48px;
+
+    }
+
+}
+
+/*==========================================================
+EXTRA SMALL
+==========================================================*/
+
+@media(max-width:380px){
+
+    .Registration-Card-Header-X977563-Y966776 h3{
+
+        font-size:16px;
+
+    }
+
+    .Registration-Left-Card-X977563-Y966776 .form-control,
+    .Registration-Left-Card-X977563-Y966776 .form-select{
+
+        height:46px;
+
+        font-size:13px;
+
+    }
+
+    .Registration-Term-Item-X977563-Y966776 label{
+
+        font-size:13px;
+
+    }
+
+    .Registration-ThankYou-Card-X977563-Y966776 p{
+
+        font-size:13px;
+
+    }
+
+    .Registration-Scripture-Card-X977563-Y966776 blockquote{
+
+        font-size:14px;
+
+    }
+
+    .Registration-Submit-Button-X977563-Y966776{
+
+        font-size:13px;
+
+        height:46px;
+
+    }
+
+}

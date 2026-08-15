@@ -1,0 +1,320 @@
+/*==========================================================
+FOOTER SECTION
+X88441-Y55119
+==========================================================*/
+
+.Footer-Section-X88441-Y55119{
+
+    width:100%;
+
+    background:#123a79;
+
+    color:#ffffff;
+
+    overflow:hidden;
+
+    border-top:3px solid #d89d21;
+
+}
+
+/*==========================================================
+TOP
+==========================================================*/
+
+.Footer-Top-X88441-Y55119{
+
+    padding:18px 0 14px;
+
+    border-bottom:1px solid rgba(255,255,255,.18);
+
+}
+
+/*==========================================================
+LOGO
+==========================================================*/
+
+.Footer-Logo-X88441-Y55119{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.Footer-Logo-X88441-Y55119 img{
+
+    width:110px;
+
+    height:auto;
+
+    object-fit:contain;
+
+}
+
+/*==========================================================
+QUOTE
+==========================================================*/
+
+.Footer-Quote-X88441-Y55119{
+
+    text-align:center;
+
+}
+
+.Footer-Quote-X88441-Y55119 h4{
+
+    margin:0;
+
+    color:#ffffff;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    line-height:1.6;
+
+    font-style:italic;
+
+    font-family:"Libre Baskerville", serif;
+
+}
+
+.Footer-Quote-X88441-Y55119 h5{
+
+    margin-top:10px;
+
+    color:#d89d21;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+}
+
+/*==========================================================
+BOTTOM
+==========================================================*/
+
+.Footer-Bottom-X88441-Y55119{
+
+    padding:16px 0;
+
+}
+
+/*==========================================================
+SCRIPTURE WRAPPER
+==========================================================*/
+
+.Footer-Scripture-Wrapper-X88441-Y55119{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+}
+
+/*==========================================================
+SCRIPTURE LINK
+==========================================================*/
+
+.Footer-Scripture-Link-X88441-Y55119{
+
+    color:#f7d37c;
+
+    text-decoration:none;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.30s;
+
+    font-family:"Libre Baskerville", serif;
+
+}
+
+.Footer-Scripture-Link-X88441-Y55119:hover{
+
+    color:#ffffff;
+
+    text-decoration:underline;
+
+}
+
+/*==========================================================
+VERTICAL LINE
+==========================================================*/
+
+.Footer-Line-X88441-Y55119{
+
+    color:#d89d21;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    user-select:none;
+
+}
+
+/*==========================================================
+TABLET
+==========================================================*/
+
+@media(max-width:991px){
+
+    .Footer-Top-X88441-Y55119{
+
+        padding:20px 15px;
+
+    }
+
+    .Footer-Logo-X88441-Y55119{
+
+        margin-bottom:18px;
+
+    }
+
+    .Footer-Quote-X88441-Y55119 h4{
+
+        font-size:18px;
+
+    }
+
+    .Footer-Quote-X88441-Y55119 h5{
+
+        font-size:16px;
+
+    }
+
+    .Footer-Scripture-Link-X88441-Y55119{
+
+        font-size:15px;
+
+    }
+
+}
+
+/*==========================================================
+MOBILE
+==========================================================*/
+
+@media(max-width:767px){
+
+    .Footer-Top-X88441-Y55119{
+
+        padding:25px 18px;
+
+    }
+
+    .Footer-Logo-X88441-Y55119 img{
+
+        width:90px;
+
+    }
+
+    .Footer-Quote-X88441-Y55119{
+
+        margin-top:12px;
+
+    }
+
+    .Footer-Quote-X88441-Y55119 h4{
+
+        font-size:16px;
+
+        line-height:1.8;
+
+    }
+
+    .Footer-Quote-X88441-Y55119 h5{
+
+        font-size:15px;
+
+    }
+
+    .Footer-Scripture-Wrapper-X88441-Y55119{
+
+        gap:8px;
+
+    }
+
+    .Footer-Scripture-Link-X88441-Y55119{
+
+        font-size:14px;
+
+    }
+
+    .Footer-Line-X88441-Y55119{
+
+        font-size:15px;
+
+    }
+
+}
+
+/*==========================================================
+SMALL MOBILE
+==========================================================*/
+
+@media(max-width:480px){
+
+    .Footer-Top-X88441-Y55119{
+
+        padding:20px 15px;
+
+    }
+
+    .Footer-Logo-X88441-Y55119 img{
+
+        width:72px;
+
+    }
+
+    .Footer-Quote-X88441-Y55119 h4{
+
+        font-size:14px;
+
+    }
+
+    .Footer-Quote-X88441-Y55119 h5{
+
+        font-size:13px;
+
+    }
+
+    .Footer-Scripture-Wrapper-X88441-Y55119{
+
+        justify-content:center;
+
+        row-gap:12px;
+
+        column-gap:6px;
+
+    }
+
+    .Footer-Scripture-Link-X88441-Y55119{
+
+        font-size:13px;
+
+    }
+
+    .Footer-Line-X88441-Y55119{
+
+        font-size:13px;
+
+    }
+
+}

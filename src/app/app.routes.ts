@@ -12,6 +12,11 @@ import { SharingAStoryOfLove } from './pages/sharing-a-story-of-love/sharing-a-s
 import { JoinAJustserveActivity } from './pages/join-a-justserve-activity/join-a-justserve-activity';
 import { JoiningEmmasReliefSociety } from './pages/joining-emmas-relief-society/joining-emmas-relief-society';
 import { AuthenticationAndSecurityManagementSystem } from './pages/authentication-and-security-management-system/authentication-and-security-management-system';
+import { WorshipingChristThroughMusic } from './pages/worshiping-christ-through-music/worshiping-christ-through-music';
+
+
+
+
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -26,7 +31,7 @@ export const routes: Routes = [
     { path: 'join-a-justserve-activity', component: JoinAJustserveActivity },
     { path: 'joining-emmas-relief-society', component: JoiningEmmasReliefSociety },
     { path: 'authentication-and-security-management-system', component: AuthenticationAndSecurityManagementSystem },
- 
+    { path: 'worshiping-christ-through-music', component: WorshipingChristThroughMusic },
   {
     path: 'pray-for-someone',
     component: PrayForSomeone

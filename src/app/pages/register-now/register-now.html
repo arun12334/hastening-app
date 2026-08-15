@@ -1,1 +1,766 @@
 <app-header></app-header>
+
+<!--==========================================================
+REGISTER HERO SECTION x56563 y76776
+===========================================================-->
+
+<section class="Register-Hero-Section-X56563-Y76776">
+
+    <!--======================================================
+    HERO CONTAINER
+    =======================================================-->
+
+    <div class="">
+
+        <div
+            class="Register-Hero-Wrapper-X56563-Y76776"
+
+            [style.background-image]="'url(' + registerHeroBannerX56563Y76776.backgroundImage + ')'">
+
+            <!--==================================================
+            CONTENT
+            ==================================================-->
+
+            <div class="Register-Hero-Content-X56563-Y76776">
+
+                <!--==============================================
+                TITLE
+                ==============================================-->
+
+                <h1 class="Register-Hero-Title-X56563-Y76776">
+
+                    {{registerHeroBannerX56563Y76776.title}}
+
+                </h1>
+
+                <!--==============================================
+                SUB TITLE
+                ==============================================-->
+
+                <h2 class="Register-Hero-SubTitle-X56563-Y76776">
+
+                    {{registerHeroBannerX56563Y76776.subTitle}}
+
+                </h2>
+
+                <!--==============================================
+                DIVIDER
+                ==============================================-->
+
+                <div class="Register-Hero-Divider-X56563-Y76776">
+
+                </div>
+
+                <!--==============================================
+                VERSE
+                ==============================================-->
+
+                <p class="Register-Hero-Verse-X56563-Y76776">
+
+                    {{registerHeroBannerX56563Y76776.verse}}
+
+                </p>
+
+                <!--==============================================
+                DESCRIPTION
+                ==============================================-->
+
+                <p class="Register-Hero-Description-X56563-Y76776">
+
+                    {{registerHeroBannerX56563Y76776.description}}
+
+                </p>
+
+                <!--==============================================
+                BUTTON
+                ==============================================-->
+
+                <button
+
+                    type="button"
+
+                    class="Register-Hero-Button-X56563-Y76776"
+
+                    (click)="registerNowClickX56563Y76776()">
+
+                    <i [class]="registerHeroBannerX56563Y76776.buttonIcon"></i>
+
+                    {{registerHeroBannerX56563Y76776.buttonText}}
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!--==========================================================
+REGISTRATION FORM SECTION
+X977563-Y966776
+PART 2A
+LEFT CARD
+===========================================================-->
+
+<section class="Registration-Form-Section-X977563-Y966776">
+
+    <div class="container-fluid">
+
+        <div class="row g-4">
+
+            <!--==================================================
+            LEFT COLUMN
+            ===================================================-->
+
+            <div class="col-xl-6 col-lg-6">
+
+                <!--==================================================
+                PERSONAL INFORMATION CARD
+                ===================================================-->
+
+                <div class="Registration-Left-Card-X977563-Y966776">
+
+                    <!--==============================================
+                    HEADER
+                    ==============================================-->
+
+                    <div class="Registration-Card-Header-X977563-Y966776">
+
+                        <div class="Registration-Header-Icon-X977563-Y966776">
+
+                            <i class="bi bi-person-circle"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h3>
+
+                                Personal Information
+
+                            </h3>
+
+                            <span></span>
+
+                        </div>
+
+                    </div>
+
+                    <!--==============================================
+                    FORM
+                    ==============================================-->
+
+                    <div class="row">
+
+                        <!-- FIRST NAME -->
+
+                        <div class="col-md-6 mb-4">
+
+                            <label>
+
+                                First Name
+
+                            </label>
+
+                            <input
+
+                                type="text"
+
+                                class="form-control"
+
+                                [(ngModel)]="personalInformationX977563Y966776.firstName">
+
+                        </div>
+
+                        <!-- LAST NAME -->
+
+                        <div class="col-md-6 mb-4">
+
+                            <label>
+
+                                Last Name
+
+                            </label>
+
+                            <input
+
+                                type="text"
+
+                                class="form-control"
+
+                                [(ngModel)]="personalInformationX977563Y966776.lastName">
+
+                        </div>
+
+                        <!-- STREET -->
+
+                        <div class="col-12 mb-4">
+
+                            <label>
+
+                                Street Address
+
+                            </label>
+
+                            <input
+
+                                type="text"
+
+                                class="form-control"
+
+                                [(ngModel)]="personalInformationX977563Y966776.streetAddress">
+
+                        </div>
+
+                        <!-- CITY -->
+
+                        <div class="col-md-6 mb-4">
+
+                            <label>
+
+                                City
+
+                            </label>
+
+                            <input
+
+                                type="text"
+
+                                class="form-control"
+
+                                [(ngModel)]="personalInformationX977563Y966776.city">
+
+                        </div>
+
+                        <!-- STATE -->
+
+                        <div class="col-md-6 mb-4">
+
+                            <label>
+
+                                State / Province
+
+                            </label>
+
+                            <input
+
+                                type="text"
+
+                                class="form-control"
+
+                                [(ngModel)]="personalInformationX977563Y966776.state">
+
+                        </div>
+
+                        <!-- COUNTRY -->
+
+                        <div class="col-12 mb-4">
+
+                            <label>
+
+                                Country
+
+                            </label>
+
+                            <select
+
+                                class="form-select"
+
+                                [(ngModel)]="personalInformationX977563Y966776.country">
+
+                                @for(country of countriesX977563Y966776; track country){
+
+                                <option
+
+                                    [value]="country">
+
+                                    {{country}}
+
+                                </option>
+
+                                }
+
+                            </select>
+
+                        </div>
+
+                        <!-- ZIP -->
+
+                        <div class="col-12 mb-4">
+
+                            <label>
+
+                                ZIP / Postal Code / Other Code
+
+                            </label>
+
+                            <input
+
+                                type="text"
+
+                                class="form-control"
+
+                                [(ngModel)]="personalInformationX977563Y966776.zipCode">
+
+                        </div>
+
+                        <!-- MOBILE -->
+
+                        <div class="col-12 mb-4">
+
+                            <label>
+
+                                Mobile Phone Number
+
+                            </label>
+
+                            <input
+
+                                type="text"
+
+                                class="form-control"
+
+                                [(ngModel)]="personalInformationX977563Y966776.mobileNumber">
+
+                        </div>
+
+                        <!-- EMAIL -->
+
+                        <div class="col-12">
+
+                            <label>
+
+                                Email Address
+
+                            </label>
+
+                            <input
+
+                                type="email"
+
+                                class="form-control"
+
+                                [(ngModel)]="personalInformationX977563Y966776.emailAddress">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!--==================================================
+                TERMS CARD
+                ===================================================-->
+
+                <div class="Registration-Terms-Card-X977563-Y966776">
+
+                    <!--==============================================
+                    HEADER
+                    ==============================================-->
+
+                    <div class="Registration-Card-Header-X977563-Y966776">
+
+                        <div class="Registration-Header-Icon-X977563-Y966776">
+
+                            <i class="bi bi-shield-check"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h3>
+
+                                Terms and Conditions
+
+                            </h3>
+
+                            <span></span>
+
+                        </div>
+
+                    </div>
+
+                    <!--==============================================
+                    TERMS
+                    ==============================================-->
+
+                    @for(term of termsConditionsX977563Y966776; track term.id){
+
+                    <div class="Registration-Term-Item-X977563-Y966776">
+
+                        <input
+
+                            type="checkbox"
+
+                            [(ngModel)]="term.checked"
+
+                            (change)="termsSelectionX977563Y966776(term)">
+
+                        <label>
+
+                            {{term.text}}
+
+                        </label>
+
+                    </div>
+
+                    }
+
+                </div>
+
+           
+
+            </div>
+
+                        <!--==================================================
+            RIGHT COLUMN
+            ===================================================-->
+
+            <div class="col-xl-6 col-lg-6">
+
+                <!--==================================================
+                REGISTRATION OPTIONS CARD
+                ===================================================-->
+
+                <div class="Registration-Right-Card-X977563-Y966776">
+
+                    <!--==============================================
+                    HEADER
+                    ==============================================-->
+
+                    <div class="Registration-Card-Header-X977563-Y966776">
+
+                        <div class="Registration-Header-Icon-X977563-Y966776">
+
+                            <i class="bi bi-clipboard-check-fill"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h3>
+
+                                Registration Options
+
+                            </h3>
+
+                            <span></span>
+
+                        </div>
+
+                    </div>
+
+                    <p class="Registration-Card-Text-X977563-Y966776">
+
+                        Please select all that apply.
+
+                    </p>
+
+                    <!--==============================================
+                    OPTIONS
+                    ==============================================-->
+
+                    @for(option of registrationOptionsX977563Y966776; track option.id){
+
+                    <div class="Registration-Option-Card-X977563-Y966776">
+
+                        <div class="row align-items-center">
+
+                            <!-- CHECK -->
+
+                            <div class="col-auto">
+
+                                <input
+
+                                    type="checkbox"
+
+                                    [(ngModel)]="option.selected"
+
+                                    (change)="optionSelectionX977563Y966776(option)">
+
+                            </div>
+
+                            <!-- ICON -->
+
+                            <div class="col-auto">
+
+                                <div
+
+                                    class="Registration-Option-Icon-X977563-Y966776"
+
+                                    [style.background]="option.color">
+
+                                    <i
+
+                                        [class]="option.icon">
+
+                                    </i>
+
+                                </div>
+
+                            </div>
+
+                            <!-- CONTENT -->
+
+                            <div class="col">
+
+                                <h5>
+
+                                    {{option.title}}
+
+                                </h5>
+
+                                <p>
+
+                                    {{option.description}}
+
+                                </p>
+
+                                <!-- BOOK DELIVERY -->
+
+                                @if(option.id==3){
+
+                                <div class="Registration-Delivery-X977563-Y966776">
+
+                                    <label>
+
+                                        <input
+
+                                            type="radio"
+
+                                            name="delivery"
+
+                                            value="mail"
+
+                                            [(ngModel)]="option.deliveryMethod">
+
+                                        Physical Copy by Mail
+
+                                    </label>
+
+                                    <br>
+
+                                    <label>
+
+                                        <input
+
+                                            type="radio"
+
+                                            name="delivery"
+
+                                            value="email"
+
+                                            [(ngModel)]="option.deliveryMethod">
+
+                                        Digital Copy by Email
+
+                                    </label>
+
+                                </div>
+
+                                }
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    }
+
+                    <!--==============================================
+                    CHILDREN
+                    ==============================================-->
+
+                    <div class="Registration-Children-Section-X977563-Y966776">
+
+                        <h5>
+
+                            Children Information
+
+                        </h5>
+
+                        <button
+
+                            type="button"
+
+                            class="btn btn-sm btn-primary mb-3"
+
+                            (click)="addChildRowX977563Y966776()">
+
+                            <i class="bi bi-plus-circle-fill"></i>
+
+                            Add Child
+
+                        </button>
+
+                        @for(child of childrenX977563Y966776; track $index){
+
+                        <div class="row mb-3">
+
+                            <div class="col-lg-8">
+
+                                <input
+
+                                    class="form-control"
+
+                                    type="text"
+
+                                    placeholder="Child Name"
+
+                                    [(ngModel)]="child.name">
+
+                            </div>
+
+                            <div class="col-lg-3">
+
+                                <input
+
+                                    class="form-control"
+
+                                    type="number"
+
+                                    placeholder="Age"
+
+                                    [(ngModel)]="child.age">
+
+                            </div>
+
+                            <div class="col-lg-1 d-flex align-items-center">
+
+                                <button
+
+                                    type="button"
+
+                                    class="btn btn-danger btn-sm"
+
+                                    (click)="removeChildRowX977563Y966776($index)">
+
+                                    <i class="bi bi-trash-fill"></i>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        }
+
+                    </div>
+
+                    <!--==============================================
+                    REGISTER BUTTON
+                    ==============================================-->
+
+                    <button
+
+                        type="button"
+
+                        class="Registration-Submit-Button-X977563-Y966776"
+
+                        (click)="registerNowX977563Y966776()">
+
+                        <i class="bi bi-person-plus-fill"></i>
+
+                        REGISTER NOW
+
+                    </button>
+
+                </div>
+
+              
+                
+
+            </div>
+
+                 <!--==================================================
+                THANK YOU CARD
+                ===================================================-->
+<div class="p-3">
+
+      <!--==================================================
+                FEATURED SCRIPTURE
+                ===================================================-->
+
+                <div class="Registration-Scripture-Card-X977563-Y966776">
+
+                    <h3>
+
+                        {{featuredScriptureX977563Y966776.title}}
+
+                    </h3>
+
+                    <div class="row align-items-center">
+
+                        <div class="col-md-5 text-center">
+
+                            <img
+
+                                [src]="featuredScriptureX977563Y966776.image"
+
+                                class="img-fluid"
+
+                                alt="Bible">
+
+                        </div>
+
+                        <div class="col-md-7">
+
+                            <blockquote>
+
+                                {{featuredScriptureX977563Y966776.verse}}
+
+                            </blockquote>
+
+                            <h5>
+
+                                {{featuredScriptureX977563Y966776.reference}}
+
+                            </h5>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+    
+                <div class="Registration-ThankYou-Card-X977563-Y966776 mt-3"  >
+
+                    <div class="Registration-ThankYou-Icon-X977563-Y966776">
+
+                        <i class="bi bi-people-fill"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h5>
+
+                            Thank You!
+
+                        </h5>
+
+                        <p>
+
+                            Thank you for taking this step to join the Hastening community.
+                            We look forward to walking with you in faith, fellowship and service.
+
+                        </p>
+
+                    </div>
+
+                </div>
+</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<app-footer></app-footer>

@@ -1170,7 +1170,9 @@ BACKGROUND IMAGE
 
     width: 100%;
 
-    height: 290px;
+    // height: 290px;
+    height: 400px;
+
 
     display: flex;
 
@@ -14986,7 +14988,7 @@ SMALL MOBILE
 
     .Authentication-And-Security-Management-System-Banner-Image-X91{
 
-            height: 120px;
+            height: 180px;
         margin-top: 58px;
 
     }
@@ -18395,6 +18397,796 @@ EXTRA SMALL MOBILE
         height:40px;
 
         font-size:12px;
+
+    }
+
+}
+
+
+// register-now x7337 y4994
+
+ /*==========================================================
+REGISTER HERO SECTION x56563 y76776
+==========================================================*/
+
+.Register-Hero-Section-X56563-Y76776{
+
+    width:100%;
+
+    // padding:40px 0 60px;
+
+    background:#f7f9fc;
+
+    overflow:hidden;
+
+}
+
+/*==========================================================
+WRAPPER
+==========================================================*/
+
+.Register-Hero-Wrapper-X56563-Y76776{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:420px;
+
+    // border-radius:28px;
+
+    overflow:hidden;
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    box-shadow:0 18px 50px rgba(0,0,0,.14);
+
+}
+
+/*==========================================================
+WHITE OVERLAY
+==========================================================*/
+
+.Register-Hero-Wrapper-X56563-Y76776::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        90deg,
+        rgba(255,255,255,.82) 0%,
+        rgba(255,255,255,.55) 50%,
+        rgba(255,255,255,.82) 100%
+    );
+
+}
+
+/*==========================================================
+CONTENT
+==========================================================*/
+
+.Register-Hero-Content-X56563-Y76776{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+
+    max-width:900px;
+
+    text-align:center;
+
+    padding:50px;
+
+}
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.Register-Hero-Title-X56563-Y76776{
+
+    margin:0;
+
+    color:#143c7d;
+
+    font-size:62px;
+
+    font-weight:800;
+
+    line-height:1.1;
+
+    font-family:"Libre Baskerville", serif;
+
+}
+
+/*==========================================================
+SUB TITLE
+==========================================================*/
+
+.Register-Hero-SubTitle-X56563-Y76776{
+
+    margin:14px 0 0;
+
+    color:#c89218;
+
+    font-size:40px;
+
+    font-weight:700;
+
+    font-family:"Libre Baskerville", serif;
+
+}
+
+/*==========================================================
+DIVIDER
+==========================================================*/
+
+.Register-Hero-Divider-X56563-Y76776{
+
+    width:120px;
+
+    height:5px;
+
+    margin:24px auto;
+
+    border-radius:30px;
+
+    background:#d89d21;
+
+}
+
+/*==========================================================
+VERSE
+==========================================================*/
+
+.Register-Hero-Verse-X56563-Y76776{
+
+    margin:0;
+
+    color:#16377c;
+
+    font-size:23px;
+
+    font-style:italic;
+
+    font-weight:600;
+
+    line-height:1.6;
+
+}
+
+/*==========================================================
+DESCRIPTION
+==========================================================*/
+
+.Register-Hero-Description-X56563-Y76776{
+
+    max-width:760px;
+
+    margin:24px auto 38px;
+
+    color:#4d4d4d;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    font-weight:500;
+
+}
+
+/*==========================================================
+BUTTON
+==========================================================*/
+
+.Register-Hero-Button-X56563-Y76776{
+
+    border:none;
+
+    outline:none;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:18px 42px;
+
+    border-radius:60px;
+
+    background:#16377c;
+
+    color:#fff;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:0 15px 35px rgba(22,55,124,.28);
+
+}
+
+.Register-Hero-Button-X56563-Y76776 i{
+
+    font-size:20px;
+
+}
+
+/*==========================================================
+BUTTON HOVER
+==========================================================*/
+
+.Register-Hero-Button-X56563-Y76776:hover{
+
+    transform:translateY(-5px);
+
+    background:#d89d21;
+
+    box-shadow:0 20px 45px rgba(216,157,33,.35);
+
+}
+/*==========================================================
+REGISTER HERO HOVER EFFECTS
+x56563 y76776
+==========================================================*/
+
+/*==========================================================
+HERO WRAPPER
+==========================================================*/
+
+.Register-Hero-Wrapper-X56563-Y76776{
+
+    transition:
+        transform .45s ease,
+        box-shadow .45s ease;
+
+}
+
+.Register-Hero-Wrapper-X56563-Y76776:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 30px 70px rgba(0,0,0,.20);
+
+}
+
+/*==========================================================
+BACKGROUND ZOOM
+==========================================================*/
+
+.Register-Hero-Wrapper-X56563-Y76776{
+
+    overflow:hidden;
+
+}
+
+.Register-Hero-Wrapper-X56563-Y76776::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:inherit;
+
+    background-size:cover;
+
+    background-position:center;
+
+    transform:scale(1);
+
+    transition:transform .8s ease;
+
+    z-index:0;
+
+}
+
+.Register-Hero-Wrapper-X56563-Y76776:hover::after{
+
+    transform:scale(1.08);
+
+}
+
+/*==========================================================
+KEEP CONTENT ABOVE
+==========================================================*/
+
+.Register-Hero-Content-X56563-Y76776{
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.Register-Hero-Title-X56563-Y76776{
+
+    transition:.35s ease;
+
+}
+
+.Register-Hero-Wrapper-X56563-Y76776:hover
+.Register-Hero-Title-X56563-Y76776{
+
+    color:#0f2f69;
+
+    letter-spacing:.5px;
+
+}
+
+/*==========================================================
+SUB TITLE
+==========================================================*/
+
+.Register-Hero-SubTitle-X56563-Y76776{
+
+    transition:.35s ease;
+
+}
+
+.Register-Hero-Wrapper-X56563-Y76776:hover
+.Register-Hero-SubTitle-X56563-Y76776{
+
+    color:#d89d21;
+
+}
+
+/*==========================================================
+DIVIDER
+==========================================================*/
+
+.Register-Hero-Divider-X56563-Y76776{
+
+    transition:.35s ease;
+
+}
+
+.Register-Hero-Wrapper-X56563-Y76776:hover
+.Register-Hero-Divider-X56563-Y76776{
+
+    width:170px;
+
+}
+
+/*==========================================================
+VERSE
+==========================================================*/
+
+.Register-Hero-Verse-X56563-Y76776{
+
+    transition:.35s ease;
+
+}
+
+.Register-Hero-Wrapper-X56563-Y76776:hover
+.Register-Hero-Verse-X56563-Y76776{
+
+    color:#102f66;
+
+}
+
+/*==========================================================
+DESCRIPTION
+==========================================================*/
+
+.Register-Hero-Description-X56563-Y76776{
+
+    transition:.35s ease;
+
+}
+
+.Register-Hero-Wrapper-X56563-Y76776:hover
+.Register-Hero-Description-X56563-Y76776{
+
+    color:#333;
+
+}
+
+/*==========================================================
+BUTTON
+==========================================================*/
+
+.Register-Hero-Button-X56563-Y76776{
+
+    transition:all .35s ease;
+
+}
+
+.Register-Hero-Button-X56563-Y76776:hover{
+
+    background:#d89d21;
+
+    color:#ffffff;
+
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 40px rgba(216,157,33,.40);
+
+}
+
+.Register-Hero-Button-X56563-Y76776:hover i{
+
+    transform:translateX(4px);
+
+}
+
+.Register-Hero-Button-X56563-Y76776 i{
+
+    transition:.30s ease;
+
+}
+
+/*==========================================================
+LARGE DESKTOP
+x56563 y76776
+==========================================================*/
+
+@media (max-width:1400px){
+
+    .Register-Hero-Wrapper-X56563-Y76776{
+
+        min-height:390px;
+
+    }
+
+    .Register-Hero-Title-X56563-Y76776{
+
+        font-size:54px;
+
+    }
+
+    .Register-Hero-SubTitle-X56563-Y76776{
+
+        font-size:35px;
+
+    }
+
+}
+
+/*==========================================================
+LAPTOP
+==========================================================*/
+
+@media (max-width:1199px){
+
+    .Register-Hero-Section-X56563-Y76776{
+
+        padding:35px 0 50px;
+
+    }
+
+    .Register-Hero-Wrapper-X56563-Y76776{
+
+        min-height:360px;
+
+        border-radius:24px;
+
+    }
+
+    .Register-Hero-Content-X56563-Y76776{
+
+        max-width:760px;
+
+        padding:40px;
+
+    }
+
+    .Register-Hero-Title-X56563-Y76776{
+
+        font-size:46px;
+
+    }
+
+    .Register-Hero-SubTitle-X56563-Y76776{
+
+        font-size:31px;
+
+    }
+
+    .Register-Hero-Verse-X56563-Y76776{
+
+        font-size:20px;
+
+    }
+
+    .Register-Hero-Description-X56563-Y76776{
+
+        font-size:17px;
+
+    }
+
+}
+
+/*==========================================================
+TABLET
+==========================================================*/
+
+@media (max-width:991px){
+
+    .Register-Hero-Section-X56563-Y76776{
+
+        padding:30px 0 45px;
+
+    }
+
+    .Register-Hero-Wrapper-X56563-Y76776{
+
+        min-height:330px;
+
+        border-radius:20px;
+
+        background-position:center;
+
+    }
+
+    .Register-Hero-Content-X56563-Y76776{
+
+        padding:35px 25px;
+
+    }
+
+    .Register-Hero-Title-X56563-Y76776{
+
+        font-size:38px;
+
+    }
+
+    .Register-Hero-SubTitle-X56563-Y76776{
+
+        font-size:27px;
+
+    }
+
+    .Register-Hero-Divider-X56563-Y76776{
+
+        width:90px;
+
+        margin:18px auto;
+
+    }
+
+    .Register-Hero-Verse-X56563-Y76776{
+
+        font-size:18px;
+
+    }
+
+    .Register-Hero-Description-X56563-Y76776{
+
+        font-size:16px;
+
+        margin:18px auto 28px;
+
+    }
+
+    .Register-Hero-Button-X56563-Y76776{
+
+        padding:15px 34px;
+
+        font-size:16px;
+
+    }
+
+}
+
+/*==========================================================
+MOBILE
+==========================================================*/
+
+@media (max-width:767px){
+
+    .Register-Hero-Section-X56563-Y76776{
+
+        padding:25px 0 40px;
+
+    }
+
+    .Register-Hero-Wrapper-X56563-Y76776{
+
+        min-height:320px;
+
+        border-radius:18px;
+
+    }
+
+    .Register-Hero-Content-X56563-Y76776{
+
+        padding:30px 20px;
+
+    }
+
+    .Register-Hero-Title-X56563-Y76776{
+
+        font-size:31px;
+
+        line-height:1.25;
+
+    }
+
+    .Register-Hero-SubTitle-X56563-Y76776{
+
+        font-size:24px;
+
+    }
+
+    .Register-Hero-Verse-X56563-Y76776{
+
+        font-size:16px;
+
+        line-height:1.7;
+
+    }
+
+    .Register-Hero-Description-X56563-Y76776{
+
+        font-size:15px;
+
+        line-height:1.8;
+
+        margin-bottom:24px;
+
+    }
+
+    .Register-Hero-Button-X56563-Y76776{
+
+        width:100%;
+
+        justify-content:center;
+
+        padding:15px;
+
+        font-size:16px;
+
+    }
+
+}
+
+/*==========================================================
+SMALL MOBILE
+==========================================================*/
+
+@media (max-width:575px){
+
+    .Register-Hero-Section-X56563-Y76776{
+
+        padding:80px 0 35px;
+
+    }
+
+    .Register-Hero-Wrapper-X56563-Y76776{
+
+        min-height:300px;
+
+        border-radius:16px;
+
+    }
+
+    .Register-Hero-Content-X56563-Y76776{
+
+        padding:24px 18px;
+
+    }
+
+    .Register-Hero-Title-X56563-Y76776{
+
+        font-size:26px;
+
+    }
+
+    .Register-Hero-SubTitle-X56563-Y76776{
+
+        font-size:21px;
+
+    }
+
+    .Register-Hero-Divider-X56563-Y76776{
+
+        width:75px;
+
+        height:4px;
+
+    }
+
+    .Register-Hero-Verse-X56563-Y76776{
+
+        font-size:15px;
+
+    }
+
+    .Register-Hero-Description-X56563-Y76776{
+
+        font-size:14px;
+
+        margin-bottom:22px;
+
+    }
+
+    .Register-Hero-Button-X56563-Y76776{
+
+        width:100%;
+
+        padding:14px;
+
+        font-size:15px;
+
+    }
+
+}
+
+/*==========================================================
+EXTRA SMALL MOBILE
+==========================================================*/
+
+@media (max-width:380px){
+
+    .Register-Hero-Wrapper-X56563-Y76776{
+
+        min-height:280px;
+
+    }
+
+    .Register-Hero-Content-X56563-Y76776{
+
+        padding:20px 15px;
+
+    }
+
+    .Register-Hero-Title-X56563-Y76776{
+
+        font-size:22px;
+
+    }
+
+    .Register-Hero-SubTitle-X56563-Y76776{
+
+        font-size:18px;
+
+    }
+
+    .Register-Hero-Verse-X56563-Y76776{
+
+        font-size:14px;
+
+    }
+
+    .Register-Hero-Description-X56563-Y76776{
+
+        font-size:13px;
+
+        line-height:1.7;
+
+    }
+
+    .Register-Hero-Button-X56563-Y76776{
+
+        font-size:14px;
+
+        padding:13px;
 
     }
 

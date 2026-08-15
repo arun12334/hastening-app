@@ -10,6 +10,9 @@ import { Header } from '../../components/header/header';
   styleUrl: './does-unity-baptism.scss',
 })
 export class DoesUnityBaptism {
+   bannerImage =
+'assets/does-unity/does-unity-baptism-banner.png';
+ 
 
   //====================================================
   // HERO BANNER
@@ -30,6 +33,22 @@ export class DoesUnityBaptism {
     reference: 'Ephesians 4:3'
 
   };
+
+
+  bannerData = {
+
+  icon: 'bi bi-person',
+
+  title: 'Does Unity Require Baptism?',
+
+  subtitle: 'Seeking unity in Christ through faith, love, and divine order.',
+
+  description:
+    '"Endeavouring to keep the unity of the Spirit in the bond of peace."',
+
+  scriptureReference: 'Ephesians 4:3'
+
+};
 
 
 

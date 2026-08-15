@@ -1,1 +1,103 @@
-<p>footer works!</p>
+<!--==========================================================
+FOOTER SECTION X88441-Y55119
+===========================================================-->
+
+<footer class="Footer-Section-X88441-Y55119">
+
+    <!--======================================================
+    TOP AREA
+    =======================================================-->
+
+    <div class="Footer-Top-X88441-Y55119">
+
+        <div class="container-fluid">
+
+            <div class="row align-items-center">
+
+                <!--==========================================
+                LOGO
+                ==========================================-->
+
+                <div class="col-lg-2 col-md-2 col-12">
+
+                    <div class="Footer-Logo-X88441-Y55119">
+
+                        <img
+                            [src]="footerDataX88441Y55119.logo"
+                            alt="Footer Logo">
+
+                    </div>
+
+                </div>
+
+                <!--==========================================
+                QUOTE
+                ==========================================-->
+
+                <div class="col-lg-10 col-md-10 col-12">
+
+                    <div class="Footer-Quote-X88441-Y55119">
+
+                        <h4>
+
+                            {{footerDataX88441Y55119.quote}}
+
+                        </h4>
+
+                        <h5>
+
+                            {{footerDataX88441Y55119.subtitle}}
+
+                        </h5>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--======================================================
+    BOTTOM SCRIPTURES
+    =======================================================-->
+
+    <div class="Footer-Bottom-X88441-Y55119">
+
+        <div class="container-fluid">
+
+            <div class="Footer-Scripture-Wrapper-X88441-Y55119">
+
+                @for(item of scriptureLinksX88441Y55119; track item.id; let last = $last){
+
+                <a
+
+                    class="Footer-Scripture-Link-X88441-Y55119"
+
+                    (click)="scriptureClickX88441Y55119(item)">
+
+                    {{item.title}}
+
+                </a>
+
+                @if(!last){
+
+                <span class="Footer-Line-X88441-Y55119">
+
+                    |
+
+                </span>
+
+                }
+
+                }
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>

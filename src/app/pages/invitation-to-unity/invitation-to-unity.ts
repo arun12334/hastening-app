@@ -15,8 +15,7 @@ INVITATION TO UNITY BANNER IMAGE X94
 ==========================================================*/
 
 invitationToUnityBannerImageX94 =
-'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShJMXKIUWxtGwoISkBvV2FI9_18uXLrXzhf9oQ-Lc6kiA4oKI27_pUR31r&s=10';
-
+'assets/invitation/invitation-to-unity-banner.png';
 /*==========================================================
 INVITATION TO UNITY BANNER DATA X94
 ==========================================================*/
