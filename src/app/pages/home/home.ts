@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Header } from '../../components/header/header';
 import { RouterLink } from '@angular/router';
 
@@ -8,33 +8,52 @@ import { RouterLink } from '@angular/router';
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
-export class Home {
+export class Home implements OnInit {
 
+  bannerData = {
 
-   bannerData = {
+    id: "xd823-home-banner-yu822982",
 
-        id: "xd823-home-banner-yu822982",
+    imageDesktop: "assets/home/home-header.jpg",
 
-        imageDesktop:
-        "assets/home/home-banner.png",
+    imageMobile: "assets/home/mobile-view.png",
 
-        imageMobile:
-        "assets/home/home-header.jpg",
+    icon: "bi bi-heart-fill",
 
-        icon: "bi bi-heart-fill",
+    titleLine1: "Come, O Thou",
 
-        titleLine1: "Come, O Thou",
+    titleLine2: "King of Kings",
 
-        titleLine2: "King of Kings",
+    subTitleOne: "United in Christ. Strengthened by Scripture.",
 
-        subTitleOne:
-        "United in Christ. Strengthened by Scripture.",
+    subTitleTwo: "Gathered in Love.",
 
-        subTitleTwo:
-        "Gathered in Love.",
+    highlight: "Hastening the Zion of God."
 
-        highlight:
-        "Hastening the Zion of God."
+  };
 
-    }
+  bannerImage: string = '';
+
+  ngOnInit(): void {
+
+    this.updateBannerImage();
+
+  }
+
+  @HostListener('window:resize')
+  onResize(): void {
+
+    this.updateBannerImage();
+
+  }
+
+  updateBannerImage(): void {
+
+    this.bannerImage =
+      window.innerWidth <= 768
+        ? this.bannerData.imageMobile
+        : this.bannerData.imageDesktop;
+
+  }
+
 }

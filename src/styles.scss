@@ -21764,7 +21764,7 @@ CONTAINER
 
     position:relative;
 
-    min-height:520px;
+    min-height:422px;
 
     display:flex;
 
@@ -21827,10 +21827,11 @@ TITLE
     margin:0;
 
     color:#133d83;
+font-size:58px;
 
-    font-size:76px;
+line-height:1.05;
 
-    line-height:1.02;
+max-width:650px;
 
     font-weight:700;
 
@@ -21848,7 +21849,7 @@ DIVIDER
 
     display:flex;
 
-    justify-content:center;
+   justify-content:flex-start;
 
     align-items:center;
 
@@ -21892,7 +21893,7 @@ SUBTITLE
 
 .xd823-banner-subtitle-yu822982{
 
-    text-align:center;
+       text-align:left;
 
 }
 
@@ -21902,10 +21903,9 @@ SUBTITLE
 
     color:#24457d;
 
-    font-size:27px;
+font-size:21px;
 
-    line-height:1.55;
-
+line-height:1.45;
     font-weight:500;
 
     font-family:Georgia,"Times New Roman",serif;
@@ -22335,12 +22335,11 @@ SOFT WHITE OVERLAY
 
     background:linear-gradient(
         90deg,
-        rgba(255,255,255,.88) 0%,
-        rgba(255,255,255,.72) 22%,
-        rgba(255,255,255,.35) 42%,
-        rgba(255,255,255,.05) 65%,
-        rgba(255,255,255,0) 100%
+        rgba(255,255,255,.25) 0%,
+        rgba(255,255,255,.10) 20%,
+        rgba(255,255,255,0) 45%
     );
+
 
     z-index:0;
 
@@ -22448,13 +22447,11 @@ SMOOTH IMAGE
 
 #xd823-home-banner-yu822982{
 
-    image-rendering:auto;
+    background-repeat: no-repeat;
 
-    background-repeat:no-repeat;
+    background-position: center center;
 
-    background-position:center center;
-
-    background-size:cover;
+    background-size: contain;
 
 }
 
@@ -22464,9 +22461,13 @@ CONTENT WIDTH
 
 .xd823-banner-content-yu822982{
 
+
     width:100%;
 
-    max-width:720px;
+    max-width:900px;
+
+
+    text-align:left;
 
 }
 
@@ -22504,7 +22505,7 @@ DESKTOP
 
     .xd823-banner-content-yu822982{
 
-        padding-left:200px;
+        padding-left:350px;
 
     }
 
@@ -22515,17 +22516,7 @@ SMALL DEVICES
 ==========================================================*/
 
 @media (max-width:600px){
-
-    #xd823-home-banner-yu822982::before{
-
-        background:linear-gradient(
-            180deg,
-            rgba(255,255,255,.78),
-            rgba(255,255,255,.30),
-            rgba(255,255,255,.05)
-        );
-
-    }
+ 
 
     .xd823-banner-content-yu822982{
 
