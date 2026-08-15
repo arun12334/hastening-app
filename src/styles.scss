@@ -21745,3 +21745,803 @@ EXTRA SMALL MOBILE
     }
 
 }
+
+
+
+
+
+
+/*==========================================================
+START : xd823 HOME HERO BANNER
+END   : yu822982
+==========================================================*/
+ 
+/*==========================================================
+CONTAINER
+==========================================================*/
+
+.xd823-home-banner-container-yu822982{
+
+    position:relative;
+
+    min-height:520px;
+
+    display:flex;
+
+    align-items:center;
+
+    z-index:2;
+
+}
+
+/*==========================================================
+LEFT CONTENT
+==========================================================*/
+
+.xd823-banner-content-yu822982{
+
+    max-width:760px;
+
+    padding-left:90px;
+
+    padding-top:20px;
+
+}
+
+/*==========================================================
+ICON
+==========================================================*/
+
+.xd823-banner-icon-yu822982{
+
+    width:82px;
+
+    height:82px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:22px;
+
+}
+
+.xd823-banner-icon-yu822982 i{
+
+    font-size:62px;
+
+    color:#d89b15;
+
+}
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.xd823-banner-title-yu822982{
+
+    margin:0;
+
+    color:#133d83;
+
+    font-size:76px;
+
+    line-height:1.02;
+
+    font-weight:700;
+
+    font-family:Georgia,"Times New Roman",serif;
+
+    letter-spacing:-1px;
+
+}
+
+/*==========================================================
+DIVIDER
+==========================================================*/
+
+.xd823-divider-wrapper-yu822982{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-top:26px;
+
+    margin-bottom:26px;
+
+    width:100%;
+
+}
+
+.xd823-divider-line-yu822982{
+
+    width:120px;
+
+    height:2px;
+
+    background:#d7a019;
+
+    border-radius:20px;
+
+}
+
+.xd823-divider-diamond-yu822982{
+
+    width:12px;
+
+    height:12px;
+
+    background:#d7a019;
+
+    transform:rotate(45deg);
+
+}
+
+/*==========================================================
+SUBTITLE
+==========================================================*/
+
+.xd823-banner-subtitle-yu822982{
+
+    text-align:center;
+
+}
+
+.xd823-banner-subtitle-yu822982 p{
+
+    margin:0;
+
+    color:#24457d;
+
+    font-size:27px;
+
+    line-height:1.55;
+
+    font-weight:500;
+
+    font-family:Georgia,"Times New Roman",serif;
+
+}
+
+.xd823-banner-subtitle-yu822982 span{
+
+    font-style:italic;
+
+    font-weight:700;
+
+}
+
+/*==========================================================
+LARGE SCREEN
+==========================================================*/
+
+@media (min-width:1600px){
+
+    .xd823-banner-content-yu822982{
+
+        padding-left:120px;
+
+    }
+
+    .xd823-banner-title-yu822982{
+
+        font-size:88px;
+
+    }
+
+    .xd823-banner-subtitle-yu822982 p{
+
+        font-size:30px;
+
+    }
+
+}
+
+/*==========================================================
+LAPTOP
+==========================================================*/
+
+@media (max-width:1400px){
+
+    .xd823-banner-content-yu822982{
+
+        padding-left:60px;
+
+    }
+
+    .xd823-banner-title-yu822982{
+
+        font-size:64px;
+
+    }
+
+    .xd823-banner-subtitle-yu822982 p{
+
+        font-size:24px;
+
+    }
+
+}
+
+/*==========================================================
+TABLET
+992px
+==========================================================*/
+
+@media (max-width:992px){
+
+#xd823-home-banner-yu822982{
+
+    min-height:460px;
+
+    background-position:center right;
+
+}
+
+.xd823-home-banner-container-yu822982{
+
+    min-height:460px;
+
+}
+
+.xd823-banner-content-yu822982{
+
+    max-width:100%;
+
+    padding:40px;
+
+    text-align:center;
+
+}
+
+.xd823-banner-icon-yu822982{
+
+    justify-content:center;
+
+    margin:0 auto 20px;
+
+}
+
+.xd823-banner-title-yu822982{
+
+    font-size:56px;
+
+}
+
+.xd823-banner-subtitle-yu822982 p{
+
+    font-size:22px;
+
+}
+
+.xd823-divider-line-yu822982{
+
+    width:90px;
+
+}
+
+}
+
+/*==========================================================
+768px
+==========================================================*/
+
+@media (max-width:768px){
+
+#xd823-home-banner-yu822982{
+
+    min-height:390px;
+
+    background-position:center;
+
+    background-size:cover;
+
+}
+
+.xd823-home-banner-container-yu822982{
+
+    min-height:390px;
+
+}
+
+.xd823-banner-content-yu822982{
+
+    padding:30px;
+
+}
+
+.xd823-banner-icon-yu822982{
+
+    width:70px;
+
+    height:70px;
+
+}
+
+.xd823-banner-icon-yu822982 i{
+
+    font-size:48px;
+
+}
+
+.xd823-banner-title-yu822982{
+
+    font-size:46px;
+
+}
+
+.xd823-banner-subtitle-yu822982 p{
+
+    font-size:20px;
+
+}
+
+.xd823-divider-line-yu822982{
+
+    width:70px;
+
+}
+
+}
+
+/*==========================================================
+576px
+==========================================================*/
+
+@media (max-width:576px){
+
+#xd823-home-banner-yu822982{
+
+    min-height:330px;
+
+}
+
+.xd823-home-banner-container-yu822982{
+
+    min-height:330px;
+
+}
+
+.xd823-banner-content-yu822982{
+
+    padding:22px;
+
+}
+
+.xd823-banner-title-yu822982{
+
+    font-size:36px;
+
+    line-height:1.12;
+
+}
+
+.xd823-banner-subtitle-yu822982 p{
+
+    font-size:17px;
+
+    line-height:1.45;
+
+}
+
+.xd823-divider-wrapper-yu822982{
+
+    margin-top:18px;
+
+    margin-bottom:18px;
+
+}
+
+.xd823-divider-line-yu822982{
+
+    width:55px;
+
+}
+
+}
+
+/*==========================================================
+480px
+==========================================================*/
+
+@media (max-width:480px){
+
+#xd823-home-banner-yu822982{
+
+    min-height:300px;
+
+}
+
+.xd823-home-banner-container-yu822982{
+
+    min-height:300px;
+
+}
+
+.xd823-banner-content-yu822982{
+
+    padding:18px;
+
+}
+
+.xd823-banner-icon-yu822982{
+
+    width:60px;
+
+    height:60px;
+
+}
+
+.xd823-banner-icon-yu822982 i{
+
+    font-size:40px;
+
+}
+
+.xd823-banner-title-yu822982{
+
+    font-size:30px;
+
+}
+
+.xd823-banner-subtitle-yu822982 p{
+
+    font-size:15px;
+
+}
+
+}
+
+/*==========================================================
+375px
+==========================================================*/
+
+@media (max-width:375px){
+
+#xd823-home-banner-yu822982{
+
+    min-height:280px;
+
+}
+
+.xd823-home-banner-container-yu822982{
+
+    min-height:280px;
+
+}
+
+.xd823-banner-title-yu822982{
+
+    font-size:27px;
+
+}
+
+.xd823-banner-subtitle-yu822982 p{
+
+    font-size:14px;
+
+}
+
+.xd823-divider-line-yu822982{
+
+    width:45px;
+
+}
+
+}
+
+/*==========================================================
+320px
+==========================================================*/
+
+@media (max-width:320px){
+
+#xd823-home-banner-yu822982{
+
+    min-height:260px;
+
+}
+
+.xd823-home-banner-container-yu822982{
+
+    min-height:260px;
+
+}
+
+.xd823-banner-content-yu822982{
+
+    padding:15px;
+
+}
+
+.xd823-banner-title-yu822982{
+
+    font-size:24px;
+
+}
+
+.xd823-banner-subtitle-yu822982 p{
+
+    font-size:13px;
+
+}
+
+.xd823-divider-line-yu822982{
+
+    width:35px;
+
+}
+
+.xd823-banner-icon-yu822982{
+
+    width:50px;
+
+    height:50px;
+
+}
+
+.xd823-banner-icon-yu822982 i{
+
+    font-size:34px;
+
+}
+
+}
+/*==========================================================
+START : xd823 FINAL POLISH
+END : yu822982
+==========================================================*/
+
+/*----------------------------------------------------------
+GOOGLE FONT (Optional)
+----------------------------------------------------------*/
+
+/*
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+*/
+
+/*==========================================================
+ROOT
+==========================================================*/
+
+#xd823-home-banner-yu822982{
+
+    isolation:isolate;
+
+    position:relative;
+
+}
+
+/*==========================================================
+SOFT WHITE OVERLAY
+==========================================================*/
+
+#xd823-home-banner-yu822982::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        90deg,
+        rgba(255,255,255,.88) 0%,
+        rgba(255,255,255,.72) 22%,
+        rgba(255,255,255,.35) 42%,
+        rgba(255,255,255,.05) 65%,
+        rgba(255,255,255,0) 100%
+    );
+
+    z-index:0;
+
+}
+
+/*==========================================================
+CONTENT
+==========================================================*/
+
+.xd823-home-banner-container-yu822982{
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+/*==========================================================
+ICON
+==========================================================*/
+
+.xd823-banner-icon-yu822982{
+
+    animation:xd823IconFloatYu822982 4s ease-in-out infinite;
+
+}
+
+@keyframes xd823IconFloatYu822982{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-6px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.xd823-banner-title-yu822982{
+
+    color:#153e83;
+
+    text-shadow:
+
+    0 2px 3px rgba(255,255,255,.85),
+
+    0 4px 18px rgba(255,255,255,.45);
+
+}
+
+/*==========================================================
+SUB TITLE
+==========================================================*/
+
+.xd823-banner-subtitle-yu822982{
+
+    margin-top:10px;
+
+}
+
+.xd823-banner-subtitle-yu822982 p{
+
+    text-shadow:
+
+    0 1px 2px rgba(255,255,255,.85);
+
+}
+
+/*==========================================================
+DIVIDER
+==========================================================*/
+
+.xd823-divider-line-yu822982{
+
+    opacity:.95;
+
+}
+
+.xd823-divider-diamond-yu822982{
+
+    box-shadow:
+
+    0 0 8px rgba(214,163,29,.55);
+
+}
+
+/*==========================================================
+SMOOTH IMAGE
+==========================================================*/
+
+#xd823-home-banner-yu822982{
+
+    image-rendering:auto;
+
+    background-repeat:no-repeat;
+
+    background-position:center center;
+
+    background-size:cover;
+
+}
+
+/*==========================================================
+CONTENT WIDTH
+==========================================================*/
+
+.xd823-banner-content-yu822982{
+
+    width:100%;
+
+    max-width:720px;
+
+}
+
+/*==========================================================
+TEXT SELECTION
+==========================================================*/
+
+#xd823-home-banner-yu822982 ::selection{
+
+    background:#153e83;
+
+    color:#ffffff;
+
+}
+
+/*==========================================================
+DESKTOP
+==========================================================*/
+
+@media (min-width:1500px){
+
+    .xd823-banner-content-yu822982{
+
+        padding-left:110px;
+
+    }
+
+}
+
+/*==========================================================
+600px - 1600px
+==========================================================*/
+
+@media (min-width:600px) and (max-width:1600px){
+
+    .xd823-banner-content-yu822982{
+
+        padding-left:200px;
+
+    }
+
+}
+
+/*==========================================================
+SMALL DEVICES
+==========================================================*/
+
+@media (max-width:600px){
+
+    #xd823-home-banner-yu822982::before{
+
+        background:linear-gradient(
+            180deg,
+            rgba(255,255,255,.78),
+            rgba(255,255,255,.30),
+            rgba(255,255,255,.05)
+        );
+
+    }
+
+    .xd823-banner-content-yu822982{
+
+        padding-left:70px;
+
+        padding-right:20px;
+
+        text-align:center;
+
+        margin-top: 70px;
+
+    }
+
+}
+
+ 
+/*==========================================================
+END
+==========================================================*/

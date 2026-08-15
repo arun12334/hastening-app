@@ -1,33 +1,48 @@
  <app-header></app-header>
-<section class="hero-section">
+ 
 
-    <div class="hero-overlay">
+ <!--==========================================================
+START : xd823 HOME HERO BANNER
+END   : yu822982
+===========================================================-->
+<section
+id="xd823-home-banner-yu822982"
+class="xd823-home-banner-yu822982"
+[style.background-image]="'url(' + bannerData.imageDesktop + ')'">
 
-        <div class="container">
+    <div class="container-fluid xd823-home-banner-container-yu822982">
 
-            <div class="row justify-content-center">
+        <div class="row align-items-center h-100">
 
-                <div class="col-lg-8 col-md-10">
+            <!-- LEFT CONTENT -->
 
-                    <div class="hero-content text-center">
+            <div class="col-xl-11 col-lg-7 col-md-12 col-10">
 
-                        <h1>
-                            Come, O Thou
-                            <br>
-                            King of Kings
-                        </h1>
+                <div class="xd823-banner-content-yu822982">
 
-                        <div class="divider">
-                            <span></span>
-                            <i class="bi bi-diamond-fill"></i>
-                            <span></span>
-                        </div>
+                    <h1 class="xd823-banner-title-yu822982">
+                        {{bannerData.titleLine1}}
+                        <br>
+                        {{bannerData.titleLine2}}
+                    </h1>
+
+                    <div class="xd823-divider-wrapper-yu822982">
+
+                        <span class="xd823-divider-line-yu822982"></span>
+
+                        <span class="xd823-divider-diamond-yu822982"></span>
+
+                        <span class="xd823-divider-line-yu822982"></span>
+
+                    </div>
+
+                    <div class="xd823-banner-subtitle-yu822982">
+
+                        <p>{{bannerData.subTitleOne}}</p>
 
                         <p>
-                            United in Christ. Strengthened by Scripture.
-                            <br>
-                            Gathered in Love.
-                            <strong>Hastening the Zion of God.</strong>
+                            {{bannerData.subTitleTwo}}
+                            <span>{{bannerData.highlight}}</span>
                         </p>
 
                     </div>
@@ -36,12 +51,16 @@
 
             </div>
 
+            <div class="col-xl-5 col-lg-5 d-none d-lg-block"></div>
+
         </div>
 
     </div>
 
 </section>
-
+<!--==========================================================
+END : xd823 HOME HERO BANNER
+===========================================================-->
 <!-- ================= FEATURES ================= -->
 
 <section class="py-2 bg-light ">

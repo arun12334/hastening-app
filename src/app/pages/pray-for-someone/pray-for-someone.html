@@ -16,49 +16,97 @@
     <!-- HERO -->
     <!-- ============================================= -->
 
-    <div class="hero-banner">
+ <!--==========================================================
+START : PRAY PAGE HERO BANNER
+START ID : er82443
+END ID : vg822982
+===========================================================-->
 
-        <img
-            src="assets/loving/sharing-a-story-of-love-banner.png"
-            class="hero-image"
-            alt="Prayer Banner">
+<section
+id="er82443-pray-banner-vg822982"
+class="er82443-pray-banner-vg822982"
+[style.background-image]="'url(' + bannerData.bannerImage + ')'">
 
-        <div class="hero-overlay">
+    <div
+    class="container-fluid er82443-pray-banner-container-vg822982">
 
-            <div class="hero-content">
+        <div
+        class="row align-items-center h-100">
 
-                <div class="hero-icon">
+            <!--==============================================
+            LEFT CONTENT
+            ==============================================-->
 
-                    <div class="icon-circle">
+          <div class="col-12">
 
-                        <i class="bi bi-person-raised-hand"></i>
+                <div
+                class="er82443-pray-content-vg822982">
+
+                    <!--======================================
+                    ICON
+                    =======================================-->
+
+                    <div
+                    class="er82443-pray-icon-wrapper-vg822982">
+
+                        <div
+                        class="er82443-pray-icon-circle-vg822982">
+
+                            <i
+                            [class]="bannerData.icon">
+                            </i>
+
+                        </div>
+
+                    </div>
+
+                    <!--======================================
+                    CONTENT
+                    =======================================-->
+
+                    <div
+                    class="er82443-pray-text-wrapper-vg822982">
+
+                        <!-- TITLE -->
+
+                        <h1
+                        class="er82443-pray-title-vg822982">
+
+                            {{bannerData.title}}
+
+                        </h1>
+
+                        <!-- DESCRIPTION -->
+
+                        <p
+                        class="er82443-pray-description-vg822982">
+
+                            {{bannerData.description}}
+
+                        </p>
+
+                        <!-- VERSE -->
+
+                        <h5
+                        class="er82443-pray-verse-vg822982">
+
+                            {{bannerData.verse}}
+
+                        </h5>
 
                     </div>
 
                 </div>
 
-                <div class="hero-text">
+            </div>
 
-                    <h3>
+            <!--==============================================
+            RIGHT SIDE EMPTY
+            Background image contains the temple
+            ==============================================-->
 
-                        Lift and receive prayers in faith.
-
-                    </h3>
-
-                    <p>
-
-                        The effective fervent prayer of a righteous person
-                        has great power and produces wonderful results.
-
-                    </p>
-
-                    <h5>
-
-                        James 5:16
-
-                    </h5>
-
-                </div>
+            <div
+            class="col-lg-5 col-xl-5 d-none d-lg-block">
 
             </div>
 
@@ -66,6 +114,12 @@
 
     </div>
 
+</section>
+
+<!--==========================================================
+END : PRAY PAGE HERO BANNER
+END ID : vg822982
+===========================================================-->
     <!-- ============================================= -->
     <!-- REQUEST BUTTON -->
     <!-- ============================================= -->

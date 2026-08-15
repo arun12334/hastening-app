@@ -416,4 +416,51 @@ showThankYouToast() {
   });
 }
 
+
+
+
+    bannerData = {
+
+        id: "er82443-pray-banner-vg822982",
+
+        /*------------------------------------------
+        Banner Images
+        ------------------------------------------*/
+
+        bannerImage:
+        "assets/home/home-banner.png",
+
+        bannerImageMobile:
+      "assets/home/home-banner.png",
+
+        /*------------------------------------------
+        Icon
+        ------------------------------------------*/
+
+        icon:
+        "bi bi-heart",
+
+        /*------------------------------------------
+        Heading
+        ------------------------------------------*/
+
+        title:
+        "Lift and receive prayers in faith.",
+
+        /*------------------------------------------
+        Description
+        ------------------------------------------*/
+
+        description:
+        "The effectual fervent prayer of a righteous man availeth much.",
+
+        /*------------------------------------------
+        Bible Verse
+        ------------------------------------------*/
+
+        verse:
+        "James 5:16"
+
+    }
+
 }

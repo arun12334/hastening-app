@@ -649,3 +649,578 @@ font-size:24px;
 }
 
 }
+
+
+// end
+
+/*==========================================================
+START : PRAY PAGE HERO BANNER
+START ID : er82443
+END ID : vg822982
+==========================================================*/
+
+#er82443-pray-banner-vg822982{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:300px;
+
+    overflow:hidden;
+
+    background-repeat:no-repeat;
+
+    background-position:center center;
+
+    background-size:cover;
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+/*==========================================================
+LIGHT OVERLAY
+==========================================================*/
+
+#er82443-pray-banner-vg822982::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        90deg,
+        rgba(255,255,255,.82) 0%,
+        rgba(255,255,255,.72) 28%,
+        rgba(255,255,255,.38) 55%,
+        rgba(255,255,255,.05) 100%
+    );
+
+    z-index:1;
+
+}
+
+/*==========================================================
+CONTAINER
+==========================================================*/
+
+.er82443-pray-banner-container-vg822982{
+
+    position:relative;
+
+    z-index:5;
+
+    min-height:255px;
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+/*==========================================================
+LEFT CONTENT
+==========================================================*/
+
+.er82443-pray-content-vg822982{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:30px;
+
+    padding-left:70px;
+
+    max-width:1200px;
+
+}
+
+/*==========================================================
+ICON
+==========================================================*/
+
+.er82443-pray-icon-wrapper-vg822982{
+
+    flex-shrink:0;
+
+}
+
+.er82443-pray-icon-circle-vg822982{
+
+    width:120px;
+
+    height:120px;
+
+    border-radius:50%;
+
+    background:#edf3fb;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:
+
+    0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.er82443-pray-icon-circle-vg822982 i{
+
+    font-size:64px;
+
+    color:#0d63b8;
+
+}
+
+/*==========================================================
+TEXT
+==========================================================*/
+
+.er82443-pray-text-wrapper-vg822982{
+
+    flex:1;
+
+        width:100%;
+
+    max-width:900px;
+}
+
+.er82443-pray-title-vg822982{
+
+    margin:0;
+
+    color:#173f83;
+
+    font-size:30px;
+
+    font-weight:700;
+
+    line-height:1.1;
+
+    font-family:Georgia,"Times New Roman",serif;
+
+}
+
+.er82443-pray-description-vg822982{
+
+       margin-top:8px;
+
+    margin-bottom:8px;
+
+    max-width:520px;
+
+    width:100%;
+
+    font-size:20px;
+
+    line-height:1.35;
+
+    color:#304a72;
+
+    font-family:Georgia,"Times New Roman",serif;
+
+}
+
+.er82443-pray-verse-vg822982{
+
+    margin:0;
+
+    color:#1d5ea7;
+
+    font-size:34px;
+
+    font-style:italic;
+
+    font-weight:700;
+
+    font-family:Georgia,"Times New Roman",serif;
+
+}
+
+/*==========================================================
+LARGE DESKTOP
+==========================================================*/
+
+@media (min-width:1600px){
+
+    .er82443-pray-content-vg822982{
+
+        padding-left:95px;
+
+    }
+
+    .er82443-pray-title-vg822982{
+
+        font-size:62px;
+
+    }
+
+    .er82443-pray-description-vg822982{
+
+        font-size:22px;
+
+    }
+
+}
+
+/*==========================================================
+LAPTOP
+==========================================================*/
+
+@media (max-width:1400px){
+
+    .er82443-pray-content-vg822982{
+
+        padding-left:55px;
+
+        gap:22px;
+
+    }
+
+    .er82443-pray-title-vg822982{
+
+        font-size:40px;
+
+    }
+
+    .er82443-pray-description-vg822982{
+
+        font-size:22px;
+
+    }
+
+    .er82443-pray-verse-vg822982{
+
+        font-size:22px;
+
+    }
+
+    .er82443-pray-icon-circle-vg822982{
+
+        width:95px;
+
+    height:95px;
+
+
+    }
+
+    .er82443-pray-icon-circle-vg822982 i{
+
+        font-size:52px;
+
+    }
+
+}
+
+/*==========================================================
+END
+==========================================================*/
+/*==========================================================
+START : FINAL POLISH
+START ID : er82443
+END ID : vg822982
+==========================================================*/
+
+/*==========================================================
+ROOT
+==========================================================*/
+
+#er82443-pray-banner-vg822982{
+
+    isolation:isolate;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/*==========================================================
+SOFT WHITE OVERLAY
+==========================================================*/
+
+#er82443-pray-banner-vg822982::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        90deg,
+        rgba(255,255,255,.88) 0%,
+        rgba(255,255,255,.72) 22%,
+        rgba(255,255,255,.42) 46%,
+        rgba(255,255,255,.12) 70%,
+        rgba(255,255,255,0) 100%
+    );
+
+    z-index:0;
+
+}
+
+/*==========================================================
+CONTENT
+==========================================================*/
+
+.er82443-pray-banner-container-vg822982{
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+.er82443-pray-content-vg822982{
+
+    position:relative;
+
+    z-index:10;
+
+}
+
+/*==========================================================
+ICON ANIMATION
+==========================================================*/
+
+.er82443-pray-icon-circle-vg822982{
+
+    animation:er82443IconFloatVg822982 4s ease-in-out infinite;
+
+}
+
+@keyframes er82443IconFloatVg822982{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-6px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==========================================================
+ICON HOVER
+==========================================================*/
+
+.er82443-pray-icon-circle-vg822982{
+
+    transition:.35s ease;
+
+}
+
+.er82443-pray-icon-circle-vg822982:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:
+
+    0 18px 35px rgba(0,0,0,.12);
+
+}
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.er82443-pray-title-vg822982{
+
+    text-shadow:
+
+    0 2px 4px rgba(255,255,255,.85),
+
+    0 6px 18px rgba(255,255,255,.30);
+
+}
+
+/*==========================================================
+DESCRIPTION
+==========================================================*/
+
+.er82443-pray-description-vg822982{
+
+    text-shadow:
+
+    0 1px 2px rgba(255,255,255,.80);
+
+}
+
+/*==========================================================
+VERSE
+==========================================================*/
+
+.er82443-pray-verse-vg822982{
+
+    letter-spacing:.3px;
+
+    text-shadow:
+
+    0 1px 2px rgba(255,255,255,.85);
+
+}
+
+/*==========================================================
+IMAGE SETTINGS
+==========================================================*/
+
+#er82443-pray-banner-vg822982{
+
+    background-repeat:no-repeat;
+
+    background-position:center;
+
+    background-size:cover;
+
+    image-rendering:auto;
+
+}
+
+/*==========================================================
+DESKTOP CONTENT WIDTH
+==========================================================*/
+
+.er82443-pray-content-vg822982{
+
+    max-width:920px;
+
+}
+
+/*==========================================================
+DESKTOP
+==========================================================*/
+
+@media (min-width:1600px){
+
+    .er82443-pray-content-vg822982{
+
+        padding-left:100px;
+
+    }
+
+}
+
+/*==========================================================
+600px - 1600px
+==========================================================*/
+
+@media (min-width:600px) and (max-width:1600px){
+
+    .er82443-pray-content-vg822982{
+
+        padding-left:80px;
+
+    }
+
+}
+
+/*==========================================================
+MOBILE
+==========================================================*/
+
+@media (max-width:600px){
+
+    #er82443-pray-banner-vg822982::before{
+
+        background:linear-gradient(
+            180deg,
+            rgba(255,255,255,.82),
+            rgba(255,255,255,.45),
+            rgba(255,255,255,.12)
+        );
+
+    }
+
+    .er82443-pray-content-vg822982{
+
+        padding-left:20px;
+
+        padding-right:20px;
+
+        text-align:center;
+
+    }
+
+}
+
+/*==========================================================
+TEXT SELECTION
+==========================================================*/
+
+#er82443-pray-banner-vg822982 ::selection{
+
+    background:#0f4d97;
+
+    color:#ffffff;
+
+}
+
+/*==========================================================
+END
+==========================================================*/
+
+@media (max-width:480px){
+
+    .er82443-pray-content-vg822982{
+
+        gap:12px;
+
+        padding:12px;
+        margin-top: 55px;
+
+    }
+
+    .er82443-pray-icon-circle-vg822982{
+
+        width:58px;
+
+        height:58px;
+
+    }
+
+    .er82443-pray-icon-circle-vg822982 i{
+
+        font-size:30px;
+
+    }
+
+    .er82443-pray-title-vg822982{
+
+        font-size:18px;
+
+    }
+
+    .er82443-pray-description-vg822982{
+
+        font-size:12px;
+
+    }
+
+    .er82443-pray-verse-vg822982{
+
+        font-size:15px;
+
+    }
+
+}

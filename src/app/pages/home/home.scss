@@ -6,7 +6,7 @@ HERO SECTION
 
     position:relative;
 
-    background:url("https://raw.githubusercontent.com/arun12334/hastening-web-app/refs/heads/main/home-header.jpg") center center no-repeat;
+    background:url("https://raw.githubusercontent.com/arun12334/hastening-web-app/refs/heads/main/home-banner.png") center center no-repeat;
 
     background-size:cover;
 
@@ -233,37 +233,7 @@ width:120px;
 
 }
 
-
-@media (max-width:480px){
-
-.hero-section{
-
-    height:260px;
-
-    background-image:url("https://raw.githubusercontent.com/arun12334/hastening-web-app/refs/heads/main/home-header-mobile.jpg");
-
-    background-size:cover;
-
-    background-position:center;
-    
-    margin-top: 80px;
-
-}
-
-.hero-content h1{
-
-    font-size:40px;
-
-}
-
-.hero-content p{
-
-    font-size:20px;
-
-}
-
-}
-
+ 
 
 
 
@@ -794,3 +764,4 @@ height:60px;
 
 
 
+// 
