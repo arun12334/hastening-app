@@ -106,7 +106,7 @@ bbUpcomingEvents = [
     area: 'Pineview',
 
     image:
-      'https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=600',
+      'assets/neighborhood/event1.jpg',
 
     buttonText: 'RSVP'
   },
@@ -124,8 +124,8 @@ bbUpcomingEvents = [
 
     area: 'Maple Ridge',
 
-    image:
-      'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600',
+      image:
+      'assets/neighborhood/event2.jpg',
 
     buttonText: 'RSVP'
   },
@@ -143,8 +143,8 @@ bbUpcomingEvents = [
 
     area: 'Hillside',
 
-    image:
-      'https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=600',
+     image:
+      'assets/neighborhood/event3.jpg',
 
     buttonText: 'RSVP'
   },
@@ -163,7 +163,7 @@ bbUpcomingEvents = [
     area: 'Pavilion',
 
     image:
-      'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600',
+      'assets/neighborhood/event4.jpg',
 
     buttonText: 'RSVP'
   }

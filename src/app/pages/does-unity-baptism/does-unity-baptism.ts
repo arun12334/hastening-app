@@ -74,7 +74,7 @@ export class DoesUnityBaptism {
 
     ],
 
-    image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=2200&q=80'
+    image: 'assets/does-unity/unity-discussion.jpg'
 
   };
 
@@ -95,7 +95,7 @@ export class DoesUnityBaptism {
       description:
         'Unity is built through faith, repentance, love, patience and service.',
 
-      image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=2200&q=80',
+         image: 'assets/does-unity/journey.jpg',
 
       button: 'Learn More',
 
@@ -112,7 +112,7 @@ export class DoesUnityBaptism {
       description:
         'Study the scriptures, pray and seek personal revelation.',
 
-      image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=2200&q=80',
+      image: 'assets/does-unity/scripture.jpg',
 
       button: 'Explore Resources',
 
@@ -129,7 +129,7 @@ export class DoesUnityBaptism {
       description:
         'Join others who are seeking Christ and build Zion together.',
 
-      image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=2200&q=80',
+      image: 'assets/does-unity/fellowship.jpg',
 
       button: 'Find a Group',
 

@@ -350,4 +350,141 @@ AUTHENTICATION SECURITY FEATURE SECTION X92
 
 </section>
 
+<!--==========================================================
+ADDITIONAL SECURITY TOOLS
+X448840-Y992211
+===========================================================-->
+
+<section class="Additional-Security-Section-X448840-Y992211">
+
+    <div class="container-fluid">
+
+        <div class="Additional-Security-Wrapper-X448840-Y992211">
+
+            <!--======================================================
+            LEFT PANEL
+            =======================================================-->
+
+            <div class="Additional-Security-Left-X448840-Y992211">
+
+                <!--==============================================
+                HEADER
+                ==============================================-->
+
+                <div class="Additional-Security-Header-X448840-Y992211">
+
+                    <h2>
+
+                        {{securitySectionX448840Y992211.title}}
+
+                    </h2>
+
+                    <p>
+
+                        {{securitySectionX448840Y992211.description}}
+
+                    </p>
+
+                </div>
+
+                <!--==============================================
+                SECURITY TOOLS
+                ==============================================-->
+
+                <div class="Security-Tools-Grid-X448840-Y992211">
+
+                    @for(tool of securityToolsX448840Y992211; track tool.id){
+
+                    <div
+
+                        class="Security-Tool-Card-X448840-Y992211"
+
+                        (click)="securityToolClickX448840Y992211(tool)">
+
+                        <!--========================
+                        ICON
+                        =========================-->
+
+                        <div class="Security-Tool-Icon-X448840-Y992211">
+
+                            <i
+
+                                [class]="tool.icon"
+
+                                [style.color]="tool.color">
+
+                            </i>
+
+                        </div>
+
+                        <!--========================
+                        CONTENT
+                        =========================-->
+
+                        <div class="Security-Tool-Content-X448840-Y992211">
+
+                            <h4>
+
+                                {{tool.title}}
+
+                            </h4>
+
+                            <p>
+
+                                {{tool.description}}
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    }
+
+                </div>
+
+            </div>
+
+            <!--======================================================
+            RIGHT PANEL
+            =======================================================-->
+
+            <div class="Support-Panel-X448840-Y992211">
+
+                <div class="Support-Panel-Content-X448840-Y992211">
+
+                    <h2>
+
+                        {{supportPanelX448840Y992211.title}}
+
+                    </h2>
+
+                    <p>
+
+                        {{supportPanelX448840Y992211.description}}
+
+                    </p>
+
+                    <button
+
+                        class="Support-Button-X448840-Y992211"
+
+                        (click)="contactSupportClickX448840Y992211()">
+
+                        {{supportPanelX448840Y992211.buttonText}}
+
+                    </button>
+
+                </div>
+
+        
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
 <app-footer></app-footer>

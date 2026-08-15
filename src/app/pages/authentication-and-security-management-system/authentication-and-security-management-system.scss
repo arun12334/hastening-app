@@ -1,54 +1,118 @@
 /*==========================================================
-SECTION X92
+ADDITIONAL SECURITY SECTION
+X448840-Y992211
 ==========================================================*/
 
-.Authentication-Security-Feature-Section-X92{
+.Additional-Security-Section-X448840-Y992211{
 
-    padding:55px 0;
+    // padding:55px 0;
+    margin-bottom: 20px;
 
-    background:#F8F9FB;
+    background:#f7f9fc;
 
 }
 
-/*==========================================================
-CARD X92
-==========================================================*/
+.Additional-Security-Wrapper-X448840-Y992211{
 
-.Authentication-Security-Feature-Card-X92{
+    background:#ffffff;
 
-    height:100%;
-
-    min-height:640px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    background:#FFFFFF;
-
-    border:1px solid #E8EBF2;
-
-    border-radius:18px;
+    border-radius:26px;
 
     overflow:hidden;
 
-    box-shadow:0 6px 18px rgba(0,0,0,.05);
+    display:grid;
+
+    grid-template-columns:72% 28%;
+
+    border:1px solid #e8edf6;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
 
 }
 
 /*==========================================================
-HEADER
+LEFT PANEL
 ==========================================================*/
 
-.Authentication-Security-Feature-Header-X92{
+.Additional-Security-Left-X448840-Y992211{
+
+    padding:34px 36px;
+
+}
+
+.Additional-Security-Header-X448840-Y992211{
+
+    margin-bottom:28px;
+
+}
+
+.Additional-Security-Header-X448840-Y992211 h2{
+
+    margin:0;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#173F86;
+
+    font-family:"Libre Baskerville", serif;
+
+}
+
+.Additional-Security-Header-X448840-Y992211 p{
+
+    margin-top:6px;
+
+    margin-bottom:0;
+
+    font-size:14px;
+
+    color:#6c7483;
+
+    line-height:1.7;
+
+}
+
+/*==========================================================
+TOOLS GRID
+==========================================================*/
+
+.Security-Tools-Grid-X448840-Y992211{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+/*==========================================================
+CARD
+==========================================================*/
+
+.Security-Tool-Card-X448840-Y992211{
 
     display:flex;
 
     align-items:flex-start;
 
-    gap:18px;
+    gap:14px;
 
-    padding:28px 24px 18px;
+    padding:14px;
+
+    border-radius:16px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.Security-Tool-Card-X448840-Y992211:hover{
+
+    background:#f8fbff;
 
 }
 
@@ -56,65 +120,121 @@ HEADER
 ICON
 ==========================================================*/
 
-.Authentication-Security-Feature-Icon-X92{
+.Security-Tool-Icon-X448840-Y992211{
 
-    flex-shrink:0;
+    width:58px;
 
-    width:72px;
+    height:58px;
 
-    height:72px;
+    min-width:58px;
 
-    border-radius:18px;
+    border-radius:14px;
 
-    background:#F8F9FC;
+    background:#eef4ff;
 
     display:flex;
 
-    justify-content:center;
-
     align-items:center;
 
-    border:1px solid #E8E8E8;
+    justify-content:center;
 
 }
 
-.Authentication-Security-Feature-Icon-X92 i{
+.Security-Tool-Icon-X448840-Y992211 i{
 
-    font-size:44px;
+    font-size:30px;
 
 }
 
 /*==========================================================
-TITLE AREA
+CONTENT
 ==========================================================*/
 
-.Authentication-Security-Feature-Heading-X92{
+.Security-Tool-Content-X448840-Y992211{
 
     flex:1;
 
 }
 
-.Authentication-Security-Feature-Title-X92{
+.Security-Tool-Content-X448840-Y992211 h4{
 
-    margin:0;
+    margin:0 0 8px;
 
-    color:#1F3E73;
+    color:#173F86;
 
-    font-size:28px;
+    font-size:17px;
 
     font-weight:700;
 
-    line-height:1.25;
+    line-height:1.35;
 
 }
 
-.Authentication-Security-Feature-Description-X92{
+.Security-Tool-Content-X448840-Y992211 p{
 
-    margin-top:10px;
+    margin:0;
 
-    margin-bottom:0;
+    color:#6b7483;
 
-    color:#666;
+    font-size:14px;
+
+    line-height:1.65;
+
+}
+
+/*==========================================================
+RIGHT PANEL
+==========================================================*/
+
+.Support-Panel-X448840-Y992211{
+
+    display:grid;
+
+    grid-template-columns:58% 42%;
+
+    border-left:1px solid #edf2f8;
+
+    min-height:260px;
+
+}
+
+/*==========================================================
+SUPPORT CONTENT
+==========================================================*/
+
+.Support-Panel-Content-X448840-Y992211{
+
+    padding:34px 28px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+.Support-Panel-Content-X448840-Y992211 h2{
+
+    margin:0;
+
+    color:#173F86;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    line-height:1.3;
+
+    font-family:"Libre Baskerville", serif;
+
+}
+
+.Support-Panel-Content-X448840-Y992211 p{
+
+    margin:16px 0 22px;
+
+    color:#6c7483;
 
     font-size:15px;
 
@@ -123,116 +243,22 @@ TITLE AREA
 }
 
 /*==========================================================
-CHECKLIST
-==========================================================*/
-
-.Authentication-Security-Feature-Checklist-X92{
-
-    flex:1;
-
-    padding:10px 24px 0;
-
-}
-
-/*==========================================================
-CHECK ITEM
-==========================================================*/
-
-.Authentication-Security-Feature-Checklist-Item-X92{
-
-    display:flex;
-
-    align-items:flex-start;
-
-    gap:14px;
-
-    margin-bottom:22px;
-
-}
-
-/*==========================================================
-CHECK ICON
-==========================================================*/
-
-.Authentication-Security-Feature-Checklist-Icon-X92{
-
-    flex-shrink:0;
-
-    margin-top:2px;
-
-}
-
-.Authentication-Security-Feature-Checklist-Icon-X92 i{
-
-    font-size:19px;
-
-}
-
-/*==========================================================
-CHECK CONTENT
-==========================================================*/
-
-.Authentication-Security-Feature-Checklist-Content-X92{
-
-    flex:1;
-
-}
-
-.Authentication-Security-Feature-Checklist-Content-X92 h5{
-
-    margin:0;
-
-    color:#2F3D58;
-
-    font-size:17px;
-
-    font-weight:700;
-
-    line-height:1.4;
-
-}
-
-.Authentication-Security-Feature-Checklist-Content-X92 p{
-
-    margin-top:4px;
-
-    margin-bottom:0;
-
-    color:#6B7280;
-
-    font-size:14px;
-
-    line-height:1.6;
-
-}
-
-/*==========================================================
-BUTTON AREA
-==========================================================*/
-
-.Authentication-Security-Feature-Button-Wrapper-X92{
-
-    padding:24px;
-
-    margin-top:auto;
-
-}
-
-/*==========================================================
 BUTTON
 ==========================================================*/
 
-.Authentication-Security-Feature-Button-X92{
-
-    width:100%;
-
-    height:48px;
+.Support-Button-X448840-Y992211{
 
     border:none;
 
+    width:185px;
+
+    height:46px;
+
     border-radius:10px;
 
-    color:#FFFFFF;
+    background:#D89D21;
+
+    color:#ffffff;
 
     font-size:15px;
 
@@ -240,50 +266,83 @@ BUTTON
 
     cursor:pointer;
 
-    transition:.30s;
+    transition:.35s;
 
 }
 
 /*==========================================================
-FOCUS
+IMAGE
 ==========================================================*/
 
-.Authentication-Security-Feature-Button-X92:focus{
+.Support-Image-X448840-Y992211{
 
-    outline:none;
+    overflow:hidden;
+
+}
+
+.Support-Image-X448840-Y992211 img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
 
 }
 
 /*==========================================================
-CARD HOVER X92
+HOVER EFFECTS
+X448840-Y992211
 ==========================================================*/
 
-.Authentication-Security-Feature-Card-X92{
+/*==========================================================
+MAIN WRAPPER
+==========================================================*/
 
-    position:relative;
+.Additional-Security-Wrapper-X448840-Y992211{
 
     transition:all .35s ease;
 
-    cursor:pointer;
-
 }
 
-.Authentication-Security-Feature-Card-X92:hover{
+.Additional-Security-Wrapper-X448840-Y992211:hover{
 
-    transform:translateY(-10px);
-
-    border-color:#D8E1EC;
-
-    box-shadow:
-    0 18px 40px rgba(0,0,0,.12);
+    box-shadow:0 20px 55px rgba(0,0,0,.12);
 
 }
 
 /*==========================================================
-SHINE EFFECT
+LEFT PANEL
 ==========================================================*/
 
-.Authentication-Security-Feature-Card-X92::before{
+.Additional-Security-Left-X448840-Y992211{
+
+    transition:.35s;
+
+}
+
+.Additional-Security-Wrapper-X448840-Y992211:hover
+.Additional-Security-Left-X448840-Y992211{
+
+    background:#fcfdff;
+
+}
+
+/*==========================================================
+SECURITY TOOL CARD
+==========================================================*/
+
+.Security-Tool-Card-X448840-Y992211{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.Security-Tool-Card-X448840-Y992211::before{
 
     content:"";
 
@@ -291,33 +350,36 @@ SHINE EFFECT
 
     top:0;
 
-    left:-140%;
+    left:-100%;
 
-    width:45%;
+    width:100%;
 
     height:100%;
 
     background:linear-gradient(
-
         90deg,
-
         transparent,
-
-        rgba(255,255,255,.45),
-
+        rgba(216,157,33,.12),
         transparent
-
     );
 
-    transition:1s;
-
-    pointer-events:none;
+    transition:.65s;
 
 }
 
-.Authentication-Security-Feature-Card-X92:hover::before{
+.Security-Tool-Card-X448840-Y992211:hover::before{
 
-    left:140%;
+    left:100%;
+
+}
+
+.Security-Tool-Card-X448840-Y992211:hover{
+
+    background:#ffffff;
+
+    transform:translateY(-6px);
+
+    box-shadow:0 12px 30px rgba(23,63,134,.10);
 
 }
 
@@ -325,36 +387,31 @@ SHINE EFFECT
 ICON
 ==========================================================*/
 
-.Authentication-Security-Feature-Icon-X92{
+.Security-Tool-Card-X448840-Y992211:hover
+.Security-Tool-Icon-X448840-Y992211{
 
-    transition:all .35s ease;
-
-}
-
-.Authentication-Security-Feature-Card-X92:hover
-.Authentication-Security-Feature-Icon-X92{
+    background:#173F86;
 
     transform:rotate(-8deg) scale(1.08);
 
-    box-shadow:
-    0 10px 25px rgba(0,0,0,.10);
-
 }
 
-/*==========================================================
-ICON SCALE
-==========================================================*/
-
-.Authentication-Security-Feature-Icon-X92 i{
+.Security-Tool-Icon-X448840-Y992211{
 
     transition:.35s;
 
 }
 
-.Authentication-Security-Feature-Card-X92:hover
-.Authentication-Security-Feature-Icon-X92 i{
+.Security-Tool-Icon-X448840-Y992211 i{
 
-    transform:scale(1.12);
+    transition:.35s;
+
+}
+
+.Security-Tool-Card-X448840-Y992211:hover
+.Security-Tool-Icon-X448840-Y992211 i{
+
+    color:#ffffff !important;
 
 }
 
@@ -362,63 +419,32 @@ ICON SCALE
 TITLE
 ==========================================================*/
 
-.Authentication-Security-Feature-Title-X92{
+.Security-Tool-Content-X448840-Y992211 h4{
 
     transition:.35s;
 
 }
 
-.Authentication-Security-Feature-Card-X92:hover
-.Authentication-Security-Feature-Title-X92{
+.Security-Tool-Card-X448840-Y992211:hover
+.Security-Tool-Content-X448840-Y992211 h4{
 
-    color:#214A8B;
+    color:#D89D21;
 
 }
 
 /*==========================================================
-DESCRIPTION
+SUPPORT PANEL
 ==========================================================*/
 
-.Authentication-Security-Feature-Description-X92{
+.Support-Panel-X448840-Y992211{
 
     transition:.35s;
 
 }
 
-.Authentication-Security-Feature-Card-X92:hover
-.Authentication-Security-Feature-Description-X92{
+.Support-Panel-X448840-Y992211:hover{
 
-    color:#444;
-
-}
-
-/*==========================================================
-CHECKLIST
-==========================================================*/
-
-.Authentication-Security-Feature-Checklist-Item-X92{
-
-    transition:.30s;
-
-}
-
-.Authentication-Security-Feature-Card-X92:hover
-.Authentication-Security-Feature-Checklist-Item-X92{
-
-    transform:translateX(4px);
-
-}
-
-.Authentication-Security-Feature-Checklist-Icon-X92 i{
-
-    transition:.30s;
-
-}
-
-.Authentication-Security-Feature-Card-X92:hover
-.Authentication-Security-Feature-Checklist-Icon-X92 i{
-
-    transform:scale(1.15);
+    background:#fcfdff;
 
 }
 
@@ -426,81 +452,137 @@ CHECKLIST
 BUTTON
 ==========================================================*/
 
-.Authentication-Security-Feature-Button-X92{
+.Support-Button-X448840-Y992211:hover{
 
-    transition:all .30s ease;
+    background:#173F86;
+
+    transform:translateY(-4px);
+
+    box-shadow:0 14px 32px rgba(23,63,134,.25);
 
 }
 
-.Authentication-Security-Feature-Button-X92:hover{
+.Support-Button-X448840-Y992211:active{
 
-    filter:brightness(.92);
-
-    transform:translateY(-2px);
-
-    box-shadow:
-    0 10px 22px rgba(0,0,0,.20);
+    transform:scale(.96);
 
 }
 
 /*==========================================================
-SMOOTH
+IMAGE
 ==========================================================*/
 
-.Authentication-Security-Feature-Card-X92,
-.Authentication-Security-Feature-Icon-X92,
-.Authentication-Security-Feature-Icon-X92 i,
-.Authentication-Security-Feature-Title-X92,
-.Authentication-Security-Feature-Description-X92,
-.Authentication-Security-Feature-Checklist-Item-X92,
-.Authentication-Security-Feature-Checklist-Icon-X92 i,
-.Authentication-Security-Feature-Button-X92{
+.Support-Image-X448840-Y992211{
+
+    overflow:hidden;
+
+}
+
+.Support-Image-X448840-Y992211 img{
+
+    transition:transform .6s ease;
+
+}
+
+.Support-Panel-X448840-Y992211:hover
+.Support-Image-X448840-Y992211 img{
+
+    transform:scale(1.08);
+
+}
+
+/*==========================================================
+HEADINGS
+==========================================================*/
+
+.Additional-Security-Header-X448840-Y992211 h2,
+
+.Support-Panel-Content-X448840-Y992211 h2{
+
+    transition:.35s;
+
+}
+
+.Additional-Security-Wrapper-X448840-Y992211:hover
+.Additional-Security-Header-X448840-Y992211 h2,
+
+.Support-Panel-X448840-Y992211:hover
+.Support-Panel-Content-X448840-Y992211 h2{
+
+    color:#D89D21;
+
+}
+
+/*==========================================================
+SMOOTH TRANSITIONS
+==========================================================*/
+
+.Security-Tool-Card-X448840-Y992211,
+
+.Security-Tool-Icon-X448840-Y992211,
+
+.Security-Tool-Content-X448840-Y992211 h4,
+
+.Support-Button-X448840-Y992211,
+
+.Support-Image-X448840-Y992211 img,
+
+.Additional-Security-Wrapper-X448840-Y992211,
+
+.Support-Panel-X448840-Y992211{
 
     transition:all .35s ease;
 
 }
 
 /*==========================================================
-LAPTOP (1200px)
+RESPONSIVE
+X448840-Y992211
 ==========================================================*/
 
-@media(max-width:1199px){
+/*==========================================================
+LAPTOP
+==========================================================*/
 
-    .Authentication-Security-Feature-Section-X92{
+@media (max-width:1200px){
 
-        padding:45px 0;
+.Additional-Security-Wrapper-X448840-Y992211{
 
-    }
+    grid-template-columns:65% 35%;
 
-    .Authentication-Security-Feature-Card-X92{
+}
 
-        min-height:600px;
+.Security-Tools-Grid-X448840-Y992211{
 
-    }
+    grid-template-columns:repeat(2,1fr);
 
-    .Authentication-Security-Feature-Header-X92{
+    gap:18px;
 
-        padding:24px 20px 16px;
+}
 
-    }
+.Additional-Security-Header-X448840-Y992211 h2{
 
-    .Authentication-Security-Feature-Checklist-X92{
+    font-size:22px;
 
-        padding:10px 20px 0;
+}
 
-    }
+.Support-Panel-Content-X448840-Y992211 h2{
 
-    .Authentication-Security-Feature-Button-Wrapper-X92{
+    font-size:20px;
 
-        padding:20px;
+}
 
-    }
+.Support-Panel-X448840-Y992211{
 
-    .Authentication-Security-Feature-Title-X92{
+    grid-template-columns:1fr;
 
-        font-size:24px;
+}
 
-    }
+.Support-Image-X448840-Y992211{
+
+    height:220px;
+
+}
 
 }
 
@@ -508,69 +590,71 @@ LAPTOP (1200px)
 TABLET
 ==========================================================*/
 
-@media(max-width:991px){
+@media (max-width:991px){
 
-    .Authentication-Security-Feature-Section-X92{
+.Additional-Security-Section-X448840-Y992211{
 
-        padding:35px 0;
+    padding:40px 0;
 
-    }
+}
 
-    .Authentication-Security-Feature-Card-X92{
+.Additional-Security-Wrapper-X448840-Y992211{
 
-        min-height:560px;
+    grid-template-columns:1fr;
 
-    }
+    border-radius:22px;
 
-    .Authentication-Security-Feature-Header-X92{
+}
 
-        padding:22px;
+.Additional-Security-Left-X448840-Y992211{
 
-    }
+    padding:28px;
 
-    .Authentication-Security-Feature-Icon-X92{
+}
 
-        width:64px;
+.Security-Tools-Grid-X448840-Y992211{
 
-        height:64px;
+    grid-template-columns:repeat(2,1fr);
 
-    }
+    gap:18px;
 
-    .Authentication-Security-Feature-Icon-X92 i{
+}
 
-        font-size:36px;
+.Support-Panel-X448840-Y992211{
 
-    }
+    border-left:none;
 
-    .Authentication-Security-Feature-Title-X92{
+    border-top:1px solid #edf2f8;
 
-        font-size:22px;
+    grid-template-columns:1fr;
 
-    }
+}
 
-    .Authentication-Security-Feature-Description-X92{
+.Support-Panel-Content-X448840-Y992211{
 
-        font-size:14px;
+    order:2;
 
-    }
+    padding:28px;
 
-    .Authentication-Security-Feature-Checklist-X92{
+    text-align:center;
 
-        padding:5px 22px 0;
+    align-items:center;
 
-    }
+}
 
-    .Authentication-Security-Feature-Checklist-Content-X92 h5{
+.Support-Image-X448840-Y992211{
 
-        font-size:16px;
+    order:1;
 
-    }
+    height:260px;
 
-    .Authentication-Security-Feature-Checklist-Content-X92 p{
+}
 
-        font-size:13px;
+.Support-Button-X448840-Y992211{
 
-    }
+    width:220px;
+
+}
 
 }
 
@@ -578,109 +662,115 @@ TABLET
 MOBILE
 ==========================================================*/
 
-@media(max-width:767px){
+@media (max-width:767px){
 
-    .Authentication-Security-Feature-Section-X92{
+.Additional-Security-Section-X448840-Y992211{
 
-        padding:30px 0;
+    padding:30px 0;
 
-    }
+}
 
-    .Authentication-Security-Feature-Card-X92{
+.Additional-Security-Left-X448840-Y992211{
 
-        min-height:auto;
+    padding:22px;
 
-        border-radius:16px;
+}
 
-    }
+.Additional-Security-Header-X448840-Y992211{
 
-    .Authentication-Security-Feature-Header-X92{
+    text-align:center;
 
-        flex-direction:column;
+    margin-bottom:24px;
 
-        align-items:center;
+}
 
-        text-align:center;
+.Additional-Security-Header-X448840-Y992211 h2{
 
-        padding:24px 20px 18px;
+    font-size:22px;
 
-        gap:14px;
+}
 
-    }
+.Additional-Security-Header-X448840-Y992211 p{
 
-    .Authentication-Security-Feature-Icon-X92{
+    font-size:14px;
 
-        width:62px;
+}
 
-        height:62px;
+.Security-Tools-Grid-X448840-Y992211{
 
-    }
+    grid-template-columns:1fr;
 
-    .Authentication-Security-Feature-Icon-X92 i{
+    gap:16px;
 
-        font-size:34px;
+}
 
-    }
+.Security-Tool-Card-X448840-Y992211{
 
-    .Authentication-Security-Feature-Title-X92{
+    padding:18px;
 
-        font-size:21px;
+}
 
-    }
+.Security-Tool-Icon-X448840-Y992211{
 
-    .Authentication-Security-Feature-Description-X92{
+    width:54px;
 
-        font-size:14px;
+    height:54px;
 
-        line-height:1.7;
+    min-width:54px;
 
-    }
+}
 
-    .Authentication-Security-Feature-Checklist-X92{
+.Security-Tool-Icon-X448840-Y992211 i{
 
-        padding:0 20px;
+    font-size:26px;
 
-    }
+}
 
-    .Authentication-Security-Feature-Checklist-Item-X92{
+.Security-Tool-Content-X448840-Y992211 h4{
 
-        gap:12px;
+    font-size:16px;
 
-        margin-bottom:18px;
+}
 
-    }
+.Security-Tool-Content-X448840-Y992211 p{
 
-    .Authentication-Security-Feature-Checklist-Icon-X92 i{
+    font-size:13px;
 
-        font-size:17px;
+}
 
-    }
+.Support-Panel-Content-X448840-Y992211{
 
-    .Authentication-Security-Feature-Checklist-Content-X92 h5{
+    padding:24px;
 
-        font-size:15px;
+}
 
-    }
+.Support-Panel-Content-X448840-Y992211 h2{
 
-    .Authentication-Security-Feature-Checklist-Content-X92 p{
+    font-size:22px;
 
-        font-size:13px;
+}
 
-    }
+.Support-Panel-Content-X448840-Y992211 p{
 
-    .Authentication-Security-Feature-Button-Wrapper-X92{
+    font-size:14px;
 
-        padding:20px;
+}
 
-    }
+.Support-Button-X448840-Y992211{
 
-    .Authentication-Security-Feature-Button-X92{
+    width:100%;
 
-        height:46px;
+    height:48px;
 
-        font-size:14px;
+    font-size:15px;
 
-    }
+}
+
+.Support-Image-X448840-Y992211{
+
+    height:220px;
+
+}
 
 }
 
@@ -688,144 +778,118 @@ MOBILE
 SMALL MOBILE
 ==========================================================*/
 
-@media(max-width:575px){
+@media (max-width:480px){
 
-    .Authentication-Security-Feature-Card-X92{
+.Additional-Security-Left-X448840-Y992211{
 
-        padding:0;
+    padding:18px;
 
-    }
+}
 
-    .Authentication-Security-Feature-Header-X92{
+.Additional-Security-Header-X448840-Y992211 h2{
 
-        padding:20px 16px 16px;
+    font-size:20px;
 
-    }
+}
 
-    .Authentication-Security-Feature-Icon-X92{
+.Additional-Security-Header-X448840-Y992211 p{
 
-        width:56px;
+    font-size:13px;
 
-        height:56px;
+}
 
-    }
+.Security-Tool-Card-X448840-Y992211{
 
-    .Authentication-Security-Feature-Icon-X92 i{
+    gap:12px;
 
-        font-size:30px;
+    padding:16px;
 
-    }
+}
 
-    .Authentication-Security-Feature-Title-X92{
+.Security-Tool-Icon-X448840-Y992211{
 
-        font-size:19px;
+    width:48px;
 
-    }
+    height:48px;
 
-    .Authentication-Security-Feature-Description-X92{
+    min-width:48px;
 
-        font-size:13px;
+    border-radius:12px;
 
-    }
+}
 
-    .Authentication-Security-Feature-Checklist-X92{
+.Security-Tool-Icon-X448840-Y992211 i{
 
-        padding:0 16px;
+    font-size:22px;
 
-    }
+}
 
-    .Authentication-Security-Feature-Checklist-Item-X92{
+.Security-Tool-Content-X448840-Y992211 h4{
 
-        margin-bottom:16px;
+    font-size:15px;
 
-    }
+}
 
-    .Authentication-Security-Feature-Checklist-Content-X92 h5{
+.Security-Tool-Content-X448840-Y992211 p{
 
-        font-size:14px;
+    font-size:12px;
 
-    }
+    line-height:1.6;
 
-    .Authentication-Security-Feature-Checklist-Content-X92 p{
+}
 
-        font-size:12px;
+.Support-Panel-Content-X448840-Y992211{
 
-        line-height:1.5;
+    padding:20px;
 
-    }
+}
 
-    .Authentication-Security-Feature-Button-Wrapper-X92{
+.Support-Panel-Content-X448840-Y992211 h2{
 
-        padding:16px;
+    font-size:20px;
 
-    }
+}
 
-    .Authentication-Security-Feature-Button-X92{
+.Support-Panel-Content-X448840-Y992211 p{
 
-        height:42px;
+    font-size:13px;
 
-        font-size:13px;
+}
 
-        border-radius:8px;
+.Support-Image-X448840-Y992211{
 
-    }
+    height:180px;
+
+}
 
 }
 
 /*==========================================================
-EXTRA SMALL MOBILE
+EXTRA SMALL DEVICES
 ==========================================================*/
 
-@media(max-width:380px){
+@media (max-width:360px){
 
-    .Authentication-Security-Feature-Header-X92{
+.Security-Tool-Card-X448840-Y992211{
 
-        padding:18px 14px;
+    flex-direction:column;
 
-    }
+    text-align:center;
 
-    .Authentication-Security-Feature-Title-X92{
+    align-items:center;
 
-        font-size:17px;
+}
 
-    }
+.Security-Tool-Content-X448840-Y992211{
 
-    .Authentication-Security-Feature-Description-X92{
+    text-align:center;
 
-        font-size:12px;
+}
 
-    }
+.Support-Button-X448840-Y992211{
 
-    .Authentication-Security-Feature-Checklist-X92{
+    font-size:14px;
 
-        padding:0 14px;
-
-    }
-
-    .Authentication-Security-Feature-Checklist-Content-X92 h5{
-
-        font-size:13px;
-
-    }
-
-    .Authentication-Security-Feature-Checklist-Content-X92 p{
-
-        font-size:11px;
-
-    }
-
-    .Authentication-Security-Feature-Button-Wrapper-X92{
-
-        padding:14px;
-
-    }
-
-    .Authentication-Security-Feature-Button-X92{
-
-        height:40px;
-
-        font-size:12px;
-
-    }
+}
 
 }

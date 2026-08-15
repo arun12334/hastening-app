@@ -362,4 +362,132 @@ authenticationSecurityFeatureButtonClickX92(card:any){
 
 
 
+
+
+
+
+/*==========================================================
+  SECTION
+  X448840-Y992211
+  ==========================================================*/
+
+  securitySectionX448840Y992211 = {
+
+    title: 'Additional Security Tools',
+
+    description:
+      'More ways we help keep you and our community safe.'
+
+  };
+
+  /*==========================================================
+  SUPPORT PANEL
+  X448840-Y992211
+  ==========================================================*/
+
+  supportPanelX448840Y992211 = {
+
+    title: 'Need Help?',
+
+    description:
+      'Our support team is here to help you.',
+
+    buttonText: 'Contact Support',
+
+    image:
+      'https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?w=900&auto=format&fit=crop'
+
+  };
+
+  /*==========================================================
+  SECURITY TOOLS
+  X448840-Y992211
+  ==========================================================*/
+
+  securityToolsX448840Y992211 = [
+
+    {
+
+      id: 1,
+
+      icon: 'bi bi-bell',
+
+      title: 'Login Alerts',
+
+      description:
+        'Get notified of new sign-ins.',
+
+      color: '#173F86'
+
+    },
+
+    {
+
+      id: 2,
+
+      icon: 'bi bi-display',
+
+      title: 'Session Management',
+
+      description:
+        'See and manage your active sessions.',
+
+      color: '#173F86'
+
+    },
+
+    {
+
+      id: 3,
+
+      icon: 'bi bi-shield-lock',
+
+      title: 'Privacy Center',
+
+      description:
+        'Control your data and privacy preferences.',
+
+      color: '#173F86'
+
+    },
+
+    {
+
+      id: 4,
+
+      icon: 'bi bi-life-preserver',
+
+      title: 'Help & Support',
+
+      description:
+        'Get help from our support team.',
+
+      color: '#173F86'
+
+    }
+
+  ];
+
+  /*==========================================================
+  CLICK TOOL
+  X448840-Y992211
+  ==========================================================*/
+
+  securityToolClickX448840Y992211(item: any): void {
+
+    console.log(item);
+
+  }
+
+  /*==========================================================
+  CONTACT SUPPORT
+  X448840-Y992211
+  ==========================================================*/
+
+  contactSupportClickX448840Y992211(): void {
+
+    console.log('Contact Support Clicked');
+
+  }
+
 }
