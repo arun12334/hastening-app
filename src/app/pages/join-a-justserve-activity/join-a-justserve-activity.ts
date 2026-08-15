@@ -243,9 +243,9 @@ justServeProjects = [
 
       'assets/loving/finance-1.jpg',  
 
-      'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=500&q=80',
+           'assets/loving/finance-2.png',  
 
-      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80'
+            'assets/loving/finance-3.png',  
 
     ],
 
