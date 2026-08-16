@@ -14047,7 +14047,7 @@ BANNER SECTION X91
 
 .Authentication-And-Security-Management-System-Banner-Section-X91{
 
-    padding:30px 0 10px;
+    // padding:30px 0 10px;
 
 }
 
@@ -14103,9 +14103,8 @@ OVERLAY
 
     background:linear-gradient(
         90deg,
-        rgba(255,255,255,.95) 0%,
-        rgba(255,255,255,.90) 34%,
-        rgba(255,255,255,.55) 55%,
+       
+        rgba(255,255,255,.55) 45%,
         rgba(255,255,255,.12) 75%,
         transparent 100%
     );
@@ -14250,9 +14249,9 @@ BADGE
 
     align-items:flex-end;
 
-    padding-right:45px;
+    padding-right:18px;
 
-    padding-bottom:35px;
+    padding-bottom:18px;
 
 }
 
@@ -14262,25 +14261,27 @@ BADGE
 
     align-items:center;
 
-    gap:16px;
+    gap:12px;
 
-    background:#fff;
+    background:#ffffff;
 
     border-radius:14px;
 
-    padding:18px 20px;
+    padding:14px 16px;
 
-    box-shadow:0 8px 25px rgba(0,0,0,.15);
+    min-width:220px;
 
-    min-width:270px;
+    max-width:240px;
+
+    box-shadow:0 8px 22px rgba(0,0,0,.12);
 
 }
 
 .Authentication-And-Security-Management-System-Badge-Icon-X91{
 
-    width:56px;
+    width:46px;
 
-    height:56px;
+    height:46px;
 
     border-radius:50%;
 
@@ -14296,7 +14297,7 @@ BADGE
 
 .Authentication-And-Security-Management-System-Badge-Icon-X91 i{
 
-    font-size:26px;
+    font-size:22px;
 
     color:#5D8A61;
 
@@ -21859,6 +21860,8 @@ DIVIDER
 
     margin-bottom:26px;
 
+    margin-left: 85px;
+
     width:100%;
 
 }
@@ -21914,7 +21917,7 @@ line-height:1.45;
 
 .xd823-banner-subtitle-yu822982 span{
 
-    font-style:italic;
+       color: #153e83;
 
     font-weight:700;
 

@@ -14,7 +14,7 @@ export class NeighborhoodBbEvents {
   //==========================================================
 
  bannerImage =
-'assets/neighborhood/banner.jpg';
+'assets/neighborhood/bannerss.png';
  
 
 

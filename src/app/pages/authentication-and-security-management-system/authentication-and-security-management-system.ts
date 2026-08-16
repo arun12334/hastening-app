@@ -17,7 +17,7 @@ BANNER IMAGE X91
 ==========================================================*/
 
 authenticationSecurityBannerImageX91 =
-'assets/authentication/authentication-and-security-banner.png';
+'assets/authentication/authentication-and-security-banner2.png';
 
 /*==========================================================
 BANNER CONTENT X91
