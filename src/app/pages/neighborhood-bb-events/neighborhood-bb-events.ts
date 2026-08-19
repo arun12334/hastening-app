@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Header } from '../../components/header/header';
 
 @Component({
@@ -13,9 +13,70 @@ export class NeighborhoodBbEvents {
   // HERO BACKGROUND IMAGE
   //==========================================================
 
- bannerImage =
-'assets/neighborhood/bannerss.png';
- 
+ /*==========================================================
+  DESKTOP IMAGE
+  ==========================================================*/
+
+  desktopBannerImage =
+  'assets/neighborhood/bannerss.png';
+
+  /*==========================================================
+  MOBILE IMAGE
+  ==========================================================*/
+
+  mobileBannerImage =
+  'assets/neighborhood/bannerss-mobile.png';
+
+  /*==========================================================
+  CURRENT IMAGE
+  ==========================================================*/
+
+  bannerImage = '';
+
+  /*==========================================================
+  INIT
+  ==========================================================*/
+
+  ngOnInit(){
+
+    this.nb8821UpdateBannerImage();
+
+  }
+
+  /*==========================================================
+  WINDOW RESIZE
+  ==========================================================*/
+
+  @HostListener('window:resize')
+
+  onResize(){
+
+    this.nb8821UpdateBannerImage();
+
+  }
+
+  /*==========================================================
+  CHANGE IMAGE
+  ==========================================================*/
+
+  nb8821UpdateBannerImage(){
+
+    if(window.innerWidth <= 768){
+
+      this.bannerImage =
+      this.mobileBannerImage;
+
+    }
+
+    else{
+
+      this.bannerImage =
+      this.desktopBannerImage;
+
+    }
+
+  }
+
 
 
 //==========================================================

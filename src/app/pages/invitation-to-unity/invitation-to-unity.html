@@ -3,131 +3,67 @@
 INVITATION TO UNITY BANNER SECTION X94
 ===========================================================-->
 
-<section class="Invitation-To-Unity-Banner-Section-X94">
+<section class="Neighborhood-Bb-Events-Banner">
 
-    <div class=" ">
+    <div
+        class="Neighborhood-Bb-Events-Banner-Image"
+        [style.background-image]="'url(' + bannerImage + ')'">
 
-        <!--==========================================
-        BANNER WRAPPER
-        ===========================================-->
+        <!--==========================================================
+        OVERLAY
+        ===========================================================-->
 
-        <div class="Invitation-To-Unity-Banner-Wrapper-X94">
+        <div class="Neighborhood-Bb-Events-Banner-Overlay">
 
-            <!--======================================
-            BACKGROUND IMAGE
-            ======================================-->
+            <div class="container">
 
-            <img
+                <div class="row justify-content-center">
 
-                [src]="invitationToUnityBannerImageX94"
+                    <div class="col-xl-8 col-lg-9 col-md-10">
 
-                class="Invitation-To-Unity-Banner-Background-Image-X94"
+                        <div class="Neighborhood-Bb-Events-Banner-Content">
 
-                alt="Invitation To Unity">
+                            <!--==========================================================
+                            LOGO
+                            ===========================================================-->
 
-            <!--======================================
-            OVERLAY
-            ======================================-->
+                            <div class="Neighborhood-Bb-Events-Banner-Logo">
 
-            <div class="Invitation-To-Unity-Banner-Overlay-X94">
+                                <i [class]="bannerData.icon"></i>
 
-                <div class="Invitation-To-Unity-Banner-Content-Wrapper-X94">
+                            </div>
 
-                    <!--==================================
-                    ICON
-                    ==================================-->
+                            <!--==========================================================
+                            TITLE
+                            ===========================================================-->
 
-                    <div class="Invitation-To-Unity-Banner-Icon-Wrapper-X94">
+                            <h1 class="Neighborhood-Bb-Events-Banner-Titlex34">
 
-                        <i
+                                {{bannerData.title}}
 
-                            [class]="invitationToUnityBannerX94.icon">
+                            </h1>
 
-                        </i>
+                            <!--==========================================================
+                            SUB TITLE
+                            ===========================================================-->
 
-                    </div>
+                            <h3 class="Neighborhood-Bb-Events-Banner-SubTitle">
 
-                    <!--==================================
-                    TITLE
-                    ==================================-->
+                                {{bannerData.subtitle}}
 
-                    <h1 class="Invitation-To-Unity-Banner-Title-X94">
+                            </h3>
 
-                        {{invitationToUnityBannerX94.title}}
+                            <!--==========================================================
+                            DESCRIPTION
+                            ===========================================================-->
 
-                    </h1>
+                            <p class="Neighborhood-Bb-Events-Banner-Description">
 
-                    <!--==================================
-                    SUB TITLE
-                    ==================================-->
+                                {{bannerData.description}}
 
-                    <h3 class="Invitation-To-Unity-Banner-Subtitle-X94">
+                            </p>
 
-                        {{invitationToUnityBannerX94.subTitle}}
-
-                    </h3>
-
-                    <!--==================================
-                    DESCRIPTION
-                    ==================================-->
-
-                    <h4 class="Invitation-To-Unity-Banner-Description-X94">
-
-                        {{invitationToUnityBannerX94.description}}
-
-                    </h4>
-
-                    <!--==================================
-                    VERSE
-                    ==================================-->
-
-                    <p class="Invitation-To-Unity-Banner-Verse-X94">
-
-                        {{invitationToUnityBannerX94.verse}}
-
-                    </p>
-
-                    <!--==================================
-                    SCRIPTURE
-                    ==================================-->
-
-                    <div class="Invitation-To-Unity-Banner-Scripture-X94">
-
-                        {{invitationToUnityBannerX94.scripture}}
-
-                    </div>
-
-                    <!--==================================
-                    TAGS
-                    ==================================-->
-
-                    <div class="Invitation-To-Unity-Banner-Tags-Wrapper-X94">
-
-                        @for(tag of invitationUnityTagsX94; track tag.id){
-
-                        <button
-
-                            type="button"
-
-                            class="Invitation-To-Unity-Banner-Tag-Button-X94"
-
-                            (click)="selectInvitationUnityTagX94(tag)">
-
-                            <i [class]="tag.icon"></i>
-
-                            {{tag.title}}
-
-                        </button>
-
-                        }
-
-                    </div>
-
-                    <!--==================================
-                    BUTTON
-                    ==================================-->
-
-                    <button
+                              <button
 
                         type="button"
 
@@ -135,15 +71,19 @@ INVITATION TO UNITY BANNER SECTION X94
 
                         (click)="joinInvitationCommunityX94()">
 
-                        {{invitationToUnityBannerX94.primaryButton}}
+                        {{bannerData.primaryButton}}
 
                         <i
 
-                            [class]="invitationToUnityBannerX94.primaryButtonIcon">
+                            [class]="bannerData.primaryButtonIcon">
 
                         </i>
 
                     </button>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
@@ -154,7 +94,6 @@ INVITATION TO UNITY BANNER SECTION X94
     </div>
 
 </section>
-
 
 
  <!--==========================================================
@@ -753,6 +692,305 @@ BOOK OF MORMON PATH SECTION X97
     </div>
 
 </section>
+
+
+
+<!--==========================================================
+START : uy7676a
+VISION GRID SECTION
+END : olk7866s
+==========================================================-->
+
+<section
+id="uy7676a-vision-grid-olk7866s"
+class="uy7676a-vision-grid-olk7866s">
+
+    <div class="container">
+
+        <div class="row row-cols-1 row-cols-lg-2 g-4">
+
+            @for(card of visionCards; track card.id){
+
+            <div class="col">
+
+                <div class="uy7676a-card-olk7866s">
+
+                    <!--==============================
+                    CARD HEADER
+                    ==============================-->
+
+                    <div class="uy7676a-card-header-olk7866s">
+
+                        <div
+                        class="uy7676a-card-title-area-olk7866s">
+
+                            <div
+                            class="uy7676a-card-icon-olk7866s">
+
+                                <i [class]="card.icon"></i>
+
+                            </div>
+
+                            <h3
+                            class="uy7676a-card-title-olk7866s">
+
+                                {{card.title}}
+
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                    <!--==============================
+                    BODY
+                    ==============================-->
+
+                    <div
+                    class="uy7676a-card-body-olk7866s">
+
+                        <div
+                        class="row">
+
+                            <!-- LEFT -->
+
+                            <div
+                            class="col-lg-7 col-12">
+
+                                <ul
+                                class="uy7676a-list-olk7866s">
+
+                                    @for(item of card.points; track $index){
+
+                                    <li>
+
+                                        <span
+                                        class="uy7676a-number-olk7866s">
+
+                                            {{$index+1}}
+
+                                        </span>
+
+                                        <span
+                                        class="uy7676a-text-olk7866s">
+
+                                            {{item}}
+
+                                        </span>
+
+                                    </li>
+
+                                    }
+
+                                </ul>
+
+                            </div>
+
+                            <!-- RIGHT -->
+
+                            <div
+                            class="col-lg-5 col-12">
+
+                                <div
+                                class="uy7676a-image-grid-olk7866s">
+
+                                    @for(image of card.images; track $index){
+
+                                    <img
+                                    [src]="image"
+                                    class="img-fluid rounded"
+                                    alt="Vision">
+
+                                    }
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!--==============================
+                    FOOTER QUOTE
+                    ==============================-->
+
+                    <div
+                    class="uy7676a-footer-olk7866s">
+
+                        <p>
+
+                            "{{card.quote}}"
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            }
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================================
+END : uy7676a
+END : olk7866s
+==========================================================-->
+
+
+
+
+
+
+<!--==========================================================
+START : qw9821
+MISSION STRIP
+END : xz7744
+==========================================================-->
+
+<section
+id="qw9821-mission-strip-xz7744"
+class="qw9821-mission-strip-xz7744">
+
+    <div class="container-fluid">
+
+        <div
+        class="qw9821-strip-row-xz7744">
+
+            @for(card of missionCards; track card.id){
+
+            <!--==============================================
+            BLUE CARD
+            ==============================================-->
+
+            @if(card.theme == 'theme-blue'){
+
+            <div
+            class="qw9821-item-xz7744 qw9821-item-blue-xz7744">
+
+                <div
+                class="qw9821-blue-card-xz7744">
+
+                    <div
+                    class="qw9821-blue-icon-xz7744">
+
+                        <i
+                        [class]="card.icon">
+                        </i>
+
+                    </div>
+
+                    <h5>
+
+                        {{card.title}}
+
+                    </h5>
+
+                    <p>
+
+                        {{card.subtitle}}
+
+                    </p>
+
+                    @if(card.verse){
+
+                    <small>
+
+                        {{card.verse}}
+
+                    </small>
+
+                    }
+
+                </div>
+
+            </div>
+
+            }
+
+            <!--==============================================
+            IMAGE CARD
+            ==============================================-->
+
+            @if(card.theme == 'theme-image'){
+
+            <div
+            class="qw9821-item-xz7744 qw9821-item-image-xz7744">
+
+                <img
+                [src]="card.image"
+                [alt]="card.title"
+                class="qw9821-image-xz7744">
+
+            </div>
+
+            }
+
+            <!--==============================================
+            WHITE CARD
+            ==============================================-->
+
+            @if(card.theme == 'theme-white'){
+
+            <div
+            class="qw9821-item-xz7744 qw9821-item-white-xz7744">
+
+                <div
+                class="qw9821-white-card-xz7744">
+
+                    <div
+                    class="qw9821-white-icon-xz7744">
+
+                        <i
+                        [class]="card.icon">
+                        </i>
+
+                    </div>
+
+                    <h5>
+
+                        {{card.title}}
+
+                    </h5>
+
+                    <p>
+
+                        {{card.subtitle}}
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            }
+
+            }
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================================
+END : qw9821
+END : xz7744
+==========================================================-->
+
+
+
+
+
+
+
+
 
 
 <section class="Unity-Scripture-Footer-Section-X98">

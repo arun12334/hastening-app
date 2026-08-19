@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
 import { Header } from '../../components/header/header';
+import { CommonModule } from '@angular/common';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-invitation-to-unity',
   standalone: true,
-  imports: [Header],
+  imports: [Header, CommonModule],
   templateUrl: './invitation-to-unity.html',
   styleUrl: './invitation-to-unity.scss',
 })
@@ -16,30 +17,99 @@ INVITATION TO UNITY BANNER IMAGE X94
 
 invitationToUnityBannerImageX94 =
 'assets/invitation/invitation-to-unity-banner.png';
-/*==========================================================
-INVITATION TO UNITY BANNER DATA X94
-==========================================================*/
 
-invitationToUnityBannerX94 = {
+
+
+
+
+ /*==========================================================
+  DESKTOP IMAGE
+  ==========================================================*/
+
+  desktopBannerImage =
+  'assets/invitation/invitation-to-unity-banner.png';
+
+  /*==========================================================
+  MOBILE IMAGE
+  ==========================================================*/
+
+  mobileBannerImage =
+  'assets/invitation/invitation-to-unity-mobile-banner.png';
+
+  /*==========================================================
+  CURRENT IMAGE
+  ==========================================================*/
+
+  bannerImage = '';
+
+  /*==========================================================
+  INIT
+  ==========================================================*/
+
+  ngOnInit(){
+
+    this.nb8821UpdateBannerImage();
+
+  }
+
+  /*==========================================================
+  WINDOW RESIZE
+  ==========================================================*/
+
+  @HostListener('window:resize')
+
+  onResize(){
+
+    this.nb8821UpdateBannerImage();
+
+  }
+
+  /*==========================================================
+  CHANGE IMAGE
+  ==========================================================*/
+
+  nb8821UpdateBannerImage(){
+
+    if(window.innerWidth <= 768){
+
+      this.bannerImage =
+      this.mobileBannerImage;
+
+    }
+
+    else{
+
+      this.bannerImage =
+      this.desktopBannerImage;
+
+    }
+
+  }
+
+
+  //==========================================================
+  // HERO CONTENT
+  //==========================================================
+
+  bannerData = {
 
   icon:'bi bi-people-fill',
 
   title:'Invitation to Unity',
 
-  subTitle:'Gathering hearts together in Christ.',
+     subtitle:'Gathering hearts together in Christ.',
 
-  description:'One Body. One Spirit. One Zion.',
-
-  verse:'"That they all may be one..."',
-
-  scripture:'John 17:21',
-
-  primaryButton:'Join Our Community',
+     description:'One Body. One Spirit. One Zion.',
+    
+     
+ primaryButton:'Join Our Community',
 
   primaryButtonIcon:'bi bi-arrow-right-circle-fill'
+  };
 
-};
 
+
+ 
 /*==========================================================
 SMALL INFO TAGS X94
 ==========================================================*/
@@ -675,5 +745,351 @@ unityFooterX98 = {
   ]
 
 };
+
+
+
+
+ visionCards = [
+
+    /*==========================================================
+    CARD 1
+    ==========================================================*/
+
+    {
+      id: 1,
+
+      icon: 'bi bi-stars',
+
+      title: 'We Have a Common Vision',
+
+      quote:
+      'Be one; and if ye are not one, ye are not mine.',
+
+      points: [
+
+        'All have sought Christ as His disciples',
+
+        'To establish the Center Stake of Zion',
+
+        'A shared vision of Jesus Christ coming in His glory',
+
+        'Loving our neighbors',
+
+        'Serving all Restoration branches',
+
+        'Welcoming all believers into covenant unity',
+
+        'Becoming one in Christ'
+
+      ],
+
+      images: [
+
+        'https://picsum.photos/500/320?random=11',
+
+        'https://picsum.photos/500/320?random=12',
+
+        'https://picsum.photos/500/320?random=13'
+
+      ]
+
+    },
+
+    /*==========================================================
+    CARD 2
+    ==========================================================*/
+
+    {
+      id: 2,
+
+      icon: 'bi bi-people-fill',
+
+      title: 'Our Present Fellowship',
+
+      quote:
+      'Together we worship and love Jesus Christ.',
+
+      points: [
+
+        'Gather together in faith',
+
+        'Study the scriptures',
+
+        'Encourage one another',
+
+        'Share testimonies',
+
+        'Support families',
+
+        'Grow spiritually',
+
+        'Walk with Christ daily'
+
+      ],
+
+      images: [
+
+        'https://picsum.photos/500/320?random=21',
+
+        'https://picsum.photos/500/320?random=22',
+
+        'https://picsum.photos/500/320?random=23'
+
+      ]
+
+    },
+
+    /*==========================================================
+    CARD 3
+    ==========================================================*/
+
+    {
+      id: 3,
+
+      icon: 'bi bi-flag-fill',
+
+      title: 'The Work Before Us',
+
+      quote:
+      'You have fulfilled your mission.',
+
+      points: [
+
+        'Prepare for the Center Stake of Zion',
+
+        'Love and serve all people',
+
+        'Gather scattered Israel',
+
+        'Share the Restoration message',
+
+        'Strengthen every family',
+
+        'Prepare Independence as a refuge',
+
+        'Receive spiritual blessings'
+
+      ],
+
+      images: [
+
+        'https://picsum.photos/500/320?random=31',
+
+        'https://picsum.photos/500/320?random=32',
+
+        'https://picsum.photos/500/320?random=33'
+
+      ]
+
+    },
+
+    /*==========================================================
+    CARD 4
+    ==========================================================*/
+
+    {
+      id: 4,
+
+      icon: 'bi bi-book-half',
+
+      title: 'His Covenant',
+
+      quote:
+      'God shall hasten His work in its time.',
+
+      points: [
+
+        'Read the scriptures daily',
+
+        'Live by faith',
+
+        'Keep Christ at the center',
+
+        'Strengthen the Church',
+
+        'Serve with love',
+
+        'Teach the next generation',
+
+        'Remain steadfast'
+
+      ],
+
+      images: [
+
+        'https://picsum.photos/500/320?random=41',
+
+        'https://picsum.photos/500/320?random=42',
+
+        'https://picsum.photos/500/320?random=43'
+
+      ]
+
+    }
+
+  ];
+
+
+
+
+ missionCards = [
+
+    /*==========================================================
+    CARD 1
+    ==========================================================*/
+
+    {
+
+      id:1,
+
+      theme:'theme-blue',
+
+      icon:'bi bi-stars',
+
+      title:'A New Mission Together',
+
+      subtitle:'Now—together—we begin a new mission.',
+
+      verse:'',
+
+      image:'https://picsum.photos/600/400?random=501'
+
+    },
+
+    /*==========================================================
+    CARD 2
+    ==========================================================*/
+
+    {
+
+      id:2,
+
+      theme:'theme-image',
+
+      icon:'',
+
+      title:'',
+
+      subtitle:'',
+
+      verse:'',
+
+      image:'https://picsum.photos/600/400?random=502'
+
+    },
+
+    /*==========================================================
+    CARD 3
+    ==========================================================*/
+
+    {
+
+      id:3,
+
+      theme:'theme-image',
+
+      icon:'',
+
+      title:'',
+
+      subtitle:'',
+
+      verse:'',
+
+      image:'https://picsum.photos/600/400?random=503'
+
+    },
+
+    /*==========================================================
+    CARD 4
+    ==========================================================*/
+
+    {
+
+      id:4,
+
+      theme:'theme-image',
+
+      icon:'',
+
+      title:'',
+
+      subtitle:'',
+
+      verse:'',
+
+      image:'https://picsum.photos/600/400?random=504'
+
+    },
+
+    /*==========================================================
+    CARD 5
+    ==========================================================*/
+
+    {
+
+      id:5,
+
+      theme:'theme-white',
+
+      icon:'bi bi-crown-fill',
+
+      title:'Closing Declaration',
+
+      subtitle:'Glory, glory, Hallelujah.',
+
+      verse:'',
+
+      image:'https://picsum.photos/600/400?random=505'
+
+    },
+
+    /*==========================================================
+    CARD 6
+    ==========================================================*/
+
+    {
+
+      id:6,
+
+      theme:'theme-image',
+
+      icon:'',
+
+      title:'',
+
+      subtitle:'',
+
+      verse:'',
+
+      image:'https://picsum.photos/600/400?random=506'
+
+    },
+
+    /*==========================================================
+    CARD 7
+    ==========================================================*/
+
+    {
+
+      id:7,
+
+      theme:'theme-blue',
+
+      icon:'"',
+
+      title:'"God shall hasten',
+
+      subtitle:'His work in its time".',
+
+      verse:'D&C 88:73',
+
+      image:'https://picsum.photos/600/400?random=507'
+
+    }
+
+  ];
+
+
 
 }

@@ -125,7 +125,1160 @@ NEIGHBORHOOD TAB MENU
 
 @if(activeTab==0){
 
+<!--==========================================================
+SHARING OUR FAITH TAB
+X774551-Y886331
+===========================================================-->
 
+<section class="Sharing-Our-Faith-Tab-One-X774551-Y886331">
+
+    <div class="container-fluid">
+
+        <div class="row g-4">
+
+            <!--==================================================
+            LEFT COLUMN
+            PROPHET SLIDER
+            ==================================================-->
+
+            <div class="col-xl-5 col-lg-12">
+
+                <div class="Prophet-Card-X774551-Y886331">
+
+                    <!--==========================================
+                    CARD HEADER
+                    ==========================================-->
+
+                    <div class="Card-Header-X774551-Y886331">
+
+                        <div
+                        class="Header-Left-X774551-Y886331">
+
+                            <i
+                            class="bi bi-patch-check-fill"></i>
+
+                            <h3>
+
+                                {{prophetSectionX774551Y886331.title}}
+
+                            </h3>
+
+                        </div>
+
+                        <button
+
+                        class="View-All-Button-X774551-Y886331"
+
+                        (click)="viewAllProphetsX774551Y886331()">
+
+                            {{prophetSectionX774551Y886331.button}}
+
+                        </button>
+
+                    </div>
+
+                    <!--==========================================
+                    SLIDER
+                    ==========================================-->
+
+                    @for(item of prophetMessagesX774551Y886331;
+                    track item.id){
+
+                    @if(currentSlideX774551Y886331==$index){
+
+                    <div
+                    class="Prophet-Slider-Body-X774551-Y886331">
+
+                        <!--==================================
+                        IMAGE
+                        ==================================-->
+
+                        <div
+                        class="Prophet-Image-X774551-Y886331">
+
+                            <img
+
+                            [src]="item.image"
+
+                            [alt]="item.title">
+
+                            <!--==============================
+                            PLAY BUTTON
+                            ==============================-->
+
+                            <button
+
+                            class="Play-Button-X774551-Y886331">
+
+                                <i
+                                class="bi bi-play-fill"></i>
+
+                            </button>
+
+                        </div>
+
+                        <!--==================================
+                        CONTENT
+                        ==================================-->
+
+                        <div
+                        class="Prophet-Content-X774551-Y886331">
+
+                            <h4>
+
+                                {{item.title}}
+
+                            </h4>
+
+                            <h6>
+
+                                {{item.author}}
+
+                            </h6>
+
+                            <p>
+
+                                {{item.description}}
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    }
+
+                    }
+
+                                        <!--==========================================
+                    SLIDER DOTS
+                    ==========================================-->
+
+                    <div
+                    class="Slider-Dots-X774551-Y886331">
+
+                        @for(dot of prophetMessagesX774551Y886331;
+                        track dot.id){
+
+                        <button
+
+                        type="button"
+
+                        class="Slider-Dot-X774551-Y886331"
+
+                        [class.Active-Slider-Dot-X774551-Y886331]="
+                        currentSlideX774551Y886331==$index"
+
+                        (click)="changeSlideX774551Y886331($index)">
+
+                        </button>
+
+                        }
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!--==================================================
+            CENTER COLUMN
+            DISCIPLE MESSAGES
+            ==================================================-->
+
+            <div class="col-xl-4 col-lg-6">
+                                <div class="Disciple-Card-X774551-Y886331">
+
+                    <!--==========================================
+                    HEADER
+                    ==========================================-->
+
+                    <div class="Card-Header-X774551-Y886331">
+
+                        <div class="Header-Left-X774551-Y886331">
+
+                            <i class="bi bi-people-fill"></i>
+
+                            <h3>
+
+                                {{discipleHeaderX774551Y886331.title}}
+
+                            </h3>
+
+                        </div>
+
+                        <button
+
+                        class="View-All-Button-X774551-Y886331"
+
+                        (click)="viewAllDisciplesX774551Y886331()">
+
+                            {{discipleHeaderX774551Y886331.button}}
+
+                        </button>
+
+                    </div>
+
+                    <!--==========================================
+                    MESSAGE LIST
+                    ==========================================-->
+
+                    <div class="Disciple-List-X774551-Y886331">
+
+                        @for(message of discipleMessagesX774551Y886331;
+                        track message.id){
+
+                        <div class="Disciple-Item-X774551-Y886331">
+
+                            <!--==============================
+                            PROFILE IMAGE
+                            ==============================-->
+
+                            <div
+                            class="Disciple-Avatar-X774551-Y886331">
+
+                                <img
+
+                                [src]="message.image"
+
+                                [alt]="message.title">
+
+                            </div>
+
+                            <!--==============================
+                            CONTENT
+                            ==============================-->
+
+                            <div
+                            class="Disciple-Content-X774551-Y886331">
+
+                                <h5>
+
+                                    {{message.title}}
+
+                                </h5>
+
+                                <p>
+
+                                    {{message.description}}
+
+                                </p>
+
+                            </div>
+
+                            <!--==============================
+                            TIME
+                            ==============================-->
+
+                            <div
+                            class="Disciple-Time-X774551-Y886331">
+
+                                {{message.time}}
+
+                            </div>
+
+                        </div>
+
+                        }
+
+                    </div>
+
+                    <!--==========================================
+                    SHARE BUTTON
+                    ==========================================-->
+
+                    <button
+
+                    class="Share-Testimony-Button-X774551-Y886331"
+
+                    (click)="shareTestimonyX774551Y886331()">
+
+                        <i
+
+                        [class]="shareButtonX774551Y886331.icon">
+
+                        </i>
+
+                        {{shareButtonX774551Y886331.text}}
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!--==================================================
+            RIGHT COLUMN
+            POSTING GUIDELINES
+            ==================================================-->
+
+            <div class="col-xl-3 col-lg-6">
+                                <div class="Posting-Guide-Card-X774551-Y886331">
+
+                    <!--==========================================
+                    HEADER
+                    ==========================================-->
+
+                    <div class="Card-Header-X774551-Y886331">
+
+                        <div class="Header-Left-X774551-Y886331">
+
+                            <i class="bi bi-journal-check"></i>
+
+                            <h3>
+
+                                {{postingGuideX774551Y886331.title}}
+
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                    <!--==========================================
+                    DESCRIPTION
+                    ==========================================-->
+
+                    <div class="Posting-Guide-Content-X774551-Y886331">
+
+                        <p>
+
+                            {{postingGuideX774551Y886331.description}}
+
+                        </p>
+
+                    </div>
+
+                    <!--==========================================
+                    RULES
+                    ==========================================-->
+
+                    <div class="Posting-Guide-Rules-X774551-Y886331">
+
+                        @for(rule of postingGuideX774551Y886331.rules;
+                        track $index){
+
+                        <div
+                        class="Posting-Guide-Rule-X774551-Y886331">
+
+                            <div
+                            class="Rule-Icon-X774551-Y886331">
+
+                                <i
+                                class="bi bi-check-circle-fill">
+
+                                </i>
+
+                            </div>
+
+                            <div
+                            class="Rule-Text-X774551-Y886331">
+
+                                {{rule}}
+
+                            </div>
+
+                        </div>
+
+                        }
+
+                    </div>
+
+                    <!--==========================================
+                    FOOTER NOTE
+                    ==========================================-->
+
+                    <div
+                    class="Posting-Guide-Footer-X774551-Y886331">
+
+                        <i
+                        class="bi bi-heart-fill"></i>
+
+                        <span>
+
+                            {{postingGuideX774551Y886331.button}}
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--==========================================================
+SCRIPTURES & TEMPLE HERITAGE
+X662991-Y448113
+===========================================================-->
+
+<section class="Scripture-Temple-Section-X662991-Y448113">
+
+    <div class="container-fluid">
+
+        <div class="row g-4">
+
+            <!--==================================================
+            LEFT COLUMN
+            ==================================================-->
+
+            <div class="col-xl-4 col-lg-5">
+
+                <div class="Scripture-Card-X662991-Y448113">
+
+                    <!--==========================================
+                    HEADER
+                    ==========================================-->
+
+                    <div class="Scripture-Header-X662991-Y448113">
+
+                        <div class="Scripture-Header-Left-X662991-Y448113">
+
+                            <i
+
+                            [class]="scriptureHeaderX662991Y448113.icon">
+
+                            </i>
+
+                            <h3>
+
+                                {{scriptureHeaderX662991Y448113.title}}
+
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                    <!--==========================================
+                    DESCRIPTION CARD
+                    ==========================================-->
+
+                    <div class="Scripture-Description-Card-X662991-Y448113">
+
+                        <p>
+
+                            {{scriptureHeaderX662991Y448113.description}}
+
+                        </p>
+
+                    </div>
+
+                    <!--==========================================
+                    READING PLAN TITLE
+                    ==========================================-->
+
+                    <div class="Reading-Plan-Header-X662991-Y448113">
+
+                        <h4>
+
+                            {{todayReadingHeaderX662991Y448113}}
+
+                        </h4>
+
+                    </div>
+
+                    <!--==========================================
+                    READING PLAN LIST
+                    ==========================================-->
+
+                    <div class="Reading-Plan-List-X662991-Y448113">
+
+                        @for(item of readingPlanX662991Y448113;
+                        track item.id){
+
+                        <div class="Reading-Plan-Item-X662991-Y448113">
+
+                            <!--==========================
+                            LEFT
+                            ==========================-->
+
+                            <div
+                            class="Reading-Plan-Left-X662991-Y448113">
+
+                                <i
+
+                                [class]="item.icon">
+
+                                </i>
+
+                                <div>
+
+                                    <h5>
+
+                                        {{item.testament}}
+
+                                    </h5>
+
+                                    <span>
+
+                                        {{item.verse}}
+
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                            <!--==========================
+                            RIGHT
+                            ==========================-->
+
+                            <div
+                            class="Reading-Plan-Right-X662991-Y448113">
+
+                                @if(item.completed){
+
+                                <i
+                                class="bi bi-check-circle-fill">
+
+                                </i>
+
+                                }
+
+                            </div>
+
+                        </div>
+
+                        }
+
+                    </div>
+
+                    <!--==========================================
+                    OPEN LIBRARY BUTTON
+                    ==========================================-->
+
+                    <button
+
+                    class="Open-Scripture-Library-Button-X662991-Y448113"
+
+                    (click)="openScriptureLibraryX662991Y448113()">
+
+                        <i class="bi bi-book-half"></i>
+
+                        {{scriptureHeaderX662991Y448113.button}}
+
+                    </button>
+                                        <!--==========================================
+                    INVITATION CARD
+                    ==========================================-->
+
+                    <div
+                    class="Invite-Card-X662991-Y448113">
+
+                        <!--==============================
+                        ICON
+                        ==============================-->
+
+                        <div
+                        class="Invite-Icon-X662991-Y448113">
+
+                            <i
+
+                            [class]="inviteCardX662991Y448113.icon">
+
+                            </i>
+
+                        </div>
+
+                        <!--==============================
+                        CONTENT
+                        ==============================-->
+
+                        <div
+                        class="Invite-Content-X662991-Y448113">
+
+                            <h4>
+
+                                {{inviteCardX662991Y448113.title}}
+
+                            </h4>
+
+                            <p>
+
+                                {{inviteCardX662991Y448113.description}}
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!--==================================================
+            RIGHT COLUMN
+            TEMPLE HERITAGE
+            ==================================================-->
+
+            <div class="col-xl-8 col-lg-7">
+
+                <div class="Temple-History-Card-X662991-Y448113">
+
+                    <!--==========================================
+                    HEADER
+                    ==========================================-->
+
+                    <div
+                    class="Temple-History-Header-X662991-Y448113">
+
+                        <div
+                        class="Temple-History-Header-Left-X662991-Y448113">
+
+                            <i
+
+                            [class]="templeHeaderX662991Y448113.icon">
+
+                            </i>
+
+                            <h3>
+
+                                {{templeHeaderX662991Y448113.title}}
+
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                    <!--==========================================
+                    BODY START
+                    ==========================================-->
+
+                    <div
+                    class="Temple-History-Body-X662991-Y448113">
+
+                                            <!--==========================================
+                        LEFT SIDE
+                        PAST TEMPLE HISTORY
+                        ==========================================-->
+
+                        <div class="Temple-Grid-Section-X662991-Y448113">
+
+                            <!--==============================
+                            TITLE
+                            ==============================-->
+
+                            <div
+                            class="Temple-Grid-Title-X662991-Y448113">
+
+                                <h4>
+
+                                    {{pastTempleTitleX662991Y448113}}
+
+                                </h4>
+
+                            </div>
+
+                            <!--==============================
+                            TEMPLE GRID
+                            ==============================-->
+
+                            <div
+                            class="Temple-Grid-X662991-Y448113">
+
+                                @for(temple of templeHistoryX662991Y448113;
+                                track temple.id){
+
+                                <div
+
+                                class="Temple-Item-X662991-Y448113"
+
+                                (click)="openTempleDetailsX662991Y448113(temple)">
+
+                                    <!--======================
+                                    NUMBER
+                                    ======================-->
+
+                                    <div
+                                    class="Temple-Number-X662991-Y448113">
+
+                                        {{temple.id}}
+
+                                    </div>
+
+                                    <!--======================
+                                    IMAGE
+                                    ======================-->
+
+                                    <div
+                                    class="Temple-Image-X662991-Y448113">
+
+                                        <img
+
+                                        [src]="temple.image"
+
+                                        [alt]="temple.title">
+
+                                    </div>
+
+                                    <!--======================
+                                    CONTENT
+                                    ======================-->
+
+                                    <div
+                                    class="Temple-Content-X662991-Y448113">
+
+                                        <h5>
+
+                                            {{temple.title}}
+
+                                        </h5>
+
+                                        <p>
+
+                                            {{temple.subtitle}}
+
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                                }
+
+                            </div>
+
+                            <!--==============================
+                            EXPLORE BUTTON
+                            ==============================-->
+
+                            <button
+
+                            class="Explore-Temple-Button-X662991-Y448113"
+
+                            (click)="openTempleHistoryX662991Y448113()">
+
+                                <i class="bi bi-signpost-split-fill"></i>
+
+                                {{templeHeaderX662991Y448113.button}}
+
+                            </button>
+
+                        </div>
+
+                        <!--==========================================
+                        RIGHT SIDE
+                        FUTURE TEMPLE
+                        ==========================================-->
+
+                        <div
+                        class="Future-Temple-Section-X662991-Y448113">
+
+                            <div
+                            class="Future-Temple-Title-X662991-Y448113">
+
+                                <h4>
+
+                                    {{futureTempleTitleX662991Y448113}}
+
+                                </h4>
+
+                            </div>
+                                                        <!--==========================================
+                            HERO IMAGE
+                            ==========================================-->
+
+                            <div
+                            class="Future-Temple-Hero-X662991-Y448113">
+
+                                <img
+
+                                [src]="futureTemplePanelX662991Y448113.image"
+
+                                [alt]="futureTemplePanelX662991Y448113.title">
+
+                            </div>
+
+                            <!--==========================================
+                            CONTENT
+                            ==========================================-->
+
+                            <div
+                            class="Future-Temple-Content-X662991-Y448113">
+
+                                <h5>
+
+                                    {{futureTemplePanelX662991Y448113.title}}
+
+                                </h5>
+
+                                <p
+                                class="Future-Scripture-X662991-Y448113">
+
+                                    {{futureTemplePanelX662991Y448113.scripture}}
+
+                                </p>
+
+                                <span
+                                class="Future-Reference-X662991-Y448113">
+
+                                    {{futureTemplePanelX662991Y448113.reference}}
+
+                                </span>
+
+                            </div>
+
+                            <!--==========================================
+                            BOTTOM IMAGE
+                            ==========================================-->
+
+                            <div
+                            class="Future-Temple-Bottom-X662991-Y448113">
+
+                                <img
+
+                                [src]="futureTemplePanelX662991Y448113.bottomImage"
+
+                                [alt]="futureTemplePanelX662991Y448113.bottomTitle">
+
+                                <div
+                                class="Future-Temple-Bottom-Overlay-X662991-Y448113">
+
+                                    <h6>
+
+                                        {{futureTemplePanelX662991Y448113.bottomTitle}}
+
+                                    </h6>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+ 
+
+    <div class="container-fluid p-3">
+
+        <div class="row g-4">
+
+            <!--==================================================
+            LEFT COLUMN
+            ==================================================-->
+
+            <div class="col-xl-8 col-lg-7">
+
+                <div class="Daily-Worship-Card-X994712-Y615834">
+
+                    <!--==========================================
+                    HEADER
+                    ==========================================-->
+
+                    <div class="Daily-Worship-Header-X994712-Y615834">
+
+                        <div
+                        class="Daily-Worship-Header-Left-X994712-Y615834">
+
+                            <i
+
+                            [class]="dailyWorshipHeaderX994712Y615834.icon">
+
+                            </i>
+
+                            <h3>
+
+                                {{dailyWorshipHeaderX994712Y615834.title}}
+
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                    <!--==========================================
+                    HERO IMAGE
+                    ==========================================-->
+
+                    <div
+                    class="Daily-Worship-Hero-X994712-Y615834">
+
+                        <img
+
+                        [src]="dailyWorshipHeaderX994712Y615834.image"
+
+                        [alt]="dailyWorshipHeaderX994712Y615834.title">
+
+                    </div>
+
+                    <!--==========================================
+                    DESCRIPTION
+                    ==========================================-->
+
+                    <div
+                    class="Daily-Worship-Description-X994712-Y615834">
+
+                        <p>
+
+                            {{dailyWorshipHeaderX994712Y615834.description}}
+
+                        </p>
+
+                    </div>
+
+                    <!--==========================================
+                    WEEKLY PLAN
+                    ==========================================-->
+
+                    <div
+                    class="Daily-Worship-List-X994712-Y615834">
+
+                        @for(item of dailyWorshipPlanX994712Y615834;
+                        track item.id){
+
+                        <div
+
+                        class="Daily-Worship-Item-X994712-Y615834"
+
+                        (click)="openDailyReadingX994712Y615834(item)">
+
+                            <!--==========================
+                            LEFT
+                            ==========================-->
+
+                            <div
+
+                            class="Daily-Worship-Item-Left-X994712-Y615834">
+
+                                <i
+
+                                [class]="item.icon">
+
+                                </i>
+
+                                <span>
+
+                                    {{item.day}}
+
+                                </span>
+
+                            </div>
+
+                            <!--==========================
+                            CENTER
+                            ==========================-->
+
+                            <div
+
+                            class="Daily-Worship-Item-Center-X994712-Y615834">
+
+                                {{item.title}}
+
+                            </div>
+
+                            <!--==========================
+                            RIGHT
+                            ==========================-->
+
+                            <div
+
+                            class="Daily-Worship-Item-Right-X994712-Y615834">
+
+                                <i
+                                class="bi bi-chevron-right">
+
+                                </i>
+
+                            </div>
+
+                        </div>
+
+                        }
+
+                    </div>
+
+                    <!--==========================================
+                    BUTTON
+                    ==========================================-->
+
+                    <button
+
+                    class="Daily-Worship-Button-X994712-Y615834"
+
+                    (click)="startDailyWorshipX994712Y615834()">
+
+                        <i class="bi bi-play-circle-fill"></i>
+
+                        {{dailyWorshipHeaderX994712Y615834.button}}
+
+                    </button>
+
+                </div>
+
+            </div>
+
+                        <!--==================================================
+            RIGHT COLUMN
+            ==================================================-->
+
+            <div class="col-xl-4 col-lg-5">
+
+                <div class="Daily-Worship-Sidebar-X994712-Y615834">
+
+                    <!--==========================================
+                    DEVOTIONAL CARDS
+                    ==========================================-->
+
+                    @for(card of dailyDevotionalCardsX994712Y615834;
+                    track card.id){
+
+                    <div
+
+                    class="Devotional-Card-X994712-Y615834"
+
+                    (click)="card.id == 1 ?
+                    openVerseOfDayX994712Y615834(card) :
+                    openPrayerGuideX994712Y615834(card)">
+
+                        <!--==============================
+                        IMAGE
+                        ==============================-->
+
+                        <div
+                        class="Devotional-Image-X994712-Y615834">
+
+                            <img
+
+                            [src]="card.image"
+
+                            [alt]="card.title">
+
+                        </div>
+
+                        <!--==============================
+                        CONTENT
+                        ==============================-->
+
+                        <div
+                        class="Devotional-Content-X994712-Y615834">
+
+                            <span
+                            class="Devotional-Verse-X994712-Y615834">
+
+                                {{card.verse}}
+
+                            </span>
+
+                            <h4>
+
+                                {{card.title}}
+
+                            </h4>
+
+                            <p>
+
+                                {{card.description}}
+
+                            </p>
+
+                            <button
+                            class="Devotional-Button-X994712-Y615834">
+
+                                <i class="bi bi-arrow-right-circle-fill"></i>
+
+                                {{card.button}}
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    }
+
+                    <!--==========================================
+                    DAILY INSPIRATION
+                    ==========================================-->
+
+                    <div
+                    class="Daily-Quotes-Card-X994712-Y615834">
+
+                        <div
+                        class="Daily-Quotes-Header-X994712-Y615834">
+
+                            <h4>
+
+                                Daily Inspiration
+
+                            </h4>
+
+                        </div>
+
+                        <div
+                        class="Daily-Quotes-List-X994712-Y615834">
+
+                            @for(item of dailyQuotesX994712Y615834;
+                            track item.id){
+
+                            <div
+
+                            class="Daily-Quote-Item-X994712-Y615834"
+
+                            (click)="openQuoteX994712Y615834(item)">
+
+                                <div
+                                class="Daily-Quote-Icon-X994712-Y615834">
+
+                                    <i
+
+                                    [class]="item.icon">
+
+                                    </i>
+
+                                </div>
+
+                                <div
+                                class="Daily-Quote-Content-X994712-Y615834">
+
+                                    <h5>
+
+                                        {{item.title}}
+
+                                    </h5>
+
+                                    <p>
+
+                                        {{item.description}}
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            }
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 }
 
@@ -142,7 +1295,233 @@ NEIGHBORHOOD TAB MENU
 
 @if(activeTab==3){
 
- 
+ <!--==========================================================
+TEMPLE THROUGH THE AGES
+xwgw6327y37
+===========================================================-->
+
+<section
+class="xwgw6327y37-Temple-Section-tvdh72y82ydswjhbs">
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-12">
+
+                <!--==========================================
+                HEADER
+                ===========================================-->
+
+                <div
+                class="xwgw6327y37-Temple-Header-tvdh72y82ydswjhbs">
+
+                    <div
+                    class="xwgw6327y37-Temple-Heading-tvdh72y82ydswjhbs">
+
+                        <div
+                        class="xwgw6327y37-Temple-Line-Left-tvdh72y82ydswjhbs">
+
+                        </div>
+
+                        <i
+
+                        [class]="templeSectionHeaderXwgw6327y37Tvdh72y82ydswjhbs.icon">
+
+                        </i>
+
+                        <h2>
+
+                            {{templeSectionHeaderXwgw6327y37Tvdh72y82ydswjhbs.title}}
+
+                        </h2>
+
+                        <div
+                        class="xwgw6327y37-Temple-Line-Right-tvdh72y82ydswjhbs">
+
+                        </div>
+
+                    </div>
+
+                    <p>
+
+                        {{templeSectionHeaderXwgw6327y37Tvdh72y82ydswjhbs.subtitle}}
+
+                    </p>
+
+                </div>
+
+                <!--==========================================
+                STATISTICS
+                ===========================================-->
+
+                <div
+                class="xwgw6327y37-Temple-Statistics-tvdh72y82ydswjhbs">
+
+                    @for(stat of templeStatisticsXwgw6327y37Tvdh72y82ydswjhbs;
+                    track stat.title){
+
+                    <div
+
+                    class="xwgw6327y37-Temple-Statistic-Card-tvdh72y82ydswjhbs"
+
+                    (click)="openTempleStatisticsXwgw6327y37Tvdh72y82ydswjhbs(stat)">
+
+                        <div
+                        class="xwgw6327y37-Temple-Statistic-Icon-tvdh72y82ydswjhbs">
+
+                            <i
+
+                            [class]="stat.icon">
+
+                            </i>
+
+                        </div>
+
+                        <div
+                        class="xwgw6327y37-Temple-Statistic-Content-tvdh72y82ydswjhbs">
+
+                            <h4>
+
+                                {{stat.title}}
+
+                            </h4>
+
+                            <span>
+
+                                {{stat.subtitle}}
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    }
+
+                </div>
+
+                <!--==========================================
+                TEMPLE GRID
+                ===========================================-->
+
+                <div
+                class="xwgw6327y37-Temple-Grid-tvdh72y82ydswjhbs">
+                    @for(card of templeHistoryCardsXwgw6327y37Tvdh72y82ydswjhbs;
+                    track card.id){
+
+                    <div
+
+                    class="xwgw6327y37-Temple-Card-tvdh72y82ydswjhbs"
+
+                    (click)="openTempleCardXwgw6327y37Tvdh72y82ydswjhbs(card)">
+
+                        <!--==================================
+                        NUMBER
+                        ===================================-->
+
+                        <div
+                        class="xwgw6327y37-Temple-Number-tvdh72y82ydswjhbs">
+
+                            {{card.number}}
+
+                        </div>
+
+                        <!--==================================
+                        TITLE
+                        ===================================-->
+
+                        <div
+                        class="xwgw6327y37-Temple-Title-tvdh72y82ydswjhbs">
+
+                            <h3>
+
+                                {{card.title}}
+
+                            </h3>
+
+                            <span>
+
+                                {{card.location}}
+
+                            </span>
+
+                        </div>
+
+                        <!--==================================
+                        IMAGE
+                        ===================================-->
+
+                        <div
+                        class="xwgw6327y37-Temple-Image-tvdh72y82ydswjhbs">
+
+                            <img
+
+                            [src]="card.image"
+
+                            [alt]="card.title">
+
+                        </div>
+
+                        <!--==================================
+                        CONTENT
+                        ===================================-->
+
+                        <div
+                        class="xwgw6327y37-Temple-Content-tvdh72y82ydswjhbs">
+
+                            <p>
+
+                                {{card.description}}
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    }
+
+                </div>
+
+                <!--==========================================
+                END GRID
+                ===========================================-->
+
+                                <!--==========================================
+                FOOTER ACTION
+                ===========================================-->
+
+                <div
+                class="xwgw6327y37-Temple-Footer-tvdh72y82ydswjhbs">
+
+                    <button
+
+                    type="button"
+
+                    class="xwgw6327y37-Temple-Button-tvdh72y82ydswjhbs"
+
+                    (click)="exploreTempleHistoryXwgw6327y37Tvdh72y82ydswjhbs()">
+
+                        <i class="bi bi-arrow-right-circle-fill"></i>
+
+                        <span>
+
+                            {{templeSectionHeaderXwgw6327y37Tvdh72y82ydswjhbs.button}}
+
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
  
 }
 
@@ -155,6 +1534,41 @@ NEIGHBORHOOD TAB MENU
  
 
 }
+
+
+<!--==========================================================
+SCRIPTURE FOOTER
+X557821-Y771255
+===========================================================-->
+
+<footer class="Scripture-Footer-X557821-Y771255">
+
+    <div class="container-fluid">
+
+        <h5>
+
+            {{scriptureFooterX557821Y771255.title}}
+
+        </h5>
+
+        <div class="Scripture-Footer-Links-X557821-Y771255">
+
+            @for(reference of scriptureFooterX557821Y771255.references;
+            track $index){
+
+                <span>
+
+                    {{reference}}
+
+                </span>
+
+            }
+
+        </div>
+
+    </div>
+
+</footer>
 
 </div>
 

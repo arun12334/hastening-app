@@ -232,3 +232,2065 @@ LINK
     }
 
 }
+
+
+
+
+
+/*==========================================================
+START : uy7676a
+DESKTOP SCSS
+END : olk7866s
+==========================================================*/
+
+#uy7676a-vision-grid-olk7866s{
+
+    padding:70px 0;
+
+    background:#f7f8fc;
+
+}
+
+/*==========================================================
+CARD
+==========================================================*/
+
+.uy7676a-card-olk7866s{
+
+    background:#ffffff;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 8px 30px rgba(0,0,0,.08);
+
+    border:1px solid #ececec;
+
+    height:100%;
+
+}
+
+/*==========================================================
+HEADER
+==========================================================*/
+
+.uy7676a-card-header-olk7866s{
+
+    padding:25px 28px 15px;
+
+}
+
+.uy7676a-card-title-area-olk7866s{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.uy7676a-card-icon-olk7866s{
+
+    width:54px;
+
+    height:54px;
+
+    border-radius:50%;
+
+    background:#eef4ff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.uy7676a-card-icon-olk7866s i{
+
+    color:#1b4f9b;
+
+    font-size:24px;
+
+}
+
+.uy7676a-card-title-olk7866s{
+
+    margin:0;
+
+    color:#173f83;
+
+    font-size:30px;
+
+    font-weight:700;
+
+    font-family:Georgia,"Times New Roman",serif;
+
+}
+
+/*==========================================================
+BODY
+==========================================================*/
+
+.uy7676a-card-body-olk7866s{
+
+    padding:0 28px 28px;
+
+}
+
+/*==========================================================
+LIST
+==========================================================*/
+
+.uy7676a-list-olk7866s{
+
+    list-style:none;
+
+    margin:0;
+
+    padding:0;
+
+}
+
+.uy7676a-list-olk7866s li{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:14px;
+
+    margin-bottom:15px;
+
+}
+
+.uy7676a-number-olk7866s{
+
+    width:30px;
+
+    height:30px;
+
+    border-radius:50%;
+
+    background:#1b4f9b;
+
+    color:#ffffff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    flex-shrink:0;
+
+}
+
+.uy7676a-text-olk7866s{
+
+    font-size:16px;
+
+    color:#333;
+
+    line-height:1.6;
+
+}
+
+/*==========================================================
+IMAGE GRID
+==========================================================*/
+
+.uy7676a-image-grid-olk7866s{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.uy7676a-image-grid-olk7866s img{
+
+    width:100%;
+
+    height:135px;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+}
+
+/*==========================================================
+FOOTER
+==========================================================*/
+
+.uy7676a-footer-olk7866s{
+
+    margin:22px 28px 28px;
+
+    background:#f5f8ff;
+
+    border:1px solid #dbe8ff;
+
+    border-radius:14px;
+
+    padding:18px;
+
+    text-align:center;
+
+}
+
+.uy7676a-footer-olk7866s p{
+
+    margin:0;
+
+    color:#173f83;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    font-family:Georgia,"Times New Roman",serif;
+
+    line-height:1.5;
+
+}
+
+/*==========================================================
+HOVER
+==========================================================*/
+
+.uy7676a-card-olk7866s{
+
+    transition:.35s ease;
+
+}
+
+.uy7676a-card-olk7866s:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.14);
+
+}
+
+.uy7676a-image-grid-olk7866s img{
+
+    transition:.35s ease;
+
+}
+
+.uy7676a-image-grid-olk7866s img:hover{
+
+    transform:scale(1.04);
+
+}
+
+/*==========================================================
+DESKTOP
+==========================================================*/
+
+@media (min-width:1400px){
+
+    .uy7676a-card-title-olk7866s{
+
+        font-size:34px;
+
+    }
+
+    .uy7676a-footer-olk7866s p{
+
+        font-size:24px;
+
+    }
+
+}
+
+/*==========================================================
+END
+==========================================================*/
+
+/*==========================================================
+START : uy7676a
+TABLET RESPONSIVE
+END : olk7866s
+==========================================================*/
+
+@media (max-width:1199px){
+
+    #uy7676a-vision-grid-olk7866s{
+
+        padding:60px 0;
+
+    }
+
+    .uy7676a-card-header-olk7866s{
+
+        padding:22px;
+
+    }
+
+    .uy7676a-card-body-olk7866s{
+
+        padding:0 22px 22px;
+
+    }
+
+    .uy7676a-card-title-olk7866s{
+
+        font-size:26px;
+
+    }
+
+    .uy7676a-image-grid-olk7866s img{
+
+        height:120px;
+
+    }
+
+    .uy7676a-footer-olk7866s{
+
+        margin:20px 22px 22px;
+
+    }
+
+}
+
+/*==========================================================
+992px
+==========================================================*/
+
+@media (max-width:992px){
+
+    .uy7676a-card-title-olk7866s{
+
+        font-size:24px;
+
+    }
+
+    .uy7676a-card-body-olk7866s .row{
+
+        row-gap:22px;
+
+    }
+
+    .uy7676a-image-grid-olk7866s{
+
+        display:grid;
+
+        grid-template-columns:repeat(3,1fr);
+
+        gap:12px;
+
+    }
+
+    .uy7676a-image-grid-olk7866s img{
+
+        height:115px;
+
+    }
+
+    .uy7676a-text-olk7866s{
+
+        font-size:15px;
+
+    }
+
+}
+
+/*==========================================================
+768px
+==========================================================*/
+
+@media (max-width:768px){
+
+    #uy7676a-vision-grid-olk7866s{
+
+        padding:45px 0;
+
+    }
+
+    .uy7676a-card-olk7866s{
+
+        border-radius:18px;
+
+    }
+
+    .uy7676a-card-header-olk7866s{
+
+        padding:20px;
+
+    }
+
+    .uy7676a-card-body-olk7866s{
+
+        padding:0 20px 20px;
+
+    }
+
+    .uy7676a-card-title-area-olk7866s{
+
+        gap:10px;
+
+    }
+
+    .uy7676a-card-icon-olk7866s{
+
+        width:46px;
+
+        height:46px;
+
+    }
+
+    .uy7676a-card-icon-olk7866s i{
+
+        font-size:20px;
+
+    }
+
+    .uy7676a-card-title-olk7866s{
+
+        font-size:22px;
+
+    }
+
+    .uy7676a-list-olk7866s li{
+
+        gap:10px;
+
+        margin-bottom:12px;
+
+    }
+
+    .uy7676a-number-olk7866s{
+
+        width:26px;
+
+        height:26px;
+
+        font-size:13px;
+
+    }
+
+    .uy7676a-text-olk7866s{
+
+        font-size:15px;
+
+        line-height:1.5;
+
+    }
+
+    .uy7676a-image-grid-olk7866s{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .uy7676a-image-grid-olk7866s img{
+
+        height:180px;
+
+    }
+
+    .uy7676a-footer-olk7866s{
+
+        margin:18px 20px 20px;
+
+        padding:16px;
+
+    }
+
+    .uy7676a-footer-olk7866s p{
+
+        font-size:18px;
+
+    }
+
+}
+
+/*==========================================================
+576px
+==========================================================*/
+
+@media (max-width:576px){
+
+    #uy7676a-vision-grid-olk7866s{
+
+        padding:35px 0;
+
+    }
+
+    .uy7676a-card-header-olk7866s{
+
+        padding:18px;
+
+    }
+
+    .uy7676a-card-body-olk7866s{
+
+        padding:0 18px 18px;
+
+    }
+
+    .uy7676a-card-title-olk7866s{
+
+        font-size:20px;
+
+        line-height:1.3;
+
+    }
+
+    .uy7676a-card-icon-olk7866s{
+
+        width:42px;
+
+        height:42px;
+
+    }
+
+    .uy7676a-card-icon-olk7866s i{
+
+        font-size:18px;
+
+    }
+
+    .uy7676a-text-olk7866s{
+
+        font-size:14px;
+
+    }
+
+    .uy7676a-image-grid-olk7866s img{
+
+        height:160px;
+
+        border-radius:10px;
+
+    }
+
+    .uy7676a-footer-olk7866s{
+
+        margin:16px 18px 18px;
+
+    }
+
+    .uy7676a-footer-olk7866s p{
+
+        font-size:17px;
+
+    }
+
+}
+
+/*==========================================================
+425px
+==========================================================*/
+
+@media (max-width:425px){
+
+    .uy7676a-card-title-olk7866s{
+
+        font-size:18px;
+
+    }
+
+    .uy7676a-text-olk7866s{
+
+        font-size:13px;
+
+    }
+
+    .uy7676a-number-olk7866s{
+
+        width:24px;
+
+        height:24px;
+
+        font-size:12px;
+
+    }
+
+    .uy7676a-image-grid-olk7866s img{
+
+        height:145px;
+
+    }
+
+    .uy7676a-footer-olk7866s p{
+
+        font-size:16px;
+
+    }
+
+}
+
+/*==========================================================
+320px
+==========================================================*/
+
+@media (max-width:320px){
+
+    .uy7676a-card-header-olk7866s{
+
+        padding:15px;
+
+    }
+
+    .uy7676a-card-body-olk7866s{
+
+        padding:0 15px 15px;
+
+    }
+
+    .uy7676a-card-title-olk7866s{
+
+        font-size:17px;
+
+    }
+
+    .uy7676a-text-olk7866s{
+
+        font-size:12px;
+
+    }
+
+    .uy7676a-image-grid-olk7866s img{
+
+        height:130px;
+
+    }
+
+    .uy7676a-footer-olk7866s{
+
+        margin:15px;
+
+    }
+
+    .uy7676a-footer-olk7866s p{
+
+        font-size:15px;
+
+    }
+
+}
+
+/*==========================================================
+END : uy7676a
+END : olk7866s
+==========================================================*/
+
+/*==========================================================
+START : uy7676a
+FINAL UI POLISH
+END : olk7866s
+==========================================================*/
+
+/*==========================================================
+SECTION
+==========================================================*/
+
+#uy7676a-vision-grid-olk7866s{
+
+    position:relative;
+
+    overflow:hidden;
+
+    isolation:isolate;
+
+}
+
+/*==========================================================
+CARD
+==========================================================*/
+
+.uy7676a-card-olk7866s{
+
+    position:relative;
+
+    transition:
+    transform .35s ease,
+    box-shadow .35s ease,
+    border-color .35s ease;
+
+    cursor:pointer;
+
+}
+
+.uy7676a-card-olk7866s:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#d5e4ff;
+
+    box-shadow:
+    0 22px 50px rgba(0,0,0,.14);
+
+}
+
+/*==========================================================
+TOP BORDER
+==========================================================*/
+
+.uy7676a-card-olk7866s::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:linear-gradient(
+    90deg,
+    #1b4f9b,
+    #5d8ce8);
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:.4s;
+
+}
+
+.uy7676a-card-olk7866s:hover::before{
+
+    transform:scaleX(1);
+
+}
+
+/*==========================================================
+ICON
+==========================================================*/
+
+.uy7676a-card-icon-olk7866s{
+
+    transition:.35s ease;
+
+}
+
+.uy7676a-card-olk7866s:hover
+.uy7676a-card-icon-olk7866s{
+
+    transform:rotate(-10deg)
+              scale(1.08);
+
+    background:#1b4f9b;
+
+}
+
+.uy7676a-card-olk7866s:hover
+.uy7676a-card-icon-olk7866s i{
+
+    color:#ffffff;
+
+}
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.uy7676a-card-title-olk7866s{
+
+    transition:.35s ease;
+
+}
+
+.uy7676a-card-olk7866s:hover
+.uy7676a-card-title-olk7866s{
+
+    color:#0d4aa9;
+
+}
+
+/*==========================================================
+NUMBER
+==========================================================*/
+
+.uy7676a-number-olk7866s{
+
+    transition:.35s ease;
+
+}
+
+.uy7676a-card-olk7866s:hover
+.uy7676a-number-olk7866s{
+
+    background:#0b63d1;
+
+    transform:scale(1.1);
+
+}
+
+/*==========================================================
+IMAGE
+==========================================================*/
+
+.uy7676a-image-grid-olk7866s{
+
+    overflow:hidden;
+
+}
+
+.uy7676a-image-grid-olk7866s img{
+
+    transition:
+    transform .45s ease,
+    filter .45s ease;
+
+}
+
+.uy7676a-image-grid-olk7866s img:hover{
+
+    transform:scale(1.06);
+
+    filter:brightness(1.05);
+
+}
+
+/*==========================================================
+FOOTER
+==========================================================*/
+
+.uy7676a-footer-olk7866s{
+
+    transition:.35s ease;
+
+}
+
+.uy7676a-card-olk7866s:hover
+.uy7676a-footer-olk7866s{
+
+    background:#edf4ff;
+
+    border-color:#bfd7ff;
+
+}
+
+/*==========================================================
+QUOTE
+==========================================================*/
+
+.uy7676a-footer-olk7866s p{
+
+    transition:.35s ease;
+
+}
+
+.uy7676a-card-olk7866s:hover
+.uy7676a-footer-olk7866s p{
+
+    color:#0b57b8;
+
+}
+
+/*==========================================================
+SHINE EFFECT
+==========================================================*/
+
+.uy7676a-card-olk7866s::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:40%;
+
+    height:100%;
+
+    background:linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.45),
+    transparent);
+
+    transition:1s;
+
+}
+
+.uy7676a-card-olk7866s:hover::after{
+
+    left:140%;
+
+}
+
+/*==========================================================
+ENTRANCE ANIMATION
+==========================================================*/
+
+.uy7676a-card-olk7866s{
+
+    animation:
+    uy7676aFadeInOlk7866s
+    .7s ease both;
+
+}
+
+@keyframes uy7676aFadeInOlk7866s{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+/*==========================================================
+TEXT SELECTION
+==========================================================*/
+
+#uy7676a-vision-grid-olk7866s ::selection{
+
+    background:#0d4aa9;
+
+    color:#ffffff;
+
+}
+
+/*==========================================================
+DESKTOP SPACING
+==========================================================*/
+
+@media(min-width:1400px){
+
+    .uy7676a-card-body-olk7866s{
+
+        min-height:460px;
+
+    }
+
+}
+
+/*==========================================================
+SMOOTH
+==========================================================*/
+
+.uy7676a-card-olk7866s,
+.uy7676a-card-title-olk7866s,
+.uy7676a-card-icon-olk7866s,
+.uy7676a-number-olk7866s,
+.uy7676a-footer-olk7866s,
+.uy7676a-image-grid-olk7866s img{
+
+    will-change:transform;
+
+}
+
+/*==========================================================
+END : uy7676a
+END : olk7866s
+==========================================================*/
+
+/*==========================================================
+START : qw9821
+DESKTOP SCSS
+END : xz7744
+==========================================================*/
+
+#qw9821-mission-cards-xz7744{
+
+    padding:35px 0;
+
+    background:#f8f8f8;
+
+}
+
+/*==========================================================
+ROW
+==========================================================*/
+
+#qw9821-mission-cards-xz7744 .row{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    align-items:stretch;
+
+}
+
+/*==========================================================
+COLUMN
+==========================================================*/
+
+#qw9821-mission-cards-xz7744 .col-xl{
+
+    flex:1;
+
+    min-width:180px;
+
+}
+
+/*==========================================================
+CARD
+==========================================================*/
+
+.qw9821-card-xz7744{
+
+    height:100%;
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    background:#ffffff;
+
+    border:1px solid #e8e8e8;
+
+    box-shadow:
+
+    0 8px 22px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+/*==========================================================
+IMAGE
+==========================================================*/
+
+.qw9821-image-wrapper-xz7744{
+
+    width:100%;
+
+    height:180px;
+
+    overflow:hidden;
+
+}
+
+.qw9821-image-xz7744{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+/*==========================================================
+CONTENT
+==========================================================*/
+
+.qw9821-content-xz7744{
+
+    padding:18px;
+
+    min-height:150px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    text-align:center;
+
+}
+
+/*==========================================================
+ICON
+==========================================================*/
+
+.qw9821-icon-xz7744{
+
+    margin-bottom:10px;
+
+}
+
+.qw9821-icon-xz7744 i{
+
+    font-size:28px;
+
+}
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.qw9821-title-xz7744{
+
+    margin:0;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    line-height:1.3;
+
+    font-family:Georgia,"Times New Roman",serif;
+
+}
+
+/*==========================================================
+SUB TITLE
+==========================================================*/
+
+.qw9821-subtitle-xz7744{
+
+    margin-top:10px;
+
+    margin-bottom:0;
+
+    font-size:17px;
+
+    line-height:1.55;
+
+}
+
+/*==========================================================
+VERSE
+==========================================================*/
+
+.qw9821-verse-xz7744{
+
+    margin-top:12px;
+
+    font-size:15px;
+
+    font-weight:700;
+
+}
+
+/*==========================================================
+BLUE THEME
+==========================================================*/
+
+.theme-blue{
+
+    background:#0d3b82;
+
+    color:#ffffff;
+
+}
+
+.theme-blue .qw9821-title-xz7744{
+
+    color:#f4d37d;
+
+}
+
+.theme-blue .qw9821-subtitle-xz7744{
+
+    color:#ffffff;
+
+}
+
+.theme-blue .qw9821-verse-xz7744{
+
+    color:#f6d36d;
+
+}
+
+.theme-blue .qw9821-icon-xz7744 i{
+
+    color:#f6d36d;
+
+}
+
+/*==========================================================
+WHITE THEME
+==========================================================*/
+
+.theme-white{
+
+    background:#ffffff;
+
+}
+
+.theme-white .qw9821-title-xz7744{
+
+    color:#8c6112;
+
+}
+
+.theme-white .qw9821-subtitle-xz7744{
+
+    color:#5b4b2f;
+
+}
+
+.theme-white .qw9821-icon-xz7744 i{
+
+    color:#b8860b;
+
+}
+
+/*==========================================================
+IMAGE ONLY CARD
+==========================================================*/
+
+.theme-image{
+
+    display:none;
+
+}
+
+/*==========================================================
+IMAGE CARD
+==========================================================*/
+
+.theme-image + .qw9821-image-wrapper-xz7744{
+
+    height:100%;
+
+}
+
+/*==========================================================
+LARGE DESKTOP
+==========================================================*/
+
+@media(min-width:1600px){
+
+    .qw9821-image-wrapper-xz7744{
+
+        height:210px;
+
+    }
+
+    .qw9821-title-xz7744{
+
+        font-size:28px;
+
+    }
+
+}
+
+/*==========================================================
+END
+==========================================================*/
+// New
+
+/*==========================================================
+START : qw9821
+MISSION STRIP
+END : xz7744
+==========================================================*/
+
+#qw9821-mission-strip-xz7744{
+
+    padding:12px 0;
+
+    background:#ffffff;
+
+}
+
+/*==========================================================
+ROW
+==========================================================*/
+
+.qw9821-strip-row-xz7744{
+
+    display:flex;
+
+    align-items:stretch;
+
+    gap:6px;
+
+    overflow-x:auto;
+
+    scrollbar-width:none;
+
+}
+
+.qw9821-strip-row-xz7744::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+/*==========================================================
+COMMON CARD
+==========================================================*/
+
+.qw9821-item-xz7744{
+
+    height:82px;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    flex-shrink:0;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.12);
+
+}
+
+/*==========================================================
+WIDTHS
+==========================================================*/
+
+.qw9821-item-blue-xz7744{
+
+    width:245px;
+
+}
+
+.qw9821-item-image-xz7744{
+
+    width:165px;
+
+}
+
+.qw9821-item-white-xz7744{
+
+    width:245px;
+
+}
+
+/*==========================================================
+IMAGE CARD
+==========================================================*/
+
+.qw9821-image-xz7744{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+/*==========================================================
+BLUE CARD
+==========================================================*/
+
+.qw9821-blue-card-xz7744{
+
+    width:100%;
+
+    height:100%;
+
+    background:#0d3b84;
+
+    color:#ffffff;
+
+     padding:8px 12px;   /* was 10px 14px */
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+.qw9821-blue-icon-xz7744{
+
+    color:#e6be5d;
+
+    margin-bottom:2px;
+
+}
+
+.qw9821-blue-icon-xz7744 i{
+
+    font-size:12px;
+
+}
+
+.qw9821-blue-card-xz7744 h5{
+
+    margin:0;
+
+    color:#f6d37a;
+
+    font-size:13px;
+
+    font-weight:700;
+
+line-height:1.15;
+
+    font-family:Georgia,"Times New Roman",serif;
+
+}
+
+.qw9821-blue-card-xz7744 p{
+
+    margin:4px 0 0;
+
+    font-size:13px;
+
+    color:#ffffff;
+
+    line-height:1.25;
+
+}
+
+.qw9821-blue-card-xz7744 small{
+
+    margin-top:4px;
+
+    color:#f7d57d;
+
+    font-size:11px;
+
+}
+
+/*==========================================================
+WHITE CARD
+==========================================================*/
+
+.qw9821-white-card-xz7744{
+
+    width:100%;
+
+    height:100%;
+
+    background:#fffdf8;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:8px;
+
+    text-align:center;
+
+}
+
+.qw9821-white-icon-xz7744{
+
+    color:#b88a17;
+
+    margin-bottom:4px;
+
+}
+
+.qw9821-white-icon-xz7744 i{
+
+    font-size:17px;
+
+}
+
+.qw9821-white-card-xz7744 h5{
+
+    margin:0;
+
+    color:#9c6d17;
+
+    font-size:18px;
+
+    font-family:Georgia,"Times New Roman",serif;
+
+    font-weight:700;
+
+    line-height:1.1;
+
+}
+
+.qw9821-white-card-xz7744 p{
+
+    margin:3px 0 0;
+
+    color:#a77820;
+
+    font-size:13px;
+
+    line-height:1.2;
+
+}
+
+/*==========================================================
+HOVER
+==========================================================*/
+
+.qw9821-item-xz7744{
+
+    transition:.3s ease;
+
+}
+
+.qw9821-item-xz7744:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 8px 18px rgba(0,0,0,.18);
+
+}
+
+.qw9821-image-xz7744{
+
+    transition:.35s ease;
+
+}
+
+.qw9821-item-image-xz7744:hover .qw9821-image-xz7744{
+
+    transform:scale(1.08);
+
+}
+
+/*==========================================================
+END
+==========================================================*/
+
+/*==========================================================
+START : RESPONSIVE
+START ID : qw9821
+END ID : xz7744
+==========================================================*/
+
+/*==========================================================
+LAPTOP
+==========================================================*/
+
+@media (max-width:1400px){
+
+    .qw9821-item-blue-xz7744{
+
+        width:220px;
+
+    }
+
+    .qw9821-item-white-xz7744{
+
+        width:220px;
+
+    }
+
+    .qw9821-item-image-xz7744{
+
+        width:150px;
+
+    }
+
+    .qw9821-item-xz7744{
+
+        height:78px;
+
+    }
+
+    .qw9821-blue-card-xz7744 h5,
+    .qw9821-white-card-xz7744 h5{
+
+        font-size:12px;
+
+    }
+
+    .qw9821-blue-card-xz7744 p,
+    .qw9821-white-card-xz7744 p{
+
+        font-size:12px;
+
+    }
+
+}
+
+/*==========================================================
+TABLET
+==========================================================*/
+
+@media (max-width:992px){
+
+    .qw9821-strip-row-xz7744{
+
+        display:grid;
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:14px;
+
+    }
+
+    .qw9821-item-xz7744{
+
+        width:100% !important;
+
+        height:120px;
+
+    }
+
+    .qw9821-blue-card-xz7744,
+    .qw9821-white-card-xz7744{
+
+        padding:18px;
+
+    }
+
+    .qw9821-blue-card-xz7744 h5,
+    .qw9821-white-card-xz7744 h5{
+
+        font-size:22px;
+
+    }
+
+    .qw9821-blue-card-xz7744 p,
+    .qw9821-white-card-xz7744 p{
+
+        font-size:15px;
+
+    }
+
+    .qw9821-image-xz7744{
+
+        width:100%;
+
+        height:100%;
+
+        object-fit:cover;
+
+    }
+
+}
+
+/*==========================================================
+MOBILE
+==========================================================*/
+
+@media (max-width:768px){
+
+    #qw9821-mission-strip-xz7744{
+
+        padding:18px 12px;
+
+    }
+
+    .qw9821-strip-row-xz7744{
+
+        grid-template-columns:1fr;
+
+        gap:16px;
+
+    }
+
+    .qw9821-item-xz7744{
+
+        height:160px;
+
+        border-radius:14px;
+
+    }
+
+    .qw9821-blue-card-xz7744{
+
+        align-items:center;
+
+        text-align:center;
+
+    }
+
+    .qw9821-blue-card-xz7744 h5{
+
+        font-size:26px;
+
+    }
+
+    .qw9821-blue-card-xz7744 p{
+
+        font-size:17px;
+
+    }
+
+    .qw9821-blue-card-xz7744 small{
+
+        font-size:14px;
+
+    }
+
+    .qw9821-white-card-xz7744 h5{
+
+        font-size:24px;
+
+    }
+
+    .qw9821-white-card-xz7744 p{
+
+        font-size:16px;
+
+    }
+
+}
+
+/*==========================================================
+SMALL MOBILE
+==========================================================*/
+
+@media (max-width:480px){
+
+    .qw9821-item-xz7744{
+
+        height:140px;
+
+    }
+
+    .Neighborhood-Bb-Events-Banner-Titlex34 {
+        font-size: 25px;
+    }
+    .qw9821-blue-card-xz7744{
+
+        padding:16px;
+
+    }
+
+    .qw9821-blue-card-xz7744 h5{
+
+        font-size:22px;
+
+    }
+
+    .qw9821-blue-card-xz7744 p{
+
+        font-size:15px;
+
+    }
+
+    .qw9821-white-card-xz7744 h5{
+
+        font-size:20px;
+
+    }
+
+    .qw9821-white-card-xz7744 p{
+
+        font-size:14px;
+
+    }
+
+}
+
+/*==========================================================
+END : qw9821
+END : xz7744
+==========================================================*/
+
+/*==========================================================
+START : PREMIUM EFFECTS
+START ID : qw9821
+END ID : xz7744
+==========================================================*/
+
+/*==========================================================
+CARD
+==========================================================*/
+
+.qw9821-item-xz7744{
+
+    position:relative;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    transition:
+    transform .35s ease,
+    box-shadow .35s ease;
+
+}
+
+.qw9821-item-xz7744:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 18px 40px rgba(0,0,0,.18);
+
+}
+
+/*==========================================================
+TOP BORDER
+==========================================================*/
+
+.qw9821-item-xz7744::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:4px;
+
+    background:linear-gradient(
+        90deg,
+        #E2B65D,
+        #0D4C97);
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:.35s;
+
+    z-index:5;
+
+}
+
+.qw9821-item-xz7744:hover::before{
+
+    transform:scaleX(1);
+
+}
+
+/*==========================================================
+SHINE
+==========================================================*/
+
+.qw9821-item-xz7744::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:35%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.45),
+
+        transparent
+
+    );
+
+    transition:1s;
+
+}
+
+.qw9821-item-xz7744:hover::after{
+
+    left:140%;
+
+}
+
+/*==========================================================
+IMAGE
+==========================================================*/
+
+.qw9821-image-wrapper-xz7744{
+
+    overflow:hidden;
+
+}
+
+.qw9821-image-xz7744{
+
+    transition:
+    transform .45s ease,
+    filter .45s ease;
+
+}
+
+.qw9821-item-image-xz7744:hover
+.qw9821-image-xz7744{
+
+    transform:scale(1.08);
+
+    filter:brightness(1.06);
+
+}
+
+/*==========================================================
+ICON
+==========================================================*/
+
+.qw9821-blue-icon-xz7744,
+.qw9821-white-icon-xz7744{
+
+    transition:.35s;
+
+}
+
+.qw9821-item-xz7744:hover
+.qw9821-blue-icon-xz7744,
+
+.qw9821-item-xz7744:hover
+.qw9821-white-icon-xz7744{
+
+    transform:rotate(-10deg)
+              scale(1.15);
+
+}
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.qw9821-blue-card-xz7744 h5,
+.qw9821-white-card-xz7744 h5{
+
+    transition:.35s;
+
+}
+
+.qw9821-item-xz7744:hover
+.qw9821-blue-card-xz7744 h5{
+
+    color:#FFE39A;
+
+}
+
+.qw9821-item-xz7744:hover
+.qw9821-white-card-xz7744 h5{
+
+    color:#C98B12;
+
+}
+
+/*==========================================================
+PARAGRAPH
+==========================================================*/
+
+.qw9821-blue-card-xz7744 p,
+.qw9821-white-card-xz7744 p{
+
+    transition:.35s;
+
+}
+
+/*==========================================================
+ENTRANCE
+==========================================================*/
+
+.qw9821-item-xz7744{
+
+    animation:
+    qw9821FadeInxz7744
+    .7s ease both;
+
+}
+
+@keyframes qw9821FadeInxz7744{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+/*==========================================================
+TEXT SELECTION
+==========================================================*/
+
+#qw9821-mission-strip-xz7744 ::selection{
+
+    background:#0D4C97;
+
+    color:#ffffff;
+
+}
+
+/*==========================================================
+SMOOTH
+==========================================================*/
+
+.qw9821-item-xz7744,
+.qw9821-image-xz7744,
+.qw9821-blue-icon-xz7744,
+.qw9821-white-icon-xz7744{
+
+    will-change:transform;
+
+}
+
+/*==========================================================
+ACCESSIBILITY
+==========================================================*/
+
+@media(prefers-reduced-motion:reduce){
+
+    .qw9821-item-xz7744,
+
+    .qw9821-image-xz7744{
+
+        animation:none;
+
+        transition:none;
+
+    }
+
+}
+
+/*==========================================================
+END
+==========================================================*/
+
+.Neighborhood-Bb-Events-Banner-Titlex34 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width:480px){
+
+    
+
+    .Neighborhood-Bb-Events-Banner-Titlex34 {
+        font-size: 25px;
+    }
+
+}

@@ -125,29 +125,1861 @@ NEIGHBORHOOD TAB MENU
 
 @if(activeTab==0){
 
+<!--==========================================================
+START : wm8231
+WORSHIP MUSIC TAB
+END : qz9981
+==========================================================-->
 
+<section
+id="wm8231-worship-tab-qz9981"
+class="wm8231-worship-tab-qz9981">
+
+    <div class="wm8231-card-qz9981">
+
+        <!--==============================================
+        HEADER
+        ==============================================-->
+
+        <div
+        class="d-flex justify-content-between align-items-start flex-wrap gap-3">
+
+            <div>
+
+                <h2 class="wm8231-title-qz9981">
+
+                    {{musicSection.title}}
+
+                </h2>
+
+                <p class="wm8231-subtitle-qz9981">
+
+                    {{musicSection.subTitle}}
+
+                </p>
+
+            </div>
+
+          <button
+class="wm8231-view-btn-qz9981"
+(click)="fileInput.click()">
+
+    Upload Music
+
+</button>
+
+<input
+#fileInput
+type="file"
+accept="audio/*"
+multiple
+hidden
+(change)="uploadMusic($event)">
+
+        </div>
+
+        <!--==============================================
+        MUSIC LIST
+        ==============================================-->
+
+        <div class="row g-3 mt-2">
+
+            @for(song of musicSection.songs; track song.id){
+
+            <div class="col-lg-3 col-md-6 col-6">
+
+                <div
+
+                class="wm8231-song-card-qz9981"
+
+                (click)="selectSong(song)"
+
+                [class.active-song]="currentSong?.id===song.id">
+
+                    <img
+
+                    [src]="song.image"
+
+                    [alt]="song.title"
+
+                    class="img-fluid wm8231-song-image-qz9981">
+
+                    <h5 class="wm8231-song-title-qz9981">
+
+                        {{song.title}}
+
+                    </h5>
+
+                    <p class="wm8231-song-artist-qz9981">
+
+                        {{song.artist}}
+
+                    </p>
+
+                    <span class="wm8231-song-time-qz9981">
+
+                        {{song.duration}}
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            }
+
+        </div>
+
+        <!--==============================================
+        PLAYER
+        ==============================================-->
+
+        <div class="wm8231-player-qz9981">
+
+            <!-- LEFT -->
+
+            <div class="wm8231-player-left-qz9981">
+
+                <img
+
+                [src]="currentSong?.image"
+
+                class="wm8231-current-image-qz9981">
+
+                <div>
+
+                    <h5>
+
+                        {{currentSong?.title}}
+
+                    </h5>
+
+                    <p>
+
+                        {{currentSong?.artist}}
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT -->
+
+            <div class="wm8231-player-center-qz9981">
+
+                <!-- Controls -->
+
+                <div class="wm8231-player-controls-qz9981">
+
+                    <button
+
+                    (click)="previousSong()">
+
+                        <i class="bi bi-skip-backward-fill"></i>
+
+                    </button>
+
+                    <button
+
+                    class="wm8231-play-btn-qz9981"
+
+                    (click)="togglePlay()">
+
+                        <i
+
+                        class="bi"
+
+                        [class.bi-play-fill]="!isPlaying"
+
+                        [class.bi-pause-fill]="isPlaying">
+
+                        </i>
+
+                    </button>
+
+                    <button
+
+                    (click)="nextSong()">
+
+                        <i class="bi bi-skip-forward-fill"></i>
+
+                    </button>
+
+                    <button
+
+                    (click)="muteAudio()">
+
+                        <i
+
+                        class="bi"
+
+                        [class.bi-volume-up-fill]="!isMuted"
+
+                        [class.bi-volume-mute-fill]="isMuted">
+
+                        </i>
+
+                    </button>
+
+                </div>
+
+                <!-- Progress -->
+
+                <div class="wm8231-progress-row-qz9981">
+
+                    <span>
+
+                        {{currentTime}}
+
+                    </span>
+
+                    <div
+
+                    class="wm8231-progress-qz9981"
+
+                    (click)="seek($event)">
+
+                        <div
+
+                        class="wm8231-progress-fill-qz9981"
+
+                        [style.width.%]="progress">
+
+                        </div>
+
+                    </div>
+
+                    <span>
+
+                        {{totalTime}}
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--==============================================
+        HIDDEN AUDIO
+        ==============================================-->
+
+        <audio
+
+        #audioPlayer
+
+        (timeupdate)="onTimeUpdate()"
+
+        (loadedmetadata)="loadedMetadata()"
+
+        (ended)="nextSong()">
+
+        </audio>
+
+    </div>
+
+</section>
+
+<!--==========================================================
+END : wm8231
+END : qz9981
+==========================================================-->
 
 }
 
 @if(activeTab==1){
 
+<!--==========================================================
+START : ch89231
+CHOIR JOIN TAB
+END : kp55321
+==========================================================-->
 
+<section
+id="ch89231-choir-tab-kp55321"
+class="ch89231-choir-tab-kp55321">
+
+    <div
+    class="container-fluid">
+
+        <div
+        class="ch89231-card-kp55321">
+
+            <!--==============================================
+            HEADER
+            ==============================================-->
+
+            <div
+            class="ch89231-header-kp55321">
+
+                <h2
+                class="ch89231-title-kp55321">
+
+                    {{choirData.title}}
+
+                </h2>
+
+                <p
+                class="ch89231-subtitle-kp55321">
+
+                    {{choirData.subTitle}}
+
+                </p>
+
+            </div>
+
+            <!--==============================================
+            CHOIR LIST
+            ==============================================-->
+
+            @for(item of choirData.list; track item.id){
+
+            <div
+            class="row align-items-center ch89231-row-kp55321">
+
+                <!-- IMAGE -->
+
+                <div
+                class="col-lg-3 col-md-4 col-12">
+
+                    <img
+                    [src]="item.image"
+                    [alt]="item.name"
+                    class="img-fluid ch89231-image-kp55321">
+
+                </div>
+
+                <!-- CONTENT -->
+
+                <div
+                class="col-lg-7 col-md-6 col-12">
+
+                    <div
+                    class="ch89231-content-kp55321">
+
+                        <h4
+                        class="ch89231-name-kp55321">
+
+                            {{item.name}}
+
+                        </h4>
+
+                        <p
+                        class="ch89231-description-kp55321">
+
+                            {{item.description}}
+
+                        </p>
+
+                        <!-- TIME -->
+
+                        <div
+                        class="ch89231-info-kp55321">
+
+                            <i
+                            class="bi bi-clock"></i>
+
+                            <span>
+
+                                {{item.time}}
+
+                            </span>
+
+                        </div>
+
+                        <!-- LOCATION -->
+
+                        <div
+                        class="ch89231-info-kp55321">
+
+                            <i
+                            class="bi bi-calendar-event"></i>
+
+                            <span>
+
+                                {{item.location}}
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- BUTTON -->
+
+              <div
+class="col-lg-2 col-md-2 col-12 text-lg-end text-md-end text-center">
+
+                    <button
+                    class="ch89231-join-btn-kp55321"
+                    (click)="joinChoir(item)">
+
+                        Join
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            }
+
+            <!--==============================================
+            FOOTER NOTICE
+            ==============================================-->
+
+            <div
+            class="ch89231-footer-kp55321">
+
+                <i
+                class="bi bi-shield-check"></i>
+
+                <span>
+
+                    {{choirData.notice}}
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--==============================================
+    TOAST
+    ==============================================-->
+
+    @if(showToast){
+
+    <div
+    class="ch89231-toast-kp55321">
+
+        <i
+        class="bi bi-check-circle-fill"></i>
+
+        <span>
+
+            {{toastMessage}}
+
+        </span>
+
+    </div>
+
+    }
+
+</section>
+
+<!--==========================================================
+END : ch89231
+END : kp55321
+==========================================================-->
 
 }
 
 @if(activeTab==2){
 
+    <!--==========================================================
+START : vt66221
+VIDEO TAB
+END : nb99117
+==========================================================-->
+
+<section
+id="vt66221-video-tab-nb99117"
+class="vt66221-video-tab-nb99117">
+
+    <div
+    class="container-fluid">
+
+        <div
+        class="vt66221-card-nb99117">
+
+            <!--==============================================
+            HEADER
+            ==============================================-->
+
+            <div
+            class="d-flex justify-content-between align-items-start flex-wrap gap-3">
+
+                <div>
+
+                    <h2
+                    class="vt66221-title-nb99117">
+
+                        {{videoSection.title}}
+
+                    </h2>
+
+                    <p
+                    class="vt66221-subtitle-nb99117">
+
+                        {{videoSection.subTitle}}
+
+                    </p>
+
+                </div>
+
+                <!--==========================================
+                ADD VIDEO
+                ==========================================-->
+
+                <button
+                class="vt66221-upload-btn-nb99117"
+                (click)="videoUpload.click()">
+
+                    <i
+                    class="bi bi-cloud-upload-fill"></i>
+
+                    Add Video
+
+                </button>
+
+                <input
+                #videoUpload
+                type="file"
+                hidden
+                multiple
+                accept="video/*"
+                (change)="uploadVideos($event)">
+
+            </div>
+
+            <!--==============================================
+            VIDEO GRID
+            ==============================================-->
+
+            <div
+            class="row g-3 mt-3">
+
+                @for(video of videoSection.videos;track video.id){
+
+                <div
+                class="col-lg-3 col-md-6 col-12">
+
+                    <div
+                    class="vt66221-video-card-nb99117"
+                    (click)="selectVideo(video)">
+
+                        <!-- THUMBNAIL -->
+
+                        <div
+                        class="vt66221-thumb-wrapper-nb99117">
+
+                            <img
+                            [src]="video.thumbnail"
+                            [alt]="video.title"
+                            class="img-fluid vt66221-thumb-nb99117">
+
+                            <div
+                            class="vt66221-play-overlay-nb99117">
+
+                                <i
+                                class="bi bi-play-circle-fill"></i>
+
+                            </div>
+
+                        </div>
+
+                        <!-- TITLE -->
+
+                        <h5
+                        class="vt66221-video-title-nb99117">
+
+                            {{video.title}}
+
+                        </h5>
+
+                        <!-- SUB -->
+
+                        <p
+                        class="vt66221-video-subtitle-nb99117">
+
+                            {{video.subTitle}}
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                }
+
+            </div>
+
+            <!--==============================================
+            VIDEO PLAYER
+            ==============================================-->
+
+         <div class="row vt66221-player-wrapper-nb99117 mt-4">
+
+    <!--=========================
+    LEFT : VIDEO
+    ==========================-->
+
+    <div class="col-lg-8 col-12">
+
+        <video
+        #videoPlayer
+        class="vt66221-player-nb99117"
+        poster="{{currentVideo?.thumbnail}}"
+        (timeupdate)="videoTimeUpdate()"
+        (loadedmetadata)="videoLoaded()"
+        (ended)="nextVideo()">
+
+        </video>
+
+    </div>
+
+    <!--=========================
+    RIGHT : PLAYER DETAILS
+    ==========================-->
+
+    <div class="col-lg-4 col-12">
+
+        <div class="vt66221-side-panel-nb99117">
+
+            <h4>
+
+                {{currentVideo?.title}}
+
+            </h4>
+
+            <p>
+
+                {{currentVideo?.subTitle}}
+
+            </p>
+
+            <div
+            class="vt66221-player-controls-nb99117">
+
+                <button
+                (click)="fullScreen()">
+
+                    <i class="bi bi-fullscreen"></i>
+
+                </button>
+
+                <button
+                (click)="previousVideo()">
+
+                    <i class="bi bi-skip-backward-fill"></i>
+
+                </button>
+
+                <button
+                class="vt66221-main-play-btn-nb99117"
+                (click)="toggleVideo()">
+
+                    <i
+                    class="bi"
+                    [class.bi-play-fill]="!videoPlaying"
+                    [class.bi-pause-fill]="videoPlaying">
+
+                    </i>
+
+                </button>
+
+                <button
+                (click)="nextVideo()">
+
+                    <i class="bi bi-skip-forward-fill"></i>
+
+                </button>
+
+                <button
+                (click)="muteVideo()">
+
+                    <i
+                    class="bi"
+                    [class.bi-volume-up-fill]="!videoMuted"
+                    [class.bi-volume-mute-fill]="videoMuted">
+
+                    </i>
+
+                </button>
+
+            </div>
+
+            <div
+            class="vt66221-progress-row-nb99117">
+
+                <span>{{videoCurrentTime}}</span>
+
+                <div
+                class="vt66221-progress-bar-nb99117"
+                (click)="seekVideo($event)">
+
+                    <div
+                    class="vt66221-progress-fill-nb99117"
+                    [style.width.%]="videoProgress">
+
+                    </div>
+
+                </div>
+
+                <span>{{videoTotalTime}}</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================================
+END : vt66221
+END : nb99117
+==========================================================-->
 
 }
 
 @if(activeTab==3){
 
  
+ <!--==========================================================
+START : gc84521
+GENERAL CONFERENCE TAB
+END : rm99231
+===========================================================-->
+
+<section
+id="gc84521-conference-tab-rm99231"
+class="gc84521-conference-tab-rm99231">
+
+    <div class="container-fluid">
+
+        <div class="gc84521-card-rm99231">
+
+            <!--==================================================
+            HEADER
+            ===================================================-->
+
+            <div
+            class="d-flex justify-content-between align-items-start flex-wrap gap-3">
+
+                <div>
+
+                    <h2
+                    class="gc84521-title-rm99231">
+
+                        {{gc84521ConferenceData.title}}
+
+                    </h2>
+
+                    <p
+                    class="gc84521-subtitle-rm99231">
+
+                        {{gc84521ConferenceData.subTitle}}
+
+                    </p>
+
+                </div>
+
+                <!--==============================================
+                ADD EVENT BUTTON
+                ==============================================-->
+
+                <button
+                class="gc84521-add-btn-rm99231"
+                (click)="gc84521OpenModal()">
+
+                    <i
+                    class="bi bi-plus-circle-fill">
+                    </i>
+
+                    Add Event
+
+                </button>
+
+            </div>
+
+            <!--==================================================
+            EVENT LIST
+            ===================================================-->
+
+            <div
+            class="gc84521-event-list-rm99231">
+
+                @for(event of gc84521ConferenceData.events;track event.id){
+
+                <div
+                class="gc84521-event-card-rm99231">
+
+                    <div
+                    class="row align-items-center">
+
+                        <!--======================================
+                        THUMBNAIL
+                        ======================================-->
+
+                        <div
+                        class="col-lg-2 col-md-3 col-12">
+
+                            <img
+                            [src]="event.thumbnail"
+                            [alt]="event.title"
+                            class="img-fluid gc84521-thumb-rm99231">
+
+                        </div>
+
+                        <!--======================================
+                        DATE
+                        ======================================-->
+
+                        <div
+                        class="col-lg-1 col-md-2 col-3">
+
+                            <div
+                            class="gc84521-date-rm99231">
+
+                                <span
+                                class="gc84521-month-rm99231">
+
+                                    {{event.month}}
+
+                                </span>
+
+                                <span
+                                class="gc84521-year-rm99231">
+
+                                    {{event.year}}
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <!--======================================
+                        DETAILS
+                        ======================================-->
+
+                        <div
+                        class="col-lg-7 col-md-5 col-9">
+
+                            <div
+                            class="gc84521-content-rm99231">
+
+                                <h4>
+
+                                    {{event.title}}
+
+                                </h4>
+
+                                <h6>
+
+                                    {{event.subTitle}}
+
+                                </h6>
+
+                                <p>
+
+                                    {{event.description}}
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!--======================================
+                        BUTTON
+                        ======================================-->
+
+                        <div
+                        class="col-lg-2 col-md-2 col-12 text-lg-end text-md-end text-center">
+
+                            <button
+                            class="gc84521-listen-btn-rm99231"
+                            (click)="gc84521ListenEvent(event)">
+
+                                <i
+                                class="bi bi-play-fill">
+                                </i>
+
+                                Listen
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                }
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================================
+END
+===========================================================-->
+<!--==========================================================
+VIDEO PLAYER
+===========================================================-->
+
+<div
+class="row gc84521-player-wrapper-rm99231 mt-4">
+
+    <!--======================================================
+    LEFT : VIDEO
+    =======================================================-->
+
+    <div
+    class="col-xl-8 col-lg-7 col-12">
+
+        <div
+        class="gc84521-video-card-rm99231">
+
+            <video
+
+            #gc84521VideoPlayer
+
+            class="gc84521-video-rm99231"
+
+            poster="{{gc84521CurrentEvent.thumbnail}}"
+
+            (timeupdate)="gc84521VideoTimeUpdate()"
+
+            (loadedmetadata)="gc84521VideoLoaded()"
+
+            (ended)="gc84521NextVideo()">
+
+            </video>
+
+        </div>
+
+    </div>
+
+    <!--======================================================
+    RIGHT : PLAYER INFO
+    =======================================================-->
+
+    <div
+    class="col-xl-4 col-lg-5 col-12">
+
+        <div
+        class="gc84521-player-info-rm99231">
+
+            <!-- TITLE -->
+
+            <h3>
+
+                {{gc84521CurrentEvent.title}}
+
+            </h3>
+
+            <!-- SUB TITLE -->
+
+            <h6>
+
+                {{gc84521CurrentEvent.subTitle}}
+
+            </h6>
+
+            <!-- DESCRIPTION -->
+
+            <p>
+
+                {{gc84521CurrentEvent.description}}
+
+            </p>
+
+            <!--==============================================
+            CONTROLS
+            ==============================================-->
+
+            <div
+            class="gc84521-controls-rm99231">
+
+                <!-- PREVIOUS -->
+
+                <button
+                (click)="gc84521PreviousVideo()">
+
+                    <i
+                    class="bi bi-skip-backward-fill">
+                    </i>
+
+                </button>
+
+                <!-- PLAY -->
+
+                <button
+                class="gc84521-play-btn-rm99231"
+                (click)="gc84521PlayPause()">
+
+                    <i
+
+                    class="bi"
+
+                    [class.bi-play-fill]="!gc84521Playing"
+
+                    [class.bi-pause-fill]="gc84521Playing">
+
+                    </i>
+
+                </button>
+
+                <!-- NEXT -->
+
+                <button
+                (click)="gc84521NextVideo()">
+
+                    <i
+                    class="bi bi-skip-forward-fill">
+                    </i>
+
+                </button>
+
+                <!-- MUTE -->
+
+                <button
+                (click)="gc84521MuteVideo()">
+
+                    <i
+
+                    class="bi"
+
+                    [class.bi-volume-up-fill]="!gc84521Muted"
+
+                    [class.bi-volume-mute-fill]="gc84521Muted">
+
+                    </i>
+
+                </button>
+
+                <!-- FULL SCREEN -->
+
+                <button
+                (click)="gc84521Fullscreen()">
+
+                    <i
+                    class="bi bi-fullscreen">
+
+                    </i>
+
+                </button>
+
+            </div>
+
+            <!--==============================================
+            PROGRESS
+            ==============================================-->
+
+            <div
+            class="gc84521-progress-wrapper-rm99231">
+
+                <span>
+
+                    {{gc84521CurrentTime}}
+
+                </span>
+
+                <div
+                class="gc84521-progress-rm99231"
+                (click)="gc84521SeekVideo($event)">
+
+                    <div
+                    class="gc84521-progress-fill-rm99231"
+                    [style.width.%]="gc84521Progress">
+
+                    </div>
+
+                </div>
+
+                <span>
+
+                    {{gc84521TotalTime}}
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!--==========================================================
+ADD EVENT MODAL
+===========================================================-->
+
+@if(gc84521ShowModal){
+
+<div
+class="gc84521-modal-overlay-rm99231">
+
+    <div
+    class="gc84521-modal-rm99231">
+
+        <!-- TITLE -->
+
+        <h3>
+
+            Add Conference Session
+
+        </h3>
+
+        <!-- EVENT TITLE -->
+
+        <input
+
+        type="text"
+
+        class="form-control"
+
+        placeholder="Conference Title"
+
+        [(ngModel)]="gc84521Form.title">
+
+        <!-- DATE -->
+
+        <input
+
+        type="date"
+
+        class="form-control mt-3"
+
+        [(ngModel)]="gc84521Form.date">
+
+        <!-- SUB TITLE -->
+
+        <input
+
+        type="text"
+
+        class="form-control mt-3"
+
+        placeholder="Subtitle"
+
+        [(ngModel)]="gc84521Form.subTitle">
+
+        <!-- DESCRIPTION -->
+
+        <textarea
+
+        rows="4"
+
+        class="form-control mt-3"
+
+        placeholder="Description"
+
+        [(ngModel)]="gc84521Form.description">
+
+        </textarea>
+
+        <!--==============================================
+        THUMBNAIL
+        ==============================================-->
+
+        <div
+        class="mt-4">
+
+            <label
+            class="gc84521-upload-label-rm99231">
+
+                Thumbnail
+
+            </label>
+
+            <button
+
+            class="gc84521-upload-btn-rm99231"
+
+            (click)="gc84521ThumbUpload.click()">
+
+                Upload Thumbnail
+
+            </button>
+
+            <input
+
+            #gc84521ThumbUpload
+
+            hidden
+
+            type="file"
+
+            accept="image/*"
+
+            (change)="gc84521UploadThumbnail($event)">
+
+        </div>
+
+        <!--==============================================
+        VIDEO
+        ==============================================-->
+
+        <div
+        class="mt-3">
+
+            <label
+            class="gc84521-upload-label-rm99231">
+
+                Video
+
+            </label>
+
+            <button
+
+            class="gc84521-upload-btn-rm99231"
+
+            (click)="gc84521VideoUpload.click()">
+
+                Upload Video
+
+            </button>
+
+            <input
+
+            #gc84521VideoUpload
+
+            hidden
+
+            type="file"
+
+            accept="video/*"
+
+            (change)="gc84521UploadVideo($event)">
+
+        </div>
+
+        <!--==============================================
+        BUTTONS
+        ==============================================-->
+
+        <div
+        class="gc84521-modal-buttons-rm99231">
+
+            <button
+            class="gc84521-save-btn-rm99231"
+            (click)="gc84521SaveEvent()">
+
+                <i
+                class="bi bi-check-circle-fill">
+
+                </i>
+
+                Save Event
+
+            </button>
+
+            <button
+            class="gc84521-cancel-btn-rm99231"
+            (click)="gc84521CloseModal()">
+
+                <i
+                class="bi bi-x-circle-fill">
+
+                </i>
+
+                Cancel
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+}
+
+<!--==========================================================
+TOAST
+===========================================================-->
+
+@if(gc84521ShowToast){
+
+<div
+class="gc84521-toast-rm99231">
+
+    <i
+    class="bi bi-check-circle-fill">
+
+    </i>
+
+    {{gc84521ToastMessage}}
+
+</div>
+
  
+
+}
+
+<div style="margin-bottom: 60px;"></div>
 }
 
 @if(activeTab==4){
- 
+ <!--==========================================================
+START : ghd6766
+MY MUSIC TAB
+END : 686shb888
+===========================================================-->
+
+<section
+id="ghd6766-my-music-686shb888"
+class="ghd6766-my-music-686shb888">
+
+    <div
+    class="container-fluid">
+
+        <div
+        class="ghd6766-card-686shb888">
+
+            <!--==================================================
+            HEADER
+            ==================================================-->
+
+            <div
+            class="d-flex justify-content-between align-items-start flex-wrap gap-3">
+
+                <div>
+
+                    <h2
+                    class="ghd6766-title-686shb888">
+
+                        {{ghd6766MusicLibrary.title}}
+
+                    </h2>
+
+                    <p
+                    class="ghd6766-subtitle-686shb888">
+
+                        {{ghd6766MusicLibrary.subTitle}}
+
+                    </p>
+
+                </div>
+
+                <!--==============================================
+                UPLOAD BUTTON
+                ==============================================-->
+
+                <button
+                class="ghd6766-upload-btn-686shb888"
+                (click)="ghd6766OpenMusicModal()">
+
+                    <i
+                    class="bi bi-cloud-arrow-up-fill">
+
+                    </i>
+
+                    Upload Music
+
+                </button>
+
+            </div>
+
+            <!--==================================================
+            MUSIC GRID
+            ==================================================-->
+
+            <div
+            class="row g-4 mt-2">
+
+                @for(song of ghd6766MusicLibrary.list;track song.id){
+
+                <div
+                class="col-xl-4 col-lg-6 col-md-6 col-12">
+
+                    <div
+                    class="ghd6766-song-card-686shb888"
+
+                  [class.ghd6766-active-song-686shb888]="
+ghd6766CurrentMusic.id===song.id">
+
+                        <!--==============================
+                        COVER
+                        ==============================-->
+
+                        <div
+                        class="ghd6766-image-wrapper-686shb888">
+
+                            <img
+
+                            [src]="song.image"
+
+                            [alt]="song.title"
+
+                            class="img-fluid ghd6766-image-686shb888">
+
+                            <!-- PLAY BUTTON -->
+
+                            <button
+
+                            class="ghd6766-play-overlay-686shb888"
+
+                            (click)="ghd6766PlaySelectedMusic(song)">
+
+                                <i
+
+                                class="bi"
+
+                             [class.bi-play-fill]="
+ghd6766CurrentMusic.id!==song.id ||
+!ghd6766MusicPlaying"
+
+                               [class.bi-pause-fill]="
+ghd6766CurrentMusic.id===song.id &&
+ghd6766MusicPlaying">
+
+                                </i>
+
+                            </button>
+
+                        </div>
+
+                        <!--==============================
+                        CONTENT
+                        ==============================-->
+
+                        <div
+                        class="ghd6766-content-686shb888">
+
+                            <h4>
+
+                                {{song.title}}
+
+                            </h4>
+
+                            <p>
+
+                                {{song.subTitle}}
+
+                            </p>
+
+                            <div
+                            class="ghd6766-footer-686shb888">
+
+                                <span>
+
+                                    <i
+                                    class="bi bi-clock">
+
+                                    </i>
+
+                                    {{song.duration}}
+
+                                </span>
+
+                                <button
+
+                                class="ghd6766-delete-btn-686shb888"
+
+                                (click)="ghd6766DeleteMusic(song.id)">
+
+                                    <i
+                                    class="bi bi-trash-fill">
+
+                                    </i>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                }
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================================
+END
+===========================================================-->
+
+<!--==========================================================
+PLAYER
+===========================================================-->
+
+<div
+class="row ghd6766-player-wrapper-686shb888 mt-4">
+
+    <!--======================================================
+    LEFT : PLAYER
+    =======================================================-->
+
+    <div
+    class="col-xl-8 col-lg-7 col-12">
+
+        <div
+        class="ghd6766-player-card-686shb888">
+
+            <audio
+
+            #ghd6766AudioPlayer
+
+            (loadedmetadata)="ghd6766MusicLoaded()"
+
+            (timeupdate)="ghd6766MusicTimeUpdate()"
+
+            (ended)="ghd6766NextMusicTrack()">
+
+            </audio>
+
+            <div
+            class="ghd6766-player-cover-686shb888">
+
+                <img
+
+                [src]="ghd6766CurrentMusic.image"
+
+                [alt]="ghd6766CurrentMusic.title"
+
+                class="img-fluid">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--======================================================
+    RIGHT
+    =======================================================-->
+
+    <div
+    class="col-xl-4 col-lg-5 col-12">
+
+        <div
+        class="ghd6766-player-info-686shb888">
+
+            <h3>
+
+                {{ghd6766CurrentMusic.title}}
+
+            </h3>
+
+            <p>
+
+                {{ghd6766CurrentMusic.subTitle}}
+
+            </p>
+
+            <!--==============================================
+            CONTROLS
+            ==============================================-->
+
+            <div
+            class="ghd6766-controls-686shb888">
+
+                <button
+
+                (click)="ghd6766PreviousMusicTrack()">
+
+                    <i
+                    class="bi bi-skip-backward-fill">
+
+                    </i>
+
+                </button>
+
+                <button
+
+                class="ghd6766-main-play-686shb888"
+
+                (click)="ghd6766ToggleMusicPlay()">
+
+                    <i
+
+                    class="bi"
+
+                    [class.bi-play-fill]="!ghd6766MusicPlaying"
+
+                    [class.bi-pause-fill]="ghd6766MusicPlaying">
+
+                    </i>
+
+                </button>
+
+                <button
+
+                (click)="ghd6766NextMusicTrack()">
+
+                    <i
+                    class="bi bi-skip-forward-fill">
+
+                    </i>
+
+                </button>
+
+                <button
+
+                (click)="ghd6766MuteMusic()">
+
+                    <i
+
+                    class="bi"
+
+                    [class.bi-volume-up-fill]="!ghd6766MusicMuted"
+
+                    [class.bi-volume-mute-fill]="ghd6766MusicMuted">
+
+                    </i>
+
+                </button>
+
+            </div>
+
+            <!--==============================================
+            PROGRESS
+            ==============================================-->
+
+            <div
+            class="ghd6766-progress-row-686shb888">
+
+                <span>
+
+                    {{ghd6766CurrentTime}}
+
+                </span>
+
+                <div
+
+                class="ghd6766-progress-686shb888"
+
+                (click)="ghd6766SeekMusic($event)">
+
+                    <div
+
+                    class="ghd6766-progress-fill-686shb888"
+
+                    [style.width.%]="ghd6766Progress">
+
+                    </div>
+
+                </div>
+
+                <span>
+
+                    {{ghd6766TotalTime}}
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!--==========================================================
+UPLOAD MODAL
+===========================================================-->
+
+@if(ghd6766ShowModal){
+
+<div
+class="ghd6766-modal-overlay-686shb888">
+
+    <div
+    class="ghd6766-modal-686shb888">
+
+        <h3>
+
+            Upload Worship Music
+
+        </h3>
+
+        <!-- TITLE -->
+
+        <input
+
+        type="text"
+
+        class="form-control"
+
+        placeholder="Music Title"
+
+        [(ngModel)]="ghd6766Form.title">
+
+        <!-- SUBTITLE -->
+
+        <input
+
+        type="text"
+
+        class="form-control mt-3"
+
+        placeholder="Subtitle / Artist"
+
+        [(ngModel)]="ghd6766Form.subTitle">
+
+        <!-- MUSIC -->
+
+        <div
+        class="mt-4">
+
+            <label>
+
+                Music File
+
+            </label>
+
+            <button
+
+            class="ghd6766-upload-file-btn-686shb888"
+
+            (click)="ghd6766MusicUpload.click()">
+
+                <i
+                class="bi bi-music-note-beamed">
+
+                </i>
+
+                Upload Music
+
+            </button>
+
+            <input
+
+            #ghd6766MusicUpload
+
+            hidden
+
+            type="file"
+
+            accept=".mp3,.wav,.ogg,.m4a,audio/*"
+
+            (change)="ghd6766UploadMusicFile($event)">
+
+        </div>
+
+        <!-- COVER -->
+
+        <div
+        class="mt-4">
+
+            <label>
+
+                Album Cover
+
+            </label>
+
+            <button
+
+            class="ghd6766-upload-file-btn-686shb888"
+
+            (click)="ghd6766CoverUpload.click()">
+
+                <i
+                class="bi bi-image-fill">
+
+                </i>
+
+                Upload Image
+
+            </button>
+
+            <input
+
+            #ghd6766CoverUpload
+
+            hidden
+
+            type="file"
+
+            accept="image/*"
+
+            (change)="ghd6766UploadMusicCover($event)">
+
+        </div>
+
+        <!-- ACTIONS -->
+
+        <div
+        class="ghd6766-modal-buttons-686shb888">
+
+            <button
+
+            class="ghd6766-save-btn-686shb888"
+
+            (click)="ghd6766SaveMusic()">
+
+                <i
+                class="bi bi-check-circle-fill">
+
+                </i>
+
+                Save Music
+
+            </button>
+
+            <button
+
+            class="ghd6766-cancel-btn-686shb888"
+
+            (click)="ghd6766CloseMusicModal()">
+
+                <i
+                class="bi bi-x-circle-fill">
+
+                </i>
+
+                Cancel
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+}
+
+<!--==========================================================
+TOAST
+===========================================================-->
+
+@if(ghd6766ShowToast){
+
+<div
+class="ghd6766-toast-686shb888">
+
+    <i
+    class="bi bi-check-circle-fill">
+
+    </i>
+
+    {{ghd6766ToastMessage}}
+
+</div>
+
+}
+
+<div style="margin-bottom: 70px;"></div>
 
 }
 
