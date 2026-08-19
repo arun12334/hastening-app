@@ -1284,6 +1284,177 @@ X662991-Y448113
 
 @if(activeTab==1){
 
+ <!--=========================================================
+MESSAGE FROM DISCIPLES
+==========================================================-->
+
+<section
+class="xkdm8237-message-disciples-section-hs9283">
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-12">
+
+                <!--==========================================
+                HEADER
+                ===========================================-->
+
+                <div
+                class="xkdm8237-message-disciples-header-hs9283">
+
+                    <div
+                    class="xkdm8237-message-disciples-title-hs9283">
+
+                        <div
+                        class="xkdm8237-message-disciples-line-hs9283">
+
+                        </div>
+
+                        <i
+                        class="bi bi-people-fill">
+
+                        </i>
+
+                        <h2>
+
+                            Messages from the Disciples
+
+                        </h2>
+
+                        <div
+                        class="xkdm8237-message-disciples-line-hs9283">
+
+                        </div>
+
+                    </div>
+
+                    <p>
+
+                        Learn from the testimonies, faith, courage, and teachings
+                        of the disciples who faithfully followed Jesus Christ.
+
+                    </p>
+
+                </div>
+
+                <!--==========================================
+                GRID
+                ===========================================-->
+
+                <div
+                class="xkdm8237-message-disciples-grid-hs9283">
+
+                    @for(card of discipleMessageCardsXkdm8237Hs9283;
+                    track card.id){
+
+                    <!--======================================
+                    CARD
+                    =======================================-->
+
+                    <div
+                    class="xkdm8237-message-disciples-card-hs9283"
+
+                    (click)="openDiscipleMessageXkdm8237Hs9283(card)">
+
+                        <!--==================================
+                        IMAGE
+                        ===================================-->
+
+                        <div
+                        class="xkdm8237-message-disciples-image-hs9283">
+
+                            <img
+
+                            [src]="card.image"
+
+                            [alt]="card.name">
+
+                        </div>
+
+                        <!--==================================
+                        CONTENT
+                        ===================================-->
+
+                        <div
+                        class="xkdm8237-message-disciples-content-hs9283">
+
+                            <span
+                            class="xkdm8237-message-disciples-role-hs9283">
+
+                                {{card.role}}
+
+                            </span>
+
+                            <h3>
+
+                                {{card.name}}
+
+                            </h3>
+
+                            <p>
+
+                                {{card.message}}
+
+                            </p>
+
+                        </div>
+
+                        <!--==================================
+                        SCRIPTURE
+                        ===================================-->
+
+                        <div
+                        class="xkdm8237-message-disciples-scripture-hs9283">
+
+                            <i
+                            class="bi bi-book-half">
+
+                            </i>
+
+                            <span>
+
+                                {{card.scripture}}
+
+                            </span>
+
+                        </div>
+
+                        <!--==================================
+                        FOOTER
+                        ===================================-->
+
+                        <div
+                        class="xkdm8237-message-disciples-footer-hs9283">
+
+                            <button
+                            type="button">
+
+                                Read Message
+
+                                <i
+                                class="bi bi-arrow-right">
+
+                                </i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    }
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 
 }
@@ -1526,13 +1697,431 @@ class="xwgw6327y37-Temple-Section-tvdh72y82ydswjhbs">
 }
 
 @if(activeTab==4){
- 
+<!--=========================================================
+DAILY WORSHIP & INSPIRATION
+==========================================================-->
 
+<section
+class="xwrp8742-daily-worship-section-jd7284">
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-12">
+
+                <!--==========================================
+                HEADER
+                ===========================================-->
+
+                <div
+                class="xwrp8742-daily-worship-header-jd7284">
+
+                    <div
+                    class="xwrp8742-daily-worship-title-jd7284">
+
+                        <div
+                        class="xwrp8742-daily-worship-line-jd7284">
+
+                        </div>
+
+                        <i
+                        class="bi bi-sun">
+
+                        </i>
+
+                        <h2>
+
+                            Daily Worship & Inspiration
+
+                        </h2>
+
+                        <div
+                        class="xwrp8742-daily-worship-line-jd7284">
+
+                        </div>
+
+                    </div>
+
+                    <p>
+
+                        Begin every day with the love of Jesus Christ through
+                        scripture, prayer, worship, and encouragement.
+
+                    </p>
+
+                </div>
+
+
+
+
+
+                <!--==========================================
+                GRID
+                ===========================================-->
+
+                <div
+                class="xwrp8742-daily-worship-grid-jd7284">
+
+                    @for(card of dailyWorshipCardsXwrp8742Jd7284;
+                    track card.id){
+
+                    <div
+
+                    class="xwrp8742-daily-worship-card-jd7284"
+
+                    (click)="openDailyWorshipXwrp8742Jd7284(card)">
+
+
+
+
+                        <!--==================================
+                        IMAGE
+                        ===================================-->
+
+                        <div
+                        class="xwrp8742-daily-worship-image-jd7284">
+
+                            <img
+
+                            [src]="card.image"
+
+                            [alt]="card.title">
+
+                        </div>
+
+
+
+
+
+                        <!--==================================
+                        CONTENT
+                        ===================================-->
+
+                        <div
+                        class="xwrp8742-daily-worship-content-jd7284">
+
+                            <span
+                            class="xwrp8742-daily-worship-category-jd7284">
+
+                                {{card.category}}
+
+                            </span>
+
+                            <h3>
+
+                                {{card.title}}
+
+                            </h3>
+
+                            <p>
+
+                                {{card.message}}
+
+                            </p>
+
+                        </div>
+
+
+
+
+
+                        <!--==================================
+                        SCRIPTURE
+                        ===================================-->
+
+                        <div
+                        class="xwrp8742-daily-worship-scripture-jd7284">
+
+                            <i
+                            class="bi bi-book-half">
+
+                            </i>
+
+                            <span>
+
+                                {{card.scripture}}
+
+                            </span>
+
+                        </div>
+
+
+
+
+
+                        <!--==================================
+                        FOOTER
+                        ===================================-->
+
+                        <div
+                        class="xwrp8742-daily-worship-footer-jd7284">
+
+                            <button
+                            type="button">
+
+                                Read Devotional
+
+                                <i
+                                class="bi bi-arrow-right">
+
+                                </i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    }
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 }
 
 @if(activeTab==5){
  
+<!--=========================================================
+SHARE YOUR TESTIMONY
+==========================================================-->
 
+<section
+class="xst9248-share-testimony-section-vh6382">
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-12">
+
+                <!--==========================================
+                HEADER
+                ===========================================-->
+
+                <div
+                class="xst9248-share-testimony-header-vh6382">
+
+                    <div
+                    class="xst9248-share-testimony-title-vh6382">
+
+                        <div
+                        class="xst9248-share-testimony-line-vh6382">
+
+                        </div>
+
+                        <i
+                        class="bi bi-chat-heart-fill">
+
+                        </i>
+
+                        <h2>
+
+                            Share Your Testimony
+
+                        </h2>
+
+                        <div
+                        class="xst9248-share-testimony-line-vh6382">
+
+                        </div>
+
+                    </div>
+
+                    <p>
+
+                        Every testimony is a reminder of God's faithfulness.
+                        Share how Jesus Christ has transformed your life and
+                        encourage others through your journey of faith.
+
+                    </p>
+
+                </div>
+
+
+
+
+
+                <!--==========================================
+                TESTIMONY GRID
+                ===========================================-->
+
+                <div
+                class="xst9248-share-testimony-grid-vh6382">
+
+                    @for(testimony of shareTestimonyCardsXst9248Vh6382;
+                    track testimony.id){
+
+                    <!--======================================
+                    CARD
+                    =======================================-->
+
+                    <div
+
+                    class="xst9248-share-testimony-card-vh6382"
+
+                    (click)="openShareTestimonyXst9248Vh6382(testimony)">
+
+
+
+
+                        <!--==================================
+                        IMAGE
+                        ===================================-->
+
+                        <div
+                        class="xst9248-share-testimony-image-vh6382">
+
+                            <img
+
+                            [src]="testimony.image"
+
+                            [alt]="testimony.name">
+
+                        </div>
+
+
+
+
+
+                        <!--==================================
+                        CONTENT
+                        ===================================-->
+
+                        <div
+                        class="xst9248-share-testimony-content-vh6382">
+
+                            <span
+                            class="xst9248-share-testimony-country-vh6382">
+
+                                <i class="bi bi-geo-alt-fill"></i>
+
+                                {{testimony.country}}
+
+                            </span>
+
+                            <h3>
+
+                                {{testimony.name}}
+
+                            </h3>
+
+                            <h5>
+
+                                {{testimony.church}}
+
+                            </h5>
+
+                            <p>
+
+                                {{testimony.testimony}}
+
+                            </p>
+
+                        </div>
+
+
+
+
+
+                        <!--==================================
+                        SCRIPTURE
+                        ===================================-->
+
+                        <div
+                        class="xst9248-share-testimony-scripture-vh6382">
+
+                            <i
+                            class="bi bi-book-half">
+
+                            </i>
+
+                            <span>
+
+                                {{testimony.scripture}}
+
+                            </span>
+
+                        </div>
+
+
+
+
+
+                        <!--==================================
+                        FOOTER
+                        ===================================-->
+
+                        <div
+                        class="xst9248-share-testimony-footer-vh6382">
+
+                            <button
+                            type="button">
+
+                                Read Full Testimony
+
+                                <i
+                                class="bi bi-arrow-right-circle-fill">
+
+                                </i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    }
+
+                </div>
+
+
+
+
+
+                <!--==========================================
+                SHARE BUTTON
+                ===========================================-->
+
+                <div
+                class="xst9248-share-testimony-action-vh6382">
+
+                    <button
+
+                    type="button"
+
+                    class="xst9248-share-testimony-main-btn-vh6382"
+
+                    (click)="shareYourTestimonyXst9248Vh6382()">
+
+                        <i
+                        class="bi bi-plus-circle-fill">
+
+                        </i>
+
+                        <span>
+
+                            Share Your Testimony
+
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 }
 
 

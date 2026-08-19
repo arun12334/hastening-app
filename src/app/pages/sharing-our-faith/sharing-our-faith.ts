@@ -1222,6 +1222,619 @@ console.log(item);
 
 }
 
- 
+
+
+
+// tab - 1
+
+/*==========================================================
+MESSAGE FROM DISCIPLES
+==========================================================*/
+
+discipleMessageCardsXkdm8237Hs9283 = [
+
+{
+
+id:1,
+
+name:'Simon Peter',
+
+role:'Chief Apostle',
+
+ image:'https://picsum.photos/300/220?random=178',
+
+message:'Jesus is the Christ, the Son of the living God. Follow Him with faith and courage every day.',
+
+scripture:'Matthew 16:16'
+
+},
+
+{
+
+id:2,
+
+name:'Andrew',
+
+role:'Disciple',
+
+ image:'https://picsum.photos/300/220?random=198',
+
+message:'Come and see the Savior. His love changes every heart that seeks Him sincerely.',
+
+scripture:'John 1:40-42'
+
+},
+
+{
+
+id:3,
+
+name:'James',
+
+role:'Disciple',
+
+ image:'https://picsum.photos/300/220?random=107',
+
+message:'Remain faithful through every trial, knowing that Christ strengthens His followers.',
+
+scripture:'James 1:12'
+
+},
+
+{
+
+id:4,
+
+name:'John',
+
+role:'Beloved Disciple',
+
+ image:'https://picsum.photos/300/220?random=104',
+
+message:'God is love. Whoever abides in love abides in God and walks in the light of Christ.',
+
+scripture:'1 John 4:16'
+
+},
+
+{
+
+id:5,
+
+name:'Philip',
+
+role:'Disciple',
+
+ image:'https://picsum.photos/300/220?random=152',
+
+message:'Trust Jesus completely, for He is the way, the truth, and the life.',
+
+scripture:'John 14:6'
+
+},
+
+{
+
+id:6,
+
+name:'Bartholomew',
+
+role:'Disciple',
+ image:'https://picsum.photos/300/220?random=192',
+
+message:'Walk honestly before the Lord and let your life reflect His truth and goodness.',
+
+scripture:'Psalm 25:5'
+
+},
+
+{
+
+id:7,
+
+name:'Thomas',
+
+role:'Disciple',
+
+ image:'https://picsum.photos/300/220?random=108',
+
+message:'Faith grows stronger when we trust Christ even without seeing every answer.',
+
+scripture:'John 20:29'
+
+},
+
+{
+
+id:8,
+
+name:'Matthew',
+
+role:'Evangelist',
+
+ image:'https://picsum.photos/300/220?random=106',
+
+message:'Leave the old life behind and follow Jesus with a willing and joyful heart.',
+
+scripture:'Matthew 9:9'
+
+},
+
+{
+
+id:9,
+
+name:'James',
+
+role:'Son of Alphaeus',
+ image:'https://picsum.photos/300/220?random=100',
+
+message:'Serve quietly with humility, knowing that God sees every faithful act.',
+
+scripture:'Colossians 3:23'
+
+},
+
+{
+
+id:10,
+
+name:'Simon',
+
+role:'The Zealot',
+
+ image:'https://picsum.photos/300/220?random=106',
+
+message:'Be passionate for the kingdom of God and stand firm in the truth of Christ.',
+
+scripture:'Romans 12:11'
+
+},
+
+{
+
+id:11,
+
+name:'Jude',
+
+role:'Disciple',
+
+ image:'https://picsum.photos/300/220?random=102',
+
+message:'Build your faith through prayer and remain in the love and mercy of Jesus Christ.',
+
+scripture:'Jude 1:20-21'
+
+},
+
+{
+
+id:12,
+
+name:'Matthias',
+
+role:'Chosen Apostle',
+
+ image:'https://picsum.photos/300/220?random=101',
+
+message:'God calls faithful servants to continue His work with courage and obedience.',
+
+scripture:'Acts 1:26'
 
 }
+
+];
+
+
+
+
+
+/*==========================================================
+OPEN CARD
+==========================================================*/
+
+openDiscipleMessageXkdm8237Hs9283(card:any):void{
+
+console.log(card);
+
+}
+
+
+
+// tab -3 
+
+
+/*==========================================================
+DAILY WORSHIP & INSPIRATION
+==========================================================*/
+
+dailyWorshipCardsXwrp8742Jd7284 = [
+
+{
+id:1,
+title:'Morning Prayer',
+category:'Prayer',
+image:'https://picsum.photos/600/400?random=101',
+message:'Begin your day by seeking Jesus in prayer and trusting His guidance.',
+scripture:'Psalm 5:3'
+},
+
+{
+id:2,
+title:'Walk by Faith',
+category:'Faith',
+image:'https://picsum.photos/600/400?random=102',
+message:'Trust the Lord in every situation and let faith overcome fear.',
+scripture:'2 Corinthians 5:7'
+},
+
+{
+id:3,
+title:'God is Love',
+category:'Love',
+image:'https://picsum.photos/600/400?random=103',
+message:'Share the love of Christ through kindness, forgiveness, and compassion.',
+scripture:'1 John 4:19'
+},
+
+{
+id:4,
+title:'Peace in Christ',
+category:'Peace',
+image:'https://picsum.photos/600/400?random=104',
+message:'Jesus gives perfect peace to every heart that trusts in Him.',
+scripture:'John 14:27'
+},
+
+{
+id:5,
+title:'Grace Every Day',
+category:'Grace',
+image:'https://picsum.photos/600/400?random=105',
+message:'Gods grace is sufficient to strengthen you through every challenge.',
+scripture:'2 Corinthians 12:9'
+},
+
+{
+id:6,
+title:'Hope in Jesus',
+category:'Hope',
+image:'https://picsum.photos/600/400?random=106',
+message:'Keep your eyes on Christ because His promises never fail.',
+scripture:'Romans 15:13'
+},
+
+{
+id:7,
+title:'Heart of Worship',
+category:'Worship',
+image:'https://picsum.photos/600/400?random=107',
+message:'Worship the Lord with gratitude and joy, giving Him all the glory.',
+scripture:'Psalm 95:6'
+},
+
+{
+id:8,
+title:'Forgive Others',
+category:'Forgiveness',
+image:'https://picsum.photos/600/400?random=108',
+message:'Forgive as Christ forgave you and walk in freedom and peace.',
+scripture:'Ephesians 4:32'
+},
+
+{
+id:9,
+title:'Choose Joy',
+category:'Joy',
+image:'https://picsum.photos/600/400?random=109',
+message:'Rejoice in the Lord always because His love is everlasting.',
+scripture:'Philippians 4:4'
+},
+
+{
+id:10,
+title:'Give Thanks',
+category:'Thanksgiving',
+image:'https://picsum.photos/600/400?random=110',
+message:'Thank God for every blessing and every opportunity to grow in faith.',
+scripture:'1 Thessalonians 5:18'
+},
+
+{
+id:11,
+title:'Trust His Plan',
+category:'Trust',
+image:'https://picsum.photos/600/400?random=111',
+message:'Place your future in the hands of Jesus, for His plans are perfect.',
+scripture:'Proverbs 3:5-6'
+},
+
+{
+id:12,
+title:'Follow Jesus',
+category:'Discipleship',
+image:'https://picsum.photos/600/400?random=112',
+message:'Walk daily with Christ and let your life reflect His light to the world.',
+scripture:'Luke 9:23'
+}
+
+];
+
+
+
+/*==========================================================
+OPEN CARD
+==========================================================*/
+
+openDailyWorshipXwrp8742Jd7284(card:any):void{
+
+console.log(card);
+
+}
+ 
+
+
+// tab -5 
+
+
+/*==========================================================
+SHARE YOUR TESTIMONY
+==========================================================*/
+
+shareTestimonyCardsXst9248Vh6382 = [
+
+{
+
+id:1,
+
+name:'John Anderson',
+
+country:'United States',
+
+church:'Grace Community Church',
+
+image:'https://picsum.photos/500/500?random=201',
+
+testimony:'Jesus gave me peace during difficult seasons and taught me to trust His perfect plan every day.',
+
+scripture:'Romans 8:28'
+
+},
+
+{
+
+id:2,
+
+name:'Maria Johnson',
+
+country:'Canada',
+
+church:'Living Hope Church',
+
+image:'https://picsum.photos/500/500?random=202',
+
+testimony:'Prayer transformed my life and strengthened my faith in Christ through every challenge.',
+
+scripture:'Philippians 4:6-7'
+
+},
+
+{
+
+id:3,
+
+name:'David Samuel',
+
+country:'India',
+
+church:'Faith Fellowship',
+
+image:'https://picsum.photos/500/500?random=203',
+
+testimony:'God opened unexpected doors and reminded me that His timing is always perfect.',
+
+scripture:'Jeremiah 29:11'
+
+},
+
+{
+
+id:4,
+
+name:'Sarah Williams',
+
+country:'Australia',
+
+church:'Hope Church',
+
+image:'https://picsum.photos/500/500?random=204',
+
+testimony:'The love of Jesus healed my broken heart and filled my life with hope and joy.',
+
+scripture:'Psalm 147:3'
+
+},
+
+{
+
+id:5,
+
+name:'Michael Brown',
+
+country:'United Kingdom',
+
+church:'New Life Church',
+
+image:'https://picsum.photos/500/500?random=205',
+
+testimony:'I discovered true freedom after surrendering my life completely to Jesus Christ.',
+
+scripture:'John 8:36'
+
+},
+
+{
+
+id:6,
+
+name:'Rebecca Thomas',
+
+country:'Singapore',
+
+church:'City Worship Center',
+
+image:'https://picsum.photos/500/500?random=206',
+
+testimony:'Gods grace carried me through every struggle and never left my side.',
+
+scripture:'2 Corinthians 12:9'
+
+},
+
+{
+
+id:7,
+
+name:'Daniel Wilson',
+
+country:'South Africa',
+
+church:'Kingdom Church',
+
+image:'https://picsum.photos/500/500?random=207',
+
+testimony:'The Word of God renewed my mind and gave me confidence to follow Christ faithfully.',
+
+scripture:'Romans 12:2'
+
+},
+
+{
+
+id:8,
+
+name:'Grace Martin',
+
+country:'Philippines',
+
+church:'Christ Fellowship',
+
+image:'https://picsum.photos/500/500?random=208',
+
+testimony:'Jesus answered my prayers beyond my expectations and strengthened my family.',
+
+scripture:'Matthew 7:7'
+
+},
+
+{
+
+id:9,
+
+name:'Christopher Lee',
+
+country:'Malaysia',
+
+church:'Light of Life Church',
+
+image:'https://picsum.photos/500/500?random=209',
+
+testimony:'Every trial became a testimony because God remained faithful through every season.',
+
+scripture:'Isaiah 41:10'
+
+},
+
+{
+
+id:10,
+
+name:'Emily Scott',
+
+country:'New Zealand',
+
+church:'Victory Church',
+
+image:'https://picsum.photos/500/500?random=210',
+
+testimony:'The Holy Spirit filled my heart with peace and joy beyond understanding.',
+
+scripture:'John 14:27'
+
+},
+
+{
+
+id:11,
+
+name:'Joseph Daniel',
+
+country:'India',
+
+church:'Calvary Church',
+
+image:'https://picsum.photos/500/500?random=211',
+
+testimony:'God restored my family and taught us to love, forgive, and trust Him together.',
+
+scripture:'Joshua 24:15'
+
+},
+
+{
+
+id:12,
+
+name:'Hannah Grace',
+
+country:'United States',
+
+church:'Redeemer Church',
+
+image:'https://picsum.photos/500/500?random=212',
+
+testimony:'Walking with Jesus has become the greatest blessing and purpose of my life.',
+
+scripture:'Psalm 23:1'
+
+}
+
+];
+
+
+
+
+
+/*==========================================================
+OPEN TESTIMONY
+==========================================================*/
+
+openShareTestimonyXst9248Vh6382(card:any):void{
+
+console.log(card);
+
+// Future:
+// this.router.navigate(['/testimony', card.id]);
+
+}
+
+
+
+
+
+/*==========================================================
+SHARE BUTTON
+==========================================================*/
+
+shareYourTestimonyXst9248Vh6382():void{
+
+console.log('Share Your Testimony');
+
+}
+}
+
+
+
+ 
+
+

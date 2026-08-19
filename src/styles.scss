@@ -48883,3 +48883,4733 @@ END
     }
 
 }
+
+
+/*==========================================================
+MESSAGE FROM DISCIPLES
+PART 3
+BASE • GRID • CARD
+==========================================================*/
+
+
+
+
+
+/*==========================================================
+SECTION
+==========================================================*/
+
+.xkdm8237-message-disciples-section-hs9283{
+
+    width:100%;
+
+    padding:70px 0;
+
+    background:#F8FAFD;
+
+}
+
+
+
+
+
+/*==========================================================
+CONTAINER
+==========================================================*/
+
+.xkdm8237-message-disciples-section-hs9283
+.container-fluid{
+
+    max-width:1500px;
+
+    margin:auto;
+
+    padding-left:24px;
+
+    padding-right:24px;
+
+}
+
+
+
+
+
+/*==========================================================
+HEADER
+==========================================================*/
+
+.xkdm8237-message-disciples-header-hs9283{
+
+    text-align:center;
+
+    margin-bottom:50px;
+
+}
+
+
+
+
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.xkdm8237-message-disciples-title-hs9283{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:16px;
+
+    margin-bottom:18px;
+
+}
+
+
+
+
+
+/*==========================================================
+LINES
+==========================================================*/
+
+.xkdm8237-message-disciples-line-hs9283{
+
+    width:90px;
+
+    height:2px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            transparent,
+
+            #C89B3C,
+
+            transparent
+
+        );
+
+}
+
+
+
+
+
+/*==========================================================
+ICON
+==========================================================*/
+
+.xkdm8237-message-disciples-title-hs9283 i{
+
+    color:#C89B3C;
+
+    font-size:24px;
+
+}
+
+
+
+
+
+/*==========================================================
+HEADING
+==========================================================*/
+
+.xkdm8237-message-disciples-title-hs9283 h2{
+
+    font-size:38px;
+
+    font-family:Georgia,serif;
+
+    color:#1E407C;
+
+    font-weight:700;
+
+}
+
+
+
+
+
+/*==========================================================
+SUBTITLE
+==========================================================*/
+
+.xkdm8237-message-disciples-header-hs9283 p{
+
+    max-width:760px;
+
+    margin:auto;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+    color:#667085;
+
+}
+
+
+
+
+
+/*==========================================================
+GRID
+==========================================================*/
+
+.xkdm8237-message-disciples-grid-hs9283{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:24px;
+
+}
+
+
+
+
+
+/*==========================================================
+CARD
+==========================================================*/
+
+.xkdm8237-message-disciples-card-hs9283{
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:#ffffff;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    border:1px solid #E7ECF4;
+
+    box-shadow:
+
+        0 10px 25px rgba(0,0,0,.06);
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-card-hs9283:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+
+        0 18px 45px rgba(0,0,0,.12);
+
+}
+
+
+
+
+
+/*==========================================================
+IMAGE
+==========================================================*/
+
+.xkdm8237-message-disciples-image-hs9283{
+
+    width:100%;
+
+    aspect-ratio:4/3;
+
+    overflow:hidden;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-image-hs9283 img{
+
+    width:100%;
+
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+
+    transition:.45s;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-card-hs9283:hover
+.xkdm8237-message-disciples-image-hs9283 img{
+
+    transform:scale(1.08);
+
+}
+
+
+
+
+
+/*==========================================================
+CONTENT
+==========================================================*/
+
+.xkdm8237-message-disciples-content-hs9283{
+
+    flex:1;
+
+    padding:22px;
+
+    text-align:center;
+
+}
+
+
+
+
+
+/*==========================================================
+ROLE
+==========================================================*/
+
+.xkdm8237-message-disciples-role-hs9283{
+
+    display:inline-block;
+
+    padding:6px 14px;
+
+    background:#EEF3FC;
+
+    color:#1E407C;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    border-radius:30px;
+
+    margin-bottom:14px;
+
+}
+
+
+
+
+
+/*==========================================================
+NAME
+==========================================================*/
+
+.xkdm8237-message-disciples-content-hs9283 h3{
+
+    font-size:24px;
+
+    color:#1E407C;
+
+    font-family:Georgia,serif;
+
+    margin-bottom:14px;
+
+}
+
+
+
+
+
+/*==========================================================
+MESSAGE
+==========================================================*/
+
+.xkdm8237-message-disciples-content-hs9283 p{
+
+    color:#5B6575;
+
+    font-size:15px;
+
+    line-height:1.8;
+
+}
+
+
+
+
+
+/*==========================================================
+SCRIPTURE
+==========================================================*/
+
+.xkdm8237-message-disciples-scripture-hs9283{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:16px;
+
+    border-top:1px solid #EEF2F8;
+
+    color:#1E407C;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-scripture-hs9283 i{
+
+    color:#C89B3C;
+
+}
+
+
+
+
+
+/*==========================================================
+FOOTER
+==========================================================*/
+
+.xkdm8237-message-disciples-footer-hs9283{
+
+    padding:18px;
+
+}
+
+
+
+
+
+/*==========================================================
+BUTTON
+==========================================================*/
+
+.xkdm8237-message-disciples-footer-hs9283 button{
+
+    width:100%;
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:14px;
+
+    background:#1E407C;
+
+    color:#ffffff;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    transition:.35s;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-footer-hs9283 button:hover{
+
+    background:#C89B3C;
+
+}
+
+
+
+
+
+/*==========================================================
+SMOOTH TRANSITIONS
+==========================================================*/
+
+.xkdm8237-message-disciples-card-hs9283,
+
+.xkdm8237-message-disciples-image-hs9283,
+
+.xkdm8237-message-disciples-image-hs9283 img,
+
+.xkdm8237-message-disciples-footer-hs9283 button{
+
+    transition:.35s ease;
+
+}
+
+
+/*==========================================================
+1400px
+==========================================================*/
+
+@media(max-width:1400px){
+
+.xkdm8237-message-disciples-grid-hs9283{
+
+    // grid-template-columns:repeat(3,1fr);
+
+    gap:22px;
+
+}
+
+.xkdm8237-message-disciples-title-hs9283 h2{
+
+    font-size:34px;
+
+}
+
+}
+
+
+
+
+
+/*==========================================================
+1200px
+==========================================================*/
+
+@media(max-width:1200px){
+
+.xkdm8237-message-disciples-section-hs9283{
+
+    padding:60px 0;
+
+}
+
+.xkdm8237-message-disciples-grid-hs9283{
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+}
+
+.xkdm8237-message-disciples-content-hs9283{
+
+    padding:20px;
+
+}
+
+.xkdm8237-message-disciples-content-hs9283 h3{
+
+    font-size:22px;
+
+}
+
+}
+
+
+
+
+
+/*==========================================================
+992px
+==========================================================*/
+
+@media(max-width:992px){
+
+.xkdm8237-message-disciples-grid-hs9283{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+.xkdm8237-message-disciples-title-hs9283 h2{
+
+    font-size:30px;
+
+}
+
+.xkdm8237-message-disciples-header-hs9283 p{
+
+    font-size:15px;
+
+}
+
+}
+
+
+
+
+
+/*==========================================================
+768px
+==========================================================*/
+
+@media(max-width:768px){
+
+.xkdm8237-message-disciples-section-hs9283{
+
+    padding:50px 0;
+
+}
+
+.xkdm8237-message-disciples-section-hs9283
+.container-fluid{
+
+    padding-left:18px;
+
+    padding-right:18px;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-grid-hs9283{
+
+    grid-template-columns:1fr;
+
+    gap:20px;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-title-hs9283{
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-line-hs9283{
+
+    display:none;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-title-hs9283 h2{
+
+    width:100%;
+
+    text-align:center;
+
+    font-size:28px;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-header-hs9283 p{
+
+    font-size:15px;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-card-hs9283{
+
+    max-width:500px;
+
+    margin:auto;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-content-hs9283 h3{
+
+    font-size:22px;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-image-hs9283{
+
+    aspect-ratio:16/10;
+
+}
+
+}
+
+
+
+
+
+/*==========================================================
+576px
+==========================================================*/
+
+@media(max-width:576px){
+
+.xkdm8237-message-disciples-section-hs9283{
+
+    padding:40px 0;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-section-hs9283
+.container-fluid{
+
+    padding-left:14px;
+
+    padding-right:14px;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-title-hs9283 h2{
+
+    font-size:24px;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-header-hs9283 p{
+
+    font-size:14px;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-content-hs9283{
+
+    padding:18px;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-content-hs9283 h3{
+
+    font-size:20px;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-content-hs9283 p{
+
+    font-size:14px;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-role-hs9283{
+
+    font-size:11px;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-footer-hs9283{
+
+    padding:16px;
+
+}
+
+}
+
+
+
+
+
+/*==========================================================
+480px
+==========================================================*/
+
+@media(max-width:480px){
+
+.xkdm8237-message-disciples-title-hs9283 h2{
+
+    font-size:21px;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-content-hs9283{
+
+    padding:16px;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-content-hs9283 h3{
+
+    font-size:18px;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-content-hs9283 p{
+
+    font-size:13px;
+
+    line-height:1.7;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-scripture-hs9283{
+
+    font-size:13px;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-footer-hs9283 button{
+
+    padding:13px;
+
+    font-size:14px;
+
+}
+
+}
+
+
+
+
+
+/*==========================================================
+HOVER EFFECTS
+==========================================================*/
+
+.xkdm8237-message-disciples-card-hs9283:hover{
+
+    border-color:#C89B3C;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-card-hs9283:hover
+.xkdm8237-message-disciples-role-hs9283{
+
+    background:#1E407C;
+
+    color:#ffffff;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-card-hs9283:hover
+.xkdm8237-message-disciples-scripture-hs9283{
+
+    background:#F7F9FC;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-card-hs9283:hover
+.xkdm8237-message-disciples-scripture-hs9283 i{
+
+    transform:rotate(-8deg);
+
+    color:#C89B3C;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-card-hs9283:hover
+.xkdm8237-message-disciples-footer-hs9283 button{
+
+    background:#C89B3C;
+
+}
+
+
+
+
+
+/*==========================================================
+SHINE EFFECT
+==========================================================*/
+
+.xkdm8237-message-disciples-card-hs9283{
+
+    position:relative;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-card-hs9283::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:55%;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.45),
+
+        transparent
+
+    );
+
+    transform:skewX(-20deg);
+
+    transition:.8s;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-card-hs9283:hover::before{
+
+    left:140%;
+
+}
+
+/*==========================================================
+FEATURED CARD
+==========================================================*/
+
+.xkdm8237-message-disciples-card-hs9283.featured{
+
+    border:2px solid #C89B3C;
+
+    background:linear-gradient(
+
+        180deg,
+
+        #FFFDF8,
+
+        #FFFFFF
+
+    );
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-card-hs9283.featured
+.xkdm8237-message-disciples-role-hs9283{
+
+    background:#C89B3C;
+
+    color:#ffffff;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-card-hs9283.featured
+.xkdm8237-message-disciples-content-hs9283 h3{
+
+    color:#C89B3C;
+
+}
+
+
+
+
+
+/*==========================================================
+IMAGE GLOW
+==========================================================*/
+
+.xkdm8237-message-disciples-image-hs9283{
+
+    position:relative;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-image-hs9283::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+        to top,
+
+        rgba(30,64,124,.18),
+
+        transparent 65%
+
+    );
+
+    opacity:0;
+
+    transition:.35s;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-card-hs9283:hover
+.xkdm8237-message-disciples-image-hs9283::after{
+
+    opacity:1;
+
+}
+
+
+
+
+
+/*==========================================================
+BUTTON ICON
+==========================================================*/
+
+.xkdm8237-message-disciples-footer-hs9283 button i{
+
+    transition:.35s;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-footer-hs9283 button:hover i{
+
+    transform:translateX(5px);
+
+}
+
+
+
+
+
+/*==========================================================
+FLOAT
+==========================================================*/
+
+@keyframes
+xkdm8237DiscipleFloat{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-4px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-card-hs9283{
+
+    animation:
+
+    xkdm8237DiscipleFloat
+
+    5s
+
+    ease-in-out
+
+    infinite;
+
+}
+
+
+
+
+
+/*==========================================================
+STAGGER
+==========================================================*/
+
+.xkdm8237-message-disciples-card-hs9283:nth-child(2){
+
+animation-delay:.15s;
+
+}
+
+.xkdm8237-message-disciples-card-hs9283:nth-child(3){
+
+animation-delay:.3s;
+
+}
+
+.xkdm8237-message-disciples-card-hs9283:nth-child(4){
+
+animation-delay:.45s;
+
+}
+
+.xkdm8237-message-disciples-card-hs9283:nth-child(5){
+
+animation-delay:.6s;
+
+}
+
+.xkdm8237-message-disciples-card-hs9283:nth-child(6){
+
+animation-delay:.75s;
+
+}
+
+
+
+
+
+/*==========================================================
+LOADING
+==========================================================*/
+
+.xkdm8237-message-disciples-card-loading-hs9283{
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-card-loading-hs9283::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.65),
+
+transparent
+
+);
+
+animation:
+
+xkdm8237Loading
+
+1.5s
+
+linear
+
+infinite;
+
+}
+
+
+
+
+
+@keyframes
+xkdm8237Loading{
+
+0%{
+
+transform:translateX(-100%);
+
+}
+
+100%{
+
+transform:translateX(100%);
+
+}
+
+}
+
+
+
+
+
+/*==========================================================
+FOCUS
+==========================================================*/
+
+.xkdm8237-message-disciples-card-hs9283:focus-visible{
+
+outline:3px solid #C89B3C;
+
+outline-offset:4px;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-footer-hs9283 button:focus-visible{
+
+outline:3px solid #C89B3C;
+
+outline-offset:3px;
+
+}
+
+
+
+
+
+/*==========================================================
+REDUCED MOTION
+==========================================================*/
+
+@media(prefers-reduced-motion:reduce){
+
+.xkdm8237-message-disciples-card-hs9283,
+
+.xkdm8237-message-disciples-image-hs9283 img,
+
+.xkdm8237-message-disciples-footer-hs9283 button{
+
+animation:none;
+
+transition:none;
+
+}
+
+}
+
+
+
+
+
+/*==========================================================
+DARK MODE
+==========================================================*/
+
+@media(prefers-color-scheme:dark){
+
+.xkdm8237-message-disciples-section-hs9283{
+
+background:#111827;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-card-hs9283{
+
+background:#1F2937;
+
+border-color:#374151;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-content-hs9283 h3{
+
+color:#F8FAFC;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-content-hs9283 p{
+
+color:#D1D5DB;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-scripture-hs9283{
+
+border-color:#374151;
+
+color:#F8FAFC;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-role-hs9283{
+
+background:#374151;
+
+color:#F8FAFC;
+
+}
+
+}
+
+
+
+
+
+/*==========================================================
+PRINT
+==========================================================*/
+
+@media print{
+
+.xkdm8237-message-disciples-footer-hs9283{
+
+display:none;
+
+}
+
+
+
+
+
+.xkdm8237-message-disciples-card-hs9283{
+
+box-shadow:none;
+
+border:1px solid #999;
+
+break-inside:avoid;
+
+}
+
+}
+
+
+
+
+
+/*==========================================================
+GPU
+==========================================================*/
+
+.xkdm8237-message-disciples-card-hs9283,
+
+.xkdm8237-message-disciples-image-hs9283,
+
+.xkdm8237-message-disciples-image-hs9283 img{
+
+will-change:transform;
+
+}
+
+
+/*==========================================================
+DAILY WORSHIP & INSPIRATION
+PART 3
+==========================================================*/
+
+:root{
+
+--dw-primary:#1E407C;
+--dw-secondary:#C89B3C;
+--dw-bg:#F7F9FC;
+--dw-border:#E8EDF5;
+--dw-text:#5B6575;
+--dw-white:#FFFFFF;
+
+}
+
+
+
+
+
+/*==========================================================
+SECTION
+==========================================================*/
+
+.xwrp8742-daily-worship-section-jd7284{
+
+    width:100%;
+
+    padding:70px 0;
+
+    background:var(--dw-bg);
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-section-jd7284
+.container-fluid{
+
+    max-width:1450px;
+
+    margin:auto;
+
+    padding-left:24px;
+
+    padding-right:24px;
+
+}
+
+
+
+
+
+/*==========================================================
+HEADER
+==========================================================*/
+
+.xwrp8742-daily-worship-header-jd7284{
+
+    text-align:center;
+
+    margin-bottom:55px;
+
+}
+
+
+
+
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.xwrp8742-daily-worship-title-jd7284{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-bottom:18px;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-line-jd7284{
+
+    width:90px;
+
+    height:2px;
+
+    background:
+
+    linear-gradient(
+
+    90deg,
+
+    transparent,
+
+    var(--dw-secondary),
+
+    transparent
+
+    );
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-title-jd7284 i{
+
+    font-size:26px;
+
+    color:var(--dw-secondary);
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-title-jd7284 h2{
+
+    margin:0;
+
+    font-size:38px;
+
+    font-family:Georgia,serif;
+
+    font-weight:700;
+
+    color:var(--dw-primary);
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-header-jd7284 p{
+
+    max-width:760px;
+
+    margin:auto;
+
+    color:var(--dw-text);
+
+    font-size:17px;
+
+    line-height:1.8;
+
+}
+
+
+
+
+
+/*==========================================================
+GRID
+==========================================================*/
+
+.xwrp8742-daily-worship-grid-jd7284{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:26px;
+
+}
+
+
+
+
+
+/*==========================================================
+CARD
+==========================================================*/
+
+.xwrp8742-daily-worship-card-jd7284{
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:var(--dw-white);
+
+    border:1px solid var(--dw-border);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:
+
+    0 8px 25px rgba(0,0,0,.06);
+
+    transition:.35s;
+
+    cursor:pointer;
+
+}
+
+
+
+
+
+/*==========================================================
+IMAGE
+==========================================================*/
+
+.xwrp8742-daily-worship-image-jd7284{
+
+    width:100%;
+
+    aspect-ratio:16/10;
+
+    overflow:hidden;
+
+    background:#ddd;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-image-jd7284 img{
+
+    width:100%;
+
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+
+    transition:.45s;
+
+}
+
+
+
+
+
+/*==========================================================
+CONTENT
+==========================================================*/
+
+.xwrp8742-daily-worship-content-jd7284{
+
+    flex:1;
+
+    padding:22px;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-category-jd7284{
+
+    display:inline-block;
+
+    padding:6px 14px;
+
+    border-radius:30px;
+
+    background:#EEF3FC;
+
+    color:var(--dw-primary);
+
+    font-size:12px;
+
+    font-weight:600;
+
+    margin-bottom:14px;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-content-jd7284 h3{
+
+    margin-bottom:14px;
+
+    font-size:23px;
+
+    font-family:Georgia,serif;
+
+    color:var(--dw-primary);
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-content-jd7284 p{
+
+    margin:0;
+
+    color:var(--dw-text);
+
+    line-height:1.8;
+
+    font-size:15px;
+
+}
+
+
+
+
+
+/*==========================================================
+SCRIPTURE
+==========================================================*/
+
+.xwrp8742-daily-worship-scripture-jd7284{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:16px;
+
+    border-top:1px solid var(--dw-border);
+
+    color:var(--dw-primary);
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-scripture-jd7284 i{
+
+    color:var(--dw-secondary);
+
+}
+
+
+
+
+
+/*==========================================================
+FOOTER
+==========================================================*/
+
+.xwrp8742-daily-worship-footer-jd7284{
+
+    padding:18px;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-footer-jd7284 button{
+
+    width:100%;
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:14px;
+
+    background:var(--dw-primary);
+
+    color:#fff;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    transition:.35s;
+
+}
+
+
+
+
+
+/*==========================================================
+HOVER
+==========================================================*/
+
+.xwrp8742-daily-worship-card-jd7284:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+
+    0 18px 40px rgba(0,0,0,.12);
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-card-jd7284:hover
+.xwrp8742-daily-worship-image-jd7284 img{
+
+    transform:scale(1.08);
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-card-jd7284:hover
+.xwrp8742-daily-worship-footer-jd7284 button{
+
+    background:var(--dw-secondary);
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-card-jd7284:hover
+.xwrp8742-daily-worship-category-jd7284{
+
+    background:var(--dw-primary);
+
+    color:#fff;
+
+}
+
+
+
+
+
+/*==========================================================
+TRANSITIONS
+==========================================================*/
+
+.xwrp8742-daily-worship-card-jd7284,
+
+.xwrp8742-daily-worship-image-jd7284 img,
+
+.xwrp8742-daily-worship-footer-jd7284 button{
+
+    transition:.35s ease;
+
+}
+/*==========================================================
+DESKTOP
+1400px
+==========================================================*/
+
+@media (max-width:1400px){
+
+.xwrp8742-daily-worship-grid-jd7284{
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:24px;
+
+}
+
+.xwrp8742-daily-worship-title-jd7284 h2{
+
+    font-size:34px;
+
+}
+
+}
+
+
+
+
+
+/*==========================================================
+LAPTOP
+1200px
+==========================================================*/
+
+@media (max-width:1200px){
+
+.xwrp8742-daily-worship-section-jd7284{
+
+    padding:60px 0;
+
+}
+
+.xwrp8742-daily-worship-grid-jd7284{
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+}
+
+.xwrp8742-daily-worship-content-jd7284{
+
+    padding:20px;
+
+}
+
+.xwrp8742-daily-worship-content-jd7284 h3{
+
+    font-size:21px;
+
+}
+
+.xwrp8742-daily-worship-content-jd7284 p{
+
+    font-size:14px;
+
+}
+
+}
+
+
+
+
+
+/*==========================================================
+TABLET
+992px
+==========================================================*/
+
+@media (max-width:992px){
+
+.xwrp8742-daily-worship-grid-jd7284{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+.xwrp8742-daily-worship-title-jd7284 h2{
+
+    font-size:30px;
+
+}
+
+.xwrp8742-daily-worship-header-jd7284{
+
+    margin-bottom:40px;
+
+}
+
+}
+
+
+
+
+
+/*==========================================================
+PREMIUM HOVER
+==========================================================*/
+
+.xwrp8742-daily-worship-card-jd7284{
+
+    position:relative;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-card-jd7284::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:20px;
+
+    border:2px solid transparent;
+
+    transition:.35s;
+
+    pointer-events:none;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-card-jd7284:hover::before{
+
+    border-color:#C89B3C;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-card-jd7284:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+
+    0 20px 45px rgba(0,0,0,.14);
+
+}
+
+
+
+
+
+/*==========================================================
+IMAGE EFFECT
+==========================================================*/
+
+.xwrp8742-daily-worship-image-jd7284{
+
+    position:relative;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-image-jd7284::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+    to top,
+
+    rgba(30,64,124,.20),
+
+    transparent 70%
+
+    );
+
+    opacity:0;
+
+    transition:.35s;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-card-jd7284:hover
+.xwrp8742-daily-worship-image-jd7284::after{
+
+    opacity:1;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-card-jd7284:hover
+.xwrp8742-daily-worship-image-jd7284 img{
+
+    transform:scale(1.08);
+
+}
+
+
+
+
+
+/*==========================================================
+CATEGORY
+==========================================================*/
+
+.xwrp8742-daily-worship-card-jd7284:hover
+.xwrp8742-daily-worship-category-jd7284{
+
+    background:#1E407C;
+
+    color:#ffffff;
+
+}
+
+
+
+
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.xwrp8742-daily-worship-content-jd7284 h3{
+
+    transition:.35s;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-card-jd7284:hover
+.xwrp8742-daily-worship-content-jd7284 h3{
+
+    color:#C89B3C;
+
+}
+
+
+
+
+
+/*==========================================================
+SCRIPTURE
+==========================================================*/
+
+.xwrp8742-daily-worship-scripture-jd7284{
+
+    transition:.35s;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-card-jd7284:hover
+.xwrp8742-daily-worship-scripture-jd7284{
+
+    background:#F8FAFD;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-card-jd7284:hover
+.xwrp8742-daily-worship-scripture-jd7284 i{
+
+    transform:rotate(-10deg);
+
+}
+
+
+
+
+
+/*==========================================================
+BUTTON
+==========================================================*/
+
+.xwrp8742-daily-worship-footer-jd7284 button{
+
+    transition:.35s;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-footer-jd7284 button:hover{
+
+    background:#C89B3C;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-footer-jd7284 button i{
+
+    transition:.35s;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-footer-jd7284 button:hover i{
+
+    transform:translateX(5px);
+
+}
+
+
+
+
+
+/*==========================================================
+SHINE EFFECT
+==========================================================*/
+
+.xwrp8742-daily-worship-card-jd7284{
+
+    overflow:hidden;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-card-jd7284::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:55%;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+    90deg,
+
+    transparent,
+
+    rgba(255,255,255,.45),
+
+    transparent
+
+    );
+
+    transform:skewX(-20deg);
+
+    transition:.8s;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-card-jd7284:hover::after{
+
+    left:140%;
+
+}
+
+
+
+
+
+/*==========================================================
+SMOOTH TRANSITIONS
+==========================================================*/
+
+.xwrp8742-daily-worship-card-jd7284,
+
+.xwrp8742-daily-worship-image-jd7284,
+
+.xwrp8742-daily-worship-image-jd7284 img,
+
+.xwrp8742-daily-worship-category-jd7284,
+
+.xwrp8742-daily-worship-scripture-jd7284,
+
+.xwrp8742-daily-worship-footer-jd7284 button{
+
+    transition:.35s ease;
+
+}
+
+/*==========================================================
+TABLET
+768px
+==========================================================*/
+
+@media (max-width:768px){
+
+.xwrp8742-daily-worship-section-jd7284{
+
+    padding:50px 0;
+
+}
+
+.xwrp8742-daily-worship-section-jd7284
+.container-fluid{
+
+    padding-left:18px;
+
+    padding-right:18px;
+
+}
+
+
+
+
+
+/*==========================================================
+HEADER
+==========================================================*/
+
+.xwrp8742-daily-worship-header-jd7284{
+
+    margin-bottom:38px;
+
+}
+
+.xwrp8742-daily-worship-title-jd7284{
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+}
+
+.xwrp8742-daily-worship-line-jd7284{
+
+    display:none;
+
+}
+
+.xwrp8742-daily-worship-title-jd7284 h2{
+
+    width:100%;
+
+    font-size:28px;
+
+    text-align:center;
+
+}
+
+.xwrp8742-daily-worship-header-jd7284 p{
+
+    font-size:15px;
+
+    line-height:1.8;
+
+}
+
+
+
+
+
+/*==========================================================
+GRID
+==========================================================*/
+
+.xwrp8742-daily-worship-grid-jd7284{
+
+    grid-template-columns:1fr;
+
+    gap:20px;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-card-jd7284{
+
+    max-width:520px;
+
+    width:100%;
+
+    margin:auto;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-image-jd7284{
+
+    aspect-ratio:16/10;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-content-jd7284{
+
+    padding:20px;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-content-jd7284 h3{
+
+    font-size:22px;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-content-jd7284 p{
+
+    font-size:15px;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-footer-jd7284{
+
+    padding:18px;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-footer-jd7284 button{
+
+    width:100%;
+
+}
+
+}
+
+
+
+
+
+/*==========================================================
+MOBILE
+576px
+==========================================================*/
+
+@media (max-width:576px){
+
+.xwrp8742-daily-worship-section-jd7284{
+
+    padding:40px 0;
+
+}
+
+.xwrp8742-daily-worship-section-jd7284
+.container-fluid{
+
+    padding-left:14px;
+
+    padding-right:14px;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-title-jd7284 h2{
+
+    font-size:24px;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-title-jd7284 i{
+
+    font-size:22px;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-header-jd7284 p{
+
+    font-size:14px;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-card-jd7284{
+
+    border-radius:18px;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-image-jd7284{
+
+    aspect-ratio:4/3;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-content-jd7284{
+
+    padding:18px;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-category-jd7284{
+
+    font-size:11px;
+
+    padding:6px 12px;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-content-jd7284 h3{
+
+    font-size:20px;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-content-jd7284 p{
+
+    font-size:14px;
+
+    line-height:1.75;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-scripture-jd7284{
+
+    font-size:13px;
+
+    padding:14px;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-footer-jd7284{
+
+    padding:16px;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-footer-jd7284 button{
+
+    padding:13px;
+
+    font-size:14px;
+
+}
+
+}
+
+
+
+
+
+/*==========================================================
+SMALL MOBILE
+480px
+==========================================================*/
+
+@media (max-width:480px){
+
+.xwrp8742-daily-worship-title-jd7284{
+
+    gap:8px;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-title-jd7284 h2{
+
+    font-size:22px;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-header-jd7284 p{
+
+    font-size:13px;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-content-jd7284{
+
+    padding:16px;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-content-jd7284 h3{
+
+    font-size:18px;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-content-jd7284 p{
+
+    font-size:13px;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-image-jd7284{
+
+    aspect-ratio:16/11;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-footer-jd7284 button{
+
+    font-size:13px;
+
+}
+
+}
+
+
+
+
+
+/*==========================================================
+EXTRA SMALL
+390px
+==========================================================*/
+
+@media (max-width:390px){
+
+.xwrp8742-daily-worship-section-jd7284
+.container-fluid{
+
+    padding-left:12px;
+
+    padding-right:12px;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-title-jd7284 h2{
+
+    font-size:20px;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-content-jd7284{
+
+    padding:14px;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-content-jd7284 h3{
+
+    font-size:17px;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-content-jd7284 p{
+
+    font-size:12px;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-scripture-jd7284{
+
+    font-size:12px;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-footer-jd7284{
+
+    padding:14px;
+
+}
+
+}
+
+
+
+
+
+/*==========================================================
+VERY SMALL
+320px
+==========================================================*/
+
+@media (max-width:320px){
+
+.xwrp8742-daily-worship-title-jd7284 h2{
+
+    font-size:18px;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-title-jd7284 i{
+
+    font-size:18px;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-content-jd7284{
+
+    padding:12px;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-content-jd7284 h3{
+
+    font-size:16px;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-content-jd7284 p{
+
+    font-size:12px;
+
+    line-height:1.6;
+
+}
+
+
+
+
+
+.xwrp8742-daily-worship-footer-jd7284 button{
+
+    padding:12px;
+
+    font-size:12px;
+
+}
+
+}
+
+
+/*==========================================================
+HEADER
+==========================================================*/
+
+.xwrp8742-daily-worship-header-jd7284{
+
+    width:100%;
+
+    max-width:1100px;
+
+    margin:0 auto 60px;
+
+    text-align:center;
+
+}
+
+
+
+
+
+/*==========================================================
+TITLE ROW
+==========================================================*/
+
+.xwrp8742-daily-worship-title-jd7284{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:22px;
+
+    margin-bottom:24px;
+
+}
+
+
+
+
+
+/*==========================================================
+GOLD LINE
+==========================================================*/
+
+.xwrp8742-daily-worship-line-jd7284{
+
+    flex:1;
+
+    max-width:120px;
+
+    height:2px;
+
+    background:linear-gradient(
+    90deg,
+    transparent,
+    #D4A32E,
+    transparent);
+
+}
+
+
+
+
+
+/*==========================================================
+ICON
+==========================================================*/
+
+.xwrp8742-daily-worship-title-jd7284 i{
+
+    font-size:34px;
+
+    color:#D4A32E;
+
+    flex-shrink:0;
+
+}
+
+
+
+
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.xwrp8742-daily-worship-title-jd7284 h2{
+
+    margin:0;
+
+    color:#23498F;
+
+    font-family:Georgia,"Times New Roman",serif;
+
+    font-size:34px;
+
+    font-weight:700;
+
+    line-height:1.1;
+
+    white-space:nowrap;
+
+}
+
+
+
+
+
+/*==========================================================
+SUBTITLE
+==========================================================*/
+
+.xwrp8742-daily-worship-header-jd7284 p{
+
+    width:100%;
+
+    max-width:980px;
+
+    margin:0 auto;
+
+    color:#667085;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    text-align:center;
+
+}
+
+@media(max-width:992px){
+
+.xwrp8742-daily-worship-title-jd7284 h2{
+
+    font-size:42px;
+
+}
+
+.xwrp8742-daily-worship-line-jd7284{
+
+    max-width:80px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.xwrp8742-daily-worship-title-jd7284{
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+}
+
+.xwrp8742-daily-worship-line-jd7284{
+
+    display:none;
+
+}
+
+.xwrp8742-daily-worship-title-jd7284 h2{
+
+    width:100%;
+
+    white-space:normal;
+
+    font-size:32px;
+
+}
+
+.xwrp8742-daily-worship-title-jd7284 i{
+
+    font-size:28px;
+
+}
+
+.xwrp8742-daily-worship-header-jd7284 p{
+
+    font-size:16px;
+
+}
+
+}
+
+
+/*==========================================================
+SHARE YOUR TESTIMONY
+PART 3
+==========================================================*/
+
+:root{
+
+--test-primary:#1E407C;
+--test-gold:#D4A32E;
+--test-bg:#F8FAFD;
+--test-border:#E7ECF4;
+--test-text:#667085;
+--test-white:#FFFFFF;
+
+}
+
+
+
+
+
+/*==========================================================
+SECTION
+==========================================================*/
+
+.xst9248-share-testimony-section-vh6382{
+
+    width:100%;
+
+    padding:70px 0;
+
+    background:var(--test-bg);
+
+}
+
+
+
+
+
+.xst9248-share-testimony-section-vh6382
+.container-fluid{
+
+    max-width:1450px;
+
+    margin:auto;
+
+    padding-left:24px;
+
+    padding-right:24px;
+
+}
+
+
+
+
+
+/*==========================================================
+HEADER
+==========================================================*/
+
+.xst9248-share-testimony-header-vh6382{
+
+    max-width:1100px;
+
+    margin:0 auto 60px;
+
+    text-align:center;
+
+}
+
+
+
+
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.xst9248-share-testimony-title-vh6382{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-line-vh6382{
+
+    flex:1;
+
+    max-width:120px;
+
+    height:2px;
+
+    background:linear-gradient(
+
+    90deg,
+
+    transparent,
+
+    var(--test-gold),
+
+    transparent
+
+    );
+
+}
+
+
+
+
+
+.xst9248-share-testimony-title-vh6382 i{
+
+    color:var(--test-gold);
+
+    font-size:32px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-title-vh6382 h2{
+
+    margin:0;
+
+    font-size:52px;
+
+    font-family:Georgia,serif;
+
+    font-weight:700;
+
+    color:var(--test-primary);
+
+    white-space:nowrap;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-header-vh6382 p{
+
+    max-width:900px;
+
+    margin:auto;
+
+    color:var(--test-text);
+
+    font-size:19px;
+
+    line-height:1.8;
+
+}
+
+
+
+
+
+/*==========================================================
+GRID
+==========================================================*/
+
+.xst9248-share-testimony-grid-vh6382{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:28px;
+
+}
+
+
+
+
+
+/*==========================================================
+CARD
+==========================================================*/
+
+.xst9248-share-testimony-card-vh6382{
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:var(--test-white);
+
+    border-radius:22px;
+
+    border:1px solid var(--test-border);
+
+    overflow:hidden;
+
+    box-shadow:
+
+    0 8px 24px rgba(0,0,0,.06);
+
+    transition:.35s;
+
+    cursor:pointer;
+
+}
+
+
+
+
+
+/*==========================================================
+IMAGE
+==========================================================*/
+
+.xst9248-share-testimony-image-vh6382{
+
+    width:100%;
+
+    height:240px;
+
+    overflow:hidden;
+
+    background:#ddd;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-image-vh6382 img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.45s;
+
+}
+
+
+
+
+
+/*==========================================================
+CONTENT
+==========================================================*/
+
+.xst9248-share-testimony-content-vh6382{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:22px;
+
+}
+
+
+
+
+
+/*==========================================================
+COUNTRY
+==========================================================*/
+
+.xst9248-share-testimony-country-vh6382{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    width:max-content;
+
+    padding:6px 14px;
+
+    margin-bottom:16px;
+
+    border-radius:30px;
+
+    background:#EEF3FC;
+
+    color:var(--test-primary);
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-country-vh6382 i{
+
+    color:var(--test-gold);
+
+}
+
+
+
+
+
+/*==========================================================
+NAME
+==========================================================*/
+
+.xst9248-share-testimony-content-vh6382 h3{
+
+    margin:0 0 6px;
+
+    font-size:26px;
+
+    color:var(--test-primary);
+
+    font-family:Georgia,serif;
+
+}
+
+
+
+
+
+/*==========================================================
+CHURCH
+==========================================================*/
+
+.xst9248-share-testimony-content-vh6382 h5{
+
+    margin-bottom:16px;
+
+    color:var(--test-gold);
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+
+
+
+
+/*==========================================================
+TESTIMONY
+==========================================================*/
+
+.xst9248-share-testimony-content-vh6382 p{
+
+    margin:0;
+
+    color:var(--test-text);
+
+    font-size:15px;
+
+    line-height:1.8;
+
+}
+
+
+
+
+
+/*==========================================================
+SCRIPTURE
+==========================================================*/
+
+.xst9248-share-testimony-scripture-vh6382{
+
+    margin-top:auto;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:18px;
+
+    border-top:1px solid var(--test-border);
+
+    color:var(--test-primary);
+
+    font-weight:600;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-scripture-vh6382 i{
+
+    color:var(--test-gold);
+
+}
+
+
+
+
+
+/*==========================================================
+CARD BUTTON
+==========================================================*/
+
+.xst9248-share-testimony-footer-vh6382{
+
+    padding:18px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-footer-vh6382 button{
+
+    width:100%;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:var(--test-primary);
+
+    color:#fff;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    transition:.35s;
+
+}
+
+
+
+
+
+/*==========================================================
+BOTTOM CTA
+==========================================================*/
+
+.xst9248-share-testimony-action-vh6382{
+
+    margin-top:60px;
+
+    text-align:center;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-main-btn-vh6382{
+
+    border:none;
+
+    border-radius:50px;
+
+    padding:18px 34px;
+
+    background:var(--test-primary);
+
+    color:#fff;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    transition:.35s;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-main-btn-vh6382 i{
+
+    font-size:20px;
+
+}
+
+
+/*==========================================================
+DESKTOP
+1400px
+==========================================================*/
+
+@media (max-width:1400px){
+
+.xst9248-share-testimony-grid-vh6382{
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:24px;
+
+}
+
+.xst9248-share-testimony-title-vh6382 h2{
+
+    font-size:46px;
+
+}
+
+}
+
+
+
+
+
+/*==========================================================
+LAPTOP
+1200px
+==========================================================*/
+
+@media (max-width:1200px){
+
+.xst9248-share-testimony-section-vh6382{
+
+    padding:60px 0;
+
+}
+
+.xst9248-share-testimony-grid-vh6382{
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:22px;
+
+}
+
+.xst9248-share-testimony-content-vh6382{
+
+    padding:20px;
+
+}
+
+.xst9248-share-testimony-content-vh6382 h3{
+
+    font-size:24px;
+
+}
+
+}
+
+
+
+
+
+/*==========================================================
+TABLET
+992px
+==========================================================*/
+
+@media (max-width:992px){
+
+.xst9248-share-testimony-grid-vh6382{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.xst9248-share-testimony-title-vh6382 h2{
+
+    font-size:38px;
+
+}
+
+}
+
+
+
+
+
+/*==========================================================
+CARD HOVER
+==========================================================*/
+
+.xst9248-share-testimony-card-vh6382{
+
+    position:relative;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-card-vh6382:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+
+    0 22px 45px rgba(0,0,0,.14);
+
+}
+
+
+
+
+
+/*==========================================================
+GOLD BORDER
+==========================================================*/
+
+.xst9248-share-testimony-card-vh6382::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:22px;
+
+    border:2px solid transparent;
+
+    transition:.35s;
+
+    pointer-events:none;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-card-vh6382:hover::before{
+
+    border-color:#D4A32E;
+
+}
+
+
+
+
+
+/*==========================================================
+SHINE EFFECT
+==========================================================*/
+
+.xst9248-share-testimony-card-vh6382::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:55%;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+    90deg,
+
+    transparent,
+
+    rgba(255,255,255,.55),
+
+    transparent
+
+    );
+
+    transform:skewX(-20deg);
+
+    transition:.9s;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-card-vh6382:hover::after{
+
+    left:130%;
+
+}
+
+
+
+
+
+/*==========================================================
+IMAGE
+==========================================================*/
+
+.xst9248-share-testimony-card-vh6382:hover
+.xst9248-share-testimony-image-vh6382 img{
+
+    transform:scale(1.08);
+
+}
+
+
+
+
+
+.xst9248-share-testimony-image-vh6382{
+
+    position:relative;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-image-vh6382::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+    to top,
+
+    rgba(30,64,124,.18),
+
+    transparent 70%
+
+    );
+
+    opacity:0;
+
+    transition:.35s;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-card-vh6382:hover
+.xst9248-share-testimony-image-vh6382::after{
+
+    opacity:1;
+
+}
+
+
+
+
+
+/*==========================================================
+COUNTRY BADGE
+==========================================================*/
+
+.xst9248-share-testimony-card-vh6382:hover
+.xst9248-share-testimony-country-vh6382{
+
+    background:#1E407C;
+
+    color:#ffffff;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-card-vh6382:hover
+.xst9248-share-testimony-country-vh6382 i{
+
+    color:#FFD76A;
+
+}
+
+
+
+
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.xst9248-share-testimony-content-vh6382 h3{
+
+    transition:.35s;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-card-vh6382:hover
+.xst9248-share-testimony-content-vh6382 h3{
+
+    color:#D4A32E;
+
+}
+
+
+
+
+
+/*==========================================================
+SCRIPTURE
+==========================================================*/
+
+.xst9248-share-testimony-scripture-vh6382{
+
+    transition:.35s;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-card-vh6382:hover
+.xst9248-share-testimony-scripture-vh6382{
+
+    background:#F8FAFD;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-card-vh6382:hover
+.xst9248-share-testimony-scripture-vh6382 i{
+
+    transform:rotate(-10deg);
+
+}
+
+
+
+
+
+/*==========================================================
+CARD BUTTON
+==========================================================*/
+
+.xst9248-share-testimony-footer-vh6382 button:hover{
+
+    background:#D4A32E;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-footer-vh6382 button i{
+
+    transition:.35s;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-footer-vh6382 button:hover i{
+
+    transform:translateX(5px);
+
+}
+
+
+
+
+
+/*==========================================================
+BOTTOM CTA
+==========================================================*/
+
+.xst9248-share-testimony-main-btn-vh6382:hover{
+
+    background:#D4A32E;
+
+    transform:translateY(-4px);
+
+    box-shadow:
+
+    0 14px 35px rgba(212,163,46,.35);
+
+}
+
+
+
+
+
+.xst9248-share-testimony-main-btn-vh6382 i{
+
+    transition:.35s;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-main-btn-vh6382:hover i{
+
+    transform:rotate(90deg);
+
+}
+
+
+
+
+
+/*==========================================================
+SMOOTH TRANSITIONS
+==========================================================*/
+
+.xst9248-share-testimony-card-vh6382,
+
+.xst9248-share-testimony-image-vh6382 img,
+
+.xst9248-share-testimony-country-vh6382,
+
+.xst9248-share-testimony-scripture-vh6382,
+
+.xst9248-share-testimony-footer-vh6382 button,
+
+.xst9248-share-testimony-main-btn-vh6382{
+
+    transition:.35s ease;
+
+}
+
+/*==========================================================
+TABLET
+768px
+==========================================================*/
+
+@media (max-width:768px){
+
+.xst9248-share-testimony-section-vh6382{
+
+    padding:50px 0;
+
+}
+
+.xst9248-share-testimony-section-vh6382
+.container-fluid{
+
+    padding-left:18px;
+
+    padding-right:18px;
+
+}
+
+
+
+
+
+/*==========================================================
+HEADER
+==========================================================*/
+
+.xst9248-share-testimony-header-vh6382{
+
+    margin-bottom:40px;
+
+}
+
+.xst9248-share-testimony-title-vh6382{
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+}
+
+.xst9248-share-testimony-line-vh6382{
+
+    display:none;
+
+}
+
+.xst9248-share-testimony-title-vh6382 h2{
+
+    width:100%;
+
+    font-size:30px;
+
+    white-space:normal;
+
+    text-align:center;
+
+}
+
+.xst9248-share-testimony-title-vh6382 i{
+
+    font-size:28px;
+
+}
+
+.xst9248-share-testimony-header-vh6382 p{
+
+    font-size:15px;
+
+    line-height:1.8;
+
+}
+
+
+
+
+
+/*==========================================================
+GRID
+==========================================================*/
+
+.xst9248-share-testimony-grid-vh6382{
+
+    grid-template-columns:1fr;
+
+    gap:22px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-card-vh6382{
+
+    width:100%;
+
+    max-width:520px;
+
+    margin:auto;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-image-vh6382{
+
+    height:240px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-content-vh6382{
+
+    padding:20px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-content-vh6382 h3{
+
+    font-size:24px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-content-vh6382 h5{
+
+    font-size:14px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-content-vh6382 p{
+
+    font-size:15px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-main-btn-vh6382{
+
+    width:100%;
+
+    justify-content:center;
+
+}
+
+}
+
+
+
+
+
+/*==========================================================
+MOBILE
+576px
+==========================================================*/
+
+@media (max-width:576px){
+
+.xst9248-share-testimony-section-vh6382{
+
+    padding:40px 0;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-section-vh6382
+.container-fluid{
+
+    padding-left:14px;
+
+    padding-right:14px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-title-vh6382 h2{
+
+    font-size:24px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-title-vh6382 i{
+
+    font-size:24px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-header-vh6382 p{
+
+    font-size:14px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-card-vh6382{
+
+    border-radius:18px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-image-vh6382{
+
+    height:220px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-content-vh6382{
+
+    padding:18px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-country-vh6382{
+
+    font-size:11px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-content-vh6382 h3{
+
+    font-size:21px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-content-vh6382 h5{
+
+    font-size:13px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-content-vh6382 p{
+
+    font-size:14px;
+
+    line-height:1.75;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-scripture-vh6382{
+
+    font-size:13px;
+
+    padding:14px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-footer-vh6382{
+
+    padding:16px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-footer-vh6382 button{
+
+    font-size:14px;
+
+    padding:13px;
+
+}
+
+}
+
+
+
+
+
+/*==========================================================
+SMALL MOBILE
+480px
+==========================================================*/
+
+@media (max-width:480px){
+
+.xst9248-share-testimony-title-vh6382 h2{
+
+    font-size:22px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-header-vh6382 p{
+
+    font-size:13px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-image-vh6382{
+
+    height:200px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-content-vh6382{
+
+    padding:16px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-content-vh6382 h3{
+
+    font-size:19px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-content-vh6382 p{
+
+    font-size:13px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-scripture-vh6382{
+
+    font-size:12px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-main-btn-vh6382{
+
+    padding:15px 22px;
+
+    font-size:15px;
+
+}
+
+}
+
+
+
+
+
+/*==========================================================
+EXTRA SMALL
+390px
+==========================================================*/
+
+@media (max-width:390px){
+
+.xst9248-share-testimony-section-vh6382
+.container-fluid{
+
+    padding-left:12px;
+
+    padding-right:12px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-title-vh6382 h2{
+
+    font-size:20px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-title-vh6382 i{
+
+    font-size:20px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-image-vh6382{
+
+    height:185px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-content-vh6382{
+
+    padding:15px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-content-vh6382 h3{
+
+    font-size:18px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-content-vh6382 h5{
+
+    font-size:12px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-content-vh6382 p{
+
+    font-size:12px;
+
+    line-height:1.7;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-footer-vh6382{
+
+    padding:14px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-footer-vh6382 button{
+
+    font-size:13px;
+
+}
+
+}
+
+
+
+
+
+/*==========================================================
+VERY SMALL
+320px
+==========================================================*/
+
+@media (max-width:320px){
+
+.xst9248-share-testimony-title-vh6382 h2{
+
+    font-size:18px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-header-vh6382 p{
+
+    font-size:12px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-image-vh6382{
+
+    height:170px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-content-vh6382{
+
+    padding:14px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-content-vh6382 h3{
+
+    font-size:17px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-content-vh6382 p{
+
+    font-size:12px;
+
+}
+
+
+
+
+
+.xst9248-share-testimony-main-btn-vh6382{
+
+    width:100%;
+
+    font-size:14px;
+
+    padding:14px 18px;
+
+}
+
+}
