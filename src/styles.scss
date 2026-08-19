@@ -44244,3 +44244,4642 @@ VERY SMALL DEVICES
 }
 
 }
+
+
+
+
+/*==========================================================
+START : ghd6766
+MAIN LAYOUT
+END : 686shb888
+==========================================================*/
+
+/*==========================================================
+SECTION
+==========================================================*/
+
+#ghd6766-my-music-686shb888{
+
+    width:100%;
+
+    padding:30px 0;
+
+}
+
+/*==========================================================
+MAIN CARD
+==========================================================*/
+
+.ghd6766-card-686shb888{
+
+    background:#ffffff;
+
+    border-radius:24px;
+
+    padding:28px;
+
+    border:1px solid #e8edf5;
+
+    box-shadow:
+    0 15px 40px rgba(16,52,108,.06);
+
+}
+
+/*==========================================================
+HEADER
+==========================================================*/
+
+.ghd6766-title-686shb888{
+
+    margin:0;
+
+    color:#173f83;
+
+    font-size:34px;
+
+    font-weight:700;
+
+    font-family:Georgia,"Times New Roman",serif;
+
+}
+
+.ghd6766-subtitle-686shb888{
+
+    margin-top:8px;
+
+    color:#64748b;
+
+    font-size:17px;
+
+    line-height:1.7;
+
+}
+
+/*==========================================================
+UPLOAD BUTTON
+==========================================================*/
+
+.ghd6766-upload-btn-686shb888{
+
+    border:none;
+
+    outline:none;
+
+    padding:14px 26px;
+
+    border-radius:12px;
+
+    background:#173f83;
+
+    color:#ffffff;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.ghd6766-upload-btn-686shb888:hover{
+
+    background:#0b5ed7;
+
+    transform:translateY(-2px);
+
+}
+
+.ghd6766-upload-btn-686shb888 i{
+
+    font-size:18px;
+
+}
+
+/*==========================================================
+GRID
+==========================================================*/
+
+.ghd6766-song-grid-686shb888{
+
+    margin-top:30px;
+
+}
+
+/*==========================================================
+PLAYER
+==========================================================*/
+
+.ghd6766-player-wrapper-686shb888{
+
+    margin-top:45px;
+
+    align-items:stretch;
+
+}
+
+/*==========================================================
+PLAYER CARD
+==========================================================*/
+
+.ghd6766-player-card-686shb888{
+
+    background:#ffffff;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    border:1px solid #e8edf5;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.05);
+
+}
+
+/*==========================================================
+ALBUM COVER
+==========================================================*/
+
+.ghd6766-player-cover-686shb888{
+
+    width:100%;
+
+    height:430px;
+
+    overflow:hidden;
+
+    background:#eef4fc;
+
+}
+
+.ghd6766-player-cover-686shb888 img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+/*==========================================================
+RIGHT PANEL
+==========================================================*/
+
+.ghd6766-player-info-686shb888{
+
+    height:430px;
+
+    padding:30px;
+
+    border-radius:22px;
+
+    background:#f8fafc;
+
+    border:1px solid #e8edf5;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.ghd6766-player-info-686shb888 h3{
+
+    margin:0;
+
+    color:#173f83;
+
+    font-size:30px;
+
+    font-weight:700;
+
+}
+
+.ghd6766-player-info-686shb888 p{
+
+    margin-top:12px;
+
+    color:#64748b;
+
+    font-size:16px;
+
+    line-height:1.8;
+
+}
+
+/*==========================================================
+CONTROLS
+==========================================================*/
+
+.ghd6766-controls-686shb888{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-top:35px;
+
+}
+
+.ghd6766-controls-686shb888 button{
+
+    width:54px;
+
+    height:54px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#173f83;
+
+    color:#ffffff;
+
+    font-size:20px;
+
+    transition:.3s;
+
+}
+
+.ghd6766-controls-686shb888 button:hover{
+
+    background:#0b5ed7;
+
+    transform:translateY(-3px);
+
+}
+
+.ghd6766-main-play-686shb888{
+
+    width:68px !important;
+
+    height:68px !important;
+
+    font-size:30px !important;
+
+}
+
+/*==========================================================
+PROGRESS
+==========================================================*/
+
+.ghd6766-progress-row-686shb888{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-top:30px;
+
+}
+
+.ghd6766-progress-row-686shb888 span{
+
+    width:48px;
+
+    font-size:14px;
+
+    color:#64748b;
+
+    text-align:center;
+
+}
+
+.ghd6766-progress-686shb888{
+
+    flex:1;
+
+    height:8px;
+
+    background:#d9e3ef;
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+}
+
+.ghd6766-progress-fill-686shb888{
+
+    width:0;
+
+    height:100%;
+
+    background:#173f83;
+
+    border-radius:50px;
+
+}
+
+/*==========================================================
+END
+==========================================================*/
+/*==========================================================
+START : ghd6766
+MUSIC CARD
+END : 686shb888
+==========================================================*/
+
+/*==========================================================
+SONG CARD
+==========================================================*/
+
+.ghd6766-song-card-686shb888{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:#ffffff;
+
+    border-radius:22px;
+
+    border:1px solid #e7edf5;
+
+    transition:
+    transform .35s,
+    box-shadow .35s;
+
+    height:100%;
+
+}
+
+.ghd6766-song-card-686shb888:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 22px 45px rgba(20,55,105,.12);
+
+}
+
+/*==========================================================
+IMAGE
+==========================================================*/
+
+.ghd6766-image-wrapper-686shb888{
+
+    position:relative;
+
+    overflow:hidden;
+
+    height:240px;
+
+}
+
+.ghd6766-image-686shb888{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:
+    transform .5s,
+    filter .5s;
+
+}
+
+.ghd6766-song-card-686shb888:hover
+.ghd6766-image-686shb888{
+
+    transform:scale(1.08);
+
+    filter:brightness(1.05);
+
+}
+
+/*==========================================================
+PLAY OVERLAY
+==========================================================*/
+
+.ghd6766-play-overlay-686shb888{
+
+    position:absolute;
+
+    inset:0;
+
+    border:none;
+
+    background:rgba(0,0,0,.25);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    transition:.35s;
+
+}
+
+.ghd6766-song-card-686shb888:hover
+.ghd6766-play-overlay-686shb888{
+
+    opacity:1;
+
+}
+
+.ghd6766-play-overlay-686shb888 i{
+
+    width:72px;
+
+    height:72px;
+
+    border-radius:50%;
+
+    background:#ffffff;
+
+    color:#173f83;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:34px;
+
+    transition:.3s;
+
+}
+
+.ghd6766-play-overlay-686shb888:hover i{
+
+    transform:scale(1.12);
+
+}
+
+/*==========================================================
+CONTENT
+==========================================================*/
+
+.ghd6766-content-686shb888{
+
+    padding:22px;
+
+}
+
+.ghd6766-content-686shb888 h4{
+
+    margin:0;
+
+    color:#173f83;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.ghd6766-song-card-686shb888:hover
+.ghd6766-content-686shb888 h4{
+
+    color:#0b5ed7;
+
+}
+
+.ghd6766-content-686shb888 p{
+
+    margin-top:10px;
+
+    color:#64748b;
+
+    font-size:15px;
+
+    line-height:1.8;
+
+}
+
+/*==========================================================
+FOOTER
+==========================================================*/
+
+.ghd6766-footer-686shb888{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:22px;
+
+}
+
+.ghd6766-footer-686shb888 span{
+
+    color:#64748b;
+
+    font-size:14px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+.ghd6766-footer-686shb888 i{
+
+    color:#173f83;
+
+}
+
+/*==========================================================
+DELETE
+==========================================================*/
+
+.ghd6766-delete-btn-686shb888{
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#fff3f3;
+
+    color:#d62828;
+
+    transition:.3s;
+
+}
+
+.ghd6766-delete-btn-686shb888:hover{
+
+    background:#d62828;
+
+    color:#ffffff;
+
+    transform:rotate(-10deg);
+
+}
+
+/*==========================================================
+ACTIVE CARD
+==========================================================*/
+
+.ghd6766-active-song-686shb888{
+
+    border:2px solid #173f83;
+
+    background:#f7fbff;
+
+}
+
+.ghd6766-active-song-686shb888
+.ghd6766-content-686shb888 h4{
+
+    color:#173f83;
+
+}
+
+/*==========================================================
+TOP BORDER
+==========================================================*/
+
+.ghd6766-song-card-686shb888::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:0;
+
+    height:4px;
+
+    background:#173f83;
+
+    transition:.45s;
+
+}
+
+.ghd6766-song-card-686shb888:hover::before{
+
+    width:100%;
+
+}
+
+/*==========================================================
+SHINE
+==========================================================*/
+
+.ghd6766-song-card-686shb888::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-130%;
+
+    width:45%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.45),
+
+        transparent
+
+    );
+
+    transition:1s;
+
+}
+
+.ghd6766-song-card-686shb888:hover::after{
+
+    left:150%;
+
+}
+
+/*==========================================================
+ENTRANCE
+==========================================================*/
+
+.ghd6766-song-card-686shb888{
+
+    animation:
+    ghd6766FadeCard686shb888
+    .6s ease both;
+
+}
+
+@keyframes ghd6766FadeCard686shb888{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==========================================================
+END
+==========================================================*/
+/*==========================================================
+START : ghd6766
+MUSIC PLAYER
+END : 686shb888
+==========================================================*/
+
+/*==========================================================
+PLAYER CARD
+==========================================================*/
+
+.ghd6766-player-card-686shb888{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:24px;
+
+    background:#ffffff;
+
+    border:1px solid #e8edf5;
+
+    box-shadow:
+    0 18px 45px rgba(20,45,95,.08);
+
+}
+
+/*==========================================================
+ALBUM COVER
+==========================================================*/
+
+.ghd6766-player-cover-686shb888{
+
+    position:relative;
+
+    height:430px;
+
+    overflow:hidden;
+
+    background:#eef3fb;
+
+}
+
+.ghd6766-player-cover-686shb888 img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+.ghd6766-player-card-686shb888:hover
+.ghd6766-player-cover-686shb888 img{
+
+    transform:scale(1.04);
+
+}
+
+/*==========================================================
+RIGHT PANEL
+==========================================================*/
+
+.ghd6766-player-info-686shb888{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:#ffffff;
+
+    border-radius:24px;
+
+    border:1px solid #e8edf5;
+
+    padding:35px;
+
+    height:430px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    box-shadow:
+    0 18px 45px rgba(20,45,95,.06);
+
+}
+
+.ghd6766-player-info-686shb888::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:linear-gradient(
+    90deg,
+    #173f83,
+    #4a90ff);
+
+}
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.ghd6766-player-info-686shb888 h3{
+
+    margin:0;
+
+    color:#173f83;
+
+    font-size:32px;
+
+    font-weight:700;
+
+}
+
+.ghd6766-player-info-686shb888 p{
+
+    margin-top:12px;
+
+    color:#64748b;
+
+    font-size:16px;
+
+    line-height:1.9;
+
+}
+
+/*==========================================================
+CONTROLS
+==========================================================*/
+
+.ghd6766-controls-686shb888{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:16px;
+
+    margin-top:40px;
+
+}
+
+.ghd6766-controls-686shb888 button{
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#eef4fc;
+
+    color:#173f83;
+
+    font-size:21px;
+
+    transition:.35s;
+
+    cursor:pointer;
+
+}
+
+.ghd6766-controls-686shb888 button:hover{
+
+    background:#173f83;
+
+    color:#ffffff;
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 12px 28px rgba(23,63,131,.25);
+
+}
+
+/*==========================================================
+PLAY BUTTON
+==========================================================*/
+
+.ghd6766-main-play-686shb888{
+
+    width:72px !important;
+
+    height:72px !important;
+
+    background:#173f83 !important;
+
+    color:#ffffff !important;
+
+    font-size:34px !important;
+
+    box-shadow:
+    0 12px 30px rgba(23,63,131,.25);
+
+}
+
+.ghd6766-main-play-686shb888:hover{
+
+    transform:scale(1.08);
+
+}
+
+/*==========================================================
+PROGRESS
+==========================================================*/
+
+.ghd6766-progress-row-686shb888{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    margin-top:35px;
+
+}
+
+.ghd6766-progress-row-686shb888 span{
+
+    width:48px;
+
+    text-align:center;
+
+    color:#64748b;
+
+    font-size:13px;
+
+}
+
+.ghd6766-progress-686shb888{
+
+    flex:1;
+
+    height:8px;
+
+    border-radius:40px;
+
+    background:#dce5f1;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+}
+
+.ghd6766-progress-fill-686shb888{
+
+    width:0;
+
+    height:100%;
+
+    border-radius:40px;
+
+    background:linear-gradient(
+
+        90deg,
+
+        #173f83,
+
+        #4a90ff
+
+    );
+
+    transition:width .15s linear;
+
+}
+
+/*==========================================================
+PLAYER HOVER
+==========================================================*/
+
+.ghd6766-player-card-686shb888:hover{
+
+    box-shadow:
+
+    0 28px 60px rgba(0,0,0,.15);
+
+}
+
+/*==========================================================
+PLAY BUTTON PULSE
+==========================================================*/
+
+.ghd6766-main-play-686shb888{
+
+    animation:
+
+    ghd6766PlayerPulse686shb888
+
+    2.5s infinite;
+
+}
+
+@keyframes ghd6766PlayerPulse686shb888{
+
+    0%{
+
+        box-shadow:
+
+        0 0 0 0 rgba(23,63,131,.35);
+
+    }
+
+    70%{
+
+        box-shadow:
+
+        0 0 0 18px rgba(23,63,131,0);
+
+    }
+
+    100%{
+
+        box-shadow:
+
+        0 0 0 0 rgba(23,63,131,0);
+
+    }
+
+}
+
+/*==========================================================
+PLAYER FADE
+==========================================================*/
+
+.ghd6766-player-wrapper-686shb888{
+
+    animation:
+
+    ghd6766PlayerFade686shb888
+
+    .7s ease;
+
+}
+
+@keyframes ghd6766PlayerFade686shb888{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==========================================================
+TEXT SELECTION
+==========================================================*/
+
+#ghd6766-my-music-686shb888 ::selection{
+
+    background:#173f83;
+
+    color:#ffffff;
+
+}
+
+/*==========================================================
+END
+==========================================================*/
+
+/*==========================================================
+START : ghd6766
+UPLOAD MODAL
+END : 686shb888
+==========================================================*/
+
+/*==========================================================
+OVERLAY
+==========================================================*/
+
+.ghd6766-modal-overlay-686shb888{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:999999;
+
+    background:rgba(10,18,35,.55);
+
+    backdrop-filter:blur(8px);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+    animation:ghd6766Overlay686shb888 .30s ease;
+
+}
+
+/*==========================================================
+MODAL
+==========================================================*/
+
+.ghd6766-modal-686shb888{
+
+    width:100%;
+
+    max-width:680px;
+
+    max-height:90vh;
+
+    overflow-y:auto;
+
+    background:#ffffff;
+
+    border-radius:24px;
+
+    padding:30px;
+
+    border:1px solid #e6edf6;
+
+    box-shadow:
+
+    0 30px 80px rgba(0,0,0,.20);
+
+    animation:
+
+    ghd6766Modal686shb888 .35s ease;
+
+}
+
+/*==========================================================
+SCROLLBAR
+==========================================================*/
+
+.ghd6766-modal-686shb888::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.ghd6766-modal-686shb888::-webkit-scrollbar-thumb{
+
+    background:#d0d8e8;
+
+    border-radius:50px;
+
+}
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.ghd6766-modal-686shb888 h3{
+
+    margin:0 0 28px;
+
+    color:#173f83;
+
+    font-size:32px;
+
+    font-weight:700;
+
+    text-align:center;
+
+    font-family:Georgia,"Times New Roman",serif;
+
+}
+
+/*==========================================================
+LABEL
+==========================================================*/
+
+.ghd6766-modal-686shb888 label{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    color:#173f83;
+
+    font-size:15px;
+
+    font-weight:700;
+
+}
+
+/*==========================================================
+INPUT
+==========================================================*/
+
+.ghd6766-modal-686shb888 .form-control{
+
+    width:100%;
+
+    min-height:54px;
+
+    border-radius:12px;
+
+    border:1px solid #d9e3ef;
+
+    padding:14px 18px;
+
+    font-size:15px;
+
+    box-shadow:none;
+
+    transition:.30s;
+
+}
+
+.ghd6766-modal-686shb888 .form-control:focus{
+
+    border-color:#173f83;
+
+    box-shadow:
+
+    0 0 0 .18rem rgba(23,63,131,.12);
+
+}
+
+/*==========================================================
+UPLOAD BUTTON
+==========================================================*/
+
+.ghd6766-upload-file-btn-686shb888{
+
+    width:100%;
+
+    border:none;
+
+    outline:none;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    background:#eef4fc;
+
+    color:#173f83;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.30s;
+
+}
+
+.ghd6766-upload-file-btn-686shb888:hover{
+
+    background:#173f83;
+
+    color:#ffffff;
+
+}
+
+.ghd6766-upload-file-btn-686shb888 i{
+
+    font-size:20px;
+
+}
+
+/*==========================================================
+BUTTON AREA
+==========================================================*/
+
+.ghd6766-modal-buttons-686shb888{
+
+    margin-top:35px;
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+/*==========================================================
+SAVE BUTTON
+==========================================================*/
+
+.ghd6766-save-btn-686shb888{
+
+    border:none;
+
+    outline:none;
+
+    padding:14px 28px;
+
+    border-radius:12px;
+
+    background:#173f83;
+
+    color:#ffffff;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.30s;
+
+}
+
+.ghd6766-save-btn-686shb888:hover{
+
+    background:#0b5ed7;
+
+    transform:translateY(-2px);
+
+}
+
+/*==========================================================
+CANCEL BUTTON
+==========================================================*/
+
+.ghd6766-cancel-btn-686shb888{
+
+    border:none;
+
+    outline:none;
+
+    padding:14px 28px;
+
+    border-radius:12px;
+
+    background:#eef2f7;
+
+    color:#49566b;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.30s;
+
+}
+
+.ghd6766-cancel-btn-686shb888:hover{
+
+    background:#dbe4ef;
+
+}
+
+/*==========================================================
+BUTTON ICONS
+==========================================================*/
+
+.ghd6766-save-btn-686shb888 i,
+
+.ghd6766-cancel-btn-686shb888 i{
+
+    font-size:18px;
+
+}
+
+/*==========================================================
+ANIMATIONS
+==========================================================*/
+
+@keyframes ghd6766Overlay686shb888{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes ghd6766Modal686shb888{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px) scale(.95);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0) scale(1);
+
+    }
+
+}
+
+/*==========================================================
+END
+==========================================================*/
+
+/*==========================================================
+START : ghd6766
+RESPONSIVE
+END : 686shb888
+==========================================================*/
+
+/*==========================================================
+LARGE DESKTOP
+==========================================================*/
+
+@media(max-width:1600px){
+
+    .ghd6766-player-cover-686shb888{
+
+        height:390px;
+
+    }
+
+    .ghd6766-player-info-686shb888{
+
+        height:390px;
+
+    }
+
+}
+
+/*==========================================================
+LAPTOP
+==========================================================*/
+
+@media(max-width:1400px){
+
+    .ghd6766-title-686shb888{
+
+        font-size:30px;
+
+    }
+
+    .ghd6766-subtitle-686shb888{
+
+        font-size:16px;
+
+    }
+
+    .ghd6766-player-cover-686shb888{
+
+        height:350px;
+
+    }
+
+    .ghd6766-player-info-686shb888{
+
+        height:350px;
+
+        padding:24px;
+
+    }
+
+    .ghd6766-player-info-686shb888 h3{
+
+        font-size:27px;
+
+    }
+
+}
+
+/*==========================================================
+TABLET
+==========================================================*/
+
+@media(max-width:991px){
+
+    .ghd6766-card-686shb888{
+
+        padding:22px;
+
+    }
+
+    .ghd6766-title-686shb888{
+
+        font-size:28px;
+
+    }
+
+    .ghd6766-subtitle-686shb888{
+
+        font-size:15px;
+
+    }
+
+    .ghd6766-player-wrapper-686shb888{
+
+        gap:25px;
+
+    }
+
+    .ghd6766-player-cover-686shb888{
+
+        height:320px;
+
+    }
+
+    .ghd6766-player-info-686shb888{
+
+        height:auto;
+
+        margin-top:20px;
+
+    }
+
+    .ghd6766-controls-686shb888{
+
+        justify-content:center;
+
+    }
+
+}
+
+/*==========================================================
+MOBILE
+==========================================================*/
+
+@media(max-width:767px){
+
+    .ghd6766-card-686shb888{
+
+        padding:16px;
+
+        border-radius:18px;
+
+    }
+
+    /*========================
+    HEADER
+    ========================*/
+
+    .ghd6766-title-686shb888{
+
+        text-align:center;
+
+        font-size:24px;
+
+    }
+
+    .ghd6766-subtitle-686shb888{
+
+        text-align:center;
+
+        font-size:14px;
+
+    }
+
+    .ghd6766-upload-btn-686shb888{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+    /*========================
+    MUSIC CARD
+    ========================*/
+
+    .ghd6766-song-card-686shb888{
+
+        border-radius:18px;
+
+    }
+
+    .ghd6766-image-wrapper-686shb888{
+
+        height:220px;
+
+    }
+
+    .ghd6766-content-686shb888{
+
+        padding:18px;
+
+    }
+
+    .ghd6766-content-686shb888 h4{
+
+        font-size:20px;
+
+    }
+
+    .ghd6766-content-686shb888 p{
+
+        font-size:14px;
+
+    }
+
+    .ghd6766-footer-686shb888{
+
+        margin-top:18px;
+
+    }
+
+    /*========================
+    PLAYER
+    ========================*/
+
+    .ghd6766-player-cover-686shb888{
+
+        height:250px;
+
+    }
+
+    .ghd6766-player-info-686shb888{
+
+        margin-top:18px;
+
+        padding:20px;
+
+        text-align:center;
+
+    }
+
+    .ghd6766-player-info-686shb888 h3{
+
+        font-size:22px;
+
+    }
+
+    .ghd6766-player-info-686shb888 p{
+
+        font-size:14px;
+
+    }
+
+    .ghd6766-controls-686shb888{
+
+        gap:10px;
+
+        flex-wrap:wrap;
+
+    }
+
+    .ghd6766-controls-686shb888 button{
+
+        width:46px;
+
+        height:46px;
+
+        font-size:18px;
+
+    }
+
+    .ghd6766-main-play-686shb888{
+
+        width:60px !important;
+
+        height:60px !important;
+
+        font-size:28px !important;
+
+    }
+
+    .ghd6766-progress-row-686shb888{
+
+        margin-top:22px;
+
+        gap:10px;
+
+    }
+
+    .ghd6766-progress-row-686shb888 span{
+
+        width:40px;
+
+        font-size:12px;
+
+    }
+
+    /*========================
+    MODAL
+    ========================*/
+
+    .ghd6766-modal-overlay-686shb888{
+
+        align-items:flex-start;
+
+        padding:12px;
+
+    }
+
+    .ghd6766-modal-686shb888{
+
+        width:100%;
+
+        max-width:100%;
+
+        margin-top:15px;
+
+        max-height:95vh;
+
+        padding:18px;
+
+        border-radius:18px;
+
+    }
+
+    .ghd6766-modal-686shb888 h3{
+
+        font-size:24px;
+
+    }
+
+    .ghd6766-modal-buttons-686shb888{
+
+        flex-direction:column;
+
+    }
+
+    .ghd6766-save-btn-686shb888,
+
+    .ghd6766-cancel-btn-686shb888{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+}
+
+/*==========================================================
+SMALL MOBILE
+==========================================================*/
+
+@media(max-width:480px){
+
+    .ghd6766-title-686shb888{
+
+        font-size:21px;
+
+    }
+
+    .ghd6766-subtitle-686shb888{
+
+        font-size:13px;
+
+    }
+
+    .ghd6766-image-wrapper-686shb888{
+
+        height:190px;
+
+    }
+
+    .ghd6766-player-cover-686shb888{
+
+        height:200px;
+
+    }
+
+    .ghd6766-player-info-686shb888{
+
+        padding:16px;
+
+    }
+
+    .ghd6766-player-info-686shb888 h3{
+
+        font-size:19px;
+
+    }
+
+    .ghd6766-player-info-686shb888 p{
+
+        font-size:13px;
+
+    }
+
+    .ghd6766-controls-686shb888{
+
+        gap:8px;
+
+    }
+
+    .ghd6766-controls-686shb888 button{
+
+        width:42px;
+
+        height:42px;
+
+        font-size:16px;
+
+    }
+
+    .ghd6766-main-play-686shb888{
+
+        width:54px !important;
+
+        height:54px !important;
+
+        font-size:24px !important;
+
+    }
+
+    .ghd6766-progress-row-686shb888{
+
+        gap:8px;
+
+    }
+
+    .ghd6766-progress-row-686shb888 span{
+
+        width:35px;
+
+        font-size:11px;
+
+    }
+
+}
+
+/*==========================================================
+END
+==========================================================*/
+
+/*==========================================================
+START : ghd6766
+PREMIUM EFFECTS
+END : 686shb888
+==========================================================*/
+
+/*==========================================================
+CARD HOVER
+==========================================================*/
+
+.ghd6766-song-card-686shb888{
+
+    transition:
+    transform .35s ease,
+    box-shadow .35s ease;
+
+}
+
+.ghd6766-song-card-686shb888:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 22px 45px rgba(20,45,95,.12);
+
+}
+
+/*==========================================================
+CARD SHINE
+==========================================================*/
+
+.ghd6766-song-card-686shb888{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.ghd6766-song-card-686shb888::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-130%;
+
+    width:45%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.55),
+
+        transparent
+
+    );
+
+    transition:1s;
+
+}
+
+.ghd6766-song-card-686shb888:hover::after{
+
+    left:150%;
+
+}
+
+/*==========================================================
+ACTIVE MUSIC
+==========================================================*/
+
+.ghd6766-active-song-686shb888{
+
+    border:2px solid #173f83;
+
+    background:#f5f9ff;
+
+    box-shadow:
+    0 15px 35px rgba(23,63,131,.12);
+
+}
+
+.ghd6766-active-song-686shb888
+.ghd6766-content-686shb888 h4{
+
+    color:#173f83;
+
+}
+
+/*==========================================================
+PLAY BUTTON PULSE
+==========================================================*/
+
+.ghd6766-main-play-686shb888{
+
+    animation:
+    ghd6766PlayPulse686shb888
+    2.4s infinite;
+
+}
+
+@keyframes ghd6766PlayPulse686shb888{
+
+    0%{
+
+        box-shadow:
+        0 0 0 0 rgba(23,63,131,.35);
+
+    }
+
+    70%{
+
+        box-shadow:
+        0 0 0 18px rgba(23,63,131,0);
+
+    }
+
+    100%{
+
+        box-shadow:
+        0 0 0 0 rgba(23,63,131,0);
+
+    }
+
+}
+
+/*==========================================================
+BUTTON SHINE
+==========================================================*/
+
+.ghd6766-upload-btn-686shb888,
+.ghd6766-save-btn-686shb888,
+.ghd6766-cancel-btn-686shb888{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.ghd6766-upload-btn-686shb888::before,
+.ghd6766-save-btn-686shb888::before,
+.ghd6766-cancel-btn-686shb888::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:40%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.45),
+
+        transparent
+
+    );
+
+    transition:1s;
+
+}
+
+.ghd6766-upload-btn-686shb888:hover::before,
+.ghd6766-save-btn-686shb888:hover::before,
+.ghd6766-cancel-btn-686shb888:hover::before{
+
+    left:140%;
+
+}
+
+/*==========================================================
+PLAYER CARD
+==========================================================*/
+
+.ghd6766-player-card-686shb888{
+
+    transition:
+    transform .4s,
+    box-shadow .4s;
+
+}
+
+.ghd6766-player-card-686shb888:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 28px 60px rgba(0,0,0,.18);
+
+}
+
+/*==========================================================
+IMAGE ZOOM
+==========================================================*/
+
+.ghd6766-player-cover-686shb888 img{
+
+    transition:
+    transform .45s ease;
+
+}
+
+.ghd6766-player-card-686shb888:hover
+.ghd6766-player-cover-686shb888 img{
+
+    transform:scale(1.05);
+
+}
+
+/*==========================================================
+PROGRESS BAR
+==========================================================*/
+
+.ghd6766-progress-fill-686shb888{
+
+    background:linear-gradient(
+
+        90deg,
+
+        #173f83,
+
+        #4f8df7
+
+    );
+
+    transition:width .15s linear;
+
+}
+
+/*==========================================================
+MODAL
+==========================================================*/
+
+.ghd6766-modal-686shb888{
+
+    animation:
+    ghd6766ModalOpen686shb888
+    .35s ease;
+
+}
+
+@keyframes ghd6766ModalOpen686shb888{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(35px)
+        scale(.95);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0)
+        scale(1);
+
+    }
+
+}
+
+/*==========================================================
+TOAST
+==========================================================*/
+
+.ghd6766-toast-686shb888{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    z-index:999999;
+
+    background:#173f83;
+
+    color:#ffffff;
+
+    padding:16px 22px;
+
+    border-radius:14px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-weight:600;
+
+    box-shadow:
+    0 20px 45px rgba(23,63,131,.28);
+
+    animation:
+    ghd6766Toast686shb888
+    .35s ease;
+
+}
+
+.ghd6766-toast-686shb888 i{
+
+    font-size:22px;
+
+}
+
+@keyframes ghd6766Toast686shb888{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+/*==========================================================
+ENTRANCE
+==========================================================*/
+
+.ghd6766-song-card-686shb888{
+
+    animation:
+    ghd6766CardFade686shb888
+    .6s ease both;
+
+}
+
+@keyframes ghd6766CardFade686shb888{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+/*==========================================================
+CUSTOM SCROLLBAR
+==========================================================*/
+
+.ghd6766-modal-686shb888::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.ghd6766-modal-686shb888::-webkit-scrollbar-thumb{
+
+    background:#cfd8e7;
+
+    border-radius:20px;
+
+}
+
+.ghd6766-modal-686shb888::-webkit-scrollbar-track{
+
+    background:#f5f7fb;
+
+}
+
+/*==========================================================
+TEXT SELECTION
+==========================================================*/
+
+#ghd6766-my-music-686shb888 ::selection{
+
+    background:#173f83;
+
+    color:#ffffff;
+
+}
+
+/*==========================================================
+REDUCED MOTION
+==========================================================*/
+
+@media(prefers-reduced-motion:reduce){
+
+    .ghd6766-song-card-686shb888,
+
+    .ghd6766-player-card-686shb888,
+
+    .ghd6766-main-play-686shb888,
+
+    .ghd6766-toast-686shb888{
+
+        animation:none;
+
+        transition:none;
+
+    }
+
+}
+
+/*==========================================================
+END
+==========================================================*/
+
+/*==========================================================
+SECTION
+==========================================================*/
+
+.Unity-Scripture-Footer-Section-X98{
+
+    padding:25px 0;
+
+}
+
+/*==========================================================
+CONTAINER
+==========================================================*/
+
+.Unity-Scripture-Footer-Container-X98{
+
+    background:#082A63;
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+}
+
+/*==========================================================
+TOP
+==========================================================*/
+
+.Unity-Scripture-Footer-Top-X98{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:14px 20px;
+
+    border-bottom:1px solid rgba(255,255,255,.12);
+
+}
+
+/*==========================================================
+LOGO
+==========================================================*/
+
+.Unity-Scripture-Footer-Logo-X98 img{
+
+    height:30px;
+
+}
+
+/*==========================================================
+VERSE
+==========================================================*/
+
+.Unity-Scripture-Footer-Verse-X98{
+
+    color:#FFF7D8;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    font-style:italic;
+
+}
+
+/*==========================================================
+REFERENCE
+==========================================================*/
+
+.Unity-Scripture-Footer-Reference-X98{
+
+    color:#E5B74A;
+
+    font-size:18px;
+
+    font-weight:700;
+
+}
+
+/*==========================================================
+BOTTOM
+==========================================================*/
+
+.Unity-Scripture-Footer-Bottom-X98{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:14px;
+
+    padding:12px 20px;
+
+}
+
+/*==========================================================
+LINK
+==========================================================*/
+
+.Unity-Scripture-Footer-Link-X98{
+
+    color:#E6B64D;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    position:relative;
+
+}
+
+.Unity-Scripture-Footer-Link-X98:not(:last-child)::after{
+
+    content:"|";
+
+    color:#C3922A;
+
+    margin-left:14px;
+
+}
+
+
+.Unity-Scripture-Footer-Link-X98{
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.Unity-Scripture-Footer-Link-X98:hover{
+
+    color:#FFFFFF;
+
+}
+
+.Unity-Scripture-Footer-Logo-X98 img{
+
+    transition:.4s;
+
+}
+
+.Unity-Scripture-Footer-Logo-X98:hover img{
+
+    transform:scale(1.08);
+
+}
+
+@media(max-width:991px){
+
+    .Unity-Scripture-Footer-Top-X98{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        gap:10px;
+
+    }
+
+    .Unity-Scripture-Footer-Verse-X98{
+
+        font-size:16px;
+
+    }
+
+}
+
+@media(max-width:767px){
+
+    .Unity-Scripture-Footer-Bottom-X98{
+
+        gap:10px;
+
+    }
+
+    .Unity-Scripture-Footer-Link-X98{
+
+        font-size:13px;
+
+    }
+
+    .Unity-Scripture-Footer-Reference-X98{
+
+        font-size:15px;
+
+    }
+
+    .Unity-Scripture-Footer-Verse-X98{
+
+        font-size:14px;
+
+        line-height:1.7;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .Unity-Scripture-Footer-Container-X98{
+
+        border-radius:10px;
+
+    }
+
+    .Unity-Scripture-Footer-Top-X98{
+
+        padding:14px;
+
+    }
+
+    .Unity-Scripture-Footer-Bottom-X98{
+
+        padding:12px;
+
+        justify-content:flex-start;
+
+    }
+
+    .Unity-Scripture-Footer-Link-X98{
+
+        font-size:12px;
+
+    }
+
+}
+
+
+
+
+
+/*==========================================================
+START : uy7676a
+DESKTOP SCSS
+END : olk7866s
+==========================================================*/
+
+#uy7676a-vision-grid-olk7866s{
+
+    padding:70px 0;
+
+    background:#f7f8fc;
+
+}
+
+/*==========================================================
+CARD
+==========================================================*/
+
+.uy7676a-card-olk7866s{
+
+    background:#ffffff;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 8px 30px rgba(0,0,0,.08);
+
+    border:1px solid #ececec;
+
+    height:100%;
+
+}
+
+/*==========================================================
+HEADER
+==========================================================*/
+
+.uy7676a-card-header-olk7866s{
+
+    padding:25px 28px 15px;
+
+}
+
+.uy7676a-card-title-area-olk7866s{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.uy7676a-card-icon-olk7866s{
+
+    width:54px;
+
+    height:54px;
+
+    border-radius:50%;
+
+    background:#eef4ff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.uy7676a-card-icon-olk7866s i{
+
+    color:#1b4f9b;
+
+    font-size:24px;
+
+}
+
+.uy7676a-card-title-olk7866s{
+
+    margin:0;
+
+    color:#173f83;
+
+    font-size:30px;
+
+    font-weight:700;
+
+    font-family:Georgia,"Times New Roman",serif;
+
+}
+
+/*==========================================================
+BODY
+==========================================================*/
+
+.uy7676a-card-body-olk7866s{
+
+    padding:0 28px 28px;
+
+}
+
+/*==========================================================
+LIST
+==========================================================*/
+
+.uy7676a-list-olk7866s{
+
+    list-style:none;
+
+    margin:0;
+
+    padding:0;
+
+}
+
+.uy7676a-list-olk7866s li{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:14px;
+
+    margin-bottom:15px;
+
+}
+
+.uy7676a-number-olk7866s{
+
+    width:30px;
+
+    height:30px;
+
+    border-radius:50%;
+
+    background:#1b4f9b;
+
+    color:#ffffff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    flex-shrink:0;
+
+}
+
+.uy7676a-text-olk7866s{
+
+    font-size:16px;
+
+    color:#333;
+
+    line-height:1.6;
+
+}
+
+/*==========================================================
+IMAGE GRID
+==========================================================*/
+
+.uy7676a-image-grid-olk7866s{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.uy7676a-image-grid-olk7866s img{
+
+    width:100%;
+
+    height:135px;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+}
+
+/*==========================================================
+FOOTER
+==========================================================*/
+
+.uy7676a-footer-olk7866s{
+
+    margin:22px 28px 28px;
+
+    background:#f5f8ff;
+
+    border:1px solid #dbe8ff;
+
+    border-radius:14px;
+
+    padding:18px;
+
+    text-align:center;
+
+}
+
+.uy7676a-footer-olk7866s p{
+
+    margin:0;
+
+    color:#173f83;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    font-family:Georgia,"Times New Roman",serif;
+
+    line-height:1.5;
+
+}
+
+/*==========================================================
+HOVER
+==========================================================*/
+
+.uy7676a-card-olk7866s{
+
+    transition:.35s ease;
+
+}
+
+.uy7676a-card-olk7866s:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.14);
+
+}
+
+.uy7676a-image-grid-olk7866s img{
+
+    transition:.35s ease;
+
+}
+
+.uy7676a-image-grid-olk7866s img:hover{
+
+    transform:scale(1.04);
+
+}
+
+/*==========================================================
+DESKTOP
+==========================================================*/
+
+@media (min-width:1400px){
+
+    .uy7676a-card-title-olk7866s{
+
+        font-size:34px;
+
+    }
+
+    .uy7676a-footer-olk7866s p{
+
+        font-size:24px;
+
+    }
+
+}
+
+/*==========================================================
+END
+==========================================================*/
+
+/*==========================================================
+START : uy7676a
+TABLET RESPONSIVE
+END : olk7866s
+==========================================================*/
+
+@media (max-width:1199px){
+
+    #uy7676a-vision-grid-olk7866s{
+
+        padding:60px 0;
+
+    }
+
+    .uy7676a-card-header-olk7866s{
+
+        padding:22px;
+
+    }
+
+    .uy7676a-card-body-olk7866s{
+
+        padding:0 22px 22px;
+
+    }
+
+    .uy7676a-card-title-olk7866s{
+
+        font-size:26px;
+
+    }
+
+    .uy7676a-image-grid-olk7866s img{
+
+        height:120px;
+
+    }
+
+    .uy7676a-footer-olk7866s{
+
+        margin:20px 22px 22px;
+
+    }
+
+}
+
+/*==========================================================
+992px
+==========================================================*/
+
+@media (max-width:992px){
+
+    .uy7676a-card-title-olk7866s{
+
+        font-size:24px;
+
+    }
+
+    .uy7676a-card-body-olk7866s .row{
+
+        row-gap:22px;
+
+    }
+
+    .uy7676a-image-grid-olk7866s{
+
+        display:grid;
+
+        grid-template-columns:repeat(3,1fr);
+
+        gap:12px;
+
+    }
+
+    .uy7676a-image-grid-olk7866s img{
+
+        height:115px;
+
+    }
+
+    .uy7676a-text-olk7866s{
+
+        font-size:15px;
+
+    }
+
+}
+
+/*==========================================================
+768px
+==========================================================*/
+
+@media (max-width:768px){
+
+    #uy7676a-vision-grid-olk7866s{
+
+        padding:45px 0;
+
+    }
+
+    .uy7676a-card-olk7866s{
+
+        border-radius:18px;
+
+    }
+
+    .uy7676a-card-header-olk7866s{
+
+        padding:20px;
+
+    }
+
+    .uy7676a-card-body-olk7866s{
+
+        padding:0 20px 20px;
+
+    }
+
+    .uy7676a-card-title-area-olk7866s{
+
+        gap:10px;
+
+    }
+
+    .uy7676a-card-icon-olk7866s{
+
+        width:46px;
+
+        height:46px;
+
+    }
+
+    .uy7676a-card-icon-olk7866s i{
+
+        font-size:20px;
+
+    }
+
+    .uy7676a-card-title-olk7866s{
+
+        font-size:22px;
+
+    }
+
+    .uy7676a-list-olk7866s li{
+
+        gap:10px;
+
+        margin-bottom:12px;
+
+    }
+
+    .uy7676a-number-olk7866s{
+
+        width:26px;
+
+        height:26px;
+
+        font-size:13px;
+
+    }
+
+    .uy7676a-text-olk7866s{
+
+        font-size:15px;
+
+        line-height:1.5;
+
+    }
+
+    .uy7676a-image-grid-olk7866s{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .uy7676a-image-grid-olk7866s img{
+
+        height:180px;
+
+    }
+
+    .uy7676a-footer-olk7866s{
+
+        margin:18px 20px 20px;
+
+        padding:16px;
+
+    }
+
+    .uy7676a-footer-olk7866s p{
+
+        font-size:18px;
+
+    }
+
+}
+
+/*==========================================================
+576px
+==========================================================*/
+
+@media (max-width:576px){
+
+    #uy7676a-vision-grid-olk7866s{
+
+        padding:35px 0;
+
+    }
+
+    .uy7676a-card-header-olk7866s{
+
+        padding:18px;
+
+    }
+
+    .uy7676a-card-body-olk7866s{
+
+        padding:0 18px 18px;
+
+    }
+
+    .uy7676a-card-title-olk7866s{
+
+        font-size:20px;
+
+        line-height:1.3;
+
+    }
+
+    .uy7676a-card-icon-olk7866s{
+
+        width:42px;
+
+        height:42px;
+
+    }
+
+    .uy7676a-card-icon-olk7866s i{
+
+        font-size:18px;
+
+    }
+
+    .uy7676a-text-olk7866s{
+
+        font-size:14px;
+
+    }
+
+    .uy7676a-image-grid-olk7866s img{
+
+        height:160px;
+
+        border-radius:10px;
+
+    }
+
+    .uy7676a-footer-olk7866s{
+
+        margin:16px 18px 18px;
+
+    }
+
+    .uy7676a-footer-olk7866s p{
+
+        font-size:17px;
+
+    }
+
+}
+
+/*==========================================================
+425px
+==========================================================*/
+
+@media (max-width:425px){
+
+    .uy7676a-card-title-olk7866s{
+
+        font-size:18px;
+
+    }
+
+    .uy7676a-text-olk7866s{
+
+        font-size:13px;
+
+    }
+
+    .uy7676a-number-olk7866s{
+
+        width:24px;
+
+        height:24px;
+
+        font-size:12px;
+
+    }
+
+    .uy7676a-image-grid-olk7866s img{
+
+        height:145px;
+
+    }
+
+    .uy7676a-footer-olk7866s p{
+
+        font-size:16px;
+
+    }
+
+}
+
+/*==========================================================
+320px
+==========================================================*/
+
+@media (max-width:320px){
+
+    .uy7676a-card-header-olk7866s{
+
+        padding:15px;
+
+    }
+
+    .uy7676a-card-body-olk7866s{
+
+        padding:0 15px 15px;
+
+    }
+
+    .uy7676a-card-title-olk7866s{
+
+        font-size:17px;
+
+    }
+
+    .uy7676a-text-olk7866s{
+
+        font-size:12px;
+
+    }
+
+    .uy7676a-image-grid-olk7866s img{
+
+        height:130px;
+
+    }
+
+    .uy7676a-footer-olk7866s{
+
+        margin:15px;
+
+    }
+
+    .uy7676a-footer-olk7866s p{
+
+        font-size:15px;
+
+    }
+
+}
+
+/*==========================================================
+END : uy7676a
+END : olk7866s
+==========================================================*/
+
+/*==========================================================
+START : uy7676a
+FINAL UI POLISH
+END : olk7866s
+==========================================================*/
+
+/*==========================================================
+SECTION
+==========================================================*/
+
+#uy7676a-vision-grid-olk7866s{
+
+    position:relative;
+
+    overflow:hidden;
+
+    isolation:isolate;
+
+}
+
+/*==========================================================
+CARD
+==========================================================*/
+
+.uy7676a-card-olk7866s{
+
+    position:relative;
+
+    transition:
+    transform .35s ease,
+    box-shadow .35s ease,
+    border-color .35s ease;
+
+    cursor:pointer;
+
+}
+
+.uy7676a-card-olk7866s:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#d5e4ff;
+
+    box-shadow:
+    0 22px 50px rgba(0,0,0,.14);
+
+}
+
+/*==========================================================
+TOP BORDER
+==========================================================*/
+
+.uy7676a-card-olk7866s::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:linear-gradient(
+    90deg,
+    #1b4f9b,
+    #5d8ce8);
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:.4s;
+
+}
+
+.uy7676a-card-olk7866s:hover::before{
+
+    transform:scaleX(1);
+
+}
+
+/*==========================================================
+ICON
+==========================================================*/
+
+.uy7676a-card-icon-olk7866s{
+
+    transition:.35s ease;
+
+}
+
+.uy7676a-card-olk7866s:hover
+.uy7676a-card-icon-olk7866s{
+
+    transform:rotate(-10deg)
+              scale(1.08);
+
+    background:#1b4f9b;
+
+}
+
+.uy7676a-card-olk7866s:hover
+.uy7676a-card-icon-olk7866s i{
+
+    color:#ffffff;
+
+}
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.uy7676a-card-title-olk7866s{
+
+    transition:.35s ease;
+
+}
+
+.uy7676a-card-olk7866s:hover
+.uy7676a-card-title-olk7866s{
+
+    color:#0d4aa9;
+
+}
+
+/*==========================================================
+NUMBER
+==========================================================*/
+
+.uy7676a-number-olk7866s{
+
+    transition:.35s ease;
+
+}
+
+.uy7676a-card-olk7866s:hover
+.uy7676a-number-olk7866s{
+
+    background:#0b63d1;
+
+    transform:scale(1.1);
+
+}
+
+/*==========================================================
+IMAGE
+==========================================================*/
+
+.uy7676a-image-grid-olk7866s{
+
+    overflow:hidden;
+
+}
+
+.uy7676a-image-grid-olk7866s img{
+
+    transition:
+    transform .45s ease,
+    filter .45s ease;
+
+}
+
+.uy7676a-image-grid-olk7866s img:hover{
+
+    transform:scale(1.06);
+
+    filter:brightness(1.05);
+
+}
+
+/*==========================================================
+FOOTER
+==========================================================*/
+
+.uy7676a-footer-olk7866s{
+
+    transition:.35s ease;
+
+}
+
+.uy7676a-card-olk7866s:hover
+.uy7676a-footer-olk7866s{
+
+    background:#edf4ff;
+
+    border-color:#bfd7ff;
+
+}
+
+/*==========================================================
+QUOTE
+==========================================================*/
+
+.uy7676a-footer-olk7866s p{
+
+    transition:.35s ease;
+
+}
+
+.uy7676a-card-olk7866s:hover
+.uy7676a-footer-olk7866s p{
+
+    color:#0b57b8;
+
+}
+
+/*==========================================================
+SHINE EFFECT
+==========================================================*/
+
+.uy7676a-card-olk7866s::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:40%;
+
+    height:100%;
+
+    background:linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.45),
+    transparent);
+
+    transition:1s;
+
+}
+
+.uy7676a-card-olk7866s:hover::after{
+
+    left:140%;
+
+}
+
+/*==========================================================
+ENTRANCE ANIMATION
+==========================================================*/
+
+.uy7676a-card-olk7866s{
+
+    animation:
+    uy7676aFadeInOlk7866s
+    .7s ease both;
+
+}
+
+@keyframes uy7676aFadeInOlk7866s{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+/*==========================================================
+TEXT SELECTION
+==========================================================*/
+
+#uy7676a-vision-grid-olk7866s ::selection{
+
+    background:#0d4aa9;
+
+    color:#ffffff;
+
+}
+
+/*==========================================================
+DESKTOP SPACING
+==========================================================*/
+
+@media(min-width:1400px){
+
+    .uy7676a-card-body-olk7866s{
+
+        min-height:460px;
+
+    }
+
+}
+
+/*==========================================================
+SMOOTH
+==========================================================*/
+
+.uy7676a-card-olk7866s,
+.uy7676a-card-title-olk7866s,
+.uy7676a-card-icon-olk7866s,
+.uy7676a-number-olk7866s,
+.uy7676a-footer-olk7866s,
+.uy7676a-image-grid-olk7866s img{
+
+    will-change:transform;
+
+}
+
+/*==========================================================
+END : uy7676a
+END : olk7866s
+==========================================================*/
+
+/*==========================================================
+START : qw9821
+DESKTOP SCSS
+END : xz7744
+==========================================================*/
+
+#qw9821-mission-cards-xz7744{
+
+    padding:35px 0;
+
+    background:#f8f8f8;
+
+}
+
+/*==========================================================
+ROW
+==========================================================*/
+
+#qw9821-mission-cards-xz7744 .row{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    align-items:stretch;
+
+}
+
+/*==========================================================
+COLUMN
+==========================================================*/
+
+#qw9821-mission-cards-xz7744 .col-xl{
+
+    flex:1;
+
+    min-width:180px;
+
+}
+
+/*==========================================================
+CARD
+==========================================================*/
+
+.qw9821-card-xz7744{
+
+    height:100%;
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    background:#ffffff;
+
+    border:1px solid #e8e8e8;
+
+    box-shadow:
+
+    0 8px 22px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+/*==========================================================
+IMAGE
+==========================================================*/
+
+.qw9821-image-wrapper-xz7744{
+
+    width:100%;
+
+    height:180px;
+
+    overflow:hidden;
+
+}
+
+.qw9821-image-xz7744{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+/*==========================================================
+CONTENT
+==========================================================*/
+
+.qw9821-content-xz7744{
+
+    padding:18px;
+
+    min-height:150px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    text-align:center;
+
+}
+
+/*==========================================================
+ICON
+==========================================================*/
+
+.qw9821-icon-xz7744{
+
+    margin-bottom:10px;
+
+}
+
+.qw9821-icon-xz7744 i{
+
+    font-size:28px;
+
+}
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.qw9821-title-xz7744{
+
+    margin:0;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    line-height:1.3;
+
+    font-family:Georgia,"Times New Roman",serif;
+
+}
+
+/*==========================================================
+SUB TITLE
+==========================================================*/
+
+.qw9821-subtitle-xz7744{
+
+    margin-top:10px;
+
+    margin-bottom:0;
+
+    font-size:17px;
+
+    line-height:1.55;
+
+}
+
+/*==========================================================
+VERSE
+==========================================================*/
+
+.qw9821-verse-xz7744{
+
+    margin-top:12px;
+
+    font-size:15px;
+
+    font-weight:700;
+
+}
+
+/*==========================================================
+BLUE THEME
+==========================================================*/
+
+.theme-blue{
+
+    background:#0d3b82;
+
+    color:#ffffff;
+
+}
+
+.theme-blue .qw9821-title-xz7744{
+
+    color:#f4d37d;
+
+}
+
+.theme-blue .qw9821-subtitle-xz7744{
+
+    color:#ffffff;
+
+}
+
+.theme-blue .qw9821-verse-xz7744{
+
+    color:#f6d36d;
+
+}
+
+.theme-blue .qw9821-icon-xz7744 i{
+
+    color:#f6d36d;
+
+}
+
+/*==========================================================
+WHITE THEME
+==========================================================*/
+
+.theme-white{
+
+    background:#ffffff;
+
+}
+
+.theme-white .qw9821-title-xz7744{
+
+    color:#8c6112;
+
+}
+
+.theme-white .qw9821-subtitle-xz7744{
+
+    color:#5b4b2f;
+
+}
+
+.theme-white .qw9821-icon-xz7744 i{
+
+    color:#b8860b;
+
+}
+
+/*==========================================================
+IMAGE ONLY CARD
+==========================================================*/
+
+.theme-image{
+
+    display:none;
+
+}
+
+/*==========================================================
+IMAGE CARD
+==========================================================*/
+
+.theme-image + .qw9821-image-wrapper-xz7744{
+
+    height:100%;
+
+}
+
+/*==========================================================
+LARGE DESKTOP
+==========================================================*/
+
+@media(min-width:1600px){
+
+    .qw9821-image-wrapper-xz7744{
+
+        height:210px;
+
+    }
+
+    .qw9821-title-xz7744{
+
+        font-size:28px;
+
+    }
+
+}
+
+/*==========================================================
+END
+==========================================================*/
+// New
+
+/*==========================================================
+START : qw9821
+MISSION STRIP
+END : xz7744
+==========================================================*/
+
+#qw9821-mission-strip-xz7744{
+
+    padding:12px 0;
+
+    background:#ffffff;
+
+}
+
+/*==========================================================
+ROW
+==========================================================*/
+
+.qw9821-strip-row-xz7744{
+
+    display:flex;
+
+    align-items:stretch;
+
+    gap:6px;
+
+    overflow-x:auto;
+
+    scrollbar-width:none;
+
+}
+
+.qw9821-strip-row-xz7744::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+/*==========================================================
+COMMON CARD
+==========================================================*/
+
+.qw9821-item-xz7744{
+
+    height:82px;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    flex-shrink:0;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.12);
+
+}
+
+/*==========================================================
+WIDTHS
+==========================================================*/
+
+.qw9821-item-blue-xz7744{
+
+    width:245px;
+
+}
+
+.qw9821-item-image-xz7744{
+
+    width:165px;
+
+}
+
+.qw9821-item-white-xz7744{
+
+    width:245px;
+
+}
+
+/*==========================================================
+IMAGE CARD
+==========================================================*/
+
+.qw9821-image-xz7744{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+/*==========================================================
+BLUE CARD
+==========================================================*/
+
+.qw9821-blue-card-xz7744{
+
+    width:100%;
+
+    height:100%;
+
+    background:#0d3b84;
+
+    color:#ffffff;
+
+     padding:8px 12px;   /* was 10px 14px */
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+.qw9821-blue-icon-xz7744{
+
+    color:#e6be5d;
+
+    margin-bottom:2px;
+
+}
+
+.qw9821-blue-icon-xz7744 i{
+
+    font-size:12px;
+
+}
+
+.qw9821-blue-card-xz7744 h5{
+
+    margin:0;
+
+    color:#f6d37a;
+
+    font-size:13px;
+
+    font-weight:700;
+
+line-height:1.15;
+
+    font-family:Georgia,"Times New Roman",serif;
+
+}
+
+.qw9821-blue-card-xz7744 p{
+
+    margin:4px 0 0;
+
+    font-size:13px;
+
+    color:#ffffff;
+
+    line-height:1.25;
+
+}
+
+.qw9821-blue-card-xz7744 small{
+
+    margin-top:4px;
+
+    color:#f7d57d;
+
+    font-size:11px;
+
+}
+
+/*==========================================================
+WHITE CARD
+==========================================================*/
+
+.qw9821-white-card-xz7744{
+
+    width:100%;
+
+    height:100%;
+
+    background:#fffdf8;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:8px;
+
+    text-align:center;
+
+}
+
+.qw9821-white-icon-xz7744{
+
+    color:#b88a17;
+
+    margin-bottom:4px;
+
+}
+
+.qw9821-white-icon-xz7744 i{
+
+    font-size:17px;
+
+}
+
+.qw9821-white-card-xz7744 h5{
+
+    margin:0;
+
+    color:#9c6d17;
+
+    font-size:18px;
+
+    font-family:Georgia,"Times New Roman",serif;
+
+    font-weight:700;
+
+    line-height:1.1;
+
+}
+
+.qw9821-white-card-xz7744 p{
+
+    margin:3px 0 0;
+
+    color:#a77820;
+
+    font-size:13px;
+
+    line-height:1.2;
+
+}
+
+/*==========================================================
+HOVER
+==========================================================*/
+
+.qw9821-item-xz7744{
+
+    transition:.3s ease;
+
+}
+
+.qw9821-item-xz7744:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 8px 18px rgba(0,0,0,.18);
+
+}
+
+.qw9821-image-xz7744{
+
+    transition:.35s ease;
+
+}
+
+.qw9821-item-image-xz7744:hover .qw9821-image-xz7744{
+
+    transform:scale(1.08);
+
+}
+
+/*==========================================================
+END
+==========================================================*/
+
+/*==========================================================
+START : RESPONSIVE
+START ID : qw9821
+END ID : xz7744
+==========================================================*/
+
+/*==========================================================
+LAPTOP
+==========================================================*/
+
+@media (max-width:1400px){
+
+    .qw9821-item-blue-xz7744{
+
+        width:220px;
+
+    }
+
+    .qw9821-item-white-xz7744{
+
+        width:220px;
+
+    }
+
+    .qw9821-item-image-xz7744{
+
+        width:150px;
+
+    }
+
+    .qw9821-item-xz7744{
+
+        height:78px;
+
+    }
+
+    .qw9821-blue-card-xz7744 h5,
+    .qw9821-white-card-xz7744 h5{
+
+        font-size:12px;
+
+    }
+
+    .qw9821-blue-card-xz7744 p,
+    .qw9821-white-card-xz7744 p{
+
+        font-size:12px;
+
+    }
+
+}
+
+/*==========================================================
+TABLET
+==========================================================*/
+
+@media (max-width:992px){
+
+    .qw9821-strip-row-xz7744{
+
+        display:grid;
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:14px;
+
+    }
+
+    .qw9821-item-xz7744{
+
+        width:100% !important;
+
+        height:120px;
+
+    }
+
+    .qw9821-blue-card-xz7744,
+    .qw9821-white-card-xz7744{
+
+        padding:18px;
+
+    }
+
+    .qw9821-blue-card-xz7744 h5,
+    .qw9821-white-card-xz7744 h5{
+
+        font-size:22px;
+
+    }
+
+    .qw9821-blue-card-xz7744 p,
+    .qw9821-white-card-xz7744 p{
+
+        font-size:15px;
+
+    }
+
+    .qw9821-image-xz7744{
+
+        width:100%;
+
+        height:100%;
+
+        object-fit:cover;
+
+    }
+
+}
+
+/*==========================================================
+MOBILE
+==========================================================*/
+
+@media (max-width:768px){
+
+    #qw9821-mission-strip-xz7744{
+
+        padding:18px 12px;
+
+    }
+
+    .qw9821-strip-row-xz7744{
+
+        grid-template-columns:1fr;
+
+        gap:16px;
+
+    }
+
+    .qw9821-item-xz7744{
+
+        height:160px;
+
+        border-radius:14px;
+
+    }
+
+    .qw9821-blue-card-xz7744{
+
+        align-items:center;
+
+        text-align:center;
+
+    }
+
+    .qw9821-blue-card-xz7744 h5{
+
+        font-size:26px;
+
+    }
+
+    .qw9821-blue-card-xz7744 p{
+
+        font-size:17px;
+
+    }
+
+    .qw9821-blue-card-xz7744 small{
+
+        font-size:14px;
+
+    }
+
+    .qw9821-white-card-xz7744 h5{
+
+        font-size:24px;
+
+    }
+
+    .qw9821-white-card-xz7744 p{
+
+        font-size:16px;
+
+    }
+
+}
+
+/*==========================================================
+SMALL MOBILE
+==========================================================*/
+
+@media (max-width:480px){
+
+    .qw9821-item-xz7744{
+
+        height:140px;
+
+    }
+
+    .Neighborhood-Bb-Events-Banner-Titlex34 {
+        font-size: 25px;
+    }
+    .qw9821-blue-card-xz7744{
+
+        padding:16px;
+
+    }
+
+    .qw9821-blue-card-xz7744 h5{
+
+        font-size:22px;
+
+    }
+
+    .qw9821-blue-card-xz7744 p{
+
+        font-size:15px;
+
+    }
+
+    .qw9821-white-card-xz7744 h5{
+
+        font-size:20px;
+
+    }
+
+    .qw9821-white-card-xz7744 p{
+
+        font-size:14px;
+
+    }
+
+}
+
+/*==========================================================
+END : qw9821
+END : xz7744
+==========================================================*/
+
+/*==========================================================
+START : PREMIUM EFFECTS
+START ID : qw9821
+END ID : xz7744
+==========================================================*/
+
+/*==========================================================
+CARD
+==========================================================*/
+
+.qw9821-item-xz7744{
+
+    position:relative;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    transition:
+    transform .35s ease,
+    box-shadow .35s ease;
+
+}
+
+.qw9821-item-xz7744:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 18px 40px rgba(0,0,0,.18);
+
+}
+
+/*==========================================================
+TOP BORDER
+==========================================================*/
+
+.qw9821-item-xz7744::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:4px;
+
+    background:linear-gradient(
+        90deg,
+        #E2B65D,
+        #0D4C97);
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:.35s;
+
+    z-index:5;
+
+}
+
+.qw9821-item-xz7744:hover::before{
+
+    transform:scaleX(1);
+
+}
+
+/*==========================================================
+SHINE
+==========================================================*/
+
+.qw9821-item-xz7744::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:35%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.45),
+
+        transparent
+
+    );
+
+    transition:1s;
+
+}
+
+.qw9821-item-xz7744:hover::after{
+
+    left:140%;
+
+}
+
+/*==========================================================
+IMAGE
+==========================================================*/
+
+.qw9821-image-wrapper-xz7744{
+
+    overflow:hidden;
+
+}
+
+.qw9821-image-xz7744{
+
+    transition:
+    transform .45s ease,
+    filter .45s ease;
+
+}
+
+.qw9821-item-image-xz7744:hover
+.qw9821-image-xz7744{
+
+    transform:scale(1.08);
+
+    filter:brightness(1.06);
+
+}
+
+/*==========================================================
+ICON
+==========================================================*/
+
+.qw9821-blue-icon-xz7744,
+.qw9821-white-icon-xz7744{
+
+    transition:.35s;
+
+}
+
+.qw9821-item-xz7744:hover
+.qw9821-blue-icon-xz7744,
+
+.qw9821-item-xz7744:hover
+.qw9821-white-icon-xz7744{
+
+    transform:rotate(-10deg)
+              scale(1.15);
+
+}
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.qw9821-blue-card-xz7744 h5,
+.qw9821-white-card-xz7744 h5{
+
+    transition:.35s;
+
+}
+
+.qw9821-item-xz7744:hover
+.qw9821-blue-card-xz7744 h5{
+
+    color:#FFE39A;
+
+}
+
+.qw9821-item-xz7744:hover
+.qw9821-white-card-xz7744 h5{
+
+    color:#C98B12;
+
+}
+
+/*==========================================================
+PARAGRAPH
+==========================================================*/
+
+.qw9821-blue-card-xz7744 p,
+.qw9821-white-card-xz7744 p{
+
+    transition:.35s;
+
+}
+
+/*==========================================================
+ENTRANCE
+==========================================================*/
+
+.qw9821-item-xz7744{
+
+    animation:
+    qw9821FadeInxz7744
+    .7s ease both;
+
+}
+
+@keyframes qw9821FadeInxz7744{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+/*==========================================================
+TEXT SELECTION
+==========================================================*/
+
+#qw9821-mission-strip-xz7744 ::selection{
+
+    background:#0D4C97;
+
+    color:#ffffff;
+
+}
+
+/*==========================================================
+SMOOTH
+==========================================================*/
+
+.qw9821-item-xz7744,
+.qw9821-image-xz7744,
+.qw9821-blue-icon-xz7744,
+.qw9821-white-icon-xz7744{
+
+    will-change:transform;
+
+}
+
+/*==========================================================
+ACCESSIBILITY
+==========================================================*/
+
+@media(prefers-reduced-motion:reduce){
+
+    .qw9821-item-xz7744,
+
+    .qw9821-image-xz7744{
+
+        animation:none;
+
+        transition:none;
+
+    }
+
+}
+
+/*==========================================================
+END
+==========================================================*/
+
+.Neighborhood-Bb-Events-Banner-Titlex34 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width:480px){
+
+    
+
+    .Neighborhood-Bb-Events-Banner-Titlex34 {
+        font-size: 25px;
+    }
+
+}
