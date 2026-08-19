@@ -126,7 +126,7 @@ END ID : vg822982
 
     <div class="request-wrapper">
 
-        <button class="request-btn">
+        <button class="request-btn"  (click)="openPrayerRequestModalXrp9284()" >
 
             <i class="bi bi-heart-pulse-fill"></i>
 
@@ -149,6 +149,9 @@ END ID : vg822982
         </button>
 
     </div>
+
+
+
 
     <!-- ============================================= -->
     <!-- INFO ALERT -->
@@ -251,7 +254,7 @@ END ID : vg822982
             <input
                 type="text"
                 placeholder="Search prayer requests..."
-                [(ngModel)]="searchText">
+                [(ngModel)]="searchText" (ngModelChange)="onSearchChange()">
 
         </div>
 
@@ -468,20 +471,123 @@ END ID : vg822982
 <!-- ========================================================= -->
 <!-- MY PRAYERS -->
 <!-- ========================================================= -->
-
 @if(activeTab==2){
+
+<!--==========================================-->
+<!-- SEARCH -->
+<!--==========================================-->
+
+<div class="search-toolbar">
+
+    <div class="search-box">
+
+        <i class="bi bi-search"></i>
+
+        <input
+        type="text"
+        placeholder="Search my prayers..."
+        [(ngModel)]="searchText" (ngModelChange)="onSearchChange()">
+
+    </div>
+
+    <button
+    class="refresh-btn"
+    (click)="refreshPrayerList()">
+
+        <i class="bi bi-arrow-clockwise"></i>
+
+    </button>
+
+</div>
+
+
+
+
+
+<!--==========================================-->
+<!-- FILTER -->
+<!--==========================================-->
+
+<div class="filter-list">
+
+    @for(item of filterList; track item){
+
+    <button
+
+    class="filter-btn"
+
+    [class.active]="selectedFilter==item"
+
+    (click)="changeFilter(item)">
+
+        {{item}}
+
+    </button>
+
+    }
+
+</div>
+
+
+
+
+
+<!--==========================================-->
+<!-- LOADING -->
+<!--==========================================-->
+
+@if(isLoading){
+
+<div class="loading-box">
+
+    <div class="loading-card"></div>
+
+    <div class="loading-card"></div>
+
+    <div class="loading-card"></div>
+
+</div>
+
+}
+
+@else{
+
+<!--==========================================-->
+<!-- RESULTS -->
+<!--==========================================-->
+
+<div class="results">
+
+    {{filteredMyPrayerOffered.length}}
+
+    Prayer Records
+
+</div>
+
+
+
+
+
+<!--==========================================-->
+<!-- LIST -->
+<!--==========================================-->
 
 <div class="prayer-list">
 
-    @for(request of myPrayerOffered; track request.id){
+    @for(request of filteredMyPrayerOffered;
+    track request.id){
 
     <div class="prayer-card">
 
+        <!-- LEFT -->
+
         <div class="card-left">
 
-            <div class="avatar"
+            <div
 
-                [style.background]="request.avatarColor">
+            class="avatar"
+
+            [style.background]="request.avatarColor">
 
                 {{request.initials}}
 
@@ -513,6 +619,14 @@ END ID : vg822982
 
                     <span>
 
+                        {{request.relation}}
+
+                    </span>
+
+                    <span>•</span>
+
+                    <span>
+
                         {{request.date}}
 
                     </span>
@@ -522,6 +636,12 @@ END ID : vg822982
             </div>
 
         </div>
+
+
+
+
+
+        <!-- CENTER -->
 
         <div class="card-center">
 
@@ -533,11 +653,16 @@ END ID : vg822982
 
         </div>
 
+
+
+
+
+        <!-- RIGHT -->
+
         <div class="card-right">
 
             <button
-
-                class="completed-btn">
+            class="completed-btn">
 
                 <i class="bi bi-check-circle-fill"></i>
 
@@ -553,8 +678,38 @@ END ID : vg822982
 
 </div>
 
+
+
+
+
+<!--==========================================-->
+<!-- EMPTY -->
+<!--==========================================-->
+
+@if(filteredMyPrayerOffered.length==0){
+
+<div class="empty-state">
+
+    <i class="bi bi-heart"></i>
+
+    <h3>
+
+        No Prayer Records Found
+
+    </h3>
+
+    <p>
+
+        Try another keyword or filter.
+
+    </p>
+
+</div>
+
 }
 
+}
+}
            
 
         </div>
@@ -569,4 +724,289 @@ END ID : vg822982
 
 </div>
 
+<div style="margin-bottom: 60px;"></div>
 
+<app-footer></app-footer>
+
+
+
+
+<!--=========================================================
+PRAYER REQUEST MODAL
+==========================================================-->
+
+ 
+
+<div
+class="modal fade"
+id="xrp9284PrayerModal"
+tabindex="-1"
+aria-hidden="true">
+
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+
+        <div class="modal-content xrp9284-modal-content">
+
+            <!--==========================================
+            HEADER
+            ===========================================-->
+
+            <div class="modal-header xrp9284-modal-header">
+
+                <div>
+
+                    <h2>
+
+                        Prayer Request
+
+                    </h2>
+
+                    <p>
+
+                        We'd be honored to pray with you.
+
+                    </p>
+
+                </div>
+
+                <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal">
+
+                </button>
+
+            </div>
+
+            <!--==========================================
+            BODY
+            ===========================================-->
+
+            <div class="modal-body">
+
+                <form #prayerForm="ngForm">
+
+                    <!--==================================
+                    REQUESTED BY
+                    ==================================-->
+
+                    <div class="mb-4">
+
+                        <label>
+
+                            Requested By *
+
+                        </label>
+
+                        <input
+                        type="text"
+                        class="form-control"
+                        name="requestedBy"
+                        [(ngModel)]="prayerRequestFormXrp9284.requestedBy"
+                        placeholder="Your Name"
+                        required>
+
+                    </div>
+
+                    <!--==================================
+                    EMAIL
+                    ==================================-->
+
+                    <div class="mb-4">
+
+                        <label>
+
+                            Email Address
+
+                        </label>
+
+                        <input
+                        type="email"
+                        class="form-control"
+                        name="email"
+                        [(ngModel)]="prayerRequestFormXrp9284.email"
+                        placeholder="example@email.com">
+
+                    </div>
+
+                    <!--==================================
+                    PRAYER TITLE
+                    ==================================-->
+
+                    <div class="mb-4">
+
+                        <label>
+
+                            Prayer Title *
+
+                        </label>
+
+                        <input
+                        type="text"
+                        class="form-control"
+                        name="title"
+                        [(ngModel)]="prayerRequestFormXrp9284.title"
+                        placeholder="Healing and Strength"
+                        required>
+
+                    </div>
+
+                    <!--==================================
+                    CATEGORY
+                    ==================================-->
+
+                    <div class="mb-4">
+
+                        <label>
+
+                            Prayer Category
+
+                        </label>
+
+                        <select
+                        class="form-select"
+                        name="category"
+                        [(ngModel)]="prayerRequestFormXrp9284.category">
+
+                            @for(item of prayerCategoriesXrp9284; track item.id){
+
+                            <option
+                            [value]="item.name">
+
+                                {{item.name}}
+
+                            </option>
+
+                            }
+
+                        </select>
+
+                    </div>
+
+                    <!--==================================
+                    RELATION
+                    ==================================-->
+
+                    <div class="mb-4">
+
+                        <label>
+
+                            Prayer For
+
+                        </label>
+
+                        <select
+                        class="form-select"
+                        name="relation"
+                        [(ngModel)]="prayerRequestFormXrp9284.relation">
+
+                            @for(item of prayerForListXrp9284; track item.id){
+
+                            <option
+                            [value]="item.name">
+
+                                {{item.name}}
+
+                            </option>
+
+                            }
+
+                        </select>
+
+                    </div>
+
+                    <!--==================================
+                    DESCRIPTION
+                    ==================================-->
+
+                    <div class="mb-4">
+
+                        <label>
+
+                            Prayer Description *
+
+                        </label>
+
+                        <textarea
+                        rows="5"
+                        class="form-control"
+                        name="description"
+                        [(ngModel)]="prayerRequestFormXrp9284.description"
+                        placeholder="Please share your prayer request..."
+                        required>
+
+                        </textarea>
+
+                    </div>
+
+                    <!--==================================
+                    PRIVATE
+                    ==================================-->
+
+                    <div class="form-check mb-4">
+
+                        <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="xrp9284PrivatePrayer"
+                        name="privatePrayer"
+                        [(ngModel)]="prayerRequestFormXrp9284.privatePrayer">
+
+                        <label
+                        class="form-check-label"
+                        for="xrp9284PrivatePrayer">
+
+                            Keep this prayer request private
+
+                        </label>
+
+                    </div>
+
+                    <!--==================================
+                    BUTTONS
+                    ==================================-->
+
+                    <div class="xrp9284-modal-footer">
+
+                        <button
+                        type="button"
+                        class="btn btn-light"
+                        data-bs-dismiss="modal">
+
+                            Cancel
+
+                        </button>
+
+                        <button
+                        type="button"
+                        class="btn xrp9284-submit-btn"
+                        (click)="submitPrayerRequestXrp9284()">
+
+                            <i class="bi bi-send-fill"></i>
+
+                            Submit Prayer Request
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div
+*ngIf="showToast2"
+class="toast-box">
+
+<i class="bi bi-check-circle-fill"></i>
+
+🙏 Prayer request submitted successfully.
+We will keep you in our prayers.
+
+</div>

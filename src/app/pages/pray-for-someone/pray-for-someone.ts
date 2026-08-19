@@ -4,6 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { OnInit } from '@angular/core';
 import { timer, Subscription } from 'rxjs';
 import { Header } from '../../components/header/header';
+import { ChangeDetectorRef } from '@angular/core';
+import { Footer } from '../../components/footer/footer';
+declare var bootstrap: any;
 
 
 interface PrayerRequest {
@@ -38,7 +41,8 @@ interface PrayerRequest {
   imports:[
     CommonModule,
     FormsModule,
-    Header
+    Header,
+    Footer
   ],
   templateUrl:'./pray-for-someone.html',
   styleUrl:'./pray-for-someone.scss'
@@ -48,9 +52,14 @@ export class PrayForSomeone implements OnInit {
 
    async ngOnInit() {
 
-  // await this.refreshPrayerList();
+  await this.refreshPrayerList();
 
 }
+
+
+constructor(
+  private cdr: ChangeDetectorRef
+) {}
 
   //----------------------------------------
   // Active Tab
@@ -352,30 +361,74 @@ filterList: string[] = [
 // SEARCH
 //==================================================
 
-get filteredPrayerRequests() {
+/*==================================================
+SEARCH + FILTER
+==================================================*/
+
+get filteredPrayerRequests(): PrayerRequest[] {
 
   let data = [...this.prayerRequests];
 
-  // Search
+  /*--------------------------------------
+  SEARCH
+  --------------------------------------*/
 
   if (this.searchText.trim()) {
 
+    const search = this.searchText.toLowerCase();
+
     data = data.filter(item =>
 
-      item.title.toLowerCase().includes(this.searchText.toLowerCase()) ||
+      item.title.toLowerCase().includes(search) ||
 
-      item.description.toLowerCase().includes(this.searchText.toLowerCase()) ||
+      item.description.toLowerCase().includes(search) ||
 
-      item.requestedBy.toLowerCase().includes(this.searchText.toLowerCase())
+      item.requestedBy.toLowerCase().includes(search)
 
     );
+
+  }
+
+  /*--------------------------------------
+  FILTER
+  --------------------------------------*/
+
+  if (this.selectedFilter !== 'All') {
+
+    data = data.filter(item => {
+
+      switch (this.selectedFilter) {
+
+        case 'Healing':
+          return item.title.toLowerCase().includes('healing');
+
+        case 'Family':
+          return item.relation === 'Family';
+
+        case 'Financial':
+          return item.title.toLowerCase().includes('financial') ||
+                 item.description.toLowerCase().includes('financial');
+
+        case 'Peace':
+          return item.title.toLowerCase().includes('peace') ||
+                 item.description.toLowerCase().includes('peace');
+
+        case 'Guidance':
+          return item.title.toLowerCase().includes('guidance') ||
+                 item.description.toLowerCase().includes('guidance');
+
+        default:
+          return true;
+
+      }
+
+    });
 
   }
 
   return data;
 
 }
-
 //==================================================
 
 changeFilter(filter: string) {
@@ -386,17 +439,21 @@ changeFilter(filter: string) {
 
 //==================================================
 
+
 async refreshPrayerList() {
 
-  if (this.isLoading) {
-    return;
-  }
+  if (this.isLoading) return;
 
   this.isLoading = true;
 
   await new Promise(resolve => setTimeout(resolve, 2000));
 
   this.isLoading = false;
+
+
+  this.cdr.markForCheck();
+
+ 
 
 }
 
@@ -405,12 +462,15 @@ async refreshPrayerList() {
 private toastSubscription?: Subscription;
 
 showThankYouToast() {
+
+      this.cdr.markForCheck();
   this.showToast = true;
 
   this.toastSubscription?.unsubscribe();
 
   this.toastSubscription = timer(3000).subscribe(() => {
     this.showToast = false;
+        this.cdr.markForCheck();
     console.log("lodder flase");
     
   });
@@ -462,5 +522,336 @@ showThankYouToast() {
         "James 5:16"
 
     }
+
+
+
+/*==========================================================
+PRAYER CATEGORY
+==========================================================*/
+
+prayerCategoriesXrp9284 = [
+
+{ id:1, name:'Healing' },
+
+{ id:2, name:'Family' },
+
+{ id:3, name:'Faith & Spiritual Growth' },
+
+{ id:4, name:'Financial Needs' },
+
+{ id:5, name:'Thanksgiving' },
+
+{ id:6, name:'Guidance & Wisdom' },
+
+{ id:7, name:'Salvation' },
+
+{ id:8, name:'Church Ministry' },
+
+{ id:9, name:'Employment' },
+
+{ id:10, name:'Other' }
+
+];
+
+/*==========================================================
+PRAYER FOR
+==========================================================*/
+
+prayerForListXrp9284 = [
+
+{ id:1, name:'Myself' },
+
+{ id:2, name:'My Family' },
+
+{ id:3, name:'Friend' },
+
+{ id:4, name:'Parents' },
+
+{ id:5, name:'Child' },
+
+{ id:6, name:'Church' },
+
+{ id:7, name:'Community' },
+
+{ id:8, name:'Someone Else' }
+
+];
+
+/*==========================================================
+FORM MODEL
+==========================================================*/
+/*==========================================================
+FORM MODEL
+==========================================================*/
+
+prayerRequestFormXrp9284 = {
+
+title:'',
+
+description:'',
+
+requestedBy:'',
+
+relation:'Self',
+
+email:'',
+
+category:'Healing',
+
+privatePrayer:false
+
+};
+/*==========================================================
+SUBMITTED REQUESTS
+(JSON STORAGE)
+==========================================================*/
+
+submittedPrayerRequestsXrp9284:any[] = [];
+
+/*==========================================================
+TOAST
+==========================================================*/
+
+showToast2 = false;
+
+/*==========================================================
+OPEN MODAL
+==========================================================*/
+
+openPrayerRequestModalXrp9284(){
+
+const modal = new bootstrap.Modal(
+
+document.getElementById('xrp9284PrayerModal')
+
+);
+
+modal.show();
+
+}
+
+/*==========================================================
+SUBMIT
+==========================================================*/
+
+submitPrayerRequestXrp9284(){
+
+if(
+
+!this.prayerRequestFormXrp9284.title ||
+
+!this.prayerRequestFormXrp9284.description ||
+
+!this.prayerRequestFormXrp9284.requestedBy
+
+){
+
+alert("Please complete all required fields.");
+
+return;
+
+}
+
+const today = new Date();
+
+const prayer = {
+
+id: Date.now(),
+
+initials: this.prayerRequestFormXrp9284.requestedBy
+
+.split(' ')
+
+.map((x:any)=>x[0])
+
+.join('')
+
+.toUpperCase(),
+
+avatarColor:'#E7F0FF',
+
+title:this.prayerRequestFormXrp9284.title,
+
+description:this.prayerRequestFormXrp9284.description,
+
+requestedBy:this.prayerRequestFormXrp9284.requestedBy,
+
+relation:this.prayerRequestFormXrp9284.relation,
+
+date:today.toLocaleDateString('en-US',{
+
+month:'short',
+
+day:'numeric',
+
+year:'numeric'
+
+}),
+
+prayerCount:0,
+
+expires:new Date(
+
+today.getTime()+14*24*60*60*1000
+
+).toLocaleDateString('en-US',{
+
+month:'short',
+
+day:'numeric'
+
+}),
+
+prayed:false
+
+};
+
+/*--------------------------------
+ADD TO PRAYER LIST
+--------------------------------*/
+
+this.prayerRequests.unshift(prayer);
+
+/*--------------------------------
+SAVE HISTORY
+--------------------------------*/
+
+this.submittedPrayerRequestsXrp9284.unshift(prayer);
+
+/*--------------------------------
+CLOSE MODAL
+--------------------------------*/
+
+bootstrap.Modal
+.getInstance(
+document.getElementById("xrp9284PrayerModal")
+)
+.hide();
+
+/*--------------------------------
+SHOW TOAST
+--------------------------------*/
+
+this.showToast2 = true;
+
+setTimeout(()=>{
+
+this.showToast2=false;
+
+},3000);
+
+/*--------------------------------
+RESET FORM
+--------------------------------*/
+
+this.prayerRequestFormXrp9284={
+
+title:'',
+
+description:'',
+
+requestedBy:'',
+
+relation:'Self',
+
+email:'',
+
+category:'Healing',
+
+privatePrayer:false
+
+};
+
+}
+
+/*==========================================================
+VIEW ALL REQUESTS
+==========================================================*/
+
+viewPrayerRequestsXrp9284(){
+
+console.log(this.submittedPrayerRequestsXrp9284);
+
+}
+
+
+get filteredMyPrayerOffered(): PrayerRequest[] {
+
+  let data = [...this.myPrayerOffered];
+
+  if (this.searchText.trim()) {
+
+    const search = this.searchText.toLowerCase();
+
+    data = data.filter(item =>
+
+      item.title.toLowerCase().includes(search) ||
+
+      item.description.toLowerCase().includes(search) ||
+
+      item.requestedBy.toLowerCase().includes(search)
+
+    );
+
+  }
+
+  if (this.selectedFilter !== 'All') {
+
+    data = data.filter(item => {
+
+      switch (this.selectedFilter) {
+
+        case 'Healing':
+          return item.title.toLowerCase().includes('healing');
+
+        case 'Family':
+          return item.relation === 'Family';
+
+        case 'Financial':
+          return item.title.toLowerCase().includes('financial') ||
+                 item.description.toLowerCase().includes('financial');
+
+        case 'Peace':
+          return item.title.toLowerCase().includes('peace') ||
+                 item.description.toLowerCase().includes('peace');
+
+        case 'Guidance':
+          return item.title.toLowerCase().includes('guidance') ||
+                 item.description.toLowerCase().includes('guidance');
+
+        default:
+          return true;
+
+      }
+
+    });
+
+  }
+
+  return data;
+
+}
+
+
+
+
+private searchTimeout: any;
+
+onSearchChange() {
+
+  this.isLoading = true;
+
+  clearTimeout(this.searchTimeout);
+
+  this.searchTimeout = setTimeout(() => {
+
+    // The getter will automatically use searchText
+    this.isLoading = false;
+
+    this.cdr.markForCheck();
+
+  }, 500);
+
+}
 
 }
