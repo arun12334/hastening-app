@@ -550,7 +550,7 @@ changeTab(index:number){
 
       subtitle:'In the Wilderness',
 
-      image:'https://picsum.photos/300/220?random=101'
+    image:"assets/sharing/temples/temples-1.png",
 
     },
 
@@ -562,7 +562,7 @@ changeTab(index:number){
 
       subtitle:'Temple',
 
-      image:'https://picsum.photos/300/220?random=102'
+   image:"assets/sharing/temples/temples-2.png",
 
     },
 
@@ -574,8 +574,7 @@ changeTab(index:number){
 
       subtitle:'Temple',
 
-      image:'https://picsum.photos/300/220?random=103'
-
+image:"assets/sharing/temples/temples-3.png",
     },
 
     {
@@ -586,7 +585,7 @@ changeTab(index:number){
 
       subtitle:'Temple',
 
-      image:'https://picsum.photos/300/220?random=104'
+   image:"assets/sharing/temples/temples-4.png",
 
     },
 
@@ -597,8 +596,7 @@ changeTab(index:number){
       title:'Bountiful',
 
       subtitle:'Temple',
-
-      image:'https://picsum.photos/300/220?random=105'
+image:"assets/sharing/temples/temples-5.png",
 
     },
 
@@ -610,7 +608,7 @@ changeTab(index:number){
 
       subtitle:'Temple',
 
-      image:'https://picsum.photos/300/220?random=106'
+   image:"assets/sharing/temples/temples-6.png",
 
     },
 
@@ -622,7 +620,7 @@ changeTab(index:number){
 
       subtitle:'Temple',
 
-      image:'https://picsum.photos/300/220?random=107'
+ image:"assets/sharing/temples/temples-7.png",
 
     },
 
@@ -634,7 +632,7 @@ changeTab(index:number){
 
       subtitle:'Temple',
 
-      image:'https://picsum.photos/300/220?random=108'
+image:"assets/sharing/temples/temples-8.png",
 
     },
 
@@ -646,7 +644,7 @@ changeTab(index:number){
 
       subtitle:'Temple',
 
-      image:'https://picsum.photos/300/220?random=109'
+image:"assets/sharing/temples/temples-9.png",
 
     },
 
@@ -658,7 +656,7 @@ changeTab(index:number){
 
       subtitle:'Temple',
 
-      image:'https://picsum.photos/300/220?random=110'
+image:"assets/sharing/temples/temples-10.png",
 
     }
 
@@ -966,202 +964,8 @@ scriptureFooterX557821Y771255 = {
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-/*==========================================================
-SECTION HEADER
-xwgw6327y37
-==========================================================*/
-
-templeSectionHeaderXwgw6327y37Tvdh72y82ydswjhbs = {
-
-  title: 'Past: Temples Through the Ages',
-
-  subtitle:
-  'Discover temples throughout history and how God has blessed His people through sacred places of worship.',
-
-  button: 'Explore Temple History',
-
-  icon: 'bi bi-bank'
-
-};
-
-/*==========================================================
-TEMPLE CARDS
-==========================================================*/
-
-templeHistoryCardsXwgw6327y37Tvdh72y82ydswjhbs = [
-
-{
-
-id:1,
-
-number:'1',
-
-title:"Israel's Tabernacle",
-
-location:'Wilderness',
-
-description:
-'A portable sanctuary where God dwelt among His people during their journey.',
-
-image:'https://picsum.photos/500/350?random=801'
-
-},
-
-{
-
-id:2,
-
-number:'2',
-
-title:"Solomon's Temple",
-
-location:'Jerusalem',
-
-description:
-'Built by King Solomon as a magnificent house dedicated to the Lord.',
-
-image:'https://picsum.photos/500/350?random=802'
-
-},
-
-{
-
-id:3,
-
-number:'3',
-
-title:"Nephi's Temple",
-
-location:'Promised Land',
-
-description:
-'Constructed by the Nephites according to the pattern shown by the Lord.',
-
-image:'https://picsum.photos/500/350?random=803'
-
-},
-
-{
-
-id:4,
-
-number:'4',
-
-title:"King Benjamin's Temple",
-
-location:'Zarahemla',
-
-description:
-'Where King Benjamin gathered the people to teach the word of God.',
-
-image:'https://picsum.photos/500/350?random=804'
-
-},
-
-{
-
-id:5,
-
-number:'5',
-
-title:'Bountiful Temple',
-
-location:'Bountiful',
-
-description:
-'Jesus Christ appeared to His people following His resurrection.',
-
-image:'https://picsum.photos/500/350?random=805'
-
-},
-
-{
-
-id:6,
-
-number:'6',
-
-title:"Herod's Temple",
-
-location:'Jerusalem',
-
-description:
-'Expanded and restored during the reign of Herod the Great.',
-
-image:'https://picsum.photos/500/350?random=806'
-
-},
-
-{
-
-id:7,
-
-number:'7',
-
-title:'Kirtland Temple',
-
-location:'Ohio',
-
-description:
-'The first temple of this dispensation dedicated in 1836.',
-
-image:'https://picsum.photos/500/350?random=807'
-
-},
-
-{
-
-id:8,
-
-number:'8',
-
-title:'Nauvoo Temple',
-
-location:'Illinois',
-
-description:
-'Built by the Saints in Nauvoo as a sacred house of worship.',
-
-image:'https://picsum.photos/500/350?random=808'
-
-},
-
-{
-
-id:9,
-
-number:'9',
-
-title:'Salt Lake Temple',
-
-location:'Utah',
-
-description:
-'A symbol of faith completed after years of sacrifice and devotion.',
-
-image:'https://picsum.photos/500/350?random=809'
-
-},
-
-{
-
-id:10,
-
-number:'10',
-
-title:'Kansas City Temple',
-
-location:'Missouri',
-
-description:
-'A modern temple serving members with sacred ordinances.',
-
-image:'https://picsum.photos/500/350?random=810'
-
-}
-
-];
-
+ 
+ 
 /*==========================================================
 FEATURE STATISTICS
 ==========================================================*/
@@ -1829,6 +1633,136 @@ SHARE BUTTON
 shareYourTestimonyXst9248Vh6382():void{
 
 console.log('Share Your Testimony');
+
+}
+
+
+// temple tab
+
+
+/*==========================================================
+TEMPLE HERITAGE
+==========================================================*/
+
+templeHeritageCardsXth6284 = [
+
+{
+id:1,
+title:"Israel's Tabernacle",
+location:"Wilderness",
+image:"assets/sharing/temples/temples-1.png",
+description:"The portable sanctuary where God dwelt among Israel during their wilderness journey.",
+scripture:"Exodus 25:8"
+},
+
+{
+id:2,
+title:"Solomon's Temple",
+location:"Jerusalem",
+image:"assets/sharing/temples/temples-2.png",
+description:"Built by King Solomon as a magnificent temple dedicated to the Lord.",
+scripture:"1 Kings 6:1"
+},
+
+{
+id:3,
+title:"Nephi's Temple",
+location:"Promised Land",
+image:"assets/sharing/temples/temples-3.png",
+description:"Constructed after the pattern of Solomon's Temple by the Nephites.",
+scripture:"2 Nephi 5:16"
+},
+
+{
+id:4,
+title:"King Benjamin's Temple",
+location:"Zarahemla",
+image:"assets/sharing/temples/temples-4.png",
+description:"King Benjamin taught his people from the temple with power and faith.",
+scripture:"Mosiah 2:1"
+},
+
+{
+id:5,
+title:"Bountiful Temple",
+location:"Bountiful",
+image:"assets/sharing/temples/temples-5.png",
+description:"The resurrected Jesus Christ appeared to the Nephites at this temple.",
+scripture:"3 Nephi 11:1"
+},
+
+{
+id:6,
+title:"Herod's Temple",
+location:"Jerusalem",
+image:"assets/sharing/temples/temples-6.png",
+description:"The temple where Jesus taught, healed, and cleansed the courts.",
+scripture:"John 2:16"
+},
+
+{
+id:7,
+title:"Kirtland Temple",
+location:"Ohio",
+image:"assets/sharing/temples/temples-7.png",
+description:"The first temple of the Restoration where heavenly visions were received.",
+scripture:"Doctrine & Covenants 110"
+},
+
+{
+id:8,
+title:"Nauvoo Temple",
+location:"Illinois",
+image:"assets/sharing/temples/temples-8.png",
+description:"Built by faithful Saints as a sacred place of worship and ordinances.",
+scripture:"Doctrine & Covenants 124"
+},
+
+{
+id:9,
+title:"Salt Lake Temple",
+location:"Utah",
+image:"assets/sharing/temples/temples-9.png",
+description:"A worldwide symbol of faith, sacrifice, and devotion to Jesus Christ.",
+scripture:"Psalm 27:4"
+},
+
+{
+id:10,
+title:"Kansas City Temple",
+location:"Missouri",
+image:"assets/sharing/temples/temples-10.png",
+description:"A modern house of the Lord dedicated to strengthening families.",
+scripture:"Isaiah 2:2"
+}
+ 
+];
+
+
+/*==========================================================
+OPEN TEMPLE
+==========================================================*/
+
+openTempleHeritageXth6284(card:any):void{
+
+    console.log(card);
+
+    // Future
+    // this.router.navigate(['/temple-heritage', card.id]);
+
+}
+
+
+/*==========================================================
+EXPLORE ALL TEMPLES
+==========================================================*/
+
+exploreTempleHeritageXth6284():void{
+
+    console.log('Explore Temple Heritage');
+
+    // Future
+    // this.router.navigate(['/temple-heritage']);
 
 }
 }

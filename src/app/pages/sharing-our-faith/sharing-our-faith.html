@@ -132,6 +132,49 @@ X774551-Y886331
 
 <section class="Sharing-Our-Faith-Tab-One-X774551-Y886331">
 
+         <!--==========================================
+                HEADER
+                ===========================================-->
+
+                <div
+                class="xwrp8742-daily-worship-header-jd7284">
+
+                    <div
+                    class="xwrp8742-daily-worship-title-jd7284">
+
+                        <div
+                        class="xwrp8742-daily-worship-line-jd7284">
+
+                        </div>
+
+                        <i
+                        class=" bi bi-person-badge-fill">
+
+                        </i>
+
+                        <h2>
+
+                            Messages from Church Prophets
+
+                        </h2>
+
+                        <div
+                        class="xwrp8742-daily-worship-line-jd7284">
+
+                        </div>
+
+                    </div>
+
+                    <p>
+
+                        Begin every day with the love of Jesus Christ through
+                        scripture, prayer, worship, and encouragement.
+
+                    </p>
+
+                </div>
+
+
     <div class="container-fluid">
 
         <div class="row g-4">
@@ -1470,9 +1513,12 @@ class="xkdm8237-message-disciples-section-hs9283">
 TEMPLE THROUGH THE AGES
 xwgw6327y37
 ===========================================================-->
+<!--=========================================================
+TEMPLE HERITAGE
+==========================================================-->
 
 <section
-class="xwgw6327y37-Temple-Section-tvdh72y82ydswjhbs">
+class="xth6284-temple-section">
 
     <div class="container-fluid">
 
@@ -1485,30 +1531,29 @@ class="xwgw6327y37-Temple-Section-tvdh72y82ydswjhbs">
                 ===========================================-->
 
                 <div
-                class="xwgw6327y37-Temple-Header-tvdh72y82ydswjhbs">
+                class="xth6284-temple-header">
 
                     <div
-                    class="xwgw6327y37-Temple-Heading-tvdh72y82ydswjhbs">
+                    class="xth6284-temple-title">
 
                         <div
-                        class="xwgw6327y37-Temple-Line-Left-tvdh72y82ydswjhbs">
+                        class="xth6284-temple-line">
 
                         </div>
 
                         <i
-
-                        [class]="templeSectionHeaderXwgw6327y37Tvdh72y82ydswjhbs.icon">
+                        class="bi bi-bank">
 
                         </i>
 
                         <h2>
 
-                            {{templeSectionHeaderXwgw6327y37Tvdh72y82ydswjhbs.title}}
+                            Temple Heritage
 
                         </h2>
 
                         <div
-                        class="xwgw6327y37-Temple-Line-Right-tvdh72y82ydswjhbs">
+                        class="xth6284-temple-line">
 
                         </div>
 
@@ -1516,136 +1561,144 @@ class="xwgw6327y37-Temple-Section-tvdh72y82ydswjhbs">
 
                     <p>
 
-                        {{templeSectionHeaderXwgw6327y37Tvdh72y82ydswjhbs.subtitle}}
+                        Explore sacred temples throughout biblical history and
+                        discover their spiritual significance, worship, and
+                        God's everlasting presence among His people.
 
                     </p>
 
                 </div>
 
-                <!--==========================================
-                STATISTICS
-                ===========================================-->
 
-                <div
-                class="xwgw6327y37-Temple-Statistics-tvdh72y82ydswjhbs">
 
-                    @for(stat of templeStatisticsXwgw6327y37Tvdh72y82ydswjhbs;
-                    track stat.title){
 
-                    <div
-
-                    class="xwgw6327y37-Temple-Statistic-Card-tvdh72y82ydswjhbs"
-
-                    (click)="openTempleStatisticsXwgw6327y37Tvdh72y82ydswjhbs(stat)">
-
-                        <div
-                        class="xwgw6327y37-Temple-Statistic-Icon-tvdh72y82ydswjhbs">
-
-                            <i
-
-                            [class]="stat.icon">
-
-                            </i>
-
-                        </div>
-
-                        <div
-                        class="xwgw6327y37-Temple-Statistic-Content-tvdh72y82ydswjhbs">
-
-                            <h4>
-
-                                {{stat.title}}
-
-                            </h4>
-
-                            <span>
-
-                                {{stat.subtitle}}
-
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                    }
-
-                </div>
 
                 <!--==========================================
                 TEMPLE GRID
                 ===========================================-->
 
                 <div
-                class="xwgw6327y37-Temple-Grid-tvdh72y82ydswjhbs">
-                    @for(card of templeHistoryCardsXwgw6327y37Tvdh72y82ydswjhbs;
-                    track card.id){
+                class="xth6284-temple-grid">
+
+                    @for(temple of templeHeritageCardsXth6284;
+                    track temple.id){
+
+                    <!--======================================
+                    CARD
+                    =======================================-->
 
                     <div
 
-                    class="xwgw6327y37-Temple-Card-tvdh72y82ydswjhbs"
+                    class="xth6284-temple-card"
 
-                    (click)="openTempleCardXwgw6327y37Tvdh72y82ydswjhbs(card)">
+                    (click)="openTempleHeritageXth6284(temple)">
 
-                        <!--==================================
-                        NUMBER
-                        ===================================-->
 
-                        <div
-                        class="xwgw6327y37-Temple-Number-tvdh72y82ydswjhbs">
+   <div
+    class="xth6284-temple-badge">
 
-                            {{card.number}}
+        {{temple.id}}
 
-                        </div>
-
-                        <!--==================================
-                        TITLE
-                        ===================================-->
-
-                        <div
-                        class="xwgw6327y37-Temple-Title-tvdh72y82ydswjhbs">
-
-                            <h3>
-
-                                {{card.title}}
-
-                            </h3>
-
-                            <span>
-
-                                {{card.location}}
-
-                            </span>
-
-                        </div>
+    </div>
 
                         <!--==================================
                         IMAGE
                         ===================================-->
 
                         <div
-                        class="xwgw6327y37-Temple-Image-tvdh72y82ydswjhbs">
+                        class="xth6284-temple-image">
 
                             <img
 
-                            [src]="card.image"
+                            [src]="temple.image"
 
-                            [alt]="card.title">
+                            [alt]="temple.title">
 
                         </div>
+
+
+
+
 
                         <!--==================================
                         CONTENT
                         ===================================-->
 
                         <div
-                        class="xwgw6327y37-Temple-Content-tvdh72y82ydswjhbs">
+                        class="xth6284-temple-content">
+
+                            <span
+                            class="xth6284-temple-location">
+
+                                <i
+                                class="bi bi-geo-alt-fill">
+
+                                </i>
+
+                                {{temple.location}}
+
+                            </span>
+
+                            <h3>
+
+                                {{temple.title}}
+
+                            </h3>
 
                             <p>
 
-                                {{card.description}}
+                                {{temple.description}}
 
                             </p>
+
+                        </div>
+
+
+
+
+
+                        <!--==================================
+                        SCRIPTURE
+                        ===================================-->
+
+                        <div
+                        class="xth6284-temple-scripture">
+
+                            <i
+                            class="bi bi-book-half">
+
+                            </i>
+
+                            <span>
+
+                                {{temple.scripture}}
+
+                            </span>
+
+                        </div>
+
+
+
+
+
+                        <!--==================================
+                        FOOTER
+                        ===================================-->
+
+                        <div
+                        class="xth6284-temple-footer">
+
+                            <button
+                            type="button">
+
+                                Explore Temple
+
+                                <i
+                                class="bi bi-arrow-right-circle-fill">
+
+                                </i>
+
+                            </button>
 
                         </div>
 
@@ -1655,30 +1708,33 @@ class="xwgw6327y37-Temple-Section-tvdh72y82ydswjhbs">
 
                 </div>
 
-                <!--==========================================
-                END GRID
-                ===========================================-->
 
-                                <!--==========================================
+
+
+
+                <!--==========================================
                 FOOTER ACTION
                 ===========================================-->
 
                 <div
-                class="xwgw6327y37-Temple-Footer-tvdh72y82ydswjhbs">
+                class="xth6284-temple-action">
 
                     <button
 
                     type="button"
 
-                    class="xwgw6327y37-Temple-Button-tvdh72y82ydswjhbs"
+                    class="xth6284-temple-main-btn"
 
-                    (click)="exploreTempleHistoryXwgw6327y37Tvdh72y82ydswjhbs()">
+                    (click)="exploreTempleHeritageXth6284()">
 
-                        <i class="bi bi-arrow-right-circle-fill"></i>
+                        <i
+                        class="bi bi-building">
+
+                        </i>
 
                         <span>
 
-                            {{templeSectionHeaderXwgw6327y37Tvdh72y82ydswjhbs.button}}
+                            Explore All Temples
 
                         </span>
 
@@ -1693,7 +1749,6 @@ class="xwgw6327y37-Temple-Section-tvdh72y82ydswjhbs">
     </div>
 
 </section>
- 
 }
 
 @if(activeTab==4){
