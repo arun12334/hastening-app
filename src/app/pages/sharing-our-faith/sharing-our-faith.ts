@@ -127,11 +127,11 @@ bannerTabs = [
     title: 'Message from Disciples'
   },
 
-  // {
-  //   id: 2,
-  //   icon: 'bi bi-book',
-  //   title: 'Scriptures & Book of Mormon'
-  // },
+  {
+    id: 2,
+    icon: 'bi bi-book',
+    title: 'Scriptures & Book of Mormon'
+  },
 
   {
     id: 3,
@@ -145,11 +145,11 @@ bannerTabs = [
     title: 'Daily Worship & Inspiration'
   },
 
-  {
-    id: 5,
-    icon: 'bi bi-pencil-square',
-    title: 'Share Your Testimony'
-  }
+  // {
+  //   id: 5,
+  //   icon: 'bi bi-pencil-square',
+  //   title: 'Share Your Testimony'
+  // }
 
 ];
 
@@ -792,95 +792,8 @@ dailyWorshipPlanX994712Y615834 = [
 
 ];
 
-/*==========================================================
-DAILY DEVOTIONAL CARDS
-==========================================================*/
-
-dailyDevotionalCardsX994712Y615834 = [
-
-  {
-
-    id:1,
-
-    image:'https://picsum.photos/500/350?random=302',
-
-    title:'Verse of the Day',
-
-    verse:'John 14:6',
-
-    description:
-    'Reflect on today’s scripture and allow God’s word to guide your decisions.',
-
-    button:'Read Todays Verse'
-
-  },
-
-  {
-
-    id:2,
-
-    image:'https://picsum.photos/500/350?random=303',
-
-    title:'Daily Prayer',
-
-    verse:'Matthew 6:9',
-
-    description:
-    'Spend a few quiet moments in prayer and strengthen your relationship with Christ.',
-
-    button:'Start Prayer'
-
-  }
-
-];
-
-/*==========================================================
-INSPIRATION QUOTES
-==========================================================*/
-
-dailyQuotesX994712Y615834 = [
-
-  {
-
-    id:1,
-
-    icon:'bi bi-quote',
-
-    title:'Faith',
-
-    description:
-    'With God all things are possible.'
-
-  },
-
-  {
-
-    id:2,
-
-    icon:'bi bi-heart-fill',
-
-    title:'Love',
-
-    description:
-    'Love one another as I have loved you.'
-
-  },
-
-  {
-
-    id:3,
-
-    icon:'bi bi-stars',
-
-    title:'Hope',
-
-    description:
-    'Trust in the Lord with all your heart.'
-
-  }
-
-];
-
+ 
+ 
 /*==========================================================
 BUTTON EVENTS
 ==========================================================*/
@@ -1032,205 +945,7 @@ console.log(item);
 
 
 // tab - 1
-
-/*==========================================================
-MESSAGE FROM DISCIPLES
-==========================================================*/
-
-discipleMessageCardsXkdm8237Hs9283 = [
-
-{
-
-id:1,
-
-name:'Simon Peter',
-
-role:'Chief Apostle',
-
- image:'https://picsum.photos/300/220?random=178',
-
-message:'Jesus is the Christ, the Son of the living God. Follow Him with faith and courage every day.',
-
-scripture:'Matthew 16:16'
-
-},
-
-{
-
-id:2,
-
-name:'Andrew',
-
-role:'Disciple',
-
- image:'https://picsum.photos/300/220?random=198',
-
-message:'Come and see the Savior. His love changes every heart that seeks Him sincerely.',
-
-scripture:'John 1:40-42'
-
-},
-
-{
-
-id:3,
-
-name:'James',
-
-role:'Disciple',
-
- image:'https://picsum.photos/300/220?random=107',
-
-message:'Remain faithful through every trial, knowing that Christ strengthens His followers.',
-
-scripture:'James 1:12'
-
-},
-
-{
-
-id:4,
-
-name:'John',
-
-role:'Beloved Disciple',
-
- image:'https://picsum.photos/300/220?random=104',
-
-message:'God is love. Whoever abides in love abides in God and walks in the light of Christ.',
-
-scripture:'1 John 4:16'
-
-},
-
-{
-
-id:5,
-
-name:'Philip',
-
-role:'Disciple',
-
- image:'https://picsum.photos/300/220?random=152',
-
-message:'Trust Jesus completely, for He is the way, the truth, and the life.',
-
-scripture:'John 14:6'
-
-},
-
-{
-
-id:6,
-
-name:'Bartholomew',
-
-role:'Disciple',
- image:'https://picsum.photos/300/220?random=192',
-
-message:'Walk honestly before the Lord and let your life reflect His truth and goodness.',
-
-scripture:'Psalm 25:5'
-
-},
-
-{
-
-id:7,
-
-name:'Thomas',
-
-role:'Disciple',
-
- image:'https://picsum.photos/300/220?random=108',
-
-message:'Faith grows stronger when we trust Christ even without seeing every answer.',
-
-scripture:'John 20:29'
-
-},
-
-{
-
-id:8,
-
-name:'Matthew',
-
-role:'Evangelist',
-
- image:'https://picsum.photos/300/220?random=106',
-
-message:'Leave the old life behind and follow Jesus with a willing and joyful heart.',
-
-scripture:'Matthew 9:9'
-
-},
-
-{
-
-id:9,
-
-name:'James',
-
-role:'Son of Alphaeus',
- image:'https://picsum.photos/300/220?random=100',
-
-message:'Serve quietly with humility, knowing that God sees every faithful act.',
-
-scripture:'Colossians 3:23'
-
-},
-
-{
-
-id:10,
-
-name:'Simon',
-
-role:'The Zealot',
-
- image:'https://picsum.photos/300/220?random=106',
-
-message:'Be passionate for the kingdom of God and stand firm in the truth of Christ.',
-
-scripture:'Romans 12:11'
-
-},
-
-{
-
-id:11,
-
-name:'Jude',
-
-role:'Disciple',
-
- image:'https://picsum.photos/300/220?random=102',
-
-message:'Build your faith through prayer and remain in the love and mercy of Jesus Christ.',
-
-scripture:'Jude 1:20-21'
-
-},
-
-{
-
-id:12,
-
-name:'Matthias',
-
-role:'Chosen Apostle',
-
- image:'https://picsum.photos/300/220?random=101',
-
-message:'God calls faithful servants to continue His work with courage and obedience.',
-
-scripture:'Acts 1:26'
-
-}
-
-];
-
+ 
 
 
 
@@ -1250,122 +965,7 @@ console.log(card);
 // tab -3 
 
 
-/*==========================================================
-DAILY WORSHIP & INSPIRATION
-==========================================================*/
-
-dailyWorshipCardsXwrp8742Jd7284 = [
-
-{
-id:1,
-title:'Morning Prayer',
-category:'Prayer',
-image:'https://picsum.photos/600/400?random=101',
-message:'Begin your day by seeking Jesus in prayer and trusting His guidance.',
-scripture:'Psalm 5:3'
-},
-
-{
-id:2,
-title:'Walk by Faith',
-category:'Faith',
-image:'https://picsum.photos/600/400?random=102',
-message:'Trust the Lord in every situation and let faith overcome fear.',
-scripture:'2 Corinthians 5:7'
-},
-
-{
-id:3,
-title:'God is Love',
-category:'Love',
-image:'https://picsum.photos/600/400?random=103',
-message:'Share the love of Christ through kindness, forgiveness, and compassion.',
-scripture:'1 John 4:19'
-},
-
-{
-id:4,
-title:'Peace in Christ',
-category:'Peace',
-image:'https://picsum.photos/600/400?random=104',
-message:'Jesus gives perfect peace to every heart that trusts in Him.',
-scripture:'John 14:27'
-},
-
-{
-id:5,
-title:'Grace Every Day',
-category:'Grace',
-image:'https://picsum.photos/600/400?random=105',
-message:'Gods grace is sufficient to strengthen you through every challenge.',
-scripture:'2 Corinthians 12:9'
-},
-
-{
-id:6,
-title:'Hope in Jesus',
-category:'Hope',
-image:'https://picsum.photos/600/400?random=106',
-message:'Keep your eyes on Christ because His promises never fail.',
-scripture:'Romans 15:13'
-},
-
-{
-id:7,
-title:'Heart of Worship',
-category:'Worship',
-image:'https://picsum.photos/600/400?random=107',
-message:'Worship the Lord with gratitude and joy, giving Him all the glory.',
-scripture:'Psalm 95:6'
-},
-
-{
-id:8,
-title:'Forgive Others',
-category:'Forgiveness',
-image:'https://picsum.photos/600/400?random=108',
-message:'Forgive as Christ forgave you and walk in freedom and peace.',
-scripture:'Ephesians 4:32'
-},
-
-{
-id:9,
-title:'Choose Joy',
-category:'Joy',
-image:'https://picsum.photos/600/400?random=109',
-message:'Rejoice in the Lord always because His love is everlasting.',
-scripture:'Philippians 4:4'
-},
-
-{
-id:10,
-title:'Give Thanks',
-category:'Thanksgiving',
-image:'https://picsum.photos/600/400?random=110',
-message:'Thank God for every blessing and every opportunity to grow in faith.',
-scripture:'1 Thessalonians 5:18'
-},
-
-{
-id:11,
-title:'Trust His Plan',
-category:'Trust',
-image:'https://picsum.photos/600/400?random=111',
-message:'Place your future in the hands of Jesus, for His plans are perfect.',
-scripture:'Proverbs 3:5-6'
-},
-
-{
-id:12,
-title:'Follow Jesus',
-category:'Discipleship',
-image:'https://picsum.photos/600/400?random=112',
-message:'Walk daily with Christ and let your life reflect His light to the world.',
-scripture:'Luke 9:23'
-}
-
-];
-
+ 
 
 
 /*==========================================================
