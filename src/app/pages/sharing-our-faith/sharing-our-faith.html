@@ -1749,6 +1749,195 @@ class="xth6284-temple-section">
     </div>
 
 </section>
+
+<!--=========================================================
+HASTENING TEMPLE PROPHECY SECTION
+Unique ID : HTP99842
+==========================================================-->
+
+<section
+class="HTP99842-temple-prophecy-section">
+
+<!--==========================================
+SLIDER CONTROLS
+===========================================-->
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-12">
+
+                <!--==========================================
+                SECTION HEADER
+                ===========================================-->
+
+                <div
+                class="HTP99842-section-header">
+
+                    <div
+                    class="HTP99842-header-line">
+
+                    </div>
+
+                    <h2>
+
+                        FUTURE: THE LORD WILL COME TO HIS TEMPLE
+
+                    </h2>
+
+                    <div
+                    class="HTP99842-header-line">
+
+                    </div>
+
+                </div>
+
+
+
+
+
+                <!--==========================================
+                HORIZONTAL CARD LIST
+                ===========================================-->
+
+          <!--==========================================
+SLIDER
+===========================================-->
+
+<div class="HTP99842-slider-container">
+
+    <!-- Left Arrow -->
+
+    <button
+
+    type="button"
+
+    class="HTP99842-arrow-btn HTP99842-arrow-left"
+
+    (click)="scrollTempleCardsHTP99842('left')">
+
+        <i class="bi bi-chevron-left"></i>
+
+    </button>
+
+    <!-- Right Arrow -->
+
+    <button
+
+    type="button"
+
+    class="HTP99842-arrow-btn HTP99842-arrow-right"
+
+    (click)="scrollTempleCardsHTP99842('right')">
+
+        <i class="bi bi-chevron-right"></i>
+
+    </button>
+
+    <!--==========================================
+    CARD WRAPPER
+    ===========================================-->
+
+    <div
+
+    id="HTP99842CardWrapper"
+
+    class="HTP99842-card-wrapper">
+
+        @for(card of templeProphecyCardsHTP99842;
+        track card.id){
+
+        <div
+
+        class="HTP99842-card"
+
+        (click)="openTempleProphecyHTP99842(card)">
+
+            <!-- IMAGE -->
+
+            <div class="HTP99842-image">
+
+                <img
+
+                [src]="card.image"
+
+                [alt]="card.title">
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div class="HTP99842-content">
+
+                <span class="HTP99842-badge">
+
+                    {{card.category}}
+
+                </span>
+
+                <h3>
+
+                    {{card.title}}
+
+                </h3>
+
+                <p>
+
+                    {{card.description}}
+
+                </p>
+
+            </div>
+
+            <!-- SCRIPTURE -->
+
+            <div class="HTP99842-scripture">
+
+                <i class="bi bi-book-half"></i>
+
+                <span>
+
+                    {{card.scripture}}
+
+                </span>
+
+            </div>
+
+            <!-- FOOTER -->
+
+            <div class="HTP99842-footer">
+
+                <button
+
+                type="button"
+
+                class="HTP99842-btn"
+
+                (click)="readTempleProphecyHTP99842(card);$event.stopPropagation()">
+
+                    Learn More
+
+                    <i class="bi bi-arrow-right"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+        }
+
+    </div>
+
+</div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 }
 
 @if(activeTab==4){

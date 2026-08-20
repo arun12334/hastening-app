@@ -1,5 +1,7 @@
 import { Header } from '../../components/header/header';
 import { Component, HostListener, OnInit } from '@angular/core';
+declare var bootstrap:any;
+
 
 @Component({
   selector: 'app-sharing-our-faith',
@@ -1765,6 +1767,236 @@ exploreTempleHeritageXth6284():void{
     // this.router.navigate(['/temple-heritage']);
 
 }
+
+
+
+
+
+
+
+
+
+
+/*==========================================================
+HTP99842
+TEMPLE PROPHECY DATA
+==========================================================*/
+
+templeProphecyCardsHTP99842 = [
+
+{
+
+id:1,
+
+category:'Old Testament',
+
+title:'Malachi Prophecy',
+
+description:'The Lord promised that He would suddenly come to His holy temple according to the words of the prophet Malachi.',
+
+scripture:'Malachi 3:1',
+
+
+image:'assets/sharing/hastening-temple/hastening-temple-1.png'
+
+},
+
+{
+
+id:2,
+
+category:'Book of Mormon',
+
+title:'Bountiful Temple',
+
+description:'The resurrected Jesus Christ appeared to the Nephites at the temple in Bountiful and taught His gospel.',
+
+scripture:'3 Nephi 11',
+
+image:'assets/sharing/hastening-temple/hastening-temple-2.png'
+
+},
+
+{
+
+id:3,
+
+category:'Latter-day Prophecy',
+
+title:'Independence Temple',
+
+description:'The Lord revealed that a holy temple would one day be built in Independence, Missouri.',
+
+scripture:'Doctrine & Covenants 84',
+
+image:'assets/sharing/hastening-temple/hastening-temple-3.png'
+
+},
+
+{
+
+id:4,
+
+category:'Second Coming',
+
+title:'New Jerusalem',
+
+description:'The New Jerusalem will become a sacred gathering place where Christ will reign with His people.',
+
+scripture:'Ether 13:3-10',
+
+image:'assets/hastening-temple/new-jerusalem.jpg'
+
+},
+
+{
+
+id:5,
+
+category:'Millennium',
+
+title:'Millennial Temple',
+
+description:'During the Millennium temples will continue to bless the children of God with sacred ordinances.',
+
+scripture:'Isaiah 2:2-3',
+
+image:'assets/hastening-temple/millennium-temple.jpg'
+
+},
+
+{
+
+id:6,
+
+category:'Future Glory',
+
+title:'Temple Worship',
+
+description:'Faithful disciples will gather in holy temples to worship the Lord and prepare for His glorious return.',
+
+scripture:'Doctrine & Covenants 97:15-17',
+
+image:'assets/hastening-temple/future-temple.jpg'
+
+}
+
+];
+
+/*==========================================================
+SELECTED CARD
+==========================================================*/
+
+selectedTempleProphecyHTP99842:any={};
+
+/*==========================================================
+OPEN CARD
+==========================================================*/
+
+openTempleProphecyHTP99842(card:any){
+
+this.selectedTempleProphecyHTP99842=card;
+
+console.log(card);
+
+}
+
+/*==========================================================
+LEARN MORE
+==========================================================*/
+
+readTempleProphecyHTP99842(card:any){
+
+this.selectedTempleProphecyHTP99842=card;
+
+const modal=new bootstrap.Modal(
+
+document.getElementById(
+
+'HTP99842TempleModal'
+
+)
+
+);
+
+modal.show();
+
+}
+
+/*==========================================================
+CLOSE MODAL
+==========================================================*/
+
+closeTempleProphecyHTP99842(){
+
+const modal=bootstrap.Modal.getInstance(
+
+document.getElementById(
+
+'HTP99842TempleModal'
+
+)
+
+);
+
+modal?.hide();
+
+}
+
+
+
+
+
+
+
+
+
+
+/*==========================================================
+HTP99842
+CARD SCROLL
+==========================================================*/
+
+scrollTempleCardsHTP99842(
+
+direction:'left'|'right'
+
+){
+
+const container=document.getElementById(
+
+'HTP99842CardWrapper'
+
+);
+
+if(!container){
+
+return;
+
+}
+
+const scrollAmount=420;
+
+container.scrollBy({
+
+left:
+
+direction==='left'
+
+? -scrollAmount
+
+: scrollAmount,
+
+behavior:'smooth'
+
+});
+
+}
+
+
+
+
+
 }
 
 
