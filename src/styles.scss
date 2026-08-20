@@ -50448,3 +50448,1589 @@ MOBILE
 }
 
 }
+
+
+
+/*==========================================================
+SISTERS IN ZION MODAL
+==========================================================*/
+
+#xsz9824SisterBenefitModal{
+
+    backdrop-filter:blur(8px);
+
+}
+
+
+
+
+
+/*==========================================================
+DIALOG
+==========================================================*/
+
+#xsz9824SisterBenefitModal .modal-dialog{
+
+    max-width:760px;
+
+    margin:1.5rem auto;
+
+}
+
+
+
+
+
+/*==========================================================
+CONTENT
+==========================================================*/
+
+.xsz9824-modal-content{
+
+    border:none;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    background:#ffffff;
+
+    box-shadow:
+    0 25px 70px rgba(0,0,0,.18);
+
+}
+
+
+
+
+
+/*==========================================================
+HEADER
+==========================================================*/
+
+.xsz9824-modal-header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:22px 28px;
+
+    border:none;
+
+    color:#fff;
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    #6E49B8,
+
+    #8C63DA
+
+    );
+
+}
+
+
+
+
+
+.xsz9824-modal-header h2{
+
+    margin:0;
+
+    font-size:30px;
+
+    font-weight:700;
+
+}
+
+
+
+
+
+.xsz9824-modal-header .btn-close{
+
+    filter:invert(1);
+
+}
+
+
+
+
+
+/*==========================================================
+BODY
+==========================================================*/
+
+.xsz9824-modal-body{
+
+    background:#F9F7FF;
+
+    padding:30px;
+
+    max-height:68vh;
+
+    overflow-y:auto;
+
+}
+
+
+
+
+
+/*==========================================================
+SCROLLBAR
+==========================================================*/
+
+.xsz9824-modal-body::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.xsz9824-modal-body::-webkit-scrollbar-thumb{
+
+    background:#8C63DA;
+
+    border-radius:30px;
+
+}
+
+.xsz9824-modal-body::-webkit-scrollbar-track{
+
+    background:#ECE7F8;
+
+}
+
+
+
+
+
+/*==========================================================
+IMAGE
+==========================================================*/
+
+.xsz9824-banner{
+
+    margin-bottom:28px;
+
+}
+
+
+
+
+
+.xsz9824-banner img{
+
+    width:100%;
+
+    height:280px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    box-shadow:
+
+    0 15px 35px rgba(0,0,0,.12);
+
+}
+
+
+
+
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.xsz9824-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+
+.xsz9824-title i{
+
+    font-size:34px;
+
+}
+
+
+
+
+
+.xsz9824-title h3{
+
+    margin:0;
+
+    color:#4E2F86;
+
+    font-size:30px;
+
+    font-weight:700;
+
+}
+
+
+
+
+
+/*==========================================================
+SHORT DESCRIPTION
+==========================================================*/
+
+.xsz9824-short{
+
+    font-size:18px;
+
+    color:#666;
+
+    line-height:1.9;
+
+    margin-bottom:25px;
+
+}
+
+
+
+
+
+/*==========================================================
+CONTENT
+==========================================================*/
+
+.xsz9824-content{
+
+    margin-bottom:30px;
+
+}
+
+
+
+
+
+.xsz9824-content p{
+
+    color:#555;
+
+    font-size:16px;
+
+    line-height:1.9;
+
+    margin-bottom:18px;
+
+}
+
+
+
+
+
+/*==========================================================
+SCRIPTURE
+==========================================================*/
+
+.xsz9824-scripture{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:18px;
+
+    background:#ffffff;
+
+    border-left:5px solid #6E49B8;
+
+    border-radius:16px;
+
+    padding:22px;
+
+    margin-bottom:30px;
+
+}
+
+
+
+
+
+.xsz9824-scripture i{
+
+    font-size:34px;
+
+    color:#6E49B8;
+
+}
+
+
+
+
+
+.xsz9824-scripture h5{
+
+    margin-bottom:8px;
+
+    color:#4E2F86;
+
+    font-weight:700;
+
+}
+
+
+
+
+
+.xsz9824-scripture p{
+
+    margin:0;
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+
+
+
+
+/*==========================================================
+BENEFITS
+==========================================================*/
+
+.xsz9824-highlights{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:25px;
+
+}
+
+
+
+
+
+.xsz9824-highlights h4{
+
+    color:#4E2F86;
+
+    margin-bottom:18px;
+
+    font-weight:700;
+
+}
+
+
+
+
+
+.xsz9824-highlights ul{
+
+    list-style:none;
+
+    margin:0;
+
+    padding:0;
+
+}
+
+
+
+
+
+.xsz9824-highlights li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:14px;
+
+    color:#555;
+
+    font-size:16px;
+
+}
+
+
+
+
+
+.xsz9824-highlights li i{
+
+    color:#6E49B8;
+
+    font-size:18px;
+
+}
+
+
+
+
+
+/*==========================================================
+FOOTER
+==========================================================*/
+
+.xsz9824-modal-footer{
+
+    border:none;
+
+    padding:20px 28px 28px;
+
+    background:#F9F7FF;
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:14px;
+
+}
+
+
+/*==========================================================
+BUTTONS
+==========================================================*/
+
+.xsz9824-close-btn{
+
+    min-width:140px;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#ECE7F8;
+
+    color:#6E49B8;
+
+    font-weight:600;
+
+    transition:.35s ease;
+
+}
+
+.xsz9824-close-btn:hover{
+
+    background:#DDD2F5;
+
+    color:#4E2F86;
+
+    transform:translateY(-2px);
+
+}
+
+
+
+
+
+.xsz9824-join-btn{
+
+    min-width:220px;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+
+    135deg,
+
+    #6E49B8,
+
+    #8C63DA
+
+    );
+
+    color:#fff;
+
+    font-weight:700;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    transition:.35s ease;
+
+    box-shadow:
+
+    0 12px 28px rgba(110,73,184,.25);
+
+}
+
+
+
+
+
+.xsz9824-join-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+
+    0 18px 40px rgba(110,73,184,.35);
+
+    background:linear-gradient(
+
+    135deg,
+
+    #5D3EA5,
+
+    #7D58CB
+
+    );
+
+}
+
+
+
+
+
+.xsz9824-join-btn i{
+
+    transition:.35s;
+
+}
+
+
+
+
+
+.xsz9824-join-btn:hover i{
+
+    transform:translateX(5px);
+
+}
+
+
+
+
+
+/*==========================================================
+POPUP ANIMATION
+==========================================================*/
+
+.xsz9824-modal-content{
+
+    animation:
+
+    xsz9824Popup .35s ease;
+
+}
+
+
+
+
+
+@keyframes xsz9824Popup{
+
+0%{
+
+    opacity:0;
+
+    transform:
+
+    translateY(40px)
+
+    scale(.90);
+
+}
+
+100%{
+
+    opacity:1;
+
+    transform:
+
+    translateY(0)
+
+    scale(1);
+
+}
+
+}
+
+
+
+
+
+/*==========================================================
+IMAGE HOVER
+==========================================================*/
+
+.xsz9824-banner{
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+}
+
+
+
+
+
+.xsz9824-banner img{
+
+    transition:.45s ease;
+
+}
+
+
+
+
+
+.xsz9824-banner:hover img{
+
+    transform:scale(1.05);
+
+}
+
+
+
+
+
+/*==========================================================
+SCRIPTURE
+==========================================================*/
+
+.xsz9824-scripture{
+
+    transition:.35s ease;
+
+}
+
+
+
+
+
+.xsz9824-scripture:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+
+    0 15px 35px rgba(110,73,184,.12);
+
+}
+
+
+
+
+
+/*==========================================================
+BENEFITS
+==========================================================*/
+
+.xsz9824-highlights{
+
+    transition:.35s ease;
+
+}
+
+
+
+
+
+.xsz9824-highlights:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+
+    0 18px 35px rgba(0,0,0,.08);
+
+}
+
+
+
+
+
+/*==========================================================
+TABLET
+==========================================================*/
+
+@media(max-width:991px){
+
+#xsz9824SisterBenefitModal .modal-dialog{
+
+    max-width:680px;
+
+}
+
+.xsz9824-banner img{
+
+    height:230px;
+
+}
+
+.xsz9824-title h3{
+
+    font-size:26px;
+
+}
+
+}
+
+
+
+
+
+/*==========================================================
+MOBILE
+==========================================================*/
+
+@media(max-width:768px){
+
+#xsz9824SisterBenefitModal .modal-dialog{
+
+    margin:16px;
+
+}
+
+.xsz9824-modal-header{
+
+    padding:18px 20px;
+
+}
+
+.xsz9824-modal-header h2{
+
+    font-size:24px;
+
+}
+
+.xsz9824-modal-body{
+
+    padding:22px;
+
+    max-height:70vh;
+
+}
+
+.xsz9824-banner img{
+
+    height:180px;
+
+}
+
+.xsz9824-title{
+
+    flex-direction:column;
+
+    text-align:center;
+
+    gap:10px;
+
+}
+
+.xsz9824-title h3{
+
+    font-size:22px;
+
+}
+
+.xsz9824-title i{
+
+    font-size:28px;
+
+}
+
+.xsz9824-short{
+
+    font-size:16px;
+
+}
+
+.xsz9824-content p{
+
+    font-size:15px;
+
+}
+
+.xsz9824-scripture{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.xsz9824-highlights{
+
+    padding:20px;
+
+}
+
+.xsz9824-modal-footer{
+
+    flex-direction:column;
+
+}
+
+.xsz9824-close-btn,
+
+.xsz9824-join-btn{
+
+    width:100%;
+
+}
+
+}
+
+
+
+
+
+/*==========================================================
+SMALL MOBILE
+==========================================================*/
+
+@media(max-width:480px){
+
+.xsz9824-modal-header h2{
+
+    font-size:20px;
+
+}
+
+.xsz9824-banner img{
+
+    height:150px;
+
+}
+
+.xsz9824-title h3{
+
+    font-size:20px;
+
+}
+
+.xsz9824-short{
+
+    font-size:15px;
+
+}
+
+.xsz9824-content p{
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+.xsz9824-scripture{
+
+    padding:18px;
+
+}
+
+.xsz9824-highlights{
+
+    padding:18px;
+
+}
+
+}
+
+
+/*==========================================================
+PREMIUM BORDER
+==========================================================*/
+
+.xsz9824-modal-content{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.xsz9824-modal-content::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    padding:1px;
+
+    border-radius:24px;
+
+    background:linear-gradient(
+
+    135deg,
+
+    rgba(255,255,255,.45),
+
+    rgba(110,73,184,.18),
+
+    rgba(255,255,255,.45)
+
+    );
+
+    -webkit-mask:
+
+    linear-gradient(#fff 0 0) content-box,
+
+    linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+
+            mask-composite:exclude;
+
+    pointer-events:none;
+
+}
+
+
+
+
+
+/*==========================================================
+HEADER SHINE
+==========================================================*/
+
+.xsz9824-modal-header{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.xsz9824-modal-header::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:-100%;
+
+    left:-45%;
+
+    width:40%;
+
+    height:320%;
+
+    background:
+
+    linear-gradient(
+
+    rgba(255,255,255,0),
+
+    rgba(255,255,255,.25),
+
+    rgba(255,255,255,0)
+
+    );
+
+    transform:rotate(28deg);
+
+    animation:xsz9824HeaderShine 7s linear infinite;
+
+}
+
+
+
+
+
+@keyframes xsz9824HeaderShine{
+
+0%{
+
+left:-45%;
+
+}
+
+100%{
+
+left:140%;
+
+}
+
+}
+
+
+
+
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.xsz9824-title{
+
+    position:relative;
+
+}
+
+.xsz9824-title::after{
+
+    content:"";
+
+    width:80px;
+
+    height:3px;
+
+    margin-top:14px;
+
+    display:block;
+
+    border-radius:20px;
+
+    background:
+
+    linear-gradient(
+
+    90deg,
+
+    #6E49B8,
+
+    #B89BFF
+
+    );
+
+}
+
+
+
+
+
+/*==========================================================
+SCRIPTURE CARD
+==========================================================*/
+
+.xsz9824-scripture{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.xsz9824-scripture::before{
+
+    content:"❝";
+
+    position:absolute;
+
+    right:18px;
+
+    top:6px;
+
+    font-size:70px;
+
+    color:rgba(110,73,184,.08);
+
+    font-family:Georgia,serif;
+
+}
+
+
+
+
+
+/*==========================================================
+BENEFITS ICON
+==========================================================*/
+
+.xsz9824-highlights li{
+
+    transition:.35s;
+
+}
+
+.xsz9824-highlights li:hover{
+
+    transform:translateX(8px);
+
+}
+
+.xsz9824-highlights li i{
+
+    transition:.35s;
+
+}
+
+.xsz9824-highlights li:hover i{
+
+    transform:scale(1.2);
+
+}
+
+
+
+
+
+/*==========================================================
+IMAGE SHADOW
+==========================================================*/
+
+.xsz9824-banner{
+
+    position:relative;
+
+}
+
+.xsz9824-banner::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:15px;
+
+    right:15px;
+
+    bottom:-12px;
+
+    height:22px;
+
+    border-radius:50%;
+
+    filter:blur(18px);
+
+    background:rgba(0,0,0,.18);
+
+    z-index:-1;
+
+}
+
+
+
+
+
+/*==========================================================
+BUTTON RIPPLE
+==========================================================*/
+
+.xsz9824-join-btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.xsz9824-join-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:0;
+
+    height:0;
+
+    left:50%;
+
+    top:50%;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.22);
+
+    transition:.6s;
+
+}
+
+.xsz9824-join-btn:hover::before{
+
+    width:320px;
+
+    height:320px;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+}
+
+
+
+
+
+/*==========================================================
+SCROLLBAR
+==========================================================*/
+
+.xsz9824-modal-body{
+
+    scrollbar-width:thin;
+
+    scrollbar-color:#8C63DA #F3EEFF;
+
+}
+
+.xsz9824-modal-body::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+.xsz9824-modal-body::-webkit-scrollbar-track{
+
+    background:#F3EEFF;
+
+    border-radius:20px;
+
+}
+
+.xsz9824-modal-body::-webkit-scrollbar-thumb{
+
+    border-radius:20px;
+
+    background:
+
+    linear-gradient(
+
+    #6E49B8,
+
+    #9D7CE6
+
+    );
+
+}
+
+
+
+
+
+/*==========================================================
+BACKDROP
+==========================================================*/
+
+.modal-backdrop.show{
+
+    opacity:.72;
+
+}
+
+
+
+
+
+/*==========================================================
+MODAL OPEN EFFECT
+==========================================================*/
+
+.modal.fade .modal-dialog{
+
+    transform:translateY(40px) scale(.94);
+
+    transition:
+
+    transform .35s ease,
+
+    opacity .35s ease;
+
+}
+
+.modal.show .modal-dialog{
+
+    transform:translateY(0) scale(1);
+
+}
+
+
+
+
+
+/*==========================================================
+DESKTOP LARGE
+==========================================================*/
+
+@media(min-width:1400px){
+
+#xsz9824SisterBenefitModal .modal-dialog{
+
+    max-width:780px;
+
+}
+
+}
+
+
+
+
+
+/*==========================================================
+LARGE SCREEN HEIGHT
+==========================================================*/
+
+@media(min-height:900px){
+
+.xsz9824-modal-body{
+
+    max-height:72vh;
+
+}
+
+}
+
+
+/*==========================================================
+YHG77373-Emma-join-UJHJJ88 START
+==========================================================*/
+
+.YHG77373-Emma-join-UJHJJ88-Toast{
+
+    position:fixed;
+
+    top:25px;
+
+    right:25px;
+
+    width:360px;
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    padding:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    z-index:999999;
+
+    box-shadow:
+
+    0 18px 45px rgba(0,0,0,.16);
+
+    animation:
+
+    YHG77373EmmaJoinUJHJJ88Slide .45s ease;
+
+}
+
+
+
+
+
+.YHG77373-Emma-join-UJHJJ88-Toast-Icon{
+
+    width:62px;
+
+    height:62px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    #6E49B8,
+
+    #A27BFF
+
+    );
+
+    color:#fff;
+
+    flex-shrink:0;
+
+}
+
+
+
+
+
+.YHG77373-Emma-join-UJHJJ88-Toast-Icon i{
+
+    font-size:28px;
+
+}
+
+
+
+
+
+.YHG77373-Emma-join-UJHJJ88-Toast-Content{
+
+    flex:1;
+
+}
+
+
+
+
+
+.YHG77373-Emma-join-UJHJJ88-Toast-Content h5{
+
+    margin:0 0 6px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#5B3E97;
+
+}
+
+
+
+
+
+.YHG77373-Emma-join-UJHJJ88-Toast-Content p{
+
+    margin:0;
+
+    font-size:14px;
+
+    line-height:1.7;
+
+    color:#666;
+
+}
+
+
+
+
+
+@keyframes YHG77373EmmaJoinUJHJJ88Slide{
+
+0%{
+
+opacity:0;
+
+transform:
+
+translateX(120px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:
+
+translateX(0);
+
+}
+
+}
+
+
+
+
+
+/*==========================================================
+TABLET
+==========================================================*/
+
+@media(max-width:768px){
+
+.YHG77373-Emma-join-UJHJJ88-Toast{
+
+    width:320px;
+
+    right:18px;
+
+    top:18px;
+
+}
+
+}
+
+
+
+
+
+/*==========================================================
+MOBILE
+==========================================================*/
+
+@media(max-width:576px){
+
+.YHG77373-Emma-join-UJHJJ88-Toast{
+
+    width:calc(100% - 24px);
+
+    right:12px;
+
+    left:12px;
+
+    top:12px;
+
+    padding:16px;
+
+}
+
+.YHG77373-Emma-join-UJHJJ88-Toast-Icon{
+
+    width:54px;
+
+    height:54px;
+
+}
+
+.YHG77373-Emma-join-UJHJJ88-Toast-Icon i{
+
+    font-size:24px;
+
+}
+
+.YHG77373-Emma-join-UJHJJ88-Toast-Content h5{
+
+    font-size:16px;
+
+}
+
+.YHG77373-Emma-join-UJHJJ88-Toast-Content p{
+
+    font-size:13px;
+
+}
+
+}
+
+/*==========================================================
+YHG77373-Emma-join-UJHJJ88 END
+==========================================================*/

@@ -261,3 +261,334 @@ SISTERS IN ZION BENEFITS SECTION X64
     </div>
 
 </section>
+
+
+
+
+<!--=========================================================
+SISTERS IN ZION DETAILS MODAL
+==========================================================-->
+
+<div
+
+class="modal fade"
+
+id="xsz9824SisterBenefitModal"
+
+tabindex="-1"
+
+aria-hidden="true">
+
+    <div
+
+    class="modal-dialog
+
+    modal-lg
+
+    modal-dialog-centered">
+
+        <div
+
+        class="modal-content
+
+        xsz9824-modal-content">
+
+
+
+
+            <!--==========================================
+            HEADER
+            ===========================================-->
+
+            <div
+            class="xsz9824-modal-header">
+
+                <h2>
+
+                    {{selectedSisterBenefitXsz9824.title}}
+
+                </h2>
+
+                <button
+
+                type="button"
+
+                class="btn-close"
+
+                data-bs-dismiss="modal">
+
+                </button>
+
+            </div>
+
+
+
+
+
+            <!--==========================================
+            BODY
+            ===========================================-->
+
+            <div
+            class="modal-body
+            xsz9824-modal-body">
+
+
+
+
+                <!--======================================
+                IMAGE
+                =======================================-->
+
+                <div
+                class="xsz9824-banner">
+
+                    <img
+
+                    [src]="selectedSisterBenefitXsz9824.image"
+
+                    [alt]="selectedSisterBenefitXsz9824.title">
+
+                </div>
+
+
+
+
+
+                <!--======================================
+                TITLE
+                =======================================-->
+
+                <div
+                class="xsz9824-title">
+
+                    <i
+
+                    [class]="selectedSisterBenefitXsz9824.icon"
+
+                    [style.color]="selectedSisterBenefitXsz9824.iconColor">
+
+                    </i>
+
+                    <h3>
+
+                        {{selectedSisterBenefitXsz9824.title}}
+
+                    </h3>
+
+                </div>
+
+
+
+
+
+                <!--======================================
+                SHORT DESCRIPTION
+                =======================================-->
+
+                <p
+                class="xsz9824-short">
+
+                    {{selectedSisterBenefitXsz9824.description}}
+
+                </p>
+
+
+
+
+
+                <!--======================================
+                LONG CONTENT
+                =======================================-->
+
+                <div
+                class="xsz9824-content">
+
+                    <p>
+
+                        {{selectedSisterBenefitXsz9824.content1}}
+
+                    </p>
+
+                    <p>
+
+                        {{selectedSisterBenefitXsz9824.content2}}
+
+                    </p>
+
+                    <p>
+
+                        {{selectedSisterBenefitXsz9824.content3}}
+
+                    </p>
+
+                </div>
+
+
+
+
+
+                <!--======================================
+                SCRIPTURE
+                =======================================-->
+
+                <div
+                class="xsz9824-scripture">
+
+                    <i
+                    class="bi bi-book-half">
+
+                    </i>
+
+                    <div>
+
+                        <h5>
+
+                            Bible Verse
+
+                        </h5>
+
+                        <p>
+
+                            {{selectedSisterBenefitXsz9824.scripture}}
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+                <!--======================================
+                HIGHLIGHTS
+                =======================================-->
+
+                <div
+                class="xsz9824-highlights">
+
+                    <h4>
+
+                        Benefits
+
+                    </h4>
+
+                    <ul>
+
+                        @for(item of selectedSisterBenefitXsz9824.highlights;
+                        track item){
+
+                        <li>
+
+                            <i
+                            class="bi bi-check-circle-fill">
+
+                            </i>
+
+                            {{item}}
+
+                        </li>
+
+                        }
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+
+
+
+            <!--==========================================
+            FOOTER
+            ===========================================-->
+
+            <div
+            class="modal-footer
+            xsz9824-modal-footer">
+
+                <button
+
+                type="button"
+
+                class="btn
+                xsz9824-close-btn"
+
+                data-bs-dismiss="modal">
+
+                    Close
+
+                </button>
+
+                <button
+
+                type="button"
+
+                class="btn
+                xsz9824-join-btn"
+
+                (click)="joinSistersInZionXsz9824()">
+
+                    <i
+                    class="bi bi-heart-fill">
+
+                    </i>
+
+                    Join Emma’s Relief Society
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!--=========================================================
+YHG77373-Emma-join-UJHJJ88 START
+==========================================================-->
+
+@if(showYHG77373EmmaJoinUJHJJ88Toast){
+
+<div
+class="YHG77373-Emma-join-UJHJJ88-Toast">
+
+    <div
+    class="YHG77373-Emma-join-UJHJJ88-Toast-Icon">
+
+        <i class="bi bi-heart-fill"></i>
+
+    </div>
+
+    <div
+    class="YHG77373-Emma-join-UJHJJ88-Toast-Content">
+
+        <h5>
+
+            Welcome Sister ❤️
+
+        </h5>
+
+        <p>
+
+            Thank you for joining Sisters in Zion.
+            May God bless your faith journey.
+
+        </p>
+
+    </div>
+
+</div>
+
+}
+
+<!--=========================================================
+YHG77373-Emma-join-UJHJJ88 END
+==========================================================-->
