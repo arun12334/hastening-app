@@ -21,14 +21,14 @@ export class SharingOurFaith {
   ==========================================================*/
 
   desktopBannerImage =
-  'assets/sharing/sharing-our-faith-banner.png';
+  'assets/sharing/sharing-our-faith-banner1.png';
 
   /*==========================================================
   MOBILE IMAGE
   ==========================================================*/
 
   mobileBannerImage =
-  'assets/worshiping/worshiping-christ-through-music-mobile-banner.png';
+   'assets/sharing/sharing-our-faith-banner122.png';
 
   /*==========================================================
   CURRENT IMAGE
