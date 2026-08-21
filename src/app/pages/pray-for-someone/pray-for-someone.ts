@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { OnInit } from '@angular/core';
 import { timer, Subscription } from 'rxjs';
 import { Header } from '../../components/header/header';
 import { ChangeDetectorRef } from '@angular/core';
 import { Footer } from '../../components/footer/footer';
+import {  HostListener, OnInit } from '@angular/core';
+
 declare var bootstrap: any;
 
 
@@ -54,12 +55,74 @@ export class PrayForSomeone implements OnInit {
 
   await this.refreshPrayerList();
 
+
 }
+
+
+
+
+ /*==========================================================
+  DESKTOP IMAGE
+  ==========================================================*/
+
+  desktopBannerImage =
+  'assets/loving/pray-for-someone-banner.png';
+
+  /*==========================================================
+  MOBILE IMAGE
+  ==========================================================*/
+
+  mobileBannerImage =
+  'assets/loving/pray-for-someone-mobile-banner.png';
+
+  /*==========================================================
+  CURRENT IMAGE
+  ==========================================================*/
+
+  bannerImage = '';
+
+  
+  /*==========================================================
+  WINDOW RESIZE
+  ==========================================================*/
+
+  @HostListener('window:resize')
+
+  onResize(){
+
+    this.nb8821UpdateBannerImage();
+
+  }
+
+  /*==========================================================
+  CHANGE IMAGE
+  ==========================================================*/
+
+  nb8821UpdateBannerImage(){
+
+    if(window.innerWidth <= 768){
+
+      this.bannerImage =
+      this.mobileBannerImage;
+
+    }
+
+    else{
+
+      this.bannerImage =
+      this.desktopBannerImage;
+
+    }
+
+  }
+
+
 
 
 constructor(
   private cdr: ChangeDetectorRef
-) {}
+   
+) {this.nb8821UpdateBannerImage();}
 
   //----------------------------------------
   // Active Tab

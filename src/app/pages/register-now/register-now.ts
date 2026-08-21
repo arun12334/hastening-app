@@ -33,7 +33,7 @@ export class RegisterNow {
     buttonIcon: 'bi bi-person-plus-fill',
 
     backgroundImage:
-      'assets/worshiping/worshiping-christ-through-music-banner.png'
+      'assets/worshiping/worshiping-christ-through-music-banner1.png'
 
   };
 

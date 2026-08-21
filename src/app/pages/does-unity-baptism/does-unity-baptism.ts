@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Header } from '../../components/header/header';
+import { Component, HostListener, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-does-unity-baptism',
@@ -10,9 +11,81 @@ import { Header } from '../../components/header/header';
   styleUrl: './does-unity-baptism.scss',
 })
 export class DoesUnityBaptism {
-   bannerImage =
-'assets/does-unity/does-unity-baptism-banner.png';
  
+/*==========================================================
+INVITATION TO UNITY BANNER IMAGE X94
+==========================================================*/
+
+invitationToUnityBannerImageX94 =
+'assets/invitation/invitation-to-unity-banner.png';
+
+
+
+
+
+ /*==========================================================
+  DESKTOP IMAGE
+  ==========================================================*/
+
+  desktopBannerImage =
+  'assets/does-unity/does-unity-baptism-banner.png';
+
+  /*==========================================================
+  MOBILE IMAGE
+  ==========================================================*/
+
+  mobileBannerImage =
+  'assets/does-unity/does-unity-baptism-mbile-banner.png';
+
+  /*==========================================================
+  CURRENT IMAGE
+  ==========================================================*/
+
+  bannerImage = '';
+
+  /*==========================================================
+  INIT
+  ==========================================================*/
+
+  ngOnInit(){
+
+    this.nb8821UpdateBannerImage();
+
+  }
+
+  /*==========================================================
+  WINDOW RESIZE
+  ==========================================================*/
+
+  @HostListener('window:resize')
+
+  onResize(){
+
+    this.nb8821UpdateBannerImage();
+
+  }
+
+  /*==========================================================
+  CHANGE IMAGE
+  ==========================================================*/
+
+  nb8821UpdateBannerImage(){
+
+    if(window.innerWidth <= 768){
+
+      this.bannerImage =
+      this.mobileBannerImage;
+
+    }
+
+    else{
+
+      this.bannerImage =
+      this.desktopBannerImage;
+
+    }
+
+  }
 
   //====================================================
   // HERO BANNER

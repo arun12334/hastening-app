@@ -15,35 +15,75 @@ export class Home implements OnInit {
 
   constructor(
   private cdr: ChangeDetectorRef
-) {}
+) {    this.nb8821UpdateBannerImage();}
 
-  bannerData = {
 
-    id: "xd823-home-banner-yu822982",
 
-    imageDesktop: "assets/home/home-header.jpg",
 
-    imageMobile: "assets/home/mobile-view.png",
+ /*==========================================================
+  DESKTOP IMAGE
+  ==========================================================*/
 
-    icon: "bi bi-heart-fill",
+  desktopBannerImage =
+  'assets/home/home-banner.png';
 
-    titleLine1: "Come, O Thou",
+  /*==========================================================
+  MOBILE IMAGE
+  ==========================================================*/
 
-    titleLine2: "King of Kings",
+  mobileBannerImage =
+  'assets/home/home-header-mobile.png';
 
-    subTitleOne: "United in Christ. Strengthened by Scripture.",
+  /*==========================================================
+  CURRENT IMAGE
+  ==========================================================*/
 
-    subTitleTwo: "Gathered in Love.",
+  bannerImage = '';
 
-    highlight: "Hastening the Zion of God."
+  /*==========================================================
+  INIT
+  ==========================================================*/
+ 
+  /*==========================================================
+  WINDOW RESIZE
+  ==========================================================*/
 
-  };
+  @HostListener('window:resize')
 
-  bannerImage: string = '';
+  onResize(){
+
+    this.nb8821UpdateBannerImage();
+
+  }
+
+  /*==========================================================
+  CHANGE IMAGE
+  ==========================================================*/
+
+  nb8821UpdateBannerImage(){
+
+    if(window.innerWidth <= 768){
+
+      this.bannerImage =
+      this.mobileBannerImage;
+
+    }
+
+    else{
+
+      this.bannerImage =
+      this.desktopBannerImage;
+
+    }
+
+  }
+
+
+
+ 
 
   ngOnInit(): void {
 
-    this.updateBannerImage();
       this.updateCurrentDate();
 
   }
@@ -63,23 +103,7 @@ export class Home implements OnInit {
 
 }
 
-  @HostListener('window:resize')
-  onResize(): void {
-
-    this.updateBannerImage();
-
-  }
-
-  updateBannerImage(): void {
-
-    this.bannerImage =
-      window.innerWidth <= 768
-        ? this.bannerData.imageMobile
-        : this.bannerData.imageDesktop;
-
-  }
-
-
+  
 
 
 jesusMessages = [
