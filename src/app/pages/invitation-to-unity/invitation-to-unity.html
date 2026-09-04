@@ -1,7 +1,9 @@
 <app-header></app-header>
+
+
 <!--==========================================================
-INVITATION TO UNITY BANNER SECTION X94
-===========================================================-->
+INVITATION TO UNITY BANNER
+==========================================================-->
 
 <section class="Neighborhood-Bb-Events-Banner">
 
@@ -9,768 +11,843 @@ INVITATION TO UNITY BANNER SECTION X94
         class="Neighborhood-Bb-Events-Banner-Image"
         [style.background-image]="'url(' + bannerImage + ')'">
 
-    
-    </div>
-
-</section>
-
- <!--==========================================================
-BOOK OF MORMON UNITY SECTION X96
-===========================================================-->
-
-<section class="Book-Of-Mormon-Unity-Section-X96">
-
-    <div class="container-fluid">
-
-        <div class="row g-4 justify-content-center">
-
-            @for(card of bookOfMormonUnityCardsX96; track card.id){
-
-            <div class="col-xl-4 col-lg-6">
-
-                <!--======================================
-                CARD
-                =======================================-->
-
-                <div class="Book-Of-Mormon-Unity-Card-X96">
-
-                    <!--======================================
-                    HEADER
-                    =======================================-->
-
-                    <div class="Book-Of-Mormon-Unity-Header-X96">
-
-                        <div class="Book-Of-Mormon-Unity-Icon-X96">
-
-                            <i
-
-                                [class]="card.icon"
-
-                                [style.color]="card.iconColor">
-
-                            </i>
-
-                        </div>
-
-                        <div class="Book-Of-Mormon-Unity-Header-Content-X96">
-
-                            <h3 class="Book-Of-Mormon-Unity-Title-X96">
-
-                                {{card.title}}
-
-                            </h3>
-
-                            <p class="Book-Of-Mormon-Unity-Description-X96">
-
-                                {{card.description}}
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    <!--======================================
-                    CARD 1
-                    =======================================-->
-
-                    @if(card.type=='believers'){
-
-                    <div class="Book-Of-Mormon-Unity-Body-X96">
-
-                        @for(member of card.members ?? []; track member.id){
-
-                        <div class="Book-Of-Mormon-Unity-List-Item-X96">
-
-                            <i
-
-                                [class]="member.icon"
-
-                                [style.color]="card.iconColor">
-
-                            </i>
-
-                            <span>
-
-                                {{member.text}}
-
-                            </span>
-
-                        </div>
-
-                        }
-
-                        <div class="Book-Of-Mormon-Unity-Verse-X96">
-
-                            {{card.verse}}
-
-                        </div>
-
-                        <div class="Book-Of-Mormon-Unity-Scripture-X96">
-
-                            {{card.scripture}}
-
-                        </div>
-
-                        <img
-
-                            [src]="card.image"
-
-                            [alt]="card.imageAlt"
-
-                            class="Book-Of-Mormon-Unity-Image-X96">
-
-                    </div>
-
-                    }
-
-                    <!--======================================
-                    CARD 2
-                    =======================================-->
-
-                    @if(card.type=='covenant'){
-
-                    <div class="Book-Of-Mormon-Unity-Body-X96">
-
-                        <div class="Book-Of-Mormon-Unity-Two-Box-Wrapper-X96">
-
-                            <!-- LEFT -->
-
-                            <div class="Book-Of-Mormon-Unity-Info-Box-X96">
-
-                                <h5>
-
-                                    {{card.leftBox?.title}}
-
-                                </h5>
-
-                                <p>
-
-                                    {{card.leftBox?.subtitle}}
-
-                                </p>
-
-                                <strong>
-
-                                    {{card.leftBox?.location}}
-
-                                </strong>
-
-                                <i
-
-                                    [class]="card.leftBox?.icon">
-
-                                </i>
-
-                            </div>
-
-                            <!-- RIGHT -->
-
-                            <div class="Book-Of-Mormon-Unity-Info-Box-X96">
-
-                                <h5>
-
-                                    {{card.rightBox?.title}}
-
-                                </h5>
-
-                                <p>
-
-                                    {{card.rightBox?.subtitle}}
-
-                                </p>
-
-                                <strong>
-
-                                    {{card.rightBox?.location}}
-
-                                </strong>
-
-                                <i
-
-                                    [class]="card.rightBox?.icon">
-
-                                </i>
-
-                            </div>
-
-                        </div>
-
-                        @for(point of card.covenantPoints ?? []; track point.id){
-
-                        <div class="Book-Of-Mormon-Unity-List-Item-X96">
-
-                            <i
-
-                                [class]="point.icon">
-
-                            </i>
-
-                            <span>
-
-                                {{point.text}}
-
-                            </span>
-
-                        </div>
-
-                        }
-
-                        <div class="Book-Of-Mormon-Unity-Scripture-X96">
-
-                            {{card.scripture}}
-
-                        </div>
-
-                        <img
-
-                            [src]="card.image"
-
-                            [alt]="card.imageAlt"
-
-                            class="Book-Of-Mormon-Unity-Image-X96">
-
-                    </div>
-
-                    }
-
-                    <!--======================================
-                    CARD 3
-                    =======================================-->
-
-                    @if(card.type=='fulfillment'){
-
-                    <div class="Book-Of-Mormon-Unity-Body-X96">
-
-                        <div class="Book-Of-Mormon-Unity-Highlight-Box-X96">
-
-                            <i
-
-                                [class]="card.topBox?.icon">
-
-                            </i>
-
-                            <div>
-
-                                <h5>
-
-                                    {{card.topBox?.title}}
-
-                                </h5>
-
-                                <p>
-
-                                    {{card.topBox?.text}}
-
-                                </p>
-
-                            </div>
-
-                        </div>
-
-                        <div class="Book-Of-Mormon-Unity-Highlight-Box-X96">
-
-                            <i
-
-                                [class]="card.middleBox?.icon">
-
-                            </i>
-
-                            <div>
-
-                                <h5>
-
-                                    {{card.middleBox?.title}}
-
-                                </h5>
-
-                                <p>
-
-                                    {{card.middleBox?.text}}
-
-                                </p>
-
-                            </div>
-
-                        </div>
-
-                        <div class="Book-Of-Mormon-Unity-Testimony-X96">
-
-                            <i
-
-                                [class]="card.testimony?.icon">
-
-                            </i>
-
-                            <h5>
-
-                                {{card.testimony?.title}}
-
-                            </h5>
-
-                            <p>
-
-                                {{card.testimony?.description}}
-
-                            </p>
-
-                        </div>
-
-                        <div class="Book-Of-Mormon-Unity-Image-Grid-X96">
-
-                            <img
-
-                                [src]="card.imageOne"
-
-                                alt="Image One">
-
-                            <img
-
-                                [src]="card.imageTwo"
-
-                                alt="Image Two">
-
-                                   <img
-
-                                [src]="card.imageThree"
-
-                                alt="Image Two">
-
-                                 <img
-
-                                [src]="card.imageFour"
-
-                                alt="Image Two">
-
-                        </div>
-
-                    </div>
-
-                    }
-
-                    <!--======================================
-                    FOOTER
-                    =======================================-->
-
-                    <div class="Book-Of-Mormon-Unity-Footer-X96">
-
-                        <button
-
-                            type="button"
-
-                            class="Book-Of-Mormon-Unity-Button-X96"
-
-                            [style.background]="card.buttonColor"
-
-                            (click)="bookOfMormonUnityButtonClickX96(card)">
-
-                            {{card.buttonText}}
-
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            }
-
-        </div>
-
     </div>
 
 </section>
 
 
 <!--==========================================================
-BOOK OF MORMON PATH SECTION X97
-===========================================================-->
-
-<section class="Book-Of-Mormon-Path-Section-X97">
-
-    <div class="container-fluid">
-
-        <div class="row g-4">
-
-            @for(card of bookOfMormonPathCardsX97; track card.id){
-
-            <div class="col-xl-4 col-lg-6">
-
-                <!--======================================
-                CARD
-                =======================================-->
-
-                <div class="Book-Of-Mormon-Path-Card-X97">
-
-                    <!--======================================
-                    HEADER
-                    =======================================-->
-
-                    <div class="Book-Of-Mormon-Path-Header-X97">
-
-                        <div class="Book-Of-Mormon-Path-Icon-X97">
-
-                            <i
-
-                                [class]="card.icon"
-
-                                [style.color]="card.iconColor">
-
-                            </i>
-
-                        </div>
-
-                        <div class="Book-Of-Mormon-Path-Header-Content-X97">
-
-                            <h3 class="Book-Of-Mormon-Path-Title-X97">
-
-                                {{card.title}}
-
-                            </h3>
-
-                            @if(card.scripture){
-
-                            <div class="Book-Of-Mormon-Path-Scripture-X97">
-
-                                {{card.scripture}}
-
-                            </div>
-
-                            }
-
-                            @if(card.description){
-
-                            <p class="Book-Of-Mormon-Path-Description-X97">
-
-                                {{card.description}}
-
-                            </p>
-
-                            }
-
-                            @if(card.subtitle){
-
-                            <div class="Book-Of-Mormon-Path-Subtitle-X97">
-
-                                {{card.subtitle}}
-
-                            </div>
-
-                            }
-
-                        </div>
-
-                    </div>
-
-                    <!--======================================
-                    CARD 1
-                    =======================================-->
-
-                    @if(card.type=='churches'){
-
-                    <div class="Book-Of-Mormon-Path-Body-X97">
-
-                        <div class="Book-Of-Mormon-Path-Image-And-Quote-X97">
-
-                            <img
-
-                                [src]="card.image"
-
-                                class="Book-Of-Mormon-Path-Image-X97"
-
-                                alt="Churches">
-
-                            <div class="Book-Of-Mormon-Path-Quote-X97">
-
-                                {{card.quote}}
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    }
-
-                    <!--======================================
-                    CARD 2
-                    =======================================-->
-
-                    @if(card.type=='unity'){
-
-                    <div class="Book-Of-Mormon-Path-Body-X97">
-
-                        @for(item of card.checklist ?? []; track item.id){
-
-                        <div class="Book-Of-Mormon-Path-Checklist-Item-X97">
-
-                            <i
-
-                                [class]="item.icon"
-
-                                [style.color]="card.iconColor">
-
-                            </i>
-
-                            <span>
-
-                                {{item.text}}
-
-                            </span>
-
-                        </div>
-
-                        }
-
-                        <img
-
-                            [src]="card.image"
-
-                            class="Book-Of-Mormon-Path-Image-X97"
-
-                            alt="Unity">
-
-                    </div>
-
-                    }
-
-                    <!--======================================
-                    CARD 3
-                    =======================================-->
-
-                    @if(card.type=='prophecy'){
-
-                    <div class="Book-Of-Mormon-Path-Body-X97">
-
-                        @for(item of card.promises ?? []; track item.id){
-
-                        <div class="Book-Of-Mormon-Path-Promise-Item-X97">
-
-                            <i
-
-                                [class]="item.icon"
-
-                                [style.color]="card.iconColor">
-
-                            </i>
-
-                            <span>
-
-                                {{item.text}}
-
-                            </span>
-
-                        </div>
-
-                        }
-
-                        <img
-
-                            [src]="card.image"
-
-                            class="Book-Of-Mormon-Path-Image-X97"
-
-                            alt="Prophecy">
-
-                    </div>
-
-                    }
-
-                    <!--======================================
-                    FOOTER
-                    =======================================-->
-
-                    <div class="Book-Of-Mormon-Path-Footer-X97">
-
-                        <button
-
-                            type="button"
-
-                            class="Book-Of-Mormon-Path-Button-X97"
-
-                            [style.background]="card.buttonColor"
-
-                            (click)="bookOfMormonPathButtonClickX97(card)">
-
-                            {{card.buttonText}}
-
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            }
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!--==========================================================
-START : uy7676a
-VISION GRID SECTION
-END : olk7866s
+UNITY 9 CARD GRID
 ==========================================================-->
 
-<section
-id="uy7676a-vision-grid-olk7866s"
-class="uy7676a-vision-grid-olk7866s">
+<section class="unity-grid-x99">
 
     <div class="container">
 
-        <div class="row row-cols-1 row-cols-lg-2 g-4">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
 
-            @for(card of visionCards; track card.id){
+
+            @for(card of unityGridCardsX99; track card.id) {
+
+
+            <!--================================================
+            COMMON CARD COLUMN
+            =================================================-->
 
             <div class="col">
 
-                <div class="uy7676a-card-olk7866s">
 
-                    <!--==============================
+                <!--================================================
+                COMMON CARD
+                =================================================-->
+
+                <div
+                    class="unity-common-card-x99"
+                    (click)="unityGridCardClickX99(card)">
+
+
+                    <!--================================================
                     CARD HEADER
-                    ==============================-->
+                    =================================================-->
 
-                    <div class="uy7676a-card-header-olk7866s">
+                    <div class="unity-common-card-header-x99">
 
-                        <div
-                        class="uy7676a-card-title-area-olk7866s">
 
-                            <div
-                            class="uy7676a-card-icon-olk7866s">
+                        <div class="unity-common-card-icon-x99">
 
-                                <i [class]="card.icon"></i>
+                            <i
+                                [class]="card.icon"
+                                [style.color]="card.iconColor">
+                            </i>
 
-                            </div>
+                        </div>
 
-                            <h3
-                            class="uy7676a-card-title-olk7866s">
 
-                                {{card.title}}
+                        <div class="unity-common-card-header-content-x99">
+
+
+                            <h3 class="unity-common-card-title-x99">
+
+                                {{ card.title }}
 
                             </h3>
 
-                        </div>
 
-                    </div>
+                            @if(card.subtitle) {
 
-                    <!--==============================
-                    BODY
-                    ==============================-->
+                                <div class="unity-common-card-subtitle-x99">
 
-                    <div
-                    class="uy7676a-card-body-olk7866s">
-
-                        <div
-                        class="row">
-
-                            <!-- LEFT -->
-
-                            <div
-                            class="col-lg-7 col-12">
-
-                                <ul
-                                class="uy7676a-list-olk7866s">
-
-                                    @for(item of card.points; track $index){
-
-                                    <li>
-
-                                        <span
-                                        class="uy7676a-number-olk7866s">
-
-                                            {{$index+1}}
-
-                                        </span>
-
-                                        <span
-                                        class="uy7676a-text-olk7866s">
-
-                                            {{item}}
-
-                                        </span>
-
-                                    </li>
-
-                                    }
-
-                                </ul>
-
-                            </div>
-
-                            <!-- RIGHT -->
-
-                            <div
-                            class="col-lg-5 col-12">
-
-                                <div
-                                class="uy7676a-image-grid-olk7866s">
-
-                                    @for(image of card.images; track $index){
-
-                                    <img
-                                    [src]="image"
-                                    class="img-fluid rounded"
-                                    alt="Vision">
-
-                                    }
+                                    {{ card.subtitle }}
 
                                 </div>
 
-                            </div>
+                            }
+
+
+                            @if(card.scripture) {
+
+                                <div class="unity-common-card-scripture-x99">
+
+                                    {{ card.scripture }}
+
+                                </div>
+
+                            }
+
+
+                            @if(card.description) {
+
+                                <p class="unity-common-card-description-x99">
+
+                                    {{ card.description }}
+
+                                </p>
+
+                            }
+
 
                         </div>
 
                     </div>
 
-                    <!--==============================
-                    FOOTER QUOTE
-                    ==============================-->
 
-                    <div
-                    class="uy7676a-footer-olk7866s">
+                    <!--================================================
+                    CARD BODY
+                    =================================================-->
 
-                        <p>
+                    <div class="unity-common-card-body-x99">
 
-                            "{{card.quote}}"
 
-                        </p>
+                        <!--================================================
+                        CARD 1
+                        BOOK OF MORMON BELIEVERS
+                        =================================================-->
+
+                        @if(card.type === 'believers') {
+
+                            <div class="unity-common-card-points-x99">
+
+
+                                @for(member of card.members ?? []; track member.id) {
+
+                                    <div class="unity-common-card-point-x99">
+
+                                       <i
+          class="bi bi-check-circle-fill unity-fellowship-check-x99"
+          [style.color]="card.iconColor">
+        </i>
+
+                                        <span class="unity-common-card-point-text-x99">
+
+                                            {{ member.text }}
+
+                                        </span>
+
+                                    </div>
+
+                                }
+
+
+                            </div>
+
+
+                            @if(card.verse) {
+
+                                <div class="unity-common-card-quote-x99">
+
+                                    <i class="bi bi-quote"></i>
+
+                                    <p>
+
+                                        {{ card.verse }}
+
+                                    </p>
+
+                                </div>
+
+                            }
+
+
+                            <div class="unity-common-card-single-image-x99">
+
+                                <img
+                                    [src]="card.image"
+                                    [alt]="card.imageAlt"
+                                    class="unity-common-card-image-x99">
+
+                            </div>
+
+
+                        }
+
+
+                        <!--================================================
+                        CARD 2
+                        TWO PEOPLES ONE COVENANT
+                        =================================================-->
+
+                        @if(card.type === 'covenant') {
+
+
+                            <div class="unity-covenant-boxes-x99">
+
+
+                                <!-- LEFT BOX -->
+
+                                <div class="unity-covenant-box-x99">
+
+
+                                    <h5>
+
+                                        {{ card.leftBox?.title }}
+
+                                    </h5>
+
+
+                                    <p>
+
+                                        {{ card.leftBox?.subtitle }}
+
+                                    </p>
+
+
+                                    <strong>
+
+                                        {{ card.leftBox?.location }}
+
+                                    </strong>
+
+
+                                    <i
+                                        [class]="card.leftBox?.icon">
+                                    </i>
+
+
+                                </div>
+
+
+                                <!-- RIGHT BOX -->
+
+                                <div class="unity-covenant-box-x99">
+
+
+                                    <h5>
+
+                                        {{ card.rightBox?.title }}
+
+                                    </h5>
+
+
+                                    <p>
+
+                                        {{ card.rightBox?.subtitle }}
+
+                                    </p>
+
+
+                                    <strong>
+
+                                        {{ card.rightBox?.location }}
+
+                                    </strong>
+
+
+                                    <i
+                                        [class]="card.rightBox?.icon">
+                                    </i>
+
+
+                                </div>
+
+
+                            </div>
+
+
+                            <div class="unity-common-card-points-x99">
+
+
+                                @for(point of card.covenantPoints ?? []; track point.id) {
+
+                                    <div class="unity-common-card-point-x99">
+
+                                        <i
+                                            class="unity-common-card-check-x99"
+                                            [class]="point.icon"
+                                            [style.color]="card.iconColor">
+                                        </i>
+
+                                        <span class="unity-common-card-point-text-x99">
+
+                                            {{ point.text }}
+
+                                        </span>
+
+                                    </div>
+
+                                }
+
+
+                            </div>
+
+
+                            <div class="unity-common-card-scripture-x99">
+
+                                {{ card.scripture }}
+
+                            </div>
+
+
+                            <div class="unity-common-card-single-image-x99">
+
+                                <img
+                                    [src]="card.image"
+                                    [alt]="card.imageAlt"
+                                    class="unity-common-card-image-x99">
+
+                            </div>
+
+
+                        }
+
+
+                        <!--================================================
+                        CARD 3
+                        A FULFILLMENT IN OUR DAY
+                        =================================================-->
+
+                        @if(card.type === 'fulfillment') {
+
+
+                            <div class="unity-highlight-box-x99">
+
+
+                                <i
+                                    [class]="card.topBox?.icon">
+                                </i>
+
+
+                                <div>
+
+                                    <h5>
+
+                                        {{ card.topBox?.title }}
+
+                                    </h5>
+
+
+                                    <p>
+
+                                        {{ card.topBox?.text }}
+
+                                    </p>
+
+                                </div>
+
+
+                            </div>
+
+
+                            <div class="unity-highlight-box-x99">
+
+
+                                <i
+                                    [class]="card.middleBox?.icon">
+                                </i>
+
+
+                                <div>
+
+                                    <h5>
+
+                                        {{ card.middleBox?.title }}
+
+                                    </h5>
+
+
+                                    <p>
+
+                                        {{ card.middleBox?.text }}
+
+                                    </p>
+
+                                </div>
+
+
+                            </div>
+
+                             @for (point of card.points ?? []; track $index) {
+
+      <div class="unity-fellowship-point-x99 mb-3">
+
+        <i
+          class="bi bi-check-circle-fill unity-fellowship-check-x99"
+          [style.color]="card.iconColor">
+        </i>
+
+        <span class="unity-fellowship-point-text-x99">
+          {{ point }}
+        </span>
+
+      </div>
+
+    }
+
+
+
+                            <div class="unity-testimony-x99">
+
+
+                                <i
+                                    [class]="card.testimony?.icon">
+                                </i>
+
+
+                                <div>
+
+                                    <h5>
+
+                                        {{ card.testimony?.title }}
+
+                                    </h5>
+
+
+                                    <p>
+
+                                        {{ card.testimony?.description }}
+
+                                    </p>
+
+                                </div>
+
+
+                            </div>
+
+
+                            <div class="unity-common-card-image-grid-x99">
+
+
+                                @for(image of card.images ?? []; track $index) {
+
+                                    <img
+                                        [src]="image"
+                                        class="unity-common-card-image-x99"
+                                        alt="A Fulfillment in Our Day">
+
+                                }
+
+
+                            </div>
+
+
+                        }
+
+
+                        <!--================================================
+                        CARD 4
+                        COMMON VISION
+                        =================================================-->
+
+                        @if(card.type === 'vision') {
+
+
+                            <div class="unity-vision-layout-x99">
+
+
+                                <div class="unity-vision-points-x99">
+
+
+                                    @for(point of card.points ?? []; track $index) {
+
+                                        <div class="unity-number-point-x99">
+
+
+                                            <span class="unity-number-x99">
+
+                                                {{ $index + 1 }}
+
+                                            </span>
+
+
+                                            <span class="unity-number-text-x99">
+
+                                                {{ point }}
+
+                                            </span>
+
+
+                                        </div>
+
+                                    }
+
+
+                                </div>
+
+
+                                <div class="unity-vision-images-x99">
+
+
+                                    @for(image of card.images ?? []; track $index) {
+
+                                        <img
+                                            [src]="image"
+                                            alt="Common Vision">
+
+                                    }
+
+
+                                </div>
+
+
+                            </div>
+
+
+                            @if(card.quote) {
+
+                                <div class="unity-common-card-quote-x99">
+
+                                    <i class="bi bi-quote"></i>
+
+                                    <p>
+
+                                        {{ card.quote }}
+
+                                    </p>
+
+                                </div>
+
+                            }
+
+
+                        }
+
+
+                        <!--================================================
+                        CARD 5
+                        TWO CHURCHES
+                        =================================================-->
+
+                        @if(card.type === 'churches') {
+                                @for (point of card.points ?? []; track $index) {
+
+      <div class="unity-fellowship-point-x99">
+
+        <i
+          class="bi bi-check-circle-fill unity-fellowship-check-x99"
+          [style.color]="card.iconColor">
+        </i>
+
+        <span class="unity-fellowship-point-text-x99">
+          {{ point }}
+        </span>
+
+      </div>
+
+    }
+
+
+                            <div class="unity-churches-layout-x99">
+
+
+                                <div class="unity-church-image-wrapper-x99">
+
+                                    <img
+                                        [src]="card.image"
+                                        [alt]="card.imageAlt"
+                                        class="unity-church-image-x99">
+
+                                </div>
+
+
+                                <div class="unity-church-quote-x99">
+
+                                    <i class="bi bi-quote"></i>
+
+                                    <p>
+
+                                        {{ card.quote }}
+
+                                    </p>
+
+                                </div>
+
+
+                            </div>
+
+
+                        }
+
+
+                        <!--================================================
+                        CARD 6
+                        COVENANT UNITY
+                        =================================================-->
+
+                        @if(card.type === 'unity') {
+
+
+                            <div class="unity-common-card-points-x99">
+
+
+                                @for(item of card.checklist ?? []; track item.id) {
+
+                                    <div class="unity-common-card-point-x99">
+
+                                        <i
+                                            class="unity-common-card-check-x99"
+                                            [class]="item.icon"
+                                            [style.color]="card.iconColor">
+                                        </i>
+
+                                        <span class="unity-common-card-point-text-x99">
+
+                                            {{ item.text }}
+
+                                        </span>
+
+                                    </div>
+
+                                }
+
+
+                            </div>
+
+
+                            <div class="unity-common-card-single-image-x99">
+
+                                <img
+                                    [src]="card.image"
+                                    [alt]="card.imageAlt"
+                                    class="unity-common-card-image-x99">
+
+                            </div>
+
+
+                        }
+
+
+                        <!--================================================
+                        CARD 7
+                        PROPHETIC PROMISES
+                        =================================================-->
+
+                        @if(card.type === 'prophecy') {
+
+
+                            <div class="unity-common-card-points-x99">
+
+
+                                @for(item of card.promises ?? []; track item.id) {
+
+                                    <div class="unity-common-card-point-x99">
+ <i
+          class="bi bi-check-circle-fill unity-fellowship-check-x99"
+          [style.color]="card.iconColor">
+        </i>
+
+                                        <span class="unity-common-card-point-text-x99">
+
+                                            {{ item.text }}
+
+                                        </span>
+
+                                    </div>
+
+                                }
+
+
+                            </div>
+
+
+                            <div class="unity-common-card-single-image-x99">
+
+                                <img
+                                    [src]="card.image"
+                                    [alt]="card.imageAlt"
+                                    class="unity-common-card-image-x99">
+
+                            </div>
+
+
+                        }
+
+
+                        <!--================================================
+                        CARD 8
+                        PRESENT FELLOWSHIP
+                        =================================================-->
+@if (card.type === 'fellowship') {
+
+  <div class="unity-fellowship-description-x99">
+    {{ card.description }}
+  </div>
+
+  <div class="unity-fellowship-points-x99">
+
+    @for (point of card.points ?? []; track $index) {
+
+      <div class="unity-fellowship-point-x99">
+
+        <i
+          class="bi bi-check-circle-fill unity-fellowship-check-x99"
+          [style.color]="card.iconColor">
+        </i>
+
+        <span class="unity-fellowship-point-text-x99">
+          {{ point }}
+        </span>
+
+      </div>
+
+    }
+
+  </div>
+
+  <div class="unity-fellowship-images-x99">
+
+    @for (image of card.images ?? []; track $index) {
+
+      <div class="unity-fellowship-image-item-x99">
+
+        <img
+          [src]="image"
+          alt="Present Fellowship"
+          class="unity-fellowship-image-x99">
+
+      </div>
+
+    }
+
+  </div>
+
+}
+                        <!--================================================
+                        CARD 9
+                        THE WORK BEFORE US
+                        =================================================-->
+
+                        @if(card.type === 'work') {
+
+
+                            <div class="unity-work-layout-x99">
+
+
+                                <div class="unity-work-points-x99">
+
+
+                                    @for(point of card.points ?? []; track $index) {
+
+                                        <div class="unity-work-point-x99">
+
+
+                                            <span class="unity-work-number-x99">
+
+                                                {{ $index + 1 }}
+
+                                            </span>
+
+
+                                            <span class="unity-work-text-x99">
+
+                                                {{ point }}
+
+                                            </span>
+
+
+                                        </div>
+
+                                    }
+
+
+                                </div>
+
+
+                             
+
+
+                            </div>
+
+   <div class="unity-work-image-x99">
+
+
+                                    @for(image of card.images ?? []; track $index) {
+
+                                        <img
+                                            [src]="image"
+                                            alt="The Work Before Us">
+
+                                    }
+
+
+                                </div>
+                        }
+
 
                     </div>
 
+
+                    <!--================================================
+                    QUOTE
+                    =================================================-->
+
+                    @if(
+                        card.quote &&
+                        card.type !== 'believers' &&
+                        card.type !== 'churches' &&
+                        card.type !== 'vision'
+                    ) {
+
+                        <div class="unity-common-card-bottom-quote-x99">
+
+                            <i class="bi bi-quote"></i>
+
+                            <p>
+
+                                {{ card.quote }}
+
+                            </p>
+
+                        </div>
+
+                    }
+
+
+                    <!--================================================
+                    BUTTON
+                    =================================================-->
+
+                    @if(card.buttonText) {
+
+                        <div class="unity-common-card-footer-x99">
+
+                            <button
+                                type="button"
+                                class="unity-common-card-button-x99"
+                                [style.background]="card.buttonColor"
+                                (click)="$event.stopPropagation(); unityGridButtonClickX99(card)">
+
+                                {{ card.buttonText }}
+
+                            </button>
+
+                        </div>
+
+                    }
+
+
                 </div>
+
 
             </div>
 
+
             }
+
 
         </div>
 
     </div>
 
 </section>
-
-<!--==========================================================
-END : uy7676a
-END : olk7866s
-==========================================================-->
-
-
-
-
-
-
-<!--==========================================================
-START : qw9821
-MISSION STRIP
-END : xz7744
-==========================================================-->
 
 <section
 id="qw9821-mission-strip-xz7744"
@@ -897,62 +974,64 @@ class="qw9821-mission-strip-xz7744">
 
 </section>
 
+
 <!--==========================================================
-END : qw9821
-END : xz7744
+UNITY SCRIPTURE FOOTER
 ==========================================================-->
-
-
-
-
-
-
-
-
-
 
 <section class="Unity-Scripture-Footer-Section-X98">
 
+
     <div class="Unity-Scripture-Footer-Container-X98">
 
+
         <div class="Unity-Scripture-Footer-Top-X98">
+
 
             <div class="Unity-Scripture-Footer-Logo-X98">
 
                 <img
                     [src]="unityFooterX98.logo"
-                    alt="Logo">
+                    alt="Unity Footer Logo">
 
             </div>
+
 
             <div class="Unity-Scripture-Footer-Verse-X98">
 
-                "{{unityFooterX98.verse}}"
+                "{{ unityFooterX98.verse }}"
 
             </div>
+
 
             <div class="Unity-Scripture-Footer-Reference-X98">
 
-                — {{unityFooterX98.reference}}
+                — {{ unityFooterX98.reference }}
 
             </div>
 
+
         </div>
+
 
         <div class="Unity-Scripture-Footer-Bottom-X98">
 
-            @for(item of unityFooterX98.scriptures;track item.id){
 
-            <span class="Unity-Scripture-Footer-Link-X98">
+            @for(item of unityFooterX98.scriptures; track item.id) {
 
-                {{item.title}}
+                <span class="Unity-Scripture-Footer-Link-X98">
 
-            </span>
+                    {{ item.title }}
+
+                </span>
 
             }
 
+
         </div>
 
+
     </div>
+
 
 </section>

@@ -1,10 +1,1930 @@
-@media (max-width: 575.98px) {
+ @media (max-width: 575.98px) {
     .Neighborhood-Bb-Events-Banner-Image {
-<<<<<<< HEAD
-        
-=======
-        // height: 480px;
         margin-top: 10px;
->>>>>>> 4629499 (Updated website)
+        
     }
+}
+
+
+/*==========================================================
+MAIN 9 CARD GRID
+==========================================================*/
+
+.unity-grid-x99 {
+    width: 100%;
+    padding: 45px 0 65px;
+    background:
+        linear-gradient(
+            180deg,
+            #f5f7fa 0%,
+            #eef2f6 100%
+        );
+}
+
+.unity-grid-x99 .container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+/*==========================================================
+BOOTSTRAP ROW
+==========================================================*/
+
+.unity-grid-x99 .row {
+    align-items: stretch;
+}
+
+.unity-grid-x99 .col {
+    display: flex;
+}
+
+
+/*==========================================================
+COMMON CARD
+==========================================================*/
+
+.unity-common-card-x99 {
+    width: 100%;
+    height: 100%;
+    min-height: 650px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #ffffff;
+
+    border: 1px solid #dfe4ea;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 18px rgba(20, 55, 100, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+
+    cursor: pointer;
+}
+
+.unity-common-card-x99:hover {
+
+    transform: translateY(-5px);
+
+    border-color: #c5962c;
+
+    box-shadow:
+        0 14px 32px rgba(20, 55, 100, 0.15);
+
+}
+
+
+/*==========================================================
+CARD HEADER
+==========================================================*/
+
+.unity-common-card-header-x99 {
+
+    min-height: 112px;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 14px;
+
+    padding: 17px 18px 14px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e8ebef;
+
+    flex-shrink: 0;
+
+}
+
+
+/*==========================================================
+ICON
+==========================================================*/
+
+.unity-common-card-icon-x99 {
+
+    width: 40px;
+    min-width: 40px;
+
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #f7f1e2;
+
+    font-size: 19px;
+
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.05);
+
+}
+
+
+/*==========================================================
+HEADER CONTENT
+==========================================================*/
+
+.unity-common-card-header-content-x99 {
+
+    flex: 1;
+
+    min-width: 0;
+
+}
+
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.unity-common-card-title-x99 {
+
+    margin: 0;
+
+    color: #123e7a;
+
+    font-family:
+        Georgia,
+        'Times New Roman',
+        serif;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+}
+
+
+/*==========================================================
+SUBTITLE
+==========================================================*/
+
+.unity-common-card-subtitle-x99 {
+
+    margin-top: 5px;
+
+    color: #b88716;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    line-height: 1.35;
+
+}
+
+
+/*==========================================================
+SCRIPTURE
+==========================================================*/
+
+.unity-common-card-scripture-x99 {
+
+    margin-top: 5px;
+
+    color: #315f9a;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    line-height: 1.35;
+
+}
+
+
+/*==========================================================
+DESCRIPTION
+==========================================================*/
+
+.unity-common-card-description-x99 {
+
+    margin: 7px 0 0;
+
+    color: #4d5663;
+
+    font-size: 16px;
+
+    line-height: 1.45;
+
+}
+
+
+/*==========================================================
+BODY
+==========================================================*/
+
+.unity-common-card-body-x99 {
+
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 17px 18px;
+
+    background: #ffffff;
+
+}
+
+
+/*==========================================================
+COMMON POINTS
+==========================================================*/
+
+.unity-common-card-points-x99 {
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+
+.unity-common-card-point-x99 {
+
+    width: 100%;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 7px;
+
+    color: #263b5b;
+
+    font-size: 16px;
+
+    line-height: 1.38;
+
+}
+
+
+.unity-common-card-check-x99 {
+
+    flex: 0 0 auto;
+
+    margin-top: 2px;
+
+    font-size: 16px;
+
+}
+
+
+.unity-common-card-point-text-x99 {
+
+    flex: 1;
+
+}
+
+
+/*==========================================================
+SINGLE IMAGE
+==========================================================*/
+
+.unity-common-card-single-image-x99 {
+
+    width: 100%;
+
+    margin-top: auto;
+
+    padding-top: 15px;
+
+    overflow: hidden;
+
+}
+
+
+.unity-common-card-image-x99 {
+
+    display: block;
+
+    width: 100%;
+
+    height: 185px;
+
+    object-fit: cover;
+
+    border-radius: 9px;
+
+    transition:
+        transform 0.4s ease;
+
+}
+
+
+.unity-common-card-x99:hover
+.unity-common-card-image-x99 {
+
+    transform: scale(1.025);
+
+}
+
+
+/*==========================================================
+QUOTE
+==========================================================*/
+
+.unity-common-card-quote-x99 {
+
+    margin-top: 13px;
+
+    padding: 11px 12px;
+
+    border: 1px solid #d5e0ed;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f4f7fa,
+            #edf2f7
+        );
+
+    color: #1b4d89;
+
+    text-align: center;
+
+}
+
+
+.unity-common-card-quote-x99 i {
+
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #c5962c;
+
+    font-size: 18px;
+
+}
+
+
+.unity-common-card-quote-x99 p {
+
+    margin: 0;
+
+    font-family:
+        Georgia,
+        'Times New Roman',
+        serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    font-style: italic;
+
+    line-height: 1.4;
+
+}
+
+
+/*==========================================================
+BOTTOM QUOTE
+==========================================================*/
+
+.unity-common-card-bottom-quote-x99 {
+
+    margin: 0 18px;
+
+    padding: 10px 12px;
+
+    border: 1px solid #d5e0ed;
+
+    border-radius: 9px;
+
+    background: #f3f6fa;
+
+    color: #1b4d89;
+
+    text-align: center;
+
+}
+
+
+.unity-common-card-bottom-quote-x99 i {
+
+    color: #c5962c;
+
+    font-size: 18px;
+
+}
+
+
+.unity-common-card-bottom-quote-x99 p {
+
+    margin: 2px 0 0;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    font-style: italic;
+
+    line-height: 1.4;
+
+}
+
+
+/*==========================================================
+FOOTER BUTTON
+==========================================================*/
+
+.unity-common-card-footer-x99 {
+
+    flex-shrink: 0;
+
+    padding: 13px 18px 17px;
+
+    background: #ffffff;
+
+    border-top: 1px solid #edf0f4;
+
+}
+
+
+.unity-common-card-button-x99 {
+
+    width: 100%;
+
+    min-height: 40px;
+
+    padding: 9px 16px;
+
+    border: 0;
+
+    border-radius: 8px;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    cursor: pointer;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+
+}
+
+
+.unity-common-card-button-x99:hover {
+
+    opacity: 0.9;
+
+    transform: translateY(-1px);
+
+}
+
+
+/*==========================================================
+CARD 2
+COVENANT BOXES
+==========================================================*/
+
+.unity-covenant-boxes-x99 {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 8px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.unity-covenant-box-x99 {
+
+    min-height: 108px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px;
+
+    text-align: center;
+
+    border: 1px solid #dce4ed;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f3f7fc,
+            #edf3f8
+        );
+
+}
+
+
+.unity-covenant-box-x99:nth-child(2) {
+
+    background:
+        linear-gradient(
+            145deg,
+            #f4f7e9,
+            #edf2df
+        );
+
+}
+
+
+.unity-covenant-box-x99 h5 {
+
+    margin: 0;
+
+    color: #15509a;
+
+    font-family:
+        Georgia,
+        'Times New Roman',
+        serif;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    line-height: 1.25;
+
+}
+
+
+.unity-covenant-box-x99:nth-child(2) h5 {
+
+    color: #2c6b34;
+
+}
+
+
+.unity-covenant-box-x99 p {
+
+    margin: 3px 0;
+
+    color: #3f4d60;
+
+    font-size: 11px;
+
+    line-height: 1.25;
+
+}
+
+
+.unity-covenant-box-x99 strong {
+
+    color: #315f9a;
+
+    font-size: 10px;
+
+    line-height: 1.2;
+
+}
+
+
+.unity-covenant-box-x99 i {
+
+    margin-top: 5px;
+
+    color: #1c5aa6;
+
+    font-size: 17px;
+
+}
+
+
+.unity-covenant-box-x99:nth-child(2) i {
+
+    color: #2c6b34;
+
+}
+
+
+/*==========================================================
+CARD 3
+HIGHLIGHT BOX
+==========================================================*/
+
+.unity-highlight-box-x99 {
+
+    width: 100%;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 10px;
+
+    padding: 11px;
+
+    margin-bottom: 9px;
+
+    border: 1px solid #d8e1ec;
+
+    border-radius: 10px;
+
+    background: #f1f5fa;
+
+}
+
+
+.unity-highlight-box-x99:nth-of-type(2) {
+
+    background: #f1f4e8;
+
+}
+
+
+.unity-highlight-box-x99 > i {
+
+    flex: 0 0 auto;
+
+    margin-top: 2px;
+
+    color: #1c5aa6;
+
+    font-size: 21px;
+
+}
+
+
+.unity-highlight-box-x99:nth-of-type(2) > i {
+
+    color: #3d7745;
+
+}
+
+
+.unity-highlight-box-x99 h5 {
+
+    margin: 0 0 3px;
+
+    color: #234f88;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+}
+
+
+.unity-highlight-box-x99 p {
+
+    margin: 0;
+
+    color: #354355;
+
+    font-size: 11px;
+
+    line-height: 1.35;
+
+}
+
+
+/*==========================================================
+CARD 3 TESTIMONY
+==========================================================*/
+
+.unity-testimony-x99 {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 9px;
+
+    padding: 12px;
+
+    margin-top: 1px;
+
+    border: 1px solid #e3c978;
+
+    border-radius: 10px;
+
+    background: #fff7df;
+
+}
+
+
+.unity-testimony-x99 > i {
+
+    flex: 0 0 auto;
+
+    margin-top: 2px;
+
+    color: #1c4f91;
+
+    font-size: 21px;
+
+}
+
+
+.unity-testimony-x99 h5 {
+
+    margin: 0 0 3px;
+
+    color: #1c4f91;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+
+.unity-testimony-x99 p {
+
+    margin: 0;
+
+    color: #32435a;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    line-height: 1.4;
+
+}
+
+
+/*==========================================================
+IMAGE GRID
+==========================================================*/
+
+.unity-common-card-image-grid-x99 {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 7px;
+
+    margin-top: auto;
+
+    padding-top: 12px;
+
+}
+
+
+.unity-common-card-image-grid-x99
+.unity-common-card-image-x99 {
+
+    width: 100%;
+
+    height: 88px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+}
+
+
+/*==========================================================
+CARD 4
+VISION
+==========================================================*/
+
+.unity-vision-layout-x99 {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.25fr)
+        minmax(125px, 0.75fr);
+
+    gap: 12px;
+
+}
+
+
+.unity-vision-points-x99 {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+
+.unity-number-point-x99 {
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 8px;
+
+    color: #263b5b;
+
+    font-size: 16px;
+
+    line-height: 1.35;
+
+}
+
+
+.unity-number-x99 {
+
+    width: 18px;
+    min-width: 18px;
+
+    height: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #123e7a;
+
+    color: #ffffff;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+}
+
+
+.unity-number-text-x99 {
+
+    flex: 1;
+
+}
+
+
+.unity-vision-images-x99 {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+
+}
+
+
+.unity-vision-images-x99 img {
+
+    width: 100%;
+
+    height: 82px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+}
+
+
+/*==========================================================
+CARD 5
+CHURCHES
+==========================================================*/
+
+.unity-churches-layout-x99 {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.15fr)
+        minmax(130px, 0.85fr);
+
+    gap: 10px;
+
+    margin-top: auto;
+
+}
+
+
+.unity-church-image-wrapper-x99 {
+
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 9px;
+
+}
+
+
+.unity-church-image-x99 {
+
+    width: 100%;
+
+    height: 145px;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 9px;
+
+}
+
+
+.unity-church-quote-x99 {
+
+    min-height: 145px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 13px;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #edf2f7,
+            #e6ebf1
+        );
+
+    color: #1b4d89;
+
+    text-align: center;
+
+}
+
+
+.unity-church-quote-x99 i {
+
+    color: #c5962c;
+
+    font-size: 20px;
+
+}
+
+
+.unity-church-quote-x99 p {
+
+    margin: 4px 0 0;
+
+    font-family:
+        Georgia,
+        'Times New Roman',
+        serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    line-height: 1.35;
+
+}
+
+
+/*==========================================================
+CARD 8
+FELLOWSHIP
+==========================================================*/
+
+.unity-fellowship-description-x99 {
+
+    color: #3c4653;
+
+    font-size: 16px;
+
+    line-height: 1.4;
+
+    margin-bottom: 10px;
+
+}
+
+
+.unity-fellowship-points-x99 {
+
+    display: none;
+
+}
+
+
+.unity-fellowship-point-x99 {
+
+    display: flex;
+
+    gap: 6px;
+
+    font-size: 11px;
+
+    line-height: 1.35;
+
+}
+
+
+.unity-fellowship-images-x99 {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 7px;
+
+    margin-top: auto;
+
+}
+
+
+.unity-fellowship-image-item-x99 {
+
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 7px;
+
+}
+
+
+.unity-fellowship-image-item-x99 img {
+
+    width: 100%;
+
+    height: 72px;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 7px;
+
+}
+
+
+/*==========================================================
+CARD 9
+WORK BEFORE US
+==========================================================*/
+
+.unity-work-layout-x99 {
+
+    width: 100%;
+
+    display: grid;
+
+    // grid-template-columns:
+    //     minmax(0, 1.15fr)
+    //     minmax(150px, 0.85fr);
+
+    gap: 12px;
+
+    height: 100%;
+
+}
+
+
+.unity-work-points-x99 {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+
+}
+
+
+.unity-work-point-x99 {
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 7px;
+
+    color: #263b5b;
+
+    font-size: 16px;
+
+    line-height: 1.3;
+
+}
+
+
+.unity-work-number-x99 {
+
+    width: 18px;
+    min-width: 18px;
+
+    height: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #123e7a;
+
+    color: #ffffff;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+}
+
+
+.unity-work-text-x99 {
+
+    flex: 1;
+
+}
+
+
+.unity-work-image-x99 {
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+
+}
+
+
+.unity-work-image-x99 img {
+
+    width: 100%;
+
+    height: 215px;
+
+    object-fit: cover;
+
+    border-radius: 9px;
+
+}
+
+
+/*==========================================================
+FOOTER
+==========================================================*/
+
+ 
+
+
+.Unity-Scripture-Footer-Container-X98 {
+
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+}
+
+
+.Unity-Scripture-Footer-Top-X98 {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    text-align: center;
+
+}
+
+
+.Unity-Scripture-Footer-Logo-X98 img {
+
+    width: 65px;
+
+    height: 65px;
+
+    object-fit: contain;
+
+}
+
+
+.Unity-Scripture-Footer-Verse-X98 {
+
+    max-width: 850px;
+
+    font-family:
+        Georgia,
+        'Times New Roman',
+        serif;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    line-height: 1.5;
+
+}
+
+
+.Unity-Scripture-Footer-Reference-X98 {
+
+    color: #d9b45b;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+
+.Unity-Scripture-Footer-Bottom-X98 {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px 16px;
+
+    margin-top: 24px;
+
+    padding-top: 18px;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.2);
+
+}
+
+
+.Unity-Scripture-Footer-Link-X98 {
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    opacity: 0.9;
+
+}
+
+
+/*==========================================================
+LARGE DESKTOP
+==========================================================*/
+
+@media (min-width: 1200px) {
+
+    .unity-grid-x99 {
+
+        padding:
+            50px 0 70px;
+
+    }
+
+
+    .unity-grid-x99 .container {
+
+        max-width: 1440px;
+
+    }
+
+
+    .unity-common-card-x99 {
+
+        min-height: 650px;
+
+    }
+
+
+    .unity-common-card-title-x99 {
+
+        font-size: 22px;
+
+    }
+
+}
+
+
+/*==========================================================
+TABLET
+==========================================================*/
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+
+    .Neighborhood-Bb-Events-Banner-Image {
+
+        min-height: 350px;
+
+    }
+
+
+    .unity-grid-x99 {
+
+        padding:
+            40px 0 55px;
+
+    }
+
+
+    .unity-common-card-x99 {
+
+        min-height: 610px;
+
+    }
+
+
+    .unity-common-card-title-x99 {
+
+        font-size: 19px;
+
+    }
+
+
+    .unity-vision-layout-x99 {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .unity-vision-images-x99 {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+
+    .unity-vision-images-x99 img {
+
+        height: 105px;
+
+    }
+
+
+    .unity-fellowship-images-x99 {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .unity-fellowship-image-item-x99 img {
+
+        height: 100px;
+
+    }
+
+
+}
+
+
+/*==========================================================
+MOBILE
+==========================================================*/
+
+@media (max-width: 767.98px) {
+
+    .Neighborhood-Bb-Events-Banner-Image {
+
+        min-height: 250px;
+
+    }
+
+
+    .unity-grid-x99 {
+
+        padding:
+            30px 0 45px;
+
+    }
+
+
+    .unity-grid-x99 .container {
+
+        padding-left: 12px;
+
+        padding-right: 12px;
+
+    }
+
+
+    .unity-common-card-x99 {
+
+        min-height: auto;
+
+        border-radius: 13px;
+
+    }
+
+
+    .unity-common-card-header-x99 {
+
+        min-height: auto;
+
+        gap: 11px;
+
+        padding:
+            15px 14px 13px;
+
+    }
+
+
+    .unity-common-card-icon-x99 {
+
+        width: 37px;
+
+        min-width: 37px;
+
+        height: 37px;
+
+        font-size: 17px;
+
+        border-radius: 9px;
+
+    }
+
+
+    .unity-common-card-title-x99 {
+
+        font-size: 19px;
+
+    }
+
+
+    .unity-common-card-subtitle-x99 {
+
+        font-size: 12px;
+
+    }
+
+
+    .unity-common-card-scripture-x99 {
+
+        font-size: 10px;
+
+    }
+
+
+    .unity-common-card-description-x99 {
+
+        font-size: 11px;
+
+    }
+
+
+    .unity-common-card-body-x99 {
+
+        padding:
+            14px;
+
+    }
+
+
+    .unity-common-card-point-x99 {
+
+        font-size: 11px;
+
+    }
+
+
+    .unity-common-card-image-x99 {
+
+        height: 180px;
+
+    }
+
+
+    .unity-covenant-boxes-x99 {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .unity-vision-layout-x99 {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .unity-vision-images-x99 {
+
+        display: grid;
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .unity-vision-images-x99 img {
+
+        height: 155px;
+
+    }
+
+
+    .unity-churches-layout-x99 {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .unity-church-image-x99 {
+
+        height: 180px;
+
+    }
+
+
+    .unity-church-quote-x99 {
+
+        min-height: 100px;
+
+    }
+
+
+    .unity-fellowship-images-x99 {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .unity-fellowship-image-item-x99 img {
+
+        height: 110px;
+
+    }
+
+
+    .unity-work-layout-x99 {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .unity-work-image-x99 img {
+
+        height: 190px;
+
+    }
+
+
+    .unity-common-card-footer-x99 {
+
+        padding:
+            12px 14px 15px;
+
+    }
+
+
+    .unity-common-card-button-x99 {
+
+        min-height: 42px;
+
+        font-size: 12px;
+
+    }
+
+
+    .Unity-Scripture-Footer-Section-X98 {
+
+        padding:
+            35px 15px;
+
+    }
+
+
+    .Unity-Scripture-Footer-Verse-X98 {
+
+        font-size: 15px;
+
+    }
+
+
+    .Unity-Scripture-Footer-Reference-X98 {
+
+        font-size: 12px;
+
+    }
+
+
+    .Unity-Scripture-Footer-Bottom-X98 {
+
+        gap:
+            7px 11px;
+
+    }
+
+
+    .Unity-Scripture-Footer-Link-X98 {
+
+        font-size: 10px;
+
+    }
+
+}
+
+/* =========================================================
+   OUR PRESENT FELLOWSHIP
+   ========================================================= */
+
+.unity-fellowship-description-x99 {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+
+  color: #303842;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.65;
+}
+
+
+/* =========================
+   FELLOWSHIP POINTS
+   ========================= */
+
+.unity-fellowship-points-x99 {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  gap: 14px;
+
+  visibility: visible;
+  opacity: 1;
+}
+
+.unity-fellowship-point-x99 {
+  display: flex;
+  align-items: flex-start;
+
+  width: 100%;
+  min-height: 28px;
+
+  gap: 12px;
+
+  color: #303842;
+
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.6;
+
+  visibility: visible;
+  opacity: 1;
+}
+
+.unity-fellowship-check-x99 {
+  flex: 0 0 auto;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 19px;
+  min-width: 19px;
+  height: 19px;
+
+  margin-top: 4px;
+
+  font-size: 17px;
+
+  visibility: visible;
+  opacity: 1;
+}
+
+.unity-fellowship-point-text-x99 {
+  display: block;
+
+  flex: 1;
+
+  color: #303842;
+
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.6;
+
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* =========================
+   FELLOWSHIP IMAGES
+   ========================= */
+
+.unity-fellowship-images-x99 {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  width: 100%;
+
+  gap: 12px;
+
+  margin-top: 24px;
+
+  visibility: visible;
+  opacity: 1;
+}
+
+.unity-fellowship-image-item-x99 {
+  width: 100%;
+  overflow: hidden;
+
+  border-radius: 12px;
+
+  visibility: visible;
+  opacity: 1;
+}
+
+.unity-fellowship-image-x99 {
+  display: block;
+
+  width: 100%;
+  height: 115px;
+
+  object-fit: cover;
+
+  border-radius: 12px;
+
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
+
+@media (min-width: 1200px) {
+
+  .unity-fellowship-description-x99 {
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  .unity-fellowship-points-x99 {
+    gap: 15px;
+  }
+
+  .unity-fellowship-point-x99 {
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  .unity-fellowship-check-x99 {
+    font-size: 18px;
+  }
+
+  .unity-fellowship-point-text-x99 {
+    font-size: 17px;
+  }
+
+  .unity-fellowship-images-x99 {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+
+  .unity-fellowship-image-x99 {
+    height: 120px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+
+  .unity-fellowship-description-x99 {
+    font-size: 16px;
+  }
+
+  .unity-fellowship-point-x99 {
+    font-size: 16px;
+  }
+
+  .unity-fellowship-point-text-x99 {
+    font-size: 16px;
+  }
+
+  .unity-fellowship-check-x99 {
+    font-size: 17px;
+  }
+
+  .unity-fellowship-images-x99 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .unity-fellowship-image-x99 {
+    height: 140px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+  .unity-fellowship-description-x99 {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .unity-fellowship-points-x99 {
+    gap: 13px;
+  }
+
+  .unity-fellowship-point-x99 {
+    gap: 10px;
+
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .unity-fellowship-check-x99 {
+    width: 18px;
+    min-width: 18px;
+
+    font-size: 16px;
+  }
+
+  .unity-fellowship-point-text-x99 {
+    font-size: 16px;
+  }
+
+  .unity-fellowship-images-x99 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .unity-fellowship-image-x99 {
+    height: 130px;
+  }
 }

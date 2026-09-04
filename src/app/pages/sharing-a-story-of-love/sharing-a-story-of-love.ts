@@ -82,6 +82,8 @@ storyDashboardStats = [
     title:'Reviewed for kindness',
 
     description:'Stories are reviewed for appropriate content.',
+    
+
 
     color:'#2E6BC6'
 
@@ -131,7 +133,7 @@ myStories = [
 
     id:2,
 
-    image:'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80',
+    image:'assets/loving/sharingastory-2.png',
 
     title:'Planting Hope in the Community',
 
@@ -149,7 +151,7 @@ myStories = [
 
     id:3,
 
-    image:'https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=600&q=80',
+     image:'assets/loving/sharingastory-3.png',
 
     title:'Blessings from Our Chicken Coop',
 
@@ -167,7 +169,7 @@ myStories = [
 
     id:4,
 
-    image:'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80',
+    image:'assets/loving/sharingastory-4.png',
 
     title:'Learning Together',
 
@@ -185,7 +187,7 @@ myStories = [
 
     id:5,
 
-    image:'https://images.unsplash.com/photo-1515169067868-5387ec356754?auto=format&fit=crop&w=600&q=80',
+    image:'assets/loving/sharingastory-5.png',
 
     title:'Small Acts, Big Impact',
 
@@ -243,7 +245,7 @@ BOTTOM IMAGE
 
 storyBottomImage =
 
-'https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=900&q=80';
+'assets/sharing/sharing-a-story-of-love-bottom.png';
 
 /*==========================================================
 COUNTS

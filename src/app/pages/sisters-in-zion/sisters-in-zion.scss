@@ -8,15 +8,41 @@ SECTION X91
 
 }
 
+.Sisters-In-Zion-Relief-Society-Section-X91 .row.g-4{
+
+    align-items:stretch;
+
+}
+
+.Sisters-In-Zion-Relief-Society-Section-X91 .col-xl-4,
+.Sisters-In-Zion-Relief-Society-Section-X91 .col-lg-5,
+.Sisters-In-Zion-Relief-Society-Section-X91 .col-xl-8,
+.Sisters-In-Zion-Relief-Society-Section-X91 .col-lg-7,
+.Sisters-In-Zion-Relief-Society-Section-X91 .col-md-6{
+
+    display:flex;
+
+}
+
 /*==========================================================
 LEFT MAIN CARD X91
 ==========================================================*/
 
 .Sisters-In-Zion-Relief-Main-Card-X91{
 
+    position:relative;
+
+    width:100%;
+
+    min-height:100%;
+
     height:100%;
 
-    background:linear-gradient(180deg,#FFF9FD,#FFF4FB);
+    background-size:100% 100%;
+
+    background-position:center center;
+
+    background-repeat:no-repeat;
 
     border:1px solid #F0D8EC;
 
@@ -29,6 +55,32 @@ LEFT MAIN CARD X91
     display:flex;
 
     flex-direction:column;
+
+    isolation:isolate;
+
+}
+
+.Sisters-In-Zion-Relief-Main-Card-X91::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(180deg, rgba(255,255,255,0.10), rgba(12,18,24,0.60));
+
+    z-index:0;
+
+}
+
+.Sisters-In-Zion-Relief-Main-Top-X91,
+.Sisters-In-Zion-Relief-Main-Body-X91,
+.Sisters-In-Zion-Relief-Main-Footer-X91{
+
+    position:relative;
+
+    z-index:1;
 
 }
 
@@ -45,6 +97,10 @@ TOP HEADER
     gap:18px;
 
     padding:22px;
+
+    background:rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(2px);
 
 }
 
@@ -90,7 +146,7 @@ TOP HEADER
 
     margin:0;
 
-    color:#273A82;
+    color:#6a44b8;
 
     font-size:30px;
 
@@ -104,7 +160,7 @@ TOP HEADER
 
     margin-top:8px;
 
-    color:#555;
+    color:#6a44b8;
 
     font-size:15px;
 
@@ -122,31 +178,9 @@ TOP HEADER
 
     background:none;
 
-    color:#6D43B6;
+    color:#fff;
 
     font-size:26px;
-
-}
-
-/*==========================================================
-TEMPLE IMAGE
-==========================================================*/
-
-.Sisters-In-Zion-Relief-Temple-X91{
-
-    padding:0 20px;
-
-}
-
-.Sisters-In-Zion-Relief-Temple-X91 img{
-
-    width:100%;
-
-    border-radius:14px;
-
-    height:270px;
-
-    object-fit:cover;
 
 }
 
@@ -159,6 +193,8 @@ BODY
     padding:22px;
 
     flex:1;
+
+    background:#ffffff75;
 
 }
 
@@ -224,7 +260,7 @@ BODY
 
     margin-bottom:10px;
 
-    color:#555;
+    color:#4b2ea5;
 
     font-size:14px;
 
@@ -247,6 +283,8 @@ FOOTER BUTTON
 .Sisters-In-Zion-Relief-Main-Footer-X91{
 
     padding:0 22px 22px;
+
+    background:#ffffff73;
 
 }
 
@@ -284,7 +322,11 @@ RIGHT ACTION CARD
 
 .Sisters-In-Zion-Relief-Action-Card-X91{
 
+    width:100%;
+
     height:100%;
+
+    min-height:100%;
 
     background:#fff;
 
@@ -418,9 +460,7 @@ MAIN CARD HOVER X91
 
     transform:translateY(-8px);
 
-    box-shadow:
-
-        0 18px 40px rgba(77,53,135,.18);
+    box-shadow:0 18px 40px rgba(77,53,135,.18);
 
 }
 
@@ -453,31 +493,6 @@ TOP ICON
 }
 
 /*==========================================================
-TEMPLE IMAGE
-==========================================================*/
-
-.Sisters-In-Zion-Relief-Temple-X91{
-
-    overflow:hidden;
-
-    border-radius:14px;
-
-}
-
-.Sisters-In-Zion-Relief-Temple-X91 img{
-
-    transition:transform .5s ease;
-
-}
-
-.Sisters-In-Zion-Relief-Main-Card-X91:hover
-.Sisters-In-Zion-Relief-Temple-X91 img{
-
-    transform:scale(1.06);
-
-}
-
-/*==========================================================
 JOIN BUTTON
 ==========================================================*/
 
@@ -493,9 +508,7 @@ JOIN BUTTON
 
     transform:translateY(-3px);
 
-    box-shadow:
-
-        0 12px 24px rgba(91,56,165,.35);
+    box-shadow:0 12px 24px rgba(91,56,165,.35);
 
 }
 
