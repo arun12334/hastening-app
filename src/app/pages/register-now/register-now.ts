@@ -266,7 +266,7 @@ export class RegisterNow {
 
     reference:'John 17:21',
 
-    image:'https://picsum.photos/300/180?random=977563'
+    image:'assets/worshiping/login33.png'
 
   };
 

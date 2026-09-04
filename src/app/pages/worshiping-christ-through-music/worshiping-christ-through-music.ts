@@ -567,7 +567,7 @@ choirData={
             "General Conference",
 
             image:
-            "https://picsum.photos/600/350?random=701"
+            "assets/worshiping/restoration-choir.png"
 
         },
 
@@ -591,7 +591,7 @@ choirData={
             "General Conference",
 
             image:
-            "https://picsum.photos/600/350?random=702"
+            "assets/worshiping/sisters-choir.png"
 
         },
 
@@ -615,7 +615,7 @@ choirData={
             "General Conference",
 
             image:
-            "https://picsum.photos/600/350?random=703"
+            "assets/worshiping/youth-choir.png"
 
         },
 
@@ -639,7 +639,7 @@ choirData={
             "(First Sunday Scope)",
 
             image:
-            "https://picsum.photos/600/350?random=704"
+            "assets/worshiping/childrens-choir.png"
 
         }
 
@@ -721,7 +721,7 @@ title:"Watch the Latest Broadcast",
 
 subTitle:"Saturday Afternoon Session",
 
-thumbnail:"https://picsum.photos/800/450?random=601",
+thumbnail:   "assets/worshiping/restoration1.png",
 
 video:"https://www.w3schools.com/html/mov_bbb.mp4"
 
@@ -735,7 +735,7 @@ title:"Watch the Choir Library",
 
 subTitle:"Hundreds of past performances",
 
-thumbnail:"https://picsum.photos/800/450?random=602",
+thumbnail:"assets/worshiping/restoration1.png",
 
 video:"https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
 
@@ -749,7 +749,7 @@ title:"Conference Worship",
 
 subTitle:"Special Musical Program",
 
-thumbnail:"https://picsum.photos/800/450?random=603",
+thumbnail:"assets/worshiping/restoration3.png",
 
 video:"https://www.w3schools.com/html/movie.mp4"
 
@@ -763,7 +763,7 @@ title:"Evening Choir",
 
 subTitle:"Sacred Choir Collection",
 
-thumbnail:"https://picsum.photos/800/450?random=604",
+thumbnail:"assets/worshiping/restoration3.png",
 
 video:"https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
 
@@ -1077,7 +1077,7 @@ gc84521ConferenceData={
             "Tabernacle Choir",
 
             thumbnail:
-            "https://picsum.photos/600/350?random=901",
+            "assets/worshiping/restoration1.png",
 
             video:
             "https://www.w3schools.com/html/mov_bbb.mp4"
@@ -1106,7 +1106,7 @@ gc84521ConferenceData={
             "Tabernacle Choir",
 
             thumbnail:
-            "https://picsum.photos/600/350?random=902",
+            "assets/worshiping/restoration2.png",
 
             video:
             "https://www.w3schools.com/html/movie.mp4"
@@ -1135,7 +1135,7 @@ gc84521ConferenceData={
             "Tabernacle Choir",
 
             thumbnail:
-            "https://picsum.photos/600/350?random=903",
+            "assets/worshiping/restoration2.png",
 
             video:
             "https://www.w3schools.com/html/mov_bbb.mp4"
@@ -1164,7 +1164,7 @@ gc84521ConferenceData={
             "Tabernacle Choir",
 
             thumbnail:
-            "https://picsum.photos/600/350?random=904",
+            "assets/worshiping/restoration2.png",
 
             video:
             "https://www.w3schools.com/html/movie.mp4"
