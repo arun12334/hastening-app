@@ -413,7 +413,153 @@ LEFT CARD
                 </div>
 
            
+<div class="HJSBDHBHB7687687HB-card">
 
+    <!-- Card Header -->
+    <div class="HJSBDHBHB7687687HB-header">
+
+        <div class="HJSBDHBHB7687687HB-header-icon">
+            <i class="bi bi-geo-alt-fill"></i>
+        </div>
+
+        <div class="HJSBDHBHB7687687HB-header-title">
+            Join up to Two Location Groups
+        </div>
+
+    </div>
+
+
+    <!-- Card Content -->
+    <div class="HJSBDHBHB7687687HB-body">
+
+        <!-- Description -->
+        <div class="HJSBDHBHB7687687HB-description">
+
+            <p class="HJSBDHBHB7687687HB-description-main">
+                Choose where you want to connect with other Hastening members.
+            </p>
+
+            <p class="HJSBDHBHB7687687HB-description-sub">
+                Select a primary location group and, if desired, a second location
+                group. The two dropdown boxes are placed side-by-side to make
+                selection easy and clear.
+            </p>
+
+        </div>
+
+
+        <!-- Location Selection -->
+        <div class="HJSBDHBHB7687687HB-location-grid">
+
+
+            <!-- Primary Location -->
+            <div class="HJSBDHBHB7687687HB-field">
+
+                <label
+                    for="primaryLocation"
+                    class="HJSBDHBHB7687687HB-label">
+
+                    Primary Location Group
+
+                </label>
+
+
+                <div class="HJSBDHBHB7687687HB-select-wrapper">
+
+                    <select
+                        id="primaryLocation"
+                        name="primaryLocation"
+                        class="HJSBDHBHB7687687HB-select"
+                        [(ngModel)]="selectedPrimaryLocation"
+                        (change)="onPrimaryLocationChange()">
+
+                        <option
+                            value=""
+                            disabled>
+
+                            Select Location Group
+
+                        </option>
+
+                        @for (
+                            group of primaryLocationGroups;
+                            track group.value
+                        ) {
+
+                            <option
+                                [value]="group.value">
+
+                                {{ group.label }}
+
+                            </option>
+
+                        }
+
+                    </select>
+
+                    <i class="bi bi-chevron-down HJSBDHBHB7687687HB-select-icon"></i>
+
+                </div>
+
+            </div>
+
+
+            <!-- Secondary Location -->
+            <div class="HJSBDHBHB7687687HB-field">
+
+                <label
+                    for="secondaryLocation"
+                    class="HJSBDHBHB7687687HB-label">
+
+                    Secondary Location Group
+
+                </label>
+
+
+                <div class="HJSBDHBHB7687687HB-select-wrapper">
+
+                    <select
+                        id="secondaryLocation"
+                        name="secondaryLocation"
+                        class="HJSBDHBHB7687687HB-select"
+                        [(ngModel)]="selectedSecondaryLocation"
+                        (change)="onSecondaryLocationChange()">
+
+                        <option
+                            value="">
+
+                            Optional Second Group
+
+                        </option>
+
+                        @for (
+                            group of secondaryLocationGroups;
+                            track group.value
+                        ) {
+
+                            <option
+                                [value]="group.value">
+
+                                {{ group.label }}
+
+                            </option>
+
+                        }
+
+                    </select>
+
+                    <i class="bi bi-chevron-down HJSBDHBHB7687687HB-select-icon"></i>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
             </div>
 
                         <!--==================================================
@@ -673,16 +819,7 @@ LEFT CARD
                 </div>
 
               
-                
-
-            </div>
-
                  <!--==================================================
-                THANK YOU CARD
-                ===================================================-->
-<div class="p-3">
-
-      <!--==================================================
                 FEATURED SCRIPTURE
                 ===================================================-->
 
@@ -727,6 +864,18 @@ LEFT CARD
                     </div>
 
                 </div>
+
+            </div>
+
+
+            
+
+                 <!--==================================================
+                THANK YOU CARD
+                ===================================================-->
+<div class="p-3">
+
+     
 
     
                 <div class="Registration-ThankYou-Card-X977563-Y966776 mt-3"  >

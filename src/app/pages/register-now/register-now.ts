@@ -3,7 +3,10 @@ import { Header } from '../../components/header/header';
 import { FormsModule } from '@angular/forms';
 import { Footer } from '../../components/footer/footer';
 
-
+interface LocationGroup {
+  value: string;
+  label: string;
+}
 @Component({
   selector: 'app-register-now',
   imports: [Header, Footer, FormsModule],
@@ -342,6 +345,79 @@ export class RegisterNow {
 
     console.log(this.termsConditionsX977563Y966776);
 
+  }
+
+
+   primaryLocationGroups: LocationGroup[] = [
+    {
+      value: 'north-america',
+      label: 'North America'
+    },
+    {
+      value: 'south-america',
+      label: 'South America'
+    },
+    {
+      value: 'europe',
+      label: 'Europe'
+    },
+    {
+      value: 'asia',
+      label: 'Asia'
+    },
+    {
+      value: 'africa',
+      label: 'Africa'
+    },
+    {
+      value: 'australia',
+      label: 'Australia'
+    }
+  ];
+
+  secondaryLocationGroups: LocationGroup[] = [
+    {
+      value: 'north-america',
+      label: 'North America'
+    },
+    {
+      value: 'south-america',
+      label: 'South America'
+    },
+    {
+      value: 'europe',
+      label: 'Europe'
+    },
+    {
+      value: 'asia',
+      label: 'Asia'
+    },
+    {
+      value: 'africa',
+      label: 'Africa'
+    },
+    {
+      value: 'australia',
+      label: 'Australia'
+    }
+  ];
+
+  selectedPrimaryLocation = '';
+
+  selectedSecondaryLocation = '';
+
+  onPrimaryLocationChange(): void {
+    console.log(
+      'Primary Location Group:',
+      this.selectedPrimaryLocation
+    );
+  }
+
+  onSecondaryLocationChange(): void {
+    console.log(
+      'Secondary Location Group:',
+      this.selectedSecondaryLocation
+    );
   }
 
 }
