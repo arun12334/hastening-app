@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+
 import { Home } from './pages/home/home';
 import { LovingOurNeighbor } from './pages/loving-our-neighbor/loving-our-neighbor';
 import { SharingOurFaith } from './pages/sharing-our-faith/sharing-our-faith';
@@ -13,30 +14,115 @@ import { JoinAJustserveActivity } from './pages/join-a-justserve-activity/join-a
 import { JoiningEmmasReliefSociety } from './pages/joining-emmas-relief-society/joining-emmas-relief-society';
 import { AuthenticationAndSecurityManagementSystem } from './pages/authentication-and-security-management-system/authentication-and-security-management-system';
 import { WorshipingChristThroughMusic } from './pages/worshiping-christ-through-music/worshiping-christ-through-music';
-
-
-
-
+import { Register } from './pages/register/register';
+import { Login } from './pages/login/login';
 
 export const routes: Routes = [
-  { path: '', component: Home },
-    { path: 'loving-our-neighbor', component: LovingOurNeighbor },
-    { path: 'sharing-our-faith', component: SharingOurFaith },
-    { path: 'sisters-in-zion', component: SistersInZion },
-    { path: 'register-now', component: RegisterNow },
-    { path: 'invitation-to-unity', component: InvitationToUnity },
-    { path: 'does-unity-baptism', component: DoesUnityBaptism },
-    { path: 'neighborhood-bb-events', component: NeighborhoodBbEvents },
-    { path: 'sharing-a-story-of-love', component: SharingAStoryOfLove },
-    { path: 'join-a-justserve-activity', component: JoinAJustserveActivity },
-    { path: 'joining-emmas-relief-society', component: JoiningEmmasReliefSociety },
-    { path: 'authentication-and-security-management-system', component: AuthenticationAndSecurityManagementSystem },
-    { path: 'worshiping-christ-through-music', component: WorshipingChristThroughMusic },
+
+  // ==========================================
+  // DEFAULT PAGE
+  // ==========================================
+
+  {
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full'
+  },
+
+  // ==========================================
+  // LOGIN
+  // ==========================================
+
+  {
+    path: 'login',
+    component: Login
+  },
+
+  // ==========================================
+  // HOME
+  // ==========================================
+
+  {
+    path: 'home',
+    component: Home
+  },
+
+  // ==========================================
+  // REGISTER
+  // ==========================================
+
+  {
+    path: 'register',
+    component: Register
+  },
+
+  {
+    path: 'register-now',
+    component: RegisterNow
+  },
+
+  // ==========================================
+  // OTHER PAGES
+  // ==========================================
+
+  {
+    path: 'loving-our-neighbor',
+    component: LovingOurNeighbor
+  },
+
+  {
+    path: 'sharing-our-faith',
+    component: SharingOurFaith
+  },
+
+  {
+    path: 'sisters-in-zion',
+    component: SistersInZion
+  },
+
+  {
+    path: 'invitation-to-unity',
+    component: InvitationToUnity
+  },
+
+  {
+    path: 'does-unity-baptism',
+    component: DoesUnityBaptism
+  },
+
+  {
+    path: 'neighborhood-bb-events',
+    component: NeighborhoodBbEvents
+  },
+
+  {
+    path: 'sharing-a-story-of-love',
+    component: SharingAStoryOfLove
+  },
+
+  {
+    path: 'join-a-justserve-activity',
+    component: JoinAJustserveActivity
+  },
+
+  {
+    path: 'joining-emmas-relief-society',
+    component: JoiningEmmasReliefSociety
+  },
+
+  {
+    path: 'authentication-and-security-management-system',
+    component: AuthenticationAndSecurityManagementSystem
+  },
+
+  {
+    path: 'worshiping-christ-through-music',
+    component: WorshipingChristThroughMusic
+  },
+
   {
     path: 'pray-for-someone',
     component: PrayForSomeone
   }
+
 ];
-
-
- 
