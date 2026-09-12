@@ -473,4 +473,10 @@ export class Login {
   this.router.navigate(['/home']);
 }
 
+
+navigateRegistor () {
+  this.router.navigate(['/register']);
+
+}
+
 }
