@@ -384,4 +384,15 @@ export class Register {
 
   }
 
+
+
+  navigateToLogin (): void {
+    
+    console.log(
+      'Navigating to Login page...'
+    );
+    
+    this.router.navigate(['/login']);
+  }
+
 }
