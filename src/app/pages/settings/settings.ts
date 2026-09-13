@@ -1,6 +1,6 @@
 import { Header } from '../../components/header/header';
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, NgZone, OnDestroy, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import {
   Auth,
@@ -27,7 +27,7 @@ import {
   templateUrl: './settings.html',
   styleUrl: './settings.scss',
 })
-export class Settings implements OnInit {
+export class Settings implements OnInit, OnDestroy {
 
 
 
@@ -88,6 +88,22 @@ export class Settings implements OnInit {
 
   profileError = '';
 
+  profileEditing = false;
+
+  profileToastVisible = false;
+
+  profileToastMessage = '';
+
+  private profileToastTimer: ReturnType<typeof setTimeout> | undefined;
+
+  showLogoutModal = false;
+
+  passwordVisibility = {
+    currentPassword: false,
+    newPassword: false,
+    confirmPassword: false
+  };
+
   // ==========================================
   // PROFILE DATA FROM API
   // ==========================================
@@ -108,7 +124,8 @@ export class Settings implements OnInit {
   constructor(
     private auth: Auth,
       private router: Router,
-       private cdr: ChangeDetectorRef
+     private cdr: ChangeDetectorRef,
+     private zone: NgZone
   ) {}
 
   // ==========================================
@@ -123,6 +140,12 @@ export class Settings implements OnInit {
 
     this.checkGuestMode();
 
+  }
+
+  ngOnDestroy(): void {
+    if (this.profileToastTimer) {
+      clearTimeout(this.profileToastTimer);
+    }
   }
 
   // ==========================================
@@ -554,6 +577,11 @@ export class Settings implements OnInit {
   // SAVE PROFILE
   // ==========================================
 
+  editProfile(): void {
+    this.profileEditing = true;
+    this.cdr.detectChanges();
+  }
+
   saveProfile(): void {
 
     console.log(
@@ -561,9 +589,27 @@ export class Settings implements OnInit {
       this.profile
     );
 
-    alert(
-      'Profile updated successfully.'
-    );
+    this.profileEditing = false;
+    this.showProfileToast('Profile updated successfully.');
+
+  }
+
+  private showProfileToast(message: string): void {
+    this.profileToastMessage = message;
+    this.profileToastVisible = true;
+    this.cdr.detectChanges();
+
+    if (this.profileToastTimer) {
+      clearTimeout(this.profileToastTimer);
+    }
+
+    this.profileToastTimer = setTimeout(() => {
+      this.zone.run(() => {
+        this.profileToastVisible = false;
+        this.profileToastTimer = undefined;
+        this.cdr.detectChanges();
+      });
+    }, 3000);
 
   }
 
@@ -575,18 +621,14 @@ export class Settings implements OnInit {
 
     if (!this.password.currentPassword) {
 
-      alert(
-        'Please enter your current password.'
-      );
+      this.showProfileToast('Please enter your current password.');
 
       return;
     }
 
     if (!this.password.newPassword) {
 
-      alert(
-        'Please enter your new password.'
-      );
+      this.showProfileToast('Please enter your new password.');
 
       return;
     }
@@ -595,9 +637,7 @@ export class Settings implements OnInit {
       this.password.newPassword.length < 6
     ) {
 
-      alert(
-        'New password must be at least 6 characters.'
-      );
+      this.showProfileToast('New password must be at least 6 characters.');
 
       return;
     }
@@ -607,9 +647,7 @@ export class Settings implements OnInit {
       this.password.confirmPassword
     ) {
 
-      alert(
-        'New password and confirm password do not match.'
-      );
+      this.showProfileToast('New password and confirm password do not match.');
 
       return;
     }
@@ -624,10 +662,12 @@ export class Settings implements OnInit {
       confirmPassword: ''
     };
 
-    alert(
-      'Password changed successfully.'
-    );
+    this.showProfileToast('Password changed successfully.');
 
+  }
+
+  togglePasswordVisibility(field: keyof typeof this.passwordVisibility): void {
+    this.passwordVisibility[field] = !this.passwordVisibility[field];
   }
 
   // ==========================================
@@ -685,13 +725,19 @@ export class Settings implements OnInit {
 
   logout(): void {
 
-    const confirmed = confirm(
-      'Are you sure you want to logout?'
-    );
+    this.showLogoutModal = true;
+    this.cdr.detectChanges();
 
-    if (!confirmed) {
-      return;
-    }
+  }
+
+  closeLogoutModal(): void {
+
+    this.showLogoutModal = false;
+    this.cdr.detectChanges();
+
+  }
+
+  confirmLogout(): void {
 
     console.log(
       'Logout clicked'
@@ -700,6 +746,7 @@ export class Settings implements OnInit {
     // Later:
     localStorage.removeItem('user_profile_info');
     localStorage.setItem('guest_mode', 'true');
+    this.showLogoutModal = false;
     this.router.navigate(['/login']);
 
   }

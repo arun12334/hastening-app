@@ -171,9 +171,9 @@ X774551-Y886331
             PROPHET SLIDER
             ==================================================-->
 
-            <div  >
+            <div class="col-12">
 
-                <div class="Prophet-Card-X774551-Y886331">
+                <div class="Prophet-Card-X774551-Y886331 Prophet-Video-Grid-Card-X774551-Y886331">
 
                     <!--==========================================
                     CARD HEADER
@@ -207,104 +207,58 @@ X774551-Y886331
 
                     </div>
 
-                    <!--==========================================
-                    SLIDER
-                    ==========================================-->
-
-                    @for(item of prophetMessagesX774551Y886331;
-                    track item.id){
-
-                    @if(currentSlideX774551Y886331==$index){
-
-                    <div
-                    class="Prophet-Slider-Body-X774551-Y886331">
-
-                        <!--==================================
-                        IMAGE
-                        ==================================-->
-
-                        <div
-                        class="Prophet-Image-X774551-Y886331">
-
-                            <img
-
-                            [src]="item.image"
-
-                            [alt]="item.title">
-
-                            <!--==============================
-                            PLAY BUTTON
-                            ==============================-->
-
-                            <button
-
-                            class="Play-Button-X774551-Y886331">
-
-                                <i
-                                class="bi bi-play-fill"></i>
-
-                            </button>
-
-                        </div>
-
-                        <!--==================================
-                        CONTENT
-                        ==================================-->
-
-                        <div
-                        class="Prophet-Content-X774551-Y886331">
-
-                            <h4>
-
-                                {{item.title}}
-
-                            </h4>
-
-                            <h6>
-
-                                {{item.author}}
-
-                            </h6>
-
-                            <p>
-
-                                {{item.description}}
-
-                            </p>
-
-                        </div>
-
+                    <div class="Prophet-Video-Grid-X774551-Y886331">
+                        @for(item of prophetMessagesX774551Y886331; track item.id) {
+                        <button
+                            type="button"
+                            class="Prophet-Video-Item-X774551-Y886331"
+                            [class.Active-Prophet-Video-Item-X774551-Y886331]="currentSlideX774551Y886331 === $index"
+                            (click)="playProphetVideo($index)">
+                            <span class="Prophet-Video-Thumbnail-X774551-Y886331">
+                                <img [src]="item.image" [alt]="item.title">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </span>
+                            <span class="Prophet-Video-Item-Title-X774551-Y886331">{{item.title}}</span>
+                            <small>{{item.author}}</small>
+                        </button>
+                        }
                     </div>
 
-                    }
-
-                    }
-
-                                        <!--==========================================
-                    SLIDER DOTS
-                    ==========================================-->
-
-                    <div
-                    class="Slider-Dots-X774551-Y886331">
-
-                        @for(dot of prophetMessagesX774551Y886331;
-                        track dot.id){
-
-                        <button
-
-                        type="button"
-
-                        class="Slider-Dot-X774551-Y886331"
-
-                        [class.Active-Slider-Dot-X774551-Y886331]="
-                        currentSlideX774551Y886331==$index"
-
-                        (click)="changeSlideX774551Y886331($index)">
-
-                        </button>
-
-                        }
-
+                    <div class="Prophet-Video-Player-X774551-Y886331">
+                        <video
+                            #prophetVideoPlayer
+                            [src]="prophetMessagesX774551Y886331[currentSlideX774551Y886331].video"
+                            [poster]="prophetMessagesX774551Y886331[currentSlideX774551Y886331].image"
+                            (timeupdate)="updateProphetVideoProgress()"
+                            (loadedmetadata)="loadProphetVideoMetadata()"
+                            (play)="prophetVideoPlaying = true"
+                            (pause)="prophetVideoPlaying = false"
+                            (volumechange)="syncProphetMuteState()"
+                            (ended)="onProphetVideoEnded()">
+                        </video>
+                        <div class="Prophet-Video-Details-X774551-Y886331">
+                            <h4>{{prophetMessagesX774551Y886331[currentSlideX774551Y886331].title}}</h4>
+                            <p>{{prophetMessagesX774551Y886331[currentSlideX774551Y886331].description}}</p>
+                            <div class="Prophet-Video-Controls-X774551-Y886331">
+                                <button type="button" (click)="previousProphetVideo()" aria-label="Previous video">
+                                    <i class="bi bi-skip-backward-fill"></i>
+                                </button>
+                                <button type="button" class="Prophet-Video-Play-X774551Y886331" (click)="toggleProphetVideo()" aria-label="Play or pause video">
+                                    <i class="bi" [class.bi-play-fill]="!prophetVideoPlaying" [class.bi-pause-fill]="prophetVideoPlaying"></i>
+                                </button>
+                                <button type="button" (click)="nextProphetVideo()" aria-label="Next video">
+                                    <i class="bi bi-skip-forward-fill"></i>
+                                </button>
+                                <button type="button" (click)="toggleProphetMute()" aria-label="Mute or unmute video">
+                                    <i class="bi" [class.bi-volume-up-fill]="!prophetVideoMuted" [class.bi-volume-mute-fill]="prophetVideoMuted"></i>
+                                </button>
+                            </div>
+                            <div class="Prophet-Video-Progress-X774551-Y886331" (click)="seekProphetVideo($event)">
+                                <span>{{prophetVideoCurrentTime}}</span>
+                                <div><span [style.width.%]="prophetVideoProgress"></span></div>
+                                <span>{{prophetVideoTotalTime}}</span>
+                            </div>
+                        </div>
                     </div>
 
                 </div>

@@ -1,270 +1,4 @@
-/*=========================================================
-HERO SECTION
-=========================================================*/
 
-.hero-section{
-
-    position:relative;
-
-    background:url("https://raw.githubusercontent.com/arun12334/hastening-web-app/refs/heads/main/home-banner.png") center center no-repeat;
-
-    background-size:cover;
-
-    height:420px;
-
-    overflow:hidden;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-}
-
-/* overlay */
-
-.hero-overlay{
-
-    width:100%;
-
-    height:100%;
-
-    background:linear-gradient(
-        rgba(255,255,255,.08),
-        rgba(255,255,255,.08)
-    );
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-}
-
-/* content */
-
-.hero-content{
-
-    text-align:center;
-
-}
-
-/* title */
-
-.hero-content h1{
-
-    font-size:72px;
-
-    line-height:1;
-
-    font-weight:700;
-
-    color:#17346f;
-
-    margin-bottom:18px;
-
-}
-
-/* subtitle */
-
-.hero-content p{
-
-    margin-top:18px;
-
-    font-size:23px;
-
-    line-height:1.45;
-
-    color:#17346f;
-
-}
-@media (max-width:991px){
-
-.hero-section{
-    min-height:500px;
-    background-position:center center;
-    background-size: 100% 100%;
-    margin-top: 80px;
-}
-
-.hero-overlay{
-    padding:80px 15px;
-    margin-top: 80px;
-}
-
-.hero-content{
-    max-width:100%;
-}
-
-.hero-content h1{
-    font-size:42px;
-    line-height:1.15;
-    margin-bottom:18px;
-}
-
-.hero-content p{
-    font-size:18px;
-    line-height:1.6;
-    padding:0 10px;
-}
-
-.divider span{
-    width:55px;
-}
-
-}
-
-
-.divider{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#d79b28;
-    font-size:22px;
-    margin:20px 0;
-}
-
-.divider span{
-    width:90px;
-    height:2px;
-    background:#d79b28;
-    margin:0 15px;
-}
-
-.bg-info-subtle {
-    background-color: #186070 !important;
-}
-
-
-@media (max-width:1195px){
-
-.hero-section{
-    min-height:500px;
-    background-position:center center;
-    background-size: 100% 100%;
-    margin-top: 80px;
-}
-
-.hero-overlay{
-    padding:80px 15px;
-    margin-top: 80px;
-}
-
-.hero-content{
-    max-width:100%;
-}
-
-.hero-content h1{
-    font-size:42px;
-    line-height:1.15;
-    margin-bottom:18px;
-}
-
-.hero-content p{
-    font-size:18px;
-    line-height:1.6;
-    padding:0 10px;
-}
-
-.divider span{
-    width:55px;
-}
-
-}
-
-@media(max-width:1200px){
-
-.hero h1{
-
-font-size:60px;
-
-}
-
- 
-
-}
-
-
-
-@media(max-width:767px){
-
-.logo h3{
-
-font-size:22px;
-
-}
-
-.logo-circle{
-
-width:52px;
-height:52px;
-
-font-size:22px;
-
-}
-
- 
-
-.hero{
-
-padding:70px 20px;
-
-}
-
-.hero h1{
-
-font-size:36px;
-
-}
-
-.hero p{
-
-font-size:18px;
-
-}
-
-.hero-divider{
-
-width:120px;
-
-}
-
-}
-
- 
-
-
-
-@media (max-width:650px){
-
-.hero-section{
-
-    height:260px;
-
-    background-image:url("https://raw.githubusercontent.com/arun12334/hastening-web-app/refs/heads/main/home-header-mobile.jpg");
-
-    background-size:cover;
-
-    background-position:center;
-    margin-top: 80px;
-
-}
-
-.hero-content h1{
-
-    font-size:40px;
-
-}
-
-.hero-content p{
-
-    font-size:20px;
-
-}
-
-}
 
 // 
 
@@ -861,4 +595,213 @@ MESSAGE CARD
         margin-top: 10px;
     }
 
+}
+
+/* Welcome page styles are isolated in welcome.scss. */
+
+.Welcome-Page-X56563-Y76776 .Neighborhood-Bb-Events-Banner {
+    padding-top: 0;
+}
+
+.Welcome-Page-X56563-Y76776 .Neighborhood-Bb-Events-Banner-Image {
+    height: min(62vh, 560px);
+    min-height: 390px;
+    background-position: center;
+}
+
+.Welcome-Banner-Overlay-X56563-Y76776 {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 20px;
+    background: linear-gradient(90deg, rgba(10, 32, 70, .74), rgba(10, 32, 70, .18));
+}
+
+.Welcome-Banner-Content-X56563-Y76776 {
+    width: min(100%, 760px);
+    color: #fff;
+    text-align: center;
+}
+
+.Welcome-Badge-X56563-Y76776,
+.Welcome-Eyebrow-X56563-Y76776 {
+    color: #f4c95d;
+    font-size: .76rem;
+    font-weight: 800;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+}
+
+.Welcome-Banner-Content-X56563-Y76776 h1 {
+    margin: 18px 0 12px;
+    color: #fff;
+    font-family: "Libre Baskerville", serif;
+    font-size: clamp(2.1rem, 5vw, 4.4rem);
+    line-height: 1.12;
+    text-shadow: 0 4px 18px rgba(0, 0, 0, .3);
+}
+
+.Welcome-Banner-Content-X56563-Y76776 p {
+    max-width: 560px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, .92);
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    line-height: 1.6;
+}
+
+.Welcome-Actions-X56563-Y76776 {
+    width: min(100% - 32px, 1120px);
+    margin: -54px auto 0;
+    position: relative;
+    z-index: 2;
+    padding-bottom: 56px;
+}
+
+.Welcome-Actions-Intro-X56563-Y76776 {
+    max-width: 650px;
+    margin: 0 auto 26px;
+    padding: 25px 24px 0;
+    text-align: center;
+}
+
+.Welcome-Actions-Intro-X56563-Y76776 h2 {
+    margin: 8px 0 8px;
+    color: #17346f;
+    font-family: "Libre Baskerville", serif;
+    font-size: clamp(1.35rem, 2.5vw, 2rem);
+}
+
+.Welcome-Actions-Intro-X56563-Y76776 p {
+    margin: 0;
+    color: #617089;
+}
+
+.Welcome-Action-Grid-X56563-Y76776 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.Welcome-Action-Button-X56563-Y76776 {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 112px;
+    padding: 20px;
+    border: 0;
+    border-radius: 18px;
+    color: #fff;
+    text-align: left;
+    box-shadow: 0 16px 34px rgba(23, 52, 111, .16);
+    cursor: pointer;
+    transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
+}
+
+.Welcome-Action-Button-X56563-Y76776:hover,
+.Welcome-Action-Button-X56563-Y76776:focus-visible {
+    transform: translateY(-5px);
+    box-shadow: 0 22px 42px rgba(23, 52, 111, .24);
+    filter: brightness(1.06);
+    outline: 3px solid rgba(244, 201, 93, .55);
+    outline-offset: 3px;
+}
+
+.Welcome-Login-Button-X56563-Y76776 {
+    background: linear-gradient(135deg, #17346f, #285ba0);
+}
+
+.Welcome-Guest-Button-X56563-Y76776 {
+    background: linear-gradient(135deg, #087d82, #19a49e);
+}
+
+.Welcome-Register-Button-X56563-Y76776 {
+    background: linear-gradient(135deg, #a56a0b, #d29a29);
+}
+
+.Welcome-Action-Icon-X56563-Y76776 {
+    display: grid;
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, .42);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, .16);
+    font-size: 1.35rem;
+}
+
+.Welcome-Action-Text-X56563-Y76776 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.Welcome-Action-Text-X56563-Y76776 strong {
+    font-size: 1.08rem;
+}
+
+.Welcome-Action-Text-X56563-Y76776 small {
+    color: rgba(255, 255, 255, .82);
+    font-size: .78rem;
+}
+
+.Welcome-Action-Arrow-X56563-Y76776 {
+    font-size: 1.1rem;
+}
+
+@media (max-width: 991.98px) {
+    .Welcome-Page-X56563-Y76776 .Neighborhood-Bb-Events-Banner-Image {
+        height: 460px;
+        min-height: 0;
+    }
+
+    .Welcome-Actions-X56563-Y76776 {
+        margin-top: -38px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .Welcome-Page-X56563-Y76776 .Neighborhood-Bb-Events-Banner-Image {
+        height: 390px;
+    }
+
+    .Welcome-Actions-X56563-Y76776 {
+        width: min(100% - 24px, 520px);
+        margin-top: -24px;
+        padding-bottom: 32px;
+    }
+
+    .Welcome-Actions-Intro-X56563-Y76776 {
+        padding-top: 18px;
+    }
+
+    .Welcome-Action-Grid-X56563-Y76776 {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .Welcome-Action-Button-X56563-Y76776 {
+        min-height: 88px;
+        padding: 16px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .Welcome-Page-X56563-Y76776 .Neighborhood-Bb-Events-Banner-Image {
+        margin-top: 0;
+    }
+
+    .Welcome-Banner-Overlay-X56563-Y76776 {
+        padding: 24px 16px;
+        background: linear-gradient(90deg, rgba(10, 32, 70, .8), rgba(10, 32, 70, .28));
+    }
+
+    .Welcome-Badge-X56563-Y76776,
+    .Welcome-Eyebrow-X56563-Y76776 {
+        font-size: .64rem;
+        letter-spacing: .1em;
+    }
 }

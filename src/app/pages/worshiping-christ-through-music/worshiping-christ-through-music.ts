@@ -706,10 +706,10 @@ VIDEO DATA
 videoSection={
 
 title:
-"Tabernacle Choir at General Conference",
+"Youth Music",
 
 subTitle:
-"Experience inspiring music each conference weekend.",
+"Discover uplifting music created to inspire youth to worship Christ.",
 
 videos:[
 

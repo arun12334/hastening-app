@@ -1,5 +1,5 @@
 import { Header } from '../../components/header/header';
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 declare var bootstrap:any;
 
 
@@ -200,6 +200,7 @@ changeTab(index:number){
       author:'President Thomas S. Monson',
 
       description:'Share Christ with kindness, faith, compassion, and love every day.'
+      ,video:'https://www.w3schools.com/html/mov_bbb.mp4'
 
     },
 
@@ -214,6 +215,7 @@ changeTab(index:number){
       author:'President Russell M. Nelson',
 
       description:'Daily prayer brings peace, wisdom, and strength for every challenge.'
+      ,video:'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4'
 
     },
 
@@ -228,10 +230,141 @@ changeTab(index:number){
       author:'Elder Dieter F. Uchtdorf',
 
       description:'Faith in Christ fills life with hope, joy, and eternal purpose.'
+      ,video:'https://www.w3schools.com/html/movie.mp4'
 
     }
 
   ];
+
+  @ViewChild('prophetVideoPlayer')
+  prophetVideoPlayer!: ElementRef<HTMLVideoElement>;
+
+  prophetVideoPlaying = false;
+  prophetVideoMuted = false;
+  prophetVideoProgress = 0;
+  prophetVideoCurrentTime = '0:00';
+  prophetVideoTotalTime = '0:00';
+
+  playProphetVideo(index: number): void {
+    this.currentSlideX774551Y886331 = index;
+    const video = this.prophetVideoPlayer?.nativeElement;
+
+    if (!video) {
+      return;
+    }
+
+    video.pause();
+    video.src = this.prophetMessagesX774551Y886331[index].video;
+    video.load();
+    video.currentTime = 0;
+    this.prophetVideoProgress = 0;
+    this.prophetVideoCurrentTime = '0:00';
+    void video.play()
+      .then(() => {
+        this.prophetVideoPlaying = true;
+      })
+      .catch(() => {
+        this.prophetVideoPlaying = false;
+      });
+  }
+
+  toggleProphetVideo(): void {
+    const video = this.prophetVideoPlayer?.nativeElement;
+
+    if (!video) {
+      return;
+    }
+
+    if (video.paused) {
+      void video.play()
+        .then(() => {
+          this.prophetVideoPlaying = true;
+        })
+        .catch(() => {
+          this.prophetVideoPlaying = false;
+        });
+    } else {
+      video.pause();
+      this.prophetVideoPlaying = false;
+    }
+  }
+
+  nextProphetVideo(): void {
+    const nextIndex = (this.currentSlideX774551Y886331 + 1) % this.prophetMessagesX774551Y886331.length;
+    this.playProphetVideo(nextIndex);
+  }
+
+  previousProphetVideo(): void {
+    const previousIndex = (this.currentSlideX774551Y886331 - 1 + this.prophetMessagesX774551Y886331.length)
+      % this.prophetMessagesX774551Y886331.length;
+    this.playProphetVideo(previousIndex);
+  }
+
+  onProphetVideoEnded(): void {
+    this.prophetVideoPlaying = false;
+  }
+
+  toggleProphetMute(): void {
+    const video = this.prophetVideoPlayer?.nativeElement;
+
+    if (!video) {
+      return;
+    }
+
+    video.muted = !video.muted;
+    this.prophetVideoMuted = video.muted;
+  }
+
+  syncProphetMuteState(): void {
+    const video = this.prophetVideoPlayer?.nativeElement;
+
+    if (video) {
+      this.prophetVideoMuted = video.muted;
+    }
+  }
+
+  updateProphetVideoProgress(): void {
+    const video = this.prophetVideoPlayer?.nativeElement;
+
+    if (!video) {
+      return;
+    }
+
+    this.prophetVideoProgress = (video.currentTime / video.duration) * 100 || 0;
+    this.prophetVideoCurrentTime = this.formatProphetTime(video.currentTime);
+  }
+
+  loadProphetVideoMetadata(): void {
+    const video = this.prophetVideoPlayer?.nativeElement;
+
+    if (!video) {
+      return;
+    }
+
+    this.prophetVideoTotalTime = this.formatProphetTime(video.duration);
+  }
+
+  seekProphetVideo(event: MouseEvent): void {
+    const progress = event.currentTarget as HTMLElement;
+    const video = this.prophetVideoPlayer?.nativeElement;
+
+    if (!video || !video.duration || !progress.clientWidth) {
+      return;
+    }
+
+    video.currentTime =
+      (event.offsetX / progress.clientWidth) * video.duration;
+  }
+
+  private formatProphetTime(seconds: number): string {
+    if (!Number.isFinite(seconds)) {
+      return '0:00';
+    }
+
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = Math.floor(seconds % 60);
+    return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
+  }
 
   /*==========================================================
   DISCIPLE HEADER
@@ -1602,5 +1735,3 @@ behavior:'smooth'
 
 
  
-
-

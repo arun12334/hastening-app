@@ -156,6 +156,28 @@ LEFT CARD
 
                     <div class="row">
 
+                        <!-- USERNAME -->
+
+                        <div class="col-12 mb-4">
+
+                            <label>
+
+                                Username
+
+                            </label>
+
+                            <input
+
+                                type="text"
+
+                                class="form-control"
+
+                                [class.registration-invalid]="isPersonalFieldInvalid('userName')"
+
+                                [(ngModel)]="personalInformationX977563Y966776.userName">
+
+                        </div>
+
                         <!-- FIRST NAME -->
 
                         <div class="col-md-6 mb-4">
@@ -171,6 +193,8 @@ LEFT CARD
                                 type="text"
 
                                 class="form-control"
+
+                                [class.registration-invalid]="isPersonalFieldInvalid('firstName')"
 
                                 [(ngModel)]="personalInformationX977563Y966776.firstName">
 
@@ -192,6 +216,8 @@ LEFT CARD
 
                                 class="form-control"
 
+                                [class.registration-invalid]="isPersonalFieldInvalid('lastName')"
+
                                 [(ngModel)]="personalInformationX977563Y966776.lastName">
 
                         </div>
@@ -211,6 +237,8 @@ LEFT CARD
                                 type="text"
 
                                 class="form-control"
+
+                                [class.registration-invalid]="isPersonalFieldInvalid('streetAddress')"
 
                                 [(ngModel)]="personalInformationX977563Y966776.streetAddress">
 
@@ -232,6 +260,8 @@ LEFT CARD
 
                                 class="form-control"
 
+                                [class.registration-invalid]="isPersonalFieldInvalid('city')"
+
                                 [(ngModel)]="personalInformationX977563Y966776.city">
 
                         </div>
@@ -252,6 +282,8 @@ LEFT CARD
 
                                 class="form-control"
 
+                                [class.registration-invalid]="isPersonalFieldInvalid('state')"
+
                                 [(ngModel)]="personalInformationX977563Y966776.state">
 
                         </div>
@@ -269,6 +301,8 @@ LEFT CARD
                             <select
 
                                 class="form-select"
+
+                                [class.registration-invalid]="isPersonalFieldInvalid('country')"
 
                                 [(ngModel)]="personalInformationX977563Y966776.country">
 
@@ -304,6 +338,8 @@ LEFT CARD
 
                                 class="form-control"
 
+                                [class.registration-invalid]="isPersonalFieldInvalid('zipCode')"
+
                                 [(ngModel)]="personalInformationX977563Y966776.zipCode">
 
                         </div>
@@ -323,6 +359,8 @@ LEFT CARD
                                 type="text"
 
                                 class="form-control"
+
+                                [class.registration-invalid]="isPersonalFieldInvalid('mobileNumber')"
 
                                 [(ngModel)]="personalInformationX977563Y966776.mobileNumber">
 
@@ -344,7 +382,28 @@ LEFT CARD
 
                                 class="form-control"
 
+                                [class.registration-invalid]="isPersonalFieldInvalid('emailAddress')"
+
                                 [(ngModel)]="personalInformationX977563Y966776.emailAddress">
+
+                        </div>
+
+                        <div class="col-md-6 mb-4 mt-3">
+                            <label>Password</label>
+                            <input
+                                type="password"
+                                class="form-control"
+                                [class.registration-invalid]="isPersonalFieldInvalid('password')"
+                                [(ngModel)]="personalInformationX977563Y966776.password">
+                        </div>
+
+                        <div class="col-md-6 mb-4 mt-3">
+                            <label>Confirm Password</label>
+                            <input
+                                type="password"
+                                class="form-control"
+                                [class.registration-invalid]="isPersonalFieldInvalid('confirmPassword')"
+                                [(ngModel)]="personalInformationX977563Y966776.confirmPassword">
 
                         </div>
 
@@ -395,6 +454,8 @@ LEFT CARD
                         <input
 
                             type="checkbox"
+
+                            [class.registration-invalid]="areTermsInvalid()"
 
                             [(ngModel)]="term.checked"
 
@@ -470,6 +531,7 @@ LEFT CARD
                         id="primaryLocation"
                         name="primaryLocation"
                         class="HJSBDHBHB7687687HB-select"
+                        [class.registration-invalid]="formSubmitted && !selectedPrimaryLocation"
                         [(ngModel)]="selectedPrimaryLocation"
                         (change)="onPrimaryLocationChange()">
 
@@ -624,6 +686,10 @@ LEFT CARD
 
                                     type="checkbox"
 
+                                    [class.registration-invalid]="areOptionsInvalid()"
+
+                                    (click)="preventThirdRegistrationOptionX977563Y966776(option, $event)"
+
                                     [(ngModel)]="option.selected"
 
                                     (change)="optionSelectionX977563Y966776(option)">
@@ -753,9 +819,8 @@ LEFT CARD
                                 <input
 
                                     class="form-control"
-
                                     type="text"
-
+                                    [class.registration-invalid]="isChildFieldInvalid(child, 'name')"
                                     placeholder="Child Name"
 
                                     [(ngModel)]="child.name">
@@ -767,9 +832,8 @@ LEFT CARD
                                 <input
 
                                     class="form-control"
-
                                     type="number"
-
+                                    [class.registration-invalid]="isChildFieldInvalid(child, 'age')"
                                     placeholder="Age"
 
                                     [(ngModel)]="child.age">
@@ -813,8 +877,27 @@ LEFT CARD
                         <i class="bi bi-person-plus-fill"></i>
 
                         REGISTER NOW
-
                     </button>
+
+                    @if(validationMessage) {
+                        <div class="Registration-Validation-Alert-X977563-Y966776" role="alert">
+                            <i class="bi bi-exclamation-triangle-fill"></i>
+                            {{validationMessage}}
+                        </div>
+                    }
+
+                    @if(registrationSucceeded) {
+                        <div class="Registration-Success-Alert-X977563-Y966776" role="status">
+                            Registration successful. Redirecting to Home...
+                        </div>
+                    }
+
+                    @if(registrationToastVisible) {
+                        <div class="Registration-Toast-X977563-Y966776" role="status" aria-live="polite">
+                            <i class="bi bi-check-circle-fill"></i>
+                            {{registrationToastMessage}}
+                        </div>
+                    }
 
                 </div>
 

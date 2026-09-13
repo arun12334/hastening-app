@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Header } from '../../components/header/header';
 import { FormsModule } from '@angular/forms';
 import { Footer } from '../../components/footer/footer';
+import { Router } from '@angular/router';
 
 interface LocationGroup {
   value: string;
@@ -14,6 +15,14 @@ interface LocationGroup {
   styleUrl: './register-now.scss',
 })
 export class RegisterNow {
+
+  private readonly router = inject(Router);
+  formSubmitted = false;
+  validationMessage = '';
+  registrationSucceeded = false;
+  registrationToastMessage = '';
+  registrationToastVisible = false;
+  private registrationToastTimer?: ReturnType<typeof setTimeout>;
 
   /*==========================================================
   REGISTER HERO DATA x56563 y76776
@@ -69,6 +78,8 @@ export class RegisterNow {
 
   personalInformationX977563Y966776 = {
 
+    userName: '',
+
     firstName: '',
 
     lastName: '',
@@ -85,7 +96,11 @@ export class RegisterNow {
 
     mobileNumber: '',
 
-    emailAddress: ''
+    emailAddress: '',
+
+    password: '',
+
+    confirmPassword: ''
 
   };
 
@@ -309,8 +324,43 @@ export class RegisterNow {
 
   optionSelectionX977563Y966776(option:any){
 
-    option.selected=!option.selected;
+    const selectedCount = this.registrationOptionsX977563Y966776
+      .filter((registrationOption) => registrationOption.selected).length;
 
+    if (selectedCount > 2) {
+      option.selected = false;
+      this.validationMessage = 'Only two registration options are allowed.';
+    } else {
+      this.validationMessage = '';
+    }
+
+  }
+
+  preventThirdRegistrationOptionX977563Y966776(
+    option: { selected: boolean },
+    event: MouseEvent
+  ): void {
+    const selectedCount = this.registrationOptionsX977563Y966776
+      .filter((registrationOption) => registrationOption.selected).length;
+
+    if (!option.selected && selectedCount >= 2) {
+      event.preventDefault();
+      this.showRegistrationToastX977563Y966776(
+        'Only two registration options are allowed.'
+      );
+    }
+  }
+
+  private showRegistrationToastX977563Y966776(message: string): void {
+    if (this.registrationToastTimer) {
+      clearTimeout(this.registrationToastTimer);
+    }
+
+    this.registrationToastMessage = message;
+    this.registrationToastVisible = true;
+    this.registrationToastTimer = setTimeout(() => {
+      this.registrationToastVisible = false;
+    }, 3000);
   }
 
   /*==========================================================
@@ -319,7 +369,7 @@ export class RegisterNow {
 
   termsSelectionX977563Y966776(term:any){
 
-    term.checked=!term.checked;
+    term.checked = Boolean(term.checked);
 
   }
 
@@ -329,22 +379,61 @@ export class RegisterNow {
 
   registerNowX977563Y966776(){
 
-    console.log('Personal Information');
+    this.formSubmitted = true;
+    const selectedOptions = this.registrationOptionsX977563Y966776
+      .filter((option) => option.selected);
+    const hasMissingPersonalInformation = Object.values(this.personalInformationX977563Y966776)
+      .some((value) => !String(value).trim());
+    const hasUnacceptedTerms = this.termsConditionsX977563Y966776
+      .some((term) => !term.checked);
 
-    console.log(this.personalInformationX977563Y966776);
+    if (this.personalInformationX977563Y966776.password !==
+      this.personalInformationX977563Y966776.confirmPassword) {
+      this.validationMessage = 'Password and confirm password must match.';
+      return;
+    }
 
-    console.log('Registration');
+    if (hasMissingPersonalInformation) {
+      this.validationMessage = 'Please complete all personal information fields.';
+      return;
+    }
 
-    console.log(this.registrationOptionsX977563Y966776);
+    if (selectedOptions.length !== 2) {
+      this.validationMessage = 'Please select exactly two registration options.';
+      return;
+    }
 
-    console.log('Children');
+    if (!this.selectedPrimaryLocation) {
+      this.validationMessage = 'Please select a primary location group.';
+      return;
+    }
 
-    console.log(this.childrenX977563Y966776);
+    if (hasUnacceptedTerms) {
+      this.validationMessage = 'Please accept all Terms and Conditions.';
+      return;
+    }
 
-    console.log('Terms');
+    const registrationPayload = {
+      personalInformation: { ...this.personalInformationX977563Y966776 },
+      registrationOptions: selectedOptions.map((option) => ({
+        id: option.id,
+        title: option.title,
+        deliveryMethod: 'deliveryMethod' in option ? option.deliveryMethod : null
+      })),
+      children: this.childrenX977563Y966776.map((child) => ({ ...child })),
+      termsAndConditions: this.termsConditionsX977563Y966776
+        .map((term) => ({ id: term.id, text: term.text, checked: term.checked })),
+      locationGroups: {
+        primary: this.selectedPrimaryLocation,
+        secondary: this.selectedSecondaryLocation || null
+      }
+    };
 
-    console.log(this.termsConditionsX977563Y966776);
-
+    console.log('Registration payload:', registrationPayload);
+    this.validationMessage = '';
+    this.registrationSucceeded = true;
+    this.showRegistrationToastX977563Y966776('Registration successful.');
+    this.router.navigate(['/home']);
   }
 
 
@@ -418,6 +507,23 @@ export class RegisterNow {
       'Secondary Location Group:',
       this.selectedSecondaryLocation
     );
+  }
+
+  isPersonalFieldInvalid(field: keyof typeof this.personalInformationX977563Y966776): boolean {
+    return this.formSubmitted && !String(this.personalInformationX977563Y966776[field]).trim();
+  }
+
+  isChildFieldInvalid(child: { name: string; age: string }, field: 'name' | 'age'): boolean {
+    return this.formSubmitted && !String(child[field]).trim();
+  }
+
+  areOptionsInvalid(): boolean {
+    return this.formSubmitted &&
+      this.registrationOptionsX977563Y966776.filter((option) => option.selected).length !== 2;
+  }
+
+  areTermsInvalid(): boolean {
+    return this.formSubmitted && this.termsConditionsX977563Y966776.some((term) => !term.checked);
   }
 
 }

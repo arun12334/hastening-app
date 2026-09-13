@@ -124,3 +124,203 @@ NUMBER BADGE
 }
 
 }
+.Prophet-Video-Grid-Card-X774551-Y886331 {
+  width: 100%;
+}
+
+.Prophet-Video-Grid-X774551-Y886331 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.Prophet-Video-Item-X774551-Y886331 {
+  min-width: 0;
+  width: 100%;
+  max-width: 220px;
+  margin: 0 auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 0.45rem;
+  color: #173f83;
+  background: #fff;
+  text-align: left;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.Prophet-Video-Item-X774551-Y886331:hover,
+.Active-Prophet-Video-Item-X774551-Y886331 {
+  border-color: #2e6bc6;
+  box-shadow: 0 8px 22px rgba(46, 107, 198, 0.16);
+  transform: translateY(-2px);
+}
+
+.Prophet-Video-Thumbnail-X774551-Y886331 {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  border-radius: 7px;
+}
+
+.Prophet-Video-Thumbnail-X774551-Y886331 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Prophet-Video-Thumbnail-X774551-Y886331 i {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  color: #fff;
+  font-size: 1.65rem;
+  transform: translate(-50%, -50%);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+.Prophet-Video-Item-Title-X774551-Y886331 {
+  display: block;
+  margin-top: 0.65rem;
+  font-weight: 700;
+}
+
+.Prophet-Video-Item-X774551-Y886331 small {
+  display: block;
+  margin-top: 0.3rem;
+  color: #718096;
+}
+
+.Prophet-Video-Player-X774551-Y886331 {
+  display: grid;
+  grid-template-columns: minmax(260px, 340px) minmax(260px, 1fr);
+  gap: 1.25rem;
+  align-items: center;
+  width: min(100%, 760px);
+  margin: 1rem auto 0;
+  padding: 0.85rem;
+  border-radius: 14px;
+  background: #f4f7fb;
+}
+
+.Prophet-Video-Player-X774551-Y886331 video {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  min-height: 0;
+  max-height: 340px;
+  display: block;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #0f172a;
+}
+
+.Prophet-Video-Details-X774551-Y886331 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  padding: 0.5rem;
+}
+
+.Prophet-Video-Details-X774551-Y886331 h4 {
+  margin: 0 0 0.6rem;
+  color: #173f83;
+}
+
+.Prophet-Video-Details-X774551-Y886331 p {
+  color: #64748b;
+  line-height: 1.55;
+}
+
+.Prophet-Video-Controls-X774551-Y886331 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  width: 100%;
+  margin-top: 1.15rem;
+}
+
+.Prophet-Video-Controls-X774551-Y886331 button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  padding: 0;
+  border: 1px solid #dce6f2;
+  border-radius: 50%;
+  color: #173f83;
+  background: #fff;
+  font-size: 1.15rem;
+  transition: transform 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.Prophet-Video-Controls-X774551-Y886331 .Prophet-Video-Play-X774551Y886331 {
+  width: 58px;
+  height: 58px;
+  flex-basis: 58px;
+  color: #fff;
+  background: #2e6bc6;
+  font-size: 1.45rem;
+}
+
+.Prophet-Video-Controls-X774551-Y886331 button:hover,
+.Prophet-Video-Controls-X774551-Y886331 button:focus-visible {
+  color: #fff;
+  background: #2e6bc6;
+  outline: none;
+  transform: translateY(-2px);
+}
+
+.Prophet-Video-Progress-X774551-Y886331 {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 1rem;
+  color: #64748b;
+  font-size: 0.75rem;
+}
+
+.Prophet-Video-Progress-X774551-Y886331 > div {
+  height: 5px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: #d8e2ef;
+}
+
+.Prophet-Video-Progress-X774551-Y886331 > div > span {
+  display: block;
+  height: 100%;
+  background: #2e6bc6;
+}
+
+@media (max-width: 767px) {
+  .Prophet-Video-Grid-X774551-Y886331 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+
+  .Prophet-Video-Item-X774551-Y886331 {
+    max-width: none;
+  }
+
+  .Prophet-Video-Player-X774551-Y886331 {
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 430px;
+    padding: 0.65rem;
+  }
+
+  .Prophet-Video-Player-X774551-Y886331 video {
+    max-height: none;
+  }
+
+  .Prophet-Video-Details-X774551-Y886331 {
+    padding: 0.25rem;
+  }
+}

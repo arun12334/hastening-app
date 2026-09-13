@@ -6,6 +6,44 @@
 
   <app-header></app-header>
 
+  <div
+    *ngIf="profileToastVisible"
+    class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__profile-toast"
+    role="status"
+    aria-live="polite"
+  >
+    <i class="bi bi-check-circle-fill"></i>
+    <span>{{ profileToastMessage }}</span>
+  </div>
+
+  <div
+    *ngIf="showLogoutModal"
+    class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__logout-modal-overlay"
+    (click)="closeLogoutModal()"
+  >
+    <div
+      class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__logout-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="logout-modal-title"
+      (click)="$event.stopPropagation()"
+    >
+      <div class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__logout-modal-icon">
+        <i class="bi bi-box-arrow-right"></i>
+      </div>
+      <h2 id="logout-modal-title">Are you sure?</h2>
+      <p>Are you sure you want to logout from your account?</p>
+      <div class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__logout-modal-actions">
+        <button type="button" class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__logout-cancel" (click)="closeLogoutModal()">
+          No
+        </button>
+        <button type="button" class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__logout-confirm" (click)="confirmLogout()">
+          Yes, Logout
+        </button>
+      </div>
+    </div>
+  </div>
+
 
 <!-- ==========================================
      GUEST MODE - PLEASE LOGIN UI
@@ -455,6 +493,7 @@
         type="text"
         name="firstName"
         [(ngModel)]="profile.firstName"
+        [readonly]="!profileEditing"
         placeholder="Enter first name"
       />
     </div>
@@ -474,6 +513,7 @@
         type="text"
         name="lastName"
         [(ngModel)]="profile.lastName"
+        [readonly]="!profileEditing"
         placeholder="Enter last name"
       />
     </div>
@@ -493,6 +533,7 @@
         type="email"
         name="email"
         [(ngModel)]="profile.email"
+        [readonly]="!profileEditing"
         placeholder="Enter email address"
       />
     </div>
@@ -512,6 +553,7 @@
         type="tel"
         name="phone"
         [(ngModel)]="profile.phone"
+        [readonly]="!profileEditing"
         placeholder="Enter phone number"
       />
     </div>
@@ -526,12 +568,12 @@
             <button
               type="button"
               class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__primary-btn"
-              (click)="saveProfile()"
+              (click)="profileEditing ? saveProfile() : editProfile()"
             >
 
-              <i class="bi bi-check2"></i>
+              <i [class]="profileEditing ? 'bi bi-check2' : 'bi bi-pencil'"></i>
 
-              Save Changes
+              {{ profileEditing ? 'Update Changes' : 'Edit' }}
 
             </button>
 
@@ -588,11 +630,16 @@
                 Current Password
               </label>
 
-              <input
-                type="password"
-                [(ngModel)]="password.currentPassword"
-                placeholder="Enter current password"
-              />
+              <div class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__password-input">
+                <input
+                  [type]="passwordVisibility.currentPassword ? 'text' : 'password'"
+                  [(ngModel)]="password.currentPassword"
+                  placeholder="Enter current password"
+                />
+                <button type="button" aria-label="Show or hide current password" (click)="togglePasswordVisibility('currentPassword')">
+                  <i [class]="passwordVisibility.currentPassword ? 'bi bi-eye-slash' : 'bi bi-eye'"></i>
+                </button>
+              </div>
 
             </div>
 
@@ -606,11 +653,16 @@
                 New Password
               </label>
 
-              <input
-                type="password"
-                [(ngModel)]="password.newPassword"
-                placeholder="Enter new password"
-              />
+              <div class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__password-input">
+                <input
+                  [type]="passwordVisibility.newPassword ? 'text' : 'password'"
+                  [(ngModel)]="password.newPassword"
+                  placeholder="Enter new password"
+                />
+                <button type="button" aria-label="Show or hide new password" (click)="togglePasswordVisibility('newPassword')">
+                  <i [class]="passwordVisibility.newPassword ? 'bi bi-eye-slash' : 'bi bi-eye'"></i>
+                </button>
+              </div>
 
               <small>
                 Minimum 6 characters.
@@ -628,11 +680,16 @@
                 Confirm New Password
               </label>
 
-              <input
-                type="password"
-                [(ngModel)]="password.confirmPassword"
-                placeholder="Confirm new password"
-              />
+              <div class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__password-input">
+                <input
+                  [type]="passwordVisibility.confirmPassword ? 'text' : 'password'"
+                  [(ngModel)]="password.confirmPassword"
+                  placeholder="Confirm new password"
+                />
+                <button type="button" aria-label="Show or hide confirm password" (click)="togglePasswordVisibility('confirmPassword')">
+                  <i [class]="passwordVisibility.confirmPassword ? 'bi bi-eye-slash' : 'bi bi-eye'"></i>
+                </button>
+              </div>
 
             </div>
 

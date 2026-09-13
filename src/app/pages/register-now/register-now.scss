@@ -150,6 +150,9 @@ INPUT
 
 .Registration-Left-Card-X977563-Y966776 .form-control{
 
+    position:relative;
+    z-index:2;
+
     width:100%;
 
     height:48px;
@@ -169,6 +172,7 @@ INPUT
     box-shadow:none;
 
     transition:.30s;
+    pointer-events:auto;
 
 }
 
@@ -184,6 +188,9 @@ SELECT
 
 .Registration-Left-Card-X977563-Y966776 .form-select{
 
+    position:relative;
+    z-index:2;
+
     width:100%;
 
     height:48px;
@@ -203,6 +210,7 @@ SELECT
     box-shadow:none;
 
     transition:.30s;
+    pointer-events:auto;
 
 }
 
@@ -218,6 +226,73 @@ INPUT FOCUS
 
     box-shadow:0 0 0 .18rem rgba(23,52,111,.12);
 
+}
+
+.registration-invalid {
+    border-color: #dc3545 !important;
+    box-shadow: 0 0 0 .18rem rgba(220, 53, 69, .16) !important;
+}
+
+.Registration-Validation-Alert-X977563-Y966776,
+.Registration-Success-Alert-X977563-Y966776 {
+    margin-top: 16px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.Registration-Validation-Alert-X977563-Y966776 {
+    color: #842029;
+    background: #f8d7da;
+    border: 1px solid #f1aeb5;
+}
+
+.Registration-Success-Alert-X977563-Y966776 {
+    color: #0f5132;
+    background: #d1e7dd;
+    border: 1px solid #a3cfbb;
+}
+
+.Registration-Toast-X977563-Y966776 {
+    position: fixed;
+    right: 24px;
+    top: 24px;
+    z-index: 1055;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: min(360px, calc(100vw - 32px));
+    padding: 14px 18px;
+    color: #fff;
+    background: #17346f;
+    border-radius: 10px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, .2);
+    font-size: 14px;
+    font-weight: 600;
+    pointer-events: none;
+}
+
+.Registration-Left-Card-X977563-Y966776 .row > [class*="col-"] {
+    position: relative;
+    z-index: 1;
+}
+
+.Registration-Left-Card-X977563-Y966776 label {
+    cursor: text;
+}
+
+.Registration-Toast-X977563-Y966776 i {
+    color: #d8a122;
+}
+
+@media (max-width: 576px) {
+    .Registration-Toast-X977563-Y966776 {
+        right: 16px;
+        top: 16px;
+        left: 16px;
+        max-width: none;
+    }
 }
 
 /*==========================================================

@@ -18,6 +18,7 @@ import { WorshipingChristThroughMusic } from './pages/worshiping-christ-through-
 import { Register } from './pages/register/register';
 import { Login } from './pages/login/login';
 import { Settings } from './pages/settings/settings';
+import { Welcome } from './pages/welcome/welcome';
 
 export const routes: Routes = [
 
@@ -27,7 +28,7 @@ export const routes: Routes = [
 
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'welcome',
     pathMatch: 'full'
   },
 
@@ -47,6 +48,11 @@ export const routes: Routes = [
   {
     path: 'home',
     component: Home
+  },
+
+  {
+    path: 'welcome',
+    component: Welcome
   },
 
   // ==========================================

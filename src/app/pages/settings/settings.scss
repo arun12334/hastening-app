@@ -2292,6 +2292,187 @@
 }
 
 
+.GJHWV-6283HVW-SETTINGS-JHSWVDJWV__profile-toast {
+  position: fixed;
+  top: 88px;
+  right: 24px;
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 280px;
+  max-width: calc(100vw - 48px);
+  padding: 14px 18px;
+  border: 1px solid #b7e4c7;
+  border-radius: 12px;
+  color: #155724;
+  background: #f0fff4;
+  box-shadow: 0 10px 28px rgba(21, 87, 36, 0.18);
+  animation: settingsProfileToastIn 0.25s ease-out;
+}
+
+.GJHWV-6283HVW-SETTINGS-JHSWVDJWV__password-input {
+  position: relative;
+}
+
+.GJHWV-6283HVW-SETTINGS-JHSWVDJWV__password-input input {
+  width: 100%;
+  padding-right: 48px;
+}
+
+.GJHWV-6283HVW-SETTINGS-JHSWVDJWV__password-input button {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 50%;
+  color: #6c7b8c;
+  background: transparent;
+  transform: translateY(-50%);
+}
+
+.GJHWV-6283HVW-SETTINGS-JHSWVDJWV__password-input button:hover,
+.GJHWV-6283HVW-SETTINGS-JHSWVDJWV__password-input button:focus-visible {
+  color: var(--settings-blue);
+  background: var(--settings-blue-light);
+}
+
+.GJHWV-6283HVW-SETTINGS-JHSWVDJWV__profile-toast i {
+  color: #218838;
+  font-size: 18px;
+}
+
+@keyframes settingsProfileToastIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 767px) {
+  .GJHWV-6283HVW-SETTINGS-JHSWVDJWV__profile-toast {
+    top: 76px;
+    right: 16px;
+    left: 16px;
+    min-width: 0;
+    max-width: none;
+  }
+}
+
+.GJHWV-6283HVW-SETTINGS-JHSWVDJWV__logout-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(11, 45, 89, 0.55);
+}
+
+.GJHWV-6283HVW-SETTINGS-JHSWVDJWV__logout-modal {
+  width: min(100%, 410px);
+  padding: 2rem;
+  border: 1px solid #e4e9ef;
+  border-radius: 18px;
+  color: var(--settings-text);
+  background: #ffffff;
+  text-align: center;
+  box-shadow: 0 22px 60px rgba(11, 45, 89, 0.22);
+  animation: settingsLogoutModalIn 0.2s ease-out;
+}
+
+.GJHWV-6283HVW-SETTINGS-JHSWVDJWV__logout-modal-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  color: #b42318;
+  background: #fff1f0;
+  font-size: 1.5rem;
+}
+
+.GJHWV-6283HVW-SETTINGS-JHSWVDJWV__logout-modal h2 {
+  margin: 0;
+  color: var(--settings-blue-dark);
+}
+
+.GJHWV-6283HVW-SETTINGS-JHSWVDJWV__logout-modal p {
+  margin: 0.75rem 0 1.5rem;
+  color: var(--settings-muted);
+}
+
+.GJHWV-6283HVW-SETTINGS-JHSWVDJWV__logout-modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.GJHWV-6283HVW-SETTINGS-JHSWVDJWV__logout-modal-actions button {
+  min-width: 120px;
+  min-height: 42px;
+  border-radius: 8px;
+  padding: 0 1rem;
+  font-weight: 700;
+}
+
+.GJHWV-6283HVW-SETTINGS-JHSWVDJWV__logout-cancel {
+  border: 1px solid #cbd5e1;
+  color: var(--settings-text);
+  background: #ffffff;
+}
+
+.GJHWV-6283HVW-SETTINGS-JHSWVDJWV__logout-confirm {
+  border: 1px solid #b42318;
+  color: #ffffff;
+  background: #b42318;
+}
+
+@keyframes settingsLogoutModalIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 767px) {
+  .GJHWV-6283HVW-SETTINGS-JHSWVDJWV__logout-modal-overlay {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .GJHWV-6283HVW-SETTINGS-JHSWVDJWV__logout-modal {
+    width: 100%;
+    border-radius: 18px 18px 0 0;
+  }
+
+  .GJHWV-6283HVW-SETTINGS-JHSWVDJWV__logout-modal-actions {
+    flex-direction: column-reverse;
+  }
+
+  .GJHWV-6283HVW-SETTINGS-JHSWVDJWV__logout-modal-actions button {
+    width: 100%;
+  }
+}
+
 /* ==========================================
    GUEST LOGIN UI
    ========================================== */
