@@ -1,0 +1,1120 @@
+<div class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV">
+
+  <!-- ==========================================
+       APPLICATION HEADER
+  =========================================== -->
+
+  <app-header></app-header>
+
+
+<!-- ==========================================
+     GUEST MODE - PLEASE LOGIN UI
+     ========================================== -->
+
+<div
+  *ngIf="guestMode"
+  class="HSHDVHSHJ-LOGINUI-HD6338HBSJ"
+>
+
+  <div
+    class="HSHDVHSHJ-LOGINUI-HD6338HBSJ__card"
+  >
+
+    <!-- Icon -->
+    <div
+      class="HSHDVHSHJ-LOGINUI-HD6338HBSJ__icon"
+    >
+      <i class="bi bi-person-lock"></i>
+    </div>
+
+    <!-- Title -->
+    <h2
+      class="HSHDVHSHJ-LOGINUI-HD6338HBSJ__title"
+    >
+      Please Login
+    </h2>
+
+    <!-- Description -->
+    <p
+      class="HSHDVHSHJ-LOGINUI-HD6338HBSJ__description"
+    >
+      Please login to your account to access
+      Settings and manage your profile,
+      security, notifications, and preferences.
+    </p>
+
+    <!-- Login Button -->
+    <button
+      type="button"
+      class="HSHDVHSHJ-LOGINUI-HD6338HBSJ__button"
+     (click)="naviagteTologin()"
+    >
+      <i class="bi bi-box-arrow-in-right"></i>
+
+      <span>
+        Login to Continue
+      </span>
+    </button>
+
+    <!-- Register -->
+    <p
+      class="HSHDVHSHJ-LOGINUI-HD6338HBSJ__register"
+    >
+      Don't have an account?
+
+      <a
+        routerLink="/register"
+        class="HSHDVHSHJ-LOGINUI-HD6338HBSJ__register-link"
+      >
+        Create Account
+      </a>
+    </p>
+
+  </div>
+
+</div>
+
+
+
+  <!-- ==========================================
+       SETTINGS PAGE
+  =========================================== -->
+
+  <main class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__page" *ngIf="!guestMode">
+
+
+    <!-- ========================================
+         PAGE TITLE
+    ========================================= -->
+
+    <section
+      class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__hero"
+    >
+
+      <div
+        class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__hero-inner"
+      >
+
+        <div
+          class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__hero-icon"
+        >
+          <i class="bi bi-gear-fill"></i>
+        </div>
+
+
+        <div
+          class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__hero-content"
+        >
+
+          <span
+            class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__eyebrow"
+          >
+            ACCOUNT
+          </span>
+
+          <h1>
+            Account Settings
+          </h1>
+
+          <p>
+            Manage your profile, preferences and security
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ========================================
+         SETTINGS WRAPPER
+    ========================================= -->
+
+    <section
+      class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__wrapper"
+    >
+
+
+      <!-- ======================================
+           LEFT NAVIGATION
+      ======================================= -->
+
+      <aside
+        class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__sidebar"
+      >
+
+        <div
+          class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__sidebar-title"
+        >
+          Settings
+        </div>
+
+
+        <!-- PROFILE -->
+
+        <button
+          type="button"
+          class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__nav-item"
+          [class.active]="activeSection === 'profile'"
+          (click)="selectSection('profile')"
+        >
+
+          <span
+            class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__nav-icon"
+          >
+            <i class="bi bi-person-fill"></i>
+          </span>
+
+          <span
+            class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__nav-content"
+          >
+            <strong>Profile</strong>
+            <small>Personal information</small>
+          </span>
+
+          <i
+            class="bi bi-chevron-right GJHWV-6283HVW-SETTINGS-JHSWVDJWV__nav-arrow"
+          ></i>
+
+        </button>
+
+
+
+        <!-- PASSWORD -->
+
+        <button
+          type="button"
+          class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__nav-item"
+          [class.active]="activeSection === 'password'"
+          (click)="selectSection('password')"
+        >
+
+          <span
+            class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__nav-icon"
+          >
+            <i class="bi bi-lock-fill"></i>
+          </span>
+
+          <span
+            class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__nav-content"
+          >
+            <strong>Change Password</strong>
+            <small>Update your password</small>
+          </span>
+
+          <i
+            class="bi bi-chevron-right GJHWV-6283HVW-SETTINGS-JHSWVDJWV__nav-arrow"
+          ></i>
+
+        </button>
+
+
+
+        <!-- NOTIFICATIONS -->
+
+        <button
+          type="button"
+          class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__nav-item"
+          [class.active]="activeSection === 'notifications'"
+          (click)="selectSection('notifications')"
+        >
+
+          <span
+            class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__nav-icon"
+          >
+            <i class="bi bi-bell-fill"></i>
+          </span>
+
+          <span
+            class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__nav-content"
+          >
+            <strong>Notifications</strong>
+            <small>Alerts and messages</small>
+          </span>
+
+          <i
+            class="bi bi-chevron-right GJHWV-6283HVW-SETTINGS-JHSWVDJWV__nav-arrow"
+          ></i>
+
+        </button>
+
+
+
+        <!-- LANGUAGE -->
+
+        <button
+          type="button"
+          class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__nav-item"
+          [class.active]="activeSection === 'language'"
+          (click)="selectSection('language')"
+        >
+
+          <span
+            class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__nav-icon"
+          >
+            <i class="bi bi-translate"></i>
+          </span>
+
+          <span
+            class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__nav-content"
+          >
+            <strong>Language</strong>
+            <small>Application language</small>
+          </span>
+
+          <i
+            class="bi bi-chevron-right GJHWV-6283HVW-SETTINGS-JHSWVDJWV__nav-arrow"
+          ></i>
+
+        </button>
+
+
+
+        <!-- APPEARANCE -->
+
+        <button
+          type="button"
+          class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__nav-item"
+          [class.active]="activeSection === 'appearance'"
+          (click)="selectSection('appearance')"
+        >
+
+          <span
+            class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__nav-icon"
+          >
+            <i class="bi bi-moon-stars-fill"></i>
+          </span>
+
+          <span
+            class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__nav-content"
+          >
+            <strong>Appearance</strong>
+            <small>Light and dark mode</small>
+          </span>
+
+          <i
+            class="bi bi-chevron-right GJHWV-6283HVW-SETTINGS-JHSWVDJWV__nav-arrow"
+          ></i>
+
+        </button>
+
+
+
+        <!-- PRIVACY -->
+
+        <button
+          type="button"
+          class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__nav-item"
+          [class.active]="activeSection === 'privacy'"
+          (click)="selectSection('privacy')"
+        >
+
+          <span
+            class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__nav-icon"
+          >
+            <i class="bi bi-shield-lock-fill"></i>
+          </span>
+
+          <span
+            class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__nav-content"
+          >
+            <strong>Privacy &amp; Security</strong>
+            <small>Security and privacy</small>
+          </span>
+
+          <i
+            class="bi bi-chevron-right GJHWV-6283HVW-SETTINGS-JHSWVDJWV__nav-arrow"
+          ></i>
+
+        </button>
+
+
+
+        <!-- DIVIDER -->
+
+        <div
+          class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__divider"
+        ></div>
+
+
+
+        <!-- LOGOUT -->
+
+        <button
+          type="button"
+          class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__nav-item GJHWV-6283HVW-SETTINGS-JHSWVDJWV__logout"
+          (click)="logout()"
+        >
+
+          <span
+            class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__nav-icon"
+          >
+            <i class="bi bi-box-arrow-right"></i>
+          </span>
+
+          <span
+            class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__nav-content"
+          >
+            <strong>Logout</strong>
+            <small>Sign out of your account</small>
+          </span>
+
+        </button>
+
+      </aside>
+
+
+
+      <!-- ======================================
+           RIGHT CONTENT
+      ======================================= -->
+
+      <div
+        class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__content"
+      >
+
+
+        <!-- ====================================
+             CONTENT HEADER
+        ===================================== -->
+
+        <div
+          class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__content-header"
+        >
+
+          <div>
+
+            <span
+              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__content-label"
+            >
+              SETTINGS
+            </span>
+
+            <h2>
+              {{ getSectionTitle() }}
+            </h2>
+
+            <p>
+              {{ getSectionDescription() }}
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- ====================================
+             PROFILE
+        ===================================== -->
+
+        <section
+          *ngIf="activeSection === 'profile'"
+          class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__panel"
+        >
+
+          <div
+            class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__profile-top"
+          >
+
+            <div
+              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__avatar"
+            >
+              AA
+            </div>
+
+            <div>
+
+              <h3>
+                Profile Information
+              </h3>
+
+              <p>
+                Keep your personal details up to date.
+              </p>
+
+            </div>
+
+          </div>
+
+
+<div class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__form-grid">
+
+  <!-- FIRST NAME -->
+  <div class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__field">
+    <label>First Name</label>
+
+    <div class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__input">
+      <span class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__icon">
+        <i class="bi bi-person"></i>
+      </span>
+
+      <input
+        type="text"
+        name="firstName"
+        [(ngModel)]="profile.firstName"
+        placeholder="Enter first name"
+      />
+    </div>
+  </div>
+
+
+  <!-- LAST NAME -->
+  <div class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__field">
+    <label>Last Name</label>
+
+    <div class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__input">
+      <span class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__icon">
+        <i class="bi bi-person"></i>
+      </span>
+
+      <input
+        type="text"
+        name="lastName"
+        [(ngModel)]="profile.lastName"
+        placeholder="Enter last name"
+      />
+    </div>
+  </div>
+
+
+  <!-- EMAIL -->
+  <div class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__field">
+    <label>Email Address</label>
+
+    <div class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__input">
+      <span class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__icon">
+        <i class="bi bi-envelope"></i>
+      </span>
+
+      <input
+        type="email"
+        name="email"
+        [(ngModel)]="profile.email"
+        placeholder="Enter email address"
+      />
+    </div>
+  </div>
+
+
+  <!-- PHONE -->
+  <div class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__field">
+    <label>Phone Number</label>
+
+    <div class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__input">
+      <span class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__icon">
+        <i class="bi bi-telephone"></i>
+      </span>
+
+      <input
+        type="tel"
+        name="phone"
+        [(ngModel)]="profile.phone"
+        placeholder="Enter phone number"
+      />
+    </div>
+  </div>
+
+</div>
+
+          <div
+            class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__actions"
+          >
+
+            <button
+              type="button"
+              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__primary-btn"
+              (click)="saveProfile()"
+            >
+
+              <i class="bi bi-check2"></i>
+
+              Save Changes
+
+            </button>
+
+          </div>
+
+        </section>
+
+
+
+        <!-- ====================================
+             CHANGE PASSWORD
+        ===================================== -->
+
+        <section
+          *ngIf="activeSection === 'password'"
+          class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__panel"
+        >
+
+          <div
+            class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__security-banner"
+          >
+
+            <div
+              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__security-banner-icon"
+            >
+              <i class="bi bi-shield-check"></i>
+            </div>
+
+            <div>
+
+              <strong>
+                Keep your account secure
+              </strong>
+
+              <p>
+                Use a strong password that you don't use elsewhere.
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <div
+            class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__form"
+          >
+
+            <div
+              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__field"
+            >
+
+              <label>
+                Current Password
+              </label>
+
+              <input
+                type="password"
+                [(ngModel)]="password.currentPassword"
+                placeholder="Enter current password"
+              />
+
+            </div>
+
+
+
+            <div
+              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__field"
+            >
+
+              <label>
+                New Password
+              </label>
+
+              <input
+                type="password"
+                [(ngModel)]="password.newPassword"
+                placeholder="Enter new password"
+              />
+
+              <small>
+                Minimum 6 characters.
+              </small>
+
+            </div>
+
+
+
+            <div
+              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__field"
+            >
+
+              <label>
+                Confirm New Password
+              </label>
+
+              <input
+                type="password"
+                [(ngModel)]="password.confirmPassword"
+                placeholder="Confirm new password"
+              />
+
+            </div>
+
+
+
+            <button
+              type="button"
+              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__primary-btn"
+              (click)="changePassword()"
+            >
+
+              <i class="bi bi-lock"></i>
+
+              Update Password
+
+            </button>
+
+          </div>
+
+        </section>
+
+
+
+        <!-- ====================================
+             NOTIFICATIONS
+        ===================================== -->
+
+        <section
+          *ngIf="activeSection === 'notifications'"
+          class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__panel"
+        >
+
+          <div
+            class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__option"
+          >
+
+            <div
+              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__option-icon"
+            >
+
+              <i class="bi bi-bell-fill"></i>
+
+            </div>
+
+            <div
+              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__option-content"
+            >
+
+              <h3>
+                Push Notifications
+              </h3>
+
+              <p>
+                Receive updates about important activities,
+                messages and account notifications.
+              </p>
+
+            </div>
+
+
+            <button
+              type="button"
+              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__toggle"
+              [class.active]="notificationsEnabled"
+              (click)="toggleNotifications()"
+            >
+
+              <span></span>
+
+            </button>
+
+          </div>
+
+
+
+          <div
+            class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__option"
+          >
+
+            <div
+              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__option-icon"
+            >
+
+              <i class="bi bi-envelope-fill"></i>
+
+            </div>
+
+            <div
+              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__option-content"
+            >
+
+              <h3>
+                Email Notifications
+              </h3>
+
+              <p>
+                Receive important account updates through email.
+              </p>
+
+            </div>
+
+
+            <span
+              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__status"
+            >
+              Enabled
+            </span>
+
+          </div>
+
+
+
+          <div
+            class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__option"
+          >
+
+            <div
+              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__option-icon"
+            >
+
+              <i class="bi bi-calendar-event-fill"></i>
+
+            </div>
+
+            <div
+              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__option-content"
+            >
+
+              <h3>
+                Event Reminders
+              </h3>
+
+              <p>
+                Get reminders for upcoming community events.
+              </p>
+
+            </div>
+
+
+            <span
+              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__status"
+            >
+              Enabled
+            </span>
+
+          </div>
+
+        </section>
+
+
+
+        <!-- ====================================
+             LANGUAGE
+        ===================================== -->
+
+        <section
+          *ngIf="activeSection === 'language'"
+          class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__panel"
+        >
+
+          <div
+            class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__language-card"
+          >
+
+            <div
+              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__language-icon"
+            >
+
+              <i class="bi bi-translate"></i>
+
+            </div>
+
+            <div>
+
+              <h3>
+                Application Language
+              </h3>
+
+              <p>
+                Choose the language you prefer to use
+                throughout the application.
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <div
+            class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__field"
+          >
+
+            <label>
+              Select Language
+            </label>
+
+            <div
+              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__select"
+            >
+
+              <i class="bi bi-globe2"></i>
+
+              <select
+                [(ngModel)]="selectedLanguage"
+              >
+
+                <option
+                  *ngFor="let language of languages"
+                  [value]="language"
+                >
+                  {{ language }}
+                </option>
+
+              </select>
+
+              <i class="bi bi-chevron-down"></i>
+
+            </div>
+
+          </div>
+
+
+
+          <button
+            type="button"
+            class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__primary-btn"
+            (click)="saveLanguage()"
+          >
+
+            <i class="bi bi-check2"></i>
+
+            Save Language
+
+          </button>
+
+        </section>
+
+
+
+        <!-- ====================================
+             APPEARANCE
+        ===================================== -->
+
+        <section
+          *ngIf="activeSection === 'appearance'"
+          class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__panel"
+        >
+
+          <div
+            class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__theme-preview"
+          >
+
+            <div
+              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__theme-preview-icon"
+            >
+
+              <i
+                class="bi"
+                [class.bi-sun-fill]="!darkModeEnabled"
+                [class.bi-moon-stars-fill]="darkModeEnabled"
+              ></i>
+
+            </div>
+
+            <div>
+
+              <h3>
+                {{ darkModeEnabled ? 'Dark Mode' : 'Light Mode' }}
+              </h3>
+
+              <p>
+                {{ darkModeEnabled
+                  ? 'Dark appearance is currently enabled.'
+                  : 'Light appearance is currently enabled.'
+                }}
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <div
+            class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__option"
+          >
+
+            <div
+              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__option-icon"
+            >
+
+              <i
+                class="bi"
+                [class.bi-moon-stars-fill]="!darkModeEnabled"
+                [class.bi-sun-fill]="darkModeEnabled"
+              ></i>
+
+            </div>
+
+            <div
+              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__option-content"
+            >
+
+              <h3>
+                Dark Mode
+              </h3>
+
+              <p>
+                Switch between light and dark appearance.
+              </p>
+
+            </div>
+
+
+            <button
+              type="button"
+              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__toggle"
+              [class.active]="darkModeEnabled"
+              (click)="toggleDarkMode()"
+            >
+
+              <span></span>
+
+            </button>
+
+          </div>
+
+        </section>
+
+
+
+        <!-- ====================================
+             PRIVACY & SECURITY
+        ===================================== -->
+
+        <section
+          *ngIf="activeSection === 'privacy'"
+          class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__panel"
+        >
+
+          <div
+            class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__privacy-status"
+          >
+
+            <div
+              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__privacy-status-icon"
+            >
+
+              <i class="bi bi-shield-check"></i>
+
+            </div>
+
+            <div>
+
+              <strong>
+                Your account is protected
+              </strong>
+
+              <p>
+                Your security settings are currently active.
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <div
+            class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__security-list"
+          >
+
+            <div
+              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__security-row"
+            >
+
+              <div>
+
+                <h3>
+                  Password Security
+                </h3>
+
+                <p>
+                  Your account is protected with a password.
+                </p>
+
+              </div>
+
+              <span
+                class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__secure-badge"
+              >
+                <i class="bi bi-check-circle-fill"></i>
+                Secure
+              </span>
+
+            </div>
+
+
+
+            <div
+              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__security-row"
+            >
+
+              <div>
+
+                <h3>
+                  Two-Factor Authentication
+                </h3>
+
+                <p>
+                  Add an additional layer of protection to your account.
+                </p>
+
+              </div>
+
+              <button
+                type="button"
+                class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__outline-btn"
+              >
+                Enable
+              </button>
+
+            </div>
+
+
+
+            <div
+              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__security-row"
+            >
+
+              <div>
+
+                <h3>
+                  Login Activity
+                </h3>
+
+                <p>
+                  Review recent activity on your account.
+                </p>
+
+              </div>
+
+              <i
+                class="bi bi-chevron-right GJHWV-6283HVW-SETTINGS-JHSWVDJWV__security-arrow"
+              ></i>
+
+            </div>
+
+
+
+            <div
+              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__security-row"
+            >
+
+              <div>
+
+                <h3>
+                  Privacy Policy
+                </h3>
+
+                <p>
+                  Review how your information is handled.
+                </p>
+
+              </div>
+
+              <i
+                class="bi bi-chevron-right GJHWV-6283HVW-SETTINGS-JHSWVDJWV__security-arrow"
+              ></i>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+      </div>
+
+    </section>
+
+  </main>
+
+</div>

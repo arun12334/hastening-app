@@ -260,69 +260,95 @@ export class Login {
         // SUCCESS
         // =====================================
 
-     next: (response: LoginResponse) => {
+next: (response: LoginResponse) => {
 
-  console.log('Login API response:', response);
+  console.log(
+    'Login API response:',
+    response
+  );
+
+  // =========================================
+  // LOGIN SUCCESS
+  // =========================================
 
   if (response.success) {
 
     console.log('LOGIN SUCCESS');
 
     this.successMessage =
-      response.message || 'Login successful.';
+      response.message ||
+      'Login successful.';
 
-    // ==========================================
-    // STORE TOKEN
-    // ==========================================
+    // =========================================
+    // STORE COMPLETE API RESPONSE
+    // =========================================
 
-    if (response.token) {
+    localStorage.setItem(
+      'user_profile_info',
+      JSON.stringify(response)
+    );
 
-      localStorage.setItem(
-        'auth_token',
-        response.token
-      );
+    console.log(
+      'Complete login response saved:',
+      localStorage.getItem(
+        'user_profile_info'
+      )
+    );
 
-    }
-
-    // ==========================================
-    // STORE USER ID
-    // ==========================================
-
-    if (response.userId) {
-
-      localStorage.setItem(
-        'user_id',
-        response.userId
-      );
-
-    }
-
-    // ==========================================
+    // =========================================
     // REMEMBER ME
-    // ==========================================
+    // =========================================
 
     localStorage.setItem(
       'remember_me',
       String(this.rememberMe)
     );
 
+    console.log(
+      'Remember Me:',
+      this.rememberMe
+    );
+
+
+
+     localStorage.setItem(
+    'guest_mode',
+    'false'
+  );
+
+    // =========================================
+    // CHANGE DETECTION
+    // =========================================
+
     this.cdr.detectChanges();
 
-    console.log('Login data stored');
+    console.log(
+      'Login data stored successfully'
+    );
 
-    // ==========================================
+    // =========================================
     // NAVIGATE TO HOME
-    // ==========================================
+    // =========================================
 
     setTimeout(() => {
 
-      console.log('Navigating to home...');
+      console.log(
+        'Navigating to home...'
+      );
 
-      this.router.navigate(['/home']);
+      this.router.navigate([
+        '/home'
+      ]);
 
     }, 500);
 
-  } else {
+  }
+
+  // =========================================
+  // LOGIN FAILED
+  // =========================================
+
+  else {
 
     console.error(
       'Login failed:',
@@ -334,9 +360,7 @@ export class Login {
       'Login failed. Please try again.';
 
     this.cdr.detectChanges();
-
   }
-
 },
 
 

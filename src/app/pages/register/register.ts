@@ -201,23 +201,23 @@ export class Register {
 
             console.log(
               'User ID:',
-              response.userId
+              response.user?.id
             );
 
             // ==================================
             // SAVE USER ID
             // ==================================
 
-            if (response.userId) {
+            if (response.user?.id) {
 
               localStorage.setItem(
                 'user_id',
-                String(response.userId)
+                String(response.user?.id)
               );
 
               console.log(
                 'User ID saved:',
-                response.userId
+              response.user?.id
               );
             }
 

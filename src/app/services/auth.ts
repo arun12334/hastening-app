@@ -2,6 +2,10 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+// ==========================================
+// REGISTER
+// ==========================================
+
 export interface RegisterRequest {
   name: string;
   email: string;
@@ -11,8 +15,21 @@ export interface RegisterRequest {
 export interface RegisterResponse {
   success: boolean;
   message: string;
-  userId?: string;
+
+  user?: {
+    id: number;
+    name: string;
+    email: string;
+    publicKey: string;
+    token: string;
+  };
+
+  emailSent?: boolean;
 }
+
+// ==========================================
+// LOGIN
+// ==========================================
 
 export interface LoginRequest {
   email: string;
@@ -22,11 +39,44 @@ export interface LoginRequest {
 export interface LoginResponse {
   success: boolean;
   message: string;
-  userId?: string;
-  name?: string;
-  email?: string;
-  token?: string;
+
+  user?: {
+    id: number;
+    name: string;
+    email: string;
+    publicKey: string;
+    token: string;
+    created_at: string;
+  };
 }
+
+// ==========================================
+// PROFILE
+// ==========================================
+
+export interface ProfileRequest {
+  id: number;
+  token: string;
+  publicKey: string;
+}
+
+export interface ProfileResponse {
+  success: boolean;
+  message: string;
+
+  user?: {
+    id: number;
+    name: string;
+    email: string;
+    publicKey: string;
+    token: string;
+    created_at: string;
+  };
+}
+
+// ==========================================
+// AUTH SERVICE
+// ==========================================
 
 @Injectable({
   providedIn: 'root'
@@ -39,9 +89,9 @@ export class Auth {
     private http: HttpClient
   ) {}
 
-  // ==============================
+  // ==========================================
   // REGISTER
-  // ==============================
+  // ==========================================
 
   register(
     data: RegisterRequest
@@ -53,9 +103,9 @@ export class Auth {
     );
   }
 
-  // ==============================
+  // ==========================================
   // LOGIN
-  // ==============================
+  // ==========================================
 
   login(
     data: LoginRequest
@@ -63,6 +113,20 @@ export class Auth {
 
     return this.http.post<LoginResponse>(
       `${this.apiUrl}/login.php`,
+      data
+    );
+  }
+
+  // ==========================================
+  // GET PROFILE
+  // ==========================================
+
+  getProfile(
+    data: ProfileRequest
+  ): Observable<ProfileResponse> {
+
+    return this.http.post<ProfileResponse>(
+      `${this.apiUrl}/profile.php`,
       data
     );
   }

@@ -16,6 +16,7 @@ import { AuthenticationAndSecurityManagementSystem } from './pages/authenticatio
 import { WorshipingChristThroughMusic } from './pages/worshiping-christ-through-music/worshiping-christ-through-music';
 import { Register } from './pages/register/register';
 import { Login } from './pages/login/login';
+import { Settings } from './pages/settings/settings';
 
 export const routes: Routes = [
 
@@ -123,6 +124,11 @@ export const routes: Routes = [
   {
     path: 'pray-for-someone',
     component: PrayForSomeone
+  },
+
+  {
+    path: 'settings',
+    component: Settings
   }
 
 ];

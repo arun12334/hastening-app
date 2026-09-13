@@ -48,7 +48,7 @@ DESKTOP HEADER
                     <!-- HOME -->
 
                     <a
-                        routerLink="/"
+                        routerLink="/home"
                         routerLinkActive="active-nav"
                         [routerLinkActiveOptions]="{ exact:true }"
                         class="nav-item-custom">
@@ -199,6 +199,23 @@ DESKTOP HEADER
 
                     </a>
 
+                    
+                    <a
+                        routerLink="/settings"
+                        routerLinkActive="active-nav"
+                        class="nav-item-custom">
+
+                       <i class="bi bi-gear"></i>
+
+                        Account
+
+                        <br>
+
+                        Settings
+
+                    </a>
+
+
                 </div>
 
             </div>
@@ -324,7 +341,7 @@ OFFCANVAS
 
         <a
 
-            routerLink="/"
+            routerLink="/home"
 
             routerLinkActive="mobile-active-nav"
 
@@ -573,6 +590,27 @@ OFFCANVAS
             </div>
 
         </a>
+
+
+
+        <!-- SETTINGS -->
+
+<a
+  routerLink="/settings"
+  routerLinkActive="mobile-active-nav"
+  class="mobile-menu-item"
+  data-bs-dismiss="offcanvas">
+
+  <div class="menu-icon">
+    <i class="bi bi-gear"></i>
+  </div>
+
+  <div>
+    <h6>Settings</h6>
+    <small>Account Settings</small>
+  </div>
+
+</a>
 
     </div>
 
