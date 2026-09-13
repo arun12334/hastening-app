@@ -1,0 +1,138 @@
+<app-header></app-header>
+
+<main class="SSJAH-VIEW-ALL-STORY-Page">
+    <section class="SSJAH-VIEW-ALL-STORY-Hero">
+        <div class="container">
+            <div class="SSJAH-VIEW-ALL-STORY-Hero-Content">
+                <span class="SSJAH-VIEW-ALL-STORY-Icon">
+                    <i class="bi bi-balloon-heart-fill"></i>
+                </span>
+                <h1>All Stories of Love</h1>
+                <p>Read every story of faith, kindness, and service shared by our community.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="SSJAH-VIEW-ALL-STORY-Content">
+        <div class="container">
+            <div class="SSJAH-VIEW-ALL-STORY-Toolbar">
+                <div>
+                    <h2>My Stories</h2>
+                    <p>{{allStories.length}} stories</p>
+                </div>
+                <button type="button" class="SSJAH-VIEW-ALL-STORY-Back" (click)="goBack()">
+                    <i class="bi bi-arrow-left"></i>
+                    Back to My Stories
+                </button>
+            </div>
+
+            @if(allStories.length) {
+            <div class="row g-4">
+                @for(story of allStories; track story.id) {
+                <div class="col-xl-4 col-lg-6">
+                    <article class="SSJAH-VIEW-ALL-STORY-Card" (click)="selectStory(story)">
+                        <img [src]="story.image" [alt]="story.title" class="SSJAH-VIEW-ALL-STORY-Image">
+                        <div class="SSJAH-VIEW-ALL-STORY-Card-Body">
+                            <div class="SSJAH-VIEW-ALL-STORY-Card-Top">
+                                <span class="SSJAH-VIEW-ALL-STORY-Badge" [class.SSJAH-VIEW-ALL-STORY-Badge-Success]="story.badge === 'success'" [class.SSJAH-VIEW-ALL-STORY-Badge-Warning]="story.badge === 'warning'">
+                                    {{story.status}}
+                                </span>
+                                <small>{{story.date}}</small>
+                            </div>
+                            <h3>{{story.title}}</h3>
+                            <p>{{story.description}}</p>
+                            <div class="SSJAH-VIEW-ALL-STORY-Meta">
+                                <span>{{story.author || 'Community Member'}}</span>
+                                @if(story.time) {
+                                <span>• {{story.time}}</span>
+                                }
+                            </div>
+                            <div class="SSJAH-VIEW-ALL-STORY-Actions">
+                                <button type="button" class="SSJAH-VIEW-ALL-STORY-Edit" (click)="editStory(story, $event)">
+                                    <i class="bi bi-pencil"></i>
+                                    Edit
+                                </button>
+                                <button type="button" class="SSJAH-VIEW-ALL-STORY-Delete" (click)="deleteStory(story, $event)">
+                                    <i class="bi bi-trash"></i>
+                                    Delete
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                }
+            </div>
+            } @else {
+            <div class="SSJAH-VIEW-ALL-STORY-Empty">
+                <i class="bi bi-heart"></i>
+                <p>No stories have been shared yet.</p>
+            </div>
+            }
+        </div>
+    </section>
+</main>
+
+@if(showStoryModal && selectedStory) {
+<div class="SSJAH-VIEW-ALL-STORY-Modal-Overlay" (click)="closeStoryModal()">
+    <section class="SSJAH-VIEW-ALL-STORY-Modal" role="dialog" aria-modal="true" aria-labelledby="story-modal-title" (click)="$event.stopPropagation()">
+        <button type="button" class="SSJAH-VIEW-ALL-STORY-Modal-Close" aria-label="Close story" (click)="closeStoryModal()">
+            <i class="bi bi-x-lg"></i>
+        </button>
+        <img [src]="selectedStory.image" [alt]="selectedStory.title" class="SSJAH-VIEW-ALL-STORY-Modal-Image">
+        <div class="SSJAH-VIEW-ALL-STORY-Modal-Body">
+            <span class="SSJAH-VIEW-ALL-STORY-Badge">{{selectedStory.status}}</span>
+            <h2 id="story-modal-title">{{selectedStory.title}}</h2>
+            <p class="SSJAH-VIEW-ALL-STORY-Modal-Meta">
+                {{selectedStory.author || 'Community Member'}} • {{selectedStory.date}}
+                @if(selectedStory.time) { • {{selectedStory.time}} }
+            </p>
+            <p class="SSJAH-VIEW-ALL-STORY-Modal-Description">{{selectedStory.description}}</p>
+            <div class="SSJAH-VIEW-ALL-STORY-Modal-Actions">
+                <button type="button" class="SSJAH-VIEW-ALL-STORY-Edit" (click)="editStory(selectedStory, $event); closeStoryModal()">
+                    <i class="bi bi-pencil"></i>
+                    Edit
+                </button>
+                <button type="button" class="SSJAH-VIEW-ALL-STORY-Delete" (click)="deleteStory(selectedStory, $event)">
+                    <i class="bi bi-trash"></i>
+                    Delete
+                </button>
+            </div>
+        </div>
+    </section>
+</div>
+}
+
+@if(showEditModal) {
+<div class="SSJAH-VIEW-ALL-STORY-Modal-Overlay" (click)="closeEditModal()">
+    <section class="SSJAH-VIEW-ALL-STORY-Modal SSJAH-VIEW-ALL-STORY-Edit-Modal" role="dialog" aria-modal="true" aria-labelledby="edit-story-title" (click)="$event.stopPropagation()">
+        <div class="SSJAH-VIEW-ALL-STORY-Modal-Body">
+            <h2 id="edit-story-title">Edit Story</h2>
+            <form (ngSubmit)="saveEditedStory()">
+                <label class="SSJAH-VIEW-ALL-STORY-Field">Image
+                    <input type="file" accept="image/*" class="form-control" (change)="onEditImageSelected($event)">
+                </label>
+                <label class="SSJAH-VIEW-ALL-STORY-Field">Title
+                    <input type="text" name="editTitle" class="form-control" [(ngModel)]="editStoryData.title" required>
+                </label>
+                <label class="SSJAH-VIEW-ALL-STORY-Field">Author
+                    <input type="text" name="editAuthor" class="form-control" [(ngModel)]="editStoryData.author">
+                </label>
+                <label class="SSJAH-VIEW-ALL-STORY-Field">Description
+                    <textarea name="editDescription" rows="5" maxlength="1500" class="form-control" [(ngModel)]="editStoryData.description" (input)="validateEditDescriptionLength()" required></textarea>
+                    <small>{{editStoryData.description.length}} / 1500 characters</small>
+                </label>
+                <label class="SSJAH-VIEW-ALL-STORY-Field">Status
+                    <select name="editStatus" class="form-select" [(ngModel)]="editStoryData.status">
+                        <option value="True">True</option>
+                        <option value="Story Only">Story Only</option>
+                    </select>
+                </label>
+                <div class="SSJAH-VIEW-ALL-STORY-Modal-Actions">
+                    <button type="button" class="SSJAH-VIEW-ALL-STORY-Edit" (click)="closeEditModal()">Cancel</button>
+                    <button type="submit" class="SSJAH-VIEW-ALL-STORY-Edit">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</div>
+}

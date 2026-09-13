@@ -10,6 +10,7 @@ import { InvitationToUnity } from './pages/invitation-to-unity/invitation-to-uni
 import { DoesUnityBaptism } from './pages/does-unity-baptism/does-unity-baptism';
 import { NeighborhoodBbEvents } from './pages/neighborhood-bb-events/neighborhood-bb-events';
 import { SharingAStoryOfLove } from './pages/sharing-a-story-of-love/sharing-a-story-of-love';
+import { SharingAStoryOfLoveViewAllStory } from './pages/sharing-a-story-of-love-view-all-story/sharing-a-story-of-love-view-all-story';
 import { JoinAJustserveActivity } from './pages/join-a-justserve-activity/join-a-justserve-activity';
 import { JoiningEmmasReliefSociety } from './pages/joining-emmas-relief-society/joining-emmas-relief-society';
 import { AuthenticationAndSecurityManagementSystem } from './pages/authentication-and-security-management-system/authentication-and-security-management-system';
@@ -99,6 +100,11 @@ export const routes: Routes = [
   {
     path: 'sharing-a-story-of-love',
     component: SharingAStoryOfLove
+  },
+
+  {
+    path: 'sharing-a-story-of-love-view-all-story',
+    component: SharingAStoryOfLoveViewAllStory
   },
 
   {

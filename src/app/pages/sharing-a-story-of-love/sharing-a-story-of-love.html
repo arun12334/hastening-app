@@ -197,11 +197,12 @@ STORY DASHBOARD
                     STORY LIST
                     ==============================-->
 
-                    @for(story of myStories; track story.id){
+                    @for(story of recentStories; track story.id){
 
                     <div
 
                         class="Sharing-Story-List-Card"
+                        [class.active]="selectedStory?.id === story.id"
 
                         (click)="selectStory(story)">
 
@@ -403,12 +404,13 @@ STORY DASHBOARD
                     FEATURED STORY
                     ==============================-->
 
+                    @if(selectedStory) {
                     <div
                         class="Sharing-Story-Featured-Card">
 
                         <img
 
-                            [src]="featuredStory.image"
+                            [src]="selectedStory.image"
 
                             class="Sharing-Story-Featured-Image"
 
@@ -422,14 +424,14 @@ STORY DASHBOARD
 
                                 <h4>
 
-                                    {{featuredStory.title}}
+                                    {{selectedStory.title}}
 
                                 </h4>
 
                                 <span
                                     class="badge bg-success">
 
-                                    {{featuredStory.status}}
+                                    {{selectedStory.status}}
 
                                 </span>
 
@@ -437,21 +439,22 @@ STORY DASHBOARD
 
                             <small>
 
-                                {{featuredStory.author}}
+                                {{selectedStory.author || 'Community Member'}}
 
                                 •
 
-                                {{featuredStory.date}}
+                                {{selectedStory.date}}
 
-                                •
-
-                                {{featuredStory.time}}
+                                @if(selectedStory.time) {
+                                    •
+                                    {{selectedStory.time}}
+                                }
 
                             </small>
 
                             <p>
 
-                                {{featuredStory.description}}
+                                {{selectedStory.description}}
 
                             </p>
 
@@ -460,7 +463,8 @@ STORY DASHBOARD
 
                                 <button
 
-                                    class="Sharing-Story-Secondary-Button">
+                                    class="Sharing-Story-Secondary-Button"
+                                    (click)="copyStory(selectedStory)">
 
                                     <i class="bi bi-files"></i>
 
@@ -470,7 +474,8 @@ STORY DASHBOARD
 
                                 <button
 
-                                    class="Sharing-Story-Secondary-Button">
+                                    class="Sharing-Story-Secondary-Button"
+                                    (click)="editStory(selectedStory)">
 
                                     <i class="bi bi-pencil"></i>
 
@@ -480,7 +485,8 @@ STORY DASHBOARD
 
                                 <button
 
-                                    class="Sharing-Story-Danger-Button">
+                                    class="Sharing-Story-Danger-Button"
+                                    (click)="deleteStory(selectedStory)">
 
                                     <i class="bi bi-trash"></i>
 
@@ -493,6 +499,7 @@ STORY DASHBOARD
                         </div>
 
                     </div>
+                    }
 
                     <!--==============================
                     INFO CARD
@@ -819,3 +826,69 @@ SHARING STORY FOOTER
     </div>
 
 </footer>
+
+@if(showAddStoryModal) {
+<div class="SSJAH-DSJAJ-377-SHJS-Overlay" (click)="closeAddStoryModal()">
+    <div class="SSJAH-DSJAJ-377-SHJS-Modal" (click)="$event.stopPropagation()">
+        <div class="SSJAH-DSJAJ-377-SHJS-Header">
+            <h3>{{editingStoryId === null ? 'Add a New Story' : 'Edit Story'}}</h3>
+            <button type="button" class="SSJAH-DSJAJ-377-SHJS-Close" (click)="closeAddStoryModal()">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+
+        <form (ngSubmit)="saveNewStory()">
+            <div class="SSJAH-DSJAJ-377-SHJS-Body">
+                <label class="SSJAH-DSJAJ-377-SHJS-Label">
+                    Story Image
+                    <input type="file" accept="image/*" class="form-control" (change)="onStoryImageSelected($event)">
+                </label>
+
+                @if(newStory.image) {
+                <img [src]="newStory.image" alt="Selected story preview" class="SSJAH-DSJAJ-377-SHJS-Preview">
+                }
+
+                <label class="SSJAH-DSJAJ-377-SHJS-Label">
+                    Title
+                    <input type="text" name="title" class="form-control" [(ngModel)]="newStory.title" required>
+                </label>
+
+                <label class="SSJAH-DSJAJ-377-SHJS-Label">
+                    Author
+                    <input type="text" name="author" class="form-control" [(ngModel)]="newStory.author">
+                </label>
+
+                <div class="SSJAH-DSJAJ-377-SHJS-Grid">
+                    <label class="SSJAH-DSJAJ-377-SHJS-Label">
+                        Date
+                        <input type="date" name="date" class="form-control" [(ngModel)]="newStory.date">
+                    </label>
+                    <label class="SSJAH-DSJAJ-377-SHJS-Label">
+                        Time
+                        <input type="time" name="time" class="form-control" [(ngModel)]="newStory.time">
+                    </label>
+                </div>
+
+                <label class="SSJAH-DSJAJ-377-SHJS-Label">
+                    Status
+                    <select name="status" class="form-select" [(ngModel)]="newStory.status">
+                        <option value="True">True</option>
+                        <option value="Story Only">Story Only</option>
+                    </select>
+                </label>
+
+                <label class="SSJAH-DSJAJ-377-SHJS-Label">
+                    Description
+                    <textarea name="description" rows="4" class="form-control" [(ngModel)]="newStory.description" (input)="validateDescriptionLength()" required></textarea>
+                    <small>{{newStory.description.length}} / 1500 characters</small>
+                </label>
+            </div>
+
+            <div class="SSJAH-DSJAJ-377-SHJS-Footer">
+                <button type="button" class="Sharing-Story-Secondary-Button" (click)="closeAddStoryModal()">Cancel</button>
+                <button type="submit" class="Sharing-Story-Primary-Button">Save Story</button>
+            </div>
+        </form>
+    </div>
+</div>
+}
