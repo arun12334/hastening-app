@@ -4,13 +4,12 @@ import { RouterLink } from '@angular/router';
 import { ChangeDetectorRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { inject } from '@angular/core';
-import {Footer} from '../../components/footer/footer';
 declare var bootstrap: any;
 
 
 @Component({
   selector: 'app-home',
-  imports: [Header, RouterLink, Footer],
+  imports: [Header, RouterLink],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })

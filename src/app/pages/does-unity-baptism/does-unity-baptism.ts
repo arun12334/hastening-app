@@ -212,6 +212,26 @@ invitationToUnityBannerImageX94 =
 
   ];
 
+  selectedFeatureCard: {
+    title: string;
+    description: string;
+    image: string;
+    button: string;
+  } | null = null;
+
+  openFeatureCard(card: {
+    title: string;
+    description: string;
+    image: string;
+    button: string;
+  }): void {
+    this.selectedFeatureCard = card;
+  }
+
+  closeFeatureCard(): void {
+    this.selectedFeatureCard = null;
+  }
+
 
 
   //====================================================

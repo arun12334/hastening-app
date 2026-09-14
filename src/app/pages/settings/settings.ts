@@ -10,9 +10,36 @@ import {
 import { Router } from '@angular/router';
 
 import {
-  
   ChangeDetectorRef
 } from '@angular/core';
+
+interface StoredUserProfile {
+  id: number;
+  name: string;
+  email: string;
+  publicKey: string;
+  token: string;
+  created_at: string;
+  personalInformation?: {
+    userName: string;
+    firstName: string;
+    lastName: string;
+    streetAddress: string;
+    city: string;
+    state: string;
+    country: string;
+    zipCode: string;
+    mobileNumber: string;
+    emailAddress: string;
+  };
+  registrationOptions?: Array<{
+    id: number;
+    title: string;
+    deliveryMethod: string | null;
+  }>;
+  children?: Array<{ name: string; age: number }>;
+  locationGroups?: { primary: string; secondary: string | null };
+}
 
   
 
@@ -51,8 +78,17 @@ export class Settings implements OnInit, OnDestroy {
     firstName: '',
     lastName: '',
     email: '',
-    phone: ''
+    phone: '',
+    userName: '',
+    streetAddress: '',
+    city: '',
+    state: '',
+    country: '',
+    zipCode: ''
   };
+
+  registrationOptions: NonNullable<StoredUserProfile['registrationOptions']> = [];
+  children: NonNullable<StoredUserProfile['children']> = [];
 
   // ==========================================
   // PASSWORD
@@ -108,14 +144,7 @@ export class Settings implements OnInit, OnDestroy {
   // PROFILE DATA FROM API
   // ==========================================
 
-  profileData: {
-    id: number;
-    name: string;
-    email: string;
-    publicKey: string;
-    token: string;
-    created_at: string;
-  } | null = null;
+  profileData: StoredUserProfile | null = null;
 
   // ==========================================
   // CONSTRUCTOR
@@ -203,6 +232,31 @@ export class Settings implements OnInit, OnDestroy {
   // GET PROFILE
   // ==========================================
 
+  private applyStoredUserProfile(user: StoredUserProfile): void {
+    this.profileData = user;
+    const personalInformation = user.personalInformation;
+    const nameParts = (
+      personalInformation?.firstName || user.name || ''
+    ).trim().split(/\s+/);
+
+    this.profile = {
+      firstName: nameParts[0] || '',
+      lastName: personalInformation?.lastName || nameParts.slice(1).join(' '),
+      email: personalInformation?.emailAddress || user.email || '',
+      phone: personalInformation?.mobileNumber || '',
+      userName: personalInformation?.userName || '',
+      streetAddress: personalInformation?.streetAddress || '',
+      city: personalInformation?.city || '',
+      state: personalInformation?.state || '',
+      country: personalInformation?.country || '',
+      zipCode: personalInformation?.zipCode || ''
+    };
+
+    this.registrationOptions = user.registrationOptions || [];
+    this.children = user.children || [];
+    this.cdr.detectChanges();
+  }
+
   getProfile(): void {
 
     console.log(
@@ -284,7 +338,10 @@ export class Settings implements OnInit, OnDestroy {
     // CHECK USER OBJECT
     // ========================================
 
-    if (!loginData.user) {
+    const storedUser: StoredUserProfile | undefined =
+      loginData.users?.[0] ?? loginData.user;
+
+    if (!storedUser) {
 
       console.error(
         'User information not found'
@@ -298,26 +355,29 @@ export class Settings implements OnInit, OnDestroy {
       return;
     }
 
+    this.applyStoredUserProfile(storedUser);
+    this.profileLoaded = true;
+
     // ========================================
     // GET ID
     // ========================================
 
     const id =
-      Number(loginData.user.id);
+      Number(storedUser.id);
 
     // ========================================
     // GET TOKEN
     // ========================================
 
     const token =
-      loginData.user.token;
+      storedUser.token;
 
     // ========================================
     // GET PUBLIC KEY
     // ========================================
 
     const publicKey =
-      loginData.user.publicKey;
+      storedUser.publicKey;
 
     console.log(
       'Profile API payload:',
@@ -326,6 +386,7 @@ export class Settings implements OnInit, OnDestroy {
         token: token,
         publicKey: publicKey
       }
+
     );
 
     // ========================================
@@ -395,7 +456,10 @@ export class Settings implements OnInit, OnDestroy {
   // STORE API PROFILE
   // ========================================
 
-  this.profileData = response.user;
+  this.profileData = {
+    ...storedUser,
+    ...(response.user ?? {})
+  };
 
   console.log(
     'Profile data:',
@@ -406,8 +470,9 @@ export class Settings implements OnInit, OnDestroy {
   // GET NAME
   // ========================================
 
+  const personalInformation = storedUser.personalInformation;
   const nameParts =
-    response.user.name
+    (personalInformation?.firstName || storedUser.name || '')
       .trim()
       .split(/\s+/);
 
@@ -416,11 +481,19 @@ export class Settings implements OnInit, OnDestroy {
   // ========================================
 
   this.profile = {
-    firstName: nameParts[0] || '',
-    lastName: nameParts.slice(1).join(' '),
-    email: response.user.email || '',
-    phone: ''
+    firstName: personalInformation?.firstName || nameParts[0] || '',
+    lastName: personalInformation?.lastName || nameParts.slice(1).join(' '),
+    email: personalInformation?.emailAddress || storedUser.email || '',
+    phone: personalInformation?.mobileNumber || '',
+    userName: personalInformation?.userName || '',
+    streetAddress: personalInformation?.streetAddress || '',
+    city: personalInformation?.city || '',
+    state: personalInformation?.state || '',
+    country: personalInformation?.country || '',
+    zipCode: personalInformation?.zipCode || ''
   };
+  this.registrationOptions = storedUser.registrationOptions || [];
+  this.children = storedUser.children || [];
 
   this.cdr.detectChanges();
 

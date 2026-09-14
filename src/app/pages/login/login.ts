@@ -16,7 +16,8 @@ import {
 } from 'rxjs/operators';
 
 import {
-  Auth
+  Auth,
+  LoginResponse
 } from '../../services/auth';
 
 import { Router } from '@angular/router';
@@ -24,13 +25,6 @@ import { Router } from '@angular/router';
 interface LoginRequest {
   email: string;
   password: string;
-}
-
-interface LoginResponse {
-  success: boolean;
-  message: string;
-  userId?: string;
-  token?: string;
 }
 
 @Component({
@@ -283,16 +277,14 @@ next: (response: LoginResponse) => {
     // STORE COMPLETE API RESPONSE
     // =========================================
 
+    const userProfileInfo = JSON.stringify(response);
     localStorage.setItem(
       'user_profile_info',
-      JSON.stringify(response)
+      userProfileInfo
     );
 
     console.log(
-      'Complete login response saved:',
-      localStorage.getItem(
-        'user_profile_info'
-      )
+      'Complete login response saved to user_profile_info.'
     );
 
     // =========================================

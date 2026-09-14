@@ -6,24 +6,59 @@ import { Observable } from 'rxjs';
 // REGISTER
 // ==========================================
 
+export interface DetailedRegisterRequest {
+  personalInformation: {
+    userName: string;
+    firstName: string;
+    lastName: string;
+    streetAddress: string;
+    city: string;
+    state: string;
+    country: string;
+    zipCode: string;
+    mobileNumber: string;
+    emailAddress: string;
+    password: string;
+    confirmPassword: string;
+  };
+  registrationOptions: Array<{
+    id: number;
+    title: string;
+    deliveryMethod: string | null;
+  }>;
+  children: Array<{
+    name: string;
+    age: number;
+  }>;
+  termsAndConditions: Array<{
+    id: number;
+    text: string;
+    checked: boolean;
+  }>;
+  locationGroups: {
+    primary: string;
+    secondary: string | null;
+  };
+}
+
 export interface RegisterRequest {
   name: string;
   email: string;
   password: string;
 }
 
+export type RegistrationRequest = RegisterRequest | DetailedRegisterRequest;
+
 export interface RegisterResponse {
   success: boolean;
   message: string;
-
   user?: {
     id: number;
-    name: string;
-    email: string;
-    publicKey: string;
-    token: string;
+    name?: string;
+    email?: string;
+    publicKey?: string;
+    token?: string;
   };
-
   emailSent?: boolean;
 }
 
@@ -39,15 +74,45 @@ export interface LoginRequest {
 export interface LoginResponse {
   success: boolean;
   message: string;
-
-  user?: {
+  count?: number;
+  users?: Array<{
+    personalInformation: {
+      userName: string;
+      firstName: string;
+      lastName: string;
+      streetAddress: string;
+      city: string;
+      state: string;
+      country: string;
+      zipCode: string;
+      mobileNumber: string;
+      emailAddress: string;
+    };
+    registrationOptions: Array<{
+      id: number;
+      title: string;
+      deliveryMethod: string | null;
+    }>;
+    children: Array<{
+      name: string;
+      age: number;
+    }>;
+    termsAndConditions: Array<{
+      id: number;
+      text: string;
+      checked: boolean;
+    }>;
+    locationGroups: {
+      primary: string;
+      secondary: string | null;
+    };
     id: number;
     name: string;
     email: string;
     publicKey: string;
     token: string;
     created_at: string;
-  };
+  }>;
 }
 
 // ==========================================
@@ -94,7 +159,7 @@ export class Auth {
   // ==========================================
 
   register(
-    data: RegisterRequest
+    data: RegistrationRequest
   ): Observable<RegisterResponse> {
 
     return this.http.post<RegisterResponse>(

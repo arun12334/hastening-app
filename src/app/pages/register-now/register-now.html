@@ -872,11 +872,18 @@ LEFT CARD
 
                         class="Registration-Submit-Button-X977563-Y966776"
 
+                        [disabled]="registrationSubmitting"
+                        [attr.aria-busy]="registrationSubmitting"
                         (click)="registerNowX977563Y966776()">
 
-                        <i class="bi bi-person-plus-fill"></i>
-
-                        REGISTER NOW
+                        @if(registrationSubmitting) {
+                            <span class="Registration-Submit-Loader-X977563-Y966776"
+                                aria-hidden="true"></span>
+                            SUBMITTING...
+                        } @else {
+                            <i class="bi bi-person-plus-fill"></i>
+                            REGISTER NOW
+                        }
                     </button>
 
                     @if(validationMessage) {
@@ -888,13 +895,19 @@ LEFT CARD
 
                     @if(registrationSucceeded) {
                         <div class="Registration-Success-Alert-X977563-Y966776" role="status">
-                            Registration successful. Redirecting to Home...
+                            Registration successful. Please log in to continue.
+                            Redirecting to the login page in 5 seconds...
                         </div>
                     }
 
                     @if(registrationToastVisible) {
-                        <div class="Registration-Toast-X977563-Y966776" role="status" aria-live="polite">
-                            <i class="bi bi-check-circle-fill"></i>
+                        <div class="Registration-Toast-X977563-Y966776"
+                            [class.Registration-Toast-Error-X977563-Y966776]="registrationResultType === 'error'"
+                            role="status"
+                            aria-live="polite">
+                            <i [class]="registrationResultType === 'success'
+                                ? 'bi bi-check-circle-fill'
+                                : 'bi bi-exclamation-triangle-fill'"></i>
                             {{registrationToastMessage}}
                         </div>
                     }
@@ -995,4 +1008,31 @@ LEFT CARD
 
 </section>
 
-<app-footer></app-footer>
+@if(registrationResultVisible) {
+    <div class="Registration-Result-Backdrop-X977563-Y966776"
+        role="presentation"
+        (click)="closeRegistrationResultX977563Y966776()">
+        <section class="Registration-Result-Modal-X977563-Y966776"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="registration-result-title"
+            (click)="$event.stopPropagation()">
+            <button type="button"
+                class="Registration-Result-Close-X977563-Y966776"
+                aria-label="Close registration message"
+                (click)="closeRegistrationResultX977563Y966776()">×</button>
+            <i [class]="registrationResultType === 'success'
+                ? 'bi bi-check-circle-fill Registration-Result-Success-Icon-X977563-Y966776'
+                : 'bi bi-exclamation-triangle-fill Registration-Result-Error-Icon-X977563-Y966776'"></i>
+            <h2 id="registration-result-title">
+                {{registrationResultType === 'success' ? 'Registration Complete' : 'Registration Failed'}}
+            </h2>
+            <p>{{registrationResultMessage}}</p>
+            <button type="button"
+                class="Registration-Result-Button-X977563-Y966776"
+                (click)="closeRegistrationResultX977563Y966776()">
+                {{registrationResultType === 'success' ? 'Continue' : 'Close'}}
+            </button>
+        </section>
+    </div>
+}

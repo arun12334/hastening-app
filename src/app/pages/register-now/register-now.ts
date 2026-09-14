@@ -1,8 +1,10 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectorRef, Component, inject, OnDestroy } from '@angular/core';
 import { Header } from '../../components/header/header';
 import { FormsModule } from '@angular/forms';
-import { Footer } from '../../components/footer/footer';
 import { Router } from '@angular/router';
+import { HttpErrorResponse } from '@angular/common/http';
+import { Auth, DetailedRegisterRequest, RegisterResponse } from '../../services/auth';
+import { finalize } from 'rxjs/operators';
 
 interface LocationGroup {
   value: string;
@@ -10,19 +12,36 @@ interface LocationGroup {
 }
 @Component({
   selector: 'app-register-now',
-  imports: [Header, Footer, FormsModule],
+  imports: [Header, FormsModule],
   templateUrl: './register-now.html',
   styleUrl: './register-now.scss',
 })
-export class RegisterNow {
+export class RegisterNow implements OnDestroy {
 
   private readonly router = inject(Router);
+  private readonly auth = inject(Auth);
+  private readonly changeDetectorRef = inject(ChangeDetectorRef);
   formSubmitted = false;
   validationMessage = '';
   registrationSucceeded = false;
+  registrationSubmitting = false;
+  registrationResultMessage = '';
+  registrationResultType: 'success' | 'error' = 'success';
+  registrationResultVisible = false;
   registrationToastMessage = '';
   registrationToastVisible = false;
   private registrationToastTimer?: ReturnType<typeof setTimeout>;
+  private registrationRedirectTimer?: ReturnType<typeof setTimeout>;
+
+  ngOnDestroy(): void {
+    if (this.registrationToastTimer) {
+      clearTimeout(this.registrationToastTimer);
+    }
+
+    if (this.registrationRedirectTimer) {
+      clearTimeout(this.registrationRedirectTimer);
+    }
+  }
 
   /*==========================================================
   REGISTER HERO DATA x56563 y76776
@@ -378,49 +397,67 @@ export class RegisterNow {
   ==========================================================*/
 
   registerNowX977563Y966776(){
+    if (this.registrationSubmitting) {
+      console.debug('[Register Now] Submission ignored because a request is already in progress.');
+      return;
+    }
 
+    if (this.registrationRedirectTimer) {
+      clearTimeout(this.registrationRedirectTimer);
+      this.registrationRedirectTimer = undefined;
+    }
+
+    console.info('[Register Now] Submit clicked.');
     this.formSubmitted = true;
     const selectedOptions = this.registrationOptionsX977563Y966776
       .filter((option) => option.selected);
-    const hasMissingPersonalInformation = Object.values(this.personalInformationX977563Y966776)
-      .some((value) => !String(value).trim());
+    const hasMissingPersonalInformation = Object.entries(this.personalInformationX977563Y966776)
+      .some(([field, value]) => !String(value).trim() ||
+        (field === 'country' && value === 'Select Country'));
     const hasUnacceptedTerms = this.termsConditionsX977563Y966776
       .some((term) => !term.checked);
 
     if (this.personalInformationX977563Y966776.password !==
       this.personalInformationX977563Y966776.confirmPassword) {
       this.validationMessage = 'Password and confirm password must match.';
+      console.warn('[Register Now] Validation failed: passwords do not match.');
       return;
     }
 
     if (hasMissingPersonalInformation) {
       this.validationMessage = 'Please complete all personal information fields.';
+      console.warn('[Register Now] Validation failed: required personal information is missing.');
       return;
     }
 
     if (selectedOptions.length !== 2) {
       this.validationMessage = 'Please select exactly two registration options.';
+      console.warn('[Register Now] Validation failed: invalid registration option count.', selectedOptions.length);
       return;
     }
 
     if (!this.selectedPrimaryLocation) {
       this.validationMessage = 'Please select a primary location group.';
+      console.warn('[Register Now] Validation failed: primary location is missing.');
       return;
     }
 
     if (hasUnacceptedTerms) {
       this.validationMessage = 'Please accept all Terms and Conditions.';
+      console.warn('[Register Now] Validation failed: terms were not accepted.');
       return;
     }
 
-    const registrationPayload = {
+    const registrationPayload: DetailedRegisterRequest = {
       personalInformation: { ...this.personalInformationX977563Y966776 },
       registrationOptions: selectedOptions.map((option) => ({
         id: option.id,
         title: option.title,
-        deliveryMethod: 'deliveryMethod' in option ? option.deliveryMethod : null
+        deliveryMethod: 'deliveryMethod' in option ? option.deliveryMethod ?? null : null
       })),
-      children: this.childrenX977563Y966776.map((child) => ({ ...child })),
+      children: this.childrenX977563Y966776
+        .filter((child) => child.name.trim() && String(child.age).trim())
+        .map((child) => ({ name: child.name.trim(), age: Number(child.age) })),
       termsAndConditions: this.termsConditionsX977563Y966776
         .map((term) => ({ id: term.id, text: term.text, checked: term.checked })),
       locationGroups: {
@@ -429,11 +466,98 @@ export class RegisterNow {
       }
     };
 
-    console.log('Registration payload:', registrationPayload);
     this.validationMessage = '';
-    this.registrationSucceeded = true;
-    this.showRegistrationToastX977563Y966776('Registration successful.');
-    this.router.navigate(['/home']);
+    this.registrationSubmitting = true;
+    this.registrationResultVisible = false;
+    this.changeDetectorRef.detectChanges();
+    console.info('[Register Now] Sending registration payload:', this.getSafeRegistrationPayload(registrationPayload));
+
+    this.auth.register(registrationPayload).pipe(
+      finalize(() => {
+        this.registrationSubmitting = false;
+        this.changeDetectorRef.detectChanges();
+        console.info('[Register Now] Registration request finished.');
+      })
+    ).subscribe({
+      next: (response: RegisterResponse) => {
+        console.info('[Register Now] API response received:', response);
+        if (!response.success) {
+          console.error('[Register Now] API rejected registration:', response.message);
+          this.handleRegistrationError(response.message || 'Registration could not be completed.');
+          return;
+        }
+
+        this.registrationSubmitting = false;
+        this.registrationSucceeded = true;
+        this.registrationResultType = 'success';
+        this.registrationResultMessage =
+          `${response.message || 'Registration completed successfully.'} ` +
+          'Please log in to continue. Redirecting to the login page in 5 seconds.';
+        this.registrationResultVisible = true;
+        this.showRegistrationToastX977563Y966776(this.registrationResultMessage);
+        this.changeDetectorRef.detectChanges();
+        console.info('[Register Now] Success popup shown. Redirecting to /login in 5 seconds.');
+        this.registrationRedirectTimer = setTimeout(() => {
+          this.registrationResultVisible = false;
+          this.router.navigate(['/login']);
+        }, 5000);
+      },
+      error: (error: HttpErrorResponse) => {
+        console.error('[Register Now] Registration request failed:', {
+          status: error.status,
+          statusText: error.statusText,
+          error: error.error
+        });
+        this.handleRegistrationError(this.getRegistrationErrorMessage(error));
+      }
+    });
+  }
+
+  private getSafeRegistrationPayload(payload: DetailedRegisterRequest): Omit<DetailedRegisterRequest, 'personalInformation'> & {
+    personalInformation: Omit<DetailedRegisterRequest['personalInformation'], 'password' | 'confirmPassword'>;
+  } {
+    const { password, confirmPassword, ...safePersonalInformation } = payload.personalInformation;
+    return {
+      ...payload,
+      personalInformation: safePersonalInformation
+    };
+  }
+
+  closeRegistrationResultX977563Y966776(): void {
+    this.registrationResultVisible = false;
+    if (this.registrationSucceeded) {
+      if (this.registrationRedirectTimer) {
+        clearTimeout(this.registrationRedirectTimer);
+        this.registrationRedirectTimer = undefined;
+      }
+      this.router.navigate(['/login']);
+    }
+  }
+
+  private handleRegistrationError(message: string): void {
+    this.registrationSubmitting = false;
+    this.registrationSucceeded = false;
+    this.registrationResultType = 'error';
+    this.registrationResultMessage = message;
+    this.registrationResultVisible = true;
+    this.validationMessage = message;
+    this.showRegistrationToastX977563Y966776(message);
+  }
+
+  private getRegistrationErrorMessage(error: HttpErrorResponse): string {
+    if (typeof error.error?.message === 'string' && error.error.message.trim()) {
+      return error.error.message;
+    }
+
+    if (typeof error.error === 'string' && error.error.trim()) {
+      return error.error;
+    }
+
+    if (error.status === 0) {
+      return 'Unable to reach the registration service. Check your connection and try again.';
+    }
+
+    return 'Registration failed. Please review your details and try again.';
   }
 
 

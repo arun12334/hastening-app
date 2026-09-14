@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { Header } from '../../components/header/header';
-import { Footer } from '../../components/footer/footer';  
 @Component({
   selector: 'app-authentication-and-security-management-system',
-  imports: [Header, Footer],
+  imports: [Header],
   templateUrl: './authentication-and-security-management-system.html',
   styleUrl: './authentication-and-security-management-system.scss',
 })

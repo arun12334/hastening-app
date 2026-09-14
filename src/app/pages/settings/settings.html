@@ -559,7 +559,89 @@
     </div>
   </div>
 
+  <!-- USERNAME -->
+  <div class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__field">
+    <label>Username</label>
+    <div class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__input">
+      <span class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__icon">
+        <i class="bi bi-person-badge"></i>
+      </span>
+      <input type="text" name="userName" [(ngModel)]="profile.userName"
+        [readonly]="!profileEditing" placeholder="Username" />
+    </div>
+  </div>
+
+  <!-- ADDRESS -->
+  <div class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__field address-field">
+    <label>Street Address</label>
+    <div class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__input">
+      <span class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__icon">
+        <i class="bi bi-geo-alt"></i>
+      </span>
+      <input type="text" name="streetAddress" [(ngModel)]="profile.streetAddress"
+        [readonly]="!profileEditing" placeholder="Street address" />
+    </div>
+  </div>
+
+  <div class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__field">
+    <label>City</label>
+    <div class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__input">
+      <input type="text" name="city" [(ngModel)]="profile.city"
+        [readonly]="!profileEditing" placeholder="City" />
+    </div>
+  </div>
+
+  <div class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__field">
+    <label>State</label>
+    <div class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__input">
+      <input type="text" name="state" [(ngModel)]="profile.state"
+        [readonly]="!profileEditing" placeholder="State" />
+    </div>
+  </div>
+
+  <div class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__field">
+    <label>Country</label>
+    <div class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__input">
+      <input type="text" name="country" [(ngModel)]="profile.country"
+        [readonly]="!profileEditing" placeholder="Country" />
+    </div>
+  </div>
+
+  <div class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__field">
+    <label>ZIP Code</label>
+    <div class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__input">
+      <input type="text" name="zipCode" [(ngModel)]="profile.zipCode"
+        [readonly]="!profileEditing" placeholder="ZIP code" />
+    </div>
+  </div>
+
 </div>
+
+          @if (registrationOptions.length > 0) {
+            <div class="settings-profile-details">
+              <h4><i class="bi bi-list-check"></i> Registration Options</h4>
+              <div class="settings-profile-detail-list">
+                @for (option of registrationOptions; track option.id) {
+                  <input type="text" [value]="option.title" readonly
+                    aria-label="Registration option" />
+                }
+              </div>
+            </div>
+          }
+
+          @if (children.length > 0) {
+            <div class="settings-profile-details">
+              <h4><i class="bi bi-people"></i> Children</h4>
+              <div class="settings-children-grid">
+                @for (child of children; track child.name + child.age) {
+                  <div class="settings-child-card">
+                    <span>{{ child.name }}</span>
+                    <small>{{ child.age }} years old</small>
+                  </div>
+                }
+              </div>
+            </div>
+          }
 
           <div
             class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__actions"

@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { timer, Subscription } from 'rxjs';
 import { Header } from '../../components/header/header';
 import { ChangeDetectorRef } from '@angular/core';
-import { Footer } from '../../components/footer/footer';
 import {  HostListener, OnInit } from '@angular/core';
 
 declare var bootstrap: any;
@@ -43,7 +42,6 @@ interface PrayerRequest {
     CommonModule,
     FormsModule,
     Header,
-    Footer
   ],
   templateUrl:'./pray-for-someone.html',
   styleUrl:'./pray-for-someone.scss'

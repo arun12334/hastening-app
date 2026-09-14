@@ -173,7 +173,9 @@
 
             <div class="card-footer bg-white border-0">
 
-                <button class="btn btn-warning rounded-pill w-100">
+                <button type="button"
+                    class="btn btn-warning rounded-pill w-100"
+                    (click)="openFeatureCard(card)">
 
                     {{card.button}}
 
@@ -187,6 +189,31 @@
 
     </div>
 
+    @if (selectedFeatureCard; as card) {
+        <div class="Unity-Feature-Modal-Backdrop-X94"
+            role="presentation"
+            (click)="closeFeatureCard()">
+            <section class="Unity-Feature-Modal-X94"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="unity-feature-title"
+                (click)="$event.stopPropagation()">
+                <button type="button"
+                    class="Unity-Feature-Modal-Close-X94"
+                    aria-label="Close feature details"
+                    (click)="closeFeatureCard()">×</button>
+                <img [src]="card.image" [alt]="card.title">
+                <div class="Unity-Feature-Modal-Content-X94">
+                    <h2 id="unity-feature-title">{{card.title}}</h2>
+                    <p>{{card.description}}</p>
+                    <button type="button"
+                        class="btn btn-warning rounded-pill"
+                        (click)="closeFeatureCard()">Close</button>
+                </div>
+            </section>
+        </div>
+    }
+
 </div>
 
 <!-- card -->
@@ -194,52 +221,5 @@
 
 
  
-
-</div>
-
-
-<!-- ========================================= -->
-<!-- BLUE FOOTER -->
-<!-- ========================================= -->
-
-<div class="footer-scripture mt-4 ">
-
-    <div class="container-fluid py-4">
-
-        <h5 class="text-center text-white fst-italic">
-
-            "Behold, how good and how pleasant it is
-
-            for brethren to dwell together in unity."
-
-        </h5>
-
-        <h6 class="text-center text-warning">
-
-            Psalm 133:1
-
-        </h6>
-
-        <hr class="border-light">
-
-        <div class="row text-center">
-
-            <div
-
-                class="col-lg col-md-4 col-6 mb-2"
-
-                *ngFor="let item of scriptures">
-
-                <small>
-
-                    {{item}}
-
-                </small>
-
-            </div>
-
-        </div>
-
-    </div>
 
 </div>
