@@ -1,93 +1,59 @@
-.Welcome-Page-X56563-Y76776 {
+.welcome-page-Banner {
+    padding: 0;
+}
+
+.welcome-page-Banner-Image {
+    height: 430px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.welcome-page-Content-X56563-Y76776 {
     min-height: 100vh;
     background: linear-gradient(180deg, #f8fbff, #eef3f9);
 }
 
-.Welcome-Page-X56563-Y76776 .Neighborhood-Bb-Events-Banner {
-    padding: 0;
+.welcome-page-Actions-X56563-Y76776 {
+    width: min(calc(100% - 32px), 1120px);
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    padding-bottom: 56px;
 }
 
-.Welcome-Page-X56563-Y76776 .Neighborhood-Bb-Events-Banner-Image {
-    height: 390px  ;
-    background-position: center;
-}
-
-
-.Neighborhood-Bb-Events-Banner-Image {
-    height: 430px ;
-    background-position: center;
-}
-
-
-.Welcome-Banner-Overlay-X56563-Y76776 {
-    position: absolute;
-    inset: 0;
-    display: grid;
-    place-items: center;
-    padding: 32px 20px;
-    background: linear-gradient(90deg, rgba(10, 32, 70, .74), rgba(10, 32, 70, .18));
-}
-
-.Welcome-Banner-Content-X56563-Y76776 {
-    width: min(100%, 760px);
-    color: #fff;
+.welcome-page-Actions-Intro-X56563-Y76776 {
+    margin: 0 auto 26px;
+    padding: 25px 24px 0;
     text-align: center;
 }
 
-.Welcome-Badge-X56563-Y76776,
-.Welcome-Eyebrow-X56563-Y76776 {
-    color: #f4c95d;
+.welcome-page-Actions-Intro-X56563-Y76776 h2 {
+    margin: 8px 0;
+    color: #17346f;
+    font-family: "Libre Baskerville", serif;
+}
+
+.welcome-page-Actions-Intro-X56563-Y76776 p {
+    margin: 0;
+    color: #617089;
+}
+
+.welcome-page-Eyebrow-X56563-Y76776 {
+    color: #a56a0b;
     font-size: .76rem;
     font-weight: 800;
     letter-spacing: .16em;
     text-transform: uppercase;
 }
 
-.Welcome-Banner-Content-X56563-Y76776 h1 {
-    margin: 18px 0 12px;
-    color: #fff;
-    font-family: "Libre Baskerville", serif;
-    font-size: clamp(2.1rem, 5vw, 4.4rem);
-}
-
-.Welcome-Banner-Content-X56563-Y76776 p {
-    margin: 0 auto;
-    color: rgba(255, 255, 255, .92);
-    font-size: clamp(1rem, 2vw, 1.3rem);
-}
-
-.Welcome-Actions-X56563-Y76776 {
-    width: min(calc(100% - 32px), 1120px);
-    margin: 0px auto 0;
-    position: relative;
-    z-index: 2;
-    padding-bottom: 56px;
-}
-
-.Welcome-Actions-Intro-X56563-Y76776 {
-    margin: 0 auto 26px;
-    padding: 25px 24px 0;
-    text-align: center;
-}
-
-.Welcome-Actions-Intro-X56563-Y76776 h2 {
-    margin: 8px 0;
-    color: #17346f;
-    font-family: "Libre Baskerville", serif;
-}
-
-.Welcome-Actions-Intro-X56563-Y76776 p {
-    margin: 0;
-    color: #617089;
-}
-
-.Welcome-Action-Grid-X56563-Y76776 {
+.welcome-page-Action-Grid-X56563-Y76776 {
     display: grid;
-    // grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 18px;
 }
 
-.Welcome-Action-Button-X56563-Y76776 {
+.welcome-page-Action-Button-X56563-Y76776 {
     display: flex;
     align-items: center;
     gap: 14px;
@@ -100,52 +66,59 @@
     text-align: left;
     box-shadow: 0 16px 34px rgba(23, 52, 111, .16);
     cursor: pointer;
+    transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
 }
 
-.Welcome-Action-Button-X56563-Y76776 span {
+.welcome-page-Action-Button-X56563-Y76776:hover,
+.welcome-page-Action-Button-X56563-Y76776:focus-visible {
+    transform: translateY(-5px);
+    box-shadow: 0 22px 42px rgba(23, 52, 111, .24);
+    filter: brightness(1.06);
+    outline: 3px solid rgba(244, 201, 93, .55);
+    outline-offset: 3px;
+}
+
+.welcome-page-Action-Button-X56563-Y76776 span {
     display: flex;
     flex: 1;
     flex-direction: column;
     gap: 5px;
 }
 
-.Welcome-Action-Button-X56563-Y76776 small {
+.welcome-page-Action-Button-X56563-Y76776 small {
     color: rgba(255, 255, 255, .82);
 }
 
-.Welcome-Login-Button-X56563-Y76776 {
+.welcome-page-Login-Button-X56563-Y76776 {
     background: linear-gradient(135deg, #17346f, #285ba0);
 }
 
-.Welcome-Guest-Button-X56563-Y76776 {
+.welcome-page-Guest-Button-X56563-Y76776 {
     background: linear-gradient(135deg, #087d82, #19a49e);
 }
 
-.Welcome-Register-Button-X56563-Y76776 {
+.welcome-page-Register-Button-X56563-Y76776 {
     background: linear-gradient(135deg, #a56a0b, #d29a29);
 }
 
-
-@media (max-width: 575.98px) {
-    .Welcome-Page-X56563-Y76776 .Neighborhood-Bb-Events-Banner-Image {
+@media (max-width: 768px) {
+    .welcome-page-Banner-Image {
+        height: clamp(360px, 112vw, 480px);
         margin-top: 0;
-        padding-top: 0px !important;
+        padding-top: 0;
+        background-position: center top;
+        background-size: 100% 100%;
     }
 
-
-    .Neighborhood-Bb-Events-Banner-Image {
-    height: 730px ;
-    background-position: center;
-   padding-top: 0px !important;
-}
-
-    .Welcome-Banner-Overlay-X56563-Y76776 {
-        padding: 24px 16px;
-        background: linear-gradient(90deg, rgba(10, 32, 70, .8), rgba(10, 32, 70, .28));
+    .welcome-page-Actions-X56563-Y76776 {
+        width: min(calc(100% - 24px), 1120px);
     }
 
-    .Welcome-Badge-X56563-Y76776,
-    .Welcome-Eyebrow-X56563-Y76776 {
+    .welcome-page-Action-Grid-X56563-Y76776 {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome-page-Eyebrow-X56563-Y76776 {
         font-size: .64rem;
         letter-spacing: .1em;
     }

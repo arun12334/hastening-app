@@ -9,55 +9,27 @@ FOOTER SECTION X88441-Y55119
     =======================================================-->
 
     <div class="Footer-Top-X88441-Y55119">
+        <div class="Footer-Brand-X88441-Y55119">
+            <img
+                class="Footer-Logo-X88441-Y55119"
+                [src]="footerDataX88441Y55119.logo"
+                alt="Hastening temple skyline">
 
-        <div class="container-fluid">
-
-            <div class="row align-items-center">
-
-                <!--==========================================
-                LOGO
-                ==========================================-->
-
-                <div class="col-lg-2 col-md-2 col-12">
-
-                    <div class="Footer-Logo-X88441-Y55119">
-
-                        <img
-                            [src]="footerDataX88441Y55119.logo"
-                            alt="Footer Logo">
-
-                    </div>
-
-                </div>
-
-                <!--==========================================
-                QUOTE
-                ==========================================-->
-
-                <div class="col-lg-10 col-md-10 col-12">
-
-                    <div class="Footer-Quote-X88441-Y55119">
-
-                        <h4>
-
-                            {{footerDataX88441Y55119.quote}}
-
-                        </h4>
-
-                        <h5>
-
-                            {{footerDataX88441Y55119.subtitle}}
-
-                        </h5>
-
-                    </div>
-
-                </div>
-
+            <div class="Footer-Quote-X88441-Y55119">
+                <h4>{{footerDataX88441Y55119.quote}}</h4>
+                <h5>{{footerDataX88441Y55119.subtitle}}</h5>
             </div>
-
         </div>
 
+        <address class="Footer-Contact-X88441-Y55119">
+            <h3>Contact Us</h3>
+            @for(contact of contactDetailsX88441Y55119; track contact.label) {
+                <a [href]="contact.href" [attr.aria-label]="contact.label">
+                    <i [class]="contact.icon" aria-hidden="true"></i>
+                    <span>{{contact.value}}</span>
+                </a>
+            }
+        </address>
     </div>
 
     <!--======================================================
@@ -66,38 +38,47 @@ FOOTER SECTION X88441-Y55119
 
     <div class="Footer-Bottom-X88441-Y55119">
 
-        <div class="container-fluid">
-
-            <div class="Footer-Scripture-Wrapper-X88441-Y55119">
-
+        <div class="Footer-Bottom-Content-X88441-Y55119">
+            <p class="Footer-Copyright-X88441-Y55119">
+                © {{footerDataX88441Y55119.year}} Hastening. All rights reserved.
+            </p>
+            <nav class="Footer-Scripture-Wrapper-X88441-Y55119" aria-label="Scripture references">
                 @for(item of scriptureLinksX88441Y55119; track item.id; let last = $last){
-
-                <a
-
-                    class="Footer-Scripture-Link-X88441-Y55119"
-
-                    (click)="scriptureClickX88441Y55119(item)">
-
-                    {{item.title}}
-
-                </a>
-
-                @if(!last){
-
-                <span class="Footer-Line-X88441-Y55119">
-
-                    |
-
-                </span>
-
+                    <button type="button" class="Footer-Scripture-Link-X88441-Y55119"
+                        (click)="scriptureClickX88441Y55119(item)">
+                        {{item.title}}
+                    </button>
+                    @if(!last) {
+                        <span class="Footer-Line-X88441-Y55119" aria-hidden="true">|</span>
+                    }
                 }
-
-                }
-
-            </div>
-
+            </nav>
         </div>
 
     </div>
 
 </footer>
+
+@if (selectedScriptureX88441Y55119; as scripture) {
+    <div class="Footer-Scripture-Backdrop-X88441-Y55119"
+        role="presentation"
+        (click)="closeScriptureX88441Y55119()">
+        <section class="Footer-Scripture-Modal-X88441-Y55119"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="footer-scripture-title"
+            (click)="$event.stopPropagation()">
+            <button type="button"
+                class="Footer-Scripture-Close-X88441-Y55119"
+                aria-label="Close scripture"
+                (click)="closeScriptureX88441Y55119()">×</button>
+            <p class="Footer-Scripture-Reference-X88441-Y55119" id="footer-scripture-title">
+                {{scripture.title}}
+            </p>
+            <p class="Footer-Scripture-Message-X88441-Y55119">{{scripture.message}}</p>
+            <button type="button"
+                class="Footer-Scripture-Modal-Button-X88441-Y55119"
+                (click)="closeScriptureX88441Y55119()">Close</button>
+        </section>
+    </div>
+}

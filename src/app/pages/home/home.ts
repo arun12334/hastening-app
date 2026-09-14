@@ -2,12 +2,15 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { Header } from '../../components/header/header';
 import { RouterLink } from '@angular/router';
 import { ChangeDetectorRef } from '@angular/core';
+import { Router } from '@angular/router';
+import { inject } from '@angular/core';
+import {Footer} from '../../components/footer/footer';
 declare var bootstrap: any;
 
 
 @Component({
   selector: 'app-home',
-  imports: [Header, RouterLink],
+  imports: [Header, RouterLink, Footer],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })

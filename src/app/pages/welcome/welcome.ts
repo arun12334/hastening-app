@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class Welcome {
   private readonly router = inject(Router);
   bannerImage = 'assets/home/home-banner.png';
-  mobileBannerImage = 'assets/home/home-header-mobile.png';
+  mobileBannerImage = 'assets/home/home-header-mobile2.png';
 
   @HostListener('window:resize')
   updateBannerImage(): void {
