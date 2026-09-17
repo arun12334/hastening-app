@@ -115,7 +115,11 @@ RELIEF SOCIETY SECTION X91
                 <div
 
                     class="Sisters-In-Zion-Relief-Main-Card-X91 h-100"
-
+                    role="link"
+                    tabindex="0"
+                    (click)="joinReliefSocietyX91()"
+                    (keydown.enter)="joinReliefSocietyX91()"
+                    (keydown.space)="joinReliefSocietyX91()"
                     [style.background-image]="'linear-gradient(180deg, rgba(255,255,255,0.08), rgba(13,18,25,0.48)), url(' + reliefSocietyMainCardX91.templeImage + ')'">
 
                     <!--==========================================
