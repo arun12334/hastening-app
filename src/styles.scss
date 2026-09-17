@@ -20850,6 +20850,18 @@ SMALL DEVICES
 END
 ==========================================================*/
 
+/* Youth Music cards: keep three wide, landscape cards on desktop. */
+.vt66221-video-card-nb99117 .vt66221-thumb-wrapper-nb99117 {
+    aspect-ratio: 16 / 9;
+}
+
+.vt66221-video-card-nb99117 .vt66221-thumb-nb99117 {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 /*==========================================================
 START : wm8231
