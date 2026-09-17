@@ -1,6 +1,6 @@
 import { Header } from '../../components/header/header';
 import { CommonModule } from '@angular/common';
-import { Component, NgZone, OnDestroy, OnInit } from '@angular/core';
+import { Component, NgZone, OnDestroy, OnInit, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import {
   Auth,
@@ -8,6 +8,7 @@ import {
 } from '../../services/auth';
 
 import { Router } from '@angular/router';
+import { FeatureAccess } from '../../services/feature-access';
 
 import {
   ChangeDetectorRef
@@ -55,6 +56,7 @@ interface StoredUserProfile {
   styleUrl: './settings.scss',
 })
 export class Settings implements OnInit, OnDestroy {
+  private readonly featureAccess = inject(FeatureAccess);
 
 
 
@@ -656,6 +658,7 @@ export class Settings implements OnInit, OnDestroy {
   }
 
   saveProfile(): void {
+    if (!this.featureAccess.requireMember()) return;
 
     console.log(
       'Profile updated:',
@@ -780,6 +783,7 @@ export class Settings implements OnInit, OnDestroy {
   // ==========================================
 
   saveLanguage(): void {
+    if (!this.featureAccess.requireMember()) return;
 
     console.log(
       'Selected language:',

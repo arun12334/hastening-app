@@ -2,3 +2,52 @@
 @if (showCommonFooter()) {
   <app-footer></app-footer>
 }
+
+@if (featureAccess.registrationPromptVisible()) {
+  <div
+    class="SQJSHAHSJ-7263-SVAJS-SWQGS__backdrop"
+    role="presentation"
+    (click)="featureAccess.closeRegistrationPrompt()">
+    <section
+      class="SQJSHAHSJ-7263-SVAJS-SWQGS__modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="SQJSHAHSJ-7263-SVAJS-SWQGS__title"
+      (click)="$event.stopPropagation()">
+      <button
+        type="button"
+        class="SQJSHAHSJ-7263-SVAJS-SWQGS__close"
+        aria-label="Close registration prompt"
+        (click)="featureAccess.closeRegistrationPrompt()">
+        <i class="bi bi-x-lg" aria-hidden="true"></i>
+      </button>
+
+      <div class="SQJSHAHSJ-7263-SVAJS-SWQGS__icon" aria-hidden="true">
+        <i class="bi bi-person-lock"></i>
+      </div>
+      <h2 id="SQJSHAHSJ-7263-SVAJS-SWQGS__title">
+        Register to access this feature
+      </h2>
+      <p>
+        Please create an account to access and manage this feature. Only registered users can access this feature. Already have an account? You can sign in instead.
+      </p>
+
+      <div class="SQJSHAHSJ-7263-SVAJS-SWQGS__actions">
+        <button
+          type="button"
+          class="SQJSHAHSJ-7263-SVAJS-SWQGS__register"
+          (click)="featureAccess.goToRegistration()">
+          <i class="bi bi-person-plus-fill" aria-hidden="true"></i>
+          Register
+        </button>
+        <button
+          type="button"
+          class="SQJSHAHSJ-7263-SVAJS-SWQGS__login"
+          (click)="featureAccess.goToLogin()">
+          <i class="bi bi-box-arrow-in-right" aria-hidden="true"></i>
+          Login
+        </button>
+      </div>
+    </section>
+  </div>
+}

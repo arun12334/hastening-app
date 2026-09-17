@@ -697,3 +697,283 @@ EXTRA SMALL MOBILE
     }
 
 }
+.relief-request-launch, .admin-export-button {
+    margin: 1rem;
+}
+
+.admin-export-button {
+    border: 0;
+    background: transparent;
+    color: #4e2f8d;
+    text-decoration: underline;
+}
+
+.relief-request-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1050;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    background: rgba(15, 35, 65, .55);
+}
+
+.relief-request-dialog {
+    position: relative;
+    width: min(100%, 36rem);
+    max-height: 90vh;
+    overflow: auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    background: #fff;
+}
+
+.relief-request-close {
+    position: absolute;
+    top: .75rem;
+    right: .75rem;
+    border: 0;
+    background: transparent;
+    font-size: 1.5rem;
+}
+
+.relief-request-dialog form {
+    display: grid;
+    gap: .5rem;
+}
+
+.relief-request-dialog input,
+.relief-request-dialog textarea {
+    width: 100%;
+    padding: .65rem;
+    border: 1px solid #b9c5d8;
+    border-radius: .4rem;
+}
+
+.relief-request-confirmation {
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    background: #edf8ef;
+    color: #256b37;
+}
+.relief-back-button {
+    margin: 1rem;
+    border: 0;
+    background: transparent;
+    color: #4e2f8d;
+    font-weight: 600;
+}
+
+:host {
+    display: block;
+    min-height: 100vh;
+    background: #faf8ff;
+    color: #26304a;
+}
+
+.relief-back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    margin: .75rem auto;
+    padding: .55rem .9rem;
+    border-radius: 999px;
+}
+
+.Joining-Emmas-Relief-Society-Banner-Section-R91 {
+    position: relative;
+    overflow: hidden;
+}
+
+.Joining-Emmas-Relief-Society-Banner-Wrapper-R91 {
+    position: relative;
+    min-height: clamp(31rem, 72vh, 48rem);
+}
+
+.Joining-Emmas-Relief-Society-Banner-Image-R91 {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.Joining-Emmas-Relief-Society-Banner-Overlay-R91 {
+    position: relative;
+    min-height: inherit;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(255, 255, 255, .96) 0%, rgba(255, 255, 255, .88) 42%, rgba(255, 255, 255, .12) 78%);
+}
+
+.Joining-Emmas-Relief-Society-Banner-Overlay-R91 .container-fluid {
+    width: min(100%, 1440px);
+    margin: 0 auto;
+    padding: 3rem clamp(1.25rem, 6vw, 6rem);
+}
+
+.Joining-Emmas-Relief-Society-Banner-Content-R91 {
+    max-width: 42rem;
+}
+
+.Joining-Emmas-Relief-Society-Banner-Icon-R91 {
+    display: grid;
+    width: 4.25rem;
+    height: 4.25rem;
+    place-items: center;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    background: #f0eaff;
+    box-shadow: 0 8px 24px rgba(77, 48, 142, .14);
+    font-size: 2rem;
+}
+
+.Joining-Emmas-Relief-Society-Banner-Title-R91 {
+    max-width: 38rem;
+    margin: 0;
+    color: #35206f;
+    font-family: Georgia, serif;
+    font-size: clamp(2rem, 4vw, 4.25rem);
+    line-height: 1.08;
+}
+
+.Joining-Emmas-Relief-Society-Banner-Subtitle-R91 {
+    margin: 1rem 0 0;
+    color: #59458b;
+    font-size: clamp(1rem, 1.4vw, 1.35rem);
+    letter-spacing: .03em;
+}
+
+.Joining-Emmas-Relief-Society-Banner-Line-R91 {
+    width: min(100%, 22rem);
+    height: 2px;
+    margin: 1.25rem 0;
+    background: #d8b65d;
+}
+
+.Joining-Emmas-Relief-Society-Banner-Description-R91 {
+    max-width: 38rem;
+    margin: 0;
+    color: #4c5265;
+    font-size: clamp(.95rem, 1.2vw, 1.15rem);
+    line-height: 1.7;
+}
+
+.Joining-Emmas-Relief-Society-Banner-Features-R91 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .65rem;
+    margin: 1.5rem 0;
+}
+
+.Joining-Emmas-Relief-Society-Banner-Feature-R91 {
+    padding: .55rem .9rem;
+    border: 1px solid #e5dcfa;
+    border-radius: 999px;
+    background: #f7f3ff;
+    color: #5638a2;
+    font-weight: 600;
+}
+
+.Joining-Emmas-Relief-Society-Banner-Feature-R91 i {
+    margin-right: .35rem;
+}
+
+.Joining-Emmas-Relief-Society-Banner-Button-R91 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    min-height: 3.2rem;
+    margin: .35rem .6rem .35rem 0;
+    padding: .8rem 1.35rem;
+    border: 0;
+    border-radius: 999px;
+    background: #6540b5;
+    color: #fff;
+    font-weight: 700;
+    box-shadow: 0 8px 18px rgba(101, 64, 181, .2);
+}
+
+.Joining-Emmas-Relief-Society-Banner-Button-R91:hover,
+.Joining-Emmas-Relief-Society-Banner-Button-R91:focus-visible {
+    background: #4e2f92;
+}
+
+.Sisters-In-Zion-Benefits-Section-X64 {
+    padding: clamp(2.5rem, 5vw, 5rem) 1rem;
+}
+
+.Sisters-In-Zion-Benefits-Section-X64 > .container-fluid {
+    width: min(100%, 1440px);
+    margin: 0 auto;
+}
+
+.relief-request-confirmation,
+.admin-export-button {
+    display: block;
+    width: min(100% - 2rem, 72rem);
+    margin: 1.25rem auto;
+}
+
+.admin-export-button {
+    text-align: left;
+}
+
+@media (max-width: 767px) {
+    .relief-back-button {
+        margin: .5rem 1rem;
+    }
+
+    .Joining-Emmas-Relief-Society-Banner-Wrapper-R91 {
+        min-height: auto;
+    }
+
+    .Joining-Emmas-Relief-Society-Banner-Image-R91 {
+        position: relative;
+        display: block;
+        height: 15rem;
+        object-position: center;
+    }
+
+    .Joining-Emmas-Relief-Society-Banner-Overlay-R91 {
+        min-height: auto;
+        background: #fff;
+    }
+
+    .Joining-Emmas-Relief-Society-Banner-Overlay-R91 .container-fluid {
+        padding: 2rem 1.15rem 2.25rem;
+    }
+
+    .Joining-Emmas-Relief-Society-Banner-Content-R91 {
+        max-width: none;
+    }
+
+    .Joining-Emmas-Relief-Society-Banner-Title-R91 {
+        font-size: clamp(2rem, 10vw, 3rem);
+    }
+
+    .Joining-Emmas-Relief-Society-Banner-Description-R91 {
+        font-size: 1rem;
+    }
+
+    .Joining-Emmas-Relief-Society-Banner-Features-R91 {
+        gap: .5rem;
+        margin: 1.25rem 0;
+    }
+
+    .Joining-Emmas-Relief-Society-Banner-Feature-R91 {
+        font-size: .85rem;
+    }
+
+    .Joining-Emmas-Relief-Society-Banner-Button-R91 {
+        width: 100%;
+        margin: .35rem 0;
+    }
+
+    .Sisters-In-Zion-Benefits-Section-X64 {
+        padding: 2rem .85rem;
+    }
+}

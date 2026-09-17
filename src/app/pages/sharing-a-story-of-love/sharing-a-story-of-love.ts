@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { Header } from '../../components/header/header';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { FeatureAccess } from '../../services/feature-access';
 
 @Component({
   selector: 'app-sharing-a-story-of-love',
@@ -10,6 +11,7 @@ import { Router } from '@angular/router';
   styleUrl: './sharing-a-story-of-love.scss',
 })
 export class SharingAStoryOfLove implements OnInit {
+  private readonly featureAccess = inject(FeatureAccess);
 
   private readonly savedStoriesKey = 'sharing_a_story_of_love_saved_stories';
 
@@ -287,6 +289,7 @@ selectStory(story:any){
 }
 
 addNewStory(){
+  if (!this.featureAccess.requireMember()) return;
 
   this.editingStoryId = null;
   this.newStory = {
@@ -326,6 +329,7 @@ onStoryImageSelected(event: Event): void {
 }
 
 saveNewStory(): void {
+  if (!this.featureAccess.requireMember()) return;
 
   if (!this.newStory.title.trim() || !this.newStory.description.trim()) {
     return;
@@ -377,6 +381,7 @@ editStory(story: any): void {
 }
 
 deleteStory(story: any): void {
+  if (!this.featureAccess.requireMember()) return;
 
   if (!window.confirm(`Delete "${story.title}"?`)) {
     return;

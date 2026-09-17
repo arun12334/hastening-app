@@ -13,7 +13,7 @@ export class LovingOurNeighbor {
 
   goToPrayForSomeone(): void {
     const route = localStorage.getItem('guest_mode') === 'true'
-      ? '/settings'
+      ? '/pray-for-someone'
       : '/pray-for-someone';
     this.router.navigate([route]);
   }
@@ -34,7 +34,7 @@ export class LovingOurNeighbor {
 
   goToStoryOfLove(): void {
     const route = localStorage.getItem('guest_mode') === 'true'
-      ? '/settings'
+      ? '/sharing-a-story-of-love'
       : '/sharing-a-story-of-love';
     this.router.navigate([route]);
   }

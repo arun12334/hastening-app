@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import {  HostListener, OnInit } from '@angular/core';
 
 import { ChangeDetectorRef } from '@angular/core';
+import { inject } from '@angular/core';
+import { FeatureAccess } from '../../services/feature-access';
 
 @Component({
  selector: 'app-worshiping-christ-through-music',
@@ -18,6 +20,7 @@ import { ChangeDetectorRef } from '@angular/core';
   styleUrl: './worshiping-christ-through-music.scss',
 })
 export class WorshipingChristThroughMusic implements OnInit, AfterViewInit {
+  private readonly featureAccess = inject(FeatureAccess);
 
   //==========================================================
   // HERO BACKGROUND IMAGE
@@ -468,6 +471,7 @@ END
 
 
   uploadMusic(event: Event) {
+  if (!this.featureAccess.requireMember()) return;
 
   const input = event.target as HTMLInputElement;
 
@@ -517,11 +521,15 @@ END
 
 }
 
+  openMusicUpload(input: HTMLInputElement): void {
+    if (!this.featureAccess.requireMember()) return;
+    input.click();
+  }
 
-
-
-
-
+  openVideoUpload(input: HTMLInputElement): void {
+    if (!this.featureAccess.requireMember()) return;
+    input.click();
+  }
 
 
 /*==========================================================
@@ -651,6 +659,7 @@ choirData={
 JOIN BUTTON
 ==========================================================*/
 joinChoir(item:any){
+    if (!this.featureAccess.requireMember()) return;
 
     this.toastMessage =
     "Successfully joined " + item.name + " 🎵";
@@ -1001,6 +1010,7 @@ UPLOAD LOCAL VIDEOS
 ==========================================================*/
 
 uploadVideos(event:any){
+if (!this.featureAccess.requireMember()) return;
 
 const files=event.target.files;
 
@@ -1286,6 +1296,7 @@ OPEN MODAL
 ==========================================================*/
 
 gc84521OpenModal(){
+    if (!this.featureAccess.requireMember()) return;
 
     this.gc84521ShowModal = true;
 
@@ -1306,6 +1317,7 @@ LISTEN EVENT
 ==========================================================*/
 
 gc84521ListenEvent(item:any){
+    if (!this.featureAccess.requireMember()) return;
 
     this.gc84521CurrentEvent = item;
 
@@ -1331,6 +1343,7 @@ PLAY / PAUSE
 ==========================================================*/
 
 gc84521PlayPause(){
+    if (!this.featureAccess.requireMember()) return;
 
     const video = this.gc84521VideoPlayer.nativeElement;
 

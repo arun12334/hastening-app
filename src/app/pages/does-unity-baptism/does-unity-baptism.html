@@ -169,21 +169,16 @@
 
             </div>
 
-            <!-- Footer -->
-
+            @if (card.showButton) {
             <div class="card-footer bg-white border-0">
-
                 <button type="button"
                     class="btn btn-warning rounded-pill w-100"
                     (click)="openFeatureCard(card)">
-
                     {{card.button}}
-
                     <i class="bi bi-arrow-right ms-2"></i>
-
                 </button>
-
             </div>
+            }
 
         </div>
 

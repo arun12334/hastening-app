@@ -1,0 +1,19 @@
+<app-header></app-header>
+<main class="simple-page">
+  <button type="button" class="back-button" (click)="goBack()"><i class="bi bi-arrow-left"></i> Sisters in Zion</button>
+  <h1>Indicate a Need Request</h1>
+  <p>Share a need with the sisters. Posts automatically expire after two weeks.</p>
+  @if (!submitted) {
+    <form (ngSubmit)="submit()">
+      <label for="need-first-name">First name</label>
+      <input id="need-first-name" name="firstName" [(ngModel)]="request.firstName" required>
+      <label for="need-contact">Contact method (email or phone)</label>
+      <input id="need-contact" name="contactMethod" [(ngModel)]="request.contactMethod" required>
+      <label for="need-details">Your need</label>
+      <textarea id="need-details" name="details" rows="6" [(ngModel)]="request.details" required></textarea>
+      <button type="submit">Post Need Request</button>
+    </form>
+  } @else {
+    <p class="confirmation" role="status">Your need request has been posted and will expire after two weeks.</p>
+  }
+</main>

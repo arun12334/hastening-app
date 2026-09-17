@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Header } from '../../components/header/header';
 import { Router } from '@angular/router';
+import { FeatureAccess } from '../../services/feature-access';
 
 @Component({
   selector: 'app-sisters-in-zion',
@@ -9,6 +10,7 @@ import { Router } from '@angular/router';
   styleUrl: './sisters-in-zion.scss',
 })
 export class SistersInZion {
+  private readonly featureAccess = inject(FeatureAccess);
 
   /*==========================================================
   BANNER BACKGROUND IMAGE
@@ -45,6 +47,7 @@ export class SistersInZion {
   ==========================================================*/
 
   joinSisterhood(){
+    if (!this.featureAccess.requireMember()) return;
 
     console.log('Join Sisters in Zion');
 
@@ -83,9 +86,9 @@ reliefSocietyMainCardX91 = {
 
     "Phone Number",
 
-    "Address or City",
+    "Address, City, and Country",
 
-    "Receive information about the nearest Relief Society meeting location.",
+    "In countries where legally permissible, male visitors will come and vet your interest and provide information about the nearest Relief Society meeting.",
 
     "Responses provided worldwide."
 
@@ -117,7 +120,8 @@ reliefSocietyCardsX91 = [
 
     badge:"",
 
-    arrow:"bi bi-chevron-right"
+    arrow:"bi bi-chevron-right",
+    route:"/relief-society-need"
 
   },
 
@@ -129,14 +133,15 @@ reliefSocietyCardsX91 = [
 
     iconColor:"#6A44B8",
 
-    title:"Offer Help for a Need Request",
+    title:"Strengthening Teenage Youth in Christ",
 
     description:
-    "Find needs that match your heart and offer help to bless a sister.",
+    "Help teenage youth grow in faith, hope, and Christ-centered living.",
 
     badge:"",
 
-    arrow:"bi bi-chevron-right"
+    arrow:"bi bi-chevron-right",
+    route:"/sharing-our-faith"
 
   },
 
@@ -148,12 +153,13 @@ reliefSocietyCardsX91 = [
 
     iconColor:"#6A44B8",
 
-    title:"Post a Service Opportunity",
+    title:"Join a Book of Mormon Study Group",
 
     description:
-    "Invite a service opportunity and request RSVPs.",
+    "Join an existing study group or begin a new group with sisters.",
 
-    badge:"Minimum RSVPs required"
+    badge:"Maximum 20 sisters per group",
+    route:"/book-of-mormon-study-groups"
 
   },
 
@@ -165,18 +171,23 @@ reliefSocietyCardsX91 = [
 
     iconColor:"#6A44B8",
 
-    title:"Join a Book of Mormon Study Group",
+    title:"Why Women Join Relief Society",
 
     description:
-    "Grow together in faith and understanding.",
+    "Learn about the purpose and work of Relief Society.",
 
-    badge:"Maximum 20 sisters per group"
+    badge:"",
+    route:"/joining-emmas-relief-society"
 
   }
 
 ];
 
 constructor(private router: Router) {}
+
+goBack(): void {
+  this.router.navigate(['/loving-our-neighbor']);
+}
 
 
 /*==========================================================
@@ -191,16 +202,14 @@ joinReliefSocietyX91(){
 }
 
 reliefSocietyCardClickX91(card:any){
-
-  console.log(card);
+  if (card.route) {
+    this.router.navigate([card.route]);
+  }
 
 }
 
 textRequestJoinX91() {
-
-  console.log("Text Request");
-
-  this.router.navigate(['/joining-emmas-relief-society']);
+this.router.navigate(['/joining-emmas-relief-society']);
 
 }
 

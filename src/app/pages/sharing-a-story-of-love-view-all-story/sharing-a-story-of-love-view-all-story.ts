@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { Header } from '../../components/header/header';
 import { FormsModule } from '@angular/forms';
+import { FeatureAccess } from '../../services/feature-access';
 
 interface Story {
   id: number;
@@ -22,6 +23,7 @@ interface Story {
   styleUrl: './sharing-a-story-of-love-view-all-story.scss',
 })
 export class SharingAStoryOfLoveViewAllStory implements OnInit {
+  private readonly featureAccess = inject(FeatureAccess);
   private readonly savedStoriesKey = 'sharing_a_story_of_love_saved_stories';
   private readonly viewAllStoriesKey = 'sharing_a_story_of_love_view_all_stories';
 
@@ -101,6 +103,7 @@ export class SharingAStoryOfLoveViewAllStory implements OnInit {
   }
 
   editStory(story: Story, event: Event): void {
+    if (!this.featureAccess.requireMember()) return;
     event.stopPropagation();
     this.editStoryData = { ...story };
     this.showEditModal = true;
@@ -111,6 +114,7 @@ export class SharingAStoryOfLoveViewAllStory implements OnInit {
   }
 
   saveEditedStory(): void {
+    if (!this.featureAccess.requireMember()) return;
     this.validateEditDescriptionLength();
 
     const updatedStory = {
@@ -139,6 +143,8 @@ export class SharingAStoryOfLoveViewAllStory implements OnInit {
   }
 
   deleteStory(story: Story, event: Event): void {
+    if (!this.featureAccess.requireMember()) return;
+
     event.stopPropagation();
 
     if (!window.confirm(`Delete "${story.title}"?`)) {

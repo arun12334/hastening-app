@@ -172,6 +172,8 @@ invitationToUnityBannerImageX94 =
 
       button: 'Learn More',
 
+      showButton: true,
+
       color: 'warning'
 
     },
@@ -187,9 +189,9 @@ invitationToUnityBannerImageX94 =
 
       image: 'assets/does-unity/scripture.jpg',
 
-      button: 'Explore Resources',
+      color: 'primary',
 
-      color: 'primary'
+      showButton: false
 
     },
 
@@ -204,9 +206,9 @@ invitationToUnityBannerImageX94 =
 
       image: 'assets/does-unity/fellowship.jpg',
 
-      button: 'Find a Group',
+      color: 'success',
 
-      color: 'success'
+      showButton: false
 
     }
 
@@ -216,14 +218,14 @@ invitationToUnityBannerImageX94 =
     title: string;
     description: string;
     image: string;
-    button: string;
+    button?: string;
   } | null = null;
 
   openFeatureCard(card: {
     title: string;
     description: string;
     image: string;
-    button: string;
+    button?: string;
   }): void {
     this.selectedFeatureCard = card;
   }

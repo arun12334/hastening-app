@@ -1,0 +1,31 @@
+<app-header></app-header>
+<main class="simple-page">
+  <button type="button" class="back-button" (click)="goBack()"><i class="bi bi-arrow-left"></i> Sisters in Zion</button>
+  <h1>Book of Mormon Study Groups</h1>
+  <p>Join a group with 20 or fewer sisters, or begin a new group.</p>
+  <section class="groups">
+    @for (group of groups; track group.id) {
+      <article class="group-card">
+        <h2>{{group.name}}</h2><p>Leader: {{group.leader}} · {{group.enrolled}}/20 sisters · {{group.format}}</p>
+        <button type="button" [disabled]="group.enrolled >= 20" (click)="selectGroup(group)">Join this group</button>
+      </article>
+    }
+  </section>
+  @if (selectedGroup) {
+    <section class="contact-panel">
+      @if (!joined) { <button type="button" (click)="joinGroup()">Confirm Join</button> }
+      @else { <p role="status">Contact {{selectedGroup.leader}} at {{selectedGroup.email}} or {{selectedGroup.phone}} for details.</p> }
+    </section>
+  }
+  <section class="new-group">
+    <h2>Begin a New Study Group</h2>
+    <form (ngSubmit)="createGroup()">
+      <input name="groupName" placeholder="Group name" [(ngModel)]="newGroup.name" required>
+      <input name="leader" placeholder="Leader name" [(ngModel)]="newGroup.leader" required>
+      <input name="email" type="email" placeholder="Leader email" [(ngModel)]="newGroup.email" required>
+      <input name="phone" placeholder="Leader phone" [(ngModel)]="newGroup.phone" required>
+      <textarea name="description" rows="5" placeholder="Describe your belief and experience with the Book of Mormon (100 words maximum)" [(ngModel)]="newGroup.description" required></textarea>
+      <button type="submit">Begin Study Group</button>
+    </form>
+  </section>
+</main>

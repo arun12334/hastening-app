@@ -1,13 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { Header } from '../../components/header/header';
+import { FeatureAccess } from '../../services/feature-access';
 
 @Component({
   selector: 'app-join-a-justserve-activity',
-  imports: [Header],
+  imports: [Header, FormsModule],
   templateUrl: './join-a-justserve-activity.html',
   styleUrl: './join-a-justserve-activity.scss',
 })
 export class JoinAJustserveActivity {
+  private readonly featureAccess = inject(FeatureAccess);
 
   /*==========================================================
   BANNER IMAGE
@@ -147,7 +150,12 @@ justServeProjects = [
 
     buttonText:'View Opportunities',
 
-    color:'#2D73D2'
+    color:'#2D73D2',
+
+    links: [
+      { label: 'No Poor', url: 'https://www.nopooramongthem.com/' },
+      { label: 'JustServe', url: 'https://www.justserve.org/' }
+    ]
 
   },
 
@@ -183,7 +191,12 @@ justServeProjects = [
 
     buttonText:'View Opportunities',
 
-    color:'#4E9C43'
+    color:'#4E9C43',
+
+    links: [
+      { label: 'No Poor', url: 'https://www.nopooramongthem.com/' },
+      { label: 'JustServe', url: 'https://www.justserve.org/' }
+    ]
 
   },
 
@@ -219,7 +232,12 @@ justServeProjects = [
 
     buttonText:'View Opportunities',
 
-    color:'#E57A00'
+    color:'#E57A00',
+
+    links: [
+      { label: 'No Poor', url: 'https://www.nopooramongthem.com/' },
+      { label: 'JustServe', url: 'https://www.justserve.org/' }
+    ]
 
   },
 
@@ -255,7 +273,14 @@ justServeProjects = [
 
     buttonText:'View Opportunities',
 
-    color:'#5C46B8'
+    color:'#5C46B8',
+
+    links: [
+      {
+        label: 'Personal Finances: Self-Reliance Course',
+        url: 'https://www.churchofjesuschrist.org/life/self-reliance/personal-finances?lang=eng'
+      }
+    ]
 
   }
 
@@ -271,14 +296,11 @@ viewOpportunity(project:any){
 
     this.selectedProject = project;
 
-    console.log('View Opportunity',project);
-
 }
 
 projectBottomAction(project:any){
 
-    console.log('Bottom Action',project);
-
+    this.viewOpportunity(project);
 }
 
 
@@ -313,29 +335,18 @@ serviceActionCards = [
   },
 
   {
-
-    id:2,
-
-    type:'action',
-
-    icon:'bi bi-star-fill',
-
-    iconColor:'#F0A500',
-
-    title:'Record Your Service',
-
- 
-
-    buttonText:'Go to My Service',
-
-    image:'',
-
+    id:5,
+    type:'invite',
+    icon:'bi bi-envelope-heart-fill',
+    iconColor:'#2D73D2',
+    title:' ',
+    buttonText:'Invite Someone',
+    image:'assets/loving/justserve.jpg',
     verse:'',
-
     scripture:''
-
   },
 
+  
   {
 
     id:3,
@@ -401,26 +412,30 @@ serviceCardAction(card:any){
 
     this.selectedServiceCard = card;
 
-    console.log('Card Action',card);
+    if (card.title === 'Find Service Opportunities') {
+      window.open('https://www.justserve.org/', '_blank', 'noopener,noreferrer');
+    }
 
 }
+
+inviteFirstName = '';
+inviteEmail = '';
+justServeLink = 'https://www.justserve.org/';
+inviteSubmitted = false;
 
 inviteSomeone(){
-
-    console.log('Invite Someone');
-
-}
-
-openJustServeMap(){
-
-    console.log('Open JustServe Map');
+    this.inviteSubmitted = false;
+    this.selectedServiceCard = { type: 'invite' };
 
 }
 
-goToMyService(){
+submitInvitation(): void {
+  if (!this.featureAccess.requireMember()) return;
+  if (!this.inviteFirstName.trim() || !this.inviteEmail.trim()) {
+    return;
+  }
 
-    console.log('Go To My Service');
-
+  this.inviteSubmitted = true;
 }
 
 

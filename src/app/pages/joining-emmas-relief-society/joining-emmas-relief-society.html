@@ -1,4 +1,7 @@
 <app-header></app-header>
+<button type="button" class="relief-back-button" (click)="goBack()">
+    <i class="bi bi-arrow-left"></i> Previous Page
+</button>
 
 <!--==========================================================
 JOINING EMMA'S RELIEF SOCIETY BANNER R91
@@ -134,6 +137,14 @@ JOINING EMMA'S RELIEF SOCIETY BANNER R91
 
                             </button>
 
+                            <button
+                                type="button"
+                                class="Joining-Emmas-Relief-Society-Banner-Button-R91 relief-request-launch"
+                                (click)="openJoinRequestForm()">
+                                Text My Request to Join
+                                <i class="bi bi-chat-heart-fill"></i>
+                            </button>
+
                         </div>
 
                     </div>
@@ -155,6 +166,37 @@ JOINING EMMA'S RELIEF SOCIETY BANNER R91
     </div>
 
 </section>
+
+@if (showJoinRequestForm) {
+<div class="relief-request-overlay" role="dialog" aria-modal="true" aria-labelledby="relief-request-title">
+    <div class="relief-request-dialog">
+        <button type="button" class="relief-request-close" (click)="showJoinRequestForm = false" aria-label="Close request form">×</button>
+        <h2 id="relief-request-title">Text My Request to Join</h2>
+        <p>Provide your information and comments. Your request will be retained for administrator follow-up.</p>
+        <form (ngSubmit)="submitJoinRequest()">
+            <label for="join-name">Name</label>
+            <input id="join-name" name="name" [(ngModel)]="joinRequest.name" required>
+            <label for="join-phone">Phone number</label>
+            <input id="join-phone" name="phone" type="tel" [(ngModel)]="joinRequest.phone" required>
+            <label for="join-address">Address, City, and Country</label>
+            <input id="join-address" name="addressCityCountry" [(ngModel)]="joinRequest.addressCityCountry" required>
+            <label for="join-email">Email</label>
+            <input id="join-email" name="email" type="email" [(ngModel)]="joinRequest.email" required>
+            <label for="join-comments">Comments</label>
+            <textarea id="join-comments" name="comments" rows="4" [(ngModel)]="joinRequest.comments"></textarea>
+            <button type="submit" class="Joining-Emmas-Relief-Society-Banner-Button-R91">Send Request</button>
+        </form>
+    </div>
+</div>
+}
+
+@if (joinRequestSent) {
+<div class="relief-request-confirmation" role="status">
+    Thank you for your request to join the Relief Society. Where possible, male visitors will come to vet your interest and inform you of the nearest Relief Society meeting.
+</div>
+}
+
+<button type="button" class="admin-export-button" (click)="downloadRequestList()">Administrator: Export Request List</button>
 
 
 

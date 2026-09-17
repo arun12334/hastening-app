@@ -3,6 +3,7 @@ import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { filter } from 'rxjs';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Footer } from './components/footer/footer';
+import { FeatureAccess } from './services/feature-access';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,7 @@ export class App {
   protected readonly title = signal('hastening-app');
   private readonly router = inject(Router);
   private readonly destroyRef = inject(DestroyRef);
+  readonly featureAccess = inject(FeatureAccess);
   readonly showCommonFooter = signal(this.shouldShowFooter(this.router.url));
 
   constructor() {

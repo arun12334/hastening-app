@@ -196,13 +196,11 @@ X774551-Y886331
                         </div>
 
                         <button
-
-                        class="View-All-Button-X774551-Y886331"
-
-                        (click)="viewAllProphetsX774551Y886331()">
-
-                            {{prophetSectionX774551Y886331.button}}
-
+                            type="button"
+                            class="Prophet-Upload-Button"
+                            (click)="openProphetUploadModal()">
+                            <i class="bi bi-cloud-arrow-up-fill"></i>
+                            Upload Video
                         </button>
 
                     </div>
@@ -275,6 +273,80 @@ X774551-Y886331
 
 
  
+}
+
+@if (showProphetUploadModal) {
+<div class="prophet-upload-modal-backdrop"
+    role="presentation"
+    (click)="closeProphetUploadModal()">
+    <section class="prophet-upload-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="prophet-upload-title"
+        (click)="$event.stopPropagation()">
+        <button type="button"
+            class="prophet-upload-close"
+            (click)="closeProphetUploadModal()"
+            [disabled]="prophetUploadLoading"
+            aria-label="Close video upload dialog">×</button>
+        <h2 id="prophet-upload-title">Upload Prophet Video Message</h2>
+        <p class="prophet-upload-help">Choose a video and thumbnail from this computer. Users will see the message after it is added.</p>
+        <form class="prophet-upload-form" (ngSubmit)="uploadProphetVideo()">
+            <label for="prophet-video-title">Title</label>
+            <input id="prophet-video-title" name="prophetTitle" [(ngModel)]="prophetUpload.title" required>
+            <label for="prophet-video-description">Description</label>
+            <textarea id="prophet-video-description" name="prophetDescription" rows="4" [(ngModel)]="prophetUpload.description" required></textarea>
+            <label for="prophet-thumbnail">Video thumbnail</label>
+            <input id="prophet-thumbnail" name="prophetThumbnail" type="file" accept="image/*" (change)="selectProphetThumbnail($event)" required>
+            @if (prophetUpload.thumbnailUrl) {
+                <img class="prophet-thumbnail-preview" [src]="prophetUpload.thumbnailUrl" alt="Selected video thumbnail">
+            }
+            <label for="prophet-video">Video file</label>
+            <input id="prophet-video" name="prophetVideo" type="file" accept="video/*" (change)="selectProphetVideo($event)" required>
+            @if (prophetUpload.videoFileName) {
+                <span class="prophet-selected-file">{{prophetUpload.videoFileName}}</span>
+            }
+            @if (prophetUploadMessage) {
+                <p class="faith-form-error" role="alert">{{prophetUploadMessage}}</p>
+            }
+            <button type="submit" class="prophet-submit-button" [disabled]="prophetUploadLoading">
+                @if (prophetUploadLoading) {
+                    <span class="prophet-loader" aria-hidden="true"></span>
+                    Uploading...
+                } @else {
+                    <i class="bi bi-upload"></i>
+                    Submit Video
+                }
+            </button>
+        </form>
+    </section>
+</div>
+}
+
+@if (prophetUploadToast) {
+<div class="prophet-upload-toast" role="status">
+    <i class="bi bi-check-circle-fill"></i>
+    Video uploaded successfully.
+</div>
+}
+
+@if (showAdministratorWarning) {
+<div class="prophet-upload-modal-backdrop"
+    role="presentation"
+    (click)="closeAdministratorWarning()">
+    <section class="administrator-warning-modal"
+        role="alertdialog"
+        aria-modal="true"
+        aria-labelledby="administrator-warning-title"
+        (click)="$event.stopPropagation()">
+        <div class="administrator-warning-icon">
+            <i class="bi bi-shield-lock-fill"></i>
+        </div>
+        <h2 id="administrator-warning-title">Administrator access required</h2>
+        <p>Only an administrator can upload Church Prophet video messages.</p>
+        <button type="button" class="prophet-submit-button" (click)="closeAdministratorWarning()">OK</button>
+    </section>
+</div>
 }
 
 @if(activeTab==1){
@@ -375,7 +447,7 @@ class="xkdm8237-message-disciples-section-hs9283">
 
                     <div class="Disciple-List-X774551-Y886331">
 
-                        @for(message of discipleMessagesX774551Y886331;
+                        @for(message of visibleDiscipleMessages;
                         track message.id){
 
                         <div class="Disciple-Item-X774551-Y886331">
@@ -439,9 +511,9 @@ class="xkdm8237-message-disciples-section-hs9283">
 
                     <button
 
-                    class="Share-Testimony-Button-X774551-Y886331"
+                    class="Share-Testimony-Button-X774551-Y886331 mb-3"
 
-                    (click)="shareTestimonyX774551Y886331()">
+                    (click)="openDiscipleForm()">
 
                         <i
 
@@ -449,9 +521,33 @@ class="xkdm8237-message-disciples-section-hs9283">
 
                         </i>
 
-                        {{shareButtonX774551Y886331.text}}
+                        Share a Written Message
 
                     </button>
+
+                    <button
+                    type="button"
+                    class="View-All-Button-X774551-Y886331"
+                    (click)="viewAllDisciplesX774551Y886331()"
+                    [disabled]="showAllDisciples">
+                        {{showAllDisciples ? 'Showing All Messages' : 'View All'}}
+                    </button>
+
+                    @if (isAdministrator && pendingDiscipleMessages.length) {
+                    <div class="faith-writing-form">
+                        <h4>Administrator review queue</h4>
+                        @for (message of pendingDiscipleMessages; track message.submittedAt) {
+                            <article class="faith-review-item">
+                                <div>
+                                    <strong>{{message.title}}</strong>
+                                    <small>{{message.location}}</small>
+                                </div>
+                                <p>{{message.message}}</p>
+                                <button type="button" (click)="approveDiscipleMessage(message)">Approve and Post</button>
+                            </article>
+                        }
+                    </div>
+                    }
 
                 </div>
 
@@ -665,101 +761,31 @@ class="xst9248-share-testimony-section-vh6382">
 
                     </div>
 
-                    <!--==========================================
-                    READING PLAN TITLE
-                    ==========================================-->
-
-                    <div class="Reading-Plan-Header-X662991-Y448113">
-
-                        <h4>
-
-                            {{todayReadingHeaderX662991Y448113}}
-
-                        </h4>
-
-                    </div>
-
-                    <!--==========================================
-                    READING PLAN LIST
-                    ==========================================-->
-
-                    <div class="Reading-Plan-List-X662991-Y448113">
-
-                        @for(item of readingPlanX662991Y448113;
-                        track item.id){
-
-                        <div class="Reading-Plan-Item-X662991-Y448113">
-
-                            <!--==========================
-                            LEFT
-                            ==========================-->
-
-                            <div
-                            class="Reading-Plan-Left-X662991-Y448113">
-
-                                <i
-
-                                [class]="item.icon">
-
-                                </i>
-
-                                <div>
-
-                                    <h5>
-
-                                        {{item.testament}}
-
-                                    </h5>
-
-                                    <span>
-
-                                        {{item.verse}}
-
-                                    </span>
-
-                                </div>
-
-                            </div>
-
-                            <!--==========================
-                            RIGHT
-                            ==========================-->
-
-                            <div
-                            class="Reading-Plan-Right-X662991-Y448113">
-
-                                @if(item.completed){
-
-                                <i
-                                class="bi bi-check-circle-fill">
-
-                                </i>
-
-                                }
-
-                            </div>
-
-                        </div>
-
+                    <form class="faith-writing-form scripture-form" (ngSubmit)="submitScripture()">
+                        <h4>Post a Scripture</h4>
+                        <input name="scriptureReference" [(ngModel)]="scriptureSubmission.reference" placeholder="Book and reference" required>
+                        <textarea name="scriptureVerses" [(ngModel)]="scriptureSubmission.verses" rows="8" placeholder="Paste up to 30 verses (one verse per line)" required></textarea>
+                        <textarea name="scriptureComment" [(ngModel)]="scriptureSubmission.comment" rows="3" placeholder="Optional comment (up to 60 words)"></textarea>
+                        <button type="submit">Post Scripture</button>
+                        @if (scriptureSubmissionMessage) {
+                            <p class="faith-status" role="status">{{scriptureSubmissionMessage}}</p>
                         }
+                    </form>
 
+                    <div class="posted-scriptures">
+                        <h4>Posted Scriptures</h4>
+                        @for (scripture of postedScriptures; track $index) {
+                            <article>
+                                <h5>{{scripture.reference}}</h5>
+                                <p class="scripture-verses">{{scripture.verses}}</p>
+                                @if (scripture.comment) {
+                                    <p>{{scripture.comment}}</p>
+                                }
+                            </article>
+                        } @empty {
+                            <p>No scriptures have been posted yet.</p>
+                        }
                     </div>
-
-                    <!--==========================================
-                    OPEN LIBRARY BUTTON
-                    ==========================================-->
-
-                    <button
-
-                    class="Open-Scripture-Library-Button-X662991-Y448113"
-
-                    (click)="openScriptureLibraryX662991Y448113()">
-
-                        <i class="bi bi-book-half"></i>
-
-                        {{scriptureHeaderX662991Y448113.button}}
-
-                    </button>
                                         <!--==========================================
                     INVITATION CARD
                     ==========================================-->
@@ -1048,7 +1074,7 @@ class="xth6284-temple-section">
 
                         <span>
 
-                            Explore All Temples
+                            What is the Purpose of a Temple?
 
                         </span>
 
@@ -1254,7 +1280,7 @@ SLIDER
 </section>
 }
 
-@if(activeTab==4){
+@if(false){
 <!--=========================================================
 DAILY WORSHIP & INSPIRATION
 ==========================================================-->
@@ -1709,6 +1735,34 @@ class="xst9248-share-testimony-section-vh6382">
     </div>
 
 </section>
+}
+
+@if (showDiscipleForm) {
+<div class="faith-modal-backdrop"
+    role="presentation"
+    (click)="closeDiscipleForm()">
+    <section class="faith-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="disciple-form-title"
+        (click)="$event.stopPropagation()">
+        <button type="button"
+            class="faith-modal-close"
+            aria-label="Close written message form"
+            (click)="closeDiscipleForm()">×</button>
+        <h3 id="disciple-form-title">Submit a Written Message for Review</h3>
+        <form class="faith-writing-form" (ngSubmit)="submitDiscipleMessage()">
+            <label for="disciple-title">Subject</label>
+            <input id="disciple-title" name="discipleTitle" [(ngModel)]="discipleSubmission.title" placeholder="Subject" required>
+            <label for="disciple-message">Message</label>
+            <textarea id="disciple-message" name="discipleMessage" [(ngModel)]="discipleSubmission.message" rows="8" placeholder="Write your message (up to four pages)" required></textarea>
+            <button type="submit">Submit for Review</button>
+            @if (discipleSubmissionMessage) {
+                <p class="faith-status" role="status">{{discipleSubmissionMessage}}</p>
+            }
+        </form>
+    </section>
+</div>
 }
 
 

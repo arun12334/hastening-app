@@ -5,6 +5,7 @@ import { timer, Subscription } from 'rxjs';
 import { Header } from '../../components/header/header';
 import { ChangeDetectorRef } from '@angular/core';
 import {  HostListener, OnInit } from '@angular/core';
+import { FeatureAccess } from '../../services/feature-access';
 
 declare var bootstrap: any;
 
@@ -33,6 +34,8 @@ interface PrayerRequest {
 
   prayed:boolean;
 
+  createdAt?: number;
+
 }
 
 @Component({
@@ -51,7 +54,8 @@ export class PrayForSomeone implements OnInit {
 
    async ngOnInit() {
 
-  await this.refreshPrayerList();
+   this.loadPendingPrayerRequests();
+   await this.refreshPrayerList();
 
 
 }
@@ -118,8 +122,8 @@ export class PrayForSomeone implements OnInit {
 
 
 constructor(
-  private cdr: ChangeDetectorRef
-   
+  private cdr: ChangeDetectorRef,
+  private readonly featureAccess: FeatureAccess
 ) {this.nb8821UpdateBannerImage();}
 
   //----------------------------------------
@@ -378,6 +382,11 @@ constructor(
   //----------------------------------------
 
 pray(request: PrayerRequest) {
+  this.featureAccess.requestAccess();
+
+  if (localStorage.getItem('guest_mode') === 'true') {
+    return;
+  }
 
   if (!request.prayed) {
 
@@ -429,6 +438,9 @@ SEARCH + FILTER
 get filteredPrayerRequests(): PrayerRequest[] {
 
   let data = [...this.prayerRequests];
+
+  const twoWeeks = 14 * 24 * 60 * 60 * 1000;
+  data = data.filter(item => !item.createdAt || Date.now() - item.createdAt < twoWeeks);
 
   /*--------------------------------------
   SEARCH
@@ -620,21 +632,11 @@ PRAYER FOR
 
 prayerForListXrp9284 = [
 
-{ id:1, name:'Myself' },
+{ id:1, name:'Self' },
 
-{ id:2, name:'My Family' },
+{ id:2, name:'Family' },
 
-{ id:3, name:'Friend' },
-
-{ id:4, name:'Parents' },
-
-{ id:5, name:'Child' },
-
-{ id:6, name:'Church' },
-
-{ id:7, name:'Community' },
-
-{ id:8, name:'Someone Else' }
+{ id:3, name:'Loved One' }
 
 ];
 
@@ -669,6 +671,8 @@ SUBMITTED REQUESTS
 
 submittedPrayerRequestsXrp9284:any[] = [];
 
+pendingPrayerRequestsXrp9284: PrayerRequest[] = [];
+
 /*==========================================================
 TOAST
 ==========================================================*/
@@ -680,14 +684,16 @@ OPEN MODAL
 ==========================================================*/
 
 openPrayerRequestModalXrp9284(){
+ this.featureAccess.requestAccess();
 
-const modal = new bootstrap.Modal(
+ if (localStorage.getItem('guest_mode') === 'true') {
+   return;
+ }
 
-document.getElementById('xrp9284PrayerModal')
-
-);
-
-modal.show();
+ const modal = new bootstrap.Modal(
+   document.getElementById('xrp9284PrayerModal')
+ );
+ modal.show();
 
 }
 
@@ -713,9 +719,15 @@ return;
 
 }
 
+const activeSubmittedRequests = this.prayerRequests.filter(request => request.createdAt).length;
+if (activeSubmittedRequests + this.pendingPrayerRequestsXrp9284.length >= 3) {
+  alert('You may have a maximum of three prayer requests outstanding at one time.');
+  return;
+}
+
 const today = new Date();
 
-const prayer = {
+const prayer: PrayerRequest = {
 
 id: Date.now(),
 
@@ -767,11 +779,17 @@ prayed:false
 
 };
 
+prayer.createdAt = today.getTime();
+
 /*--------------------------------
-ADD TO PRAYER LIST
+SAVE FOR REVIEW
 --------------------------------*/
 
-this.prayerRequests.unshift(prayer);
+this.pendingPrayerRequestsXrp9284.unshift(prayer);
+localStorage.setItem(
+  'pendingPrayerRequests',
+  JSON.stringify(this.pendingPrayerRequestsXrp9284)
+);
 
 /*--------------------------------
 SAVE HISTORY
@@ -823,6 +841,19 @@ privatePrayer:false
 
 };
 
+}
+
+private loadPendingPrayerRequests(): void {
+  const stored = localStorage.getItem('pendingPrayerRequests');
+  if (!stored) {
+    return;
+  }
+
+  try {
+    this.pendingPrayerRequestsXrp9284 = JSON.parse(stored) as PrayerRequest[];
+  } catch {
+    localStorage.removeItem('pendingPrayerRequests');
+  }
 }
 
 /*==========================================================

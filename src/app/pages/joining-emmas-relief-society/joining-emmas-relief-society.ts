@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { Header } from '../../components/header/header';
 import { ChangeDetectorRef } from '@angular/core';
+import { FeatureAccess } from '../../services/feature-access';
 
 declare var bootstrap: any;
 
@@ -8,15 +10,61 @@ declare var bootstrap: any;
 
 @Component({
   selector: 'app-joining-emmas-relief-society',
-  imports: [Header],
+  imports: [Header, FormsModule],
   templateUrl: './joining-emmas-relief-society.html',
   styleUrl: './joining-emmas-relief-society.scss',
 })
 export class JoiningEmmasReliefSociety {
+  private readonly featureAccess = inject(FeatureAccess);
 
 constructor(
   private cdr: ChangeDetectorRef
 ) {}
+
+goBack(): void {
+  window.history.back();
+}
+
+showJoinRequestForm = false;
+joinRequestSent = false;
+joinRequest = {
+  name: '',
+  phone: '',
+  addressCityCountry: '',
+  email: '',
+  comments: ''
+};
+
+openJoinRequestForm(): void {
+if (!this.featureAccess.requireMember()) return;
+  this.showJoinRequestForm = true;
+  this.joinRequestSent = false;
+}
+
+submitJoinRequest(): void {
+if (!this.featureAccess.requireMember()) return;
+  const requests = JSON.parse(localStorage.getItem('reliefSocietyRequests') || '[]');
+  requests.push({ ...this.joinRequest, submittedAt: new Date().toISOString() });
+  localStorage.setItem('reliefSocietyRequests', JSON.stringify(requests));
+  this.joinRequestSent = true;
+  this.showJoinRequestForm = false;
+  this.joinRequest = { name: '', phone: '', addressCityCountry: '', email: '', comments: '' };
+}
+
+downloadRequestList(): void {
+  const requests = JSON.parse(localStorage.getItem('reliefSocietyRequests') || '[]') as Record<string, string>[];
+  const headers = ['Name', 'Phone', 'Address, City, and Country', 'Email', 'Comments', 'Submitted At'];
+  const rows = requests.map(request => [
+    request['name'], request['phone'], request['addressCityCountry'],
+    request['email'], request['comments'], request['submittedAt']
+  ]);
+  const csv = [headers, ...rows].map(row => row.map(value => `"${String(value || '').replace(/"/g, '""')}"`).join(',')).join('\n');
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv' }));
+  link.download = 'relief-society-requests.csv';
+  link.click();
+  URL.revokeObjectURL(link.href);
+}
 
 /*==========================================================
 BANNER IMAGE R91
@@ -106,8 +154,11 @@ BUTTON CLICK R91
 ==========================================================*/
 
 joiningEmmasReliefSocietyLearnMoreR91(){
-
-  console.log('Relief Society');
+  window.open(
+    'https://www.churchofjesuschrist.org/learn/organizations/relief-society?lang=eng',
+    '_blank',
+    'noopener,noreferrer'
+  );
 
 }
 

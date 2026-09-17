@@ -491,7 +491,7 @@ next: (response: LoginResponse) => {
 
 
 navigateRegistor () {
-  this.router.navigate(['/register']);
+  this.router.navigate(['/register-now']);
 
 }
 

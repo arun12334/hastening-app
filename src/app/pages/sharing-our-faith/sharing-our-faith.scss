@@ -10,6 +10,355 @@ CARD
 
 }
 
+.faith-upload-form,
+.faith-writing-form,
+.posted-scriptures {
+    margin: 1.25rem 0;
+    padding: 1.25rem;
+    border: 1px solid #e8e0f7;
+    border-radius: 1rem;
+    background: #fff;
+}
+
+.faith-upload-form h4,
+.faith-writing-form h4,
+.posted-scriptures h4 {
+    margin: 0 0 1rem;
+    color: #4e2f8d;
+}
+
+.faith-form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
+    gap: .75rem;
+}
+
+.faith-upload-form input,
+.faith-writing-form input,
+.faith-writing-form textarea {
+    width: 100%;
+    padding: .75rem .85rem;
+    border: 1px solid #cfd2df;
+    border-radius: .55rem;
+    font: inherit;
+}
+
+.faith-upload-form button,
+.faith-writing-form button {
+    border: 0;
+    border-radius: 999px;
+    padding: .75rem 1rem;
+    background: #6540b5;
+    color: #fff;
+    font-weight: 700;
+}
+
+.faith-writing-form {
+    display: grid;
+    gap: .75rem;
+}
+
+.faith-status {
+    margin: 0;
+    color: #256b37;
+    font-weight: 600;
+}
+
+.posted-scriptures article {
+    margin-top: .75rem;
+    padding: 1rem;
+    border-radius: .65rem;
+    background: #faf8ff;
+}
+
+.posted-scriptures h5 {
+    margin: 0 0 .5rem;
+    color: #35206f;
+}
+
+.scripture-verses {
+    white-space: pre-line;
+}
+
+.faith-review-item {
+    padding: 1rem;
+    border-top: 1px solid #ece8f4;
+}
+
+.faith-review-item > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.faith-review-item small {
+    color: #6d6780;
+}
+
+.faith-review-item button {
+    padding: .55rem .85rem;
+}
+
+.Prophet-Upload-Button {
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    margin-left: auto;
+    padding: .65rem 1rem;
+    border: 0;
+    border-radius: 999px;
+    background: #6540b5;
+    color: #fff;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.prophet-upload-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 1100;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    background: rgba(24, 19, 45, .68);
+}
+
+.prophet-upload-modal {
+    position: relative;
+    width: min(100%, 42rem);
+    max-height: min(92vh, 52rem);
+    overflow-y: auto;
+    padding: clamp(1.25rem, 3vw, 2rem);
+    border-radius: 1rem;
+    background: #fff;
+    box-shadow: 0 1.5rem 4rem rgba(20, 10, 50, .3);
+}
+
+.prophet-upload-modal h2 {
+    margin: 0 2.5rem .5rem 0;
+    color: #4e2f8d;
+}
+
+.administrator-warning-modal {
+    width: min(100%, 28rem);
+    padding: 2rem;
+    border-radius: 1rem;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 1.5rem 4rem rgba(20, 10, 50, .3);
+}
+
+.administrator-warning-modal h2 {
+    margin: .75rem 0 .5rem;
+    color: #4e2f8d;
+}
+
+.administrator-warning-modal p {
+    margin: 0 0 1.25rem;
+    color: #5d6070;
+}
+
+.administrator-warning-icon {
+    display: grid;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 0 auto;
+    place-items: center;
+    border-radius: 50%;
+    background: #fff4df;
+    color: #b86b00;
+    font-size: 1.6rem;
+}
+
+.administrator-warning-modal .prophet-submit-button {
+    width: 100%;
+}
+
+.prophet-upload-help {
+    color: #5d6070;
+}
+
+.prophet-upload-close {
+    position: absolute;
+    top: .85rem;
+    right: .85rem;
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 0;
+    border-radius: 50%;
+    background: #f1edfb;
+    color: #4e2f8d;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.prophet-upload-modal .prophet-upload-form {
+    display: grid;
+    gap: .55rem;
+    margin: 1rem 0 0;
+    padding: 0;
+    border: 0;
+}
+
+.prophet-upload-form input,
+.prophet-upload-form textarea {
+    width: 100%;
+    padding: .7rem .8rem;
+    border: 1px solid #cfd2df;
+    border-radius: .5rem;
+    font: inherit;
+}
+
+.prophet-thumbnail-preview {
+    width: min(100%, 15rem);
+    max-height: 10rem;
+    object-fit: cover;
+    border-radius: .6rem;
+}
+
+.prophet-selected-file {
+    color: #4e2f8d;
+    font-size: .9rem;
+}
+
+.prophet-submit-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    min-height: 2.9rem;
+    margin-top: .75rem;
+    border: 0;
+    border-radius: 999px;
+    background: #6540b5;
+    color: #fff;
+    font-weight: 700;
+}
+
+.prophet-submit-button:disabled {
+    cursor: wait;
+    opacity: .75;
+}
+
+.prophet-loader {
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid rgba(255, 255, 255, .45);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: prophet-upload-spin .75s linear infinite;
+}
+
+.faith-form-error {
+    margin: .5rem 0 0;
+    color: #b42318;
+    font-size: .9rem;
+}
+
+.prophet-upload-toast {
+    position: fixed;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    z-index: 1200;
+    display: flex;
+    align-items: center;
+    gap: .55rem;
+    max-width: calc(100vw - 2rem);
+    padding: .85rem 1rem;
+    border-radius: .65rem;
+    background: #207a3c;
+    color: #fff;
+    box-shadow: 0 .75rem 2rem rgba(0, 0, 0, .2);
+    font-weight: 700;
+}
+
+@keyframes prophet-upload-spin {
+    to { transform: rotate(360deg); }
+}
+
+@media (max-width: 600px) {
+    .Prophet-Upload-Button {
+        margin: .75rem 0 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .prophet-upload-toast {
+        right: 1rem;
+        bottom: 1rem;
+        left: 1rem;
+        justify-content: center;
+    }
+}
+
+.faith-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 1050;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    background: rgba(24, 19, 45, .62);
+}
+
+.faith-modal {
+    position: relative;
+    width: min(100%, 42rem);
+    max-height: min(90vh, 46rem);
+    overflow-y: auto;
+    padding: clamp(1.25rem, 3vw, 2rem);
+    border-radius: 1rem;
+    background: #fff;
+    box-shadow: 0 1.5rem 4rem rgba(20, 10, 50, .25);
+}
+
+.faith-modal h3 {
+    margin: 0 2rem 1rem 0;
+    color: #4e2f8d;
+}
+
+.faith-modal-close {
+    position: absolute;
+    top: .75rem;
+    right: .85rem;
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 0;
+    border-radius: 50%;
+    background: #f1edfb;
+    color: #4e2f8d;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.faith-modal .faith-writing-form {
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .faith-form-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .faith-upload-form,
+    .faith-writing-form,
+    .posted-scriptures {
+        padding: 1rem;
+        border-radius: .75rem;
+    }
+
+    .faith-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .faith-upload-form button,
+    .faith-writing-form button {
+        width: 100%;
+    }
+}
+
 
 
 

@@ -195,11 +195,14 @@ JUST SERVE PROJECTS
 
                         <div class="Join-A-Justserve-Activity-Project-Header-Content">
 
-                            <h4 class="Join-A-Justserve-Activity-Project-Title">
+                            <button
+                                type="button"
+                                class="Join-A-Justserve-Activity-Project-Title"
+                                (click)="viewOpportunity(project)">
 
                                 {{project.title}}
 
-                            </h4>
+                            </button>
  
 
                         </div>
@@ -262,7 +265,7 @@ JUST SERVE PROJECTS
 
                             class="Join-A-Justserve-Activity-Project-Action"
 
-                            (click)="projectBottomAction(project)"
+                            (click)="viewOpportunity(project)"
 
                             [style.color]="project.color">
 
@@ -289,8 +292,6 @@ JUST SERVE PROJECTS
                             (click)="viewOpportunity(project)">
 
                             {{project.buttonText}}
-
-                            <i class="bi bi-chevron-right"></i>
 
                         </button>
 
@@ -498,6 +499,40 @@ SERVICE ACTION CARDS
 
 </section>
 
+}
+
+@if (selectedProject) {
+<div class="Join-A-Justserve-Activity-Opportunity-Overlay" role="dialog" aria-modal="true" aria-labelledby="opportunity-title">
+    <div class="Join-A-Justserve-Activity-Opportunity-Dialog">
+        <button type="button" class="Join-A-Justserve-Activity-Opportunity-Close" (click)="selectedProject = null" aria-label="Close opportunities">
+            <i class="bi bi-x-lg"></i>
+        </button>
+        @if (selectedProject.type === 'invite') {
+            <h2 id="opportunity-title">Invite Others to Serve</h2>
+            <p>Share a JustServe project with someone who would enjoy serving with you.</p>
+            <form (ngSubmit)="submitInvitation()">
+                <label for="invite-first-name">First name</label>
+                <input id="invite-first-name" name="inviteFirstName" [(ngModel)]="inviteFirstName" required>
+                <label for="invite-email">Email</label>
+                <input id="invite-email" name="inviteEmail" type="email" [(ngModel)]="inviteEmail" required>
+                <label for="invite-link">JustServe link</label>
+                <input id="invite-link" name="justServeLink" [(ngModel)]="justServeLink" required>
+                <button type="submit" class="Join-A-Justserve-Activity-Service-Primary-Btn">Send Invitation</button>
+            </form>
+            @if (inviteSubmitted) {
+                <p role="status">Invitation details are ready to share with {{inviteFirstName}}.</p>
+            }
+        } @else {
+            <h2 id="opportunity-title">{{selectedProject.title}}</h2>
+            <p>{{selectedProject.description}}</p>
+            <div class="Join-A-Justserve-Activity-Opportunity-Links">
+                @for (link of selectedProject.links; track link.url) {
+                    <a [href]="link.url" target="_blank" rel="noopener noreferrer">{{link.label}}</a>
+                }
+            </div>
+        }
+    </div>
+</div>
 }
 
 <!--==========================================================

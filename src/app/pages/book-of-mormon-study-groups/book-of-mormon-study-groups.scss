@@ -1,0 +1,8 @@
+.simple-page { max-width: 900px; margin: 0 auto; padding: 2rem 1rem 5rem; color: #263c62; }
+.back-button { border: 0; background: transparent; color: #4e2f8d; font-weight: 600; margin-bottom: 2rem; }
+.groups { display: grid; gap: 1rem; }
+.group-card, .new-group, .contact-panel { padding: 1.25rem; border-radius: 1rem; background: #fff; box-shadow: 0 4px 18px rgba(0,0,0,.08); }
+.group-card button, .contact-panel button, .new-group button { padding: .65rem 1rem; border: 0; border-radius: 2rem; background: #6540b5; color: #fff; font-weight: 600; }
+.new-group { margin-top: 2rem; }
+.new-group form { display: grid; gap: .65rem; }
+.new-group input, .new-group textarea { padding: .7rem; border: 1px solid #b9c5d8; border-radius: .4rem; }

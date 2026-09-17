@@ -1,15 +1,18 @@
 import { Header } from '../../components/header/header';
-import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild, inject } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { FeatureAccess } from '../../services/feature-access';
 declare var bootstrap:any;
 
 
 @Component({
   selector: 'app-sharing-our-faith',
-  imports: [Header],
+  imports: [Header, FormsModule],
   templateUrl: './sharing-our-faith.html',
   styleUrl: './sharing-our-faith.scss',
 })
 export class SharingOurFaith {
+  private readonly featureAccess = inject(FeatureAccess);
 
   //==========================================================
   // HERO BACKGROUND IMAGE
@@ -42,7 +45,12 @@ export class SharingOurFaith {
 
   ngOnInit(){
 
+ 
+
     this.nb8821UpdateBannerImage();
+    this.loadPostedScriptures();
+    this.loadApprovedDiscipleMessages();
+    this.pendingDiscipleMessages = JSON.parse(localStorage.getItem('pendingDiscipleMessages') || '[]');
       setInterval(()=>{
 
       this.nextSlideX774551Y886331();
@@ -139,18 +147,6 @@ bannerTabs = [
     title: 'Temple Heritage'
   },
 
-  {
-    id: 4,
-    icon: 'bi bi-brightness-high',
-    title: 'Daily Worship & Inspiration'
-  },
-
-  // {
-  //   id: 5,
-  //   icon: 'bi bi-pencil-square',
-  //   title: 'Share Your Testimony'
-  // }
-
 ];
 
 changeTab(index:number){
@@ -244,6 +240,107 @@ changeTab(index:number){
   prophetVideoProgress = 0;
   prophetVideoCurrentTime = '0:00';
   prophetVideoTotalTime = '0:00';
+
+  get isAdministrator(): boolean {
+    return localStorage.getItem('isAdministrator') === 'true';
+  }
+
+  prophetUpload = {
+    title: '',
+    description: '',
+    thumbnailUrl: '',
+    videoUrl: '',
+    videoFileName: ''
+  };
+  showProphetUploadModal = false;
+  prophetUploadLoading = false;
+  prophetUploadToast = false;
+  showAdministratorWarning = false;
+  prophetUploadMessage = '';
+
+  openProphetUploadModal(): void {
+    if (!this.featureAccess.requireMember()) return;
+
+    if (!this.isAdministrator) {
+      this.showAdministratorWarning = true;
+      return;
+    }
+
+    this.prophetUploadMessage = '';
+    this.showProphetUploadModal = true;
+  }
+
+  closeAdministratorWarning(): void {
+    this.showAdministratorWarning = false;
+  }
+
+  closeProphetUploadModal(): void {
+    if (!this.prophetUploadLoading) {
+      this.showProphetUploadModal = false;
+    }
+  }
+
+  selectProphetVideo(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    const file = input.files?.[0];
+    if (!file || !file.type.startsWith('video/')) {
+      return;
+    }
+
+    this.prophetUpload.videoUrl = URL.createObjectURL(file);
+    this.prophetUpload.videoFileName = file.name;
+  }
+
+  selectProphetThumbnail(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    const file = input.files?.[0];
+    if (!file || !file.type.startsWith('image/')) {
+      return;
+    }
+
+    this.prophetUpload.thumbnailUrl = URL.createObjectURL(file);
+  }
+
+  async uploadProphetVideo(): Promise<void> {
+    if (!this.featureAccess.requireMember()) return;
+
+    if (
+      !this.isAdministrator ||
+      !this.prophetUpload.title.trim() ||
+      !this.prophetUpload.description.trim() ||
+      !this.prophetUpload.videoUrl
+    ) {
+      this.prophetUploadMessage = 'Add a title, description, thumbnail, and video before submitting.';
+      return;
+    }
+
+    this.prophetUploadLoading = true;
+    this.prophetUploadMessage = '';
+    await new Promise(resolve => setTimeout(resolve, 900));
+
+    this.prophetMessagesX774551Y886331 = [
+      ...this.prophetMessagesX774551Y886331,
+      {
+        id: Date.now(),
+        image: this.prophetUpload.thumbnailUrl || 'assets/sharing/sharing-our-faith-banner1.png',
+        title: this.prophetUpload.title.trim(),
+        author: 'Church Prophet',
+        description: this.prophetUpload.description.trim(),
+        video: this.prophetUpload.videoUrl
+      }
+    ];
+    this.prophetUpload = {
+      title: '',
+      description: '',
+      thumbnailUrl: '',
+      videoUrl: '',
+      videoFileName: ''
+    };
+    this.prophetUploadLoading = false;
+    this.showProphetUploadModal = false;
+    this.prophetUploadToast = true;
+    setTimeout(() => this.prophetUploadToast = false, 3500);
+  }
 
   playProphetVideo(index: number): void {
     this.currentSlideX774551Y886331 = index;
@@ -384,7 +481,14 @@ changeTab(index:number){
   X774551-Y886331
   ==========================================================*/
 
-  discipleMessagesX774551Y886331=[
+  discipleMessagesX774551Y886331: Array<{
+    id: number;
+    image: string;
+    title: string;
+    description: string;
+    time: string;
+    location?: string;
+  }> = [
 
     {
 
@@ -443,6 +547,113 @@ changeTab(index:number){
     }
 
   ];
+
+  showAllDisciples = false;
+  showDiscipleForm = false;
+  discipleSubmission = { title: '', message: '' };
+  discipleSubmissionMessage = '';
+  registrationLocation = localStorage.getItem('registrationLocation') || 'General';
+  pendingDiscipleMessages: Array<{ title: string; message: string; location: string; submittedAt: string }> = [];
+
+  get visibleDiscipleMessages() {
+    const messages = this.discipleMessagesX774551Y886331
+      .filter(message => (message as { location?: string }).location === this.registrationLocation || !(message as { location?: string }).location);
+    return this.showAllDisciples ? messages : messages.slice(0, 3);
+  }
+
+  openDiscipleForm(): void {
+    this.featureAccess.requestAccess();
+
+    if (localStorage.getItem('guest_mode') === 'true') {
+      return;
+    }
+
+    this.discipleSubmissionMessage = '';
+    this.showDiscipleForm = true;
+  }
+
+  closeDiscipleForm(): void {
+    this.showDiscipleForm = false;
+  }
+
+  private loadApprovedDiscipleMessages(): void {
+    const stored = localStorage.getItem('approvedDiscipleMessages');
+    if (!stored) {
+      return;
+    }
+
+    try {
+      const approved = JSON.parse(stored) as Array<{ title: string; message: string; location: string; submittedAt: string }>;
+      this.discipleMessagesX774551Y886331 = [
+        ...this.discipleMessagesX774551Y886331,
+        ...approved.map((message, index) => ({
+          id: 1000 + index,
+          image: 'assets/sharing/sharing-our-faith-banner122.png',
+          title: message.title,
+          description: message.message,
+          time: 'Recently',
+          location: message.location
+        }))
+      ];
+    } catch {
+      localStorage.removeItem('approvedDiscipleMessages');
+    }
+  }
+
+  submitDiscipleMessage(): void {
+    if (!this.featureAccess.requireMember()) return;
+
+    const wordCount = this.discipleSubmission.message.trim().split(/\s+/).filter(Boolean).length;
+    if (!this.discipleSubmission.title.trim() || !this.discipleSubmission.message.trim() || wordCount > 2400) {
+      this.discipleSubmissionMessage = 'Please provide a message of no more than four pages (approximately 2,400 words).';
+      return;
+    }
+
+    const pending = JSON.parse(localStorage.getItem('pendingDiscipleMessages') || '[]');
+    pending.push({
+      ...this.discipleSubmission,
+      location: this.registrationLocation,
+      submittedAt: new Date().toISOString(),
+      status: 'pending'
+    });
+    localStorage.setItem('pendingDiscipleMessages', JSON.stringify(pending));
+    this.pendingDiscipleMessages = pending;
+    this.discipleMessagesX774551Y886331 = [
+      {
+        id: Date.now(),
+        image: 'assets/sharing/sharing-our-faith-banner122.png',
+        title: this.discipleSubmission.title.trim(),
+        description: this.discipleSubmission.message.trim(),
+        time: 'Pending review',
+        location: this.registrationLocation
+      },
+      ...this.discipleMessagesX774551Y886331
+    ];
+    this.showAllDisciples = true;
+    this.showDiscipleForm = false;
+    this.discipleSubmission = { title: '', message: '' };
+    this.discipleSubmissionMessage = 'Thank you. Your message was submitted for review.';
+  }
+
+  approveDiscipleMessage(message: { title: string; message: string; location: string; submittedAt: string }): void {
+    const pending = this.pendingDiscipleMessages.filter(item => item.submittedAt !== message.submittedAt);
+    const approved = JSON.parse(localStorage.getItem('approvedDiscipleMessages') || '[]');
+    approved.push(message);
+    localStorage.setItem('pendingDiscipleMessages', JSON.stringify(pending));
+    localStorage.setItem('approvedDiscipleMessages', JSON.stringify(approved));
+    this.pendingDiscipleMessages = pending;
+    this.discipleMessagesX774551Y886331 = [
+      ...this.discipleMessagesX774551Y886331,
+      {
+        id: Date.now(),
+        image: 'assets/sharing/sharing-our-faith-banner122.png',
+        title: message.title,
+        description: message.message,
+        time: 'Recently',
+        location: message.location
+      }
+    ];
+  }
 
   /*==========================================================
   SHARE BUTTON
@@ -544,8 +755,7 @@ changeTab(index:number){
   }
 
   viewAllDisciplesX774551Y886331(){
-
-    console.log('View All Disciples');
+    this.showAllDisciples = true;
 
   }
 
@@ -574,6 +784,45 @@ changeTab(index:number){
     button:'Open Scripture Library'
 
   };
+
+  scriptureSubmission = { reference: '', verses: '', comment: '' };
+  postedScriptures: Array<{ reference: string; verses: string; comment: string }> = [];
+  scriptureSubmissionMessage = '';
+
+  submitScripture(): void {
+    if (!this.featureAccess.requireMember()) return;
+
+    const verseCount = this.scriptureSubmission.verses
+      .split(/\n|;/)
+      .map(verse => verse.trim())
+      .filter(Boolean).length;
+    const commentWords = this.scriptureSubmission.comment.trim().split(/\s+/).filter(Boolean).length;
+    if (!this.scriptureSubmission.reference.trim() || !this.scriptureSubmission.verses.trim() || verseCount > 30 || commentWords > 60) {
+      this.scriptureSubmissionMessage = 'Add a reference, no more than 30 verses, and no more than 60 comment words.';
+      return;
+    }
+
+    this.postedScriptures = [
+      ...this.postedScriptures,
+      { ...this.scriptureSubmission }
+    ];
+    localStorage.setItem('postedScriptures', JSON.stringify(this.postedScriptures));
+    this.scriptureSubmission = { reference: '', verses: '', comment: '' };
+    this.scriptureSubmissionMessage = 'Scripture posted for everyone to view.';
+  }
+
+  private loadPostedScriptures(): void {
+    const stored = localStorage.getItem('postedScriptures');
+    if (!stored) {
+      return;
+    }
+
+    try {
+      this.postedScriptures = JSON.parse(stored);
+    } catch {
+      localStorage.removeItem('postedScriptures');
+    }
+  }
 
   /*==========================================================
   TODAY READING
@@ -659,7 +908,7 @@ changeTab(index:number){
 
     title:'D. Temple Heritage',
 
-    button:'Explore All Temple History'
+    button:'What is the Purpose of a Temple?'
 
   };
 
@@ -682,6 +931,7 @@ changeTab(index:number){
       id:1,
 
       title:"Israel's Tabernacle",
+      url:'https://www.churchofjesuschrist.org/study/scriptures/bd/tabernacle?lang=eng',
 
       subtitle:'In the Wilderness',
 
@@ -1393,6 +1643,7 @@ scripture:"Exodus 25:8"
 {
 id:2,
 title:"Solomon's Temple",
+url:'https://www.churchofjesuschrist.org/study/scriptures/bd/temple-of-solomon?lang=eng',
 location:"Jerusalem",
 image:"assets/sharing/temples/temples-2.png",
 description:"Built by King Solomon as a magnificent temple dedicated to the Lord.",
@@ -1402,6 +1653,7 @@ scripture:"1 Kings 6:1"
 {
 id:3,
 title:"Nephi's Temple",
+url:'https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/5?lang=eng',
 location:"Promised Land",
 image:"assets/sharing/temples/temples-3.png",
 description:"Constructed after the pattern of Solomon's Temple by the Nephites.",
@@ -1411,6 +1663,7 @@ scripture:"2 Nephi 5:16"
 {
 id:4,
 title:"King Benjamin's Temple",
+url:'https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/2?lang=eng',
 location:"Zarahemla",
 image:"assets/sharing/temples/temples-4.png",
 description:"King Benjamin taught his people from the temple with power and faith.",
@@ -1420,6 +1673,7 @@ scripture:"Mosiah 2:1"
 {
 id:5,
 title:"Bountiful Temple",
+url:'https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng',
 location:"Bountiful",
 image:"assets/sharing/temples/temples-5.png",
 description:"The resurrected Jesus Christ appeared to the Nephites at this temple.",
@@ -1429,6 +1683,7 @@ scripture:"3 Nephi 11:1"
 {
 id:6,
 title:"Herod's Temple",
+url:'https://www.churchofjesuschrist.org/study/scriptures/bd/herods-temple?lang=eng',
 location:"Jerusalem",
 image:"assets/sharing/temples/temples-6.png",
 description:"The temple where Jesus taught, healed, and cleansed the courts.",
@@ -1438,6 +1693,7 @@ scripture:"John 2:16"
 {
 id:7,
 title:"Kirtland Temple",
+url:'https://www.churchofjesuschrist.org/temples/details/kirtland-temple',
 location:"Ohio",
 image:"assets/sharing/temples/temples-7.png",
 description:"The first temple of the Restoration where heavenly visions were received.",
@@ -1447,6 +1703,7 @@ scripture:"Doctrine & Covenants 110"
 {
 id:8,
 title:"Nauvoo Temple",
+url:'https://www.churchofjesuschrist.org/temples/details/nauvoo-illinois-temple',
 location:"Illinois",
 image:"assets/sharing/temples/temples-8.png",
 description:"Built by faithful Saints as a sacred place of worship and ordinances.",
@@ -1456,6 +1713,7 @@ scripture:"Doctrine & Covenants 124"
 {
 id:9,
 title:"Salt Lake Temple",
+url:'https://www.churchofjesuschrist.org/temples/details/salt-lake-temple',
 location:"Utah",
 image:"assets/sharing/temples/temples-9.png",
 description:"A worldwide symbol of faith, sacrifice, and devotion to Jesus Christ.",
@@ -1465,10 +1723,31 @@ scripture:"Psalm 27:4"
 {
 id:10,
 title:"Kansas City Temple",
+url:'https://www.churchofjesuschrist.org/temples/details/kansas-city-missouri-temple',
 location:"Missouri",
 image:"assets/sharing/temples/temples-10.png",
 description:"A modern house of the Lord dedicated to strengthening families.",
 scripture:"Isaiah 2:2"
+},
+
+{
+id:11,
+title:"St. George Temple",
+location:"Utah",
+image:"assets/sharing/temples/temples-9.png",
+url:"https://www.churchofjesuschrist.org/temples/details/st-george-utah-temple",
+description:"A historic temple of the Restoration and a place of covenant worship.",
+scripture:"Doctrine & Covenants 109"
+},
+
+{
+id:12,
+title:"Jerusalem Temple",
+location:"Jerusalem",
+image:"assets/sharing/temples/temples-10.png",
+url:"https://www.churchofjesuschrist.org/temples/details/jerusalem-center",
+description:"A sacred Jerusalem setting associated with teaching, worship, and the Savior.",
+scripture:"Isaiah 2:3"
 }
  
 ];
@@ -1479,11 +1758,9 @@ OPEN TEMPLE
 ==========================================================*/
 
 openTempleHeritageXth6284(card:any):void{
-
-    console.log(card);
-
-    // Future
-    // this.router.navigate(['/temple-heritage', card.id]);
+    if (card.url) {
+      window.open(card.url, '_blank', 'noopener,noreferrer');
+    }
 
 }
 
@@ -1493,11 +1770,11 @@ EXPLORE ALL TEMPLES
 ==========================================================*/
 
 exploreTempleHeritageXth6284():void{
-
-    console.log('Explore Temple Heritage');
-
-    // Future
-    // this.router.navigate(['/temple-heritage']);
+    window.open(
+      'https://www.churchofjesuschrist.org/temples/why-latter-day-saints-build-temples?lang=eng',
+      '_blank',
+      'noopener,noreferrer'
+    );
 
 }
 

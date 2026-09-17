@@ -1,0 +1,108 @@
+ .SQJSHAHSJ-7263-SVAJS-SWQGS__backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1060;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  background: rgba(15, 31, 61, 0.62);
+}
+
+.SQJSHAHSJ-7263-SVAJS-SWQGS__modal {
+  position: relative;
+  width: min(100%, 30rem);
+  padding: 2.5rem 2rem 2rem;
+  border: 1px solid rgba(27, 78, 163, 0.12);
+  border-radius: 1.25rem;
+  background: #fff;
+  box-shadow: 0 1.5rem 4rem rgba(15, 31, 61, 0.28);
+  text-align: center;
+}
+
+.SQJSHAHSJ-7263-SVAJS-SWQGS__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: #f1f4fa;
+  color: #143d7a;
+}
+
+.SQJSHAHSJ-7263-SVAJS-SWQGS__close:hover,
+.SQJSHAHSJ-7263-SVAJS-SWQGS__close:focus-visible {
+  background: #dce8fb;
+}
+
+.SQJSHAHSJ-7263-SVAJS-SWQGS__icon {
+  display: grid;
+  width: 4.25rem;
+  height: 4.25rem;
+  margin: 0 auto 1.25rem;
+  place-items: center;
+  border-radius: 50%;
+  background: #e8f0ff;
+  color: #1b4ea3;
+  font-size: 2rem;
+}
+
+.SQJSHAHSJ-7263-SVAJS-SWQGS__modal h2 {
+  margin-bottom: 0.75rem;
+  color: #143d7a;
+  font-size: 1.65rem;
+  font-weight: 700;
+}
+
+.SQJSHAHSJ-7263-SVAJS-SWQGS__modal p {
+  margin-bottom: 1.75rem;
+  color: #4b5f7c;
+  line-height: 1.6;
+}
+
+.SQJSHAHSJ-7263-SVAJS-SWQGS__actions {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.SQJSHAHSJ-7263-SVAJS-SWQGS__actions button {
+  min-height: 2.9rem;
+  border: 0;
+  border-radius: 0.65rem;
+  font-weight: 700;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.SQJSHAHSJ-7263-SVAJS-SWQGS__actions button:hover {
+  transform: translateY(-1px);
+}
+
+.SQJSHAHSJ-7263-SVAJS-SWQGS__register {
+  background: #1b4ea3;
+  color: #fff;
+}
+
+.SQJSHAHSJ-7263-SVAJS-SWQGS__register:hover,
+.SQJSHAHSJ-7263-SVAJS-SWQGS__register:focus-visible {
+  background: #143d7a;
+}
+
+.SQJSHAHSJ-7263-SVAJS-SWQGS__login {
+  border: 1px solid #1b4ea3 !important;
+  background: #fff;
+  color: #1b4ea3;
+}
+
+.SQJSHAHSJ-7263-SVAJS-SWQGS__login:hover,
+.SQJSHAHSJ-7263-SVAJS-SWQGS__login:focus-visible {
+  background: #edf3ff;
+}
+
+@media (min-width: 30rem) {
+  .SQJSHAHSJ-7263-SVAJS-SWQGS__actions {
+    grid-template-columns: 1fr 1fr;
+  }
+}

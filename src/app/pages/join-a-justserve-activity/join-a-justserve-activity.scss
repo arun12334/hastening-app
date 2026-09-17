@@ -1,3 +1,68 @@
 .Sharing-Story-Footer {
     display: none;
 }
+.Join-A-Justserve-Activity-Project-Title {
+    border: 0;
+    background: transparent;
+    padding: 0;
+    text-align: left;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}
+
+.Join-A-Justserve-Activity-Opportunity-Overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1050;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    background: rgba(15, 35, 65, .55);
+}
+
+.Join-A-Justserve-Activity-Opportunity-Dialog {
+    position: relative;
+    width: min(100%, 34rem);
+    padding: 2rem;
+    border-radius: 1rem;
+    background: #fff;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, .2);
+}
+
+.Join-A-Justserve-Activity-Opportunity-Close {
+    position: absolute;
+    top: .75rem;
+    right: .75rem;
+    border: 0;
+    background: transparent;
+    color: #143d7a;
+}
+
+.Join-A-Justserve-Activity-Opportunity-Dialog form {
+    display: grid;
+    gap: .5rem;
+}
+
+.Join-A-Justserve-Activity-Opportunity-Dialog input {
+    width: 100%;
+    padding: .6rem .75rem;
+    border: 1px solid #b8c4d8;
+    border-radius: .4rem;
+}
+
+.Join-A-Justserve-Activity-Opportunity-Links {
+    display: grid;
+    gap: .75rem;
+    margin-top: 1.25rem;
+}
+
+.Join-A-Justserve-Activity-Opportunity-Links a {
+    display: block;
+    padding: .8rem 1rem;
+    border-radius: .5rem;
+    background: #edf3ff;
+    color: #143d7a;
+    font-weight: 600;
+    text-decoration: none;
+}
