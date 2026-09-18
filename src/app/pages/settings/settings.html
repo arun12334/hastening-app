@@ -1297,6 +1297,11 @@
 
             <div
               class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__security-row"
+              role="button"
+              tabindex="0"
+              (click)="openLoginActivity()"
+              (keydown.enter)="openLoginActivity()"
+              (keydown.space)="openLoginActivity(); $event.preventDefault()"
             >
 
               <div>
@@ -1321,6 +1326,11 @@
 
             <div
               class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__security-row"
+              role="button"
+              tabindex="0"
+              (click)="openPrivacyPolicy()"
+              (keydown.enter)="openPrivacyPolicy()"
+              (keydown.space)="openPrivacyPolicy(); $event.preventDefault()"
             >
 
               <div>

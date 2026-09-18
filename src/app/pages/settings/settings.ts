@@ -1262,6 +1262,13 @@ export class Settings implements OnInit, OnDestroy {
 
   }
 
+ openPrivacyPolicy(): void {
+   this.router.navigate(['/privacy-policy']);
+ }
+
+ openLoginActivity(): void {
+   this.router.navigate(['/account-users-login-activity']);
+ }
 
 
 

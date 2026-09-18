@@ -22,6 +22,8 @@ import { Welcome } from './pages/welcome/welcome';
 import { CashfreeGateway } from './pages/cashfree-gateway/cashfree-gateway';
 import { CashfreeSuccess } from './pages/cashfree-success/cashfree-success';
 import { BookOfMormonStudyGroups } from './pages/book-of-mormon-study-groups/book-of-mormon-study-groups';
+import { PrivacyPolicy } from './pages/privacy-policy/privacy-policy';
+import { AccountUsersLoginActivity } from './pages/account-users-login-activity/account-users-login-activity';
 
 export const routes: Routes = [
 
@@ -144,6 +146,16 @@ export const routes: Routes = [
   {
     path: 'settings',
     component: Settings
+  },
+
+  {
+    path: 'privacy-policy',
+    component: PrivacyPolicy
+  },
+
+  {
+    path: 'account-users-login-activity',
+    component: AccountUsersLoginActivity
   },
 
   {

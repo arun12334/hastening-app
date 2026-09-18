@@ -1,0 +1,52 @@
+<app-header></app-header>
+
+<main class="login-activity-page">
+  <div class="login-activity-shell">
+    <a class="login-activity-back" routerLink="/settings">
+      <i class="bi bi-arrow-left"></i>
+      Account Settings
+    </a>
+
+    <header class="login-activity-header">
+      <span class="login-activity-icon"><i class="bi bi-clock-history"></i></span>
+      <div>
+        <p>Account Users</p>
+        <h1>Login Activity</h1>
+        <span>Review recent activity on your account.</span>
+      </div>
+    </header>
+
+    <section class="login-activity-card">
+      <div class="login-activity-card-heading">
+        <div>
+          <h2>Recent login history</h2>
+          <p>These are the latest sign-ins associated with your account.</p>
+        </div>
+        <i class="bi bi-shield-check"></i>
+      </div>
+
+      <div class="login-history-list">
+        @for (entry of loginHistory; track entry.loggedInAt) {
+          <article class="login-history-item">
+            <span class="login-history-device-icon"><i class="bi" [class]="entry.icon"></i></span>
+            <div class="login-history-main">
+              <div class="login-history-title">
+                <h3>{{ entry.device }}</h3>
+                <span class="login-history-status" [class.current]="entry.status === 'Current session'">
+                  <i class="bi bi-check-circle-fill"></i>
+                  {{ entry.status }}
+                </span>
+              </div>
+              <div class="login-history-details">
+                <span><i class="bi bi-globe2"></i>{{ entry.browser }}</span>
+                <span><i class="bi bi-geo-alt"></i>{{ entry.location }}</span>
+                <span><i class="bi bi-router"></i>{{ entry.ipAddress }}</span>
+              </div>
+              <small><i class="bi bi-calendar3"></i>{{ entry.loggedInAt }}</small>
+            </div>
+          </article>
+        }
+      </div>
+    </section>
+  </div>
+</main>
