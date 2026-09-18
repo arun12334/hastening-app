@@ -554,13 +554,13 @@ NUMBER BADGE
   background: #f4f7fb;
 }
 
-.Prophet-Video-Player-X774551-Y886331 video {
+.Prophet-Video-Player-X774551-Y886331 iframe {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 16 / 9;
   min-height: 0;
   max-height: 340px;
   display: block;
-  object-fit: cover;
+  border: 0;
   border-radius: 10px;
   background: #0f172a;
 }
@@ -665,7 +665,7 @@ NUMBER BADGE
     padding: 0.65rem;
   }
 
-  .Prophet-Video-Player-X774551-Y886331 video {
+  .Prophet-Video-Player-X774551-Y886331 iframe {
     max-height: none;
   }
 

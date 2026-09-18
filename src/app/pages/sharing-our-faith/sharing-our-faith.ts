@@ -2,6 +2,7 @@ import { Header } from '../../components/header/header';
 import { Component, ElementRef, HostListener, OnInit, ViewChild, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FeatureAccess } from '../../services/feature-access';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 declare var bootstrap:any;
 
 
@@ -13,6 +14,7 @@ declare var bootstrap:any;
 })
 export class SharingOurFaith {
   private readonly featureAccess = inject(FeatureAccess);
+  private readonly sanitizer = inject(DomSanitizer);
 
   //==========================================================
   // HERO BACKGROUND IMAGE
@@ -189,14 +191,14 @@ changeTab(index:number){
 
       id:1,
 
-      image:'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=900',
+      image:'https://img.youtube.com/vi/igc22pVQRAA/hqdefault.jpg',
 
-      title:'The Joy of Sharing the Gospel',
+      title:'The Three Rs of Choice',
 
       author:'President Thomas S. Monson',
 
-      description:'Share Christ with kindness, faith, compassion, and love every day.'
-      ,video:'https://www.w3schools.com/html/mov_bbb.mp4'
+      description:'President Thomas S. Monson teaches that wise choices are guided by the three Rs: the right, the real, and the result.'
+      ,video:'https://www.youtube.com/embed/igc22pVQRAA?rel=0'
 
     },
 
@@ -204,14 +206,13 @@ changeTab(index:number){
 
       id:2,
 
-      image:'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=900',
+      image:'https://img.youtube.com/vi/QpFqIH0_-tI/hqdefault.jpg',
 
-      title:'Strength Through Prayer',
+      title:'Three Sisters',
+      author:'President Dieter F. Uchtdorf',
 
-      author:'President Russell M. Nelson',
-
-      description:'Daily prayer brings peace, wisdom, and strength for every challenge.'
-      ,video:'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4'
+      description:'President Dieter F. Uchtdorf shares a message about three sisters and the faith, love, and service they represent.'
+      ,video:'https://www.youtube.com/embed/QpFqIH0_-tI?rel=0'
 
     },
 
@@ -219,18 +220,25 @@ changeTab(index:number){
 
       id:3,
 
-      image:'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=900',
+      image:'https://img.youtube.com/vi/gV0uA3a_eIU/hqdefault.jpg',
 
-      title:'Faith In Jesus Christ',
+      title:'The Lord Jesus Christ Will Come Again',
+      author:'President Russell M. Nelson',
 
-      author:'Elder Dieter F. Uchtdorf',
-
-      description:'Faith in Christ fills life with hope, joy, and eternal purpose.'
-      ,video:'https://www.w3schools.com/html/movie.mp4'
+      description:'President Russell M. Nelson testifies that the Lord Jesus Christ will come again.'
+      ,video:'https://www.youtube.com/embed/gV0uA3a_eIU?rel=0'
 
     }
 
   ];
+
+  trustedYoutubeUrl(url: string): SafeResourceUrl {
+    if (!url.startsWith('https://www.youtube.com/embed/')) {
+      throw new Error('Only YouTube embed URLs are supported.');
+    }
+
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
 
   @ViewChild('prophetVideoPlayer')
   prophetVideoPlayer!: ElementRef<HTMLVideoElement>;

@@ -21,6 +21,7 @@ import { Settings } from './pages/settings/settings';
 import { Welcome } from './pages/welcome/welcome';
 import { CashfreeGateway } from './pages/cashfree-gateway/cashfree-gateway';
 import { CashfreeSuccess } from './pages/cashfree-success/cashfree-success';
+import { BookOfMormonStudyGroups } from './pages/book-of-mormon-study-groups/book-of-mormon-study-groups';
 
 export const routes: Routes = [
 
@@ -143,6 +144,11 @@ export const routes: Routes = [
   {
     path: 'settings',
     component: Settings
+  },
+
+  {
+    path: 'book-of-mormon-study-groups',
+    component: BookOfMormonStudyGroups
   },
 
   {

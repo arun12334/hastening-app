@@ -45,6 +45,19 @@ interface StoredUserProfile {
   locationGroups?: { primary: string; secondary: string | null };
 }
 
+type SupportTicketStatus = 'process' | 'solved' | 'completed' | 'rejected';
+
+interface SupportTicket {
+  id: string;
+  subject: string;
+  description: string;
+  status: SupportTicketStatus;
+  createdAt: string;
+  updatedAt: string;
+  imageName?: string;
+  imageData?: string;
+}
+
   
 
 @Component({
@@ -91,6 +104,9 @@ export class Settings implements OnInit, OnDestroy {
     country: '',
     zipCode: ''
   };
+
+  profilePhoneCountryCode = '';
+  profilePhoneNumber = '';
 
   registrationOptions: NonNullable<StoredUserProfile['registrationOptions']> = [];
   children: NonNullable<StoredUserProfile['children']> = [];
@@ -177,6 +193,102 @@ export class Settings implements OnInit, OnDestroy {
   passwordUpdating = false;
 
   passwordResult: { success: boolean; message: string } | null = null;
+
+  supportTickets: SupportTicket[] = this.loadSupportTickets();
+
+  ticketModalOpen = false;
+
+  selectedTicket: SupportTicket | null = null;
+
+  newTicket = {
+    subject: '',
+    description: '',
+    imageName: '',
+    imageData: ''
+  };
+
+  private loadSupportTickets(): SupportTicket[] {
+    const stored = localStorage.getItem('support_tickets');
+    if (!stored) {
+      return [
+        {
+          id: 'SUP-1001',
+          subject: 'Unable to update profile',
+          description: 'The profile information did not save after editing.',
+          status: 'completed',
+          createdAt: new Date(Date.now() - 86400000 * 4).toISOString(),
+          updatedAt: new Date(Date.now() - 86400000 * 2).toISOString()
+        },
+        {
+          id: 'SUP-1002',
+          subject: 'Payment history question',
+          description: 'Please help me understand a payment status in my account.',
+          status: 'process',
+          createdAt: new Date(Date.now() - 86400000).toISOString(),
+          updatedAt: new Date().toISOString()
+        }
+      ];
+    }
+
+    try {
+      const parsed: unknown = JSON.parse(stored);
+      return Array.isArray(parsed) ? parsed as SupportTicket[] : [];
+    } catch {
+      return [];
+    }
+  }
+
+  openTicketModal(): void {
+    if (!this.featureAccess.requireMember()) return;
+    this.ticketModalOpen = true;
+  }
+
+  closeTicketModal(): void {
+    this.ticketModalOpen = false;
+  }
+
+  viewTicketDetails(ticket: SupportTicket): void {
+    this.selectedTicket = ticket;
+  }
+
+  closeTicketDetails(): void {
+    this.selectedTicket = null;
+  }
+
+  selectTicketImage(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    const file = input.files?.[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = () => {
+      this.newTicket.imageName = file.name;
+      this.newTicket.imageData = typeof reader.result === 'string' ? reader.result : '';
+      this.cdr.detectChanges();
+    };
+    reader.readAsDataURL(file);
+  }
+
+  createSupportTicket(): void {
+    if (!this.newTicket.subject.trim() || !this.newTicket.description.trim()) return;
+
+    const now = new Date().toISOString();
+    const ticket: SupportTicket = {
+      id: `SUP-${Date.now().toString().slice(-6)}`,
+      subject: this.newTicket.subject.trim(),
+      description: this.newTicket.description.trim(),
+      status: 'process',
+      createdAt: now,
+      updatedAt: now,
+      imageName: this.newTicket.imageName || undefined,
+      imageData: this.newTicket.imageData || undefined
+    };
+
+    this.supportTickets = [ticket, ...this.supportTickets];
+    localStorage.setItem('support_tickets', JSON.stringify(this.supportTickets));
+    this.newTicket = { subject: '', description: '', imageName: '', imageData: '' };
+    this.ticketModalOpen = false;
+  }
 
   // ==========================================
   // CONSTRUCTOR
@@ -378,6 +490,7 @@ export class Settings implements OnInit, OnDestroy {
       country: personalInformation?.country || '',
       zipCode: personalInformation?.zipCode || ''
     };
+    this.splitProfilePhone(this.profile.phone);
 
     this.registrationOptions = user.registrationOptions || [];
     this.children = user.children || [];
@@ -619,6 +732,7 @@ export class Settings implements OnInit, OnDestroy {
     country: personalInformation?.country || '',
     zipCode: personalInformation?.zipCode || ''
   };
+  this.splitProfilePhone(this.profile.phone);
   this.registrationOptions = storedUser.registrationOptions || [];
   this.children = storedUser.children || [];
 
@@ -785,6 +899,7 @@ export class Settings implements OnInit, OnDestroy {
   saveProfile(): void {
     if (!this.featureAccess.requireMember()) return;
 
+    this.profile.phone = `${this.profilePhoneCountryCode.trim()} ${this.profilePhoneNumber.trim()}`.trim();
     console.log(
       'Profile updated:',
       this.profile
@@ -793,6 +908,13 @@ export class Settings implements OnInit, OnDestroy {
     this.profileEditing = false;
     this.showProfileToast('Profile updated successfully.');
 
+  }
+
+  private splitProfilePhone(phone: string): void {
+    const normalizedPhone = phone.trim();
+    const countryCodeMatch = normalizedPhone.match(/^(\+\d{1,4})\s+(.+)$/);
+    this.profilePhoneCountryCode = countryCodeMatch?.[1] || '';
+    this.profilePhoneNumber = countryCodeMatch?.[2] || normalizedPhone;
   }
 
   private showProfileToast(message: string): void {
@@ -1095,7 +1217,7 @@ export class Settings implements OnInit, OnDestroy {
         return 'Payment Details';
 
       case 'appearance':
-        return 'Appearance';
+        return 'Customer Support';
 
       case 'privacy':
         return 'Privacy & Security';
@@ -1128,7 +1250,7 @@ export class Settings implements OnInit, OnDestroy {
         return 'View your payment and transaction information';
 
       case 'appearance':
-        return 'Customize your application appearance';
+        return 'Get help and track your support tickets';
 
       case 'privacy':
         return 'Manage your privacy and security';

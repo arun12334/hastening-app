@@ -115,6 +115,8 @@ export class RegisterNow implements OnDestroy {
 
     mobileNumber: '',
 
+    jacksonCountyResident: false,
+
     emailAddress: '',
 
     password: '',
@@ -122,6 +124,9 @@ export class RegisterNow implements OnDestroy {
     confirmPassword: ''
 
   };
+
+  mobileCountryCode = '';
+  jacksonCountyNoticeVisible = false;
 
   /*==========================================================
   COUNTRIES
@@ -382,6 +387,18 @@ export class RegisterNow implements OnDestroy {
     }, 3000);
   }
 
+  jacksonCountySelectionChanged(event: Event): void {
+    event.stopPropagation();
+    if (!this.jacksonCountyNoticeVisible) {
+      this.jacksonCountyNoticeVisible = true;
+    }
+  }
+
+  closeJacksonCountyNotice(): void {
+    this.jacksonCountyNoticeVisible = false;
+    this.personalInformationX977563Y966776.jacksonCountyResident = false;
+  }
+
   /*==========================================================
   TERMS SELECT
   ==========================================================*/
@@ -430,6 +447,16 @@ export class RegisterNow implements OnDestroy {
       return;
     }
 
+    if (!this.mobileCountryCode.trim()) {
+      this.validationMessage = 'Please enter your country code.';
+      return;
+    }
+
+    if (this.personalInformationX977563Y966776.jacksonCountyResident) {
+      this.jacksonCountyNoticeVisible = true;
+      return;
+    }
+
     if (selectedOptions.length !== 2) {
       this.validationMessage = 'Please select exactly two registration options.';
       console.warn('[Register Now] Validation failed: invalid registration option count.', selectedOptions.length);
@@ -449,7 +476,10 @@ export class RegisterNow implements OnDestroy {
     }
 
     const registrationPayload: DetailedRegisterRequest = {
-      personalInformation: { ...this.personalInformationX977563Y966776 },
+      personalInformation: {
+        ...this.personalInformationX977563Y966776,
+        mobileNumber: `${this.mobileCountryCode.trim()} ${this.personalInformationX977563Y966776.mobileNumber.trim()}`.trim()
+      },
       registrationOptions: selectedOptions.map((option) => ({
         id: option.id,
         title: option.title,

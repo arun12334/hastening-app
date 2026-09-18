@@ -25,9 +25,9 @@ export class Footer {
   };
 
   contactDetailsX88441Y55119 = [
-    { label: 'Address', value: '123 Faith Avenue, Hastening City, UT 84001, USA', href: 'https://maps.google.com/?q=123+Faith+Avenue+Hastening+City+UT+84001', icon: 'bi bi-geo-alt-fill' },
-    { label: 'Phone', value: '+1 (800) 555-0123', href: 'tel:+18005550123', icon: 'bi bi-telephone-fill' },
-    { label: 'Email', value: 'support@hastening.org', href: 'mailto:support@hastening.org', icon: 'bi bi-envelope-fill' },
+    // { label: 'Address', value: '123 Faith Avenue, Hastening City, UT 84001, USA', href: 'https://maps.google.com/?q=123+Faith+Avenue+Hastening+City+UT+84001', icon: 'bi bi-geo-alt-fill' },
+    // { label: 'Phone', value: '+01 816-651-0386', href: 'tel:+18166510386', icon: 'bi bi-telephone-fill' },
+    { label: 'Email', value: 'info@hastening.org', href: 'mailto:info@hastening.org', icon: 'bi bi-envelope-fill' },
     { label: 'Website', value: 'www.hastening.org', href: 'https://hastening.org', icon: 'bi bi-globe2' }
   ];
 

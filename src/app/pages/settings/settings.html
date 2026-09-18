@@ -343,7 +343,7 @@
 
 
 
-        <!-- APPEARANCE -->
+        <!-- CUSTOMER SUPPORT -->
 
         <button
           type="button"
@@ -355,14 +355,14 @@
           <span
             class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__nav-icon"
           >
-            <i class="bi bi-moon-stars-fill"></i>
+            <i class="bi bi-headset"></i>
           </span>
 
           <span
             class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__nav-content"
           >
-            <strong>Appearance</strong>
-            <small>Light and dark mode</small>
+            <strong>Customer Support</strong>
+            <small>Get help and track your tickets</small>
           </span>
 
           <i
@@ -577,15 +577,25 @@
   <div class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__field">
     <label>Phone Number</label>
 
-    <div class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__input">
+    <div class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__input profile-phone-input">
       <span class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__icon">
         <i class="bi bi-telephone"></i>
       </span>
 
       <input
+        type="text"
+        name="phoneCountryCode"
+        class="profile-phone-country-code"
+        [(ngModel)]="profilePhoneCountryCode"
+        [readonly]="!profileEditing"
+        placeholder="+1"
+        aria-label="Phone country code"
+      />
+      <span class="profile-phone-separator" aria-hidden="true"></span>
+      <input
         type="tel"
         name="phone"
-        [(ngModel)]="profile.phone"
+        [(ngModel)]="profilePhoneNumber"
         [readonly]="!profileEditing"
         placeholder="Enter phone number"
       />
@@ -664,7 +674,13 @@
 
           @if (children.length > 0) {
             <div class="settings-profile-details">
-              <h4><i class="bi bi-people"></i> Children</h4>
+              <h4><i class="bi bi-people"></i> Children Information<span class="required-marker">*</span></h4>
+              <p class="children-eligibility-note">
+                <span class="required-marker">*</span>
+                Eligible children must be 11-18 years old and addiction free for at least three months.
+                Those with addictions may join addiction recovery classes
+                (<a href="https://addictionrecovery.churchofjesuschrist.org/" target="_blank" rel="noopener noreferrer">click here</a>).
+              </p>
               <div class="settings-children-grid">
                 @for (child of children; track child.name + child.age) {
                   <div class="settings-child-card">
@@ -1098,7 +1114,7 @@
 
 
         <!-- ====================================
-             APPEARANCE
+             CUSTOMER SUPPORT
         ===================================== -->
 
         <section
@@ -1106,86 +1122,81 @@
           class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__panel"
         >
 
-          <div
-            class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__theme-preview"
-          >
-
-            <div
-              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__theme-preview-icon"
-            >
-
-              <i
-                class="bi"
-                [class.bi-sun-fill]="!darkModeEnabled"
-                [class.bi-moon-stars-fill]="darkModeEnabled"
-              ></i>
-
-            </div>
-
+          <div class="support-header">
             <div>
-
-              <h3>
-                {{ darkModeEnabled ? 'Dark Mode' : 'Light Mode' }}
-              </h3>
-
-              <p>
-                {{ darkModeEnabled
-                  ? 'Dark appearance is currently enabled.'
-                  : 'Light appearance is currently enabled.'
-                }}
-              </p>
-
+              <h3>Need help?</h3>
+              <p>Raise a support ticket and track updates from our team.</p>
             </div>
-
+            <button type="button" class="support-primary-btn" (click)="openTicketModal()">
+              <i class="bi bi-plus-lg"></i>
+              Raise Ticket
+            </button>
           </div>
 
-
-
-          <div
-            class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__option"
-          >
-
-            <div
-              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__option-icon"
-            >
-
-              <i
-                class="bi"
-                [class.bi-moon-stars-fill]="!darkModeEnabled"
-                [class.bi-sun-fill]="darkModeEnabled"
-              ></i>
-
-            </div>
-
-            <div
-              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__option-content"
-            >
-
-              <h3>
-                Dark Mode
-              </h3>
-
-              <p>
-                Switch between light and dark appearance.
-              </p>
-
-            </div>
-
-
-            <button
-              type="button"
-              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__toggle"
-              [class.active]="darkModeEnabled"
-              (click)="toggleDarkMode()"
-            >
-
-              <span></span>
-
-            </button>
-
+          <div class="support-ticket-list">
+            @for (ticket of supportTickets; track ticket.id) {
+              <button type="button" class="support-ticket-row" (click)="viewTicketDetails(ticket)">
+                <span class="support-ticket-icon"><i class="bi bi-ticket-detailed"></i></span>
+                <span class="support-ticket-content">
+                  <strong>{{ ticket.subject }}</strong>
+                  <small>#{{ ticket.id }} · {{ ticket.createdAt | date:'mediumDate' }}</small>
+                </span>
+                <span class="support-ticket-status" [class]="ticket.status">{{ ticket.status }}</span>
+                <i class="bi bi-chevron-right"></i>
+              </button>
+            } @empty {
+              <p class="support-empty">No support tickets yet.</p>
+            }
           </div>
 
         </section>
+
+        @if (ticketModalOpen) {
+          <div class="support-modal-backdrop" (click)="closeTicketModal()">
+            <section class="support-modal" role="dialog" aria-modal="true" aria-labelledby="ticket-modal-title" (click)="$event.stopPropagation()">
+              <button type="button" class="support-modal-close" (click)="closeTicketModal()" aria-label="Close">×</button>
+              <h2 id="ticket-modal-title">Raise a Support Ticket</h2>
+              <p>Tell us how we can help and include an image if it helps explain the issue.</p>
+              <form (ngSubmit)="createSupportTicket()">
+                <input name="ticketSubject" [(ngModel)]="newTicket.subject" placeholder="Subject" required>
+                <textarea name="ticketDescription" [(ngModel)]="newTicket.description" rows="5" placeholder="Describe your issue" required></textarea>
+                <label class="support-file-label">
+                  <i class="bi bi-image"></i>
+                  Add screenshot or image
+                  <input type="file" accept="image/*" (change)="selectTicketImage($event)">
+                </label>
+                @if (newTicket.imageName) {
+                  <small class="support-file-name">{{ newTicket.imageName }}</small>
+                }
+                <button type="submit" class="support-primary-btn">Submit Ticket</button>
+              </form>
+            </section>
+          </div>
+        }
+
+        @if (selectedTicket) {
+          <div class="support-modal-backdrop" (click)="closeTicketDetails()">
+            <section class="support-modal" role="dialog" aria-modal="true" aria-labelledby="ticket-details-title" (click)="$event.stopPropagation()">
+              <button type="button" class="support-modal-close" (click)="closeTicketDetails()" aria-label="Close">×</button>
+              <div class="support-detail-heading">
+                <div>
+                  <span class="support-ticket-id">Ticket #{{ selectedTicket.id }}</span>
+                  <h2 id="ticket-details-title">{{ selectedTicket.subject }}</h2>
+                </div>
+                <span class="support-ticket-status" [class]="selectedTicket.status">{{ selectedTicket.status }}</span>
+              </div>
+              <p class="support-detail-description">{{ selectedTicket.description }}</p>
+              <div class="support-detail-list">
+                <div><span>Created</span><strong>{{ selectedTicket.createdAt | date:'medium' }}</strong></div>
+                <div><span>Last updated</span><strong>{{ selectedTicket.updatedAt | date:'medium' }}</strong></div>
+                <div><span>Attachment</span><strong>{{ selectedTicket.imageName || 'No image attached' }}</strong></div>
+              </div>
+              @if (selectedTicket.imageData) {
+                <img class="support-ticket-image" [src]="selectedTicket.imageData" alt="Ticket attachment">
+              }
+            </section>
+          </div>
+        }
 
 
 

@@ -1,31 +1,51 @@
 <app-header></app-header>
 <main class="simple-page">
   <button type="button" class="back-button" (click)="goBack()"><i class="bi bi-arrow-left"></i> Sisters in Zion</button>
-  <h1>Book of Mormon Study Groups</h1>
-  <p>Join a group with 20 or fewer sisters, or begin a new group.</p>
+  <header class="page-heading">
+    <div>
+      <h1>Book of Mormon Study Groups</h1>
+      <p>Join an existing study group or begin a new group with sisters.</p>
+    </div>
+    <button type="button" class="create-button" (click)="openCreateGroupModal()">
+      <i class="bi bi-plus-lg"></i>
+      Create Group
+    </button>
+  </header>
   <section class="groups">
     @for (group of groups; track group.id) {
       <article class="group-card">
-        <h2>{{group.name}}</h2><p>Leader: {{group.leader}} · {{group.enrolled}}/20 sisters · {{group.format}}</p>
-        <button type="button" [disabled]="group.enrolled >= 20" (click)="selectGroup(group)">Join this group</button>
+        <div class="group-card-heading">
+          <div>
+            <h2>{{group.name}}</h2>
+            <p>Led by {{group.leader}} · {{group.enrolled}}/20 sisters · {{group.format}}</p>
+          </div>
+          <span class="group-status" [class.pending]="group.requestStatus === 'pending'" [class.accepted]="group.requestStatus === 'accepted'" [class.full]="group.requestStatus === 'full'">
+            {{ group.requestStatus === 'pending' ? 'Request Pending' : group.requestStatus === 'accepted' ? 'Joined' : group.requestStatus === 'full' ? 'Group Full' : 'Open' }}
+          </span>
+        </div>
+        <p class="group-description">{{group.description || 'Study the Book of Mormon together and strengthen faith through discussion and friendship.'}}</p>
+        <button type="button" [disabled]="group.enrolled >= 20 || group.requestStatus !== 'available'" (click)="requestToJoin(group)">
+          {{ group.requestStatus === 'pending' ? 'Request Sent' : group.requestStatus === 'accepted' ? 'Joined' : group.enrolled >= 20 ? 'Group Full' : 'Request to Join' }}
+        </button>
       </article>
     }
   </section>
-  @if (selectedGroup) {
-    <section class="contact-panel">
-      @if (!joined) { <button type="button" (click)="joinGroup()">Confirm Join</button> }
-      @else { <p role="status">Contact {{selectedGroup.leader}} at {{selectedGroup.email}} or {{selectedGroup.phone}} for details.</p> }
-    </section>
-  }
-  <section class="new-group">
-    <h2>Begin a New Study Group</h2>
-    <form (ngSubmit)="createGroup()">
-      <input name="groupName" placeholder="Group name" [(ngModel)]="newGroup.name" required>
-      <input name="leader" placeholder="Leader name" [(ngModel)]="newGroup.leader" required>
-      <input name="email" type="email" placeholder="Leader email" [(ngModel)]="newGroup.email" required>
-      <input name="phone" placeholder="Leader phone" [(ngModel)]="newGroup.phone" required>
-      <textarea name="description" rows="5" placeholder="Describe your belief and experience with the Book of Mormon (100 words maximum)" [(ngModel)]="newGroup.description" required></textarea>
-      <button type="submit">Begin Study Group</button>
-    </form>
-  </section>
 </main>
+
+@if (newGroupModalOpen) {
+  <div class="modal-backdrop" (click)="closeCreateGroupModal()">
+    <section class="create-modal" role="dialog" aria-modal="true" aria-labelledby="create-group-title" (click)="$event.stopPropagation()">
+      <button type="button" class="modal-close" aria-label="Close create group dialog" (click)="closeCreateGroupModal()">×</button>
+      <h2 id="create-group-title">Begin a New Study Group</h2>
+      <p>Share the details so sisters can request to join your group.</p>
+      <form (ngSubmit)="createGroup()">
+        <input name="groupName" placeholder="Group name" [(ngModel)]="newGroup.name" required>
+        <input name="leader" placeholder="Leader name" [(ngModel)]="newGroup.leader" required>
+        <input name="email" type="email" placeholder="Leader email" [(ngModel)]="newGroup.email" required>
+        <input name="phone" placeholder="Leader phone" [(ngModel)]="newGroup.phone" required>
+        <textarea name="description" rows="4" placeholder="Describe your group (100 words maximum)" [(ngModel)]="newGroup.description" required></textarea>
+        <button type="submit">Create Group</button>
+      </form>
+    </section>
+  </div>
+}

@@ -29,6 +29,7 @@ export class Header {
       '/join-a-justserve-activity',
       '/sisters-in-zion',
       '/joining-emmas-relief-society',
+      '/book-of-mormon-study-groups',
 
 
     ].some(route => url.startsWith(route));

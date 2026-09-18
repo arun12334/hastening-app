@@ -341,11 +341,19 @@ LEFT CARD
                                 [class.registration-invalid]="isPersonalFieldInvalid('zipCode')"
 
                                 [(ngModel)]="personalInformationX977563Y966776.zipCode">
+                        </div>
 
+                        <div class="col-12 mb-4 registration-county-check">
+                            <label class="registration-checkbox-label d-flex">
+                                <input
+                                    type="checkbox"
+                                    [(ngModel)]="personalInformationX977563Y966776.jacksonCountyResident"
+                                    (change)="jacksonCountySelectionChanged($event)">
+                                <span>I live in Jackson County, Missouri, USA</span>
+                            </label>
                         </div>
 
                         <!-- MOBILE -->
-
                         <div class="col-12 mb-4">
 
                             <label>
@@ -354,16 +362,20 @@ LEFT CARD
 
                             </label>
 
-                            <input
-
-                                type="text"
-
-                                class="form-control"
-
-                                [class.registration-invalid]="isPersonalFieldInvalid('mobileNumber')"
-
-                                [(ngModel)]="personalInformationX977563Y966776.mobileNumber">
-
+                            <div class="registration-phone-group">
+                                <input
+                                    type="text"
+                                    class="form-control registration-country-code"
+                                    aria-label="Country code"
+                                    placeholder="+1"
+                                    [(ngModel)]="mobileCountryCode">
+                                <input
+                                    type="tel"
+                                    class="form-control"
+                                    [class.registration-invalid]="isPersonalFieldInvalid('mobileNumber')"
+                                    placeholder="Mobile phone number"
+                                    [(ngModel)]="personalInformationX977563Y966776.mobileNumber">
+                            </div>
                         </div>
 
                         <!-- EMAIL -->
@@ -750,7 +762,7 @@ LEFT CARD
 
                                             [(ngModel)]="option.deliveryMethod">
 
-                                        Physical Copy by Mail
+                                        Deliver physical copy
 
                                     </label>
 
@@ -791,10 +803,14 @@ LEFT CARD
                     <div class="Registration-Children-Section-X977563-Y966776">
 
                         <h5>
-
-                            Children Information
-
+                            Children Information<span class="registration-required-marker">*</span>
                         </h5>
+                        <p class="registration-children-note">
+                            <span class="registration-required-marker">*</span>
+                            Eligible children must be 11-18 years old and addiction free for at least three months.
+                            Those with addictions may join addiction recovery classes
+                            (<a href="https://addictionrecovery.churchofjesuschrist.org/" target="_blank" rel="noopener noreferrer">click here</a>).
+                        </p>
 
                         <button
 
@@ -1033,6 +1049,26 @@ LEFT CARD
                 (click)="closeRegistrationResultX977563Y966776()">
                 {{registrationResultType === 'success' ? 'Continue' : 'Close'}}
             </button>
+        </section>
+    </div>
+}
+
+@if (jacksonCountyNoticeVisible) {
+    <div class="Registration-Result-Backdrop-X977563-Y966776"
+        role="presentation"
+        (click)="closeJacksonCountyNotice()">
+        <section class="Registration-Result-Modal-X977563-Y966776 registration-county-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="jackson-county-notice-title"
+            (click)="$event.stopPropagation()">
+            <button type="button"
+                class="Registration-Result-Close-X977563-Y966776"
+                aria-label="Close"
+                (click)="closeJacksonCountyNotice()">×</button>
+            <i class="bi bi-info-circle-fill Registration-Result-Error-Icon-X977563-Y966776"></i>
+            <h2 id="jackson-county-notice-title">Registration Notice</h2>
+            <p>Registration for residents of Jackson County is not possible with Hastening website / app. Please register instead <a href="https://newjerusalem.app" target="_blank" rel="noopener">here for New Jerusalem App</a>.</p>
         </section>
     </div>
 }

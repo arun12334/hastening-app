@@ -355,6 +355,53 @@ INPUT FOCUS
     border: 1px solid #f1aeb5;
 }
 
+.registration-county-check {
+    margin-top: -8px;
+    padding: 0 12px;
+}
+
+.registration-checkbox-label {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    max-width: 100%;
+    gap: 10px;
+    margin: 0;
+    padding: 4px 0;
+    color: #52627b;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.registration-checkbox-label input {
+    flex: 0 0 18px;
+    width: 17px;
+    height: 17px;
+    margin: 0;
+    accent-color: #133f8d;
+}
+
+.registration-checkbox-label span {
+    display: block;
+    min-width: 0;
+}
+
+.registration-phone-group {
+    display: flex;
+    gap: 8px;
+}
+
+.registration-country-code {
+    max-width: 92px;
+}
+
+.registration-county-modal a {
+    color: #133f8d;
+    font-weight: 700;
+}
+
 .Registration-Success-Alert-X977563-Y966776 {
     color: #0f5132;
     background: #d1e7dd;
@@ -869,6 +916,24 @@ CHILDREN TITLE
 
     font-family:"Libre Baskerville",serif;
 
+}
+
+.registration-required-marker {
+    color: #dc3545;
+    font-weight: 700;
+}
+
+.registration-children-note {
+    margin: -8px 0 18px;
+    color: #52627b;
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.registration-children-note a {
+    color: #173f8d;
+    font-weight: 700;
+    text-decoration: underline;
 }
 
 /*==========================================================

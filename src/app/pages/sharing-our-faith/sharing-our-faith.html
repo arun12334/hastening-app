@@ -223,39 +223,15 @@ X774551-Y886331
                     </div>
 
                     <div class="Prophet-Video-Player-X774551-Y886331">
-                        <video
-                            #prophetVideoPlayer
-                            [src]="prophetMessagesX774551Y886331[currentSlideX774551Y886331].video"
-                            [poster]="prophetMessagesX774551Y886331[currentSlideX774551Y886331].image"
-                            (timeupdate)="updateProphetVideoProgress()"
-                            (loadedmetadata)="loadProphetVideoMetadata()"
-                            (play)="prophetVideoPlaying = true"
-                            (pause)="prophetVideoPlaying = false"
-                            (volumechange)="syncProphetMuteState()"
-                            (ended)="onProphetVideoEnded()">
-                        </video>
+                        <iframe
+                            [src]="trustedYoutubeUrl(prophetMessagesX774551Y886331[currentSlideX774551Y886331].video)"
+                            [title]="prophetMessagesX774551Y886331[currentSlideX774551Y886331].title"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
                         <div class="Prophet-Video-Details-X774551-Y886331">
                             <h4>{{prophetMessagesX774551Y886331[currentSlideX774551Y886331].title}}</h4>
                             <p>{{prophetMessagesX774551Y886331[currentSlideX774551Y886331].description}}</p>
-                            <div class="Prophet-Video-Controls-X774551-Y886331">
-                                <button type="button" (click)="previousProphetVideo()" aria-label="Previous video">
-                                    <i class="bi bi-skip-backward-fill"></i>
-                                </button>
-                                <button type="button" class="Prophet-Video-Play-X774551Y886331" (click)="toggleProphetVideo()" aria-label="Play or pause video">
-                                    <i class="bi" [class.bi-play-fill]="!prophetVideoPlaying" [class.bi-pause-fill]="prophetVideoPlaying"></i>
-                                </button>
-                                <button type="button" (click)="nextProphetVideo()" aria-label="Next video">
-                                    <i class="bi bi-skip-forward-fill"></i>
-                                </button>
-                                <button type="button" (click)="toggleProphetMute()" aria-label="Mute or unmute video">
-                                    <i class="bi" [class.bi-volume-up-fill]="!prophetVideoMuted" [class.bi-volume-mute-fill]="prophetVideoMuted"></i>
-                                </button>
-                            </div>
-                            <div class="Prophet-Video-Progress-X774551-Y886331" (click)="seekProphetVideo($event)">
-                                <span>{{prophetVideoCurrentTime}}</span>
-                                <div><span [style.width.%]="prophetVideoProgress"></span></div>
-                                <span>{{prophetVideoTotalTime}}</span>
-                            </div>
                         </div>
                     </div>
 

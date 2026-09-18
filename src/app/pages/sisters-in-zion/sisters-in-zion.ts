@@ -78,7 +78,7 @@ reliefSocietyMainCardX91 = {
   "Text Requests Only",
 
   phone:
-  "(+01) 248-445-2179",
+  "+01 816-651-0386",
 
   steps: [
 
@@ -109,26 +109,6 @@ reliefSocietyCardsX91 = [
 
     id:1,
 
-    icon:"bi bi-heart-fill",
-
-    iconColor:"#6A44B8",
-
-    title:"Indicate a Need Request",
-
-    description:
-    "Let the sisters know how they can support and uplift you right now.",
-
-    badge:"",
-
-    arrow:"bi bi-chevron-right",
-    route:"/relief-society-need"
-
-  },
-
-  {
-
-    id:2,
-
     icon:"bi bi-envelope-paper-heart-fill",
 
     iconColor:"#6A44B8",
@@ -147,7 +127,7 @@ reliefSocietyCardsX91 = [
 
   {
 
-    id:3,
+    id:2,
 
     icon:"bi bi-calendar-heart-fill",
 
@@ -165,7 +145,7 @@ reliefSocietyCardsX91 = [
 
   {
 
-    id:4,
+    id:3,
 
     icon:"bi bi-book-fill",
 
