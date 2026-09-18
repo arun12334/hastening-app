@@ -1,0 +1,89 @@
+<main class="payment-page">
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+
+  <section class="payment-shell" aria-labelledby="payment-title">
+    <header class="payment-header">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">HS</span>
+        <span class="brand-name">Hastening</span>
+      </div>
+      <div class="secure-label">
+        <span class="lock-icon" aria-hidden="true">✓</span>
+        Secure checkout
+      </div>
+    </header>
+
+    <div class="payment-layout">
+      <div class="payment-intro">
+        <div class="step-indicator" aria-label="Payment step 1 of 1">
+          <span class="step-dot">1</span>
+          <span>Payment</span>
+        </div>
+        <p class="eyebrow">Complete your purchase</p>
+        <h1 id="payment-title">Pay with confidence.</h1>
+        <p class="description">
+          Your payment is encrypted and processed securely. You will be redirected
+          to Cashfree to complete the transaction.
+        </p>
+
+        @if (errorMessage()) {
+          <p class="error-message" role="alert">
+            <span aria-hidden="true">!</span>
+            {{ errorMessage() }}
+          </p>
+        }
+
+        @if (paymentStatus() === 'SUCCESS') {
+          <p class="success-message" role="status">
+            Payment successful for order {{ orderId() }}.
+          </p>
+        }
+      </div>
+
+      <aside class="order-panel" aria-label="Order summary">
+        <div class="panel-label">Order summary</div>
+        <div class="product-row">
+          <div class="product-icon" aria-hidden="true">
+            <span></span>
+            <span></span>
+          </div>
+          <div>
+            <strong>Secure payment</strong>
+            <span>One-time transaction</span>
+          </div>
+        </div>
+        <div class="summary-line">
+          <span>Subtotal</span>
+          <strong>₹{{ amount | number }}</strong>
+        </div>
+        <div class="summary-line muted">
+          <span>Processing fee</span>
+          <span>Included</span>
+        </div>
+        <div class="summary-divider"></div>
+        <div class="total-line">
+          <span>Total payable</span>
+          <strong>₹{{ amount | number }}</strong>
+        </div>
+
+        <button class="pay-button" type="button" [disabled]="isProcessing()" (click)="payWithCashfree()">
+          @if (isProcessing()) {
+            <span class="spinner" aria-hidden="true"></span>
+            Connecting securely...
+          } @else {
+            Continue to payment
+            <span class="button-arrow" aria-hidden="true">→</span>
+          }
+        </button>
+      </aside>
+    </div>
+
+    <footer class="payment-footer">
+      <span class="footer-lock" aria-hidden="true">✓</span>
+      <span>Protected by Cashfree Payments</span>
+      <span class="footer-dot" aria-hidden="true"></span>
+      <span>256-bit encryption</span>
+    </footer>
+  </section>
+</main>

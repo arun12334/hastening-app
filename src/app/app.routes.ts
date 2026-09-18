@@ -19,6 +19,8 @@ import { Register } from './pages/register/register';
 import { Login } from './pages/login/login';
 import { Settings } from './pages/settings/settings';
 import { Welcome } from './pages/welcome/welcome';
+import { CashfreeGateway } from './pages/cashfree-gateway/cashfree-gateway';
+import { CashfreeSuccess } from './pages/cashfree-success/cashfree-success';
 
 export const routes: Routes = [
 
@@ -141,6 +143,15 @@ export const routes: Routes = [
   {
     path: 'settings',
     component: Settings
+  },
+
+  {
+    path: 'status',
+    component: CashfreeSuccess
+  }
+,  {
+    path: 'cashfree-payment',
+    component: CashfreeGateway
   }
 
 ];

@@ -17,6 +17,39 @@
   </div>
 
   <div
+    *ngIf="passwordResult as result"
+    class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__password-result-overlay"
+    (click)="closePasswordResult()"
+  >
+    <div
+      class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__password-result-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="password-result-title"
+      (click)="$event.stopPropagation()"
+    >
+      <div
+        class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__password-result-icon"
+        [class.success]="result.success"
+        [class.failure]="!result.success"
+      >
+        <i [class]="result.success ? 'bi bi-check-lg' : 'bi bi-x-lg'"></i>
+      </div>
+      <h2 id="password-result-title">
+        {{ result.success ? 'Password Updated' : 'Update Failed' }}
+      </h2>
+      <p>{{ result.message }}</p>
+      <button
+        type="button"
+        class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__primary-btn"
+        (click)="closePasswordResult()"
+      >
+        Close
+      </button>
+    </div>
+  </div>
+
+  <div
     *ngIf="showLogoutModal"
     class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__logout-modal-overlay"
     (click)="closeLogoutModal()"
@@ -280,7 +313,7 @@
 
 
 
-        <!-- LANGUAGE -->
+        <!-- PAYMENT DETAILS -->
 
         <button
           type="button"
@@ -292,14 +325,14 @@
           <span
             class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__nav-icon"
           >
-            <i class="bi bi-translate"></i>
+            <i class="bi bi-credit-card-2-front-fill"></i>
           </span>
 
           <span
             class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__nav-content"
           >
-            <strong>Language</strong>
-            <small>Application language</small>
+            <strong>Payment Details</strong>
+            <small>View your payment information</small>
           </span>
 
           <i
@@ -780,12 +813,14 @@
             <button
               type="button"
               class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__primary-btn"
+              [disabled]="passwordUpdating"
               (click)="changePassword()"
             >
 
-              <i class="bi bi-lock"></i>
+              <i *ngIf="!passwordUpdating" class="bi bi-lock"></i>
+              <i *ngIf="passwordUpdating" class="bi bi-arrow-repeat"></i>
 
-              Update Password
+              {{ passwordUpdating ? 'Updating...' : 'Update Password' }}
 
             </button>
 
@@ -924,7 +959,7 @@
 
 
         <!-- ====================================
-             LANGUAGE
+             PAYMENT DETAILS
         ===================================== -->
 
         <section
@@ -933,82 +968,132 @@
         >
 
           <div
-            class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__language-card"
+            class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__payment-card"
           >
 
             <div
-              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__language-icon"
+            class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__payment-icon"
             >
 
-              <i class="bi bi-translate"></i>
+            <i class="bi bi-shield-check"></i>
 
             </div>
 
             <div>
 
               <h3>
-                Application Language
+                Payment Details
               </h3>
 
               <p>
-                Choose the language you prefer to use
-                throughout the application.
+                Review your payment provider and transaction details.
               </p>
 
             </div>
+
+            <button
+              type="button"
+              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__view-all-btn"
+              (click)="viewAllPayments()"
+            >
+              Add Payment
+              <i class="bi bi-arrow-right"></i>
+            </button>
 
           </div>
 
 
 
           <div
-            class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__field"
+            id="payment-history-list"
+            class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__payment-list"
           >
-
-            <label>
-              Select Language
-            </label>
-
-            <div
-              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__select"
+            <p
+              *ngIf="paymentHistoryLoading"
+              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__payment-empty"
             >
-
-              <i class="bi bi-globe2"></i>
-
-              <select
-                [(ngModel)]="selectedLanguage"
-              >
-
-                <option
-                  *ngFor="let language of languages"
-                  [value]="language"
-                >
-                  {{ language }}
-                </option>
-
-              </select>
-
-              <i class="bi bi-chevron-down"></i>
-
+              Loading payment history...
+            </p>
+            <p
+              *ngIf="paymentHistoryError"
+              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__payment-empty"
+            >
+              {{ paymentHistoryError }}
+            </p>
+            <div
+              *ngIf="!paymentHistoryLoading && !paymentHistoryError && paymentHistory.length === 0"
+              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__payment-empty"
+            >
+              No payments found.
             </div>
 
+            <div
+              *ngFor="let payment of paymentHistory"
+              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__payment-row"
+            >
+              <div class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__payment-main">
+                <strong>Order {{ payment.orderId }}</strong>
+                <span>{{ payment.provider }} · {{ payment.createdAt | date:'medium' }}</span>
+              </div>
+              <strong>₹{{ payment.amount | number }}</strong>
+              <span
+                class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__payment-badge"
+                [class.success]="payment.status === 'SUCCESS'"
+                [class.failure]="payment.status !== 'SUCCESS'"
+              >
+                {{ payment.status === 'SUCCESS' ? 'Success' : 'Failure' }}
+              </span>
+              <button
+                type="button"
+                class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__details-btn"
+                (click)="viewPaymentDetails(payment)"
+              >
+                View Details
+              </button>
+            </div>
           </div>
 
-
-
-          <button
-            type="button"
-            class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__primary-btn"
-            (click)="saveLanguage()"
-          >
-
-            <i class="bi bi-check2"></i>
-
-            Save Language
-
-          </button>
-
         </section>
+
+        <div
+          *ngIf="selectedPayment as payment"
+          class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__modal-backdrop"
+          (click)="closePaymentDetails()"
+        >
+          <section
+            class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__payment-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="payment-details-title"
+            (click)="$event.stopPropagation()"
+          >
+            <button
+              type="button"
+              class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__modal-close"
+              aria-label="Close payment details"
+              (click)="closePaymentDetails()"
+            >
+              <i class="bi bi-x-lg"></i>
+            </button>
+            <h3 id="payment-details-title">Payment Details</h3>
+            <div class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__modal-status"
+              [class.success]="payment.status === 'SUCCESS'"
+              [class.failure]="payment.status !== 'SUCCESS'">
+              {{ payment.status === 'SUCCESS' ? 'Success' : 'Failure' }}
+            </div>
+            <div class="GJHWV-6283HVW-SETTINGS-JHSWVDJWV__modal-list">
+              <div><span>Order ID</span><strong>{{ payment.orderId }}</strong></div>
+              <div><span>Payment ID</span><strong>{{ payment.paymentId || 'Unavailable' }}</strong></div>
+              <div><span>Paid amount</span><strong>{{ payment.currency || 'INR' }} {{ payment.amount | number }}</strong></div>
+              <div *ngIf="payment.orderAmount"><span>Order amount</span><strong>{{ payment.currency || 'INR' }} {{ payment.orderAmount | number }}</strong></div>
+              <div><span>Payment method</span><strong>{{ payment.paymentMethod || 'Unavailable' }}</strong></div>
+              <div><span>Gateway</span><strong>{{ payment.gateway || payment.provider }}</strong></div>
+              <div *ngIf="payment.paymentTime"><span>Payment time</span><strong>{{ payment.paymentTime | date:'medium' }}</strong></div>
+              <div><span>Date</span><strong>{{ payment.createdAt | date:'medium' }}</strong></div>
+              <div><span>Message</span><strong>{{ payment.message || 'No additional message' }}</strong></div>
+            </div>
+          </section>
+        </div>
 
 
 

@@ -1,0 +1,291 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  color: #172033;
+  background: #f4f7fb;
+}
+
+.payment-page,
+.success-page {
+  position: relative;
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  overflow: hidden;
+  padding: 2rem 1rem;
+}
+
+.payment-page {
+  background: linear-gradient(135deg, #f7fbff, #eaf1fb);
+}
+
+.ambient {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(2px);
+  opacity: 0.55;
+}
+
+.ambient-one {
+  width: 24rem;
+  height: 24rem;
+  top: -10rem;
+  right: -7rem;
+  background: #c8e5ff;
+}
+
+.ambient-two {
+  width: 18rem;
+  height: 18rem;
+  bottom: -8rem;
+  left: -6rem;
+  background: #d8d1ff;
+}
+
+.payment-shell,
+.success-card {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 58rem);
+  border: 1px solid #dce5f0;
+  border-radius: 1.25rem;
+  background: rgb(255 255 255 / 92%);
+  box-shadow: 0 1.5rem 4rem rgb(39 64 102 / 14%);
+}
+
+.payment-header,
+.success-header,
+.payment-footer,
+.success-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+}
+
+.payment-header,
+.success-header {
+  border-bottom: 1px solid #e8eef6;
+}
+
+.brand,
+.secure-label,
+.step-indicator,
+.product-row,
+.summary-line,
+.total-line,
+.success-details,
+.status-badge {
+  display: flex;
+  align-items: center;
+}
+
+.brand,
+.secure-label {
+  gap: 0.6rem;
+}
+
+.brand-mark,
+.step-dot {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.6rem;
+  color: #fff;
+  background: #1769aa;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.brand-name {
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.secure-label,
+.panel-label,
+.eyebrow {
+  color: #63738a;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.payment-layout {
+  display: grid;
+  grid-template-columns: 1fr 20rem;
+  gap: 3rem;
+  padding: 3rem 2rem;
+}
+
+.payment-intro {
+  align-self: center;
+}
+
+.step-indicator {
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+  color: #53657c;
+  font-weight: 700;
+}
+
+.step-dot {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+}
+
+h1 {
+  margin: 0 0 1rem;
+  color: #14243b;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.05;
+}
+
+.description {
+  max-width: 34rem;
+  color: #607089;
+  line-height: 1.7;
+}
+
+.order-panel {
+  padding: 1.5rem;
+  border: 1px solid #e0e8f2;
+  border-radius: 1rem;
+  background: #fbfdff;
+}
+
+.product-row {
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.product-row strong,
+.product-row span {
+  display: block;
+}
+
+.product-row span {
+  margin-top: 0.25rem;
+  color: #738198;
+  font-size: 0.8rem;
+}
+
+.product-icon {
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  background: #e5f2ff;
+}
+
+.product-icon span {
+  width: 1.1rem;
+  height: 0.15rem;
+  margin: 0;
+  background: #1769aa;
+}
+
+.summary-line,
+.total-line {
+  justify-content: space-between;
+  margin: 0.8rem 0;
+  color: #52647d;
+}
+
+.summary-line.muted {
+  color: #8a98aa;
+  font-size: 0.85rem;
+}
+
+.summary-divider {
+  border-top: 1px solid #e0e8f2;
+  margin: 1rem 0;
+}
+
+.total-line {
+  color: #172033;
+  font-size: 1.1rem;
+}
+
+.pay-button {
+  width: 100%;
+  margin-top: 1.25rem;
+  padding: 0.95rem 1rem;
+  border: 0;
+  border-radius: 0.7rem;
+  color: #fff;
+  background: #1769aa;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.pay-button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.button-arrow {
+  margin-left: 0.5rem;
+}
+
+.error-message,
+.success-message {
+  padding: 0.8rem 1rem;
+  border-radius: 0.6rem;
+  line-height: 1.5;
+}
+
+.error-message {
+  color: #9a2e38;
+  background: #fff0f1;
+}
+
+.success-message {
+  color: #176b4b;
+  background: #eaf9f1;
+}
+
+.payment-footer,
+.success-footer {
+  justify-content: center;
+  border-top: 1px solid #e8eef6;
+  color: #748399;
+  font-size: 0.8rem;
+}
+
+.footer-lock,
+.footer-dot {
+  color: #1769aa;
+}
+
+.footer-dot {
+  width: 0.25rem;
+  height: 0.25rem;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+@media (max-width: 700px) {
+  .payment-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 1.25rem;
+  }
+
+  .payment-header,
+  .success-header,
+  .payment-footer,
+  .success-footer {
+    padding: 1.25rem;
+  }
+
+  .payment-footer,
+  .success-footer {
+    flex-wrap: wrap;
+  }
+}

@@ -71,6 +71,15 @@ export interface LoginRequest {
   password: string;
 }
 
+export interface LoginUser {
+  id?: number | string;
+  user_id?: number | string;
+  name: string;
+  email: string;
+  public_key: string;
+  token: string;
+}
+
 export interface LoginResponse {
   success: boolean;
   message: string;
@@ -139,6 +148,48 @@ export interface ProfileResponse {
   };
 }
 
+export interface PaymentDetailsRequest {
+  user_id: number | string;
+  public_key: string;
+  token: string;
+  order_id?: string;
+  payment_status?: string;
+  payment_data?: unknown;
+}
+
+export interface PaymentDetailsRecord {
+  id: number;
+  order_id: string;
+  user_id: number | string;
+  public_key: string;
+  payment_status: string;
+  payment_data: Record<string, unknown>;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface PaymentDetailsResponse {
+  status: boolean;
+  message: string;
+  total_count?: number;
+  order_id?: string;
+  data?: PaymentDetailsRecord[];
+}
+
+export interface UpdatePasswordRequest {
+  userId: number | string;
+  token: string;
+  publicKey: string;
+  currentPassword: string;
+  password: string;
+  confirmPassword: string;
+}
+
+export interface UpdatePasswordResponse {
+  success: boolean;
+  message: string;
+}
+
 // ==========================================
 // AUTH SERVICE
 // ==========================================
@@ -192,6 +243,34 @@ export class Auth {
 
     return this.http.post<ProfileResponse>(
       `${this.apiUrl}/profile.php`,
+      data
+    );
+  }
+
+  getPaymentDetails(
+    data: PaymentDetailsRequest
+  ): Observable<PaymentDetailsResponse> {
+    return this.http.post<PaymentDetailsResponse>(
+      `${this.apiUrl}/paymentdetails.php`,
+      data
+    );
+  }
+
+  savePaymentDetails(
+    data: Required<Pick<PaymentDetailsRequest, 'user_id' | 'public_key' | 'token'>> &
+      Pick<PaymentDetailsRequest, 'order_id' | 'payment_status' | 'payment_data'>
+  ): Observable<PaymentDetailsResponse> {
+    return this.http.post<PaymentDetailsResponse>(
+      `${this.apiUrl}/paymentdetails.php`,
+      data
+    );
+  }
+
+  updatePassword(
+    data: UpdatePasswordRequest
+  ): Observable<UpdatePasswordResponse> {
+    return this.http.post<UpdatePasswordResponse>(
+      `${this.apiUrl}/update-password.php`,
       data
     );
   }

@@ -1,14 +1,17 @@
 import { Header } from '../../components/header/header';
 import { CommonModule } from '@angular/common';
 import { Component, NgZone, OnDestroy, OnInit, inject } from '@angular/core';
+import { HttpErrorResponse } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import {
   Auth,
+  PaymentDetailsRecord,
   ProfileResponse
 } from '../../services/auth';
 
 import { Router } from '@angular/router';
 import { FeatureAccess } from '../../services/feature-access';
+import { PaymentHistoryEntry } from '../../services/cashfree.service';
 
 import {
   ChangeDetectorRef
@@ -114,6 +117,29 @@ export class Settings implements OnInit, OnDestroy {
     'Malayalam'
   ];
 
+  paymentHistory: PaymentHistoryEntry[] = this.loadPaymentHistory();
+
+  selectedPayment: PaymentHistoryEntry | null = null;
+
+  paymentHistoryLoading = false;
+
+  paymentHistoryError = '';
+
+  private loadPaymentHistory(): PaymentHistoryEntry[] {
+    const storedHistory = localStorage.getItem('payment_history');
+
+    if (!storedHistory) {
+      return [];
+    }
+
+    try {
+      const parsed: unknown = JSON.parse(storedHistory);
+      return Array.isArray(parsed) ? parsed as PaymentHistoryEntry[] : [];
+    } catch {
+      return [];
+    }
+  }
+
   // ==========================================
   // PROFILE API STATE
   // ==========================================
@@ -148,6 +174,10 @@ export class Settings implements OnInit, OnDestroy {
 
   profileData: StoredUserProfile | null = null;
 
+  passwordUpdating = false;
+
+  passwordResult: { success: boolean; message: string } | null = null;
+
   // ==========================================
   // CONSTRUCTOR
   // ==========================================
@@ -170,7 +200,102 @@ export class Settings implements OnInit, OnDestroy {
     );
 
     this.checkGuestMode();
+    this.loadPaymentHistoryFromApi();
 
+  }
+
+  private loadPaymentHistoryFromApi(): void {
+    const storedProfile = localStorage.getItem('user_profile_info');
+    if (!storedProfile) {
+      return;
+    }
+
+    try {
+      const parsed: unknown = JSON.parse(storedProfile);
+      const profile = typeof parsed === 'object' && parsed !== null
+        ? parsed as { users?: Array<Record<string, unknown>> }
+        : undefined;
+      const user = profile?.users?.[0];
+      const userId = user?.['user_id'] ?? user?.['id'];
+      const publicKey = user?.['public_key'] ?? user?.['publicKey'];
+      const token = user?.['token'];
+
+      if (
+        (typeof userId !== 'string' && typeof userId !== 'number') ||
+        typeof publicKey !== 'string' ||
+        typeof token !== 'string'
+      ) {
+        return;
+      }
+
+      this.paymentHistoryLoading = true;
+      this.auth.getPaymentDetails({
+        user_id: userId,
+        public_key: publicKey,
+        token
+      }).subscribe({
+        next: (response) => {
+          this.paymentHistory = (response.data ?? [])
+            .map((payment) => this.toPaymentHistoryEntry(payment));
+          this.paymentHistoryLoading = false;
+          this.cdr.detectChanges();
+        },
+        error: () => {
+          this.paymentHistoryError = 'Unable to load payment history.';
+          this.paymentHistoryLoading = false;
+          this.cdr.detectChanges();
+        }
+      });
+    } catch {
+      this.paymentHistoryError = 'Saved login data is invalid.';
+    }
+  }
+
+  private toPaymentHistoryEntry(
+    payment: PaymentDetailsRecord
+  ): PaymentHistoryEntry {
+    const paymentData = payment.payment_data;
+    const payments = Array.isArray(paymentData['payments'])
+      ? paymentData['payments']
+      : [];
+    const details = typeof payments[0] === 'object' && payments[0] !== null
+      ? payments[0] as Record<string, unknown>
+      : undefined;
+    const method = details?.['payment_method'];
+    const others = typeof method === 'object' && method !== null
+      ? (method as Record<string, unknown>)['others']
+      : undefined;
+    const otherDetails = typeof others === 'object' && others !== null
+      ? others as Record<string, unknown>
+      : undefined;
+    const paymentId = details?.['cf_payment_id'];
+    const amount = details?.['payment_amount'] ?? paymentData['amount'];
+    const orderAmount = details?.['order_amount'];
+    const currency = details?.['payment_currency'] ?? details?.['order_currency'];
+    const gatewayDetails = details?.['payment_gateway_details'];
+    const gateway = typeof gatewayDetails === 'object' && gatewayDetails !== null
+      ? (gatewayDetails as Record<string, unknown>)['gateway_name']
+      : undefined;
+    const message = details?.['payment_message'] ?? paymentData['message'];
+    const paymentTime = details?.['payment_time'] ?? details?.['payment_completion_time'];
+
+    return {
+      orderId: payment.order_id,
+      amount: typeof amount === 'number' ? amount : Number(amount) || 0,
+      status: payment.payment_status,
+      provider: typeof gateway === 'string' ? gateway : 'Cashfree Payments',
+      createdAt: payment.created_at,
+      paymentId: typeof paymentId === 'string' ? paymentId : undefined,
+      message: typeof message === 'string' ? message : null,
+      paymentData,
+      orderAmount: typeof orderAmount === 'number' ? orderAmount : undefined,
+      currency: typeof currency === 'string' ? currency : undefined,
+      paymentMethod: typeof otherDetails?.['payment_mode'] === 'string'
+        ? otherDetails['payment_mode']
+        : undefined,
+      gateway: typeof gateway === 'string' ? gateway : undefined,
+      paymentTime: typeof paymentTime === 'string' ? paymentTime : undefined
+    };
   }
 
   ngOnDestroy(): void {
@@ -728,18 +853,116 @@ export class Settings implements OnInit, OnDestroy {
       return;
     }
 
-    console.log(
-      'Password change requested'
-    );
+    const storedProfile = localStorage.getItem('user_profile_info');
+    if (!storedProfile) {
+      this.showPasswordResult(false, 'Please sign in again before changing your password.');
+      return;
+    }
 
-    this.password = {
-      currentPassword: '',
-      newPassword: '',
-      confirmPassword: ''
-    };
+    try {
+      const parsed: unknown = JSON.parse(storedProfile);
+      const profile = typeof parsed === 'object' && parsed !== null
+        ? parsed as { users?: Array<Record<string, unknown>> }
+        : undefined;
+      const user = profile?.users?.[0];
+      const userId = user?.['userId'] ?? user?.['user_id'] ?? user?.['id'];
+      const token = user?.['token'];
+      const publicKey = user?.['publicKey'] ?? user?.['public_key'];
 
-    this.showProfileToast('Password changed successfully.');
+      if (
+        (typeof userId !== 'string' && typeof userId !== 'number') ||
+        typeof token !== 'string' ||
+        typeof publicKey !== 'string'
+      ) {
+        this.showPasswordResult(false, 'Saved login data is incomplete. Please sign in again.');
+        return;
+      }
 
+      const passwordRequest = {
+        userId,
+        token,
+        publicKey,
+        currentPassword: this.password.currentPassword,
+        password: this.password.newPassword,
+        confirmPassword: this.password.confirmPassword
+      };
+
+      console.log('Update password request:', {
+        ...passwordRequest,
+        token: '[REDACTED]',
+        currentPassword: '[REDACTED]',
+        password: '[REDACTED]',
+        confirmPassword: '[REDACTED]'
+      });
+
+      this.passwordUpdating = true;
+      this.auth.updatePassword(passwordRequest).subscribe({
+        next: (response) => {
+          console.log('Update password API response body:', {
+            success: response.success,
+            message: response.message
+          });
+          this.passwordUpdating = false;
+          this.showPasswordResult(
+            response.success,
+            response.message || (
+              response.success
+                ? 'Your password was changed successfully.'
+                : 'Unable to change your password.'
+            )
+          );
+          if (response.success) {
+            this.password = {
+              currentPassword: '',
+              newPassword: '',
+              confirmPassword: ''
+            };
+          }
+          this.cdr.detectChanges();
+        },
+        error: (error: HttpErrorResponse) => {
+          const responseBody = error.error;
+          console.error('Update password error:', {
+            status: error.status,
+            statusText: error.statusText,
+            url: error.url,
+            responseBody,
+            responseHeaders: error.headers,
+            message: error.message
+          });
+          console.error(
+            'Update password API error payload:',
+            typeof responseBody === 'object' && responseBody !== null
+              ? {
+                  success: responseBody['success'],
+                  message: responseBody['message']
+                }
+              : responseBody
+          );
+          this.passwordUpdating = false;
+          this.showPasswordResult(
+            false,
+            typeof responseBody?.message === 'string'
+              ? responseBody.message
+              : error.message || 'Unable to change your password.'
+          );
+          this.cdr.detectChanges();
+        }
+      });
+    } catch {
+      this.showPasswordResult(false, 'Saved login data is invalid. Please sign in again.');
+    }
+
+  }
+
+  private showPasswordResult(success: boolean, message: string): void {
+    this.passwordResult = { success, message };
+    this.cdr.detectChanges();
+  }
+
+  closePasswordResult(): void {
+    this.passwordResult = null;
+    this.cdr.detectChanges();
   }
 
   togglePasswordVisibility(field: keyof typeof this.passwordVisibility): void {
@@ -796,6 +1019,29 @@ export class Settings implements OnInit, OnDestroy {
 
   }
 
+  viewPaymentDetails(payment: PaymentHistoryEntry): void {
+    this.selectedPayment = payment;
+    this.cdr.detectChanges();
+  }
+
+  closePaymentDetails(): void {
+    this.selectedPayment = null;
+    this.cdr.detectChanges();
+  }
+
+  // viewAllPayments(): void {
+  //   document
+  //     .getElementById('payment-history-list')
+  //     ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  // }
+
+
+  
+  viewAllPayments(): void {
+   this.router.navigate(['/cashfree-payment']);
+  }
+
+
   // ==========================================
   // LOGOUT
   // ==========================================
@@ -846,7 +1092,7 @@ export class Settings implements OnInit, OnDestroy {
         return 'Notifications';
 
       case 'language':
-        return 'Language';
+        return 'Payment Details';
 
       case 'appearance':
         return 'Appearance';
@@ -879,7 +1125,7 @@ export class Settings implements OnInit, OnDestroy {
         return 'Manage your notification preferences';
 
       case 'language':
-        return 'Choose your preferred language';
+        return 'View your payment and transaction information';
 
       case 'appearance':
         return 'Customize your application appearance';

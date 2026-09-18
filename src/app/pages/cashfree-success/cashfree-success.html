@@ -1,0 +1,54 @@
+<main class="success-page">
+  <div class="success-glow success-glow-one" aria-hidden="true"></div>
+  <div class="success-glow success-glow-two" aria-hidden="true"></div>
+
+  <section class="success-card" aria-live="polite" aria-labelledby="success-title">
+    <div class="success-header">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">CF</span>
+        <span class="brand-name">Cashfree</span>
+      </div>
+      <span class="secure-label">
+        <span class="secure-icon" aria-hidden="true">✓</span>
+        Secure payment
+      </span>
+    </div>
+
+    <div class="success-content">
+      <div class="success-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="m6 12.5 4 4L18.5 8" /></svg>
+      </div>
+      <p class="eyebrow">Payment successful</p>
+      <h1 id="success-title">You’re all set.</h1>
+      <p class="success-copy">
+        Your payment was processed successfully and your order is confirmed.
+      </p>
+      @if (paymentError) {
+        <p class="payment-save-error" role="alert">{{ paymentError }}</p>
+      }
+
+      <div class="success-details">
+        <div>
+          <span>Order ID</span>
+          <strong>{{ orderId }}</strong>
+        </div>
+        <div class="status-badge">
+          <span aria-hidden="true">✓</span>
+          Paid
+        </div>
+      </div>
+
+      <p class="redirect-note">
+        Returning to checkout in a few seconds...
+      </p>
+      <a class="back-link" routerLink="/">Return to checkout <span aria-hidden="true">→</span></a>
+    </div>
+
+    <footer class="success-footer">
+      <span class="footer-check" aria-hidden="true">✓</span>
+      Protected by Cashfree Payments
+      <span class="footer-dot" aria-hidden="true"></span>
+      256-bit encryption
+    </footer>
+  </section>
+</main>
