@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Header } from '../../components/header/header';
+import { FeatureAccess } from '../../services/feature-access';
 @Component({
   selector: 'app-authentication-and-security-management-system',
   imports: [Header],
@@ -8,6 +9,7 @@ import { Header } from '../../components/header/header';
 })
 export class AuthenticationAndSecurityManagementSystem {
 
+  private readonly featureAccess = inject(FeatureAccess);
 
 
 
@@ -125,6 +127,7 @@ BANNER ACTION
 
 authenticationBannerActionX91(){
 
+  this.featureAccess.requestAccess();
   console.log('Authentication Banner');
 
 }
@@ -135,6 +138,7 @@ CARD CLICK
 
 authenticationSecurityCardClickX91(card:any){
 
+  this.featureAccess.requestAccess();
   console.log(card);
 
 }
@@ -344,6 +348,7 @@ CARD CLICK X92
 
 authenticationSecurityFeatureCardClickX92(card:any){
 
+  this.featureAccess.requestAccess();
   console.log(card);
 
 }
@@ -354,6 +359,7 @@ BUTTON CLICK X92
 
 authenticationSecurityFeatureButtonClickX92(card:any){
 
+  this.featureAccess.requestAccess();
   console.log(card.title);
 
 }
@@ -474,6 +480,7 @@ authenticationSecurityFeatureButtonClickX92(card:any){
 
   securityToolClickX448840Y992211(item: any): void {
 
+    this.featureAccess.requestAccess();
     console.log(item);
 
   }
@@ -485,6 +492,7 @@ authenticationSecurityFeatureButtonClickX92(card:any){
 
   contactSupportClickX448840Y992211(): void {
 
+    this.featureAccess.requestAccess();
     console.log('Contact Support Clicked');
 
   }

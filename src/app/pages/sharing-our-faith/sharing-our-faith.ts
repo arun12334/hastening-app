@@ -3,6 +3,7 @@ import { Component, ElementRef, HostListener, OnInit, ViewChild, inject } from '
 import { FormsModule } from '@angular/forms';
 import { FeatureAccess } from '../../services/feature-access';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 declare var bootstrap:any;
 
 
@@ -15,6 +16,7 @@ declare var bootstrap:any;
 export class SharingOurFaith {
   private readonly featureAccess = inject(FeatureAccess);
   private readonly sanitizer = inject(DomSanitizer);
+  private readonly router = inject(Router);
 
   //==========================================================
   // HERO BACKGROUND IMAGE
@@ -763,8 +765,9 @@ changeTab(index:number){
   }
 
   viewAllDisciplesX774551Y886331(){
-    this.showAllDisciples = true;
+    if (!this.featureAccess.requireMember()) return;
 
+    this.router.navigate(['/messages-disciples-all-storys']);
   }
 
 

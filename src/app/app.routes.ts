@@ -24,6 +24,7 @@ import { CashfreeSuccess } from './pages/cashfree-success/cashfree-success';
 import { BookOfMormonStudyGroups } from './pages/book-of-mormon-study-groups/book-of-mormon-study-groups';
 import { PrivacyPolicy } from './pages/privacy-policy/privacy-policy';
 import { AccountUsersLoginActivity } from './pages/account-users-login-activity/account-users-login-activity';
+import { MessagesDisciplesAllStorys } from './pages/messages-disciples-all-storys/messages-disciples-all-storys';
 
 export const routes: Routes = [
 
@@ -86,6 +87,11 @@ export const routes: Routes = [
   {
     path: 'sharing-our-faith',
     component: SharingOurFaith
+  },
+
+  {
+    path: 'messages-disciples-all-storys',
+    component: MessagesDisciplesAllStorys
   },
 
   {

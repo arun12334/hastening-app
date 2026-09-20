@@ -19,12 +19,27 @@ export class App {
   readonly showCommonFooter = signal(this.shouldShowFooter(this.router.url));
 
   constructor() {
+    this.navigateFromDefaultPath();
+
     this.router.events
       .pipe(
         filter((event): event is NavigationEnd => event instanceof NavigationEnd),
         takeUntilDestroyed(this.destroyRef)
       )
       .subscribe(event => this.showCommonFooter.set(this.shouldShowFooter(event.urlAfterRedirects)));
+  }
+
+  private navigateFromDefaultPath(): void {
+    const currentPath = window.location.pathname.replace(/\/+$/, '') || '/';
+    if (currentPath !== '/') {
+      return;
+    }
+
+    const hasLoggedInUser = Boolean(localStorage.getItem('user_profile_info'));
+    const isGuest = localStorage.getItem('guest_mode') === 'true';
+    const destination = hasLoggedInUser || isGuest ? '/home' : '/login';
+
+    void this.router.navigateByUrl(destination);
   }
 
   private shouldShowFooter(url: string): boolean {

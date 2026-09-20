@@ -1,5 +1,6 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit, inject } from '@angular/core';
 import { Header } from '../../components/header/header';
+import { FeatureAccess } from '../../services/feature-access';
 
 @Component({
   selector: 'app-neighborhood-bb-events',
@@ -8,6 +9,7 @@ import { Header } from '../../components/header/header';
   styleUrl: './neighborhood-bb-events.scss',
 })
 export class NeighborhoodBbEvents {
+  private readonly featureAccess = inject(FeatureAccess);
 
   //==========================================================
   // HERO BACKGROUND IMAGE
@@ -140,8 +142,7 @@ bannerTabs = [
 ];
 
 changeTab(index:number){
-
-    this.activeTab=index;
+  this.activeTab=index;
 
 }
 
@@ -250,7 +251,7 @@ EVENT CLICK
 ==========================================================*/
 
 openEvent(event:any){
-
+  if (!this.featureAccess.requireMember()) return;
     console.log(event);
 
 }
@@ -260,7 +261,7 @@ RSVP
 ==========================================================*/
 
 eventRsvp(event:any){
-
+  if (!this.featureAccess.requireMember()) return;
     console.log('RSVP', event);
 
 }
@@ -270,7 +271,7 @@ VIEW ALL
 ==========================================================*/
 
 viewAllEvents(){
-
+  if (!this.featureAccess.requireMember()) return;
     console.log('View All Events');
 
 }
@@ -371,7 +372,7 @@ LOCATION BUTTON
 ==========================================================*/
 
 useMyLocation(){
-
+  if (!this.featureAccess.requireMember()) return;
     console.log('Use Current Location');
 
 }
@@ -381,7 +382,7 @@ HOST BUTTON
 ==========================================================*/
 
 signUpHost(){
-
+  if (!this.featureAccess.requireMember()) return;
     console.log('Host Registration');
 
 }
@@ -391,7 +392,7 @@ MARKER CLICK
 ==========================================================*/
 
 selectGathering(marker:any){
-
+  if (!this.featureAccess.requireMember()) return;
     console.log(marker);
 
 }
@@ -484,7 +485,7 @@ HOST TOOL CLICK
 ==========================================================*/
 
 selectHostTool(tool:any){
-
+  if (!this.featureAccess.requireMember()) return;
     this.selectedHostTool = tool.id;
 
     console.log(tool);
@@ -496,7 +497,7 @@ OPEN RESOURCE
 ==========================================================*/
 
 openHostResource(tool:any){
-
+  if (!this.featureAccess.requireMember()) return;
     console.log('Open Resource', tool);
 
 }
@@ -633,19 +634,19 @@ BUTTON METHODS
 ==========================================================*/
 
 findOrCreateGroup(){
-
+  if (!this.featureAccess.requireMember()) return;
     console.log('Find Or Create Group');
 
 }
 
 viewAllPrompts(){
-
+  if (!this.featureAccess.requireMember()) return;
     console.log('View All Prompts');
 
 }
 
 shareStory(){
-
+  if (!this.featureAccess.requireMember()) return;
     console.log('Share Story');
 
 }
@@ -655,7 +656,7 @@ QUESTION CLICK
 ==========================================================*/
 
 selectQuestion(question:any){
-
+  if (!this.featureAccess.requireMember()) return;
     console.log(question);
 
 }
@@ -665,7 +666,7 @@ FEATURE CLICK
 ==========================================================*/
 
 selectFeature(feature:any){
-
+  if (!this.featureAccess.requireMember()) return;
     console.log(feature);
 
 }
@@ -786,7 +787,7 @@ CARD CLICK
 ==========================================================*/
 
 selectStarterCard(card:any){
-
+  if (!this.featureAccess.requireMember()) return;
     this.selectedStarterCard = card.id;
 
     console.log(card);
@@ -798,7 +799,7 @@ DOWNLOAD
 ==========================================================*/
 
 downloadStarterKit(){
-
+  if (!this.featureAccess.requireMember()) return;
     console.log('Download Starter Kit');
 
 }
@@ -808,7 +809,7 @@ OPEN FEATURE
 ==========================================================*/
 
 openStarterFeature(card:any){
-
+  if (!this.featureAccess.requireMember()) return;
     console.log(card);
 
 }
@@ -889,7 +890,7 @@ SCRIPTURE CLICK
 ==========================================================*/
 
 selectScripture(scripture:any){
-
+  if (!this.featureAccess.requireMember()) return;
     this.selectedScripture = scripture.id;
 
     console.log(scripture);
@@ -902,7 +903,7 @@ Replace later with router navigation
 ==========================================================*/
 
 openScripture(scripture:any){
-
+  if (!this.featureAccess.requireMember()) return;
     console.log('Open Scripture:', scripture.reference);
 
 }

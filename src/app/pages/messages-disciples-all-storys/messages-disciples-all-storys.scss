@@ -1,0 +1,103 @@
+.messages-disciples-all-storys {
+  min-height: 100vh;
+  background: #f7f9fc;
+}
+
+.messages-disciples-all-storys__hero {
+  padding: 72px 20px;
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(135deg, #173f86, #5d6db3);
+}
+
+.messages-disciples-all-storys__hero i {
+  font-size: 42px;
+}
+
+.messages-disciples-all-storys__hero h1 {
+  margin: 14px 0 8px;
+}
+
+.messages-disciples-all-storys__hero p {
+  margin: 0;
+  opacity: .9;
+}
+
+.messages-disciples-all-storys__content {
+  padding: 42px 20px 64px;
+}
+
+.messages-disciples-all-storys__toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.messages-disciples-all-storys__toolbar h2,
+.messages-disciples-all-storys__toolbar p {
+  margin: 0;
+}
+
+.messages-disciples-all-storys__toolbar p {
+  color: #667085;
+}
+
+.messages-disciples-all-storys__toolbar button {
+  border: 0;
+  border-radius: 24px;
+  padding: 11px 18px;
+  color: #173f86;
+  background: #e8eefb;
+  font-weight: 600;
+}
+
+.messages-disciples-all-storys__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.messages-disciples-all-storys__card {
+  display: flex;
+  gap: 18px;
+  padding: 20px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 8px 22px rgba(23, 63, 134, .09);
+}
+
+.messages-disciples-all-storys__card img {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.messages-disciples-all-storys__card span {
+  color: #667085;
+  font-size: .85rem;
+}
+
+.messages-disciples-all-storys__card h3 {
+  margin: 6px 0;
+  color: #173f86;
+}
+
+.messages-disciples-all-storys__card p {
+  margin: 0;
+  color: #475467;
+}
+
+@media (max-width: 767px) {
+  .messages-disciples-all-storys__toolbar,
+  .messages-disciples-all-storys__card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .messages-disciples-all-storys__grid {
+    grid-template-columns: 1fr;
+  }
+}

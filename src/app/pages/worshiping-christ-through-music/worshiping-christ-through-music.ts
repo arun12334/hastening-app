@@ -1886,6 +1886,7 @@ OPEN MODAL
 ==========================================================*/
 
 ghd6766OpenMusicModal(){
+    if (!this.featureAccess.requireMember()) return;
 
     this.ghd6766ShowModal=true;
 
@@ -1922,6 +1923,7 @@ UPLOAD MUSIC
 ==========================================================*/
 
 ghd6766UploadMusicFile(event:any){
+    if (!this.featureAccess.requireMember()) return;
 
     const file=event.target.files[0];
 
@@ -1966,6 +1968,7 @@ SAVE MUSIC
 ==========================================================*/
 
 ghd6766SaveMusic(){
+    if (!this.featureAccess.requireMember()) return;
 
     if(
 

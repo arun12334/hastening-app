@@ -1,6 +1,7 @@
 import { Header } from '../../components/header/header';
 import { CommonModule } from '@angular/common';
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit, inject } from '@angular/core';
+import { FeatureAccess } from '../../services/feature-access';
 
 @Component({
   selector: 'app-invitation-to-unity',
@@ -10,6 +11,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
   styleUrl: './invitation-to-unity.scss',
 })
 export class InvitationToUnity implements OnInit {
+  private readonly featureAccess = inject(FeatureAccess);
 
   /*==========================================================
   BANNER
@@ -765,6 +767,7 @@ export class InvitationToUnity implements OnInit {
   ==========================================================*/
 
   unityGridCardClickX99(card: any): void {
+    if (!this.featureAccess.requireMember()) return;
 
     console.log('Selected card:', card);
 
@@ -776,6 +779,7 @@ export class InvitationToUnity implements OnInit {
   ==========================================================*/
 
   unityGridButtonClickX99(card: any): void {
+    if (!this.featureAccess.requireMember()) return;
 
     console.log('Button clicked:', card.title);
 

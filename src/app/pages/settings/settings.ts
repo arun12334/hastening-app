@@ -1190,7 +1190,8 @@ export class Settings implements OnInit, OnDestroy {
 
     // Later:
     localStorage.removeItem('user_profile_info');
-    localStorage.setItem('guest_mode', 'true');
+    localStorage.removeItem('guest_mode');
+    localStorage.removeItem('remember_me');
     this.showLogoutModal = false;
     this.router.navigate(['/login']);
 

@@ -1,0 +1,40 @@
+<app-header></app-header>
+
+<main class="messages-disciples-all-storys">
+  <section class="messages-disciples-all-storys__hero">
+    <div class="container">
+      <i class="bi bi-people-fill" aria-hidden="true"></i>
+      <h1>Messages from the Disciples</h1>
+      <p>Read all testimonies, faith, courage, and teachings shared by faithful disciples.</p>
+    </div>
+  </section>
+
+  <section class="messages-disciples-all-storys__content container">
+    <div class="messages-disciples-all-storys__toolbar">
+      <div>
+        <h2>All Messages</h2>
+        <p>{{ messages.length }} messages</p>
+      </div>
+      <button type="button" (click)="goBack()">
+        <i class="bi bi-arrow-left" aria-hidden="true"></i>
+        Back to Sharing Our Faith
+      </button>
+    </div>
+
+    <div class="messages-disciples-all-storys__grid">
+      @for (message of messages; track message.id) {
+        <article class="messages-disciples-all-storys__card">
+          <img [src]="message.image" [alt]="message.title">
+          <div>
+            <span>{{ message.time }}</span>
+            <h3>{{ message.title }}</h3>
+            <p>{{ message.description }}</p>
+            @if (message.location) {
+              <small>{{ message.location }}</small>
+            }
+          </div>
+        </article>
+      }
+    </div>
+  </section>
+</main>

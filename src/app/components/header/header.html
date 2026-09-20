@@ -84,7 +84,7 @@ DESKTOP HEADER
 
                     <a
                         routerLink="/sharing-our-faith"
-                        routerLinkActive="active-nav"
+                        [class.active-nav]="isSharingOurFaithActive()"
                         class="nav-item-custom">
 
                         <i class="bi bi-book"></i>
@@ -166,7 +166,7 @@ DESKTOP HEADER
                     </a>
 
                     <!-- SECURITY -->
-
+                    @if (isGuestMode()) {
                     <a
                         routerLink="/authentication-and-security-management-system"
                         routerLinkActive="active-nav"
@@ -181,6 +181,7 @@ DESKTOP HEADER
                         &amp; More
 
                     </a>
+                    }
 
                     <!-- REGISTER -->
 
@@ -200,6 +201,7 @@ DESKTOP HEADER
                     </a>
 
                     
+                    @if (isLoggedIn()) {
                     <a
                         routerLink="/settings"
                         routerLinkActive="active-nav"
@@ -214,6 +216,7 @@ DESKTOP HEADER
                         Settings
 
                     </a>
+                    }
 
 
                 </div>
@@ -398,10 +401,9 @@ OFFCANVAS
         <!-- SHARING OUR FAITH -->
 
         <a
-
             routerLink="/sharing-our-faith"
 
-            routerLinkActive="mobile-active-nav"
+            [class.mobile-active-nav]="isSharingOurFaithActive()"
 
             class="mobile-menu-item"
 
@@ -536,6 +538,7 @@ OFFCANVAS
         </a>
 
         <!-- SECURITY -->
+        @if (isGuestMode()) {
 
         <a
 
@@ -562,6 +565,7 @@ OFFCANVAS
             </div>
 
         </a>
+        }
 
         <!-- REGISTER -->
 
@@ -595,6 +599,7 @@ OFFCANVAS
 
         <!-- SETTINGS -->
 
+@if (isLoggedIn()) {
 <a
   routerLink="/settings"
   routerLinkActive="mobile-active-nav"
@@ -611,6 +616,7 @@ OFFCANVAS
   </div>
 
 </a>
+}
 
     </div>
 
