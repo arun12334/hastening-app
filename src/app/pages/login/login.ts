@@ -115,7 +115,7 @@ export class Login {
     this.errorMessage = '';
 
 
-    // Clean email
+    // Clean the email address or username.
 
     this.formData.email =
       this.formData.email.trim();
@@ -132,13 +132,13 @@ export class Login {
 
 
     // =========================================
-    // EMAIL VALIDATION
+    // EMAIL OR USERNAME VALIDATION
     // =========================================
 
     if (!this.formData.email) {
 
       this.errorMessage =
-        'Please enter your email address.';
+        'Please enter your email address or username.';
 
       this.cdr.detectChanges();
 
@@ -150,15 +150,13 @@ export class Login {
     const emailPattern =
       /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+    const usernamePattern = /^[^\s@]+$/;
 
-    if (
-      !emailPattern.test(
-        this.formData.email
-      )
-    ) {
+    if (!emailPattern.test(this.formData.email) &&
+      !usernamePattern.test(this.formData.email)) {
 
       this.errorMessage =
-        'Please enter a valid email address.';
+        'Please enter a valid email address or username.';
 
       this.cdr.detectChanges();
 

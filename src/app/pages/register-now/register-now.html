@@ -758,9 +758,11 @@ LEFT CARD
 
                                             name="delivery"
 
-                                            value="mail"
+                                            value="physical"
 
-                                            [(ngModel)]="option.deliveryMethod">
+                                            [checked]="option.deliveryMethod === 'physical'"
+
+                                            (change)="deliveryMethodChanged(option, 'physical')">
 
                                         Deliver physical copy
 
@@ -778,7 +780,9 @@ LEFT CARD
 
                                             value="email"
 
-                                            [(ngModel)]="option.deliveryMethod">
+                                            [checked]="option.deliveryMethod === 'email'"
+
+                                            (change)="deliveryMethodChanged(option, 'email')">
 
                                         Digital Copy by Email
 

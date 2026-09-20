@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { timer, Subscription } from 'rxjs';
+import { firstValueFrom, timer, Subscription } from 'rxjs';
 import { Header } from '../../components/header/header';
 import { ChangeDetectorRef } from '@angular/core';
 import {  HostListener, OnInit } from '@angular/core';
 import { FeatureAccess } from '../../services/feature-access';
+import { HttpClient } from '@angular/common/http';
 
 declare var bootstrap: any;
 
@@ -22,6 +23,8 @@ interface PrayerRequest {
 
   description:string;
 
+  category?: string;
+
   requestedBy:string;
 
   relation:string;
@@ -36,6 +39,12 @@ interface PrayerRequest {
 
   createdAt?: number;
 
+}
+
+interface PrayerAuthPayload {
+  user_id: number;
+  token: string;
+  public_key: string;
 }
 
 @Component({
@@ -123,8 +132,11 @@ export class PrayForSomeone implements OnInit {
 
 constructor(
   private cdr: ChangeDetectorRef,
-  private readonly featureAccess: FeatureAccess
+  private readonly featureAccess: FeatureAccess,
+  private readonly http: HttpClient
 ) {this.nb8821UpdateBannerImage();}
+
+  private readonly prayersApiUrl = 'https://hastening.org/api';
 
   //----------------------------------------
   // Active Tab
@@ -381,25 +393,52 @@ constructor(
   // I've Prayed Button
   //----------------------------------------
 
-pray(request: PrayerRequest) {
+async pray(request: PrayerRequest): Promise<void> {
   this.featureAccess.requestAccess();
 
   if (localStorage.getItem('guest_mode') === 'true') {
     return;
   }
 
-  if (!request.prayed) {
-
-    request.prayed = true;
-
-    request.prayerCount++;
-
-    this.totalPrayersOffered++;
-
-    this.showThankYouToast();
-
+  if (request.prayed || this.isLoading) {
+    return;
   }
 
+  const auth = this.getPrayerAuthPayload();
+  if (!auth) {
+    console.warn('[Prayer] Cannot offer prayer without login credentials.');
+    return;
+  }
+
+  this.isLoading = true;
+  try {
+    console.info('[Prayer] Sending list payload:', auth);
+    const response = await firstValueFrom(this.http.post<{
+      success: boolean;
+      message: string;
+      prayer_count?: number;
+      total_prayers?: number;
+    }>(`${this.prayersApiUrl}/prayerslist.php`, {
+      ...auth,
+      action: 'offer',
+      prayer_id: request.id
+    }));
+
+    console.info('[Prayer] Offer API response:', response);
+    if (!response.success) {
+      throw new Error(response.message || 'Prayer offering could not be saved.');
+    }
+
+    request.prayed = true;
+    request.prayerCount = response.prayer_count ?? request.prayerCount + 1;
+    this.totalPrayersOffered = response.total_prayers ?? this.totalPrayersOffered + 1;
+    this.showThankYouToast();
+  } catch (error) {
+    console.error('[Prayer] Offer API request failed:', error);
+  } finally {
+    this.isLoading = false;
+    this.cdr.markForCheck();
+  }
 }
 
 // ====================================
@@ -409,6 +448,9 @@ pray(request: PrayerRequest) {
 searchText: string = '';
 
 selectedFilter: string = 'All';
+
+readonly prayerPageSize = 20;
+prayerCurrentPage = 1;
 
 isLoading: boolean = false;
 
@@ -468,65 +510,119 @@ get filteredPrayerRequests(): PrayerRequest[] {
 
   if (this.selectedFilter !== 'All') {
 
-    data = data.filter(item => {
-
-      switch (this.selectedFilter) {
-
-        case 'Healing':
-          return item.title.toLowerCase().includes('healing');
-
-        case 'Family':
-          return item.relation === 'Family';
-
-        case 'Financial':
-          return item.title.toLowerCase().includes('financial') ||
-                 item.description.toLowerCase().includes('financial');
-
-        case 'Peace':
-          return item.title.toLowerCase().includes('peace') ||
-                 item.description.toLowerCase().includes('peace');
-
-        case 'Guidance':
-          return item.title.toLowerCase().includes('guidance') ||
-                 item.description.toLowerCase().includes('guidance');
-
-        default:
-          return true;
-
-      }
-
-    });
+    data = data.filter(item => this.matchesPrayerFilter(item));
 
   }
 
   return data;
 
 }
+
+get paginatedPrayerRequests(): PrayerRequest[] {
+  const start = (this.prayerCurrentPage - 1) * this.prayerPageSize;
+  return this.filteredPrayerRequests.slice(start, start + this.prayerPageSize);
+}
+
+get prayerTotalPages(): number {
+  return Math.max(1, Math.ceil(this.filteredPrayerRequests.length / this.prayerPageSize));
+}
+
+get prayerPageNumbers(): number[] {
+  const totalPages = this.prayerTotalPages;
+  const pages = new Set<number>([1, totalPages, this.prayerCurrentPage]);
+  if (this.prayerCurrentPage > 1) {
+    pages.add(this.prayerCurrentPage - 1);
+  }
+  if (this.prayerCurrentPage < totalPages) {
+    pages.add(this.prayerCurrentPage + 1);
+  }
+  return [...pages].filter((page) => page >= 1 && page <= totalPages).sort((a, b) => a - b);
+}
+
+goToPrayerPage(page: number): void {
+  if (page >= 1 && page <= this.prayerTotalPages) {
+    this.prayerCurrentPage = page;
+  }
+}
+
+private matchesPrayerFilter(item: PrayerRequest): boolean {
+  const filter = this.selectedFilter.toLowerCase();
+  if (filter === 'all') {
+    return true;
+  }
+
+  const category = (item.category ?? '').toLowerCase();
+  const title = item.title.toLowerCase();
+  const description = item.description.toLowerCase();
+  const relation = item.relation.toLowerCase();
+
+  switch (filter) {
+    case 'healing':
+      return category === 'healing' || title.includes('healing') || description.includes('healing');
+    case 'family':
+      return category === 'family' || relation === 'family';
+    case 'financial':
+      return category.includes('financial') || title.includes('financial') || description.includes('financial');
+    case 'peace':
+      return category === 'peace' || title.includes('peace') || description.includes('peace');
+    case 'guidance':
+      return category.includes('guidance') || title.includes('guidance') || description.includes('guidance');
+    default:
+      return category === filter;
+  }
+}
 //==================================================
 
 changeFilter(filter: string) {
 
   this.selectedFilter = filter;
+  this.prayerCurrentPage = 1;
 
 }
 
 //==================================================
 
 
-async refreshPrayerList() {
+async refreshPrayerList(): Promise<void> {
 
   if (this.isLoading) return;
 
   this.isLoading = true;
 
-  await new Promise(resolve => setTimeout(resolve, 2000));
+ try {
+   if (localStorage.getItem('guest_mode') === 'true') {
+     await new Promise(resolve => setTimeout(resolve, 300));
+     return;
+   }
 
-  this.isLoading = false;
+   const auth = this.getPrayerAuthPayload();
+   if (!auth) {
+     console.warn('[Prayer] Live list skipped because user credentials are unavailable.');
+     return;
+   }
 
+   const response = await firstValueFrom(this.http.post<{
+     success: boolean;
+     message: string;
+     prayers?: unknown[];
+     my_prayers?: unknown[];
+     total_prayers?: number;
+   }>(`${this.prayersApiUrl}/prayerslist.php`, auth));
 
-  this.cdr.markForCheck();
+   console.info('[Prayer] List API response:', response);
+   if (!response?.success) {
+     throw new Error(response?.message || 'Prayer list could not be loaded.');
+   }
 
- 
+   this.prayerRequests = (response.prayers ?? []).map((item) => this.mapPrayerRequest(item));
+   this.myPrayerOffered = (response.my_prayers ?? []).map((item) => this.mapPrayerRequest(item));
+   this.totalPrayersOffered = response.total_prayers ?? this.totalPrayersOffered;
+ } catch (error) {
+   console.error('[Prayer] List API request failed:', error);
+ } finally {
+   this.isLoading = false;
+   this.cdr.markForCheck();
+ }
 
 }
 
@@ -701,7 +797,7 @@ openPrayerRequestModalXrp9284(){
 SUBMIT
 ==========================================================*/
 
-submitPrayerRequestXrp9284(){
+async submitPrayerRequestXrp9284(): Promise<void> {
 
 if(
 
@@ -719,9 +815,44 @@ return;
 
 }
 
-const activeSubmittedRequests = this.prayerRequests.filter(request => request.createdAt).length;
+const activeSubmittedRequests = this.myPrayerOffered.filter(request => request.createdAt).length;
 if (activeSubmittedRequests + this.pendingPrayerRequestsXrp9284.length >= 3) {
   alert('You may have a maximum of three prayer requests outstanding at one time.');
+  return;
+}
+
+const auth = this.getPrayerAuthPayload();
+if (!auth) {
+  console.error('[Prayer] Request submission stopped because user credentials are unavailable.');
+  alert('Your login session is unavailable. Please log in again and try again.');
+  return;
+}
+
+const requestPayload = {
+  ...auth,
+  requested_by: this.prayerRequestFormXrp9284.requestedBy.trim(),
+  email: this.prayerRequestFormXrp9284.email.trim(),
+  title: this.prayerRequestFormXrp9284.title.trim(),
+  description: this.prayerRequestFormXrp9284.description.trim(),
+  category: this.prayerRequestFormXrp9284.category,
+  relation: this.prayerRequestFormXrp9284.relation,
+  private_prayer: this.prayerRequestFormXrp9284.privatePrayer
+};
+
+console.info('[Prayer] Sending request payload:', requestPayload);
+
+try {
+  const response = await firstValueFrom(this.http.post<{
+    success: boolean;
+    message: string;
+  }>(`${this.prayersApiUrl}/prayerslistrequset.php`, requestPayload));
+  console.info('[Prayer] Request API response:', response);
+  if (!response.success) {
+    throw new Error(response.message || 'Prayer request could not be submitted.');
+  }
+} catch (error) {
+  console.error('[Prayer] Request API failed:', error);
+  alert(error instanceof Error ? error.message : 'Prayer request could not be submitted.');
   return;
 }
 
@@ -785,17 +916,12 @@ prayer.createdAt = today.getTime();
 SAVE FOR REVIEW
 --------------------------------*/
 
-this.pendingPrayerRequestsXrp9284.unshift(prayer);
-localStorage.setItem(
-  'pendingPrayerRequests',
-  JSON.stringify(this.pendingPrayerRequestsXrp9284)
-);
-
 /*--------------------------------
 SAVE HISTORY
 --------------------------------*/
 
 this.submittedPrayerRequestsXrp9284.unshift(prayer);
+this.myPrayerOffered.unshift(prayer);
 
 /*--------------------------------
 CLOSE MODAL
@@ -841,6 +967,8 @@ privatePrayer:false
 
 };
 
+await this.refreshPrayerList();
+
 }
 
 private loadPendingPrayerRequests(): void {
@@ -854,6 +982,64 @@ private loadPendingPrayerRequests(): void {
   } catch {
     localStorage.removeItem('pendingPrayerRequests');
   }
+}
+
+private getPrayerAuthPayload(): PrayerAuthPayload | null {
+  const storedProfile = localStorage.getItem('user_profile_info');
+  if (!storedProfile) {
+    return null;
+  }
+
+  try {
+    const profile = JSON.parse(storedProfile) as {
+      users?: Array<{ id?: number; token?: string; publicKey?: string; public_key?: string }>;
+    };
+    const user = profile.users?.[0];
+    const publicKey = user?.publicKey ?? user?.public_key;
+    if (!user?.id || !user.token || !publicKey) {
+      return null;
+    }
+    return {
+      user_id: user.id,
+      token: user.token,
+      public_key: publicKey
+    };
+  } catch (error) {
+    console.error('[Prayer] Invalid user_profile_info:', error);
+    return null;
+  }
+}
+
+private mapPrayerRequest(value: unknown): PrayerRequest {
+  const item = value as Record<string, unknown>;
+  const requestedBy = String(item['requested_by'] ?? item['requestedBy'] ?? 'Anonymous');
+  const createdAt = item['created_at']
+    ? new Date(String(item['created_at'])).getTime()
+    : Date.now();
+  return {
+    id: Number(item['id'] ?? createdAt),
+    initials: requestedBy.split(/\s+/).map((part) => part[0] ?? '').join('').toUpperCase(),
+    avatarColor: String(item['avatar_color'] ?? '#E7F0FF'),
+    title: String(item['title'] ?? ''),
+    description: String(item['description'] ?? ''),
+    category: String(item['category'] ?? ''),
+    requestedBy,
+    relation: String(item['relation'] ?? 'Self'),
+    date: new Date(createdAt).toLocaleDateString('en-US', {
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric'
+    }),
+    prayerCount: Number(item['prayer_count'] ?? 0),
+    expires: item['expires_at']
+      ? new Date(String(item['expires_at'])).toLocaleDateString('en-US', {
+        month: 'short',
+        day: 'numeric'
+      })
+      : '',
+    prayed: Boolean(item['prayed']),
+    createdAt
+  };
 }
 
 /*==========================================================
@@ -889,34 +1075,7 @@ get filteredMyPrayerOffered(): PrayerRequest[] {
 
   if (this.selectedFilter !== 'All') {
 
-    data = data.filter(item => {
-
-      switch (this.selectedFilter) {
-
-        case 'Healing':
-          return item.title.toLowerCase().includes('healing');
-
-        case 'Family':
-          return item.relation === 'Family';
-
-        case 'Financial':
-          return item.title.toLowerCase().includes('financial') ||
-                 item.description.toLowerCase().includes('financial');
-
-        case 'Peace':
-          return item.title.toLowerCase().includes('peace') ||
-                 item.description.toLowerCase().includes('peace');
-
-        case 'Guidance':
-          return item.title.toLowerCase().includes('guidance') ||
-                 item.description.toLowerCase().includes('guidance');
-
-        default:
-          return true;
-
-      }
-
-    });
+    data = data.filter(item => this.matchesPrayerFilter(item));
 
   }
 
@@ -932,6 +1091,7 @@ private searchTimeout: any;
 onSearchChange() {
 
   this.isLoading = true;
+this.prayerCurrentPage = 1;
 
   clearTimeout(this.searchTimeout);
 

@@ -210,7 +210,7 @@ export class RegisterNow implements OnDestroy {
 
       selected:false,
 
-      deliveryMethod:'mail'
+      deliveryMethod: 'physical'
 
     },
 
@@ -392,6 +392,13 @@ export class RegisterNow implements OnDestroy {
     if (!this.jacksonCountyNoticeVisible) {
       this.jacksonCountyNoticeVisible = true;
     }
+  }
+
+  deliveryMethodChanged(
+    option: { deliveryMethod?: string },
+    deliveryMethod: 'physical' | 'email'
+  ): void {
+    option.deliveryMethod = deliveryMethod;
   }
 
   closeJacksonCountyNotice(): void {

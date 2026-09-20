@@ -463,6 +463,46 @@ font-size:13px;
 
 }
 
+.prayer-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 24px;
+    flex-wrap: wrap;
+}
+
+.pagination-btn {
+    min-width: 38px;
+    height: 38px;
+    padding: 0 12px;
+    border: 1px solid #dfe5f2;
+    border-radius: 20px;
+    background: #fff;
+    color: #143d7a;
+    font-weight: 600;
+    transition: .2s ease;
+}
+
+.pagination-btn:hover:not(:disabled),
+.pagination-btn.active {
+    background: #5146d8;
+    border-color: #5146d8;
+    color: #fff;
+}
+
+.pagination-btn:disabled {
+    cursor: not-allowed;
+    opacity: .45;
+}
+
+.pagination-prev,
+.pagination-next {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
 /*============================================================*/
 /* HEADER */
 /*============================================================*/

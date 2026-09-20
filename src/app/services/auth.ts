@@ -24,7 +24,7 @@ export interface DetailedRegisterRequest {
   registrationOptions: Array<{
     id: number;
     title: string;
-    deliveryMethod: string | null;
+    deliveryMethod?: string | null;
   }>;
   children: Array<{
     name: string;
